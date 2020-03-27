@@ -1,14 +1,23 @@
 define({
-  "name": "marioplex-backend",
+  "name": "Spotify",
   "version": "1.0.0",
-  "description": "Software Engineering Project(Spotify)-the backend team repo.",
+  "description": "",
+  "main": "doc.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
   "sampleUrl": false,
   "defaultVersion": "0.0.0",
   "apidoc": "0.3.0",
   "generator": {
     "name": "apidoc",
-    "time": "2020-03-14T23:00:39.857Z",
+    "time": "2020-03-27T13:48:47.349Z",
     "url": "http://apidocjs.com",
-    "version": "0.20.0"
+    "version": "0.20.1"
   }
 });

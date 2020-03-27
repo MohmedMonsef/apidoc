@@ -45,7 +45,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -96,7 +96,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -159,7 +159,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -238,7 +238,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -319,7 +319,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -376,7 +376,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -419,7 +419,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -462,7 +462,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -531,7 +531,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -574,7 +574,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -625,7 +625,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -668,7 +668,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -753,7 +753,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -810,7 +810,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -873,7 +873,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -934,7 +934,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -995,7 +995,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1050,7 +1050,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1099,7 +1099,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1150,7 +1150,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1213,7 +1213,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1255,8 +1255,8 @@
           {
             "group": "BodyParameters",
             "optional": false,
-            "field": "public",
-            "description": "<p>Optional. (Boolean) Defaults to true. If true the playlist will be included in user’s public playlists,</br> if false it will remain private. To be able to follow playlists privately,</br> the user must have granted the playlist-modify-private scope.</p>"
+            "field": "isPrivate",
+            "description": "<p>Optional. (Boolean) Defaults to false. If false the playlist will be included in user’s public playlists,</br> if true it will remain private. To be able to follow playlists privately,</br> the user must have granted the playlist-modify-private scope.</p>"
           }
         ],
         "Response": [
@@ -1270,7 +1270,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1325,7 +1325,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1388,7 +1388,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1431,7 +1431,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1474,7 +1474,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -1517,7 +1517,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -1572,7 +1572,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -1627,7 +1627,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -1684,7 +1684,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -1741,7 +1741,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -1798,7 +1798,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -1855,7 +1855,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -1918,12 +1918,12 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Personalization"
   },
   {
     "type": "POST",
-    "url": "/player/add-to-queue",
+    "url": "/player/add-to-queue/:trackId",
     "title": "Add an Item to the User's Playback Queue",
     "name": "Add_an_Item_to_the_User's_Playback_Queue",
     "group": "Player",
@@ -1942,12 +1942,12 @@
     },
     "parameter": {
       "fields": {
-        "Query Paramaters": [
+        "Path Paramaters": [
           {
-            "group": "Query Paramaters",
+            "group": "Path Paramaters",
             "optional": false,
-            "field": "uri",
-            "description": "<p>Required. The uri of the item to add to the queue. Must be a track or an episode uri.</p>"
+            "field": "requried.trackId",
+            "description": "<p>the id of the track went to add</p>"
           }
         ],
         "Response": [
@@ -1955,13 +1955,13 @@
             "group": "Response",
             "optional": false,
             "field": "format",
-            "description": "<p>A completed request will return a 204 NO CONTENT response code, and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 404 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason.</p>"
+            "description": "<p>A completed request will return a 200  response code, and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 404 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason.</p>"
           }
         ]
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2016,7 +2016,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2059,7 +2059,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2083,14 +2083,6 @@
     },
     "parameter": {
       "fields": {
-        "Query Parameters": [
-          {
-            "group": "Query Parameters",
-            "optional": false,
-            "field": "market",
-            "description": "<p>Optional. An ISO 3166-1 alpha-2 country code or the string from_token.</p>"
-          }
-        ],
         "Response": [
           {
             "group": "Response",
@@ -2102,7 +2094,42 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
+    "groupTitle": "Player"
+  },
+  {
+    "type": "get",
+    "url": "/me/queue",
+    "title": "Get currently queue for this user",
+    "name": "Get_the_User's_Currently_playback_queue",
+    "group": "Player",
+    "description": "<p style=\"color:red;\">Get the User's Currently playback queue</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>A successful request will return a 200 OK response code with a json array of tracks in queue if error 400 status</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2137,7 +2164,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2180,7 +2207,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2209,7 +2236,7 @@
             "group": "Query Paramaters",
             "optional": false,
             "field": "state",
-            "description": "<p>Required.track, context or off.track will repeat the current track.context will repeat the current context.off will turn repeat off.</p>"
+            "description": "<p>Required.track, boolean true if repeat false if not repeat to repeat playlist</p>"
           }
         ],
         "Response": [
@@ -2217,13 +2244,13 @@
             "group": "Response",
             "optional": false,
             "field": "Format",
-            "description": "<p>A completed request will return a 204 NO CONTENT response code, and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 404 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason.</p>"
+            "description": "<p>A completed request will return a 200 NO CONTENT response code, and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 400 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND</p>"
           }
         ]
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2252,13 +2279,13 @@
             "group": "Response",
             "optional": false,
             "field": "Format",
-            "description": "<p>A completed request will return a 204 NO CONTENT response code, and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 404 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason.</p>"
+            "description": "<p>A completed request will return a 200 NO CONTENT response code,current playing track, and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 400 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason.</p>"
           }
         ]
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2287,13 +2314,13 @@
             "group": "Response",
             "optional": false,
             "field": "Format",
-            "description": "<p>A completed request will return a 204 NO CONTENT response code, and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 404 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason.</p>"
+            "description": "<p>A completed request will return a 200 NO CONTENT response code,and current playing  track , and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 400 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason.</p>"
           }
         ]
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2317,36 +2344,6 @@
     },
     "parameter": {
       "fields": {
-        "Body Parameters": [
-          {
-            "group": "Body Parameters",
-            "type": "string",
-            "optional": false,
-            "field": "context_uri",
-            "description": "<p>Optional. Spotify URI of the context to play. Valid contexts are albums, artists, playlists.</p>"
-          },
-          {
-            "group": "Body Parameters",
-            "type": "Array_URIs",
-            "optional": false,
-            "field": "uris",
-            "description": "<p>Optional. A JSON array of the Spotify track URIs to play</p>"
-          },
-          {
-            "group": "Body Parameters",
-            "type": "Object",
-            "optional": false,
-            "field": "offset",
-            "description": "<p>Optional. Indicates from where in the context playback should start. Only available when context_uri corresponds to an album or playlist object, or when the uris parameter is used.“position” is zero based and can’t be negative</p>"
-          },
-          {
-            "group": "Body Parameters",
-            "type": "integer",
-            "optional": false,
-            "field": "position_ms",
-            "description": "<p>Optional. Indicates from what position to start playback. Must be a positive number. Passing in a position that is greater than the length of the track will cause the player to start playing the next song.</p>"
-          }
-        ],
         "Response": [
           {
             "group": "Response",
@@ -2358,7 +2355,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2395,13 +2392,13 @@
             "group": "Response",
             "optional": false,
             "field": "Format",
-            "description": "<p>A completed request will return a 204 NO CONTENT response code, and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 404 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason.</p>"
+            "description": "<p>A completed request will return a 200 NO CONTENT response code, and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 400 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason.</p>"
           }
         ]
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2482,7 +2479,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -2561,7 +2558,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -2601,24 +2598,10 @@
           },
           {
             "group": "Body Parameters",
-            "type": "Boolean",
-            "optional": false,
-            "field": "public",
-            "description": "<p>Optional. If true the playlist will be public, if false it will be private.</p>"
-          },
-          {
-            "group": "Body Parameters",
-            "type": "Boolean",
-            "optional": false,
-            "field": "collaborative",
-            "description": "<p>Optional. If true , the playlist will become collaborative and other users will be able to modify the playlist in their Spotify client. Note: You can only set collaborative to true on non-public playlists.</p>"
-          },
-          {
-            "group": "Body Parameters",
             "type": "string",
             "optional": false,
-            "field": "description",
-            "description": "<p>Optional. Value for playlist description as displayed in Spotify Clients and in the Web API.</p>"
+            "field": "Describtion",
+            "description": "<p>optional. The description for the playlist</p>"
           }
         ],
         "Response": [
@@ -2626,13 +2609,13 @@
             "group": "Response",
             "optional": false,
             "field": "Format",
-            "description": "<p>On success, the response body contains the created playlist object in JSON format and the HTTP status code in the response header is 200 OK or 201 Created. There is also a Location response header giving the Web API endpoint for the new playlist. On error, the header status code is an error code and the response body contains an error object. Trying to create a playlist when you do not have the user’s authorization returns error 403 Forbidden.</p>"
+            "description": "<p>On success, the response body contains the created playlist object in JSON format and the HTTP status code in the response header is 200 Ok Created. On error, the header status code is an error code and the response body contains an error object. Trying to create a playlist when you do not have the user’s authorization returns error 400 Forbidden.</p>"
           }
         ]
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -2681,7 +2664,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -2738,7 +2721,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -2799,7 +2782,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -2823,14 +2806,8 @@
           {
             "group": "Query Paramaters",
             "optional": false,
-            "field": "fields",
-            "description": "<p>Optional. Filters for the query: a comma-separated list of the fields to return. If omitted, all fields are returned. For example, to get just the playlist’s description and URI: fields=description,uri. A dot separator can be used to specify non-reoccurring fields, while parentheses can be used to specify reoccurring fields within objects</p>"
-          },
-          {
-            "group": "Query Paramaters",
-            "optional": false,
-            "field": "market",
-            "description": "<p>Optional. An ISO 3166-1 alpha-2 country code or the string from_token. Provide this parameter if you want to apply Track Relinking.</p>"
+            "field": "snapshot-id",
+            "description": "<p>Optional. Snapshot is the id of the version of playlist if not give me it will be the last by defult</p>"
           }
         ],
         "Response": [
@@ -2838,7 +2815,7 @@
             "group": "Response",
             "optional": false,
             "field": "Format",
-            "description": "<p>On success, the response body contains a playlist object in JSON format and the HTTP status code in the response header is 200 OK. On error, the header status code is an error code and the response body contains an error object. Requesting playlists that you do not have the user’s authorization to access returns error 403 Forbidden. For the description in the Playlist object, it should be expected that HTML will be escaped.</p>"
+            "description": "<p>On success, the response body contains a playlist object in JSON format and the HTTP status code in the response header is 200 OK. On error, the header status code is an error code and the response body contains an error object. Requesting playlists that you do not have the user’s authorization to access returns error 400 Forbidden. For the description in the Playlist object, it should be expected that HTML will be escaped.</p>"
           }
         ]
       }
@@ -2856,7 +2833,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -2899,7 +2876,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -2992,7 +2969,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3071,7 +3048,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3138,7 +3115,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3203,7 +3180,50 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
+    "groupTitle": "Playlist"
+  },
+  {
+    "type": "Delete",
+    "url": "/me/delete/:playlist_id",
+    "title": "delete a Playlist",
+    "name": "delete_a_Playlist.",
+    "group": "Playlist",
+    "description": "<p style=\"color:red;\">delete a playlist owned by a Spotify user.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "parameter": {
+      "fields": {
+        "Path Parameters": [
+          {
+            "group": "Path Parameters",
+            "optional": false,
+            "field": "playlist_id",
+            "description": "<p>The Spotify ID for the playlist</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK. On error, the header status code is an error code and the response body contains an error object. Requesting playlists that you do not have the user’s authorization to access returns error 400 Forbidden. For the description in the Playlist object, it should be expected that HTML will be escaped.</p>"
+          }
+        ]
+      }
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3268,7 +3288,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Search"
   },
   {
@@ -3279,7 +3299,7 @@
     "group": "Search",
     "description": "<p>Encode spaces with the hex code %20 or +. </br></br> Keyword matching: Matching of search keywords is not case-sensitive. Operators, however, should be specified in uppercase. Unless surrounded by double quotation marks, keywords are matched in any order. For example: q=roadhouse&amp;20blues matches both “Blues Roadhouse” and “Roadhouse of the Blues”. q=&quot;roadhouse&amp;20blues&quot; matches “My Roadhouse Blues” but not “Roadhouse of the Blues”. </br> </br>Searching for playlists returns results where the query keyword(s) match any part of the playlist’s name or description. Only popular public playlists are returned. </br></br> Operator: The operator NOT can be used to exclude results. </br></br> Similarly, the OR operator can be used to broaden the search: q=roadhouse%20OR%20blues returns all the results that include either of the terms. Only one OR operator can be used in a query. </br> </br>Note: Operators must be specified in uppercase. Otherwise, they are handled as normal keywords to be matched. </br></br> Field filters: By default, results are returned when a match is found in any field of the target object type. Searches can be made more specific by specifying an album, artist or track field filter. </br></br>To limit the results to a particular year, use the field filter year with album, artist, and track searches. </br></br> Or with a date range. </br></br> To retrieve only albums released in the last two weeks, use the field filter tag:new in album searches. </br></br>  To retrieve only albums with the lowest 10% popularity, use the field filter tag:hipster in album searches. Note: This field filter only works with album searches. </br></br> Depending on object types being searched for, other field filters, include genre (applicable to tracks and artists), upc, and isrc. For example: q=lil%20genre:%22southern%20hip%20hop%22&amp;type=artist. Use double quotation marks around the genre keyword string if it contains spaces.</p> <p></br><h1> Response Format</h1> </br></br>On success: </br></br>In the response header the HTTP status code is 200 OK. </br></br>The response body contains an array of artist objects, simplified album objects, and/or track objects wrapped in a paging object in JSON. </br> </br>On error: </br></br>The header status code is an error code. </br></br>The response body contains an error object.</p>",
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Search"
   },
   {
@@ -3322,12 +3342,12 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
     "type": "get",
-    "url": "/audio-features",
+    "url": "tracks/audio-features",
     "title": "Get Audio Features for Several Tracks",
     "name": "Get_Audio_Features_for_Several_Tracks",
     "group": "Tracks",
@@ -3365,12 +3385,12 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
     "type": "get",
-    "url": "/audio-features/{id}",
+    "url": "track/audio-features/{id}",
     "title": "Get Audio Features for a Track",
     "name": "Get_Audio_Features_for_a_Track",
     "group": "Tracks",
@@ -3408,7 +3428,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -3457,12 +3477,12 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
     "type": "get",
-    "url": "/tracks/{id}",
+    "url": "/track/{id}",
     "title": "Get a Track",
     "name": "Get_a_Track",
     "group": "Tracks",
@@ -3481,20 +3501,12 @@
     },
     "parameter": {
       "fields": {
-        "PathParameters": [
-          {
-            "group": "PathParameters",
-            "optional": false,
-            "field": "id",
-            "description": "<p>The Spotify ID for the track.</p>"
-          }
-        ],
         "QueryParameters": [
           {
             "group": "QueryParameters",
             "optional": false,
-            "field": "market",
-            "description": "<p>Optional. An ISO 3166-1 alpha-2 country code or the string from_token. Provide this parameter if you want to apply Track Relinking.</p>"
+            "field": "id",
+            "description": "<p>The Spotify ID for the track.</p>"
           }
         ],
         "Response": [
@@ -3508,7 +3520,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -3543,7 +3555,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Users_Profile"
   },
   {
@@ -3594,7 +3606,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Users_Profile"
   },
   {
@@ -3643,7 +3655,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "like"
   },
   {
@@ -3692,7 +3704,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "like"
   }
 ]

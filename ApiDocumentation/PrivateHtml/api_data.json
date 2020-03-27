@@ -59,7 +59,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Private_code/docs-private.js",
+    "filename": "Private_code/docs-private.js",
     "groupTitle": "Account"
   },
   {
@@ -138,7 +138,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Private_code/docs-private.js",
+    "filename": "Private_code/docs-private.js",
     "groupTitle": "Account"
   },
   {
@@ -169,7 +169,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Private_code/docs-private.js",
+    "filename": "Private_code/docs-private.js",
     "groupTitle": "Account"
   },
   {
@@ -206,7 +206,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Private_code/docs-private.js",
+    "filename": "Private_code/docs-private.js",
     "groupTitle": "Account"
   },
   {
@@ -243,7 +243,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Private_code/docs-private.js",
+    "filename": "Private_code/docs-private.js",
     "groupTitle": "Account"
   },
   {
@@ -304,7 +304,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Private_code/docs-private.js",
+    "filename": "Private_code/docs-private.js",
     "groupTitle": "Account"
   },
   {
@@ -347,7 +347,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Private_code/docs-private.js",
+    "filename": "Private_code/docs-private.js",
     "groupTitle": "Account"
   },
   {
@@ -390,7 +390,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Private_code/docs-private.js",
+    "filename": "Private_code/docs-private.js",
     "groupTitle": "Account"
   },
   {
@@ -425,7 +425,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Private_code/docs-private.js",
+    "filename": "Private_code/docs-private.js",
     "groupTitle": "Account"
   },
   {
@@ -497,8 +497,65 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Private_code/docs-private.js",
+    "filename": "Private_code/docs-private.js",
     "groupTitle": "Artist"
+  },
+  {
+    "type": "post",
+    "url": "/createQueue/:playlist_id/:trackId",
+    "title": "",
+    "name": "Create_queue",
+    "group": "Player",
+    "description": "<p style=\"color:red;\">create the user playback queue </p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "path parameters": [
+          {
+            "group": "path parameters",
+            "optional": false,
+            "field": "playlist_id",
+            "description": "<p>the id of the source if playlist or album</p>"
+          },
+          {
+            "group": "path parameters",
+            "optional": false,
+            "field": "track_id",
+            "description": "<p>the first track will be playing</p>"
+          }
+        ],
+        "query Parameters": [
+          {
+            "group": "query Parameters",
+            "optional": false,
+            "field": "isPlaylist",
+            "description": "<p>Required. is boolean determine if the source of queue is playlist or album &amp;true is playlist &amp;false album</p>"
+          }
+        ],
+        "response": [
+          {
+            "group": "response",
+            "optional": false,
+            "field": "success",
+            "description": "<p>200 &amp; error 400</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "Private_code/docs-private.js",
+    "groupTitle": "Player"
   },
   {
     "type": "PUT",
@@ -555,7 +612,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Private_code/docs-private.js",
+    "filename": "Private_code/docs-private.js",
     "groupTitle": "Playlist"
   }
 ]

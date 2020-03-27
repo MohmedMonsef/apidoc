@@ -545,7 +545,7 @@
  * 
  * 
  *  @apiParam (PathParameters)  playlist_id  			The Spotify ID of the playlist. Any playlist can be followed,</br> regardless of its public/private status, as long as you know its playlist ID.
- * @apiParam (BodyParameters)   public   	Optional. (Boolean) Defaults to true. If true the playlist will be included in user’s public playlists,</br> if false it will remain private. To be able to follow playlists privately,</br> the user must have granted the playlist-modify-private scope.
+ * @apiParam (BodyParameters)   isPrivate   	Optional. (Boolean) Defaults to false. If false the playlist will be included in user’s public playlists,</br> if true it will remain private. To be able to follow playlists privately,</br> the user must have granted the playlist-modify-private scope.
  *
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body is empty.</br> On error, the header status code is an error code and the response body contains an error object.
  */
@@ -889,9 +889,28 @@
  * 
  * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
  * 
- * @apiParam (Query Parameters)  market 	Optional. An ISO 3166-1 alpha-2 country code or the string from_token.
- *
+ * 
+ * 
  * @apiparam (Response) Format A successful request will return a 200 OK response code with a json payload that contains information about the currently playing track and context (see below). The information returned is for the last known state, which means an inactive device could be returned if it was the last one to execute playback. When no available devices are found, the request will return a 200 OK response but with no data populated. When no track is currently playing, the request will return a 204 NO CONTENT response with no payload. If private session is enabled the response will be a 204 NO CONTENT with an empty payload.
+ */
+/**
+ * @api {get}/me/queue Get currently queue for this user
+ * @apiName Get the User's Currently playback queue
+ * @apiGroup Player
+ * @apiDescription
+ * 
+ * <p style="color:red;">Get the User's Currently playback queue</p>
+ *
+ * 
+ * <h1> Request parameters</h1> 
+ * </br></br><h1> Endpoint</h1>
+ * 
+ * 
+ * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * 
+ * 
+ * 
+ * @apiparam (Response) Format A successful request will return a 200 OK response code with a json array of tracks in queue if error 400 status
  */
 
 /**
@@ -978,8 +997,8 @@
  * 
  * 
  * 
- * @apiParam (Query Paramaters) state	     Required.track, context or off.track will repeat the current track.context will repeat the current context.off will turn repeat off.
- * @apiparam (Response) Format A completed request will return a 204 NO CONTENT response code, and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 404 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason. 
+ * @apiParam (Query Paramaters) state	     Required.track, boolean true if repeat false if not repeat to repeat playlist  
+ * @apiparam (Response) Format A completed request will return a 200 NO CONTENT response code, and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 400 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND 
  */
 /**
  * @api {POST} /player/next Skip User’s Playback To Next Track
@@ -1000,7 +1019,7 @@
  * 
  * 
  * 
- * @apiparam (Response) Format A completed request will return a 204 NO CONTENT response code, and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 404 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason.
+ * @apiparam (Response) Format A completed request will return a 200 NO CONTENT response code,current playing track, and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 400 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason.
  */
 /**
  * @api {POST} /player/previous Skip User’s Playback To Previous Track
@@ -1023,7 +1042,7 @@
  * 
  * 
  * 
- * @apiparam (Response) Format A completed request will return a 204 NO CONTENT response code, and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 404 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason.
+ * @apiparam (Response) Format A completed request will return a 200 NO CONTENT response code,and current playing  track , and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 400 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason.
  */
 /**
  * @api {PUT} /player/play Start/Resume a User's Playback 
@@ -1042,11 +1061,6 @@
  * 
  * 
  * 
- * @apiParam (Body Parameters) {string}          context_uri      Optional. Spotify URI of the context to play. Valid contexts are albums, artists, playlists.
- * @apiParam (Body Parameters)  {Array_URIs}	 uris              Optional. A JSON array of the Spotify track URIs to play
- * @apiParam (Body Parameters)  {Object}         offset 	      Optional. Indicates from where in the context playback should start. Only available when context_uri corresponds to an album or playlist object, or when the uris parameter is used.“position” is zero based and can’t be negative
- * @apiParam (Body Parameters) {integer}        position_ms       Optional. Indicates from what position to start playback. Must be a positive number. Passing in a position that is greater than the length of the track will cause the player to start playing the next song.
- *
  * @apiparam (Response) Format A completed request will return a 204 NO CONTENT response code, and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 404 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason.
  */
 /**
@@ -1067,11 +1081,11 @@
  * 
  * 
  * @apiParam (Query Paramaters)  state	Required   true : Shuffle user’s playback & false : Do not shuffle user’s playback.
- * @apiparam (Response) Format A completed request will return a 204 NO CONTENT response code, and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 404 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason.
+ * @apiparam (Response) Format A completed request will return a 200 NO CONTENT response code, and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 400 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason.
  */
 
 /**
- * @api {POST} /player/add-to-queue Add an Item to the User's Playback Queue
+ * @api {POST} /player/add-to-queue/:trackId Add an Item to the User's Playback Queue
  * @apiName Add an Item to the User's Playback Queue
  * @apiGroup Player
  * @apiDescription
@@ -1086,9 +1100,9 @@
  * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
  * 
  * 
+ * @apiParam (Path Paramaters) requried.trackId the id of the track went to add
  * 
- * @apiParam (Query Paramaters) uri	Required. The uri of the item to add to the queue. Must be a track or an episode uri.
- * @apiparam (Response) format A completed request will return a 204 NO CONTENT response code, and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 404 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason.
+ * @apiparam (Response) format A completed request will return a 200  response code, and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 404 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason.
  */
 //Playlist
 
@@ -1139,12 +1153,9 @@
  * 
  * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
  * @apiHeader (Header)  Content-Type	Required. The content type of the request body: application/json
- * @apiParam (Body Parameters) {string}  name		Required. The new name for the playlist
- * @apiParam (Body Parameters) {Boolean} public		Optional. If true the playlist will be public, if false it will be private.
- * @apiParam (Body Parameters) {Boolean} collaborative		Optional. If true , the playlist will become collaborative and other users will be able to modify the playlist in their Spotify client. Note: You can only set collaborative to true on non-public playlists.
- * @apiParam (Body Parameters) {string}  description	Optional. Value for playlist description as displayed in Spotify Clients and in the Web API.
- * 
- * @apiparam (Response) Format On success, the response body contains the created playlist object in JSON format and the HTTP status code in the response header is 200 OK or 201 Created. There is also a Location response header giving the Web API endpoint for the new playlist. On error, the header status code is an error code and the response body contains an error object. Trying to create a playlist when you do not have the user’s authorization returns error 403 Forbidden.
+ * @apiParam (Body Parameters) {string}  name				Required. The new name for the playlist
+ * @apiParam (Body Parameters) {string}  Describtion		optional. The description for the playlist
+ * @apiparam (Response) Format On success, the response body contains the created playlist object in JSON format and the HTTP status code in the response header is 200 Ok Created. On error, the header status code is an error code and the response body contains an error object. Trying to create a playlist when you do not have the user’s authorization returns error 400 Forbidden.
  */
 /**
  * @api {PUT} /playlists/{playlist_id} Change a Playlist's Details
@@ -1236,12 +1247,25 @@
  * 
  * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
  * 
+ * @apiParam (Query Paramaters)  snapshot-id	Optional. Snapshot is the id of the version of playlist if not give me it will be the last by defult
+ * @apiparam (Response) Format On success, the response body contains a playlist object in JSON format and the HTTP status code in the response header is 200 OK. On error, the header status code is an error code and the response body contains an error object. Requesting playlists that you do not have the user’s authorization to access returns error 400 Forbidden. For the description in the Playlist object, it should be expected that HTML will be escaped.
+ */
+/**
+ * @api {Delete}/me/delete/:playlist_id delete a Playlist
+ * @apiName delete a Playlist.
+ * @apiGroup Playlist
+ * @apiDescription
  * 
- * 
- * @apiParam (Query Paramaters)  fields	Optional. Filters for the query: a comma-separated list of the fields to return. If omitted, all fields are returned. For example, to get just the playlist’s description and URI: fields=description,uri. A dot separator can be used to specify non-reoccurring fields, while parentheses can be used to specify reoccurring fields within objects
- * @apiParam (Query Paramaters)  market	Optional. An ISO 3166-1 alpha-2 country code or the string from_token. Provide this parameter if you want to apply Track Relinking.
+ * <p style="color:red;">delete a playlist owned by a Spotify user.</p>
  *
- * @apiparam (Response) Format On success, the response body contains a playlist object in JSON format and the HTTP status code in the response header is 200 OK. On error, the header status code is an error code and the response body contains an error object. Requesting playlists that you do not have the user’s authorization to access returns error 403 Forbidden. For the description in the Playlist object, it should be expected that HTML will be escaped.
+ * 
+ * <h1> Request parameters</h1> 
+ * </br></br><h1> Endpoint</h1>
+ * @apiParam (Path Parameters)  playlist_id	The Spotify ID for the playlist
+ * 
+ * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ 
+ * @apiparam (Response) Format On success, the HTTP status code in the response header is 200 OK. On error, the header status code is an error code and the response body contains an error object. Requesting playlists that you do not have the user’s authorization to access returns error 400 Forbidden. For the description in the Playlist object, it should be expected that HTML will be escaped.
  */
 /**
  * @api {PUT}/playlists/{playlist_id}/tracks Get a Playlist's Tracks

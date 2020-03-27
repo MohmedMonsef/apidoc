@@ -22,6 +22,28 @@
  * 
  * @apiparam (Response) Format On success, the response body contains the created user object in JSON format and the HTTP status code in the response header is 200 OK or 201 Created. There is also a Location response header giving the Web API endpoint for the new user. On error, the header status code is an error code and the response body contains an error object. Trying to create a user when you do not have the user’s authorization returns error 403 Forbidden.
  */
+
+ /**
+  * @api {post} /createQueue/:playlist_id/:trackId
+ * @apiName Create queue
+ * @apiGroup Player
+ * @apiDescription
+ * 
+ * <p style="color:red;">create the user playback queue </p>
+ * <h1> Request parameters</h1> 
+ * </br></br><h1> Endpoint</h1>
+ * 
+ * 
+ * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiparam (path parameters) playlist_id  the id of the source if playlist or album
+* @apiparam (path parameters) track_id the first track will be playing
+ *
+ * @apiParam (query Parameters)  isPlaylist Required. is boolean determine if the source of queue is playlist or album &true is playlist &false album  	
+ *
+ *@apiParam (response) success 200 & error 400  
+ *
+ *
+ */
 /**
  * @api {post} /Login Login to Spotify
  * @apiName Login to Spotify
