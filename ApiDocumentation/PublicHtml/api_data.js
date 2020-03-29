@@ -3346,7 +3346,7 @@ define({ "api": [
   {
     "type": "get",
     "url": "/audio-analysis/{id}",
-    "title": "Get Audio Analysis for a Track",
+    "title": "Get Audio Analysis for a Track (not implemented)",
     "name": "Get_Audio_Analysis_for_a_Track",
     "group": "Tracks",
     "description": "<p style=\"color:red;\">Get a detailed audio analysis for a single track identified by its unique Spotify ID.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
@@ -3425,6 +3425,15 @@ define({ "api": [
         ]
       }
     },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n  \"5e7f58bb4fe2420d34a881db\": {\n      \"explicit\": false,\n      \"acousticness\": 10,\n      \"danceability\": 23,\n      \"energy\": 23,\n      \"instrumentalness\": 4,\n      \"key\": 90,\n      \"liveness\": 25,\n      \"loudness\": 70,\n      \"mode\": 56,\n      \"speechiness\": 67,\n      \"tempo\": 76,\n      \"valence\": 70\n  },\n  \"5e7f5c6328a1a2111841e5d6\": {\n      \"explicit\": false,\n      \"acousticness\": 10,\n      \"danceability\": 23,\n      \"energy\": 23,\n      \"instrumentalness\": 4,\n      \"key\": 90,\n      \"liveness\": 25,\n      \"loudness\": 70,\n      \"mode\": 56,\n      \"speechiness\": 67,\n      \"tempo\": 76,\n      \"valence\": 70\n  }\n}",
+          "type": "json"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
@@ -3467,6 +3476,15 @@ define({ "api": [
           }
         ]
       }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n  \"explicit\": false,\n  \"acousticness\": 10,\n  \"danceability\": 23,\n  \"energy\": 23,\n  \"instrumentalness\": 4,\n  \"key\": 90,\n  \"liveness\": 25,\n  \"loudness\": 70,\n  \"mode\": 56,\n  \"speechiness\": 67,\n  \"tempo\": 76,\n  \"valence\": 70\n}",
+          "type": "json"
+        }
+      ]
     },
     "version": "0.0.0",
     "filename": "Public_code/doc.js",
@@ -3511,6 +3529,15 @@ define({ "api": [
         ]
       }
     },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "[\n  {\n      \"track\": {\n          \"availableMarkets\": [\n              \"ttyt,rewwf,fff\"\n          ],\n         \"_id\": \"5e7f58bb4fe2420d34a881db\",\n         \"trackNumber\": 55,\n         \"name\": \"frist\",\n        \"artistId\": \"5e7ef28326e2fa0da04f81ae\",\n       \"albumId\": \"5e7f44905cce7d09a82e5a75\",\n       \"discNumber\": 1,\n        \"explicit\": false,\n        \"type\": \"Track\",\n        \"acousticness\": 10,\n        \"danceability\": 23,\n        \"energy\": 100,\n        \"instrumentalness\": 4,\n        \"key\": 90,\n        \"liveness\": 25,\n        \"loudness\": 70,\n        \"mode\": 56,\n        \"speechiness\": 67,\n        \"tempo\": 76,\n        \"timeSignature\": \"2000-01-31T22:00:00.000Z\",\n        \"valence\": 70,\n        \"__v\": 0\n    },\n    \"isLiked\": true,\n    \"album\": {\n        \"name\": \"album1\",\n        \"_id\": \"5e7f44905cce7d09a82e5a75\",\n        \"artist\": {\n            \"name\": \"artist1\",\n            \"_id\": \"5e7ef28326e2fa0da04f81ae\"\n        }\n    }\n},\n{\n   \"track\": {\n       \"availableMarkets\": [\n           \"ttyt,rewwf,fff\"\n       ],\n       \"_id\": \"5e7f58bb4fe2420d34a881db\",\n       \"trackNumber\": 55,\n       \"name\": \"frist\",\n       \"artistId\": \"5e7ef28326e2fa0da04f81ae\",\n       \"albumId\": \"5e7f44905cce7d09a82e5a75\",\n       \"discNumber\": 1,\n       \"explicit\": false,\n       \"type\": \"Track\",\n       \"acousticness\": 10,\n       \"danceability\": 23,\n       \"energy\": 100,\n       \"instrumentalness\": 4,\n       \"key\": 90,\n       \"liveness\": 25,\n       \"loudness\": 70,\n       \"mode\": 56,\n       \"speechiness\": 67,\n       \"tempo\": 76,\n       \"timeSignature\": \"2000-01-31T22:00:00.000Z\",\n       \"valence\": 70,\n       \"__v\": 0\n   },\n   \"isLiked\": true,\n   \"album\": {\n       \"name\": \"album1\",\n       \"_id\": \"5e7f44905cce7d09a82e5a75\",\n       \"artist\": {\n           \"name\": \"artist1\",\n           \"_id\": \"5e7ef28326e2fa0da04f81ae\"\n       }\n   }\n}]",
+          "type": "json"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
@@ -3554,6 +3581,15 @@ define({ "api": [
         ]
       }
     },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"availableMarkets\": [\n        \"ttyt,rewwf,fff\"\n    ],\n    \"_id\": \"5e7f58bb4fe2420d34a881db\",\n    \"trackNumber\": 55,\n    \"name\": \"frist\",\n    \"artistId\": \"5e7ef28326e2fa0da04f81ae\",\n    \"albumId\": \"5e7f44905cce7d09a82e5a75\",\n    \"discNumber\": 1,\n    \"explicit\": false,\n    \"type\": \"Track\",\n    \"acousticness\": 10,\n    \"danceability\": 23,\n    \"energy\": 100,\n    \"instrumentalness\": 4,\n    \"key\": 90,\n    \"liveness\": 25,\n    \"loudness\": 70,\n    \"mode\": 56,\n    \"speechiness\": 67,\n    \"tempo\": 76,\n    \"timeSignature\": \"2000-01-31T22:00:00.000Z\",\n    \"valence\": 70,\n    \"__v\": 0\n}",
+          "type": "json"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
@@ -3596,6 +3632,15 @@ define({ "api": [
           }
         ]
       }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"track\": {\n        \"availableMarkets\": [\n            \"ttyt,rewwf,fff\"\n        ],\n        \"_id\": \"5e7f58bb4fe2420d34a881db\",\n        \"trackNumber\": 55,\n        \"name\": \"frist\",\n        \"artistId\": \"5e7ef28326e2fa0da04f81ae\",\n        \"albumId\": \"5e7f44905cce7d09a82e5a75\",\n        \"discNumber\": 1,\n        \"explicit\": false,\n        \"type\": \"Track\",\n        \"acousticness\": 10,\n        \"danceability\": 23,\n        \"energy\": 100,\n        \"instrumentalness\": 4,\n        \"key\": 90,\n        \"liveness\": 25,\n        \"loudness\": 70,\n        \"mode\": 56,\n        \"speechiness\": 67,\n        \"tempo\": 76,\n        \"timeSignature\": \"2000-01-31T22:00:00.000Z\",\n        \"valence\": 70,\n        \"__v\": 0\n    },\n    \"isLiked\": true,\n    \"album\": {\n        \"name\": \"album1\",\n        \"_id\": \"5e7f44905cce7d09a82e5a75\",\n        \"artist\": {\n            \"name\": \"artist1\",\n            \"_id\": \"5e7ef28326e2fa0da04f81ae\"\n        }\n    }\n}",
+          "type": "json"
+        }
+      ]
     },
     "version": "0.0.0",
     "filename": "Public_code/doc.js",

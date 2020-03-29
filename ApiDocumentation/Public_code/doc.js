@@ -1573,7 +1573,7 @@
 //Tracks
 
 /**
- * @api {get} /audio-analysis/{id} Get Audio Analysis for a Track
+ * @api {get} /audio-analysis/{id} Get Audio Analysis for a Track (not implemented)
  * @apiName Get Audio Analysis for a Track
  * @apiGroup Tracks
  * @apiDescription
@@ -1591,11 +1591,13 @@
  * 
  *
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains an audio analysis object in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
+ * 
+ * 
  */
 
 
 /**
- * @api {get} track/audio-features/{id}  Get Audio Features for a Track
+ * @api {get} track/audio-features/{id}  Get Audio Features for a Track 
  * @apiName Get Audio Features for a Track
  * @apiGroup Tracks
  * @apiDescription
@@ -1612,6 +1614,23 @@
  * 
  *  @apiParam (PathParameters)  id 					Required. The Spotify ID for the track.
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains an audio features object in JSON format. </br>On error, the header status code is an error code and the response body contains an error object.
+ * 
+ * @apiSuccessExample {json} Success-Response:
+ * {
+ *   "explicit": false,
+ *   "acousticness": 10,
+ *   "danceability": 23,
+ *   "energy": 23,
+ *   "instrumentalness": 4,
+ *   "key": 90,
+ *   "liveness": 25,
+ *   "loudness": 70,
+ *   "mode": 56,
+ *   "speechiness": 67,
+ *   "tempo": 76,
+ *   "valence": 70
+}
+ * 
  */
 
 /**
@@ -1631,6 +1650,38 @@
  *  @apiParam (Body parameters)  ids  		Required. A comma-separated list of the Spotify IDs for the tracks. Maximum: 100 IDs.
  *
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains</br> an object whose key is "audio_features" and whose value is an array of audio features objects in JSON format.</br></br> Objects are returned in the order requested. If an object is not found, a null value is returned in the appropriate position.</br> Duplicate ids in the query will result in duplicate objects in the response. </br>On error, the header status code is an error code and the response body contains an error object.
+ * 
+ * @apiSuccessExample {json} Success-Response:
+ * {
+ *   "5e7f58bb4fe2420d34a881db": {
+ *       "explicit": false,
+ *       "acousticness": 10,
+ *       "danceability": 23,
+ *       "energy": 23,
+ *       "instrumentalness": 4,
+ *       "key": 90,
+ *       "liveness": 25,
+ *       "loudness": 70,
+ *       "mode": 56,
+ *       "speechiness": 67,
+ *       "tempo": 76,
+ *       "valence": 70
+ *   },
+ *   "5e7f5c6328a1a2111841e5d6": {
+ *       "explicit": false,
+ *       "acousticness": 10,
+ *       "danceability": 23,
+ *       "energy": 23,
+ *       "instrumentalness": 4,
+ *       "key": 90,
+ *       "liveness": 25,
+ *       "loudness": 70,
+ *       "mode": 56,
+ *       "speechiness": 67,
+ *       "tempo": 76,
+ *       "valence": 70
+ *   }
+*}
  */
 
 /**
@@ -1651,12 +1702,91 @@
  *  @apiParam (Body Parameters)  ids  	Required. A comma-separated list of the Spotify IDs for the tracks. Maximum: 50 IDs.
  *
  *  @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains an object whose key is tracks and whose value is an array of track objects in JSON format.</br> Objects are returned in the order requested. If an object is not found, a null value is returned in the appropriate position.</br> Duplicate ids in the query will result in duplicate objects in the response. </br>On error, the header status code is an error code and the response body contains an error object. in 404
+ * 
+ * 
+ * @apiSuccessExample {json} Success-Response:
+ * [
+ *   {
+ *       "track": {
+ *           "availableMarkets": [
+ *               "ttyt,rewwf,fff"
+ *           ],
+  *          "_id": "5e7f58bb4fe2420d34a881db",
+  *          "trackNumber": 55,
+  *          "name": "frist",
+   *         "artistId": "5e7ef28326e2fa0da04f81ae",
+    *        "albumId": "5e7f44905cce7d09a82e5a75",
+    *        "discNumber": 1,
+   *         "explicit": false,
+   *         "type": "Track",
+   *         "acousticness": 10,
+   *         "danceability": 23,
+   *         "energy": 100,
+   *         "instrumentalness": 4,
+   *         "key": 90,
+   *         "liveness": 25,
+   *         "loudness": 70,
+   *         "mode": 56,
+   *         "speechiness": 67,
+   *         "tempo": 76,
+   *         "timeSignature": "2000-01-31T22:00:00.000Z",
+   *         "valence": 70,
+   *         "__v": 0
+   *     },
+   *     "isLiked": true,
+   *     "album": {
+   *         "name": "album1",
+   *         "_id": "5e7f44905cce7d09a82e5a75",
+   *         "artist": {
+   *             "name": "artist1",
+   *             "_id": "5e7ef28326e2fa0da04f81ae"
+   *         }
+   *     }
+   * },
+    *{
+    *    "track": {
+    *        "availableMarkets": [
+    *            "ttyt,rewwf,fff"
+    *        ],
+    *        "_id": "5e7f58bb4fe2420d34a881db",
+    *        "trackNumber": 55,
+    *        "name": "frist",
+    *        "artistId": "5e7ef28326e2fa0da04f81ae",
+    *        "albumId": "5e7f44905cce7d09a82e5a75",
+    *        "discNumber": 1,
+    *        "explicit": false,
+    *        "type": "Track",
+    *        "acousticness": 10,
+    *        "danceability": 23,
+    *        "energy": 100,
+    *        "instrumentalness": 4,
+    *        "key": 90,
+    *        "liveness": 25,
+    *        "loudness": 70,
+    *        "mode": 56,
+    *        "speechiness": 67,
+    *        "tempo": 76,
+    *        "timeSignature": "2000-01-31T22:00:00.000Z",
+    *        "valence": 70,
+    *        "__v": 0
+    *    },
+    *    "isLiked": true,
+    *    "album": {
+    *        "name": "album1",
+    *        "_id": "5e7f44905cce7d09a82e5a75",
+    *        "artist": {
+    *            "name": "artist1",
+    *            "_id": "5e7ef28326e2fa0da04f81ae"
+    *        }
+    *    }
+    *}]
+ * 
  */
 
 
 
 /**
- * @api {get} /track/{id} Get a Track
+ * @api {get} /track/{id} Get a Track 
  * @apiName Get a Track with artist name & isLike
  * @apiGroup Tracks
  * @apiDescription
@@ -1672,6 +1802,45 @@
  *  @apiParam (QueryParameters)  id   Required.The Spotify ID for the track.
  *
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains a track object in JSON format. </br>On error, the header status code is an error code and the response body contains an error object.
+ * 
+ *  @apiSuccessExample {json} Success-Response:
+ * {
+    "track": {
+        "availableMarkets": [
+            "ttyt,rewwf,fff"
+        ],
+        "_id": "5e7f58bb4fe2420d34a881db",
+        "trackNumber": 55,
+        "name": "frist",
+        "artistId": "5e7ef28326e2fa0da04f81ae",
+        "albumId": "5e7f44905cce7d09a82e5a75",
+        "discNumber": 1,
+        "explicit": false,
+        "type": "Track",
+        "acousticness": 10,
+        "danceability": 23,
+        "energy": 100,
+        "instrumentalness": 4,
+        "key": 90,
+        "liveness": 25,
+        "loudness": 70,
+        "mode": 56,
+        "speechiness": 67,
+        "tempo": 76,
+        "timeSignature": "2000-01-31T22:00:00.000Z",
+        "valence": 70,
+        "__v": 0
+    },
+    "isLiked": true,
+    "album": {
+        "name": "album1",
+        "_id": "5e7f44905cce7d09a82e5a75",
+        "artist": {
+            "name": "artist1",
+            "_id": "5e7ef28326e2fa0da04f81ae"
+        }
+    }
+}
  */
 /**
  * @api {get} me/track/{id} Get a Track
@@ -1690,6 +1859,34 @@
  *  @apiParam (QueryParameters)  id 		Required.The Spotify ID for the track.
  *
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains a track object in JSON format. </br>On error, the header status code is an error code and the response body contains an error object.
+ * 
+ *  @apiSuccessExample {json} Success-Response:
+ * {
+    "availableMarkets": [
+        "ttyt,rewwf,fff"
+    ],
+    "_id": "5e7f58bb4fe2420d34a881db",
+    "trackNumber": 55,
+    "name": "frist",
+    "artistId": "5e7ef28326e2fa0da04f81ae",
+    "albumId": "5e7f44905cce7d09a82e5a75",
+    "discNumber": 1,
+    "explicit": false,
+    "type": "Track",
+    "acousticness": 10,
+    "danceability": 23,
+    "energy": 100,
+    "instrumentalness": 4,
+    "key": 90,
+    "liveness": 25,
+    "loudness": 70,
+    "mode": 56,
+    "speechiness": 67,
+    "tempo": 76,
+    "timeSignature": "2000-01-31T22:00:00.000Z",
+    "valence": 70,
+    "__v": 0
+}
  */
 //Users Profile
 
