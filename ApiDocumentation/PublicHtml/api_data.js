@@ -3366,9 +3366,9 @@ define({ "api": [
     },
     "parameter": {
       "fields": {
-        "QueryParameters": [
+        "Body parameters": [
           {
-            "group": "QueryParameters",
+            "group": "Body parameters",
             "optional": false,
             "field": "ids",
             "description": "<p>Required. A comma-separated list of the Spotify IDs for the tracks. Maximum: 100 IDs.</p>"
@@ -3452,18 +3452,12 @@ define({ "api": [
     },
     "parameter": {
       "fields": {
-        "QueryParameters": [
+        "Body Parameters": [
           {
-            "group": "QueryParameters",
+            "group": "Body Parameters",
             "optional": false,
             "field": "ids",
             "description": "<p>Required. A comma-separated list of the Spotify IDs for the tracks. Maximum: 50 IDs.</p>"
-          },
-          {
-            "group": "QueryParameters",
-            "optional": false,
-            "field": "market",
-            "description": "<p>Optional. An ISO 3166-1 alpha-2 country code or the string from_token.</br> Provide this parameter if you want to apply Track Relinking.</p>"
           }
         ],
         "Response": [
@@ -3471,7 +3465,7 @@ define({ "api": [
             "group": "Response",
             "optional": false,
             "field": "Format",
-            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body contains an object whose key is tracks and whose value is an array of track objects in JSON format.</br> Objects are returned in the order requested. If an object is not found, a null value is returned in the appropriate position.</br> Duplicate ids in the query will result in duplicate objects in the response. </br>On error, the header status code is an error code and the response body contains an error object.</p>"
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body contains an object whose key is tracks and whose value is an array of track objects in JSON format.</br> Objects are returned in the order requested. If an object is not found, a null value is returned in the appropriate position.</br> Duplicate ids in the query will result in duplicate objects in the response. </br>On error, the header status code is an error code and the response body contains an error object. in 404</p>"
           }
         ]
       }
@@ -3482,7 +3476,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/track/{id}",
+    "url": "me/track/{id}",
     "title": "Get a Track",
     "name": "Get_a_Track",
     "group": "Tracks",
@@ -3506,7 +3500,50 @@ define({ "api": [
             "group": "QueryParameters",
             "optional": false,
             "field": "id",
-            "description": "<p>The Spotify ID for the track.</p>"
+            "description": "<p>Required.The Spotify ID for the track.</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body contains a track object in JSON format. </br>On error, the header status code is an error code and the response body contains an error object.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "Public_code/doc.js",
+    "groupTitle": "Tracks"
+  },
+  {
+    "type": "get",
+    "url": "/track/{id}",
+    "title": "Get a Track",
+    "name": "Get_a_Track_with_artist_name_&_isLike",
+    "group": "Tracks",
+    "description": "<p style=\"color:red;\">Get Spotify catalog information for a single track identified by its unique Spotify ID.and get track artist name ,album name and if user like this track or no </p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service.</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "QueryParameters": [
+          {
+            "group": "QueryParameters",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Required.The Spotify ID for the track.</p>"
           }
         ],
         "Response": [
@@ -3611,7 +3648,7 @@ define({ "api": [
   },
   {
     "type": "put",
-    "url": "/me/like",
+    "url": "/me/like/:track_id",
     "title": "like track",
     "name": "like_track",
     "group": "like",
@@ -3624,21 +3661,15 @@ define({ "api": [
             "optional": false,
             "field": "Authorization",
             "description": "<p>Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br> Modifying the list of artists or users the current user follows requires authorization of the user-follow-modify scope</p>"
-          },
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "Content-Type",
-            "description": "<p>Required if IDs are passed in the request body,</br> otherwise ignored. The content type of the request body: application/json.</p>"
           }
         ]
       }
     },
     "parameter": {
       "fields": {
-        "QueryParameters": [
+        "path Parameters": [
           {
-            "group": "QueryParameters",
+            "group": "path Parameters",
             "optional": false,
             "field": "id",
             "description": "<p>require.require.  track Spotify ID .</p>"
@@ -3649,7 +3680,7 @@ define({ "api": [
             "group": "Response",
             "optional": false,
             "field": "Format",
-            "description": "<p>On success, the HTTP status code in the response header is 204 No Content and the response body is empty.</br> On error, the header status code is an error code and the response body contains an error object.</p>"
+            "description": "<p>On success, the HTTP status code in the response header is 200 No Content and the response body is empty.</br> On error, the header status code is an error code and the response body contains an error object.</p>"
           }
         ]
       }
@@ -3660,7 +3691,7 @@ define({ "api": [
   },
   {
     "type": "delete",
-    "url": "/me/unlike",
+    "url": "/me/unlike/:track_id",
     "title": "unlike track",
     "name": "unlike_track",
     "group": "like",
@@ -3673,21 +3704,15 @@ define({ "api": [
             "optional": false,
             "field": "Authorization",
             "description": "<p>Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br> Modifying the list of artists or users the current user follows requires authorization of the user-follow-modify scope</p>"
-          },
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "Content-Type",
-            "description": "<p>Required if IDs are passed in the request body,</br> otherwise ignored. The content type of the request body: application/json.</p>"
           }
         ]
       }
     },
     "parameter": {
       "fields": {
-        "QueryParameters": [
+        "path Parameters": [
           {
-            "group": "QueryParameters",
+            "group": "path Parameters",
             "optional": false,
             "field": "id",
             "description": "<p>require.  track Spotify ID .</p>"
