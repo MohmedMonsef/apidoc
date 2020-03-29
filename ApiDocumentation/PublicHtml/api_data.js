@@ -194,13 +194,13 @@ define({ "api": [
             "group": "BodyParameters",
             "optional": false,
             "field": "Name",
-            "description": "<p>Required. String of the name of the new Album</p>"
+            "description": "<p>Required. string of the name of the new Album</p>"
           },
           {
             "group": "BodyParameters",
             "optional": false,
             "field": "Label",
-            "description": "<p>Required. String of the Label of the new Album</p>"
+            "description": "<p>Required. string of the Label of the new Album</p>"
           },
           {
             "group": "BodyParameters",
@@ -281,7 +281,7 @@ define({ "api": [
             "group": "BodyParameters",
             "optional": false,
             "field": "Name",
-            "description": "<p>Required. String of the name of the new Album</p>"
+            "description": "<p>Required. string of the name of the new Album</p>"
           },
           {
             "group": "BodyParameters",
@@ -1105,7 +1105,7 @@ define({ "api": [
   {
     "type": "get",
     "url": "/playlists/{playlist_id}/followers/contains",
-    "title": "Check if Users Follow a Playlist",
+    "title": "Check if Users Follow a Playlist (Not implemented yet)",
     "name": "Check_if_Users_Follow_a_Playlist",
     "group": "Follow",
     "description": "<p style=\"color:red;\">Check to see if one or more Spotify users are following a specified playlist.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
@@ -1217,7 +1217,7 @@ define({ "api": [
     "groupTitle": "Follow"
   },
   {
-    "type": "put",
+    "type": "PUT",
     "url": "/playlists/{playlist_id}/followers",
     "title": "Follow a Playlist",
     "name": "Follow_a_Playlist",
@@ -1264,7 +1264,7 @@ define({ "api": [
             "group": "Response",
             "optional": false,
             "field": "Format",
-            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body is empty.</br> On error, the header status code is an error code and the response body contains an error object.</p>"
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body is {success:&quot; followed this playlist successfully&quot;}.</br> On error, the header status code is an error code 400 and the response body contains an error object.</p>"
           }
         ]
       }
@@ -1392,7 +1392,7 @@ define({ "api": [
     "groupTitle": "Follow"
   },
   {
-    "type": "delete",
+    "type": "DELETE",
     "url": "/playlists/{playlist_id}/followers",
     "title": "Unfollow a Playlist",
     "name": "Unfollow_a_Playlist",
@@ -1425,7 +1425,7 @@ define({ "api": [
             "group": "Response",
             "optional": false,
             "field": "Format",
-            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body is empty.</br> On error, the header status code is an error code and the response body contains an error object.</p>"
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body is {success:&quot;unfollowed this playlist successfully&quot;}.</br> On error, the header status code is an error code and the response body contains an error object.</p>"
           }
         ]
       }
@@ -2418,36 +2418,12 @@ define({ "api": [
             "description": "<p>The Spotify ID for the playlist</p>"
           }
         ],
-        "Query Parameters": [
-          {
-            "group": "Query Parameters",
-            "type": "list_of_Spotify_URIs",
-            "optional": false,
-            "field": "uris",
-            "description": "<p>Optional. A comma-separated list of Spotify track URIs to add. A maximum of 100 tracks can be added in one request. Note: it is likely that passing a large number of track URIs as a query parameter will exceed the maximum length of the request URI. When adding a large number of tracks it is recommended to pass them in the request body</p>"
-          },
-          {
-            "group": "Query Parameters",
-            "type": "integer",
-            "optional": false,
-            "field": "position",
-            "description": "<p>Optional. The position to insert the tracks, a zero-based index. For example, to insert the tracks in the first position: position=0; to insert the tracks in the third position: position=2 . If omitted, the tracks will be appended to the playlist. Tracks are added in the order they are listed in the query string or request body.</p>"
-          }
-        ],
         "Body Parameters": [
           {
             "group": "Body Parameters",
-            "type": "array_of_Spotify_URI_strings",
             "optional": false,
-            "field": "uris",
-            "description": "<p>Optional. A JSON array of the Spotify track URIs to add. A maximum of 100 tracks can be added in one request. Note: if the uris parameter is present in the query string, any URIs listed here in the body will be ignored.</p>"
-          },
-          {
-            "group": "Body Parameters",
-            "type": "integer",
-            "optional": false,
-            "field": "position",
-            "description": "<p>Optional. The position to insert the tracks, a zero-based index.</p>"
+            "field": "comma",
+            "description": "<p>seperated string of track_ids that will be added to playlist</p>"
           }
         ],
         "Response": [
@@ -2455,7 +2431,7 @@ define({ "api": [
             "group": "Response",
             "optional": false,
             "field": "Format",
-            "description": "<p>On success, the HTTP status code in the response header is 201 Created. The response body contains a snapshot_id in JSON format. The snapshot_id can be used to identify your playlist version in future requests. On error, the header status code is an error code and the response body contains an error object. Trying to add a track when you do not have the user’s authorization, or when there are more than 10.000 tracks in the playlist, returns error 403 Forbidden.</p>"
+            "description": "<p>On success, the HTTP status code in the response header is 201 Created. The response body contains the playlist in JSON format. on error 404 error will be sent with error object, if there are no tracks 401 response will be sent with bad request error</p>"
           }
         ]
       }
@@ -2477,6 +2453,15 @@ define({ "api": [
           }
         ]
       }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\"_id\":\"5e7cee3c35bf5449a0aa0a24\",\n  \"type\":\"playlist\",\n  \"Description\":\"\",\n  \"collaborative\":false,\n  \"name\":\"playlist1Demo\",\n  \"isPublic\":true,\"ownerId\":\"5e7ced3535bf5449a0aa0a23\",\n  \"images\":[],\n  \"snapshot\":[\n      {\n           \"hasTracks\":\n          [\"5e7c9618cb9f6a5270ea413a\",\"5e7c9618cb9f6a5270ea4139\"],*           \"_id\":\"5e7cf0e4f37b461aac6afdd0\",\"action\":\"Add Tracks\"}\n      ]\n  ,\"__v\":1}",
+          "type": "json"
+        }
+      ]
     },
     "version": "0.0.0",
     "filename": "Public_code/doc.js",
@@ -2534,7 +2519,7 @@ define({ "api": [
             "group": "Response",
             "optional": false,
             "field": "Format",
-            "description": "<p>On success the HTTP status code in the response header is 200 OK. On error, the header status code is an error code and the response body contains an error object. Trying to change a playlist when you do not have the user’s authorization returns error 403 Forbidden.</p>"
+            "description": "<p>On success the HTTP status code in the response header is 200 OK. On error, the header status code is 400 status and the response body contains an error object. Trying to change a playlist when you do not have the user’s authorization returns error 403 Forbidden.</p>"
           }
         ]
       }
@@ -2556,6 +2541,15 @@ define({ "api": [
           }
         ]
       }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\"_id\":\"5e7cee3c35bf5449a0aa0a24\",\"type\":\"playlist\",*\"Description\":\"anything\",\"collaborative\":false,*\"name\":\"changedPlaylist1\",\"isPublic\":true,*\"ownerId\":\"5e7ced3535bf5449a0aa0a23\",\"images\":[],\"snapshot\":[{\"hasTracks\":[\"5e7c9618cb9f6a5270ea413a\",\"5e7c9618cb9f6a5270ea4139\"],\"_id\":\"5e7cf0e4f37b461aac6afdd0\",\"action\":\"Add Tracks\"},{\"hasTracks\":[\"5e7c9618cb9f6a5270ea413a\",\"5e7c9618cb9f6a5270ea4139\"],\"_id\":\"5e7cf10728082026100db373\",\"action\":\"Add Tracks\"},{\"hasTracks\":[\"5e7c9618cb9f6a5270ea413a\",\"5e7c9618cb9f6a5270ea4139\",\"5e7c95e2cb9f6a5270ea412d\"],\"_id\":\"5e7cf11d28082026100db374\",\"action\":\"Add Tracks\"},{\"hasTracks\":[\"5e7c9618cb9f6a5270ea413a\",\"5e7c9618cb9f6a5270ea4139\",\"5e7c95e2cb9f6a5270ea412d\"],\"_id\":\"5e7cf12f28082026100db375\",\"action\":\"Add Tracks\"}],\"__v\":4}",
+          "type": "json"
+        }
+      ]
     },
     "version": "0.0.0",
     "filename": "Public_code/doc.js",
@@ -2614,17 +2608,26 @@ define({ "api": [
         ]
       }
     },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\"_id\":\"5e7cee3c35bf5449a0aa0a24\",\"type\":\"playlist\",\"Description\":\"\",*\"collaborative\":false,\"name\":\"playlist1Demo\",\"isPublic\":true,*\"ownerId\":\"5e7ced3535bf5449a0aa0a23\",\"images\":[],\"snapshot\":[],*\"__v\":0}",
+          "type": "json"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
     "type": "get",
-    "url": "/playlists",
+    "url": "/me/playlists",
     "title": "Get a List of Current User's Playlists",
     "name": "Get_a_List_of_Current_User's_Playlists.",
     "group": "Playlist",
-    "description": "<p style=\"color:red;\">Get a list of the playlists owned or followed by the current Spotify user.</p> <p>Returns the most recent 50 tracks played by a user. Note that a track currently playing will not be visible in play history until it has completed. A track must be played for more than 30 seconds to be included in play history.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">Get a list of the playlists owned or followed by the current Spotify user.</p> <p>Returns list of user's playlists created and followed by user</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
         "Header": [
@@ -2639,29 +2642,24 @@ define({ "api": [
     },
     "parameter": {
       "fields": {
-        "Query Parameters": [
-          {
-            "group": "Query Parameters",
-            "optional": false,
-            "field": "limit",
-            "description": "<p>Optional. The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.</p>"
-          },
-          {
-            "group": "Query Parameters",
-            "optional": false,
-            "field": "offset",
-            "description": "<p>Optional. The index of the first playlist to return. Default: 0 (the first object). Maximum offset: 100.000. Use with limit to get the next set of playlists</p>"
-          }
-        ],
         "Response": [
           {
             "group": "Response",
             "optional": false,
             "field": "Format",
-            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body contains an array of simplified playlist objects (wrapped in a paging object) in JSON format. On error, the header status code is an error code and the response body contains an error object. Please note that the access token has to be tied to a user.</p>"
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body contains an array of  playlist objects in JSON format. On error, the header status code is an error code 404 and the response body contains an error object. Please note that the access token has to be tied to a user.</p>"
           }
         ]
       }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "[{\"_id\":\"5e7cee3c35bf5449a0aa0a24\",\"type\":\"playlist\",\"Description\":\"anything\",\"collaborative\":false,\"name\":\"changedPlaylist1\",\"isPublic\":true,\"ownerId\":\"5e7ced3535bf5449a0aa0a23\",\"images\":[],\"snapshot\":[{\"hasTracks\":[\"5e7c9618cb9f6a5270ea413a\",\"5e7c9618cb9f6a5270ea4139\"],\"_id\":\"5e7cf0e4f37b461aac6afdd0\",\"action\":\"Add Tracks\"},{\"hasTracks\":[\"5e7c9618cb9f6a5270ea413a\",\"5e7c9618cb9f6a5270ea4139\"],\"_id\":\"5e7cf10728082026100db373\",\"action\":\"Add Tracks\"},{\"hasTracks\":[\"5e7c9618cb9f6a5270ea413a\",\"5e7c9618cb9f6a5270ea4139\",\"5e7c95e2cb9f6a5270ea412d\"],\"_id\":\"5e7cf11d28082026100db374\",\"action\":\"Add Tracks\"},{\"hasTracks\":[\"5e7c9618cb9f6a5270ea413a\",\"5e7c9618cb9f6a5270ea4139\",\"5e7c95e2cb9f6a5270ea412d\"],\"_id\":\"5e7cf12f28082026100db375\",\"action\":\"Add Tracks\"}],\"__v\":4}]",
+          "type": "json"
+        }
+      ]
     },
     "version": "0.0.0",
     "filename": "Public_code/doc.js",
@@ -2670,7 +2668,7 @@ define({ "api": [
   {
     "type": "GET",
     "url": "/users/{user_id}/playlists",
-    "title": "Get a List of a User's Playlists",
+    "title": "Get a List of a User's Playlists created and followed",
     "name": "Get_a_List_of_a_User's_Playlists",
     "group": "Playlist",
     "description": "<p style=\"color:red;\">Get a list of the playlists owned or followed by a Spotify user.</br>  <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
@@ -2703,7 +2701,7 @@ define({ "api": [
             "group": "Response",
             "optional": false,
             "field": "Format",
-            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body contains an array of simplified playlist objects (wrapped in a paging object) in JSON format. On error, the header status code is an error code and the response body contains an error object.</p>"
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body contains an array of  playlist objects  in JSON format. On error, the header status code is an error code 404 and the response body contains an error object.</p>"
           }
         ]
       }
@@ -2720,66 +2718,14 @@ define({ "api": [
         ]
       }
     },
-    "version": "0.0.0",
-    "filename": "Public_code/doc.js",
-    "groupTitle": "Playlist"
-  },
-  {
-    "type": "PUT",
-    "url": "/playlists/{playlist_id}/tracks",
-    "title": "Get a Playlist's Tracks",
-    "name": "Get_a_Playlist's_Tracks",
-    "group": "Playlist",
-    "description": "<p style=\"color:red;\">Get full details of the tracks of a playlist owned by a Spotify user.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
-    "header": {
-      "fields": {
-        "Header": [
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "Authorization",
-            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
-          }
-        ]
-      }
-    },
-    "parameter": {
-      "fields": {
-        "Query Paramaters": [
-          {
-            "group": "Query Paramaters",
-            "optional": false,
-            "field": "fields",
-            "description": "<p>Optional. Filters for the query: a comma-separated list of the fields to return. If omitted, all fields are returned. For example, to get just the total number of tracks and the request limit: fields=total,limit A dot separator can be used to specify non-reoccurring fields, while parentheses can be used to specify reoccurring fields within objects. For example, to get just the added date and user ID of the adder: fields=items(added_at,added_by.id) Use multiple parentheses to drill down into nested objects, for example: fields=items(track(name,href,album(name,href))) Fields can be excluded by prefixing them with an exclamation mark, for example: fields=items.track.album(!external_urls,images)</p>"
-          },
-          {
-            "group": "Query Paramaters",
-            "optional": false,
-            "field": "limit",
-            "description": "<p>Optional. The maximum number of tracks to return. Default: 100. Minimum: 1. Maximum: 100.</p>"
-          },
-          {
-            "group": "Query Paramaters",
-            "optional": false,
-            "field": "offset",
-            "description": "<p>Optional. The index of the first track to return. Default: 0 (the first object).</p>"
-          },
-          {
-            "group": "Query Paramaters",
-            "optional": false,
-            "field": "market",
-            "description": "<p>Optional. An ISO 3166-1 alpha-2 country code or the string from_token. Provide this parameter if you want to apply Track Relinking.</p>"
-          }
-        ],
-        "Response": [
-          {
-            "group": "Response",
-            "optional": false,
-            "field": "Format",
-            "description": "<p>On success, the response body contains an array of playlist track objects (wrapped in a paging object) in JSON format and the HTTP status code in the response header is 200 OK. On error, the header status code is an error code and the response body contains an error object. Requesting playlists that you do not have the user’s authorization to access returns error 403 Forbidden.</p>"
-          }
-        ]
-      }
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "[{\"_id\":\"5e7cee3c35bf5449a0aa0a24\",\"type\":\"playlist\",\"Description\":\"anything\",\"collaborative\":false,\"name\":\"changedPlaylist1\",\"isPublic\":true,\"ownerId\":\"5e7ced3535bf5449a0aa0a23\",\"images\":[],\"snapshot\":[{\"hasTracks\":[\"5e7c9618cb9f6a5270ea413a\",\"5e7c9618cb9f6a5270ea4139\"],\"_id\":\"5e7cf0e4f37b461aac6afdd0\",\"action\":\"Add Tracks\"},{\"hasTracks\":[\"5e7c9618cb9f6a5270ea413a\",\"5e7c9618cb9f6a5270ea4139\"],\"_id\":\"5e7cf10728082026100db373\",\"action\":\"Add Tracks\"},{\"hasTracks\":[\"5e7c9618cb9f6a5270ea413a\",\"5e7c9618cb9f6a5270ea4139\",\"5e7c95e2cb9f6a5270ea412d\"],\"_id\":\"5e7cf11d28082026100db374\",\"action\":\"Add Tracks\"},{\"hasTracks\":[\"5e7c9618cb9f6a5270ea413a\",\"5e7c9618cb9f6a5270ea4139\",\"5e7c95e2cb9f6a5270ea412d\"],\"_id\":\"5e7cf12f28082026100db375\",\"action\":\"Add Tracks\"}],\"__v\":4}]",
+          "type": "json"
+        }
+      ]
     },
     "version": "0.0.0",
     "filename": "Public_code/doc.js",
@@ -2815,7 +2761,7 @@ define({ "api": [
             "group": "Response",
             "optional": false,
             "field": "Format",
-            "description": "<p>On success, the response body contains a playlist object in JSON format and the HTTP status code in the response header is 200 OK. On error, the header status code is an error code and the response body contains an error object. Requesting playlists that you do not have the user’s authorization to access returns error 400 Forbidden. For the description in the Playlist object, it should be expected that HTML will be escaped.</p>"
+            "description": "<p>On success, the response body contains a playlist object in JSON format and the HTTP status code in the response header is 200 OK. On error, the header status code is an error code 400  and the response body contains an error object. Requesting playlists that you do not have the user’s authorization to access returns error 400 Forbidden. For the description in the Playlist object, it should be expected that HTML will be escaped.</p>"
           }
         ]
       }
@@ -2832,6 +2778,15 @@ define({ "api": [
         ]
       }
     },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\"_id\":\"5e7b6413357189256c64f202\",\"type\":\"playlist\",\"collaborative\":false,\"name\":\"playlist1Demo\",\"isPublic\":true,\"images\":[],\"snapshot\":[],\"__v\":0}",
+          "type": "json"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
@@ -2839,7 +2794,7 @@ define({ "api": [
   {
     "type": "GET",
     "url": "/Playlist/next",
-    "title": "Get a Playlist Cover Image",
+    "title": "Get a Playlist Cover Image(not implemented yet)",
     "name": "Get_a_Playlist_Cover_Image",
     "group": "Playlist",
     "description": "<p style=\"color:red;\">Get the current image associated with a specific playlist.</p>",
@@ -2880,7 +2835,7 @@ define({ "api": [
     "groupTitle": "Playlist"
   },
   {
-    "type": "POST",
+    "type": "DELETE",
     "url": "/playlists/{playlist_id}/tracks",
     "title": "Remove Tracks from a Playlist",
     "name": "Remove_Tracks_from_a_Playlist",
@@ -2896,48 +2851,18 @@ define({ "api": [
             "description": "<p>The Spotify ID for the playlist</p>"
           }
         ],
-        "remove all occurrences of a track or multiple tracks by specifying only the track URIs:": [
+        "Body parameter": [
           {
-            "group": "remove all occurrences of a track or multiple tracks by specifying only the track URIs:",
+            "group": "Body parameter",
             "optional": false,
-            "field": "tracks",
-            "description": "<p>Required. An array of objects containing Spotify URIs of the tracks to remove</p>"
-          }
-        ],
-        "Removing a specific occurrence of a track": [
-          {
-            "group": "Removing a specific occurrence of a track",
-            "optional": false,
-            "field": "tracks",
-            "description": "<p>Required. An array of objects containing Spotify URIs of the tracks to remove with their current positions in the playlist.</p>"
-          }
-        ],
-        "Removing a specific occurrence of a track in a specific playlist snapshot": [
-          {
-            "group": "Removing a specific occurrence of a track in a specific playlist snapshot",
-            "optional": false,
-            "field": "tracks",
-            "description": "<p>Required. An array of objects containing Spotify URIs of the tracks to remove with their current positions in the playlist.The positions parameter is zero-indexed, that is the first track in the playlist has the value 0 , the second track 1 , and so on. A maximum of 100 objects can be sent at once.</p>"
+            "field": "track_ids",
+            "description": "<p>required. comma seperated string contain ids of tracks to be removed from playlist</p>"
           },
           {
-            "group": "Removing a specific occurrence of a track in a specific playlist snapshot",
+            "group": "Body parameter",
             "optional": false,
             "field": "snapshot_id",
-            "description": "<p>Optional.{string} The playlist’s snapshot ID against which you want to make the changes. The API will validate that the specified tracks exist and in the specified positions and make the changes, even if more recent changes have been made to the playlist.</p>"
-          }
-        ],
-        "Removing the track at a given position in a specific playlist snapshot": [
-          {
-            "group": "Removing the track at a given position in a specific playlist snapshot",
-            "optional": false,
-            "field": "snapshot_id",
-            "description": "<p>Optional.{string} The playlist’s snapshot ID against which you want to make the changes. The API will validate that the specified tracks exist and in the specified positions and make the changes, even if more recent changes have been made to the playlist</p>"
-          },
-          {
-            "group": "Removing the track at a given position in a specific playlist snapshot",
-            "optional": false,
-            "field": "tracks",
-            "description": "<p>Required. An array of objects containing Spotify URIs of the tracks to remove with their current positions in the playlist. uri&quot;: &quot;spotify:track:1301WleyT98MSxVHPZCA6M&quot;, &quot;positions&quot;: [7] }] } he positions parameter is zero-indexed, that is the first track in the playlist has the value 0, the second track 1, and so on. A maximum of 100 objects can be sent at once.</p>"
+            "description": "<p>optional. id of the snapshot to remove tracks from</p>"
           }
         ],
         "Response": [
@@ -2945,7 +2870,7 @@ define({ "api": [
             "group": "Response",
             "optional": false,
             "field": "Format",
-            "description": "<p>On success, the response body contains a snapshot_id in JSON format and the HTTP status code in the response header is 200 OK. The snapshot_id can be used to identify your playlist version in future requests. On error, the header status code is an error code and the response body contains an error object. Trying to remove a track when you do not have the user’s authorization returns error 403 Forbidden. Attempting to use several different ways to remove tracks returns 400 Bad Request. Other client errors returning 400 Bad Request include specifying invalid positions</p>"
+            "description": "<p>On success, the response body contains a snapshot_id in JSON format and the HTTP status code in the response header is 200 OK.  On error, the header status code is an error code 404 and the response body contains an error object. Trying to remove a track when you do not have the user’s authorization returns error 403 Forbidden. Attempting to use several different ways to remove tracks returns 400 Bad Request</p>"
           }
         ]
       }
@@ -3047,6 +2972,15 @@ define({ "api": [
         ]
       }
     },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\"_id\":\"5e7cee3c35bf5449a0aa0a24\",\"type\":\"playlist\",\"Description\":\"anything\",\"collaborative\":false,\"name\":\"changedPlaylist1\",\"isPublic\":false,\"ownerId\":\"5e7ced3535bf5449a0aa0a23\",\"images\":[],\"snapshot\":[\"hasTracks\":[\"5e7c95e1cb9f6a5270ea412a\",\"5e7c95e2cb9f6a5270ea412d\",\"5e7c9618cb9f6a5270ea413a\",\"5e7c95e2cb9f6a5270ea412c\",\"5e7c95e2cb9f6a5270ea412b\"],\"_id\":\"5e7e63cb0348392ef49bf95d\",\"action\":\"Add Tracks\"},{\"hasTracks\":[\"5e7c95e1cb9f6a5270ea412a\",\"5e7c9618cb9f6a5270ea413a\",\"5e7c95e2cb9f6a5270ea412c\",\"5e7c95e2cb9f6a5270ea412b\",\"5e7c95e2cb9f6a5270ea412d\"],\"_id\":\"5e7e63dc0348392ef49bf95e\",\"action\":\"reorder Tracks\"},{\"hasTracks\":[\"5e7c9618cb9f6a5270ea413a\",\"5e7c95e2cb9f6a5270ea412c\",\"5e7c95e2cb9f6a5270ea412b\",\"5e7c95e2cb9f6a5270ea412d\",\"5e7c95e1cb9f6a5270ea412a\"],\"_id\":\"5e7e63f00348392ef49bf95f\",\"action\":\"reorder Tracks\"}],\"__v\":38}",
+          "type": "json"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
@@ -3054,7 +2988,7 @@ define({ "api": [
   {
     "type": "PUT",
     "url": "/playlists/{playlist_id}/tracks",
-    "title": "Replace a Playlist's Tracks",
+    "title": "Replace a Playlist's Tracks (Not implemented yet)",
     "name": "Replace_a_Playlist's_Tracks.",
     "group": "Playlist",
     "description": "<p style=\"color:red;\">Replace all the tracks in a playlist, overwriting its existing tracks. This powerful request can be useful for replacing tracks, re-ordering existing tracks, or clearing the playlist.</p> <p>The Spotify URIs of the tracks to set can be passed either as a JSON array in the request body or as a list in the query string. The request can only accept a maximum of 100 tracks; any additional tracks will need to be added using the “Add Tracks to a Playlist” endpoint.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
@@ -3121,7 +3055,7 @@ define({ "api": [
   {
     "type": "PUT",
     "url": "/playlists/{playlist_id}/images",
-    "title": "Upload a Custom Playlist Cover Image",
+    "title": "Upload a Custom Playlist  Cover Image (Not implemented yet)",
     "name": "Upload_a_Custom_Playlist_Cover_Image.",
     "group": "Playlist",
     "description": "<p style=\"color:red;\">Replace the image used to represent a specific playlist.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
@@ -3185,7 +3119,7 @@ define({ "api": [
   },
   {
     "type": "Delete",
-    "url": "/me/delete/:playlist_id",
+    "url": "/me/delete/{playlist_id}",
     "title": "delete a Playlist",
     "name": "delete_a_Playlist.",
     "group": "Playlist",
@@ -3218,6 +3152,113 @@ define({ "api": [
             "optional": false,
             "field": "Authorization",
             "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\"success\":\"Delete successfully\"}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "Public_code/doc.js",
+    "groupTitle": "Playlist"
+  },
+  {
+    "type": "PUT",
+    "url": "/playlists/{playlist_id}/collaborative",
+    "title": "toggle playlist collaborative attribute",
+    "name": "toggle_collaborative.",
+    "group": "Playlist",
+    "description": "<p style=\"color:red;\">toggle the collaborative attribute of the specified playlist in the request</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "parameter": {
+      "fields": {
+        "Path Parameters": [
+          {
+            "group": "Path Parameters",
+            "optional": false,
+            "field": "playlist_id",
+            "description": "<p>The Spotify ID for the playlist</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>on success, the HTTP status code in the response header is 200. On error, the header status code is an error code 404, the response body contains an error object, and the existing playlist is unmodified. Trying to set a track when you do not have the user’s authorization returns error 403 Forbidden.</p>"
+          }
+        ]
+      }
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
+          },
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Content-Type",
+            "description": "<p>Required if URIs are passed in the request body, otherwise ignored. The content type of the request body: application/json</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "Public_code/doc.js",
+    "groupTitle": "Playlist"
+  },
+  {
+    "type": "PUT",
+    "url": "/playlists/{playlist_id}/public",
+    "title": "toggle playlist public attribute",
+    "name": "toggle_public.",
+    "group": "Playlist",
+    "description": "<p style=\"color:red;\">toggle the public attribute of the specified playlist in the request.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "parameter": {
+      "fields": {
+        "Path Parameters": [
+          {
+            "group": "Path Parameters",
+            "optional": false,
+            "field": "playlist_id",
+            "description": "<p>The Spotify ID for the playlist</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>on success, the HTTP status code in the response header is 200. On error, the header status code is an error code 404, the response body contains an error object, and the existing playlist is unmodified. Trying to set a track when you do not have the user’s authorization returns error 403 Forbidden.</p>"
+          }
+        ]
+      }
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
+          },
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Content-Type",
+            "description": "<p>Required if URIs are passed in the request body, otherwise ignored. The content type of the request body: application/json</p>"
           }
         ]
       }
@@ -3554,6 +3595,15 @@ define({ "api": [
         ]
       }
     },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "\n[{\"_id\":\"5e80a8c6dd73fc4fa469b0ba\",\n\"email\":\"bahaaeldeen1999@gmail.com\",\n\"displayName\":\"bahaaEldeen\",\n\"gender\":\"Male\",\"country\":\"eg\",\n\"birthDate\":\"1999-01-11T22:00:00.000Z\",\n\"product\":\"free\",\n\"images\":[]}]",
+          "type": "json"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "Public_code/doc.js",
     "groupTitle": "Users_Profile"
@@ -3604,6 +3654,133 @@ define({ "api": [
           }
         ]
       }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n\"0\":\n{\"user\":{\n\"_id\":\"5e7fe6a7e1c82f568c4209ec\",\n\"displayName\":\"nadood\",\n\"images\":[],\n\"type\":\"user\"\n     }\n }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "Public_code/doc.js",
+    "groupTitle": "Users_Profile"
+  },
+  {
+    "type": "DELETE",
+    "url": "/remove",
+    "title": "delete Current User's Profile",
+    "name": "delete_Current_User's_Profile",
+    "group": "Users_Profile",
+    "description": "<p style=\"color:red;\">delete current user profile.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br>Reading the user’s email address requires the user-read-email scope; </br>reading country and product subscription level requires the user-read-private scope.</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body contains a success object in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</br> When requesting fields that you don’t have the user’s authorization to access, it will return error 403 Forbidden.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "\n{\n \"success\":\"user deleted\"\n  }",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "Public_code/doc.js",
+    "groupTitle": "Users_Profile"
+  },
+  {
+    "type": "PUT",
+    "url": "/me/update",
+    "title": "update Current User's Profile",
+    "name": "update_Current_User's_Profile",
+    "group": "Users_Profile",
+    "description": "<p style=\"color:red;\">update current user profile.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br>Reading the user’s email address requires the user-read-email scope; </br>reading country and product subscription level requires the user-read-private scope.</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Body Parameters": [
+          {
+            "group": "Body Parameters",
+            "type": "string",
+            "optional": false,
+            "field": "Email",
+            "description": "<p>optional. email to be updated to, should be new email and not already existing one.</p>"
+          },
+          {
+            "group": "Body Parameters",
+            "type": "string",
+            "optional": false,
+            "field": "Password",
+            "description": "<p>optional. password to be updated to.</p>"
+          },
+          {
+            "group": "Body Parameters",
+            "type": "string",
+            "optional": false,
+            "field": "Country",
+            "description": "<p>optional. country to be updated to.</p>"
+          },
+          {
+            "group": "Body Parameters",
+            "type": "string",
+            "optional": false,
+            "field": "Display_Name",
+            "description": "<p>optional. name to be updated to.</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body contains a success object in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</br> When requesting fields that you don’t have the user’s authorization to access, it will return error 403 Forbidden.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "\n{\n \"success\":\"information has been updated successfully\"\n  }",
+          "type": "json"
+        }
+      ]
     },
     "version": "0.0.0",
     "filename": "Public_code/doc.js",

@@ -1,6 +1,6 @@
 define({
   "name": "Spotify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "doc.js",
   "directories": {
@@ -16,7 +16,7 @@ define({
   "apidoc": "0.3.0",
   "generator": {
     "name": "apidoc",
-    "time": "2020-03-27T13:48:47.349Z",
+    "time": "2020-03-29T17:06:23.543Z",
     "url": "http://apidocjs.com",
     "version": "0.20.1"
   }
