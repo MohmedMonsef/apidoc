@@ -1404,7 +1404,15 @@
  * 
 * @apiParam (Response) Format On success, the response body contains a snapshot_id in JSON format and the HTTP status code in the response header is 200 OK. The snapshot_id can be used to identify your playlist version in future requests. On error, the header status code is an error code, the response body contains an error object, and the existing playlist is unmodified.
 *@apiSuccessExample {json} Success-Response:
-*{"_id":"5e7cee3c35bf5449a0aa0a24","type":"playlist","Description":"anything","collaborative":false,"name":"changedPlaylist1","isPublic":false,"ownerId":"5e7ced3535bf5449a0aa0a23","images":[],"snapshot":["hasTracks":["5e7c95e1cb9f6a5270ea412a","5e7c95e2cb9f6a5270ea412d","5e7c9618cb9f6a5270ea413a","5e7c95e2cb9f6a5270ea412c","5e7c95e2cb9f6a5270ea412b"],"_id":"5e7e63cb0348392ef49bf95d","action":"Add Tracks"},{"hasTracks":["5e7c95e1cb9f6a5270ea412a","5e7c9618cb9f6a5270ea413a","5e7c95e2cb9f6a5270ea412c","5e7c95e2cb9f6a5270ea412b","5e7c95e2cb9f6a5270ea412d"],"_id":"5e7e63dc0348392ef49bf95e","action":"reorder Tracks"},{"hasTracks":["5e7c9618cb9f6a5270ea413a","5e7c95e2cb9f6a5270ea412c","5e7c95e2cb9f6a5270ea412b","5e7c95e2cb9f6a5270ea412d","5e7c95e1cb9f6a5270ea412a"],"_id":"5e7e63f00348392ef49bf95f","action":"reorder Tracks"}],"__v":38}
+*{"_id":"5e7cee3c35bf5449a0aa0a24","type":"playlist",*"Description":"anything",
+*"collaborative":false,
+*"name":"changedPlaylist1",
+*"isPublic":false,
+*"ownerId":"5e7ced3535bf5449a0aa0a23",
+*"images":[],
+*"snapshot":["hasTracks":["5e7c95e1cb9f6a5270ea412a",*"5e7c95e2cb9f6a5270ea412d","5e7c9618cb9f6a5270ea413a",*"5e7c95e2cb9f6a5270ea412c","5e7c95e2cb9f6a5270ea412b"],*"_id":"5e7e63cb0348392ef49bf95d","action":"Add Tracks"},
+*{"hasTracks":["5e7c95e1cb9f6a5270ea412a","5e7c9618cb9f6a5270ea413a",*"5e7c95e2cb9f6a5270ea412c","5e7c95e2cb9f6a5270ea412b",*"5e7c95e2cb9f6a5270ea412d"],"_id":"5e7e63dc0348392ef49bf95e",*"action":"reorder Tracks"},{"hasTracks":["5e7c9618cb9f6a5270ea413a",*"5e7c95e2cb9f6a5270ea412c","5e7c95e2cb9f6a5270ea412b",*"5e7c95e2cb9f6a5270ea412d","5e7c95e1cb9f6a5270ea412a"],*"_id":"5e7e63f00348392ef49bf95f","action":"reorder Tracks"}],
+*"__v":38}
 */
 /**
  * @api {PUT}/playlists/{playlist_id}/tracks Replace a Playlist's Tracks (Not implemented yet)
