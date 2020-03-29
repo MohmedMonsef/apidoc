@@ -1160,7 +1160,16 @@
  * @apiParam (Response) Format On success, the response body contains the created playlist object in JSON format and the HTTP status code in the response header is 200 Ok Created. On error, the header status code is an error code and the response body contains an error object. Trying to create a playlist when you do not have the user’s authorization returns error 400 Forbidden.
  * 
  * @apiSuccessExample {json} Success-Response:
- * {"_id":"5e7cee3c35bf5449a0aa0a24","type":"playlist","Description":"",*"collaborative":false,"name":"playlist1Demo","isPublic":true,*"ownerId":"5e7ced3535bf5449a0aa0a23","images":[],"snapshot":[],*"__v":0}
+ * {"_id":"5e7cee3c35bf5449a0aa0a24",
+ * "type":"playlist",
+ * "Description":"",
+ * "collaborative":false,
+ * "name":"playlist1Demo",
+ * "isPublic":true,
+ * "ownerId":"5e7ced3535bf5449a0aa0a23",
+ * "images":[],
+ * "snapshot":[],
+ * "__v":0}
  * 
  */
 /**
@@ -1192,7 +1201,21 @@
  * 
  * 
  * @apiSuccessExample {json} Success-Response:
- * {"_id":"5e7cee3c35bf5449a0aa0a24","type":"playlist",*"Description":"anything","collaborative":false,*"name":"changedPlaylist1","isPublic":true,*"ownerId":"5e7ced3535bf5449a0aa0a23","images":[],"snapshot":[{"hasTracks":["5e7c9618cb9f6a5270ea413a","5e7c9618cb9f6a5270ea4139"],"_id":"5e7cf0e4f37b461aac6afdd0","action":"Add Tracks"},{"hasTracks":["5e7c9618cb9f6a5270ea413a","5e7c9618cb9f6a5270ea4139"],"_id":"5e7cf10728082026100db373","action":"Add Tracks"},{"hasTracks":["5e7c9618cb9f6a5270ea413a","5e7c9618cb9f6a5270ea4139","5e7c95e2cb9f6a5270ea412d"],"_id":"5e7cf11d28082026100db374","action":"Add Tracks"},{"hasTracks":["5e7c9618cb9f6a5270ea413a","5e7c9618cb9f6a5270ea4139","5e7c95e2cb9f6a5270ea412d"],"_id":"5e7cf12f28082026100db375","action":"Add Tracks"}],"__v":4}
+ * {
+ * "_id":"5e7cee3c35bf5449a0aa0a24",
+ * "type":"playlist",
+ * "Description":"anything",
+ * "collaborative":false,
+ * "name":"changedPlaylist1",
+ * "isPublic":true,
+ * "ownerId":"5e7ced3535bf5449a0aa0a23",
+ * "images":[],
+ * "snapshot":[
+ * {"hasTracks":["5e7c9618cb9f6a5270ea413a","5e7c9618cb9f6a5270ea4139"],"_id":"5e7cf0e4f37b461aac6afdd0","action":"Add Tracks"},
+ * {"hasTracks":["5e7c9618cb9f6a5270ea413a","5e7c9618cb9f6a5270ea4139"],"_id":"5e7cf10728082026100db373","action":"Add Tracks"},
+ * {"hasTracks":["5e7c9618cb9f6a5270ea413a","5e7c9618cb9f6a5270ea4139","5e7c95e2cb9f6a5270ea412d"],"_id":"5e7cf11d28082026100db374","action":"Add Tracks"},
+ * {"hasTracks":["5e7c9618cb9f6a5270ea413a","5e7c9618cb9f6a5270ea4139","5e7c95e2cb9f6a5270ea412d"],"_id":"5e7cf12f28082026100db375","action":"Add Tracks"}],
+ * "__v":4}
  * 
  */
 
@@ -1218,7 +1241,17 @@
  * @apiParam (Response) Format On success, the HTTP status code in the response header is 200 OK and the response body contains an array of  playlist objects in JSON format. On error, the header status code is an error code 404 and the response body contains an error object. Please note that the access token has to be tied to a user.
  * 
  *@apiSuccessExample {json} Success-Response:
- * [{"_id":"5e7cee3c35bf5449a0aa0a24","type":"playlist","Description":"anything","collaborative":false,"name":"changedPlaylist1","isPublic":true,"ownerId":"5e7ced3535bf5449a0aa0a23","images":[],"snapshot":[{"hasTracks":["5e7c9618cb9f6a5270ea413a","5e7c9618cb9f6a5270ea4139"],"_id":"5e7cf0e4f37b461aac6afdd0","action":"Add Tracks"},{"hasTracks":["5e7c9618cb9f6a5270ea413a","5e7c9618cb9f6a5270ea4139"],"_id":"5e7cf10728082026100db373","action":"Add Tracks"},{"hasTracks":["5e7c9618cb9f6a5270ea413a","5e7c9618cb9f6a5270ea4139","5e7c95e2cb9f6a5270ea412d"],"_id":"5e7cf11d28082026100db374","action":"Add Tracks"},{"hasTracks":["5e7c9618cb9f6a5270ea413a","5e7c9618cb9f6a5270ea4139","5e7c95e2cb9f6a5270ea412d"],"_id":"5e7cf12f28082026100db375","action":"Add Tracks"}],"__v":4}]
+ * [
+ * {"_id":"5e7cee3c35bf5449a0aa0a24",
+ * "type":"playlist",
+ * "Description":"anything",
+ * "collaborative":false,
+ * "name":"changedPlaylist1",
+ * "isPublic":true,
+ * "ownerId":"5e7ced3535bf5449a0aa0a23",
+ * "images":[],
+ * "snapshot":[{"hasTracks":["5e7c9618cb9f6a5270ea413a","5e7c9618cb9f6a5270ea4139"],"_id":"5e7cf0e4f37b461aac6afdd0","action":"Add Tracks"}],
+ * "__v":4}]
  */
 
 /**
@@ -1243,7 +1276,16 @@
  * @apiParam (Response) Format On success, the HTTP status code in the response header is 200 OK and the response body contains an array of  playlist objects  in JSON format. On error, the header status code is an error code 404 and the response body contains an error object.
  * 
  *@apiSuccessExample {json} Success-Response:
- * [{"_id":"5e7cee3c35bf5449a0aa0a24","type":"playlist","Description":"anything","collaborative":false,"name":"changedPlaylist1","isPublic":true,"ownerId":"5e7ced3535bf5449a0aa0a23","images":[],"snapshot":[{"hasTracks":["5e7c9618cb9f6a5270ea413a","5e7c9618cb9f6a5270ea4139"],"_id":"5e7cf0e4f37b461aac6afdd0","action":"Add Tracks"},{"hasTracks":["5e7c9618cb9f6a5270ea413a","5e7c9618cb9f6a5270ea4139"],"_id":"5e7cf10728082026100db373","action":"Add Tracks"},{"hasTracks":["5e7c9618cb9f6a5270ea413a","5e7c9618cb9f6a5270ea4139","5e7c95e2cb9f6a5270ea412d"],"_id":"5e7cf11d28082026100db374","action":"Add Tracks"},{"hasTracks":["5e7c9618cb9f6a5270ea413a","5e7c9618cb9f6a5270ea4139","5e7c95e2cb9f6a5270ea412d"],"_id":"5e7cf12f28082026100db375","action":"Add Tracks"}],"__v":4}]
+ * [{"_id":"5e7cee3c35bf5449a0aa0a24",
+ * "type":"playlist",
+ * "Description":"anything",
+ * "collaborative":false,
+ * "name":"changedPlaylist1",
+ * "isPublic":true,
+ * "ownerId":"5e7ced3535bf5449a0aa0a23",
+ * "images":[],
+ * "snapshot":[{"hasTracks":["5e7c9618cb9f6a5270ea413a","5e7c9618cb9f6a5270ea4139"],"_id":"5e7cf0e4f37b461aac6afdd0","action":"Add Tracks"}],
+ * "__v":4}]
  */
 
 /**
@@ -1265,10 +1307,17 @@
  * @apiParam (Response) Format On success, the response body contains a playlist object in JSON format and the HTTP status code in the response header is 200 OK. On error, the header status code is an error code 400  and the response body contains an error object. Requesting playlists that you do not have the user’s authorization to access returns error 400 Forbidden. For the description in the Playlist object, it should be expected that HTML will be escaped.
  * 
  * @apiSuccessExample {json} Success-Response:
- * {"_id":"5e7b6413357189256c64f202","type":"playlist","collaborative":false,"name":"playlist1Demo","isPublic":true,"images":[],"snapshot":[],"__v":0}
+ * {"_id":"5e7b6413357189256c64f202",
+ * "type":"playlist",
+ * "collaborative":false,
+ * "name":"playlist1Demo",
+ * "isPublic":true,
+ * "images":[],
+ * "snapshot":[],
+ * "__v":0}
  */
 /**
- * @api {Delete}/me/delete/{playlist_id} delete a Playlist
+ * @api {Delete} /me/delete/playlists/{playlist_id} delete a Playlist
  * @apiName delete a Playlist.
  * @apiGroup Playlist
  * @apiDescription

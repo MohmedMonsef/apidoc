@@ -2546,7 +2546,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\"_id\":\"5e7cee3c35bf5449a0aa0a24\",\"type\":\"playlist\",*\"Description\":\"anything\",\"collaborative\":false,*\"name\":\"changedPlaylist1\",\"isPublic\":true,*\"ownerId\":\"5e7ced3535bf5449a0aa0a23\",\"images\":[],\"snapshot\":[{\"hasTracks\":[\"5e7c9618cb9f6a5270ea413a\",\"5e7c9618cb9f6a5270ea4139\"],\"_id\":\"5e7cf0e4f37b461aac6afdd0\",\"action\":\"Add Tracks\"},{\"hasTracks\":[\"5e7c9618cb9f6a5270ea413a\",\"5e7c9618cb9f6a5270ea4139\"],\"_id\":\"5e7cf10728082026100db373\",\"action\":\"Add Tracks\"},{\"hasTracks\":[\"5e7c9618cb9f6a5270ea413a\",\"5e7c9618cb9f6a5270ea4139\",\"5e7c95e2cb9f6a5270ea412d\"],\"_id\":\"5e7cf11d28082026100db374\",\"action\":\"Add Tracks\"},{\"hasTracks\":[\"5e7c9618cb9f6a5270ea413a\",\"5e7c9618cb9f6a5270ea4139\",\"5e7c95e2cb9f6a5270ea412d\"],\"_id\":\"5e7cf12f28082026100db375\",\"action\":\"Add Tracks\"}],\"__v\":4}",
+          "content": "{\n\"_id\":\"5e7cee3c35bf5449a0aa0a24\",\n\"type\":\"playlist\",\n\"Description\":\"anything\",\n\"collaborative\":false,\n\"name\":\"changedPlaylist1\",\n\"isPublic\":true,\n\"ownerId\":\"5e7ced3535bf5449a0aa0a23\",\n\"images\":[],\n\"snapshot\":[\n{\"hasTracks\":[\"5e7c9618cb9f6a5270ea413a\",\"5e7c9618cb9f6a5270ea4139\"],\"_id\":\"5e7cf0e4f37b461aac6afdd0\",\"action\":\"Add Tracks\"},\n{\"hasTracks\":[\"5e7c9618cb9f6a5270ea413a\",\"5e7c9618cb9f6a5270ea4139\"],\"_id\":\"5e7cf10728082026100db373\",\"action\":\"Add Tracks\"},\n{\"hasTracks\":[\"5e7c9618cb9f6a5270ea413a\",\"5e7c9618cb9f6a5270ea4139\",\"5e7c95e2cb9f6a5270ea412d\"],\"_id\":\"5e7cf11d28082026100db374\",\"action\":\"Add Tracks\"},\n{\"hasTracks\":[\"5e7c9618cb9f6a5270ea413a\",\"5e7c9618cb9f6a5270ea4139\",\"5e7c95e2cb9f6a5270ea412d\"],\"_id\":\"5e7cf12f28082026100db375\",\"action\":\"Add Tracks\"}],\n\"__v\":4}",
           "type": "json"
         }
       ]
@@ -2612,7 +2612,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\"_id\":\"5e7cee3c35bf5449a0aa0a24\",\"type\":\"playlist\",\"Description\":\"\",*\"collaborative\":false,\"name\":\"playlist1Demo\",\"isPublic\":true,*\"ownerId\":\"5e7ced3535bf5449a0aa0a23\",\"images\":[],\"snapshot\":[],*\"__v\":0}",
+          "content": "{\"_id\":\"5e7cee3c35bf5449a0aa0a24\",\n\"type\":\"playlist\",\n\"Description\":\"\",\n\"collaborative\":false,\n\"name\":\"playlist1Demo\",\n\"isPublic\":true,\n\"ownerId\":\"5e7ced3535bf5449a0aa0a23\",\n\"images\":[],\n\"snapshot\":[],\n\"__v\":0}",
           "type": "json"
         }
       ]
@@ -2656,7 +2656,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "[{\"_id\":\"5e7cee3c35bf5449a0aa0a24\",\"type\":\"playlist\",\"Description\":\"anything\",\"collaborative\":false,\"name\":\"changedPlaylist1\",\"isPublic\":true,\"ownerId\":\"5e7ced3535bf5449a0aa0a23\",\"images\":[],\"snapshot\":[{\"hasTracks\":[\"5e7c9618cb9f6a5270ea413a\",\"5e7c9618cb9f6a5270ea4139\"],\"_id\":\"5e7cf0e4f37b461aac6afdd0\",\"action\":\"Add Tracks\"},{\"hasTracks\":[\"5e7c9618cb9f6a5270ea413a\",\"5e7c9618cb9f6a5270ea4139\"],\"_id\":\"5e7cf10728082026100db373\",\"action\":\"Add Tracks\"},{\"hasTracks\":[\"5e7c9618cb9f6a5270ea413a\",\"5e7c9618cb9f6a5270ea4139\",\"5e7c95e2cb9f6a5270ea412d\"],\"_id\":\"5e7cf11d28082026100db374\",\"action\":\"Add Tracks\"},{\"hasTracks\":[\"5e7c9618cb9f6a5270ea413a\",\"5e7c9618cb9f6a5270ea4139\",\"5e7c95e2cb9f6a5270ea412d\"],\"_id\":\"5e7cf12f28082026100db375\",\"action\":\"Add Tracks\"}],\"__v\":4}]",
+          "content": "[\n{\"_id\":\"5e7cee3c35bf5449a0aa0a24\",\n\"type\":\"playlist\",\n\"Description\":\"anything\",\n\"collaborative\":false,\n\"name\":\"changedPlaylist1\",\n\"isPublic\":true,\n\"ownerId\":\"5e7ced3535bf5449a0aa0a23\",\n\"images\":[],\n\"snapshot\":[{\"hasTracks\":[\"5e7c9618cb9f6a5270ea413a\",\"5e7c9618cb9f6a5270ea4139\"],\"_id\":\"5e7cf0e4f37b461aac6afdd0\",\"action\":\"Add Tracks\"}],\n\"__v\":4}]",
           "type": "json"
         }
       ]
@@ -2722,7 +2722,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "[{\"_id\":\"5e7cee3c35bf5449a0aa0a24\",\"type\":\"playlist\",\"Description\":\"anything\",\"collaborative\":false,\"name\":\"changedPlaylist1\",\"isPublic\":true,\"ownerId\":\"5e7ced3535bf5449a0aa0a23\",\"images\":[],\"snapshot\":[{\"hasTracks\":[\"5e7c9618cb9f6a5270ea413a\",\"5e7c9618cb9f6a5270ea4139\"],\"_id\":\"5e7cf0e4f37b461aac6afdd0\",\"action\":\"Add Tracks\"},{\"hasTracks\":[\"5e7c9618cb9f6a5270ea413a\",\"5e7c9618cb9f6a5270ea4139\"],\"_id\":\"5e7cf10728082026100db373\",\"action\":\"Add Tracks\"},{\"hasTracks\":[\"5e7c9618cb9f6a5270ea413a\",\"5e7c9618cb9f6a5270ea4139\",\"5e7c95e2cb9f6a5270ea412d\"],\"_id\":\"5e7cf11d28082026100db374\",\"action\":\"Add Tracks\"},{\"hasTracks\":[\"5e7c9618cb9f6a5270ea413a\",\"5e7c9618cb9f6a5270ea4139\",\"5e7c95e2cb9f6a5270ea412d\"],\"_id\":\"5e7cf12f28082026100db375\",\"action\":\"Add Tracks\"}],\"__v\":4}]",
+          "content": "[{\"_id\":\"5e7cee3c35bf5449a0aa0a24\",\n\"type\":\"playlist\",\n\"Description\":\"anything\",\n\"collaborative\":false,\n\"name\":\"changedPlaylist1\",\n\"isPublic\":true,\n\"ownerId\":\"5e7ced3535bf5449a0aa0a23\",\n\"images\":[],\n\"snapshot\":[{\"hasTracks\":[\"5e7c9618cb9f6a5270ea413a\",\"5e7c9618cb9f6a5270ea4139\"],\"_id\":\"5e7cf0e4f37b461aac6afdd0\",\"action\":\"Add Tracks\"}],\n\"__v\":4}]",
           "type": "json"
         }
       ]
@@ -2782,7 +2782,7 @@
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\"_id\":\"5e7b6413357189256c64f202\",\"type\":\"playlist\",\"collaborative\":false,\"name\":\"playlist1Demo\",\"isPublic\":true,\"images\":[],\"snapshot\":[],\"__v\":0}",
+          "content": "{\"_id\":\"5e7b6413357189256c64f202\",\n\"type\":\"playlist\",\n\"collaborative\":false,\n\"name\":\"playlist1Demo\",\n\"isPublic\":true,\n\"images\":[],\n\"snapshot\":[],\n\"__v\":0}",
           "type": "json"
         }
       ]
@@ -3119,7 +3119,7 @@
   },
   {
     "type": "Delete",
-    "url": "/me/delete/{playlist_id}",
+    "url": "/me/delete/playlists/{playlist_id}",
     "title": "delete a Playlist",
     "name": "delete_a_Playlist.",
     "group": "Playlist",
