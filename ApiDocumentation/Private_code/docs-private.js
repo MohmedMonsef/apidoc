@@ -1,5 +1,5 @@
 /**
- * @api {PUT} /sign_up Create a new account
+ * @api {POST} /sign_up Create a new account
  * @apiName Create a new account
  * @apiGroup Account
  * @apiDescription
@@ -45,7 +45,7 @@
  *
  */
 /**
- * @api {post} /Login Login to Spotify
+ * @api {post} /login Login to Spotify
  * @apiName Login to Spotify
  * @apiGroup Account
  * @apiDescription
@@ -65,7 +65,7 @@
  *
  */
 /**
- * @api {post} /login/forgetpassword Forget Password
+ * @api {POST} /login/forgetpassword Forget Password
  * @apiName Forget Password
  * @apiGroup Account
  * @apiDescription
@@ -85,20 +85,20 @@
  */
 
 /**
- * @api {post} /LoginFacebook Login to Spotify with Facebook
+ * @api {POST} /auth/facebook Login to Spotify with Facebook
  * @apiName Login to Spotify with Facebook
  * @apiGroup Account
  * @apiDescription
  * 
- * 
- * <h1>Request Parameters</h1></br></br>
+
  * 
  * <h1>Endpoint</h1> 
  * 
  * 
- * @apiParam (QueryParameters)  email Required. the User e-mail in Facebook Accounts
- * @apiParam (QueryParameters)  password Required. the User Password in Facebook Accounts
- * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response header contains a JWT </br> On error, the header status code is an error code and the response body contains an error object.
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response header contains a JWT </br> On error, redirects to GET login
+ * 
+ * @apiSuccessExample {json} Success-Response:
+ * {"success":true,"token":"JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTdmNzE3YjU3MjQ5ZjIyODhkYzEyZjQiLCJpYXQiOjE1ODU1MDU5MDksImV4cCI6MTU4NTU5MjMwOX0.HniUR47rVmHBvuALPeD4rPZ-YERu4zHCogjxWPymHRw"}
  * 
  * 
  *
@@ -125,22 +125,7 @@
  *
  *
  */
-/**
- * @api {delete} me/remove  remove account
- * @apiName remove account
- * @apiGroup Account
- * @apiDescription
- * 
- * <p style="color:red;">delete user from spotify.</p>
- *
- * 
- * <h1> Request parameters</h1> 
- * </br></br><h1> Endpoint</h1>
- * 
- * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
- * @apiParam (Query Parameters)  id    Required. A user id for the account is wanted to remove  
- */
+
 /**
  * @api {PUT} /promote make user premium
  * @apiName make user premium
@@ -161,28 +146,59 @@
  * 
  */
 /**
- * @api {put} me/Updata Update User Info
- * @apiName Update User Info
- * @apiGroup Account
+ * @api {PUT} /me/update update Current User's Profile
+ * @apiName update Current User's Profile
+ * @apiGroup Users Profile
  * @apiDescription
- * 
+ * <p style="color:red;">update current user profile.</p>
+ *
  * 
  * <h1>Request Parameters</h1></br></br>
  * 
- * <h1>Endpoint</h1> 
+ * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
- *  @apiParam (BodyParameters)  Display_Name 	Optional. Change the dispaly name for the user
- *  @apiParam (BodyParameters)  Email 	Optional. change the E-mail the user uses to get into Spotify
- *  @apiParam (BodyParameters)  Password 	Optional. change the Password the user uses to get into Spotify
- * @apiParam (BodyParameters)  Country 	Optional. change the Country of the user
- * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body is empty </br> On error, the header status code is an error code and the response body contains an error object .
+ * @apiHeader (Header)  Authorization 			Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br>Reading the user’s email address requires the user-read-email scope; </br>reading country and product subscription level requires the user-read-private scope.
  * 
+ * @apiParam (Body Parameters) {string} Email     optional. email to be updated to, should be new email and not already existing one.
  * 
+ *@apiParam (Body Parameters)     {string}  Password  optional. password to be updated to.
+ * 
+* @apiParam (Body Parameters)     {string} Country    optional. country to be updated to.
  *
- *
+ *  @apiParam (Body Parameters)      {string}   Display_Name      optional. name to be updated to.
+ * 
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains a success object in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</br> When requesting fields that you don’t have the user’s authorization to access, it will return error 403 Forbidden.
+ * 
+ * @apiSuccessExample {json} Success-Response:
+ * 
+ * {
+ *  "success":"information has been updated successfully"
+ *   }
  */
 
+ /**
+ * @api {DELETE} /remove delete Current User's Profile
+ * @apiName delete Current User's Profile
+ * @apiGroup Users Profile
+ * @apiDescription
+ * <p style="color:red;">delete current user profile.</p>
+ *
+ * 
+ * <h1>Request Parameters</h1></br></br>
+ * 
+ * <h1> Endpoint</h1> 
+ * 
+ * @apiHeader (Header)  Authorization 			Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br>Reading the user’s email address requires the user-read-email scope; </br>reading country and product subscription level requires the user-read-private scope.
+ * 
+ * 
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains a success object in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</br> When requesting fields that you don’t have the user’s authorization to access, it will return error 403 Forbidden.
+ * 
+ * @apiSuccessExample {json} Success-Response:
+ * 
+ * {
+ *  "success":"user deleted"
+ *   }
+ */
 /**
  * @api {put} me/To-Artist Change User Type to Artist
  * @apiName Change User Type to Artist

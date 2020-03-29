@@ -1686,67 +1686,10 @@
  * 
  * @apiSuccessExample {json} Success-Response:
  * {
- * "0":
- * {"user":{
- * "_id":"5e7fe6a7e1c82f568c4209ec",
- * "displayName":"nadood",
- * "images":[],
- * "type":"user"
- *      }
- *  }
- * }
- */
-/**
- * @api {PUT} /me/update update Current User's Profile
- * @apiName update Current User's Profile
- * @apiGroup Users Profile
- * @apiDescription
- * <p style="color:red;">update current user profile.</p>
- *
- * 
- * <h1>Request Parameters</h1></br></br>
- * 
- * <h1> Endpoint</h1> 
- * 
- * @apiHeader (Header)  Authorization 			Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br>Reading the user’s email address requires the user-read-email scope; </br>reading country and product subscription level requires the user-read-private scope.
- * 
- * @apiParam (Body Parameters) {string} Email     optional. email to be updated to, should be new email and not already existing one.
- * 
- *@apiParam (Body Parameters)     {string}  Password  optional. password to be updated to.
- * 
-* @apiParam (Body Parameters)     {string} Country    optional. country to be updated to.
- *
- *  @apiParam (Body Parameters)      {string}   Display_Name      optional. name to be updated to.
- * 
- * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains a success object in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</br> When requesting fields that you don’t have the user’s authorization to access, it will return error 403 Forbidden.
- * 
- * @apiSuccessExample {json} Success-Response:
- * 
- * {
- *  "success":"information has been updated successfully"
- *   }
- */
-
- /**
- * @api {DELETE} /remove delete Current User's Profile
- * @apiName delete Current User's Profile
- * @apiGroup Users Profile
- * @apiDescription
- * <p style="color:red;">delete current user profile.</p>
- *
- * 
- * <h1>Request Parameters</h1></br></br>
- * 
- * <h1> Endpoint</h1> 
- * 
- * @apiHeader (Header)  Authorization 			Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br>Reading the user’s email address requires the user-read-email scope; </br>reading country and product subscription level requires the user-read-private scope.
- * 
- * 
- * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains a success object in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</br> When requesting fields that you don’t have the user’s authorization to access, it will return error 403 Forbidden.
- * 
- * @apiSuccessExample {json} Success-Response:
- * 
- * {
- *  "success":"user deleted"
- *   }
+    "_id": "5e80a8c6dd73fc4fa469b0ba",
+    "displayName": "bahaaEldeen",
+    "images": [],
+    "type": "user",
+    "followedBy": []
+}
  */

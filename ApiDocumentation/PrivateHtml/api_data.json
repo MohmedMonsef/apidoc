@@ -63,7 +63,7 @@
     "groupTitle": "Account"
   },
   {
-    "type": "PUT",
+    "type": "POST",
     "url": "/sign_up",
     "title": "Create a new account",
     "name": "Create_a_new_account",
@@ -142,7 +142,7 @@
     "groupTitle": "Account"
   },
   {
-    "type": "post",
+    "type": "POST",
     "url": "/login/forgetpassword",
     "title": "Forget Password",
     "name": "Forget_Password",
@@ -174,7 +174,7 @@
   },
   {
     "type": "post",
-    "url": "/Login",
+    "url": "/login",
     "title": "Login to Spotify",
     "name": "Login_to_Spotify",
     "group": "Account",
@@ -210,98 +210,32 @@
     "groupTitle": "Account"
   },
   {
-    "type": "post",
-    "url": "/LoginFacebook",
+    "type": "POST",
+    "url": "/auth/facebook",
     "title": "Login to Spotify with Facebook",
     "name": "Login_to_Spotify_with_Facebook",
     "group": "Account",
-    "description": "<h1>Request Parameters</h1></br></br> <h1>Endpoint</h1>",
+    "description": "<h1>Endpoint</h1>",
     "parameter": {
       "fields": {
-        "QueryParameters": [
-          {
-            "group": "QueryParameters",
-            "optional": false,
-            "field": "email",
-            "description": "<p>Required. the User e-mail in Facebook Accounts</p>"
-          },
-          {
-            "group": "QueryParameters",
-            "optional": false,
-            "field": "password",
-            "description": "<p>Required. the User Password in Facebook Accounts</p>"
-          }
-        ],
         "Response": [
           {
             "group": "Response",
             "optional": false,
             "field": "Format",
-            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response header contains a JWT </br> On error, the header status code is an error code and the response body contains an error object.</p>"
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response header contains a JWT </br> On error, redirects to GET login</p>"
           }
         ]
       }
     },
-    "version": "0.0.0",
-    "filename": "Private_code/docs-private.js",
-    "groupTitle": "Account"
-  },
-  {
-    "type": "put",
-    "url": "me/Updata",
-    "title": "Update User Info",
-    "name": "Update_User_Info",
-    "group": "Account",
-    "description": "<h1>Request Parameters</h1></br></br> <h1>Endpoint</h1>",
-    "header": {
-      "fields": {
-        "Header": [
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "Authorization",
-            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
-          }
-        ]
-      }
-    },
-    "parameter": {
-      "fields": {
-        "BodyParameters": [
-          {
-            "group": "BodyParameters",
-            "optional": false,
-            "field": "Display_Name",
-            "description": "<p>Optional. Change the dispaly name for the user</p>"
-          },
-          {
-            "group": "BodyParameters",
-            "optional": false,
-            "field": "Email",
-            "description": "<p>Optional. change the E-mail the user uses to get into Spotify</p>"
-          },
-          {
-            "group": "BodyParameters",
-            "optional": false,
-            "field": "Password",
-            "description": "<p>Optional. change the Password the user uses to get into Spotify</p>"
-          },
-          {
-            "group": "BodyParameters",
-            "optional": false,
-            "field": "Country",
-            "description": "<p>Optional. change the Country of the user</p>"
-          }
-        ],
-        "Response": [
-          {
-            "group": "Response",
-            "optional": false,
-            "field": "Format",
-            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body is empty </br> On error, the header status code is an error code and the response body contains an error object .</p>"
-          }
-        ]
-      }
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\"success\":true,\"token\":\"JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTdmNzE3YjU3MjQ5ZjIyODhkYzEyZjQiLCJpYXQiOjE1ODU1MDU5MDksImV4cCI6MTU4NTU5MjMwOX0.HniUR47rVmHBvuALPeD4rPZ-YERu4zHCogjxWPymHRw\"}",
+          "type": "json"
+        }
+      ]
     },
     "version": "0.0.0",
     "filename": "Private_code/docs-private.js",
@@ -385,41 +319,6 @@
             "optional": false,
             "field": "Format",
             "description": "<p>On success, the response body contains the user_id and credit card and the HTTP status code in the response header is 200 OK or 201 Created. There is also a Location response header giving the Web API endpoint for promote . On error, the header status code is an error code and the response body contains an error object. Trying to promote when you do not have the user’s authorization returns error 403 Forbidden.</p>"
-          }
-        ]
-      }
-    },
-    "version": "0.0.0",
-    "filename": "Private_code/docs-private.js",
-    "groupTitle": "Account"
-  },
-  {
-    "type": "delete",
-    "url": "me/remove",
-    "title": "remove account",
-    "name": "remove_account",
-    "group": "Account",
-    "description": "<p style=\"color:red;\">delete user from spotify.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
-    "header": {
-      "fields": {
-        "Header": [
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "Authorization",
-            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
-          }
-        ]
-      }
-    },
-    "parameter": {
-      "fields": {
-        "Query Parameters": [
-          {
-            "group": "Query Parameters",
-            "optional": false,
-            "field": "id",
-            "description": "<p>Required. A user id for the account is wanted to remove</p>"
           }
         ]
       }
@@ -614,5 +513,123 @@
     "version": "0.0.0",
     "filename": "Private_code/docs-private.js",
     "groupTitle": "Playlist"
+  },
+  {
+    "type": "DELETE",
+    "url": "/remove",
+    "title": "delete Current User's Profile",
+    "name": "delete_Current_User's_Profile",
+    "group": "Users_Profile",
+    "description": "<p style=\"color:red;\">delete current user profile.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br>Reading the user’s email address requires the user-read-email scope; </br>reading country and product subscription level requires the user-read-private scope.</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body contains a success object in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</br> When requesting fields that you don’t have the user’s authorization to access, it will return error 403 Forbidden.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "\n{\n \"success\":\"user deleted\"\n  }",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "Private_code/docs-private.js",
+    "groupTitle": "Users_Profile"
+  },
+  {
+    "type": "PUT",
+    "url": "/me/update",
+    "title": "update Current User's Profile",
+    "name": "update_Current_User's_Profile",
+    "group": "Users_Profile",
+    "description": "<p style=\"color:red;\">update current user profile.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br>Reading the user’s email address requires the user-read-email scope; </br>reading country and product subscription level requires the user-read-private scope.</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Body Parameters": [
+          {
+            "group": "Body Parameters",
+            "type": "string",
+            "optional": false,
+            "field": "Email",
+            "description": "<p>optional. email to be updated to, should be new email and not already existing one.</p>"
+          },
+          {
+            "group": "Body Parameters",
+            "type": "string",
+            "optional": false,
+            "field": "Password",
+            "description": "<p>optional. password to be updated to.</p>"
+          },
+          {
+            "group": "Body Parameters",
+            "type": "string",
+            "optional": false,
+            "field": "Country",
+            "description": "<p>optional. country to be updated to.</p>"
+          },
+          {
+            "group": "Body Parameters",
+            "type": "string",
+            "optional": false,
+            "field": "Display_Name",
+            "description": "<p>optional. name to be updated to.</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body contains a success object in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</br> When requesting fields that you don’t have the user’s authorization to access, it will return error 403 Forbidden.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "\n{\n \"success\":\"information has been updated successfully\"\n  }",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "Private_code/docs-private.js",
+    "groupTitle": "Users_Profile"
   }
 ]
