@@ -1,0 +1,15 @@
+error:
+status:  404           
+example:
+Not found
+-----------------------------------------------
+correct:
+status: 200
+example:
+{
+    "playlist": [],
+    "_id": "5e7c108d78089d06e4d403db",
+    "name": "category1",
+    "images": [],
+    "__v": 0
+}

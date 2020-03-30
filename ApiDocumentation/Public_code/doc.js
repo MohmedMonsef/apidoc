@@ -324,8 +324,15 @@
  * 
  * @apiParam (PathParameters)  category_id 	The Spotify category ID for the category.
  * 
- *  @apiParam (QueryParameters)  country  		Optional. A country: an ISO 3166-1 alpha-2 country code.</br> Provide this parameter to ensure that the category exists for a particular country.
- * @apiParam (QueryParameters)  locale 	Optional. The desired language,</br> consisting of an ISO 639-1 language code and an ISO 3166-1 alpha-2 country code,</br> joined by an underscore. For example: es_MX, meaning "Spanish (Mexico)".</br> Provide this parameter if you want the category strings returned in a particular language.</br> Note that, if locale is not supplied, or if the specified language is not available,</br> the category strings returned will be in the Spotify default language (American English).
+ * @apiSuccessExample {json} Success-Response:
+ * {
+*   
+*  "playlist": [],
+*  "_id": "5e7c108d78089d06e4d403db",
+*  "name": "category1",
+*  "images": [],
+*  "__v": 0
+*}
  * 
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains a category object in JSON format. </br>On error, the header status code is an error code and the response body contains an error object.
  *
@@ -368,11 +375,43 @@
  * 
  * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
  * 
- * 
- *  @apiParam (QueryParameters)  country  			Optional. A country: an ISO 3166-1 alpha-2 country code. Provide this parameter </br> if you want to narrow the list of returned categories to those relevant to a particular country.</br> If omitted, the returned items will be globally relevant.
- * @apiParam (QueryParameters)  locale 		Optional. The desired language, consisting of an ISO 639-1 language code and an ISO 3166-1 alpha-2 country code</br> , joined by an underscore. For example: es_MX, meaning “Spanish (Mexico)”. </br> Provide this parameter if you want the category metadata returned in a particular language.</br>  Note that, if locale is not supplied, or if the specified language is not available,</br>  all strings will be returned in the Spotify default language (American English). The locale parameter,</br>  combined with the country parameter, may give odd results if not carefully matched.</br> For example country=SE&locale=de_DE will return a list of categories relevant to Sweden but as German language strings.
- * @apiParam (QueryParameters)  limit  Optional. The maximum number of categories to return.</br> Default: 20. Minimum: 1. Maximum: 50.
- * @apiParam (QueryParameters)  offset 	Optional. The index of the first item to return.</br> Default: 0 (the first object). Use with limit to get the next set of categories. 
+ * @apiSuccessExample {json} Success-Response:
+ * {
+*  [
+*{
+*   "playlist": [],
+*    "_id": "5e7c102709c7361328f32fad",
+*    "name": "category1",
+*        "images": [],
+*        "__v": 0
+* },
+* {
+*  "playlist": [],
+*   "_id": "5e7c1042179e9216f4dab449",
+*    "name": "category1",
+*    "images": [],
+*     "__v": 0
+  *  },
+  *  {
+  *      "playlist": [],
+ *       "_id": "5e7c108d78089d06e4d403db",
+ *       "name": "category1",
+ *       "images": [],
+ *       "__v": 0
+*    },
+*    {
+*        "playlist": [
+*         "5e756a10c8bb822d60284aef",
+*         "5e763294478b3a1fa4b09344"
+*     ],
+*     "_id": "5e7c10a6b66f9415acd336b8",
+*     "name": "category1",
+*      "images": [],
+ *       "__v": 1
+ *   }
+*]
+
+*}
  *
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains</br> an object with a categories field, with an array of category objects (wrapped in a paging object) in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
  */

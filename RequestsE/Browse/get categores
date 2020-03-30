@@ -1,0 +1,41 @@
+error:
+status:  404           
+example:
+Not found
+-----------------------------------------------
+correct:
+status: 200
+example:
+[
+    {
+        "playlist": [],
+        "_id": "5e7c102709c7361328f32fad",
+        "name": "category1",
+        "images": [],
+        "__v": 0
+    },
+    {
+        "playlist": [],
+        "_id": "5e7c1042179e9216f4dab449",
+        "name": "category1",
+        "images": [],
+        "__v": 0
+    },
+    {
+        "playlist": [],
+        "_id": "5e7c108d78089d06e4d403db",
+        "name": "category1",
+        "images": [],
+        "__v": 0
+    },
+    {
+        "playlist": [
+            "5e756a10c8bb822d60284aef",
+            "5e763294478b3a1fa4b09344"
+        ],
+        "_id": "5e7c10a6b66f9415acd336b8",
+        "name": "category1",
+        "images": [],
+        "__v": 1
+    }
+]

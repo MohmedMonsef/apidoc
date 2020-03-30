@@ -785,20 +785,6 @@
             "description": "<p>The Spotify category ID for the category.</p>"
           }
         ],
-        "QueryParameters": [
-          {
-            "group": "QueryParameters",
-            "optional": false,
-            "field": "country",
-            "description": "<p>Optional. A country: an ISO 3166-1 alpha-2 country code.</br> Provide this parameter to ensure that the category exists for a particular country.</p>"
-          },
-          {
-            "group": "QueryParameters",
-            "optional": false,
-            "field": "locale",
-            "description": "<p>Optional. The desired language,</br> consisting of an ISO 639-1 language code and an ISO 3166-1 alpha-2 country code,</br> joined by an underscore. For example: es_MX, meaning &quot;Spanish (Mexico)&quot;.</br> Provide this parameter if you want the category strings returned in a particular language.</br> Note that, if locale is not supplied, or if the specified language is not available,</br> the category strings returned will be in the Spotify default language (American English).</p>"
-          }
-        ],
         "Response": [
           {
             "group": "Response",
@@ -808,6 +794,15 @@
           }
         ]
       }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n  \n \"playlist\": [],\n \"_id\": \"5e7c108d78089d06e4d403db\",\n \"name\": \"category1\",\n \"images\": [],\n \"__v\": 0\n}",
+          "type": "json"
+        }
+      ]
     },
     "version": "0.0.0",
     "filename": "Public_code/doc.js",
@@ -895,34 +890,17 @@
         ]
       }
     },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n [\n{\n  \"playlist\": [],\n   \"_id\": \"5e7c102709c7361328f32fad\",\n   \"name\": \"category1\",\n       \"images\": [],\n       \"__v\": 0\n},\n{\n \"playlist\": [],\n  \"_id\": \"5e7c1042179e9216f4dab449\",\n   \"name\": \"category1\",\n   \"images\": [],\n    \"__v\": 0\n },\n {\n     \"playlist\": [],\n      \"_id\": \"5e7c108d78089d06e4d403db\",\n      \"name\": \"category1\",\n      \"images\": [],\n      \"__v\": 0\n   },\n   {\n       \"playlist\": [\n        \"5e756a10c8bb822d60284aef\",\n        \"5e763294478b3a1fa4b09344\"\n    ],\n    \"_id\": \"5e7c10a6b66f9415acd336b8\",\n    \"name\": \"category1\",\n     \"images\": [],\n      \"__v\": 1\n  }\n]\n}",
+          "type": "json"
+        }
+      ]
+    },
     "parameter": {
       "fields": {
-        "QueryParameters": [
-          {
-            "group": "QueryParameters",
-            "optional": false,
-            "field": "country",
-            "description": "<p>Optional. A country: an ISO 3166-1 alpha-2 country code. Provide this parameter </br> if you want to narrow the list of returned categories to those relevant to a particular country.</br> If omitted, the returned items will be globally relevant.</p>"
-          },
-          {
-            "group": "QueryParameters",
-            "optional": false,
-            "field": "locale",
-            "description": "<p>Optional. The desired language, consisting of an ISO 639-1 language code and an ISO 3166-1 alpha-2 country code</br> , joined by an underscore. For example: es_MX, meaning “Spanish (Mexico)”. </br> Provide this parameter if you want the category metadata returned in a particular language.</br>  Note that, if locale is not supplied, or if the specified language is not available,</br>  all strings will be returned in the Spotify default language (American English). The locale parameter,</br>  combined with the country parameter, may give odd results if not carefully matched.</br> For example country=SE&amp;locale=de_DE will return a list of categories relevant to Sweden but as German language strings.</p>"
-          },
-          {
-            "group": "QueryParameters",
-            "optional": false,
-            "field": "limit",
-            "description": "<p>Optional. The maximum number of categories to return.</br> Default: 20. Minimum: 1. Maximum: 50.</p>"
-          },
-          {
-            "group": "QueryParameters",
-            "optional": false,
-            "field": "offset",
-            "description": "<p>Optional. The index of the first item to return.</br> Default: 0 (the first object). Use with limit to get the next set of categories.</p>"
-          }
-        ],
         "Response": [
           {
             "group": "Response",
