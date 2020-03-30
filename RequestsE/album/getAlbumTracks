@@ -1,0 +1,306 @@
+error:
+status--> 404              & mes: "no tracks found"
+------------------------------------------------------
+Correct:
+status:  200               
+example:
+{
+    "tracks": [
+        {
+            "track": {
+                "availableMarkets": [
+                    "EG,US"
+                ],
+                "_id": "5e80ceb853e67b1e284a0f15",
+                "trackNumber": 1,
+                "name": "HAVANA",
+                "artistId": "5e80c9b614c8566d6cd9b40e",
+                "albumId": "5e80cc2b14c8566d6cd9b40f",
+                "discNumber": 1,
+                "explicit": false,
+                "type": "Track",
+                "acousticness": 10,
+                "danceability": 23,
+                "energy": 100,
+                "instrumentalness": 4,
+                "key": 90,
+                "liveness": 25,
+                "loudness": 70,
+                "mode": 56,
+                "speechiness": 67,
+                "tempo": 76,
+                "timeSignature": "2020-03-29T16:37:12.554Z",
+                "valence": 70,
+                "__v": 0
+            },
+            "isLiked": false,
+            "album": {
+                "name": "HELLO KIDS",
+                "_id": "5e80cc2b14c8566d6cd9b40f",
+                "artist": {
+                    "name": "nada",
+                    "_id": "5e80c9b614c8566d6cd9b40e"
+                }
+            }
+        },
+        {
+            "track": {
+                "availableMarkets": [
+                    "EG,US"
+                ],
+                "_id": "5e80cef153e67b1e284a0f1b",
+                "trackNumber": 1,
+                "name": "NANA",
+                "artistId": "5e80c9b614c8566d6cd9b40e",
+                "albumId": "5e80cc2b14c8566d6cd9b40f",
+                "discNumber": 1,
+                "explicit": false,
+                "type": "Track",
+                "acousticness": 10,
+                "danceability": 23,
+                "energy": 100,
+                "instrumentalness": 4,
+                "key": 90,
+                "liveness": 25,
+                "loudness": 70,
+                "mode": 56,
+                "speechiness": 67,
+                "tempo": 76,
+                "timeSignature": "2020-03-29T16:38:09.162Z",
+                "valence": 70,
+                "__v": 0
+            },
+            "isLiked": false,
+            "album": {
+                "name": "HELLO KIDS",
+                "_id": "5e80cc2b14c8566d6cd9b40f",
+                "artist": {
+                    "name": "nada",
+                    "_id": "5e80c9b614c8566d6cd9b40e"
+                }
+            }
+        },
+        {
+            "track": {
+                "availableMarkets": [
+                    "EG,US"
+                ],
+                "_id": "5e80cef953e67b1e284a0f21",
+                "trackNumber": 1,
+                "name": "OHMYMY",
+                "artistId": "5e80c9b614c8566d6cd9b40e",
+                "albumId": "5e80cc2b14c8566d6cd9b40f",
+                "discNumber": 1,
+                "explicit": false,
+                "type": "Track",
+                "acousticness": 10,
+                "danceability": 23,
+                "energy": 100,
+                "instrumentalness": 4,
+                "key": 90,
+                "liveness": 25,
+                "loudness": 70,
+                "mode": 56,
+                "speechiness": 67,
+                "tempo": 76,
+                "timeSignature": "2020-03-29T16:38:17.814Z",
+                "valence": 70,
+                "__v": 0
+            },
+            "isLiked": false,
+            "album": {
+                "name": "HELLO KIDS",
+                "_id": "5e80cc2b14c8566d6cd9b40f",
+                "artist": {
+                    "name": "nada",
+                    "_id": "5e80c9b614c8566d6cd9b40e"
+                }
+            }
+        },
+        {
+            "track": {
+                "availableMarkets": [
+                    "EG,US"
+                ],
+                "_id": "5e80cf0353e67b1e284a0f27",
+                "trackNumber": 1,
+                "name": "SWALLA",
+                "artistId": "5e80c9b614c8566d6cd9b40e",
+                "albumId": "5e80cc2b14c8566d6cd9b40f",
+                "discNumber": 1,
+                "explicit": false,
+                "type": "Track",
+                "acousticness": 10,
+                "danceability": 23,
+                "energy": 100,
+                "instrumentalness": 4,
+                "key": 90,
+                "liveness": 25,
+                "loudness": 70,
+                "mode": 56,
+                "speechiness": 67,
+                "tempo": 76,
+                "timeSignature": "2020-03-29T16:38:27.505Z",
+                "valence": 70,
+                "__v": 0
+            },
+            "isLiked": false,
+            "album": {
+                "name": "HELLO KIDS",
+                "_id": "5e80cc2b14c8566d6cd9b40f",
+                "artist": {
+                    "name": "nada",
+                    "_id": "5e80c9b614c8566d6cd9b40e"
+                }
+            }
+        },
+        {
+            "track": {
+                "availableMarkets": [
+                    "EG,US"
+                ],
+                "_id": "5e80cf0c53e67b1e284a0f2d",
+                "trackNumber": 1,
+                "name": "NORMAN",
+                "artistId": "5e80c9b614c8566d6cd9b40e",
+                "albumId": "5e80cc2b14c8566d6cd9b40f",
+                "discNumber": 1,
+                "explicit": false,
+                "type": "Track",
+                "acousticness": 10,
+                "danceability": 23,
+                "energy": 100,
+                "instrumentalness": 4,
+                "key": 90,
+                "liveness": 25,
+                "loudness": 70,
+                "mode": 56,
+                "speechiness": 67,
+                "tempo": 76,
+                "timeSignature": "2020-03-29T16:38:36.001Z",
+                "valence": 70,
+                "__v": 0
+            },
+            "isLiked": false,
+            "album": {
+                "name": "HELLO KIDS",
+                "_id": "5e80cc2b14c8566d6cd9b40f",
+                "artist": {
+                    "name": "nada",
+                    "_id": "5e80c9b614c8566d6cd9b40e"
+                }
+            }
+        },
+        {
+            "track": {
+                "availableMarkets": [
+                    "EG,US"
+                ],
+                "_id": "5e80cf1c53e67b1e284a0f33",
+                "trackNumber": 1,
+                "name": "Fire On Fire",
+                "artistId": "5e80c9b614c8566d6cd9b40e",
+                "albumId": "5e80cc2b14c8566d6cd9b40f",
+                "discNumber": 1,
+                "explicit": false,
+                "type": "Track",
+                "acousticness": 10,
+                "danceability": 23,
+                "energy": 100,
+                "instrumentalness": 4,
+                "key": 90,
+                "liveness": 25,
+                "loudness": 70,
+                "mode": 56,
+                "speechiness": 67,
+                "tempo": 76,
+                "timeSignature": "2020-03-29T16:38:52.610Z",
+                "valence": 70,
+                "__v": 0
+            },
+            "isLiked": false,
+            "album": {
+                "name": "HELLO KIDS",
+                "_id": "5e80cc2b14c8566d6cd9b40f",
+                "artist": {
+                    "name": "nada",
+                    "_id": "5e80c9b614c8566d6cd9b40e"
+                }
+            }
+        },
+        {
+            "track": {
+                "availableMarkets": [
+                    "EG,US"
+                ],
+                "_id": "5e80cf3053e67b1e284a0f39",
+                "trackNumber": 1,
+                "name": "AVE",
+                "artistId": "5e80c9b614c8566d6cd9b40e",
+                "albumId": "5e80cc2b14c8566d6cd9b40f",
+                "discNumber": 1,
+                "explicit": false,
+                "type": "Track",
+                "acousticness": 10,
+                "danceability": 23,
+                "energy": 100,
+                "instrumentalness": 4,
+                "key": 90,
+                "liveness": 25,
+                "loudness": 70,
+                "mode": 56,
+                "speechiness": 67,
+                "tempo": 76,
+                "timeSignature": "2020-03-29T16:39:12.056Z",
+                "valence": 70,
+                "__v": 0
+            },
+            "isLiked": false,
+            "album": {
+                "name": "HELLO KIDS",
+                "_id": "5e80cc2b14c8566d6cd9b40f",
+                "artist": {
+                    "name": "nada",
+                    "_id": "5e80c9b614c8566d6cd9b40e"
+                }
+            }
+        },
+        {
+            "track": {
+                "availableMarkets": [
+                    "EG,US"
+                ],
+                "_id": "5e80cf3653e67b1e284a0f3f",
+                "trackNumber": 1,
+                "name": "EYE",
+                "artistId": "5e80c9b614c8566d6cd9b40e",
+                "albumId": "5e80cc2b14c8566d6cd9b40f",
+                "discNumber": 1,
+                "explicit": false,
+                "type": "Track",
+                "acousticness": 10,
+                "danceability": 23,
+                "energy": 100,
+                "instrumentalness": 4,
+                "key": 90,
+                "liveness": 25,
+                "loudness": 70,
+                "mode": 56,
+                "speechiness": 67,
+                "tempo": 76,
+                "timeSignature": "2020-03-29T16:39:18.322Z",
+                "valence": 70,
+                "__v": 0
+            },
+            "isLiked": false,
+            "album": {
+                "name": "HELLO KIDS",
+                "_id": "5e80cc2b14c8566d6cd9b40f",
+                "artist": {
+                    "name": "nada",
+                    "_id": "5e80c9b614c8566d6cd9b40e"
+                }
+            }
+        }
+    ]
+}

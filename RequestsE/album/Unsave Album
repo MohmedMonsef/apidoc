@@ -1,0 +1,18 @@
+error:
+status--> 403             
+example:
+{
+     "message":"These albums can't be Unsaved"
+}
+status--> 404            
+example:
+{
+     "message":"album hasn't been saved before"
+}
+------------------------------------------------------
+Correct:
+status:   200              
+example:
+{
+    "message":"album has been unsaved suceesfully"
+}

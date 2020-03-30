@@ -1,7 +1,7 @@
 //Album
 
 /**
- * @api {get} /Albums/{id} Get an Album
+ * @api {get} /albums/:album_id Get an Album
  * @apiName Get an Album
  * @apiGroup Album
  * @apiDescription
@@ -11,14 +11,13 @@
  * 
  * <h1>Endpoint</h1> 
  * 
- * GET https://api.spotify.com/v1/albums/{id}
+ * GET https://api.spotify.com/v1/albums/:album_id
  * 
  * 
  * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
  * 
- * @apiParam (PathParameters)  id Spotify ID for Albums
+ * @apiParam (PathParameters)  album_id Spotify ID for Albums
  * 
- * @apiParam (QueryParameters)  market Optional. An ISO 3166-1 alpha-2 country code or the string from_token. Provide this parameter if you want to apply Track Relinking.
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains an album object in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
  * 
  * 
@@ -26,7 +25,7 @@
  *
  */
 /**
- * @api {get} /Albums/{id}/tracks Get an Album's Tracks
+ * @api {get} /albums/:id/tracks Get an Album's Tracks
  * @apiName Get an Album's Tracks
  * @apiGroup Album
  * @apiDescription
@@ -45,16 +44,13 @@
  * @apiParam (PathParameters)  id Spotify ID for Albums
  * 
  * 
- * @apiParam (QueryParameters)  limit 	Optional. The maximum number of tracks to return. Default: 20. Minimum: 1. Maximum: 50.
- * @apiParam (QueryParameters)  offset 		Optional. The index of the first track to return. Default: 0 (the first object). Use with limit to get the next set of tracks.
- * @apiParam (QueryParameters)  market Optional. An ISO 3166-1 alpha-2 country code or the string from_token. Provide this parameter if you want to apply Track Relinking.
- * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains</br> an array of simplified track objects (wrapped in a paging object) in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains</br> an array of  track objects  in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
  *
  *
  */
 
 /**
-* @api {get} /Albums Get Several Albums
+* @api {get} /albums Get Several Albums
 * @apiName Get Several Albums
 * @apiGroup Album
 * @apiDescription
@@ -72,9 +68,8 @@
 * 
 * 
 * 
-* @apiParam (QueryParameters)  ids 	Required. A comma-separated list of the Spotify IDs for the albums. Maximum: 20 IDs.
-*  @apiParam (QueryParameters)  market Optional. An ISO 3166-1 alpha-2 country code or the string from_token. Provide this parameter if you want to apply Track Relinking.
-* @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains an object whose key is</br> "albums" and whose value is an array of album objects in JSON format.</br></br></br> Objects are returned in the order requested. If an object is not found, a null value is returned in the appropriate position.</br> Duplicate ids in the query will result in duplicate objects in the response.</br> On error, the header status code is an error code and the response body contains an error object.
+* @apiParam (BodyParameters)  ids 	Required. A comma-separated list of the Spotify IDs for the albums.
+* @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains an array of album objects in JSON format.</br></br></br> Objects are returned in the order requested. If an object is not found, it's ignored</br> Duplicate ids in the query will result in duplicate objects in the response.</br> On error, the header status code is an error code and the response body contains an error object.
 
 *
 *
@@ -740,7 +735,7 @@
 
 
 /**
- * @api {delete} /me/albums?ids={ids} Remove Albums for Current User
+ * @api {delete} /me/albums Remove Albums for Current User
  * @apiName Remove Albums for Current User
  * @apiGroup Library
  * @apiDescription
@@ -754,10 +749,9 @@
  * @apiHeader (Header)  Authorization 	Required. A valid access token from the Spotify Accounts service.</br>Modification of the current user’s “Your Music” collection requires authorization of the user-library-modify scope.
  * @apiHeader (Header)  content-type 	Required if the IDs are passed in the request body, otherwise ignored.</br> The content type of the request body: application/json
  * 
- *  @apiParam (QueryParameters)  ids  					Optional. A comma-separated list of the Spotify IDs.</br> For example: ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M. Maximum: 50 IDs.
- * @apiParam (BodyParameters)  ids 			Optional. A JSON array of the Spotify IDs. For example: ["4iV5W9uYEdYUVa79Axb7Rh", "1301WleyT98MSxVHPZCA6M"] </br>A maximum of 50 items can be specified in one request. </br>Note: if the ids parameter is present in the query string, any IDs listed here in the body will be ignored. 
+ *  @apiParam (BodyParameters)  ids  					Optional. A comma-separated list of the Spotify IDs.</br> For example: {"ids":"4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M"}
  *
- * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 Success.</br> On error, the header status code is an error code and the response body contains an error object. </br>Trying to remove an album when you do not have the user’s authorization returns error 403 Forbidden.
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 Success.</br> On error, the header status code is an error code and the response body contains an error object.
  */
 
 /**
@@ -782,7 +776,7 @@
  */
 
 /**
- * @api {put} /me/albums?ids={ids} Save Albums for Current User
+ * @api {put} /me/Albums Save Albums for Current User
  * @apiName Save Albums for Current User
  * @apiGroup Library
  * @apiDescription
@@ -794,13 +788,11 @@
  * <h1> Endpoint</h1> 
  * 
  * @apiHeader (Header)  Authorization 		Required. A valid access token from the Spotify Accounts service.</br>Modification of the current user’s “Your Music” collection requires authorization of the user-library-modify scope.
- * @apiHeader (Header)  Content-Type 	Required if the IDs are passed in the request body, otherwise ignored.</br> The content type of the request body: application/json
  * 
- * @apiParam (QueryParameters)  ids  				Optional. A comma-separated list of the Spotify IDs.</br> For example: ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M. Maximum: 50 IDs.
- * @apiParam (BodyParameters)  ids 	Optional. A JSON array of the Spotify IDs.</br> For example: ["4iV5W9uYEdYUVa79Axb7Rh", "1301WleyT98MSxVHPZCA6M"]</br>A maximum of 50 items can be specified in one request.</br> Note: if the ids parameter is present in the query string, any IDs listed here in the body will be ignored. 
+*  @apiParam (BodyParameters)  ids  					Optional. A comma-separated list of the Spotify IDs.</br> For example: {"ids":"4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M"}
+ *
  * 
- * 
- * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 201 Created.</br> On error, the header status code is an error code and the response body contains an error object. </br>Trying to add an album when you do not have the user’s authorization returns error 403 Forbidden.
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 Created.</br> On error, the header status code is an error code and the response body contains an error object. 
  */
 
 /**
@@ -1515,57 +1507,16 @@
  * 
  * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
  *
- * @apiParam (Query parameters) q	Required.Search query keywords and optional field filters and operators.
- * @apiParam (Query parameters) type	Required.A comma-separated list of item types to search across.Valid types are: album , artist, playlist, and track.Search results include hits from all the specified item types.
- * @apiParam (Query parameters) market	Optional.
- *</br>An ISO 3166-1 alpha-2 country code or the string from_token.
- *</br>If a country code is specified, only artists, albums, and tracks with content that is playable in that market is returned.
- *</br>Note:
- *</br>- Playlist results are not affected by the market parameter.
- *</br>- If market is set to from_token, and a valid access token is specified in the request header, only content playable in the country associated with the user account, is returned.
- *</br>- Users can view the country that is associated with their account in the account settings. A user must grant access to the user-read-private scope prior to when the access token is issued.
- * @apiParam (Query parameters) limit	Optional.
- *</br>Maximum number of results to return.
- *</br>Default: 20
- *</br>Minimum: 1
- *</br>Maximum: 50
- *</br>Note: The limit is applied within each type, not on the total response.
- *</br>For example, if the limit value is 3 and the type is artist,album, the response contains 3 artists and 3 albums.
- * @apiParam (Query parameters) offset	Optional.
- *</br>The index of the first result to return.
- *</br>Default: 0 (the first result).
- *</br>Maximum offset (including limit): 2,000.
- *</br>Use with limit to get the next page of search results. 
- * @apiParam (Query parameters) include_external	Optional.
- *</br>Possible values: audio
- *</br>If include_external=audio is specified the response will include any relevant audio content that is hosted externally.
- *</br>By default external content is filtered out from responses.
- */
-/**
- * @api /search Writing a Query - Guidelines
- * @apiName Writing a Query - Guidelines
- * @apiGroup Search
- * @apiDescription
- *Encode spaces with the hex code %20 or +.
- *  </br></br> Keyword matching: Matching of search keywords is not case-sensitive. Operators, however, should be specified in uppercase. Unless surrounded by double quotation marks, keywords are matched in any order. For example: q=roadhouse&20blues matches both “Blues Roadhouse” and “Roadhouse of the Blues”. q="roadhouse&20blues" matches “My Roadhouse Blues” but not “Roadhouse of the Blues”.
- *  </br> </br>Searching for playlists returns results where the query keyword(s) match any part of the playlist’s name or description. Only popular public playlists are returned.
- *  </br></br> Operator: The operator NOT can be used to exclude results.
- *  </br></br> Similarly, the OR operator can be used to broaden the search: q=roadhouse%20OR%20blues returns all the results that include either of the terms. Only one OR operator can be used in a query.
- *  </br> </br>Note: Operators must be specified in uppercase. Otherwise, they are handled as normal keywords to be matched.
- *  </br></br> Field filters: By default, results are returned when a match is found in any field of the target object type. Searches can be made more specific by specifying an album, artist or track field filter.
- * </br></br>To limit the results to a particular year, use the field filter year with album, artist, and track searches.
- *  </br></br> Or with a date range. 
- *  </br></br> To retrieve only albums released in the last two weeks, use the field filter tag:new in album searches.
- * </br></br>  To retrieve only albums with the lowest 10% popularity, use the field filter tag:hipster in album searches. Note: This field filter only works with album searches.
- * </br></br> Depending on object types being searched for, other field filters, include genre (applicable to tracks and artists), upc, and isrc. For example: q=lil%20genre:%22southern%20hip%20hop%22&type=artist. Use double quotation marks around the genre keyword string if it contains spaces.
- * 
- * </br><h1> Response Format</h1> 
- *  </br></br>On success: 
+ * @apiParam (Query parameters) name	Required.Search query keywords.
+ * @apiParam (Query parameters) type	Required.A comma-separated list of item types to search across.Valid types are: top, album , artist, playlist, and track.Search results include hits from all the specified item types.
+
+ * @apiParam (Response) Format
+ * On success: 
  * </br></br>In the response header the HTTP status code is 200 OK.
- * </br></br>The response body contains an array of artist objects, simplified album objects, and/or track objects wrapped in a paging object in JSON.
+ * </br></br>The response body contains an array of the given type objects EX : type =artist,track then the response body contains a json object of artists and tracks.
  * </br> </br>On error: 
- * </br></br>The header status code is an error code.
- * </br></br>The response body contains an error object.
+ * </br></br>The header status code is 404.
+ * </br></br>The response body contains "No results found".
  */
 
 

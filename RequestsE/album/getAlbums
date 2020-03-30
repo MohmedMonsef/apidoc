@@ -1,0 +1,237 @@
+error:
+status--> 404              & mes: "no albums found"
+------------------------------------------------------
+Correct:
+status:  200               
+example:
+[
+    {
+        "Album": {
+            "availableMarkets": [
+                "EG,US,UK"
+            ],
+            "_id": "5e80cc2b14c8566d6cd9b40f",
+            "name": "HELLO KIDS",
+            "albumType": "Single",
+            "popularity": 0,
+            "genre": "pop",
+            "releaseDate": "2012-01-31T22:00:00.000Z",
+            "label": "SleepWalkers",
+            "images": [],
+            "artistId": "5e80c9b614c8566d6cd9b40e",
+            "type": "Album",
+            "hasTracks": [
+                {
+                    "_id": "5e80ceb853e67b1e284a0f16",
+                    "trackId": "5e80ceb853e67b1e284a0f15"
+                },
+                {
+                    "_id": "5e80cef153e67b1e284a0f1c",
+                    "trackId": "5e80cef153e67b1e284a0f1b"
+                },
+                {
+                    "_id": "5e80cef953e67b1e284a0f22",
+                    "trackId": "5e80cef953e67b1e284a0f21"
+                },
+                {
+                    "_id": "5e80cf0353e67b1e284a0f28",
+                    "trackId": "5e80cf0353e67b1e284a0f27"
+                },
+                {
+                    "_id": "5e80cf0c53e67b1e284a0f2e",
+                    "trackId": "5e80cf0c53e67b1e284a0f2d"
+                },
+                {
+                    "_id": "5e80cf1c53e67b1e284a0f34",
+                    "trackId": "5e80cf1c53e67b1e284a0f33"
+                },
+                {
+                    "_id": "5e80cf3053e67b1e284a0f3a",
+                    "trackId": "5e80cf3053e67b1e284a0f39"
+                },
+                {
+                    "_id": "5e80cf3653e67b1e284a0f40",
+                    "trackId": "5e80cf3653e67b1e284a0f3f"
+                }
+            ],
+            "__v": 9
+        },
+        "Artist": {
+            "genre": [
+                "pop",
+                "jazz",
+                "rock"
+            ],
+            "_id": "5e80c9b614c8566d6cd9b40e",
+            "info": "Artist Nada",
+            "popularity": 0,
+            "type": "Artist",
+            "Name": "nada",
+            "userId": "5e80c6af14c8566d6cd9b400",
+            "images": [],
+            "addAlbums": [
+                {
+                    "_id": "5e80cc2b14c8566d6cd9b410",
+                    "albumId": "5e80cc2b14c8566d6cd9b40f"
+                },
+                {
+                    "_id": "5e80cc4414c8566d6cd9b412",
+                    "albumId": "5e80cc4414c8566d6cd9b411"
+                },
+                {
+                    "_id": "5e80cc5414c8566d6cd9b414",
+                    "albumId": "5e80cc5414c8566d6cd9b413"
+                },
+                {
+                    "_id": "5e80cc5c14c8566d6cd9b416",
+                    "albumId": "5e80cc5c14c8566d6cd9b415"
+                },
+                {
+                    "_id": "5e80cc6414c8566d6cd9b418",
+                    "albumId": "5e80cc6414c8566d6cd9b417"
+                },
+                {
+                    "_id": "5e80cc6b14c8566d6cd9b41a",
+                    "albumId": "5e80cc6b14c8566d6cd9b419"
+                },
+                {
+                    "_id": "5e80cc8514c8566d6cd9b41c",
+                    "albumId": "5e80cc8514c8566d6cd9b41b"
+                }
+            ],
+            "addTracks": [
+                {
+                    "_id": "5e80ceb853e67b1e284a0f17",
+                    "trackId": "5e80ceb853e67b1e284a0f15"
+                },
+                {
+                    "_id": "5e80cef153e67b1e284a0f1d",
+                    "trackId": "5e80cef153e67b1e284a0f1b"
+                },
+                {
+                    "_id": "5e80cef953e67b1e284a0f23",
+                    "trackId": "5e80cef953e67b1e284a0f21"
+                },
+                {
+                    "_id": "5e80cf0353e67b1e284a0f29",
+                    "trackId": "5e80cf0353e67b1e284a0f27"
+                },
+                {
+                    "_id": "5e80cf0c53e67b1e284a0f2f",
+                    "trackId": "5e80cf0c53e67b1e284a0f2d"
+                },
+                {
+                    "_id": "5e80cf1c53e67b1e284a0f35",
+                    "trackId": "5e80cf1c53e67b1e284a0f33"
+                },
+                {
+                    "_id": "5e80cf3053e67b1e284a0f3b",
+                    "trackId": "5e80cf3053e67b1e284a0f39"
+                },
+                {
+                    "_id": "5e80cf3653e67b1e284a0f41",
+                    "trackId": "5e80cf3653e67b1e284a0f3f"
+                }
+            ],
+            "__v": 16
+        }
+    },
+    {
+        "Album": {
+            "availableMarkets": [
+                "EG,US,UK"
+            ],
+            "_id": "5e80cc4414c8566d6cd9b411",
+            "name": "Welcome to Hell",
+            "albumType": "Single",
+            "popularity": 0,
+            "genre": "pop",
+            "releaseDate": "2012-01-31T22:00:00.000Z",
+            "label": "SleepWalkers",
+            "images": [],
+            "artistId": "5e80c9b614c8566d6cd9b40e",
+            "type": "Album",
+            "hasTracks": [],
+            "__v": 0
+        },
+        "Artist": {
+            "genre": [
+                "pop",
+                "jazz",
+                "rock"
+            ],
+            "_id": "5e80c9b614c8566d6cd9b40e",
+            "info": "Artist Nada",
+            "popularity": 0,
+            "type": "Artist",
+            "Name": "nada",
+            "userId": "5e80c6af14c8566d6cd9b400",
+            "images": [],
+            "addAlbums": [
+                {
+                    "_id": "5e80cc2b14c8566d6cd9b410",
+                    "albumId": "5e80cc2b14c8566d6cd9b40f"
+                },
+                {
+                    "_id": "5e80cc4414c8566d6cd9b412",
+                    "albumId": "5e80cc4414c8566d6cd9b411"
+                },
+                {
+                    "_id": "5e80cc5414c8566d6cd9b414",
+                    "albumId": "5e80cc5414c8566d6cd9b413"
+                },
+                {
+                    "_id": "5e80cc5c14c8566d6cd9b416",
+                    "albumId": "5e80cc5c14c8566d6cd9b415"
+                },
+                {
+                    "_id": "5e80cc6414c8566d6cd9b418",
+                    "albumId": "5e80cc6414c8566d6cd9b417"
+                },
+                {
+                    "_id": "5e80cc6b14c8566d6cd9b41a",
+                    "albumId": "5e80cc6b14c8566d6cd9b419"
+                },
+                {
+                    "_id": "5e80cc8514c8566d6cd9b41c",
+                    "albumId": "5e80cc8514c8566d6cd9b41b"
+                }
+            ],
+            "addTracks": [
+                {
+                    "_id": "5e80ceb853e67b1e284a0f17",
+                    "trackId": "5e80ceb853e67b1e284a0f15"
+                },
+                {
+                    "_id": "5e80cef153e67b1e284a0f1d",
+                    "trackId": "5e80cef153e67b1e284a0f1b"
+                },
+                {
+                    "_id": "5e80cef953e67b1e284a0f23",
+                    "trackId": "5e80cef953e67b1e284a0f21"
+                },
+                {
+                    "_id": "5e80cf0353e67b1e284a0f29",
+                    "trackId": "5e80cf0353e67b1e284a0f27"
+                },
+                {
+                    "_id": "5e80cf0c53e67b1e284a0f2f",
+                    "trackId": "5e80cf0c53e67b1e284a0f2d"
+                },
+                {
+                    "_id": "5e80cf1c53e67b1e284a0f35",
+                    "trackId": "5e80cf1c53e67b1e284a0f33"
+                },
+                {
+                    "_id": "5e80cf3053e67b1e284a0f3b",
+                    "trackId": "5e80cf3053e67b1e284a0f39"
+                },
+                {
+                    "_id": "5e80cf3653e67b1e284a0f41",
+                    "trackId": "5e80cf3653e67b1e284a0f3f"
+                }
+            ],
+            "__v": 16
+        }
+    }
+]
