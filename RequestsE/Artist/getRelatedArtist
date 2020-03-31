@@ -1,0 +1,163 @@
+error
+status-->404       & mes: error:"no artists are found"
+------------------------------------
+correct:
+status-->200       & mes: example
+
+[
+    {
+        "genre": [
+            "genre2",
+            "genre1"
+        ],
+        "_id": "5e7ef28326e2fa0da04f81ae",
+        "info": "i am a good artist ",
+        "popularity": 0,
+        "type": "Artist",
+        "Name": "artist1",
+        "userId": "5e7ee6e326e2fa0da04f81ab",
+        "images": [],
+        "addAlbums": [
+            {
+                "_id": "5e7f44905cce7d09a82e5a76",
+                "albumId": "5e7f44905cce7d09a82e5a75"
+            },
+            {
+                "_id": "5e7f4bf85cce7d09a82e5a78",
+                "albumId": "5e7f4bf85cce7d09a82e5a77"
+            },
+            {
+                "_id": "5e7f4c925cce7d09a82e5a7a",
+                "albumId": "5e7f4c925cce7d09a82e5a79"
+            },
+            {
+                "_id": "5e7f4c985cce7d09a82e5a7c",
+                "albumId": "5e7f4c985cce7d09a82e5a7b"
+            },
+            {
+                "_id": "5e7f4ca05cce7d09a82e5a7e",
+                "albumId": "5e7f4ca05cce7d09a82e5a7d"
+            },
+            {
+                "_id": "5e7f4d475cce7d09a82e5a80",
+                "albumId": "5e7f4d475cce7d09a82e5a7f"
+            }
+        ],
+        "addTracks": [
+            {
+                "_id": "5e7f57b332376a10443d6727",
+                "trackId": "5e7f57b332376a10443d6725"
+            },
+            {
+                "_id": "5e7f583b68f0c21460982fbf",
+                "trackId": "5e7f583b68f0c21460982fbd"
+            },
+            {
+                "_id": "5e7f583c68f0c21460982fc4",
+                "trackId": "5e7f583c68f0c21460982fc2"
+            },
+            {
+                "_id": "5e7f585afc95cc1edc6075b6",
+                "trackId": "5e7f5859fc95cc1edc6075b4"
+            },
+            {
+                "_id": "5e7f58753f556d1f3451eef6",
+                "trackId": "5e7f58753f556d1f3451eef4"
+            },
+            {
+                "_id": "5e7f58bb4fe2420d34a881dd",
+                "trackId": "5e7f58bb4fe2420d34a881db"
+            },
+            {
+                "_id": "5e7f58fd7706d81970bfe615",
+                "trackId": "5e7f58fd7706d81970bfe613"
+            },
+            {
+                "_id": "5e7f5c6328a1a2111841e5d8",
+                "trackId": "5e7f5c6328a1a2111841e5d6"
+            },
+            {
+                "_id": "5e7f5c6528a1a2111841e5dd",
+                "trackId": "5e7f5c6528a1a2111841e5db"
+            },
+            {
+                "_id": "5e7f5ef59713be1e64f33a50",
+                "trackId": "5e7f5ef59713be1e64f33a4e"
+            },
+            {
+                "_id": "5e7f5f2b285ced1ce8041bcc",
+                "trackId": "5e7f5f2b285ced1ce8041bca"
+            }
+        ],
+        "__v": 17,
+        "name": "artist1"
+    },
+    {
+        "genre": [
+            "rytyt",
+            "genre2",
+            "genre1"
+        ],
+        "_id": "5e7f67e438150c15e8589ece",
+        "info": "jdshgdjdhfjkd",
+        "popularity": 0,
+        "type": "Artist",
+        "Name": "yytguguy",
+        "userId": "5e7f670838150c15e8589ecc",
+        "images": [],
+        "addAlbums": [],
+        "addTracks": [],
+        "__v": 0
+    },
+    {
+        "genre": [
+            "genre1",
+            "genre2",
+            "genre3",
+            "genre4"
+        ],
+        "_id": "5e833a51a51d971174923f17",
+        "popularity": 0,
+        "type": "Artist",
+        "Name": "ahmedsamir",
+        "userId": "5e75c68387bceb10ac3d3394",
+        "images": [],
+        "addAlbums": [
+            {
+                "_id": "5e833b412b9d7718a491c851",
+                "albumId": "5e833b412b9d7718a491c850"
+            }
+        ],
+        "addTracks": [
+            {
+                "_id": "5e834091a0d4a20f746732f9",
+                "trackId": "5e834091a0d4a20f746732f7"
+            },
+            {
+                "_id": "5e834255a0d4a20f74673302",
+                "trackId": "5e834255a0d4a20f74673300"
+            },
+            {
+                "_id": "5e834258a0d4a20f74673307",
+                "trackId": "5e834258a0d4a20f74673305"
+            },
+            {
+                "_id": "5e834259a0d4a20f7467330c",
+                "trackId": "5e834259a0d4a20f7467330a"
+            },
+            {
+                "_id": "5e834260a0d4a20f74673311",
+                "trackId": "5e834260a0d4a20f7467330f"
+            },
+            {
+                "_id": "5e834265a0d4a20f74673316",
+                "trackId": "5e834265a0d4a20f74673314"
+            },
+            {
+                "_id": "5e834268a0d4a20f7467331b",
+                "trackId": "5e834268a0d4a20f74673319"
+            }
+        ],
+        "__v": 8
+    }
+]

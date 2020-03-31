@@ -1,8 +1,16 @@
-{
-    "availableMarkets": [],
-    "_id": "5e712184de28e6531c3e9897",
-    "name": "OH LA LA",
-    "images": [],
-    "hasTracks": [],
-    "__v": 0
+{"availableMarkets": [
+    "us,er,rttr,fretgre,jhj"
+],
+"_id": "5e833b412b9d7718a491c850",
+"name": "album1",
+"albumType": "type1",
+"popularity": 0,
+"genre": "genre1",
+"releaseDate": "2020-02-20T00:00:00.000Z",
+"label": "iuwdjhwdewjhfhdwe",
+"images": [],
+"artistId": "5e833a51a51d971174923f17",
+"type": "Album",
+"hasTracks": [],
+"__v": 0
 }

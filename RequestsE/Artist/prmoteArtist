@@ -7,6 +7,7 @@ if not enter genre
 status--> 403      & mes:  should give me genre
 
 Note: if can promote successfully we will send email to user email
+ and this user can not act as artist without login again
 
 if error in token will be
 status--> 400      & mes: Invalid Token

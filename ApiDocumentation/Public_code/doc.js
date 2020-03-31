@@ -92,13 +92,30 @@
  * 
  * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
  * @apiHeader (Header)  Content-type Required. The content type of the request body: application/json
- * @apiParam (BodyParameters)   Name Required. string of the name of the new Album
- * @apiParam (BodyParameters)   Label  Required. string of the Label of the new Album
- * @apiParam (BodyParameters)   Album-type Required.Album, single, or compilation.
- * @apiParam (BodyParameters)   Release-Date Required.Release Date of the new Album
- * @apiParam (BodyParameters)   Available-Markets Required.The markets in which the album is available: ISO 3166-1 alpha-2 country codes.
- * @apiParam (BodyParameters)   Genre Required.A list of the genres used to classify the album.
- * 
+ * @apiParam (BodyParameters)   name Required. string of the name of the new Album
+ * @apiParam (BodyParameters)   label  Required. string of the Label of the new Album
+ * @apiParam (BodyParameters)   albumtype Required.Album, single, or compilation.
+ * @apiParam (BodyParameters)   release-Date Required.Release Date of the new Album
+ * @apiParam (BodyParameters)   available-Markets Required.The markets in which the album is available: ISO 3166-1 alpha-2 country codes.
+ * @apiParam (BodyParameters)   genre Required.A list of the genres used to classify the album.
+ * @apiSuccessExample {json} Success-Response:
+ * {
+ *     "availableMarkets": [
+ *       "us,er,rttr,fretgre,jhj"
+ *   ],
+ *   "_id": "5e833b412b9d7718a491c850",
+ *   "name": "album1",
+ *   "albumType": "type1",
+ *   "popularity": 0,
+ *   "genre": "genre1",
+ *   "releaseDate": "2020-02-20T00:00:00.000Z",
+ *   "label": "iuwdjhwdewjhfhdwe",
+*    "images": [],
+*    "artistId": "5e833a51a51d971174923f17",
+ *   "type": "Album",
+ *   "hasTracks": [],
+  *  "__v": 0 
+ * }
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body Contains an Album Object.</br> On error, the header status code is an error code and the response body contains an error object.
  * 
  *
@@ -127,7 +144,7 @@
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains</br>an object whose key is "tracks" and whose value is an array of up to 10 track objects in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
  */
 /**
- * @api {put} Artists/me/Albums/{id}/tracks Create Track
+ * @api {put} Artists/me/Albums/{album_id}/tracks Create Track
  * @apiName Create Track
  * @apiGroup Artist
  * @apiDescription
@@ -142,11 +159,40 @@
  * @apiHeader (Header)  Content-type Required. The content type of the request body: application/json
  * @apiParam (PathParameters)   id Required. the id of the Album containing the new track
  * @apiParam (BodyParameters)   Name Required. string of the name of the new Album
- * @apiParam (BodyParameters)   URL  Required. The URL for the track
- * @apiParam (BodyParameters)   Track-Number Required.the number of the track on the album
- * @apiParam (BodyParameters)   Preview-URL Optional.A link to a 30 second preview (MP3 format) of the track.
- * @apiParam (BodyParameters)   Available-Markets Required.The markets in which the track is available: ISO 3166-1 alpha-2 country codes.
+ * @apiParam (BodyParameters)   file  Required. The URL for the track
+ * @apiParam (BodyParameters)   trackNum Required.the number of the track on the album
+ * @apiParam (BodyParameters)   availableMarkets Required.The markets in which the track is available: ISO 3166-1 alpha-2 country codes.
+ * @apiParam (BodyParameters)   duration Required.The length of track
+ *
  * 
+ *@apiSuccessExample {json} Success-Response:
+ *{
+ *   "availableMarkets": [
+ *       "usa,tt,wdwq,dwdw,wdw,dss"
+ *   ],
+ *   "_id": "5e834091a0d4a20f746732f7",
+ *   "duration": 462,
+ *   "name": "track1",
+ *   "artistId": "5e833a51a51d971174923f17",
+ *   "albumId": "5e833b412b9d7718a491c850",
+ *   "discNumber": 1,
+ *   "explicit": false,
+ *   "type": "Track",
+ *   "acousticness": 10,
+ *   "danceability": 23,
+ *   "energy": 100,
+ *   "instrumentalness": 4,
+ *   "key": 90,
+ *   "liveness": 25,
+ *   "loudness": 70,
+ *   "mode": 56,
+ *   "speechiness": 67,
+ *   "tempo": 76,
+ *   "timeSignature": "2020-03-31T13:07:29.395Z",
+ *   "valence": 70,
+ *   "like": 0,
+ *   "__v": 0
+*}
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body Contains a Track Object.</br> On error, the header status code is an error code and the response body contains an error object.
  * 
  *
@@ -178,7 +224,7 @@
 //end new
 
 /**
- * @api {get} /Artists/{id} Get an Artist
+ * @api {get} /Artists/:artist_id Get an Artist
  * @apiName Get an Artist
  * @apiGroup Artist
  * @apiDescription
@@ -191,8 +237,29 @@
  * 
  * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
  * 
- * @apiParam (PathParameters)  id Spotify ID for the Artist
+ * @apiParam (PathParameters) artist_id Spotify ID for the Artist
  * 
+ *  @apiSuccessExample {json} Success-Response:
+ * {
+ *     
+    *
+*    
+*        "genre": [
+*            "rytyt",
+*            "genre2",
+*            "genre1"
+*        ],
+*        "_id": "5e7f67e438150c15e8589ece",
+*        "info": "jdshgdjdhfjkd",
+*        "popularity": 0,
+*        "type": "Artist",
+*        "Name": "yytguguy",
+*        "userId": "5e7f670838150c15e8589ecc",
+*        "images": [],
+*        "addAlbums": [],
+*        "addTracks": [],
+ *       "__v": 0
+*    }
  * 
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains an artist object in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
  * 
@@ -200,7 +267,7 @@
  *
  */
 /**
- * @api {get} /Artists/{id}/Albums Get an Artist's Albums
+ * @api {get} /Artists/:artist_id/Albums Get an Artist's Albums
  * @apiName Get an Artist's Albums
  * @apiGroup Artist
  * @apiDescription
@@ -215,10 +282,10 @@
  * 
  * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
  * 
- * @apiParam (PathParameters)  id Spotify ID for Albums
+ * @apiParam (PathParameters)  artist_id Spotify ID for Albums
  * 
  * 
- * @apiParam (QueryParameters)  include_groups 	Optional. A comma-separated list of keywords that will be used to filter the response.</br> If not supplied, all album types will be returned. Valid values are:</br>
+ * @apiParam (QueryParameters)  groups 	Optional. A comma-separated list of keywords that will be used to filter the response.</br> If not supplied, all album types will be returned. Valid values are:</br>
 * - album </br>
 * - single </br>
 * - appears_on </br>
@@ -230,12 +297,43 @@
  * @apiParam (QueryParameters)  limit 	Optional. The number of album objects to return.</br> Default: 20. Minimum: 1. Maximum: 50.</br> For example: limit=2
 * @apiParam (QueryParameters)  offset 		Optional. The index of the first album to return.</br> Default: 0 (i.e., the first album).</br> Use with limit to get the next set of albums.
  *
+  * @apiSuccessExample {json} Success-Response:
+ * {
+ *     
+  *   {
+ *       "availableMarkets": [
+ *           "us,yu,ywgd"
+ *       ],
+ *       "_id": "5e7f44905cce7d09a82e5a75",
+ *       "name": "album1",
+ *       "albumType": "type1",
+ *       "popularity": 0,
+ *       "genre": "genre1",
+ *       "releaseDate": "2020-02-20T00:00:00.000Z",
+ *       "label": "yyuwhhxb",
+ *       "images": [],
+ *       "artistId": "5e7ef28326e2fa0da04f81ae",
+ *       "type": "Album",
+ *       "hasTracks": [],
+  *      "__v": 0
+  *  },
+  *  {
+ *       "availableMarkets": [],
+ *       "_id": "5e7f4d475cce7d09a82e5a7f",
+ *       "popularity": 0,
+ *       "images": [],
+ *       "artistId": "5e7ef28326e2fa0da04f81ae",
+ *       "type": "Album",
+ *       "hasTracks": [],
+ *       "__v": 0
+ *   }
+*    }
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body </br>contains an array of simplified album objects (wrapped in a paging object) in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
 
  */
 
 /**
- * @api {get} /Artists/{id}/top-tracks Get an Artist's Top Tracks
+ * @api {get} /Artists/{artist_id}/top-tracks Get an Artist's Top Tracks
  * @apiName Get an Artist's Top Tracks
  * @apiGroup Artist
  * @apiDescription
@@ -247,7 +345,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiParam (PathParameters)  id Spotify ID for Albums
+ * @apiParam (PathParameters) artist_id  Spotify ID for Albums
  * 
  * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
  * 
@@ -255,11 +353,204 @@
  * 
  *  @apiParam (QueryParameters)  country Required. An ISO 3166-1 alpha-2 country code or the string from_token.
  *
+ * @apiSuccessExample {json} Success-Response:
+ * {
+ *     [
+ *   {
+ *       "availableMarkets": [
+ *           "usa"
+ *       ],
+ *       "_id": "5e834091a0d4a20f746732f7",
+ *       "duration": 462,
+ *       "name": "track1",
+ *       "artistId": "5e833a51a51d971174923f17",
+ *       "albumId": "5e833b412b9d7718a491c850",
+ *       "discNumber": 1,
+ *       "explicit": false,
+ *       "type": "Track",
+ *s       "acousticness": 10,
+*        "danceability": 23,
+*        "energy": 100,
+*        "instrumentalness": 4,
+*        "key": 90,
+*        "liveness": 25,
+*        "loudness": 70,
+*        "mode": 56,
+*        "speechiness": 67,
+*        "tempo": 76,
+*        "timeSignature": "2020-03-31T13:07:29.395Z",
+*        "valence": 70,
+*        "like": 0,
+*        "__v": 0
+*    },
+*    {
+*        "availableMarkets": [
+*            "usa"
+*        ],
+*        "_id": "5e834255a0d4a20f74673300",
+*        "duration": 462,
+*        "name": "track1",
+*        "artistId": "5e833a51a51d971174923f17",
+*        "albumId": "5e833b412b9d7718a491c850",
+*        "discNumber": 1,
+*        "explicit": false,
+*        "type": "Track",
+*        "acousticness": 10,
+*        "danceability": 23,
+*        "energy": 100,
+*        "instrumentalness": 4,
+*        "key": 90,
+*        "liveness": 25,
+*        "loudness": 70,
+*        "mode": 56,
+*        "speechiness": 67,
+*        "tempo": 76,
+*        "timeSignature": "2020-03-31T13:15:01.821Z",
+*        "valence": 70,
+*        "like": 0,
+*        "__v": 0
+*    },
+*    {
+*        "availableMarkets": [
+*            "usa"
+*        ],
+*        "_id": "5e834258a0d4a20f74673305",
+*        "duration": 462,
+*        "name": "track1",
+*        "artistId": "5e833a51a51d971174923f17",
+*        "albumId": "5e833b412b9d7718a491c850",
+*        "discNumber": 1,
+*        "explicit": false,
+*        "type": "Track",
+*        "acousticness": 10,
+*        "danceability": 23,
+*        "energy": 100,
+*        "instrumentalness": 4,
+*        "key": 90,
+*        "liveness": 25,
+*        "loudness": 70,
+*        "mode": 56,
+*        "speechiness": 67,
+*        "tempo": 76,
+*        "timeSignature": "2020-03-31T13:15:04.155Z",
+*        "valence": 70,
+*        "like": 0,
+*        "__v": 0
+*    }
+*]
+ * }
+ 
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains</br>an object whose key is "tracks" and whose value is an array of up to 10 track objects in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
  */
-
 /**
- * @api {get} /Artists/{id}/related-artists Get an Artist's Related Artists
+ * @api {get} /Artists/{artist_id}/tracks Get an Artist's Tracks
+ * @apiName Get an Artist's Top Tracks
+ * @apiGroup Artist
+ * @apiDescription
+ * 
+ * <p style="color:red;">Get Spotify catalog information about an artist’s top tracks by country.</p>
+ *
+ * 
+ * <h1>Request Parameters</h1></br></br>
+ * 
+ * <h1> Endpoint</h1> 
+ * 
+ * @apiParam (PathParameters) artist_id  Spotify ID for Albums
+ * 
+ * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * 
+ * 
+ * @apiSuccessExample {json} Success-Response:
+ * {
+ *     [
+ *   {
+ *       "availableMarkets": [
+ *           "usa,tt,wdwq,dwdw,wdw,dss"
+ *       ],
+ *       "_id": "5e834091a0d4a20f746732f7",
+ *       "duration": 462,
+ *       "name": "track1",
+ *       "artistId": "5e833a51a51d971174923f17",
+ *       "albumId": "5e833b412b9d7718a491c850",
+ *       "discNumber": 1,
+ *       "explicit": false,
+ *       "type": "Track",
+ *       "acousticness": 10,
+*        "danceability": 23,
+*        "energy": 100,
+*        "instrumentalness": 4,
+*        "key": 90,
+*        "liveness": 25,
+*        "loudness": 70,
+*        "mode": 56,
+*        "speechiness": 67,
+*        "tempo": 76,
+*        "timeSignature": "2020-03-31T13:07:29.395Z",
+*        "valence": 70,
+*        "like": 0,
+*        "__v": 0
+*    },
+*    {
+*        "availableMarkets": [
+*            "usa,tt,wdwq,dwdw,wdw,dss"
+*        ],
+*        "_id": "5e834255a0d4a20f74673300",
+*        "duration": 462,
+*        "name": "track1",
+*        "artistId": "5e833a51a51d971174923f17",
+*        "albumId": "5e833b412b9d7718a491c850",
+*        "discNumber": 1,
+*        "explicit": false,
+*        "type": "Track",
+*        "acousticness": 10,
+*        "danceability": 23,
+*        "energy": 100,
+*        "instrumentalness": 4,
+*        "key": 90,
+*        "liveness": 25,
+*        "loudness": 70,
+*        "mode": 56,
+*        "speechiness": 67,
+*        "tempo": 76,
+*        "timeSignature": "2020-03-31T13:15:01.821Z",
+*        "valence": 70,
+*        "like": 0,
+*        "__v": 0
+*    },
+*    {
+*        "availableMarkets": [
+*            "usa,tt,wdwq,dwdw,wdw,dss"
+*        ],
+*        "_id": "5e834258a0d4a20f74673305",
+*        "duration": 462,
+*        "name": "track1",
+*        "artistId": "5e833a51a51d971174923f17",
+*        "albumId": "5e833b412b9d7718a491c850",
+*        "discNumber": 1,
+*        "explicit": false,
+*        "type": "Track",
+*        "acousticness": 10,
+*        "danceability": 23,
+*        "energy": 100,
+*        "instrumentalness": 4,
+*        "key": 90,
+*        "liveness": 25,
+*        "loudness": 70,
+*        "mode": 56,
+*        "speechiness": 67,
+*        "tempo": 76,
+*        "timeSignature": "2020-03-31T13:15:04.155Z",
+*        "valence": 70,
+*        "like": 0,
+*        "__v": 0
+*    }
+*]
+ * }
+ *  
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains</br>an object whose key is "tracks" and whose value is an array of up to 10 track objects in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
+ */
+/**
+ * @api {get} /Artists/:artist_id/related-artists Get an Artist's Related Artists
  * @apiName Get an Artist's Related Artists
  * @apiGroup Artist
  * @apiDescription
@@ -271,12 +562,154 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiParam (PathParameters)  id Spotify ID for Albums
+ * @apiParam (PathParameters)  artist_id Spotify ID for Artist
  * 
  * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
  * 
- * 
- * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains</br> an object whose key is "artists" and whose value is an array of up to 20 artist objects in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
+ * @apiSuccessExample {json} Success-Response:
+ * {
+ *     [
+  *  {
+*    {
+*        "genre": [
+*            "rytyt",
+*            "genre2",
+*            "genre1"
+*        ],
+*        "_id": "5e7f67e438150c15e8589ece",
+*        "info": "jdshgdjdhfjkd",
+*        "popularity": 0,
+*        "type": "Artist",
+*        "Name": "yytguguy",
+*        "userId": "5e7f670838150c15e8589ecc",
+*        "images": [],
+*        "addAlbums": [],
+*        "addTracks": [],
+ *       "__v": 0
+*    },
+*    {
+*        "genre": [
+*            "genre1",
+*            "genre2",
+*            "genre3",
+*            "genre4"
+*        ],
+*        "_id": "5e833a51a51d971174923f17",
+*        "popularity": 0,
+*        "type": "Artist",
+*        "Name": "ahmedsamir",
+*        "userId": "5e75c68387bceb10ac3d3394",
+*        "images": [],
+*        "addAlbums": [
+*            {
+*                "_id": "5e833b412b9d7718a491c851",
+*                "albumId": "5e833b412b9d7718a491c850"
+*            }
+*        ],
+*        "addTracks": [
+*            {
+*                "_id": "5e834091a0d4a20f746732f9",
+*                "trackId": "5e834091a0d4a20f746732f7"
+*            },
+*            {
+*                "_id": "5e834255a0d4a20f74673302",
+*                "trackId": "5e834255a0d4a20f74673300"
+*            },
+*            {
+*                "_id": "5e834258a0d4a20f74673307",
+*                "trackId": "5e834258a0d4a20f74673305"
+*     },
+*      {
+*          "_id": "5e834259a0d4a20f7467330c",
+*           "trackId": "5e834259a0d4a20f7467330a"
+*        },
+*         {
+*              "_id": "5e834260a0d4a20f74673311",
+*               "trackId": "5e834260a0d4a20f7467330f"
+*           },
+*            {
+*                "_id": "5e834265a0d4a20f74673316",
+*               "trackId": "5e834265a0d4a20f74673314"
+*          },
+*          {
+*              "_id": "5e834268a0d4a20f7467331b",
+*               "trackId": "5e834268a0d4a20f74673319"
+*           }
+*        ],
+*        "__v": 17,
+*        "name": "artist1"
+*    },
+*    {
+*        "genre": [
+*            "rytyt",
+*            "genre2",
+*            "genre1"
+*        ],
+*        "_id": "5e7f67e438150c15e8589ece",
+*        "info": "jdshgdjdhfjkd",
+*        "popularity": 0,
+*        "type": "Artist",
+*        "Name": "yytguguy",
+*        "userId": "5e7f670838150c15e8589ecc",
+*        "images": [],
+*        "addAlbums": [],
+*        "addTracks": [],
+ *       "__v": 0
+*    },
+*    {
+*        "genre": [
+*            "genre1",
+*            "genre2",
+*            "genre3",
+*            "genre4"
+*        ],
+*        "_id": "5e833a51a51d971174923f17",
+*        "popularity": 0,
+*        "type": "Artist",
+*        "Name": "ahmedsamir",
+*        "userId": "5e75c68387bceb10ac3d3394",
+*        "images": [],
+*        "addAlbums": [
+*            {
+*                "_id": "5e833b412b9d7718a491c851",
+*                "albumId": "5e833b412b9d7718a491c850"
+*            }
+*        ],
+*        "addTracks": [
+*            {
+*                "_id": "5e834091a0d4a20f746732f9",
+*                "trackId": "5e834091a0d4a20f746732f7"
+*            },
+*            {
+*                "_id": "5e834255a0d4a20f74673302",
+*                "trackId": "5e834255a0d4a20f74673300"
+*            },
+*            {
+*                "_id": "5e834258a0d4a20f74673307",
+*                "trackId": "5e834258a0d4a20f74673305"
+*     },
+*      {
+*          "_id": "5e834259a0d4a20f7467330c",
+*           "trackId": "5e834259a0d4a20f7467330a"
+*        },
+*         {
+*              "_id": "5e834260a0d4a20f74673311",
+*               "trackId": "5e834260a0d4a20f7467330f"
+*           },
+*            {
+*                "_id": "5e834265a0d4a20f74673316",
+*               "trackId": "5e834265a0d4a20f74673314"
+*          },
+*          {
+*               "_id": "5e834268a0d4a20f7467331b",
+*               "trackId": "5e834268a0d4a20f74673319"
+*           }
+*       ],
+*        "__v": 8
+*    }
+*]
+ * }
+ * @apiParam (Response)  ormat  On success, the HTTP status code in the response header is 200 OK and the response body contains</br> an object whose key is "artists" and whose value is an array of up to 20 artist objects in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
  *
  *
  */
@@ -297,10 +730,84 @@
  * 
  * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
  * 
- * 
- * 
- * @apiParam (QueryParameters)  ids 		Required. A comma-separated list of the Spotify IDs for the artists. Maximum: 50 IDs.
+ *@apiSuccessExample {json} Success-Response: 
+ *  {
+ *     [
+*    {
+*        "genre": [
+*            "rytyt",
+*            "genre2",
+*            "genre1"
+*        ],
+*        "_id": "5e7f67e438150c15e8589ece",
+*        "info": "jdshgdjdhfjkd",
+*        "popularity": 0,
+*        "type": "Artist",
+*        "Name": "yytguguy",
+*        "userId": "5e7f670838150c15e8589ecc",
+*        "images": [],
+*        "addAlbums": [],
+*        "addTracks": [],
+ *       "__v": 0
+*    },
+*    {
+*        "genre": [
+*            "genre1",
+*            "genre2",
+*            "genre3",
+*            "genre4"
+*        ],
+*        "_id": "5e833a51a51d971174923f17",
+*        "popularity": 0,
+*        "type": "Artist",
+*        "Name": "ahmedsamir",
+*        "userId": "5e75c68387bceb10ac3d3394",
+*        "images": [],
+*        "addAlbums": [
+*            {
+*                "_id": "5e833b412b9d7718a491c851",
+*                "albumId": "5e833b412b9d7718a491c850"
+*            }
+*        ],
+*        "addTracks": [
+*            {
+*                "_id": "5e834091a0d4a20f746732f9",
+*                "trackId": "5e834091a0d4a20f746732f7"
+*            },
+*            {
+*                "_id": "5e834255a0d4a20f74673302",
+*                "trackId": "5e834255a0d4a20f74673300"
+*            },
+*            {
+*                "_id": "5e834258a0d4a20f74673307",
+*                "trackId": "5e834258a0d4a20f74673305"
+*     },
+*      {
+*          "_id": "5e834259a0d4a20f7467330c",
+*           "trackId": "5e834259a0d4a20f7467330a"
+*        },
+*         {
+*              "_id": "5e834260a0d4a20f74673311",
+*               "trackId": "5e834260a0d4a20f7467330f"
+*           },
+*            {
+*                "_id": "5e834265a0d4a20f74673316",
+*               "trackId": "5e834265a0d4a20f74673314"
+*          },
+*          {
+*              "_id": "5e834268a0d4a20f7467331b",
+*               "trackId": "5e834268a0d4a20f74673319"
+*           }
+*        ],
+*        "__v": 17,
+*        "name": "artist1"
+*    }
+*]
+ * }
+ * @apiParam (QueryParameters)  artists_ids 		Required. A comma-separated list of the Spotify IDs for the artists. Maximum: 50 IDs.
  *
+ * 
+ * 
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains an object</br> whose key is "artists" and whose value is an array of artist objects in JSON format.</br></br></br> Objects are returned in the order requested. If an object is not found, a null value is returned in the appropriate position.</br> Duplicate ids in the query will result in duplicate objects in the response.</br> On error, the header status code is an error code and the response body contains an error object.
  */
 
