@@ -1960,7 +1960,7 @@ define({ "api": [
   },
   {
     "type": "POST",
-    "url": "/player/add-to-queue/:trackId",
+    "url": "/player/add-to-queue/:playlistId/:trackId",
     "title": "Add an Item to the User's Playback Queue",
     "name": "Add_an_Item_to_the_User's_Playback_Queue",
     "group": "Player",
@@ -1985,6 +1985,20 @@ define({ "api": [
             "optional": false,
             "field": "requried.trackId",
             "description": "<p>the id of the track went to add</p>"
+          },
+          {
+            "group": "Path Paramaters",
+            "optional": false,
+            "field": "requried.playlistId",
+            "description": "<p>the id of the playlist or album this track from</p>"
+          }
+        ],
+        "Query Paramaters": [
+          {
+            "group": "Query Paramaters",
+            "optional": false,
+            "field": "requried.isPlaylist",
+            "description": "<p>boolean if true this track from playlist else this from album</p>"
           }
         ],
         "Response": [
@@ -2118,6 +2132,15 @@ define({ "api": [
         ]
       }
     },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n   \"fullTrack\": {\n       \"track\": {\n           \"availableMarkets\": [\n               \"\\\"er,ty,eue,euu\\\"\"\n           ],\n           \"_id\": \"5e85f4241ba5cf17ccca66d7\",\n           \"url\": \"5e85f4241ba5cf17ccca66d5\",\n           \"images\": [],\n           \"duration\": 436,\n           \"trackNumber\": 236,\n           \"name\": \"\\\"track6\\\"\",\n           \"artistId\": \"5e833a51a51d971174923f17\",\n           \"albumId\": \"5e833b412b9d7718a491c850\",\n           \"discNumber\": 1,\n           \"explicit\": false,\n           \"type\": \"Track\",\n           \"acousticness\": 10,\n           \"danceability\": 23,\n           \"energy\": 100,\n           \"instrumentalness\": 4,\n           \"key\": 90,\n           \"liveness\": 25,\n           \"loudness\": 70,\n           \"mode\": 56,\n           \"speechiness\": 67,\n           \"tempo\": 76,\n           \"timeSignature\": \"2020-04-02T14:18:12.619Z\",\n           \"valence\": 70,\n           \"like\": 0,\n           \"__v\": 0\n       },\n       \"isLiked\": false,\n       \"album\": {\n           \"name\": \"album1\",\n           \"_id\": \"5e833b412b9d7718a491c850\",\n           \"artist\": {\n               \"name\": \"ahmedsamir\",\n              \"_id\": \"5e833a51a51d971174923f17\"\n           }\n       }\n   },\n   \"isPlaylist\": true,\n   \"playlistId\": \"5e85f4ca1ba5cf17ccca66eb\"\n}",
+          "type": "json"
+        }
+      ]
+    },
     "parameter": {
       "fields": {
         "Response": [
@@ -2152,6 +2175,15 @@ define({ "api": [
           }
         ]
       }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n[\n{   \n   \"fullTrack\": {\n       \"track\": {\n           \"availableMarkets\": [\n               \"\\\"er,ty,eue,euu\\\"\"\n           ],\n           \"_id\": \"5e85f4241ba5cf17ccca66d7\",\n           \"url\": \"5e85f4241ba5cf17ccca66d5\",\n           \"images\": [],\n           \"duration\": 436,\n           \"trackNumber\": 236,\n           \"name\": \"\\\"track6\\\"\",\n           \"artistId\": \"5e833a51a51d971174923f17\",\n           \"albumId\": \"5e833b412b9d7718a491c850\",\n           \"discNumber\": 1,\n           \"explicit\": false,\n           \"type\": \"Track\",\n           \"acousticness\": 10,\n           \"danceability\": 23,\n           \"energy\": 100,\n           \"instrumentalness\": 4,\n           \"key\": 90,\n           \"liveness\": 25,\n           \"loudness\": 70,\n           \"mode\": 56,\n           \"speechiness\": 67,\n           \"tempo\": 76,\n           \"timeSignature\": \"2020-04-02T14:18:12.619Z\",\n           \"valence\": 70,\n           \"like\": 0,\n           \"__v\": 0\n       },\n       \"isLiked\": false,\n       \"album\": {\n           \"name\": \"album1\",\n           \"_id\": \"5e833b412b9d7718a491c850\",\n           \"artist\": {\n               \"name\": \"ahmedsamir\",\n              \"_id\": \"5e833a51a51d971174923f17\"\n           }\n       }\n   },\n   \"isPlaylist\": true,\n   \"playlistId\": \"5e85f4ca1ba5cf17ccca66eb\"\n},\n{   \n   \"fullTrack\": {\n       \"track\": {\n           \"availableMarkets\": [\n               \"\\\"er,ty,eue,euu\\\"\"\n           ],\n           \"_id\": \"5e85f4241ba5cf17ccca66d7\",\n           \"url\": \"5e85f4241ba5cf17ccca66d5\",\n           \"images\": [],\n           \"duration\": 436,\n           \"trackNumber\": 236,\n           \"name\": \"\\\"track6\\\"\",\n           \"artistId\": \"5e833a51a51d971174923f17\",\n           \"albumId\": \"5e833b412b9d7718a491c850\",\n           \"discNumber\": 1,\n           \"explicit\": false,\n           \"type\": \"Track\",\n           \"acousticness\": 10,\n           \"danceability\": 23,\n           \"energy\": 100,\n           \"instrumentalness\": 4,\n           \"key\": 90,\n           \"liveness\": 25,\n           \"loudness\": 70,\n           \"mode\": 56,\n           \"speechiness\": 67,\n           \"tempo\": 76,\n           \"timeSignature\": \"2020-04-02T14:18:12.619Z\",\n           \"valence\": 70,\n           \"like\": 0,\n           \"__v\": 0\n       },\n       \"isLiked\": false,\n       \"album\": {\n           \"name\": \"album1\",\n           \"_id\": \"5e833b412b9d7718a491c850\",\n           \"artist\": {\n               \"name\": \"ahmedsamir\",\n              \"_id\": \"5e833a51a51d971174923f17\"\n           }\n       }\n   },\n   \"isPlaylist\": true,\n   \"playlistId\": \"5e85f4ca1ba5cf17ccca66eb\"\n},   \n   \"fullTrack\": {\n       \"track\": {\n           \"availableMarkets\": [\n               \"\\\"er,ty,eue,euu\\\"\"\n           ],\n           \"_id\": \"5e85f4241ba5cf17ccca66d7\",\n           \"url\": \"5e85f4241ba5cf17ccca66d5\",\n           \"images\": [],\n           \"duration\": 436,\n           \"trackNumber\": 236,\n           \"name\": \"\\\"track6\\\"\",\n           \"artistId\": \"5e833a51a51d971174923f17\",\n           \"albumId\": \"5e833b412b9d7718a491c850\",\n           \"discNumber\": 1,\n           \"explicit\": false,\n           \"type\": \"Track\",\n           \"acousticness\": 10,\n           \"danceability\": 23,\n           \"energy\": 100,\n           \"instrumentalness\": 4,\n           \"key\": 90,\n           \"liveness\": 25,\n           \"loudness\": 70,\n           \"mode\": 56,\n           \"speechiness\": 67,\n           \"tempo\": 76,\n           \"timeSignature\": \"2020-04-02T14:18:12.619Z\",\n           \"valence\": 70,\n           \"like\": 0,\n           \"__v\": 0\n       },\n       \"isLiked\": false,\n       \"album\": {\n           \"name\": \"album1\",\n           \"_id\": \"5e833b412b9d7718a491c850\",\n           \"artist\": {\n               \"name\": \"ahmedsamir\",\n              \"_id\": \"5e833a51a51d971174923f17\"\n           }\n       }\n   },\n   \"isPlaylist\": true,\n   \"playlistId\": \"5e85f4ca1ba5cf17ccca66eb\"\n}\n]\n}",
+          "type": "json"
+        }
+      ]
     },
     "parameter": {
       "fields": {
@@ -2309,6 +2341,15 @@ define({ "api": [
         ]
       }
     },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n   \"fullTrack\": {\n       \"track\": {\n           \"availableMarkets\": [\n               \"\\\"er,ty,eue,euu\\\"\"\n           ],\n           \"_id\": \"5e85f4241ba5cf17ccca66d7\",\n           \"url\": \"5e85f4241ba5cf17ccca66d5\",\n           \"images\": [],\n           \"duration\": 436,\n           \"trackNumber\": 236,\n           \"name\": \"\\\"track6\\\"\",\n           \"artistId\": \"5e833a51a51d971174923f17\",\n           \"albumId\": \"5e833b412b9d7718a491c850\",\n           \"discNumber\": 1,\n           \"explicit\": false,\n           \"type\": \"Track\",\n           \"acousticness\": 10,\n           \"danceability\": 23,\n           \"energy\": 100,\n           \"instrumentalness\": 4,\n           \"key\": 90,\n           \"liveness\": 25,\n           \"loudness\": 70,\n           \"mode\": 56,\n           \"speechiness\": 67,\n           \"tempo\": 76,\n           \"timeSignature\": \"2020-04-02T14:18:12.619Z\",\n           \"valence\": 70,\n           \"like\": 0,\n           \"__v\": 0\n       },\n       \"isLiked\": false,\n       \"album\": {\n           \"name\": \"album1\",\n           \"_id\": \"5e833b412b9d7718a491c850\",\n           \"artist\": {\n               \"name\": \"ahmedsamir\",\n              \"_id\": \"5e833a51a51d971174923f17\"\n           }\n       }\n   },\n   \"isPlaylist\": true,\n   \"playlistId\": \"5e85f4ca1ba5cf17ccca66eb\"\n}",
+          "type": "json"
+        }
+      ]
+    },
     "parameter": {
       "fields": {
         "Response": [
@@ -2343,6 +2384,15 @@ define({ "api": [
           }
         ]
       }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n   \"fullTrack\": {\n       \"track\": {\n           \"availableMarkets\": [\n               \"\\\"er,ty,eue,euu\\\"\"\n           ],\n           \"_id\": \"5e85f4241ba5cf17ccca66d7\",\n           \"url\": \"5e85f4241ba5cf17ccca66d5\",\n           \"images\": [],\n           \"duration\": 436,\n           \"trackNumber\": 236,\n           \"name\": \"\\\"track6\\\"\",\n           \"artistId\": \"5e833a51a51d971174923f17\",\n           \"albumId\": \"5e833b412b9d7718a491c850\",\n           \"discNumber\": 1,\n           \"explicit\": false,\n           \"type\": \"Track\",\n           \"acousticness\": 10,\n           \"danceability\": 23,\n           \"energy\": 100,\n           \"instrumentalness\": 4,\n           \"key\": 90,\n           \"liveness\": 25,\n           \"loudness\": 70,\n           \"mode\": 56,\n           \"speechiness\": 67,\n           \"tempo\": 76,\n           \"timeSignature\": \"2020-04-02T14:18:12.619Z\",\n           \"valence\": 70,\n           \"like\": 0,\n           \"__v\": 0\n       },\n       \"isLiked\": false,\n       \"album\": {\n           \"name\": \"album1\",\n           \"_id\": \"5e833b412b9d7718a491c850\",\n           \"artist\": {\n               \"name\": \"ahmedsamir\",\n              \"_id\": \"5e833a51a51d971174923f17\"\n           }\n       }\n   },\n   \"isPlaylist\": true,\n   \"playlistId\": \"5e85f4ca1ba5cf17ccca66eb\"\n}",
+          "type": "json"
+        }
+      ]
     },
     "parameter": {
       "fields": {

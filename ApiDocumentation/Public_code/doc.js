@@ -1423,6 +1423,52 @@
  * 
  * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
  * 
+* @apiSuccessExample {json} Success-Response:
+*{
+*    "fullTrack": {
+*        "track": {
+*            "availableMarkets": [
+*                "\"er,ty,eue,euu\""
+*            ],
+*            "_id": "5e85f4241ba5cf17ccca66d7",
+*            "url": "5e85f4241ba5cf17ccca66d5",
+*            "images": [],
+*            "duration": 436,
+*            "trackNumber": 236,
+*            "name": "\"track6\"",
+*            "artistId": "5e833a51a51d971174923f17",
+*            "albumId": "5e833b412b9d7718a491c850",
+*            "discNumber": 1,
+*            "explicit": false,
+*            "type": "Track",
+*            "acousticness": 10,
+*            "danceability": 23,
+*            "energy": 100,
+*            "instrumentalness": 4,
+*            "key": 90,
+*            "liveness": 25,
+*            "loudness": 70,
+*            "mode": 56,
+*            "speechiness": 67,
+*            "tempo": 76,
+*            "timeSignature": "2020-04-02T14:18:12.619Z",
+*            "valence": 70,
+*            "like": 0,
+*            "__v": 0
+*        },
+*        "isLiked": false,
+*        "album": {
+*            "name": "album1",
+*            "_id": "5e833b412b9d7718a491c850",
+*            "artist": {
+*                "name": "ahmedsamir",
+*               "_id": "5e833a51a51d971174923f17"
+*            }
+*        }
+*    },
+*    "isPlaylist": true,
+*    "playlistId": "5e85f4ca1ba5cf17ccca66eb"
+*}
  * 
  * 
  * @apiParam (Response) Format A successful request will return a 200 OK response code with a json payload that contains information about the currently playing track and context (see below). The information returned is for the last known state, which means an inactive device could be returned if it was the last one to execute playback. When no available devices are found, the request will return a 200 OK response but with no data populated. When no track is currently playing, the request will return a 204 NO CONTENT response with no payload. If private session is enabled the response will be a 204 NO CONTENT with an empty payload.
@@ -1439,8 +1485,147 @@
  * <h1> Request parameters</h1> 
  * </br></br><h1> Endpoint</h1>
  * 
- * 
  * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * 
+ *  @apiSuccessExample {json} Success-Response:
+*{
+ *[
+     *{   
+*    "fullTrack": {
+*        "track": {
+*            "availableMarkets": [
+*                "\"er,ty,eue,euu\""
+*            ],
+*            "_id": "5e85f4241ba5cf17ccca66d7",
+*            "url": "5e85f4241ba5cf17ccca66d5",
+*            "images": [],
+*            "duration": 436,
+*            "trackNumber": 236,
+*            "name": "\"track6\"",
+*            "artistId": "5e833a51a51d971174923f17",
+*            "albumId": "5e833b412b9d7718a491c850",
+*            "discNumber": 1,
+*            "explicit": false,
+*            "type": "Track",
+*            "acousticness": 10,
+*            "danceability": 23,
+*            "energy": 100,
+*            "instrumentalness": 4,
+*            "key": 90,
+*            "liveness": 25,
+*            "loudness": 70,
+*            "mode": 56,
+*            "speechiness": 67,
+*            "tempo": 76,
+*            "timeSignature": "2020-04-02T14:18:12.619Z",
+*            "valence": 70,
+*            "like": 0,
+*            "__v": 0
+*        },
+*        "isLiked": false,
+*        "album": {
+*            "name": "album1",
+*            "_id": "5e833b412b9d7718a491c850",
+*            "artist": {
+*                "name": "ahmedsamir",
+*               "_id": "5e833a51a51d971174923f17"
+*            }
+*        }
+*    },
+*    "isPlaylist": true,
+*    "playlistId": "5e85f4ca1ba5cf17ccca66eb"
+*},
+*{   
+*    "fullTrack": {
+*        "track": {
+*            "availableMarkets": [
+*                "\"er,ty,eue,euu\""
+*            ],
+*            "_id": "5e85f4241ba5cf17ccca66d7",
+*            "url": "5e85f4241ba5cf17ccca66d5",
+*            "images": [],
+*            "duration": 436,
+*            "trackNumber": 236,
+*            "name": "\"track6\"",
+*            "artistId": "5e833a51a51d971174923f17",
+*            "albumId": "5e833b412b9d7718a491c850",
+*            "discNumber": 1,
+*            "explicit": false,
+*            "type": "Track",
+*            "acousticness": 10,
+*            "danceability": 23,
+*            "energy": 100,
+*            "instrumentalness": 4,
+*            "key": 90,
+*            "liveness": 25,
+*            "loudness": 70,
+*            "mode": 56,
+*            "speechiness": 67,
+*            "tempo": 76,
+*            "timeSignature": "2020-04-02T14:18:12.619Z",
+*            "valence": 70,
+*            "like": 0,
+*            "__v": 0
+*        },
+*        "isLiked": false,
+*        "album": {
+*            "name": "album1",
+*            "_id": "5e833b412b9d7718a491c850",
+*            "artist": {
+*                "name": "ahmedsamir",
+*               "_id": "5e833a51a51d971174923f17"
+*            }
+*        }
+*    },
+*    "isPlaylist": true,
+*    "playlistId": "5e85f4ca1ba5cf17ccca66eb"
+*},   
+*    "fullTrack": {
+*        "track": {
+*            "availableMarkets": [
+*                "\"er,ty,eue,euu\""
+*            ],
+*            "_id": "5e85f4241ba5cf17ccca66d7",
+*            "url": "5e85f4241ba5cf17ccca66d5",
+*            "images": [],
+*            "duration": 436,
+*            "trackNumber": 236,
+*            "name": "\"track6\"",
+*            "artistId": "5e833a51a51d971174923f17",
+*            "albumId": "5e833b412b9d7718a491c850",
+*            "discNumber": 1,
+*            "explicit": false,
+*            "type": "Track",
+*            "acousticness": 10,
+*            "danceability": 23,
+*            "energy": 100,
+*            "instrumentalness": 4,
+*            "key": 90,
+*            "liveness": 25,
+*            "loudness": 70,
+*            "mode": 56,
+*            "speechiness": 67,
+*            "tempo": 76,
+*            "timeSignature": "2020-04-02T14:18:12.619Z",
+*            "valence": 70,
+*            "like": 0,
+*            "__v": 0
+*        },
+*        "isLiked": false,
+*        "album": {
+*            "name": "album1",
+*            "_id": "5e833b412b9d7718a491c850",
+*            "artist": {
+*                "name": "ahmedsamir",
+*               "_id": "5e833a51a51d971174923f17"
+*            }
+*        }
+*    },
+*    "isPlaylist": true,
+*    "playlistId": "5e85f4ca1ba5cf17ccca66eb"
+*}
+*]
+*}
  * 
  * 
  * 
@@ -1508,10 +1693,9 @@
  * 
  * 
  * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
- * 
- * 
- * 
  * @apiParam (Query Paramaters)  position_ms	 Required. The position in milliseconds to seek to. Must be a positive number. Passing in a position that is greater than the length of the track will cause the player to start playing the next song.
+ * 
+ * 
  * @apiParam (Response) Format A completed request will return a 204 NO CONTENT response code, and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 404 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason.
  */
 /**
@@ -1547,9 +1731,56 @@
  * 
  * <h1> Request parameters</h1> 
  * </br></br><h1> Endpoint</h1>
- * 
- * 
  * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * 
+ * @apiSuccessExample {json} Success-Response:
+*{
+*    "fullTrack": {
+*        "track": {
+*            "availableMarkets": [
+*                "\"er,ty,eue,euu\""
+*            ],
+*            "_id": "5e85f4241ba5cf17ccca66d7",
+*            "url": "5e85f4241ba5cf17ccca66d5",
+*            "images": [],
+*            "duration": 436,
+*            "trackNumber": 236,
+*            "name": "\"track6\"",
+*            "artistId": "5e833a51a51d971174923f17",
+*            "albumId": "5e833b412b9d7718a491c850",
+*            "discNumber": 1,
+*            "explicit": false,
+*            "type": "Track",
+*            "acousticness": 10,
+*            "danceability": 23,
+*            "energy": 100,
+*            "instrumentalness": 4,
+*            "key": 90,
+*            "liveness": 25,
+*            "loudness": 70,
+*            "mode": 56,
+*            "speechiness": 67,
+*            "tempo": 76,
+*            "timeSignature": "2020-04-02T14:18:12.619Z",
+*            "valence": 70,
+*            "like": 0,
+*            "__v": 0
+*        },
+*        "isLiked": false,
+*        "album": {
+*            "name": "album1",
+*            "_id": "5e833b412b9d7718a491c850",
+*            "artist": {
+*                "name": "ahmedsamir",
+*               "_id": "5e833a51a51d971174923f17"
+*            }
+*        }
+*    },
+*    "isPlaylist": true,
+*    "playlistId": "5e85f4ca1ba5cf17ccca66eb"
+*}
+ * 
+* 
  * 
  * 
  * 
@@ -1575,7 +1806,54 @@
  * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
  * 
  * 
+ * @apiSuccessExample {json} Success-Response:
+*{
+*    "fullTrack": {
+*        "track": {
+*            "availableMarkets": [
+*                "\"er,ty,eue,euu\""
+*            ],
+*            "_id": "5e85f4241ba5cf17ccca66d7",
+*            "url": "5e85f4241ba5cf17ccca66d5",
+*            "images": [],
+*            "duration": 436,
+*            "trackNumber": 236,
+*            "name": "\"track6\"",
+*            "artistId": "5e833a51a51d971174923f17",
+*            "albumId": "5e833b412b9d7718a491c850",
+*            "discNumber": 1,
+*            "explicit": false,
+*            "type": "Track",
+*            "acousticness": 10,
+*            "danceability": 23,
+*            "energy": 100,
+*            "instrumentalness": 4,
+*            "key": 90,
+*            "liveness": 25,
+*            "loudness": 70,
+*            "mode": 56,
+*            "speechiness": 67,
+*            "tempo": 76,
+*            "timeSignature": "2020-04-02T14:18:12.619Z",
+*            "valence": 70,
+*            "like": 0,
+*            "__v": 0
+*        },
+*        "isLiked": false,
+*        "album": {
+*            "name": "album1",
+*            "_id": "5e833b412b9d7718a491c850",
+*            "artist": {
+*                "name": "ahmedsamir",
+*               "_id": "5e833a51a51d971174923f17"
+*            }
+*        }
+*    },
+*    "isPlaylist": true,
+*    "playlistId": "5e85f4ca1ba5cf17ccca66eb"
+*}
  * 
+* 
  * @apiParam (Response) Format A completed request will return a 200 NO CONTENT response code,and current playing  track , and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 400 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason.
  */
 /**
@@ -1619,7 +1897,7 @@
  */
 
 /**
- * @api {POST} /player/add-to-queue/:trackId Add an Item to the User's Playback Queue
+ * @api {POST} /player/add-to-queue/:playlistId/:trackId Add an Item to the User's Playback Queue
  * @apiName Add an Item to the User's Playback Queue
  * @apiGroup Player
  * @apiDescription
@@ -1635,7 +1913,10 @@
  * 
  * 
  * @apiParam (Path Paramaters) requried.trackId the id of the track went to add
+ * @apiParam (Path Paramaters) requried.playlistId the id of the playlist or album this track from 
+ * @apiParam (Query Paramaters) requried.isPlaylist boolean if true this track from playlist else this from album
  * 
+ *   
  * @apiParam (Response) format A completed request will return a 200  response code, and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 404 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason.
  */
 //Playlist

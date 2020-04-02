@@ -2,57 +2,96 @@ correct :
 statu-->200 & example
 [
     {
-        "track": {
-            "availableMarkets": [],
-            "_id": "5e7d93dad82adf07f4121bb6",
-            "name": "track3",
-            "albumId": "5e7d93dad82adf07f4121bb0",
-            "artistId": "5e7d93dad82adf07f4121bb2",
-            "__v": 0
+        "fulltrack": {
+            "track": {
+                "availableMarkets": [
+                    "\"er,ty,eue,euu\""
+                ],
+                "_id": "5e85f4281ba5cf17ccca66dc",
+                "url": "5e85f4281ba5cf17ccca66da",
+                "images": [],
+                "duration": 436,
+                "trackNumber": 236,
+                "name": "\"track7\"",
+                "artistId": "5e833a51a51d971174923f17",
+                "albumId": "5e833b412b9d7718a491c850",
+                "discNumber": 1,
+                "explicit": false,
+                "type": "Track",
+                "acousticness": 10,
+                "danceability": 23,
+                "energy": 100,
+                "instrumentalness": 4,
+                "key": 90,
+                "liveness": 25,
+                "loudness": 70,
+                "mode": 56,
+                "speechiness": 67,
+                "tempo": 76,
+                "timeSignature": "2020-04-02T14:18:16.464Z",
+                "valence": 70,
+                "like": 0,
+                "__v": 0
+            },
+            "isLiked": false,
+            "album": {
+                "name": "album1",
+                "_id": "5e833b412b9d7718a491c850",
+                "artist": {
+                    "name": "ahmedsamir",
+                    "_id": "5e833a51a51d971174923f17"
+                }
+            }
         },
         "isQueue": false,
-        "albumName": "album3",
+        "isPlaylist": true,
         "index": 2
     },
     {
-        "track": {
-            "availableMarkets": [],
-            "_id": "5e7d93dad82adf07f4121bb4",
-            "name": "track1",
-            "albumId": "5e7d93dad82adf07f4121bae",
-            "artistId": "5e7d93dad82adf07f4121bb2",
-            "__v": 0
+        "fulltrack": {
+            "track": {
+                "availableMarkets": [
+                    "\"er,ty,eue,euu\""
+                ],
+                "_id": "5e85f4301ba5cf17ccca66e1",
+                "url": "5e85f4301ba5cf17ccca66df",
+                "images": [],
+                "duration": 436,
+                "trackNumber": 236,
+                "name": "\"track8\"",
+                "artistId": "5e833a51a51d971174923f17",
+                "albumId": "5e833b412b9d7718a491c850",
+                "discNumber": 1,
+                "explicit": false,
+                "type": "Track",
+                "acousticness": 10,
+                "danceability": 23,
+                "energy": 100,
+                "instrumentalness": 4,
+                "key": 90,
+                "liveness": 25,
+                "loudness": 70,
+                "mode": 56,
+                "speechiness": 67,
+                "tempo": 76,
+                "timeSignature": "2020-04-02T14:18:24.079Z",
+                "valence": 70,
+                "like": 0,
+                "__v": 0
+            },
+            "isLiked": false,
+            "album": {
+                "name": "album1",
+                "_id": "5e833b412b9d7718a491c850",
+                "artist": {
+                    "name": "ahmedsamir",
+                    "_id": "5e833a51a51d971174923f17"
+                }
+            }
         },
         "isQueue": false,
-        "albumName": "album1",
+        "isPlaylist": true,
         "index": 3
-    },
-    {
-        "track": {
-            "availableMarkets": [],
-            "_id": "5e7d93dad82adf07f4121bb5",
-            "name": "track2",
-            "albumId": "5e7d93dad82adf07f4121baf",
-            "artistId": "5e7d93dad82adf07f4121bb2",
-            "__v": 0
-        },
-        "isQueue": false,
-        "albumName": "album2",
-        "index": 0,
-        "fristInSource": true
-    },
-    {
-        "track": {
-            "availableMarkets": [],
-            "_id": "5e7d93dad82adf07f4121bb7",
-            "name": "track4",
-            "albumId": "5e7d93dad82adf07f4121bb1",
-            "artistId": "5e7d93dad82adf07f4121bb3",
-            "__v": 0
-        },
-        "isQueue": false,
-        "albumName": "album4",
-        "index": 1
     }
 ]
 ------------------------------------------------------
