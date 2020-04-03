@@ -957,14 +957,338 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
  * 
  * 
- *  @apiParam (QueryParameters)  country  			Optional. A country: an ISO 3166-1 alpha-2 country code.</br> Provide this parameter if you want the list of returned items to be relevant to a particular country.</br> If omitted, the returned items will be relevant to all countries.
- * @apiParam (QueryParameters)  limit  	Optional. The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
- * @apiParam (QueryParameters)  offset 		Optional. The index of the first item to return. Default: 0 (the first object). Use with limit to get the next set of items. 
- *
+ *  @apiSuccessExample {json} Success-Response:
+  *{
+*
+ *   "albums": [
+ *       {
+ *           "album_type": "type1",
+ *           "artist": {
+ *               "type": "artist",
+ *               "id": "5e7ef28326e2fa0da04f81ae",
+ *               "name": "artist1"
+ *           },
+ *           "available_markets": [
+ *               "us,yu,ywgd"
+ *           ],
+ *           "images": [],
+ *           "id": "5e7f44905cce7d09a82e5a75",
+ *           "name": "album1",
+ *           "type": "album"
+ *       },
+ *       {
+ *           "album_type": "type1",
+ *           "artist": {
+ *               "type": "artist",
+ *               "id": "5e7ef28326e2fa0da04f81ae",
+ *               "name": "artist1"
+ *           },
+ *           "available_markets": [
+ *               "us,yu,ywgd"
+ *           ],
+ *           "images": [],
+ *           "id": "5e7f4bf85cce7d09a82e5a77",
+ *           "name": "album1",
+ *           "type": "album"
+ *       },
+ *       {
+ *           "album_type": "type1",
+ *           "artist": {
+ *               "type": "artist",
+ *               "id": "5e7ef28326e2fa0da04f81ae",
+ *               "name": "artist1"
+ *           },
+ *           "available_markets": [],
+ *           "images": [],
+ *           "id": "5e7f4c925cce7d09a82e5a79",
+ *           "name": "album1",
+ *           "type": "album"
+ *       },
+ *       {
+ *           "album_type": "type1",
+ *           "artist": {
+ *               "type": "artist",
+ *               "id": "5e7ef28326e2fa0da04f81ae",
+ *               "name": "artist1"
+ *           },
+ *           "available_markets": [],
+ *           "images": [],
+ *           "id": "5e7f4c985cce7d09a82e5a7b",
+ *           "name": "album1",
+ *           "type": "album"
+ *       },
+ *       {
+ *           "album_type": "type1",
+ *           "artist": {
+ *               "type": "artist",
+ *               "id": "5e833a51a51d971174923f17",
+ *               "name": "ahmedsamir"
+ *           },
+ *           "available_markets": [
+ *               "us,er,rttr,fretgre,jhj"
+ *           ],
+ *           "images": [],
+ *           "id": "5e833b412b9d7718a491c850",
+ *           "name": "album1",
+ *           "type": "album"
+ *       },
+ *       {
+ *           "album_type": "type1",
+ *           "artist": {
+ *               "type": "artist",
+ *               "id": "5e7ef28326e2fa0da04f81ae",
+ *               "name": "artist1"
+ *           },
+ *           "available_markets": [],
+ *           "images": [],
+ *           "id": "5e7f4ca05cce7d09a82e5a7d",
+ *           "type": "album"
+ *       }
+ *   ]
+* 
+   *}
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains a message and analbums object.</br> The albums object contains an array of simplified album objects (wrapped in a paging object) in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</br></br></br> Once you have retrieved the list, you can use Get an Album’s Tracks to drill down further.</br></br> The results are returned in an order reflected within the Spotify clients, and therefore may not be ordered by date.
+ */
+
+/**
+ * @api {get} /browse/popular-albums Get a List of popular albums
+ * @apiName Get a List of popular albums
+ * @apiGroup Browse
+ * @apiDescription
+ * <p style="color:red;">Get a List of popular albums featured in Spotify (shown, for example, on a Spotify player’s “Browse” tab).</p>
+ *
+ * 
+ * <h1>Request Parameters</h1></br></br>
+ * 
+ * <h1> Endpoint</h1> 
+ * 
+ * 
+ * 
+ *  @apiSuccessExample {json} Success-Response:
+  *{
+*
+ *   "albums": [
+ *       {
+ *           "album_type": "type1",
+ *           "artist": {
+ *               "type": "artist",
+ *               "id": "5e7ef28326e2fa0da04f81ae",
+ *               "name": "artist1"
+ *           },
+ *           "available_markets": [
+ *               "us,yu,ywgd"
+ *           ],
+ *           "images": [],
+ *           "id": "5e7f44905cce7d09a82e5a75",
+ *           "name": "album1",
+ *           "type": "album"
+ *       },
+ *       {
+ *           "album_type": "type1",
+ *           "artist": {
+ *               "type": "artist",
+ *               "id": "5e7ef28326e2fa0da04f81ae",
+ *               "name": "artist1"
+ *           },
+ *           "available_markets": [
+ *               "us,yu,ywgd"
+ *           ],
+ *           "images": [],
+ *           "id": "5e7f4bf85cce7d09a82e5a77",
+ *           "name": "album1",
+ *           "type": "album"
+ *       },
+ *       {
+ *           "album_type": "type1",
+ *           "artist": {
+ *               "type": "artist",
+ *               "id": "5e7ef28326e2fa0da04f81ae",
+ *               "name": "artist1"
+ *           },
+ *           "available_markets": [],
+ *           "images": [],
+ *           "id": "5e7f4c925cce7d09a82e5a79",
+ *           "name": "album1",
+ *           "type": "album"
+ *       },
+ *       {
+ *           "album_type": "type1",
+ *           "artist": {
+ *               "type": "artist",
+ *               "id": "5e7ef28326e2fa0da04f81ae",
+ *               "name": "artist1"
+ *           },
+ *           "available_markets": [],
+ *           "images": [],
+ *           "id": "5e7f4c985cce7d09a82e5a7b",
+ *           "name": "album1",
+ *           "type": "album"
+ *       },
+ *       {
+ *           "album_type": "type1",
+ *           "artist": {
+ *               "type": "artist",
+ *               "id": "5e7ef28326e2fa0da04f81ae",
+ *               "name": "artist1"
+ *           },
+ *           "available_markets": [],
+ *           "images": [],
+ *           "id": "5e7f4ca05cce7d09a82e5a7d",
+ *           "type": "album"
+ *       },
+ *       {
+ *           "album_type": "type1",
+ *           "artist": {
+ *               "type": "artist",
+ *               "id": "5e833a51a51d971174923f17",
+ *               "name": "ahmedsamir"
+ *           },
+ *           "available_markets": [
+ *               "us,er,rttr,fretgre,jhj"
+ *           ],
+ *           "images": [],
+ *           "id": "5e833b412b9d7718a491c850",
+ *           "name": "album1",
+ *           "type": "album"
+ *       }
+ *   ]
+* 
+   *}
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains a message and analbums object.</br> The albums object contains an array of simplified album objects (wrapped in a paging object) in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</br></br></br> Once you have retrieved the list, you can use Get an Album’s Tracks to drill down further.</br></br> The results are returned in an order reflected within the Spotify clients, and therefore may not be ordered by date.
+ */
+/**
+ * @api {get} /browse/popular-artists Get a List of popular artists 
+ * @apiName Get a List of popular artists 
+ * @apiGroup Browse
+ * @apiDescription
+ * <p style="color:red;">Get a List of popular artists  featured in Spotify (shown, for example, on a Spotify player’s “Browse” tab).</p>
+ *
+ * 
+ * <h1>Request Parameters</h1></br></br>
+ * 
+ * <h1> Endpoint</h1> 
+ * 
+ * 
+ * 
+ *  @apiSuccessExample {json} Success-Response:
+ *{
+*    "artists": [
+*        {
+*            "genre": [
+*                "genre2",
+*                "genre1"
+*            ],
+*            "type": "artist",
+*            "name": "artist1",
+*            "images": [],
+*            "id": "5e7ef28326e2fa0da04f81ae",
+*            "info": "i am a good artist "
+*        },
+*        {
+*            "genre": [
+*                "genre1",
+*                "genre2",
+*                "genre3",
+*                "genre4"
+*            ],
+*            "type": "artist",
+*            "name": "ahmedsamir",
+*            "images": [],
+*            "id": "5e833a51a51d971174923f17"
+*        },
+*        {
+*            "genre": [
+*                "rytyt",
+*                "genre2",
+*                "genre1"
+*            ],
+*            "type": "artist",
+*            "name": "yytguguy",
+*            "images": [],
+*            "id": "5e7f67e438150c15e8589ece",
+*            "info": "jdshgdjdhfjkd"
+*        }
+*    ]
+*}
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains a message and artists object. On error, the header status code is an error code and the response body contains an error object.</br></br></br> Once you have retrieved the list, you can use Get an Album’s Tracks to drill down further.</br></br> The results are returned in an order reflected within the Spotify clients, and therefore may not be ordered by date.
+ */
+
+/**
+ * @api {get} /browse/popular-playlists Get a List of popular playlists
+ * @apiName Get a List of popular playlists 
+ * @apiGroup Browse
+ * @apiDescription
+ * <p style="color:red;">Get a List of popular playlists  featured in Spotify (shown, for example, on a Spotify player’s “Browse” tab).</p>
+ *
+ * 
+ * <h1>Request Parameters</h1></br></br>
+ * 
+ * <h1> Endpoint</h1> 
+ * 
+ * 
+ * 
+ *  @apiSuccessExample {json} Success-Response:
+* {
+*    "playlists": [
+*        {
+*            "owner": {
+*                "id": "5e75c68387bceb10ac3d3394",
+*                "type": "user",
+*                "name": "ahmedsamir"
+*            },
+*            "collaborative": false,
+*            "type": "playlist",
+*            "name": "playlist1",
+*            "images": [],
+*            "id": "5e7d894d7832511978ec6b30",
+*            "Description": "",
+*            "isPublic": true
+*        },
+*        {
+*            "owner": {
+*                "id": "5e7d9045854b0419f4f409b7",
+*                "type": "user"
+*            },
+*            "collaborative": false,
+*            "type": "playlist",
+*            "name": "ssad",
+*            "images": [],
+*            "id": "5e7d9066854b0419f4f409b9",
+*            "Description": "",
+*            "isPublic": true
+*        },
+*        {
+*            "owner": {
+*                "id": "5e85f48b1ba5cf17ccca66e9",
+*                "type": "user",
+*                "name": "ahmedsamir"
+*            },
+*            "collaborative": false,
+*            "type": "playlist",
+*            "name": "playlist1",
+*            "images": [],
+*            "id": "5e85f4ca1ba5cf17ccca66eb",
+*            "Description": "",
+*            "isPublic": true
+*        },
+*        {
+*            "owner": {
+*                "id": "5e7d9045854b0419f4f409b7",
+*                "type": "user"
+*            },
+*            "collaborative": false,
+*            "type": "playlist",
+*            "name": "dhjgjdjdjg",
+*            "images": [],
+*            "id": "5e7d93dad82adf07f4121bac",
+*            "Description": "",
+*            "isPublic": true
+*        }
+*    ]
+*}
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains a message and artists object. On error, the header status code is an error code and the response body contains an error object.</br></br></br> Once you have retrieved the list, you can use Get an Album’s Tracks to drill down further.</br></br> The results are returned in an order reflected within the Spotify clients, and therefore may not be ordered by date.
  */
 
 /**

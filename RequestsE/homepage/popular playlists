@@ -1,0 +1,59 @@
+// if there is no playlists will return {playlists:[]}
+{
+    "playlists": [
+        {
+            "owner": {
+                "id": "5e75c68387bceb10ac3d3394",
+                "type": "user",
+                "name": "ahmedsamir"
+            },
+            "collaborative": false,
+            "type": "playlist",
+            "name": "playlist1",
+            "images": [],
+            "id": "5e7d894d7832511978ec6b30",
+            "Description": "",
+            "isPublic": true
+        },
+        {
+            "owner": {
+                "id": "5e7d9045854b0419f4f409b7",
+                "type": "user"
+            },
+            "collaborative": false,
+            "type": "playlist",
+            "name": "ssad",
+            "images": [],
+            "id": "5e7d9066854b0419f4f409b9",
+            "Description": "",
+            "isPublic": true
+        },
+        {
+            "owner": {
+                "id": "5e85f48b1ba5cf17ccca66e9",
+                "type": "user",
+                "name": "ahmedsamir"
+            },
+            "collaborative": false,
+            "type": "playlist",
+            "name": "playlist1",
+            "images": [],
+            "id": "5e85f4ca1ba5cf17ccca66eb",
+            "Description": "",
+            "isPublic": true
+        },
+        {
+            "owner": {
+                "id": "5e7d9045854b0419f4f409b7",
+                "type": "user"
+            },
+            "collaborative": false,
+            "type": "playlist",
+            "name": "dhjgjdjdjg",
+            "images": [],
+            "id": "5e7d93dad82adf07f4121bac",
+            "Description": "",
+            "isPublic": true
+        }
+    ]
+}
