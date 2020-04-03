@@ -944,6 +944,69 @@
  * @apiParam (QueryParameters)  offset 	Optional. The index of the first item to return.</br> Default: 0 (the first object). Use with limit to get the next set of categories. 
  * @apiParam (Response)  Format  On success, </br>the HTTP status code in the response header is 200 OK</br> and the response body contains a message and a playlists object.</br> The playlists object contains an array of simplified playlist objects</br> (wrapped in a paging object) in JSON format. On error,</br> the header status code is an error code and the response body contains an error object.</br></br></br></br> Once you have retrieved the list of playlist objects,</br> you can use Get a Playlist and Get a Playlist’s Tracks to drill down further.
  */
+/**
+ * @api {get} /browse/recently-playing Get a List of recently playing Playlists,artists,albums
+ * @apiName Get a List of recently-playing
+ * @apiGroup Browse
+ * @apiDescription
+ * <p style="color:red;">Get a List of recently playing Playlists,artists,albums in Spotify (on, for example, the Spotify player’s “Browse” tab).</p>
+ *
+ * 
+ * <h1>Request Parameters</h1></br></br>
+ * 
+ * <h1> Endpoint</h1> 
+ * 
+ * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * 
+ *
+  *  @apiSuccessExample {json} Success-Response:
+  *{"recentlyPlaying": [
+        *
+*        {
+*            "genre": [
+*                "genre1",
+*                "genre2",
+*                "genre3",
+*                "genre4"
+*            ],
+*            "type": "artist",
+*            "name": "ahmedsamir",
+*            "images": [],
+*            "id": "5e833a51a51d971174923f17"
+*        },
+*        {
+*            "owner": {
+*                "id": "5e85f48b1ba5cf17ccca66e9",
+*                "type": "user",
+*                "name": "ahmedsamir"
+*            },
+*            "collaborative": false,
+*            "type": "playlist",
+*            "name": "playlist1",
+*            "images": [],
+*            "id": "5e85f4ca1ba5cf17ccca66eb",
+*            "Description": "",
+*            "isPublic": true
+*        },
+*        {
+*            "id": "5e833b412b9d7718a491c850",
+*            "name": "album1",
+*            "type": "album",
+*            "album_type": "type1",
+*            "images": [],
+*            "availableMarkets": [
+*                "us,er,rttr,fretgre,jhj"
+*           ],
+*            "artist": {
+*                "type": "artist",
+*                "id": "5e833a51a51d971174923f17",
+*                "name": "ahmedsamir"
+*            }
+*        }
+*    ]
+*}
+ * @apiParam (Response)  Format  On success, </br>the HTTP status code in the response header is 200 OK</br> and the response body contains a message and a playlists and albums and artists object.</br> The playlists object contains an array of simplified playlist objects</br> (wrapped in a paging object) in JSON format. On error,</br> the header status code is an error code and the response body contains an error object.</br></br></br></br> Once you have retrieved the list of playlist objects,</br> you can use Get a Playlist and Get a Playlist’s Tracks to drill down further.
+ */
 
 /**
  * @api {get} /browse/new-releases Get a List of New Releases

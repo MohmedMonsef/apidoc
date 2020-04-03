@@ -1,0 +1,92 @@
+{
+    "recentlyPlaying": [
+        {
+            "id": "5e833b412b9d7718a491c850",
+            "name": "album1",
+            "type": "album",
+            "album_type": "type1",
+            "images": [],
+            "availableMarkets": [
+                "us,er,rttr,fretgre,jhj"
+            ],
+            "artist": {
+                "type": "artist",
+                "id": "5e833a51a51d971174923f17",
+                "name": "ahmedsamir"
+            }
+        },
+        {
+            "id": "5e833b412b9d7718a491c850",
+            "name": "album1",
+            "type": "album",
+            "album_type": "type1",
+            "images": [],
+            "availableMarkets": [
+                "us,er,rttr,fretgre,jhj"
+            ],
+            "artist": {
+                "type": "artist",
+                "id": "5e833a51a51d971174923f17",
+                "name": "ahmedsamir"
+            }
+        },
+        {
+            "id": "5e833b412b9d7718a491c850",
+            "name": "album1",
+            "type": "album",
+            "album_type": "type1",
+            "images": [],
+            "availableMarkets": [
+                "us,er,rttr,fretgre,jhj"
+            ],
+            "artist": {
+                "type": "artist",
+                "id": "5e833a51a51d971174923f17",
+                "name": "ahmedsamir"
+            }
+        },
+        {
+            "genre": [
+                "genre1",
+                "genre2",
+                "genre3",
+                "genre4"
+            ],
+            "type": "artist",
+            "name": "ahmedsamir",
+            "images": [],
+            "id": "5e833a51a51d971174923f17"
+        },
+        {
+            "owner": {
+                "id": "5e85f48b1ba5cf17ccca66e9",
+                "type": "user",
+                "name": "ahmedsamir"
+            },
+            "collaborative": false,
+            "type": "playlist",
+            "name": "playlist1",
+            "images": [],
+            "id": "5e85f4ca1ba5cf17ccca66eb",
+            "Description": "",
+            "isPublic": true
+        },
+        {
+            "id": "5e833b412b9d7718a491c850",
+            "name": "album1",
+            "type": "album",
+            "album_type": "type1",
+            "images": [],
+            "availableMarkets": [
+                "us,er,rttr,fretgre,jhj"
+            ],
+            "artist": {
+                "type": "artist",
+                "id": "5e833a51a51d971174923f17",
+                "name": "ahmedsamir"
+            }
+        }
+    ]
+}
+
+// this array has differant of types artist ,playlist,albums

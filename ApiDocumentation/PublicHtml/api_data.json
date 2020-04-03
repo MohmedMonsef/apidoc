@@ -1187,6 +1187,50 @@
   },
   {
     "type": "get",
+    "url": "/browse/recently-playing",
+    "title": "Get a List of recently playing Playlists,artists,albums",
+    "name": "Get_a_List_of_recently-playing",
+    "group": "Browse",
+    "description": "<p style=\"color:red;\">Get a List of recently playing Playlists,artists,albums in Spotify (on, for example, the Spotify player’s “Browse” tab).</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\"recentlyPlaying\": [\n\n       {\n           \"genre\": [\n               \"genre1\",\n               \"genre2\",\n               \"genre3\",\n               \"genre4\"\n           ],\n           \"type\": \"artist\",\n           \"name\": \"ahmedsamir\",\n           \"images\": [],\n           \"id\": \"5e833a51a51d971174923f17\"\n       },\n       {\n           \"owner\": {\n               \"id\": \"5e85f48b1ba5cf17ccca66e9\",\n               \"type\": \"user\",\n               \"name\": \"ahmedsamir\"\n           },\n           \"collaborative\": false,\n           \"type\": \"playlist\",\n           \"name\": \"playlist1\",\n           \"images\": [],\n           \"id\": \"5e85f4ca1ba5cf17ccca66eb\",\n           \"Description\": \"\",\n           \"isPublic\": true\n       },\n       {\n           \"id\": \"5e833b412b9d7718a491c850\",\n           \"name\": \"album1\",\n           \"type\": \"album\",\n           \"album_type\": \"type1\",\n           \"images\": [],\n           \"availableMarkets\": [\n               \"us,er,rttr,fretgre,jhj\"\n          ],\n           \"artist\": {\n               \"type\": \"artist\",\n               \"id\": \"5e833a51a51d971174923f17\",\n               \"name\": \"ahmedsamir\"\n           }\n       }\n   ]\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "parameter": {
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, </br>the HTTP status code in the response header is 200 OK</br> and the response body contains a message and a playlists and albums and artists object.</br> The playlists object contains an array of simplified playlist objects</br> (wrapped in a paging object) in JSON format. On error,</br> the header status code is an error code and the response body contains an error object.</br></br></br></br> Once you have retrieved the list of playlist objects,</br> you can use Get a Playlist and Get a Playlist’s Tracks to drill down further.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "Public_code/doc.js",
+    "groupTitle": "Browse"
+  },
+  {
+    "type": "get",
     "url": "/me/following/contains",
     "title": "Check if Current User Follows Artists or Users",
     "name": "Check_if_Current_User_Follows_Artists_or_Users",
