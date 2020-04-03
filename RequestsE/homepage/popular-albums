@@ -1,0 +1,89 @@
+// if there is no albums will return {albums:[]}
+else 
+{
+    "albums": [
+        {
+            "album_type": "type1",
+            "artist": {
+                "type": "artist",
+                "id": "5e7ef28326e2fa0da04f81ae",
+                "name": "artist1"
+            },
+            "available_markets": [
+                "us,yu,ywgd"
+            ],
+            "images": [],
+            "id": "5e7f44905cce7d09a82e5a75",
+            "name": "album1",
+            "type": "album"
+        },
+        {
+            "album_type": "type1",
+            "artist": {
+                "type": "artist",
+                "id": "5e7ef28326e2fa0da04f81ae",
+                "name": "artist1"
+            },
+            "available_markets": [
+                "us,yu,ywgd"
+            ],
+            "images": [],
+            "id": "5e7f4bf85cce7d09a82e5a77",
+            "name": "album1",
+            "type": "album"
+        },
+        {
+            "album_type": "type1",
+            "artist": {
+                "type": "artist",
+                "id": "5e7ef28326e2fa0da04f81ae",
+                "name": "artist1"
+            },
+            "available_markets": [],
+            "images": [],
+            "id": "5e7f4c925cce7d09a82e5a79",
+            "name": "album1",
+            "type": "album"
+        },
+        {
+            "album_type": "type1",
+            "artist": {
+                "type": "artist",
+                "id": "5e7ef28326e2fa0da04f81ae",
+                "name": "artist1"
+            },
+            "available_markets": [],
+            "images": [],
+            "id": "5e7f4c985cce7d09a82e5a7b",
+            "name": "album1",
+            "type": "album"
+        },
+        {
+            "album_type": "type1",
+            "artist": {
+                "type": "artist",
+                "id": "5e833a51a51d971174923f17",
+                "name": "ahmedsamir"
+            },
+            "available_markets": [
+                "us,er,rttr,fretgre,jhj"
+            ],
+            "images": [],
+            "id": "5e833b412b9d7718a491c850",
+            "name": "album1",
+            "type": "album"
+        },
+        {
+            "album_type": "type1",
+            "artist": {
+                "type": "artist",
+                "id": "5e7ef28326e2fa0da04f81ae",
+                "name": "artist1"
+            },
+            "available_markets": [],
+            "images": [],
+            "id": "5e7f4ca05cce7d09a82e5a7d",
+            "type": "album"
+        }
+    ]
+}

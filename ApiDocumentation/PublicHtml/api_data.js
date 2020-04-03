@@ -159,37 +159,37 @@ define({ "api": [
           {
             "group": "BodyParameters",
             "optional": false,
-            "field": "Name",
+            "field": "name",
             "description": "<p>Required. string of the name of the new Album</p>"
           },
           {
             "group": "BodyParameters",
             "optional": false,
-            "field": "Label",
+            "field": "label",
             "description": "<p>Required. string of the Label of the new Album</p>"
           },
           {
             "group": "BodyParameters",
             "optional": false,
-            "field": "Album-type",
+            "field": "albumtype",
             "description": "<p>Required.Album, single, or compilation.</p>"
           },
           {
             "group": "BodyParameters",
             "optional": false,
-            "field": "Release-Date",
+            "field": "release-Date",
             "description": "<p>Required.Release Date of the new Album</p>"
           },
           {
             "group": "BodyParameters",
             "optional": false,
-            "field": "Available-Markets",
+            "field": "available-Markets",
             "description": "<p>Required.The markets in which the album is available: ISO 3166-1 alpha-2 country codes.</p>"
           },
           {
             "group": "BodyParameters",
             "optional": false,
-            "field": "Genre",
+            "field": "genre",
             "description": "<p>Required.A list of the genres used to classify the album.</p>"
           }
         ],
@@ -203,13 +203,22 @@ define({ "api": [
         ]
       }
     },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"availableMarkets\": [\n      \"us,er,rttr,fretgre,jhj\"\n  ],\n  \"_id\": \"5e833b412b9d7718a491c850\",\n  \"name\": \"album1\",\n  \"albumType\": \"type1\",\n  \"popularity\": 0,\n  \"genre\": \"genre1\",\n  \"releaseDate\": \"2020-02-20T00:00:00.000Z\",\n  \"label\": \"iuwdjhwdewjhfhdwe\",\n   \"images\": [],\n   \"artistId\": \"5e833a51a51d971174923f17\",\n  \"type\": \"Album\",\n  \"hasTracks\": [],\n \"__v\": 0 \n}",
+          "type": "json"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "ApiDocumentation/Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
     "type": "put",
-    "url": "Artists/me/Albums/{id}/tracks",
+    "url": "Artists/me/Albums/{album_id}/tracks",
     "title": "Create Track",
     "name": "Create_Track",
     "group": "Artist",
@@ -252,26 +261,26 @@ define({ "api": [
           {
             "group": "BodyParameters",
             "optional": false,
-            "field": "URL",
+            "field": "file",
             "description": "<p>Required. The URL for the track</p>"
           },
           {
             "group": "BodyParameters",
             "optional": false,
-            "field": "Track-Number",
+            "field": "trackNum",
             "description": "<p>Required.the number of the track on the album</p>"
           },
           {
             "group": "BodyParameters",
             "optional": false,
-            "field": "Preview-URL",
-            "description": "<p>Optional.A link to a 30 second preview (MP3 format) of the track.</p>"
+            "field": "availableMarkets",
+            "description": "<p>Required.The markets in which the track is available: ISO 3166-1 alpha-2 country codes.</p>"
           },
           {
             "group": "BodyParameters",
             "optional": false,
-            "field": "Available-Markets",
-            "description": "<p>Required.The markets in which the track is available: ISO 3166-1 alpha-2 country codes.</p>"
+            "field": "duration",
+            "description": "<p>Required.The length of track</p>"
           }
         ],
         "Response": [
@@ -283,6 +292,15 @@ define({ "api": [
           }
         ]
       }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n  \"availableMarkets\": [\n      \"usa,tt,wdwq,dwdw,wdw,dss\"\n  ],\n  \"_id\": \"5e834091a0d4a20f746732f7\",\n  \"duration\": 462,\n  \"name\": \"track1\",\n  \"artistId\": \"5e833a51a51d971174923f17\",\n  \"albumId\": \"5e833b412b9d7718a491c850\",\n  \"discNumber\": 1,\n  \"explicit\": false,\n  \"type\": \"Track\",\n  \"acousticness\": 10,\n  \"danceability\": 23,\n  \"energy\": 100,\n  \"instrumentalness\": 4,\n  \"key\": 90,\n  \"liveness\": 25,\n  \"loudness\": 70,\n  \"mode\": 56,\n  \"speechiness\": 67,\n  \"tempo\": 76,\n  \"timeSignature\": \"2020-03-31T13:07:29.395Z\",\n  \"valence\": 70,\n  \"like\": 0,\n  \"__v\": 0\n}",
+          "type": "json"
+        }
+      ]
     },
     "version": "0.0.0",
     "filename": "ApiDocumentation/Public_code/doc.js",
@@ -364,13 +382,22 @@ define({ "api": [
         ]
       }
     },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response: ",
+          "content": " {\n    [\n   {\n       \"genre\": [\n           \"rytyt\",\n           \"genre2\",\n           \"genre1\"\n       ],\n       \"_id\": \"5e7f67e438150c15e8589ece\",\n       \"info\": \"jdshgdjdhfjkd\",\n       \"popularity\": 0,\n       \"type\": \"Artist\",\n       \"Name\": \"yytguguy\",\n       \"userId\": \"5e7f670838150c15e8589ecc\",\n       \"images\": [],\n       \"addAlbums\": [],\n       \"addTracks\": [],\n      \"__v\": 0\n   },\n   {\n       \"genre\": [\n           \"genre1\",\n           \"genre2\",\n           \"genre3\",\n           \"genre4\"\n       ],\n       \"_id\": \"5e833a51a51d971174923f17\",\n       \"popularity\": 0,\n       \"type\": \"Artist\",\n       \"Name\": \"ahmedsamir\",\n       \"userId\": \"5e75c68387bceb10ac3d3394\",\n       \"images\": [],\n       \"addAlbums\": [\n           {\n               \"_id\": \"5e833b412b9d7718a491c851\",\n               \"albumId\": \"5e833b412b9d7718a491c850\"\n           }\n       ],\n       \"addTracks\": [\n           {\n               \"_id\": \"5e834091a0d4a20f746732f9\",\n               \"trackId\": \"5e834091a0d4a20f746732f7\"\n           },\n           {\n               \"_id\": \"5e834255a0d4a20f74673302\",\n               \"trackId\": \"5e834255a0d4a20f74673300\"\n           },\n           {\n               \"_id\": \"5e834258a0d4a20f74673307\",\n               \"trackId\": \"5e834258a0d4a20f74673305\"\n    },\n     {\n         \"_id\": \"5e834259a0d4a20f7467330c\",\n          \"trackId\": \"5e834259a0d4a20f7467330a\"\n       },\n        {\n             \"_id\": \"5e834260a0d4a20f74673311\",\n              \"trackId\": \"5e834260a0d4a20f7467330f\"\n          },\n           {\n               \"_id\": \"5e834265a0d4a20f74673316\",\n              \"trackId\": \"5e834265a0d4a20f74673314\"\n         },\n         {\n             \"_id\": \"5e834268a0d4a20f7467331b\",\n              \"trackId\": \"5e834268a0d4a20f74673319\"\n          }\n       ],\n       \"__v\": 17,\n       \"name\": \"artist1\"\n   }\n]\n}",
+          "type": "json"
+        }
+      ]
+    },
     "parameter": {
       "fields": {
         "QueryParameters": [
           {
             "group": "QueryParameters",
             "optional": false,
-            "field": "ids",
+            "field": "artists_ids",
             "description": "<p>Required. A comma-separated list of the Spotify IDs for the artists. Maximum: 50 IDs.</p>"
           }
         ],
@@ -390,7 +417,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/Artists/{id}",
+    "url": "/Artists/:artist_id",
     "title": "Get an Artist",
     "name": "Get_an_Artist",
     "group": "Artist",
@@ -413,7 +440,7 @@ define({ "api": [
           {
             "group": "PathParameters",
             "optional": false,
-            "field": "id",
+            "field": "artist_id",
             "description": "<p>Spotify ID for the Artist</p>"
           }
         ],
@@ -427,13 +454,22 @@ define({ "api": [
         ]
       }
     },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \n\n   \n       \"genre\": [\n           \"rytyt\",\n           \"genre2\",\n           \"genre1\"\n       ],\n       \"_id\": \"5e7f67e438150c15e8589ece\",\n       \"info\": \"jdshgdjdhfjkd\",\n       \"popularity\": 0,\n       \"type\": \"Artist\",\n       \"Name\": \"yytguguy\",\n       \"userId\": \"5e7f670838150c15e8589ecc\",\n       \"images\": [],\n       \"addAlbums\": [],\n       \"addTracks\": [],\n      \"__v\": 0\n   }",
+          "type": "json"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "ApiDocumentation/Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
     "type": "get",
-    "url": "/Artists/{id}/Albums",
+    "url": "/Artists/:artist_id/Albums",
     "title": "Get an Artist's Albums",
     "name": "Get_an_Artist's_Albums",
     "group": "Artist",
@@ -456,7 +492,7 @@ define({ "api": [
           {
             "group": "PathParameters",
             "optional": false,
-            "field": "id",
+            "field": "artist_id",
             "description": "<p>Spotify ID for Albums</p>"
           }
         ],
@@ -464,7 +500,7 @@ define({ "api": [
           {
             "group": "QueryParameters",
             "optional": false,
-            "field": "include_groups",
+            "field": "groups",
             "description": "<p>Optional. A comma-separated list of keywords that will be used to filter the response.</br> If not supplied, all album types will be returned. Valid values are:</br></p> <ul> <li>album </br></li> <li>single </br></li> <li>appears_on </br></li> <li>compilation </br> For example:<br> include_groups=album,single.</li> </ul>"
           },
           {
@@ -496,13 +532,22 @@ define({ "api": [
         ]
       }
     },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \n  {\n      \"availableMarkets\": [\n          \"us,yu,ywgd\"\n      ],\n      \"_id\": \"5e7f44905cce7d09a82e5a75\",\n      \"name\": \"album1\",\n      \"albumType\": \"type1\",\n      \"popularity\": 0,\n      \"genre\": \"genre1\",\n      \"releaseDate\": \"2020-02-20T00:00:00.000Z\",\n      \"label\": \"yyuwhhxb\",\n      \"images\": [],\n      \"artistId\": \"5e7ef28326e2fa0da04f81ae\",\n      \"type\": \"Album\",\n      \"hasTracks\": [],\n     \"__v\": 0\n },\n {\n      \"availableMarkets\": [],\n      \"_id\": \"5e7f4d475cce7d09a82e5a7f\",\n      \"popularity\": 0,\n      \"images\": [],\n      \"artistId\": \"5e7ef28326e2fa0da04f81ae\",\n      \"type\": \"Album\",\n      \"hasTracks\": [],\n      \"__v\": 0\n  }\n   }",
+          "type": "json"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "ApiDocumentation/Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
     "type": "get",
-    "url": "/Artists/{id}/related-artists",
+    "url": "/Artists/:artist_id/related-artists",
     "title": "Get an Artist's Related Artists",
     "name": "Get_an_Artist's_Related_Artists",
     "group": "Artist",
@@ -513,15 +558,15 @@ define({ "api": [
           {
             "group": "PathParameters",
             "optional": false,
-            "field": "id",
-            "description": "<p>Spotify ID for Albums</p>"
+            "field": "artist_id",
+            "description": "<p>Spotify ID for Artist</p>"
           }
         ],
         "Response": [
           {
             "group": "Response",
             "optional": false,
-            "field": "Format",
+            "field": "ormat",
             "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body contains</br> an object whose key is &quot;artists&quot; and whose value is an array of up to 20 artist objects in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</p>"
           }
         ]
@@ -539,13 +584,74 @@ define({ "api": [
         ]
       }
     },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    [\n {\n   {\n       \"genre\": [\n           \"rytyt\",\n           \"genre2\",\n           \"genre1\"\n       ],\n       \"_id\": \"5e7f67e438150c15e8589ece\",\n       \"info\": \"jdshgdjdhfjkd\",\n       \"popularity\": 0,\n       \"type\": \"Artist\",\n       \"Name\": \"yytguguy\",\n       \"userId\": \"5e7f670838150c15e8589ecc\",\n       \"images\": [],\n       \"addAlbums\": [],\n       \"addTracks\": [],\n      \"__v\": 0\n   },\n   {\n       \"genre\": [\n           \"genre1\",\n           \"genre2\",\n           \"genre3\",\n           \"genre4\"\n       ],\n       \"_id\": \"5e833a51a51d971174923f17\",\n       \"popularity\": 0,\n       \"type\": \"Artist\",\n       \"Name\": \"ahmedsamir\",\n       \"userId\": \"5e75c68387bceb10ac3d3394\",\n       \"images\": [],\n       \"addAlbums\": [\n           {\n               \"_id\": \"5e833b412b9d7718a491c851\",\n               \"albumId\": \"5e833b412b9d7718a491c850\"\n           }\n       ],\n       \"addTracks\": [\n           {\n               \"_id\": \"5e834091a0d4a20f746732f9\",\n               \"trackId\": \"5e834091a0d4a20f746732f7\"\n           },\n           {\n               \"_id\": \"5e834255a0d4a20f74673302\",\n               \"trackId\": \"5e834255a0d4a20f74673300\"\n           },\n           {\n               \"_id\": \"5e834258a0d4a20f74673307\",\n               \"trackId\": \"5e834258a0d4a20f74673305\"\n    },\n     {\n         \"_id\": \"5e834259a0d4a20f7467330c\",\n          \"trackId\": \"5e834259a0d4a20f7467330a\"\n       },\n        {\n             \"_id\": \"5e834260a0d4a20f74673311\",\n              \"trackId\": \"5e834260a0d4a20f7467330f\"\n          },\n           {\n               \"_id\": \"5e834265a0d4a20f74673316\",\n              \"trackId\": \"5e834265a0d4a20f74673314\"\n         },\n         {\n             \"_id\": \"5e834268a0d4a20f7467331b\",\n              \"trackId\": \"5e834268a0d4a20f74673319\"\n          }\n       ],\n       \"__v\": 17,\n       \"name\": \"artist1\"\n   },\n   {\n       \"genre\": [\n           \"rytyt\",\n           \"genre2\",\n           \"genre1\"\n       ],\n       \"_id\": \"5e7f67e438150c15e8589ece\",\n       \"info\": \"jdshgdjdhfjkd\",\n       \"popularity\": 0,\n       \"type\": \"Artist\",\n       \"Name\": \"yytguguy\",\n       \"userId\": \"5e7f670838150c15e8589ecc\",\n       \"images\": [],\n       \"addAlbums\": [],\n       \"addTracks\": [],\n      \"__v\": 0\n   },\n   {\n       \"genre\": [\n           \"genre1\",\n           \"genre2\",\n           \"genre3\",\n           \"genre4\"\n       ],\n       \"_id\": \"5e833a51a51d971174923f17\",\n       \"popularity\": 0,\n       \"type\": \"Artist\",\n       \"Name\": \"ahmedsamir\",\n       \"userId\": \"5e75c68387bceb10ac3d3394\",\n       \"images\": [],\n       \"addAlbums\": [\n           {\n               \"_id\": \"5e833b412b9d7718a491c851\",\n               \"albumId\": \"5e833b412b9d7718a491c850\"\n           }\n       ],\n       \"addTracks\": [\n           {\n               \"_id\": \"5e834091a0d4a20f746732f9\",\n               \"trackId\": \"5e834091a0d4a20f746732f7\"\n           },\n           {\n               \"_id\": \"5e834255a0d4a20f74673302\",\n               \"trackId\": \"5e834255a0d4a20f74673300\"\n           },\n           {\n               \"_id\": \"5e834258a0d4a20f74673307\",\n               \"trackId\": \"5e834258a0d4a20f74673305\"\n    },\n     {\n         \"_id\": \"5e834259a0d4a20f7467330c\",\n          \"trackId\": \"5e834259a0d4a20f7467330a\"\n       },\n        {\n             \"_id\": \"5e834260a0d4a20f74673311\",\n              \"trackId\": \"5e834260a0d4a20f7467330f\"\n          },\n           {\n               \"_id\": \"5e834265a0d4a20f74673316\",\n              \"trackId\": \"5e834265a0d4a20f74673314\"\n         },\n         {\n              \"_id\": \"5e834268a0d4a20f7467331b\",\n              \"trackId\": \"5e834268a0d4a20f74673319\"\n          }\n      ],\n       \"__v\": 8\n   }\n]\n}",
+          "type": "json"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "ApiDocumentation/Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
     "type": "get",
-    "url": "/Artists/{id}/top-tracks",
+    "url": "/Artists/{artist_id}/tracks",
+    "title": "Get an Artist's Tracks",
+    "name": "Get_an_Artist's_Top_Tracks",
+    "group": "Artist",
+    "description": "<p style=\"color:red;\">Get Spotify catalog information about an artist’s top tracks by country.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "parameter": {
+      "fields": {
+        "PathParameters": [
+          {
+            "group": "PathParameters",
+            "optional": false,
+            "field": "artist_id",
+            "description": "<p>Spotify ID for Albums</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body contains</br>an object whose key is &quot;tracks&quot; and whose value is an array of up to 10 track objects in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</p>"
+          }
+        ]
+      }
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "x-auth-token",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    [\n  {\n      \"availableMarkets\": [\n          \"usa,tt,wdwq,dwdw,wdw,dss\"\n      ],\n      \"_id\": \"5e834091a0d4a20f746732f7\",\n      \"duration\": 462,\n      \"name\": \"track1\",\n      \"artistId\": \"5e833a51a51d971174923f17\",\n      \"albumId\": \"5e833b412b9d7718a491c850\",\n      \"discNumber\": 1,\n      \"explicit\": false,\n      \"type\": \"Track\",\n      \"acousticness\": 10,\n       \"danceability\": 23,\n       \"energy\": 100,\n       \"instrumentalness\": 4,\n       \"key\": 90,\n       \"liveness\": 25,\n       \"loudness\": 70,\n       \"mode\": 56,\n       \"speechiness\": 67,\n       \"tempo\": 76,\n       \"timeSignature\": \"2020-03-31T13:07:29.395Z\",\n       \"valence\": 70,\n       \"like\": 0,\n       \"__v\": 0\n   },\n   {\n       \"availableMarkets\": [\n           \"usa,tt,wdwq,dwdw,wdw,dss\"\n       ],\n       \"_id\": \"5e834255a0d4a20f74673300\",\n       \"duration\": 462,\n       \"name\": \"track1\",\n       \"artistId\": \"5e833a51a51d971174923f17\",\n       \"albumId\": \"5e833b412b9d7718a491c850\",\n       \"discNumber\": 1,\n       \"explicit\": false,\n       \"type\": \"Track\",\n       \"acousticness\": 10,\n       \"danceability\": 23,\n       \"energy\": 100,\n       \"instrumentalness\": 4,\n       \"key\": 90,\n       \"liveness\": 25,\n       \"loudness\": 70,\n       \"mode\": 56,\n       \"speechiness\": 67,\n       \"tempo\": 76,\n       \"timeSignature\": \"2020-03-31T13:15:01.821Z\",\n       \"valence\": 70,\n       \"like\": 0,\n       \"__v\": 0\n   },\n   {\n       \"availableMarkets\": [\n           \"usa,tt,wdwq,dwdw,wdw,dss\"\n       ],\n       \"_id\": \"5e834258a0d4a20f74673305\",\n       \"duration\": 462,\n       \"name\": \"track1\",\n       \"artistId\": \"5e833a51a51d971174923f17\",\n       \"albumId\": \"5e833b412b9d7718a491c850\",\n       \"discNumber\": 1,\n       \"explicit\": false,\n       \"type\": \"Track\",\n       \"acousticness\": 10,\n       \"danceability\": 23,\n       \"energy\": 100,\n       \"instrumentalness\": 4,\n       \"key\": 90,\n       \"liveness\": 25,\n       \"loudness\": 70,\n       \"mode\": 56,\n       \"speechiness\": 67,\n       \"tempo\": 76,\n       \"timeSignature\": \"2020-03-31T13:15:04.155Z\",\n       \"valence\": 70,\n       \"like\": 0,\n       \"__v\": 0\n   }\n]\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "ApiDocumentation/Public_code/doc.js",
+    "groupTitle": "Artist"
+  },
+  {
+    "type": "get",
+    "url": "/Artists/{artist_id}/top-tracks",
     "title": "Get an Artist's Top Tracks",
     "name": "Get_an_Artist's_Top_Tracks",
     "group": "Artist",
@@ -556,7 +662,7 @@ define({ "api": [
           {
             "group": "PathParameters",
             "optional": false,
-            "field": "id",
+            "field": "artist_id",
             "description": "<p>Spotify ID for Albums</p>"
           }
         ],
@@ -589,6 +695,15 @@ define({ "api": [
           }
         ]
       }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    [\n  {\n      \"availableMarkets\": [\n          \"usa\"\n      ],\n      \"_id\": \"5e834091a0d4a20f746732f7\",\n      \"duration\": 462,\n      \"name\": \"track1\",\n      \"artistId\": \"5e833a51a51d971174923f17\",\n      \"albumId\": \"5e833b412b9d7718a491c850\",\n      \"discNumber\": 1,\n      \"explicit\": false,\n      \"type\": \"Track\",\ns       \"acousticness\": 10,\n       \"danceability\": 23,\n       \"energy\": 100,\n       \"instrumentalness\": 4,\n       \"key\": 90,\n       \"liveness\": 25,\n       \"loudness\": 70,\n       \"mode\": 56,\n       \"speechiness\": 67,\n       \"tempo\": 76,\n       \"timeSignature\": \"2020-03-31T13:07:29.395Z\",\n       \"valence\": 70,\n       \"like\": 0,\n       \"__v\": 0\n   },\n   {\n       \"availableMarkets\": [\n           \"usa\"\n       ],\n       \"_id\": \"5e834255a0d4a20f74673300\",\n       \"duration\": 462,\n       \"name\": \"track1\",\n       \"artistId\": \"5e833a51a51d971174923f17\",\n       \"albumId\": \"5e833b412b9d7718a491c850\",\n       \"discNumber\": 1,\n       \"explicit\": false,\n       \"type\": \"Track\",\n       \"acousticness\": 10,\n       \"danceability\": 23,\n       \"energy\": 100,\n       \"instrumentalness\": 4,\n       \"key\": 90,\n       \"liveness\": 25,\n       \"loudness\": 70,\n       \"mode\": 56,\n       \"speechiness\": 67,\n       \"tempo\": 76,\n       \"timeSignature\": \"2020-03-31T13:15:01.821Z\",\n       \"valence\": 70,\n       \"like\": 0,\n       \"__v\": 0\n   },\n   {\n       \"availableMarkets\": [\n           \"usa\"\n       ],\n       \"_id\": \"5e834258a0d4a20f74673305\",\n       \"duration\": 462,\n       \"name\": \"track1\",\n       \"artistId\": \"5e833a51a51d971174923f17\",\n       \"albumId\": \"5e833b412b9d7718a491c850\",\n       \"discNumber\": 1,\n       \"explicit\": false,\n       \"type\": \"Track\",\n       \"acousticness\": 10,\n       \"danceability\": 23,\n       \"energy\": 100,\n       \"instrumentalness\": 4,\n       \"key\": 90,\n       \"liveness\": 25,\n       \"loudness\": 70,\n       \"mode\": 56,\n       \"speechiness\": 67,\n       \"tempo\": 76,\n       \"timeSignature\": \"2020-03-31T13:15:04.155Z\",\n       \"valence\": 70,\n       \"like\": 0,\n       \"__v\": 0\n   }\n]\n}",
+          "type": "json"
+        }
+      ]
     },
     "version": "0.0.0",
     "filename": "ApiDocumentation/Public_code/doc.js",
@@ -961,34 +1076,163 @@ define({ "api": [
         ]
       }
     },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n\n  \"albums\": [\n      {\n          \"album_type\": \"type1\",\n          \"artist\": {\n              \"type\": \"artist\",\n              \"id\": \"5e7ef28326e2fa0da04f81ae\",\n              \"name\": \"artist1\"\n          },\n          \"available_markets\": [\n              \"us,yu,ywgd\"\n          ],\n          \"images\": [],\n          \"id\": \"5e7f44905cce7d09a82e5a75\",\n          \"name\": \"album1\",\n          \"type\": \"album\"\n      },\n      {\n          \"album_type\": \"type1\",\n          \"artist\": {\n              \"type\": \"artist\",\n              \"id\": \"5e7ef28326e2fa0da04f81ae\",\n              \"name\": \"artist1\"\n          },\n          \"available_markets\": [\n              \"us,yu,ywgd\"\n          ],\n          \"images\": [],\n          \"id\": \"5e7f4bf85cce7d09a82e5a77\",\n          \"name\": \"album1\",\n          \"type\": \"album\"\n      },\n      {\n          \"album_type\": \"type1\",\n          \"artist\": {\n              \"type\": \"artist\",\n              \"id\": \"5e7ef28326e2fa0da04f81ae\",\n              \"name\": \"artist1\"\n          },\n          \"available_markets\": [],\n          \"images\": [],\n          \"id\": \"5e7f4c925cce7d09a82e5a79\",\n          \"name\": \"album1\",\n          \"type\": \"album\"\n      },\n      {\n          \"album_type\": \"type1\",\n          \"artist\": {\n              \"type\": \"artist\",\n              \"id\": \"5e7ef28326e2fa0da04f81ae\",\n              \"name\": \"artist1\"\n          },\n          \"available_markets\": [],\n          \"images\": [],\n          \"id\": \"5e7f4c985cce7d09a82e5a7b\",\n          \"name\": \"album1\",\n          \"type\": \"album\"\n      },\n      {\n          \"album_type\": \"type1\",\n          \"artist\": {\n              \"type\": \"artist\",\n              \"id\": \"5e833a51a51d971174923f17\",\n              \"name\": \"ahmedsamir\"\n          },\n          \"available_markets\": [\n              \"us,er,rttr,fretgre,jhj\"\n          ],\n          \"images\": [],\n          \"id\": \"5e833b412b9d7718a491c850\",\n          \"name\": \"album1\",\n          \"type\": \"album\"\n      },\n      {\n          \"album_type\": \"type1\",\n          \"artist\": {\n              \"type\": \"artist\",\n              \"id\": \"5e7ef28326e2fa0da04f81ae\",\n              \"name\": \"artist1\"\n          },\n          \"available_markets\": [],\n          \"images\": [],\n          \"id\": \"5e7f4ca05cce7d09a82e5a7d\",\n          \"type\": \"album\"\n      }\n  ]\n\n}",
+          "type": "json"
+        }
+      ]
+    },
     "parameter": {
       "fields": {
-        "QueryParameters": [
-          {
-            "group": "QueryParameters",
-            "optional": false,
-            "field": "country",
-            "description": "<p>Optional. A country: an ISO 3166-1 alpha-2 country code.</br> Provide this parameter if you want the list of returned items to be relevant to a particular country.</br> If omitted, the returned items will be relevant to all countries.</p>"
-          },
-          {
-            "group": "QueryParameters",
-            "optional": false,
-            "field": "limit",
-            "description": "<p>Optional. The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.</p>"
-          },
-          {
-            "group": "QueryParameters",
-            "optional": false,
-            "field": "offset",
-            "description": "<p>Optional. The index of the first item to return. Default: 0 (the first object). Use with limit to get the next set of items.</p>"
-          }
-        ],
         "Response": [
           {
             "group": "Response",
             "optional": false,
             "field": "Format",
             "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body contains a message and analbums object.</br> The albums object contains an array of simplified album objects (wrapped in a paging object) in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</br></br></br> Once you have retrieved the list, you can use Get an Album’s Tracks to drill down further.</br></br> The results are returned in an order reflected within the Spotify clients, and therefore may not be ordered by date.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "ApiDocumentation/Public_code/doc.js",
+    "groupTitle": "Browse"
+  },
+  {
+    "type": "get",
+    "url": "/browse/popular-albums",
+    "title": "Get a List of popular albums",
+    "name": "Get_a_List_of_popular_albums",
+    "group": "Browse",
+    "description": "<p style=\"color:red;\">Get a List of popular albums featured in Spotify (shown, for example, on a Spotify player’s “Browse” tab).</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n\n  \"albums\": [\n      {\n          \"album_type\": \"type1\",\n          \"artist\": {\n              \"type\": \"artist\",\n              \"id\": \"5e7ef28326e2fa0da04f81ae\",\n              \"name\": \"artist1\"\n          },\n          \"available_markets\": [\n              \"us,yu,ywgd\"\n          ],\n          \"images\": [],\n          \"id\": \"5e7f44905cce7d09a82e5a75\",\n          \"name\": \"album1\",\n          \"type\": \"album\"\n      },\n      {\n          \"album_type\": \"type1\",\n          \"artist\": {\n              \"type\": \"artist\",\n              \"id\": \"5e7ef28326e2fa0da04f81ae\",\n              \"name\": \"artist1\"\n          },\n          \"available_markets\": [\n              \"us,yu,ywgd\"\n          ],\n          \"images\": [],\n          \"id\": \"5e7f4bf85cce7d09a82e5a77\",\n          \"name\": \"album1\",\n          \"type\": \"album\"\n      },\n      {\n          \"album_type\": \"type1\",\n          \"artist\": {\n              \"type\": \"artist\",\n              \"id\": \"5e7ef28326e2fa0da04f81ae\",\n              \"name\": \"artist1\"\n          },\n          \"available_markets\": [],\n          \"images\": [],\n          \"id\": \"5e7f4c925cce7d09a82e5a79\",\n          \"name\": \"album1\",\n          \"type\": \"album\"\n      },\n      {\n          \"album_type\": \"type1\",\n          \"artist\": {\n              \"type\": \"artist\",\n              \"id\": \"5e7ef28326e2fa0da04f81ae\",\n              \"name\": \"artist1\"\n          },\n          \"available_markets\": [],\n          \"images\": [],\n          \"id\": \"5e7f4c985cce7d09a82e5a7b\",\n          \"name\": \"album1\",\n          \"type\": \"album\"\n      },\n      {\n          \"album_type\": \"type1\",\n          \"artist\": {\n              \"type\": \"artist\",\n              \"id\": \"5e7ef28326e2fa0da04f81ae\",\n              \"name\": \"artist1\"\n          },\n          \"available_markets\": [],\n          \"images\": [],\n          \"id\": \"5e7f4ca05cce7d09a82e5a7d\",\n          \"type\": \"album\"\n      },\n      {\n          \"album_type\": \"type1\",\n          \"artist\": {\n              \"type\": \"artist\",\n              \"id\": \"5e833a51a51d971174923f17\",\n              \"name\": \"ahmedsamir\"\n          },\n          \"available_markets\": [\n              \"us,er,rttr,fretgre,jhj\"\n          ],\n          \"images\": [],\n          \"id\": \"5e833b412b9d7718a491c850\",\n          \"name\": \"album1\",\n          \"type\": \"album\"\n      }\n  ]\n\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "parameter": {
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body contains a message and analbums object.</br> The albums object contains an array of simplified album objects (wrapped in a paging object) in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</br></br></br> Once you have retrieved the list, you can use Get an Album’s Tracks to drill down further.</br></br> The results are returned in an order reflected within the Spotify clients, and therefore may not be ordered by date.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "ApiDocumentation/Public_code/doc.js",
+    "groupTitle": "Browse"
+  },
+  {
+    "type": "get",
+    "url": "/browse/popular-artists",
+    "title": "Get a List of popular artists",
+    "name": "Get_a_List_of_popular_artists",
+    "group": "Browse",
+    "description": "<p style=\"color:red;\">Get a List of popular artists  featured in Spotify (shown, for example, on a Spotify player’s “Browse” tab).</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n   \"artists\": [\n       {\n           \"genre\": [\n               \"genre2\",\n               \"genre1\"\n           ],\n           \"type\": \"artist\",\n           \"name\": \"artist1\",\n           \"images\": [],\n           \"id\": \"5e7ef28326e2fa0da04f81ae\",\n           \"info\": \"i am a good artist \"\n       },\n       {\n           \"genre\": [\n               \"genre1\",\n               \"genre2\",\n               \"genre3\",\n               \"genre4\"\n           ],\n           \"type\": \"artist\",\n           \"name\": \"ahmedsamir\",\n           \"images\": [],\n           \"id\": \"5e833a51a51d971174923f17\"\n       },\n       {\n           \"genre\": [\n               \"rytyt\",\n               \"genre2\",\n               \"genre1\"\n           ],\n           \"type\": \"artist\",\n           \"name\": \"yytguguy\",\n           \"images\": [],\n           \"id\": \"5e7f67e438150c15e8589ece\",\n           \"info\": \"jdshgdjdhfjkd\"\n       }\n   ]\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "parameter": {
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body contains a message and artists object. On error, the header status code is an error code and the response body contains an error object.</br></br></br> Once you have retrieved the list, you can use Get an Album’s Tracks to drill down further.</br></br> The results are returned in an order reflected within the Spotify clients, and therefore may not be ordered by date.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "ApiDocumentation/Public_code/doc.js",
+    "groupTitle": "Browse"
+  },
+  {
+    "type": "get",
+    "url": "/browse/popular-playlists",
+    "title": "Get a List of popular playlists",
+    "name": "Get_a_List_of_popular_playlists",
+    "group": "Browse",
+    "description": "<p style=\"color:red;\">Get a List of popular playlists  featured in Spotify (shown, for example, on a Spotify player’s “Browse” tab).</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n   \"playlists\": [\n       {\n           \"owner\": {\n               \"id\": \"5e75c68387bceb10ac3d3394\",\n               \"type\": \"user\",\n               \"name\": \"ahmedsamir\"\n           },\n           \"collaborative\": false,\n           \"type\": \"playlist\",\n           \"name\": \"playlist1\",\n           \"images\": [],\n           \"id\": \"5e7d894d7832511978ec6b30\",\n           \"Description\": \"\",\n           \"isPublic\": true\n       },\n       {\n           \"owner\": {\n               \"id\": \"5e7d9045854b0419f4f409b7\",\n               \"type\": \"user\"\n           },\n           \"collaborative\": false,\n           \"type\": \"playlist\",\n           \"name\": \"ssad\",\n           \"images\": [],\n           \"id\": \"5e7d9066854b0419f4f409b9\",\n           \"Description\": \"\",\n           \"isPublic\": true\n       },\n       {\n           \"owner\": {\n               \"id\": \"5e85f48b1ba5cf17ccca66e9\",\n               \"type\": \"user\",\n               \"name\": \"ahmedsamir\"\n           },\n           \"collaborative\": false,\n           \"type\": \"playlist\",\n           \"name\": \"playlist1\",\n           \"images\": [],\n           \"id\": \"5e85f4ca1ba5cf17ccca66eb\",\n           \"Description\": \"\",\n           \"isPublic\": true\n       },\n       {\n           \"owner\": {\n               \"id\": \"5e7d9045854b0419f4f409b7\",\n               \"type\": \"user\"\n           },\n           \"collaborative\": false,\n           \"type\": \"playlist\",\n           \"name\": \"dhjgjdjdjg\",\n           \"images\": [],\n           \"id\": \"5e7d93dad82adf07f4121bac\",\n           \"Description\": \"\",\n           \"isPublic\": true\n       }\n   ]\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "parameter": {
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body contains a message and artists object. On error, the header status code is an error code and the response body contains an error object.</br></br></br> Once you have retrieved the list, you can use Get an Album’s Tracks to drill down further.</br></br> The results are returned in an order reflected within the Spotify clients, and therefore may not be ordered by date.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "ApiDocumentation/Public_code/doc.js",
+    "groupTitle": "Browse"
+  },
+  {
+    "type": "get",
+    "url": "/browse/recently-playing",
+    "title": "Get a List of recently playing Playlists,artists,albums",
+    "name": "Get_a_List_of_recently-playing",
+    "group": "Browse",
+    "description": "<p style=\"color:red;\">Get a List of recently playing Playlists,artists,albums in Spotify (on, for example, the Spotify player’s “Browse” tab).</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "x-auth-token",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\"recentlyPlaying\": [\n\n       {\n           \"genre\": [\n               \"genre1\",\n               \"genre2\",\n               \"genre3\",\n               \"genre4\"\n           ],\n           \"type\": \"artist\",\n           \"name\": \"ahmedsamir\",\n           \"images\": [],\n           \"id\": \"5e833a51a51d971174923f17\"\n       },\n       {\n           \"owner\": {\n               \"id\": \"5e85f48b1ba5cf17ccca66e9\",\n               \"type\": \"user\",\n               \"name\": \"ahmedsamir\"\n           },\n           \"collaborative\": false,\n           \"type\": \"playlist\",\n           \"name\": \"playlist1\",\n           \"images\": [],\n           \"id\": \"5e85f4ca1ba5cf17ccca66eb\",\n           \"Description\": \"\",\n           \"isPublic\": true\n       },\n       {\n           \"id\": \"5e833b412b9d7718a491c850\",\n           \"name\": \"album1\",\n           \"type\": \"album\",\n           \"album_type\": \"type1\",\n           \"images\": [],\n           \"availableMarkets\": [\n               \"us,er,rttr,fretgre,jhj\"\n          ],\n           \"artist\": {\n               \"type\": \"artist\",\n               \"id\": \"5e833a51a51d971174923f17\",\n               \"name\": \"ahmedsamir\"\n           }\n       }\n   ]\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "parameter": {
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, </br>the HTTP status code in the response header is 200 OK</br> and the response body contains a message and a playlists and albums and artists object.</br> The playlists object contains an array of simplified playlist objects</br> (wrapped in a paging object) in JSON format. On error,</br> the header status code is an error code and the response body contains an error object.</br></br></br></br> Once you have retrieved the list of playlist objects,</br> you can use Get a Playlist and Get a Playlist’s Tracks to drill down further.</p>"
           }
         ]
       }
@@ -1845,7 +2089,7 @@ define({ "api": [
   },
   {
     "type": "POST",
-    "url": "/player/add-to-queue/:trackId",
+    "url": "/player/add-to-queue/:playlistId/:trackId",
     "title": "Add an Item to the User's Playback Queue",
     "name": "Add_an_Item_to_the_User's_Playback_Queue",
     "group": "Player",
@@ -1870,6 +2114,20 @@ define({ "api": [
             "optional": false,
             "field": "requried.trackId",
             "description": "<p>the id of the track went to add</p>"
+          },
+          {
+            "group": "Path Paramaters",
+            "optional": false,
+            "field": "requried.playlistId",
+            "description": "<p>the id of the playlist or album this track from</p>"
+          }
+        ],
+        "Query Paramaters": [
+          {
+            "group": "Query Paramaters",
+            "optional": false,
+            "field": "requried.isPlaylist",
+            "description": "<p>boolean if true this track from playlist else this from album</p>"
           }
         ],
         "Response": [
@@ -2003,6 +2261,15 @@ define({ "api": [
         ]
       }
     },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n  \n       \"track\": {\n           \"availableMarkets\": [\n               \"\\\"er,ty,eue,euu\\\"\"\n           ],\n           \"_id\": \"5e85f4241ba5cf17ccca66d7\",\n           \"url\": \"5e85f4241ba5cf17ccca66d5\",\n           \"images\": [],\n           \"duration\": 436,\n           \"trackNumber\": 236,\n           \"name\": \"\\\"track6\\\"\",\n           \"artistId\": \"5e833a51a51d971174923f17\",\n           \"albumId\": \"5e833b412b9d7718a491c850\",\n           \"discNumber\": 1,\n           \"explicit\": false,\n           \"type\": \"Track\",\n           \"acousticness\": 10,\n           \"danceability\": 23,\n           \"energy\": 100,\n           \"instrumentalness\": 4,\n           \"key\": 90,\n           \"liveness\": 25,\n           \"loudness\": 70,\n           \"mode\": 56,\n           \"speechiness\": 67,\n           \"tempo\": 76,\n           \"timeSignature\": \"2020-04-02T14:18:12.619Z\",\n           \"valence\": 70,\n           \"like\": 0,\n           \"__v\": 0\n       },\n       \"isLiked\": false,\n       \"album\": {\n           \"name\": \"album1\",\n           \"_id\": \"5e833b412b9d7718a491c850\",\n           \"artist\": {\n               \"name\": \"ahmedsamir\",\n              \"_id\": \"5e833a51a51d971174923f17\"\n           }\n       },\n   \n   \"isPlaylist\": true,\n   \"playlistId\": \"5e85f4ca1ba5cf17ccca66eb\",\n  \"isPlayable\":true\n}",
+          "type": "json"
+        }
+      ]
+    },
     "parameter": {
       "fields": {
         "Response": [
@@ -2037,6 +2304,15 @@ define({ "api": [
           }
         ]
       }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n[\n{   \n   \"fullTrack\": {\n       \"track\": {\n           \"availableMarkets\": [\n               \"\\\"er,ty,eue,euu\\\"\"\n           ],\n           \"_id\": \"5e85f4241ba5cf17ccca66d7\",\n           \"url\": \"5e85f4241ba5cf17ccca66d5\",\n           \"images\": [],\n           \"duration\": 436,\n           \"trackNumber\": 236,\n           \"name\": \"\\\"track6\\\"\",\n           \"artistId\": \"5e833a51a51d971174923f17\",\n           \"albumId\": \"5e833b412b9d7718a491c850\",\n           \"discNumber\": 1,\n           \"explicit\": false,\n           \"type\": \"Track\",\n           \"acousticness\": 10,\n           \"danceability\": 23,\n           \"energy\": 100,\n           \"instrumentalness\": 4,\n           \"key\": 90,\n           \"liveness\": 25,\n           \"loudness\": 70,\n           \"mode\": 56,\n           \"speechiness\": 67,\n           \"tempo\": 76,\n           \"timeSignature\": \"2020-04-02T14:18:12.619Z\",\n           \"valence\": 70,\n           \"like\": 0,\n           \"__v\": 0\n       },\n       \"isLiked\": false,\n       \"album\": {\n           \"name\": \"album1\",\n           \"_id\": \"5e833b412b9d7718a491c850\",\n           \"artist\": {\n               \"name\": \"ahmedsamir\",\n              \"_id\": \"5e833a51a51d971174923f17\"\n           }\n       }\n   },\n   \"isPlaylist\": true,\n   \"playlistId\": \"5e85f4ca1ba5cf17ccca66eb\",\n    \"isPlayable\": false\n},\n{   \n   \"fullTrack\": {\n       \"track\": {\n           \"availableMarkets\": [\n               \"\\\"er,ty,eue,euu\\\"\"\n           ],\n           \"_id\": \"5e85f4241ba5cf17ccca66d7\",\n           \"url\": \"5e85f4241ba5cf17ccca66d5\",\n           \"images\": [],\n           \"duration\": 436,\n           \"trackNumber\": 236,\n           \"name\": \"\\\"track6\\\"\",\n           \"artistId\": \"5e833a51a51d971174923f17\",\n           \"albumId\": \"5e833b412b9d7718a491c850\",\n           \"discNumber\": 1,\n           \"explicit\": false,\n           \"type\": \"Track\",\n           \"acousticness\": 10,\n           \"danceability\": 23,\n           \"energy\": 100,\n           \"instrumentalness\": 4,\n           \"key\": 90,\n           \"liveness\": 25,\n           \"loudness\": 70,\n           \"mode\": 56,\n           \"speechiness\": 67,\n           \"tempo\": 76,\n           \"timeSignature\": \"2020-04-02T14:18:12.619Z\",\n           \"valence\": 70,\n           \"like\": 0,\n           \"__v\": 0\n       },\n       \"isLiked\": false,\n       \"album\": {\n           \"name\": \"album1\",\n           \"_id\": \"5e833b412b9d7718a491c850\",\n           \"artist\": {\n               \"name\": \"ahmedsamir\",\n              \"_id\": \"5e833a51a51d971174923f17\"\n           }\n       }\n   },\n   \"isPlaylist\": true,\n   \"playlistId\": \"5e85f4ca1ba5cf17ccca66eb\",\n    \"isPlayable\": false\n},   \n   \"fullTrack\": {\n       \"track\": {\n           \"availableMarkets\": [\n               \"\\\"er,ty,eue,euu\\\"\"\n           ],\n           \"_id\": \"5e85f4241ba5cf17ccca66d7\",\n           \"url\": \"5e85f4241ba5cf17ccca66d5\",\n           \"images\": [],\n           \"duration\": 436,\n           \"trackNumber\": 236,\n           \"name\": \"\\\"track6\\\"\",\n           \"artistId\": \"5e833a51a51d971174923f17\",\n           \"albumId\": \"5e833b412b9d7718a491c850\",\n           \"discNumber\": 1,\n           \"explicit\": false,\n           \"type\": \"Track\",\n           \"acousticness\": 10,\n           \"danceability\": 23,\n           \"energy\": 100,\n           \"instrumentalness\": 4,\n           \"key\": 90,\n           \"liveness\": 25,\n           \"loudness\": 70,\n           \"mode\": 56,\n           \"speechiness\": 67,\n           \"tempo\": 76,\n           \"timeSignature\": \"2020-04-02T14:18:12.619Z\",\n           \"valence\": 70,\n           \"like\": 0,\n           \"__v\": 0\n       },\n       \"isLiked\": false,\n       \"album\": {\n           \"name\": \"album1\",\n           \"_id\": \"5e833b412b9d7718a491c850\",\n           \"artist\": {\n               \"name\": \"ahmedsamir\",\n              \"_id\": \"5e833a51a51d971174923f17\"\n           }\n       }\n   },\n   \"isPlaylist\": true,\n   \"playlistId\": \"5e85f4ca1ba5cf17ccca66eb\",\n    \"isPlayable\": false\n}\n]\n}",
+          "type": "json"
+        }
+      ]
     },
     "parameter": {
       "fields": {
@@ -2194,6 +2470,15 @@ define({ "api": [
         ]
       }
     },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n   \n       \"track\": {\n           \"availableMarkets\": [\n               \"\\\"er,ty,eue,euu\\\"\"\n           ],\n           \"_id\": \"5e85f4241ba5cf17ccca66d7\",\n           \"url\": \"5e85f4241ba5cf17ccca66d5\",\n           \"images\": [],\n           \"duration\": 436,\n           \"trackNumber\": 236,\n           \"name\": \"\\\"track6\\\"\",\n           \"artistId\": \"5e833a51a51d971174923f17\",\n           \"albumId\": \"5e833b412b9d7718a491c850\",\n           \"discNumber\": 1,\n           \"explicit\": false,\n           \"type\": \"Track\",\n           \"acousticness\": 10,\n           \"danceability\": 23,\n           \"energy\": 100,\n           \"instrumentalness\": 4,\n           \"key\": 90,\n           \"liveness\": 25,\n           \"loudness\": 70,\n           \"mode\": 56,\n           \"speechiness\": 67,\n           \"tempo\": 76,\n           \"timeSignature\": \"2020-04-02T14:18:12.619Z\",\n           \"valence\": 70,\n           \"like\": 0,\n           \"__v\": 0\n       },\n       \"isLiked\": false,\n       \"album\": {\n           \"name\": \"album1\",\n           \"_id\": \"5e833b412b9d7718a491c850\",\n           \"artist\": {\n               \"name\": \"ahmedsamir\",\n              \"_id\": \"5e833a51a51d971174923f17\"\n           }\n       },\n  \n   \"isPlaylist\": true,\n   \"playlistId\": \"5e85f4ca1ba5cf17ccca66eb\",\n    \"isPlayable\": false\n}",
+          "type": "json"
+        }
+      ]
+    },
     "parameter": {
       "fields": {
         "Response": [
@@ -2228,6 +2513,15 @@ define({ "api": [
           }
         ]
       }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n   \n       \"track\": {\n           \"availableMarkets\": [\n               \"\\\"er,ty,eue,euu\\\"\"\n           ],\n           \"_id\": \"5e85f4241ba5cf17ccca66d7\",\n           \"url\": \"5e85f4241ba5cf17ccca66d5\",\n           \"images\": [],\n           \"duration\": 436,\n           \"trackNumber\": 236,\n           \"name\": \"\\\"track6\\\"\",\n           \"artistId\": \"5e833a51a51d971174923f17\",\n           \"albumId\": \"5e833b412b9d7718a491c850\",\n           \"discNumber\": 1,\n           \"explicit\": false,\n           \"type\": \"Track\",\n           \"acousticness\": 10,\n           \"danceability\": 23,\n           \"energy\": 100,\n           \"instrumentalness\": 4,\n           \"key\": 90,\n           \"liveness\": 25,\n           \"loudness\": 70,\n           \"mode\": 56,\n           \"speechiness\": 67,\n           \"tempo\": 76,\n           \"timeSignature\": \"2020-04-02T14:18:12.619Z\",\n           \"valence\": 70,\n           \"like\": 0,\n           \"__v\": 0\n       },\n       \"isLiked\": false,\n       \"album\": {\n           \"name\": \"album1\",\n           \"_id\": \"5e833b412b9d7718a491c850\",\n           \"artist\": {\n               \"name\": \"ahmedsamir\",\n              \"_id\": \"5e833a51a51d971174923f17\"\n           }\n       }\n   },\n   \"isPlaylist\": true,\n   \"playlistId\": \"5e85f4ca1ba5cf17ccca66eb\"\n    \"isPlayable\": false\n}",
+          "type": "json"
+        }
+      ]
     },
     "parameter": {
       "fields": {

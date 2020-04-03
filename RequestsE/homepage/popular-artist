@@ -1,0 +1,40 @@
+// if there is no artists will return {artists:[]}
+{
+    "artists": [
+        {
+            "genre": [
+                "genre2",
+                "genre1"
+            ],
+            "type": "artist",
+            "name": "artist1",
+            "images": [],
+            "id": "5e7ef28326e2fa0da04f81ae",
+            "info": "i am a good artist "
+        },
+        {
+            "genre": [
+                "genre1",
+                "genre2",
+                "genre3",
+                "genre4"
+            ],
+            "type": "artist",
+            "name": "ahmedsamir",
+            "images": [],
+            "id": "5e833a51a51d971174923f17"
+        },
+        {
+            "genre": [
+                "rytyt",
+                "genre2",
+                "genre1"
+            ],
+            "type": "artist",
+            "name": "yytguguy",
+            "images": [],
+            "id": "5e7f67e438150c15e8589ece",
+            "info": "jdshgdjdhfjkd"
+        }
+    ]
+}

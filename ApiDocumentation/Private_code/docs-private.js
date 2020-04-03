@@ -18,8 +18,10 @@
  * @apiParam (Body Parameters) {string}  email  		Required. The email of the user (which is unique).
  * @apiParam (Body Parameters) {string}  gender 		Required. The type of new user ( m:male or f:female).
  * @apiParam (Body Parameters) {string}  birthday		Required. The birthday of a new user
- * 
- * 
+ *  @apiSuccessExample {json} Success-Response:
+  *{
+*    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTc1YzY4Mzg3YmNlYjEwYWMzZDMzOTQiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg1NjYzMzQ2LCJleHAiOjE1ODU3NDk3NDZ9.hLom36hxkDhABZEquFdKtFGEdmdxUziQx9eWVVry_3s"
+*}
  * @apiparam (Response) Format On success, the response body contains the created user object in JSON format and the HTTP status code in the response header is 200 OK or 201 Created. There is also a Location response header giving the Web API endpoint for the new user. On error, the header status code is an error code and the response body contains an error object. Trying to create a user when you do not have the user’s authorization returns error 403 Forbidden.
  */
 
@@ -60,7 +62,12 @@
  * @apiParam (QueryParameters)  password Required. the User Password in Spotify Accounts
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response header contains a JWT </br> On error, the header status code is an error code and the response body contains an error object.
  * 
+ *
  * 
+ * @apiSuccessExample {json} Success-Response:
+ *{
+*    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTc1YzY4Mzg3YmNlYjEwYWMzZDMzOTQiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg1NjYzMzQ2LCJleHAiOjE1ODU3NDk3NDZ9.hLom36hxkDhABZEquFdKtFGEdmdxUziQx9eWVVry_3s"
+*}
  *
  *
  */
@@ -200,7 +207,7 @@
  *   }
  */
 /**
- * @api {put} me/To-Artist Change User Type to Artist
+ * @api {post} /me/ToArtist Change User Type to Artist
  * @apiName Change User Type to Artist
  * @apiGroup Account
  * @apiDescription
@@ -211,10 +218,14 @@
  * <h1>Endpoint</h1> 
  * 
  * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
- * @apiParam (QueryParameters) id Required. The User ID in Spotify Accounts
- * @apiParam (BodyParameters) Name Optional. The Artist name shown to public if it's not given the user name will be shown.
- * @apiParam (BodyParameters) Genre Required. The Artist Genre (Pop/Jazz/Rock/...)
- * @apiParam (BodyParameters) Description Required. The Artist's Overview shown to public 
+ *
+ * @apiParam (BodyParameters) name Optional. The Artist name shown to public if it's not given the user name will be shown.
+ * @apiParam (BodyParameters) genre Required. The Artist Genre (Pop/Jazz/Rock/...)
+ * @apiParam (BodyParameters) info Required. The Artist's Overview shown to public 
+ *@apiSuccessExample {json} Success-Response:
+ * {
+ *      Artist Succeded
+ * }
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains a confirmation sent to the Spotify Admins </br> On error, the header status code is an error code and the response body contains an error object.
  * 
  * 

@@ -1,7 +1,7 @@
 define({ "api": [
   {
-    "type": "put",
-    "url": "me/To-Artist",
+    "type": "post",
+    "url": "/me/ToArtist",
     "title": "Change User Type to Artist",
     "name": "Change_User_Type_to_Artist",
     "group": "Account",
@@ -20,31 +20,23 @@ define({ "api": [
     },
     "parameter": {
       "fields": {
-        "QueryParameters": [
-          {
-            "group": "QueryParameters",
-            "optional": false,
-            "field": "id",
-            "description": "<p>Required. The User ID in Spotify Accounts</p>"
-          }
-        ],
         "BodyParameters": [
           {
             "group": "BodyParameters",
             "optional": false,
-            "field": "Name",
+            "field": "name",
             "description": "<p>Optional. The Artist name shown to public if it's not given the user name will be shown.</p>"
           },
           {
             "group": "BodyParameters",
             "optional": false,
-            "field": "Genre",
+            "field": "genre",
             "description": "<p>Required. The Artist Genre (Pop/Jazz/Rock/...)</p>"
           },
           {
             "group": "BodyParameters",
             "optional": false,
-            "field": "Description",
+            "field": "info",
             "description": "<p>Required. The Artist's Overview shown to public</p>"
           }
         ],
@@ -57,6 +49,15 @@ define({ "api": [
           }
         ]
       }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n     Artist Succeded\n}",
+          "type": "json"
+        }
+      ]
     },
     "version": "0.0.0",
     "filename": "ApiDocumentation/Private_code/docs-private.js",
@@ -137,6 +138,15 @@ define({ "api": [
         ]
       }
     },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n   \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTc1YzY4Mzg3YmNlYjEwYWMzZDMzOTQiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg1NjYzMzQ2LCJleHAiOjE1ODU3NDk3NDZ9.hLom36hxkDhABZEquFdKtFGEdmdxUziQx9eWVVry_3s\"\n}",
+          "type": "json"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "ApiDocumentation/Private_code/docs-private.js",
     "groupTitle": "Account"
@@ -204,6 +214,15 @@ define({ "api": [
           }
         ]
       }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n   \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTc1YzY4Mzg3YmNlYjEwYWMzZDMzOTQiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg1NjYzMzQ2LCJleHAiOjE1ODU3NDk3NDZ9.hLom36hxkDhABZEquFdKtFGEdmdxUziQx9eWVVry_3s\"\n}",
+          "type": "json"
+        }
+      ]
     },
     "version": "0.0.0",
     "filename": "ApiDocumentation/Private_code/docs-private.js",

@@ -1,0 +1,35 @@
+error:
+in case user not artist
+status-->403       & mes: Access Denied
+in case error in param 
+status-->404       & not mes
+------------------------------------
+correct:
+status-->200       & example
+{{
+    "availableMarkets": [
+        "usa,tt,wdwq,dwdw,wdw,dss"
+    ],
+    "_id": "5e834091a0d4a20f746732f7",
+    "duration": 462,
+    "name": "track1",
+    "artistId": "5e833a51a51d971174923f17",
+    "albumId": "5e833b412b9d7718a491c850",
+    "discNumber": 1,
+    "explicit": false,
+    "type": "Track",
+    "acousticness": 10,
+    "danceability": 23,
+    "energy": 100,
+    "instrumentalness": 4,
+    "key": 90,
+    "liveness": 25,
+    "loudness": 70,
+    "mode": 56,
+    "speechiness": 67,
+    "tempo": 76,
+    "timeSignature": "2020-03-31T13:07:29.395Z",
+    "valence": 70,
+    "like": 0,
+    "__v": 0
+}
