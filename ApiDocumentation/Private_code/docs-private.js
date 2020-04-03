@@ -34,7 +34,7 @@
  * </br></br><h1> Endpoint</h1>
  * 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * @apiparam (path parameters) playlist_id  the id of the source if playlist or album
 * @apiparam (path parameters) track_id the first track will be playing
  *
@@ -117,7 +117,7 @@
  * 
  * <h1>Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * @apiParam (QueryParameters) id Required. The User ID in Spotify Accounts
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains a user object </br> On error, the header status code is an error code and the response body contains an error object.
  * 
@@ -139,7 +139,7 @@
  * </br></br><h1> Endpoint</h1>
  * 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * @apiParam (Query Parameters)  id    Required. A user id who want to promote
  * apiparam (Query parameters) credit card  Required. A user credit card 
  * @apiparam (Response) Format On success, the response body contains the user_id and credit card and the HTTP status code in the response header is 200 OK or 201 Created. There is also a Location response header giving the Web API endpoint for promote . On error, the header status code is an error code and the response body contains an error object. Trying to promote when you do not have the user’s authorization returns error 403 Forbidden.
@@ -157,7 +157,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization 			Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br>Reading the user’s email address requires the user-read-email scope; </br>reading country and product subscription level requires the user-read-private scope.
+ * @apiHeader (Header)  x-auth-token 			Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br>Reading the user’s email address requires the user-read-email scope; </br>reading country and product subscription level requires the user-read-private scope.
  * 
  * @apiParam (Body Parameters) {string} Email     optional. email to be updated to, should be new email and not already existing one.
  * 
@@ -188,7 +188,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization 			Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br>Reading the user’s email address requires the user-read-email scope; </br>reading country and product subscription level requires the user-read-private scope.
+ * @apiHeader (Header)  x-auth-token 			Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br>Reading the user’s email address requires the user-read-email scope; </br>reading country and product subscription level requires the user-read-private scope.
  * 
  * 
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains a success object in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</br> When requesting fields that you don’t have the user’s authorization to access, it will return error 403 Forbidden.
@@ -210,7 +210,7 @@
  * 
  * <h1>Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * @apiParam (QueryParameters) id Required. The User ID in Spotify Accounts
  * @apiParam (BodyParameters) Name Optional. The Artist name shown to public if it's not given the user name will be shown.
  * @apiParam (BodyParameters) Genre Required. The Artist Genre (Pop/Jazz/Rock/...)
@@ -237,7 +237,7 @@
  * 
  * @apiParam (Path Parameters)  playlist_id	The Spotify ID for the playlist
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * @apiHeader (Header)  Content-Type	Required if URIs are passed in the request body, otherwise ignored. The content type of the request body: application/json
  *
  *
@@ -260,7 +260,7 @@
  * 
  * @apiParam (Path Parameters)  Artist_id	The Spotify ID for the Artist
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * @apiHeader (Header)  Content-Type	Required if URIs are passed in the request body, otherwise ignored. The content type of the request body: application/json
  *
  *

@@ -14,7 +14,7 @@
  * GET https://api.spotify.com/v1/albums/:album_id
  * 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
  * @apiParam (PathParameters)  album_id Spotify ID for Albums
  * 
@@ -39,7 +39,7 @@
  * <h1> Endpoint</h1> 
  * 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
  * @apiParam (PathParameters)  id Spotify ID for Albums
  * 
@@ -64,7 +64,7 @@
 * <h1> Endpoint</h1> 
 * 
 * 
-* @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+* @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
 * 
 * 
 * 
@@ -90,7 +90,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * @apiHeader (Header)  Content-type Required. The content type of the request body: application/json
  * @apiParam (BodyParameters)   Name Required. string of the name of the new Album
  * @apiParam (BodyParameters)   Label  Required. string of the Label of the new Album
@@ -119,7 +119,7 @@
  * 
  * @apiParam (PathParameters)  id Spotify ID for Artist
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
  * 
  *
@@ -138,7 +138,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * @apiHeader (Header)  Content-type Required. The content type of the request body: application/json
  * @apiParam (PathParameters)   id Required. the id of the Album containing the new track
  * @apiParam (BodyParameters)   Name Required. string of the name of the new Album
@@ -165,7 +165,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * @apiHeader (Header)  Content-type Required. The content type of the request body: application/json
  * @apiParam (PathParameters)   id Required. the id of the Album containing the deleted track
  * @apiParam (BodyParameters)   tracks 	equired. An array of objects containing Spotify URIs of the tracks to remove. For example: { "tracks": [{ "uri": "spotify:track:4iV5W9uYEdYUVa79Axb7Rh" },{ "uri": "spotify:track:1301WleyT98MSxVHPZCA6M" }] }. A maximum of 100 objects can be sent at once.
@@ -189,7 +189,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
  * @apiParam (PathParameters)  id Spotify ID for the Artist
  * 
@@ -213,7 +213,7 @@
  * <h1> Endpoint</h1> 
  * 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
  * @apiParam (PathParameters)  id Spotify ID for Albums
  * 
@@ -249,7 +249,7 @@
  * 
  * @apiParam (PathParameters)  id Spotify ID for Albums
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
  * 
  * 
@@ -273,7 +273,7 @@
  * 
  * @apiParam (PathParameters)  id Spotify ID for Albums
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
  * 
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains</br> an object whose key is "artists" and whose value is an array of up to 20 artist objects in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
@@ -295,7 +295,7 @@
  * <h1> Endpoint</h1> 
  * 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
  * 
  * 
@@ -320,7 +320,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
  * @apiParam (PathParameters)  category_id 	The Spotify category ID for the category.
  * 
@@ -350,7 +350,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
  * @apiParam (PathParameters)  category_id 	The Spotify category ID for the category.
  * 
@@ -373,7 +373,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
  * @apiSuccessExample {json} Success-Response:
  * {
@@ -428,7 +428,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
  * 
  *  @apiParam (QueryParameters)  country  			Optional. A country: an ISO 3166-1 alpha-2 country code. Provide this parameter </br> if you want to narrow the list of returned categories to those relevant to a particular country.</br> If omitted, the returned items will be globally relevant.
@@ -450,7 +450,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
  * 
  *  @apiParam (QueryParameters)  country  			Optional. A country: an ISO 3166-1 alpha-2 country code.</br> Provide this parameter if you want the list of returned items to be relevant to a particular country.</br> If omitted, the returned items will be relevant to all countries.
@@ -474,7 +474,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
  * 
  *  @apiParam (QueryParameters)  limit  				Optional. The target size of the list of recommended tracks.</br> For seeds with unusually small pools or when highly restrictive filtering is applied,</br> it may be impossible to generate the requested number </br>of recommended tracks. Debugging information for </br>such cases is available in the response.</br> Default: 20. Minimum: 1. Maximum: 100.
@@ -507,7 +507,7 @@
  * 
  * <h1> Endpoint</h1> 
  *
- * @apiHeader (Header)  Authorization 	Required. A valid access token from the Spotify Accounts service</br>The access token must have been issued on behalf of the current user.</br> Getting details of the artists or users the current user follows requires authorization of the user-follow-read scope.
+ * @apiHeader (Header)  x-auth-token 	Required. A valid access token from the Spotify Accounts service</br>The access token must have been issued on behalf of the current user.</br> Getting details of the artists or users the current user follows requires authorization of the user-follow-read scope.
  * 
  * 
  *  @apiParam (QueryParameters)  type  		Required. The ID type: either artist or user.
@@ -530,7 +530,7 @@
  * <h1> Endpoint</h1> 
  * 
  * 
- * @apiHeader (Header)  Authorization Required. Required. A valid access token from the Spotify Accounts service.
+ * @apiHeader (Header)  x-auth-token Required. Required. A valid access token from the Spotify Accounts service.
  * Following a playlist can be done publicly or privately.</br> Checking if a user publicly follows a playlist doesn’t require any scopes;</br> if the user is publicly following the playlist, this endpoint returns true.
  * Checking if the user is privately following a playlist is only possible for the current user</br> when that user has granted access to the playlist-read-private scope.
  * 
@@ -552,7 +552,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br> Modifying the list of artists or users the current user follows requires authorization of the user-follow-modify scope
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br> Modifying the list of artists or users the current user follows requires authorization of the user-follow-modify scope
  * @apiHeader (Header)  Content-Type Required if IDs are passed in the request body,</br> otherwise ignored. The content type of the request body: application/json.
  * 
  *  @apiParam (QueryParameters)  type  		Required. The ID type: either artist or user.
@@ -574,7 +574,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization 	Required. A valid access token from the Spotify Accounts service: see the Web API Authorization Guide for details.</br> The access token must have been issued on behalf of the current user.</br>Following a playlist publicly requires authorization of the playlist-modify-public scope; following it privately requires the playlist-modify-private scope. 
+ * @apiHeader (Header)  x-auth-token 	Required. A valid access token from the Spotify Accounts service: see the Web API Authorization Guide for details.</br> The access token must have been issued on behalf of the current user.</br>Following a playlist publicly requires authorization of the playlist-modify-public scope; following it privately requires the playlist-modify-private scope. 
  * @apiHeader (Header)  Content-Type Required. The content type of the request body: application/json
  * 
  * 
@@ -598,7 +598,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user. </br>Getting details of the artists or users the current user follows requires authorization of the user-follow-read scope.
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user. </br>Getting details of the artists or users the current user follows requires authorization of the user-follow-read scope.
  * 
  * 
  *  @apiParam (QueryParameters)  type  				Required. The ID type: currently only artist is supported.
@@ -620,7 +620,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization 	Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br> Modifying the list of artists or users the current user follows requires authorization of the user-follow-modify scope.
+ * @apiHeader (Header)  x-auth-token 	Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br> Modifying the list of artists or users the current user follows requires authorization of the user-follow-modify scope.
  * @apiHeader (Header)  Content-Type 	Required if IDs are passed in the request body, otherwise ignored.</br> The content type of the request body: application/json.
  * 
  *  @apiParam (QueryParameters)  type  				Required. The ID type: either artist or user.
@@ -643,7 +643,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br> Modifying the list of artists or users the current user follows requires authorization of the user-follow-modify scope
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br> Modifying the list of artists or users the current user follows requires authorization of the user-follow-modify scope
  * @apiParam (path Parameters)  id 		require.require.  track Spotify ID .
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 No Content and the response body is empty.</br> On error, the header status code is an error code and the response body contains an error object.
  */
@@ -659,7 +659,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br> Modifying the list of artists or users the current user follows requires authorization of the user-follow-modify scope
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br> Modifying the list of artists or users the current user follows requires authorization of the user-follow-modify scope
  * @apiParam (path Parameters)  id 		require.  track Spotify ID .
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 204 No Content and the response body is empty.</br> On error, the header status code is an error code and the response body contains an error object.
  */
@@ -678,7 +678,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization 		Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the user.</br>Unfollowing a publicly followed playlist for a user requires authorization of the playlist-modify-public scope; unfollowing a privately followed playlist requires the playlist-modify-private scope.
+ * @apiHeader (Header)  x-auth-token 		Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the user.</br>Unfollowing a publicly followed playlist for a user requires authorization of the playlist-modify-public scope; unfollowing a privately followed playlist requires the playlist-modify-private scope.
  * 
  *  @apiParam (PathParameter)  playlist_id  		The Spotify ID of the playlist that is to be no longer followed.
  * 
@@ -699,7 +699,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization 		Required. A valid access token from the Spotify Accounts service: see the Web API Authorization Guide for details. </br>The user-library-read scope must have been authorized by the user.
+ * @apiHeader (Header)  x-auth-token 		Required. A valid access token from the Spotify Accounts service: see the Web API Authorization Guide for details. </br>The user-library-read scope must have been authorized by the user.
  * 
  * 
  * @apiParam (QueryParameters)  ids 			Required. A comma-separated list of the Spotify IDs for the albums. Maximum: 50 IDs.
@@ -721,7 +721,7 @@
  * <h1> Endpoint</h1> 
  * 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service.</br> The user-library-read scope must have been authorized by the user.
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service.</br> The user-library-read scope must have been authorized by the user.
 
  * 
  *  @apiParam (QueryParameters)  ids  					Required. A comma-separated list of the Spotify IDs for the tracks. Maximum: 50 IDs.
@@ -740,7 +740,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization 	Required. A valid access token from the Spotify Accounts service. </br>The user-library-read scope must have been authorized by the user.
+ * @apiHeader (Header)  x-auth-token 	Required. A valid access token from the Spotify Accounts service. </br>The user-library-read scope must have been authorized by the user.
  * 
  *  @apiParam (QueryParameters)  limit  			Optional. The maximum number of objects to return. Default: 20. Minimum: 1. Maximum: 50.
  * @apiParam (QueryParameters)  offset 			Optional. The index of the first object to return.</br> Default: 0 (i.e., the first object). Use with limit to get the next set of objects.
@@ -761,7 +761,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization 		Required. A valid access token from the Spotify Accounts service.</br> The user-library-read scope must have been authorized by the user. 
+ * @apiHeader (Header)  x-auth-token 		Required. A valid access token from the Spotify Accounts service.</br> The user-library-read scope must have been authorized by the user. 
  * 
  * 
  *  @apiParam (QueryParameters)  limit  			Optional. The maximum number of objects to return. Default: 20. Minimum: 1. Maximum: 50.
@@ -785,7 +785,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization 	Required. A valid access token from the Spotify Accounts service.</br>Modification of the current user’s “Your Music” collection requires authorization of the user-library-modify scope.
+ * @apiHeader (Header)  x-auth-token 	Required. A valid access token from the Spotify Accounts service.</br>Modification of the current user’s “Your Music” collection requires authorization of the user-library-modify scope.
  * @apiHeader (Header)  content-type 	Required if the IDs are passed in the request body, otherwise ignored.</br> The content type of the request body: application/json
  * 
  *  @apiParam (BodyParameters)  ids  					Optional. A comma-separated list of the Spotify IDs.</br> For example: {"ids":"4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M"}
@@ -805,7 +805,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization 		Required. A valid access token from the Spotify Accounts service.</br>Modification of the current user’s “Your Music” collection requires authorization of the user-library-modify scope.
+ * @apiHeader (Header)  x-auth-token 		Required. A valid access token from the Spotify Accounts service.</br>Modification of the current user’s “Your Music” collection requires authorization of the user-library-modify scope.
  * @apiHeader (Header)  content-type 	Required if the IDs are passed in the request body, otherwise ignored.</br> The content type of the request body: application/json
  * 
  *  @apiParam (QueryParameters)  ids  					Optional. A comma-separated list of the Spotify IDs.</br> For example: ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M. Maximum: 50 IDs.
@@ -826,7 +826,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization 		Required. A valid access token from the Spotify Accounts service.</br>Modification of the current user’s “Your Music” collection requires authorization of the user-library-modify scope.
+ * @apiHeader (Header)  x-auth-token 		Required. A valid access token from the Spotify Accounts service.</br>Modification of the current user’s “Your Music” collection requires authorization of the user-library-modify scope.
  * 
 *  @apiParam (BodyParameters)  ids  					Optional. A comma-separated list of the Spotify IDs.</br> For example: {"ids":"4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M"}
  *
@@ -846,7 +846,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization 		Required. A valid access token from the Spotify Accounts service.</br>Modification of the current user’s “Your Music” collection requires authorization of the user-library-modify scope.
+ * @apiHeader (Header)  x-auth-token 		Required. A valid access token from the Spotify Accounts service.</br>Modification of the current user’s “Your Music” collection requires authorization of the user-library-modify scope.
  * @apiHeader (Header)  Content-Type 	Required if the IDs are passed in the request body, otherwise ignored.</br> The content type of the request body: application/json
  * 
  * @apiParam (QueryParameters)  ids  				Optional. A comma-separated list of the Spotify IDs. </br>For example: ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M. Maximum: 50 IDs.
@@ -870,7 +870,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization 			Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br>Getting details of a user’s top artists and tracks requires authorization of the user-top-read scope.
+ * @apiHeader (Header)  x-auth-token 			Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br>Getting details of a user’s top artists and tracks requires authorization of the user-top-read scope.
  * @apiParam (PathParameters)  type 		The type of entity to return. Valid values: artists or tracks. 
  * 
  * @apiParam (QueryParameters)  limit  				Optional. The number of entities to return. Default: 20. Minimum: 1. Maximum: 50. For example: limit=2
@@ -895,7 +895,7 @@
  * </br></br><h1> Endpoint</h1>
  * 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
  * @apiParam (Query Parameters)  market 	Optional. An ISO 3166-1 alpha-2 country code or the string from_token.
  *
@@ -914,7 +914,7 @@
  * </br></br><h1> Endpoint</h1>
  * 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
  * 
  * 
@@ -933,7 +933,7 @@
  * </br></br><h1> Endpoint</h1>
  * 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
  * 
  * 
@@ -954,7 +954,7 @@
  * <h1> Request parameters</h1> 
  * </br></br><h1> Endpoint</h1>
  *
- *  @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ *  @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  *  
  * 
  * @apiParam (Query Parameters)  limit  Optional. The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
@@ -979,7 +979,7 @@
  * <h1> Request parameters</h1> 
  * </br></br><h1> Endpoint</h1>
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
  * 
  *
@@ -1000,7 +1000,7 @@
  * </br></br><h1> Endpoint</h1>
  * 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
  * 
  * 
@@ -1020,7 +1020,7 @@
  * </br></br><h1> Endpoint</h1>
  * 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
  * 
  * 
@@ -1042,7 +1042,7 @@
  * </br></br><h1> Endpoint</h1>
  * 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
  * 
  * 
@@ -1065,7 +1065,7 @@
  * </br></br><h1> Endpoint</h1>
  * 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
  * 
  * 
@@ -1084,7 +1084,7 @@
  * </br></br><h1> Endpoint</h1>
  * 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
  * 
  * 
@@ -1103,7 +1103,7 @@
  * </br></br><h1> Endpoint</h1>
  * 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
  * 
  * 
@@ -1124,7 +1124,7 @@
  * </br></br><h1> Endpoint</h1>
  * 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
  * 
  * @apiParam (Path Paramaters) requried.trackId the id of the track went to add
@@ -1148,7 +1148,7 @@
  * 
  * @apiParam (Path Parameters)  playlist_id	The Spotify ID for the playlist
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * @apiHeader (Header)  Content-Type	Required if URIs are passed in the request body, otherwise ignored. The content type of the request body: application/json
  *
  *
@@ -1184,7 +1184,7 @@
  * <h1> Request parameters</h1> 
  * </br></br><h1> Endpoint</h1>
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * @apiHeader (Header)  Content-Type	Required. The content type of the request body: application/json
  * @apiParam (Body Parameters) {string}  name				Required. The new name for the playlist
  * @apiParam (Body Parameters) {string}  Describtion		optional. The description for the playlist
@@ -1218,7 +1218,7 @@
  * 
  * @apiParam (Path Parameters)  playlist_id	The Spotify ID for the playlist
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * @apiHeader (Header)  Content-Type	Required if URIs are passed in the request body, otherwise ignored. The content type of the request body: application/json
  *
  *
@@ -1264,7 +1264,7 @@
  * <h1> Request parameters</h1> 
  * </br></br><h1> Endpoint</h1>
  *
- *  @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ *  @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  *  
  * 
  * 
@@ -1298,7 +1298,7 @@
  * </br></br><h1> Endpoint</h1>
  * @apiParam (path Parameters) user_id	The user’s Spotify user ID.
  *
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
  * 
  *@apiParam (Query Parameters)  limit  Optional. The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
@@ -1332,7 +1332,7 @@
  * </br></br><h1> Endpoint</h1>
  * @apiParam (Path Parameters)  playlist_id	The Spotify ID for the playlist
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
  * @apiParam (Query Paramaters)  snapshot-id	Optional. Snapshot is the id of the version of playlist if not give me it will be the last by defult
  * @apiParam (Response) Format On success, the response body contains a playlist object in JSON format and the HTTP status code in the response header is 200 OK. On error, the header status code is an error code 400  and the response body contains an error object. Requesting playlists that you do not have the user’s authorization to access returns error 400 Forbidden. For the description in the Playlist object, it should be expected that HTML will be escaped.
@@ -1360,7 +1360,7 @@
  * </br></br><h1> Endpoint</h1>
  * @apiParam (Path Parameters)  playlist_id	The Spotify ID for the playlist
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  
  * @apiParam (Response) Format On success, the HTTP status code in the response header is 200 OK. On error, the header status code is an error code and the response body contains an error object. Requesting playlists that you do not have the user’s authorization to access returns error 400 Forbidden. For the description in the Playlist object, it should be expected that HTML will be escaped.
  *
@@ -1377,7 +1377,7 @@
  *
  * @apiParam (Path Parameters)  playlist_id	The Spotify ID for the playlist
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
  * @apiParam (Response) Format On success, the response body contains a list of image objects in JSON format and the HTTP status code in the response header is 200 OK On error, the header status code is an error code and the response body contains an error object.
  */
@@ -1397,7 +1397,7 @@
  * 
  * @apiParam (Path Parameters)  playlist_id	The Spotify ID for the playlist
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * @apiHeader (Header)  Content-Type	Required if URIs are passed in the request body, otherwise ignored. The content type of the request body: application/json
  * 
  *@apiParam (Body parameter) track_ids required. comma seperated string contain ids of tracks to be removed from playlist 
@@ -1422,7 +1422,7 @@
  * 
  * @apiParam (Path Parameters)  playlist_id	The Spotify ID for the playlist
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * @apiHeader (Header)  Content-Type	Required if URIs are passed in the request body, otherwise ignored. The content type of the request body: application/json
  * 
  *
@@ -1461,7 +1461,7 @@
  * 
  * @apiParam (Path Parameters)  playlist_id	The Spotify ID for the playlist
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * @apiHeader (Header)  Content-Type	Required if URIs are passed in the request body, otherwise ignored. The content type of the request body: application/json
  * 
  * 
@@ -1486,7 +1486,7 @@
  * 
  * @apiParam (Path Parameters)  playlist_id	The Spotify ID for the playlist
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * @apiHeader (Header)  Content-Type	Required if URIs are passed in the request body, otherwise ignored. The content type of the request body: application/json
  * 
  *
@@ -1508,7 +1508,7 @@
  * 
  * @apiParam (Path Parameters)  playlist_id	The Spotify ID for the playlist
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * @apiHeader (Header)  Content-Type	Required if URIs are passed in the request body, otherwise ignored. The content type of the request body: application/json
  *  
  * @apiParam (Response) Format on success, the HTTP status code in the response header is 200. On error, the header status code is an error code 404, the response body contains an error object, and the existing playlist is unmodified. Trying to set a track when you do not have the user’s authorization returns error 403 Forbidden.
@@ -1527,7 +1527,7 @@
  * 
  * @apiParam (Path Parameters)  playlist_id	The Spotify ID for the playlist
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * @apiHeader (Header)  Content-Type	Required if URIs are passed in the request body, otherwise ignored. The content type of the request body: application/json
  *  
  * @apiParam (Response) Format on success, the HTTP status code in the response header is 200. On error, the header status code is an error code 404, the response body contains an error object, and the existing playlist is unmodified. Trying to set a track when you do not have the user’s authorization returns error 403 Forbidden.
@@ -1544,7 +1544,7 @@
  * <h1> Request parameters</h1> 
  * </br></br><h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  *
  * @apiParam (Query parameters) name	Required.Search query keywords.
  * @apiParam (Query parameters) type	Required.A comma-separated list of item types to search across.Valid types are: top, album , artist, playlist, and track.Search results include hits from all the specified item types.
@@ -1574,7 +1574,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization 			Required. A valid access token from the Spotify Accounts service.
+ * @apiHeader (Header)  x-auth-token 			Required. A valid access token from the Spotify Accounts service.
  * 
  * 
  * @apiParam (PathParameters)  id				Required. The Spotify ID for the track.
@@ -1599,7 +1599,7 @@
  * <h1> Endpoint</h1> 
  *
  * 
- * @apiHeader (Header)  Authorization 	Required. A valid access token from the Spotify Accounts service.
+ * @apiHeader (Header)  x-auth-token 	Required. A valid access token from the Spotify Accounts service.
 
  * 
  *  @apiParam (PathParameters)  id 					Required. The Spotify ID for the track.
@@ -1635,7 +1635,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization 		Required. A valid access token from the Spotify Accounts service.
+ * @apiHeader (Header)  x-auth-token 		Required. A valid access token from the Spotify Accounts service.
  * 
  *  @apiParam (Body parameters)  ids  		Required. A comma-separated list of the Spotify IDs for the tracks. Maximum: 100 IDs.
  *
@@ -1686,7 +1686,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization 			Required. A valid access token from the Spotify Accounts service. 
+ * @apiHeader (Header)  x-auth-token 			Required. A valid access token from the Spotify Accounts service. 
  * 
  * 
  *  @apiParam (Body Parameters)  ids  	Required. A comma-separated list of the Spotify IDs for the tracks. Maximum: 50 IDs.
@@ -1787,7 +1787,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service.
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service.
  * 
  *  @apiParam (QueryParameters)  id   Required.The Spotify ID for the track.
  *
@@ -1844,7 +1844,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization Required. A valid access token from the Spotify Accounts service.
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service.
  * 
  *  @apiParam (QueryParameters)  id 		Required.The Spotify ID for the track.
  *
@@ -1892,7 +1892,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization 			Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br>Reading the user’s email address requires the user-read-email scope; </br>reading country and product subscription level requires the user-read-private scope.
+ * @apiHeader (Header)  x-auth-token			Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br>Reading the user’s email address requires the user-read-email scope; </br>reading country and product subscription level requires the user-read-private scope.
  * 
  *
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains a user object in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</br> When requesting fields that you don’t have the user’s authorization to access, it will return error 403 Forbidden.</br></br></br> <b>Important!</b> If the user-read-email scope is authorized, </br>the returned JSON will include the email address that was entered when the user created their Spotify account.</br> This email address is unverified; do not assume that the email address belongs to the user.
@@ -1920,7 +1920,7 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * @apiHeader (Header)  Authorization 		Required. A valid access token from the Spotify Accounts service.
+ * @apiHeader (Header)  x-auth-token 		Required. A valid access token from the Spotify Accounts service.
  * 
  * @apiParam (PathParameters)  User_id 				The user’s Spotify user ID.
  * 

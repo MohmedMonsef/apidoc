@@ -12,7 +12,7 @@
           {
             "group": "Header",
             "optional": false,
-            "field": "Authorization",
+            "field": "x-auth-token",
             "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
           }
         ]
@@ -59,7 +59,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Private_code/docs-private.js",
+    "filename": "ApiDocumentation/Private_code/docs-private.js",
     "groupTitle": "Account"
   },
   {
@@ -138,7 +138,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Private_code/docs-private.js",
+    "filename": "ApiDocumentation/Private_code/docs-private.js",
     "groupTitle": "Account"
   },
   {
@@ -169,7 +169,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Private_code/docs-private.js",
+    "filename": "ApiDocumentation/Private_code/docs-private.js",
     "groupTitle": "Account"
   },
   {
@@ -206,7 +206,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Private_code/docs-private.js",
+    "filename": "ApiDocumentation/Private_code/docs-private.js",
     "groupTitle": "Account"
   },
   {
@@ -238,7 +238,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/docs-private.js",
+    "filename": "ApiDocumentation/Private_code/docs-private.js",
     "groupTitle": "Account"
   },
   {
@@ -254,7 +254,7 @@
           {
             "group": "Header",
             "optional": false,
-            "field": "Authorization",
+            "field": "x-auth-token",
             "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
           }
         ]
@@ -281,7 +281,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Private_code/docs-private.js",
+    "filename": "ApiDocumentation/Private_code/docs-private.js",
     "groupTitle": "Account"
   },
   {
@@ -297,7 +297,7 @@
           {
             "group": "Header",
             "optional": false,
-            "field": "Authorization",
+            "field": "x-auth-token",
             "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
           }
         ]
@@ -324,7 +324,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Private_code/docs-private.js",
+    "filename": "ApiDocumentation/Private_code/docs-private.js",
     "groupTitle": "Account"
   },
   {
@@ -383,7 +383,7 @@
           {
             "group": "Header",
             "optional": false,
-            "field": "Authorization",
+            "field": "x-auth-token",
             "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
           },
           {
@@ -396,7 +396,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Private_code/docs-private.js",
+    "filename": "ApiDocumentation/Private_code/docs-private.js",
     "groupTitle": "Artist"
   },
   {
@@ -412,7 +412,7 @@
           {
             "group": "Header",
             "optional": false,
-            "field": "Authorization",
+            "field": "x-auth-token",
             "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
           }
         ]
@@ -453,7 +453,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Private_code/docs-private.js",
+    "filename": "ApiDocumentation/Private_code/docs-private.js",
     "groupTitle": "Player"
   },
   {
@@ -498,7 +498,7 @@
           {
             "group": "Header",
             "optional": false,
-            "field": "Authorization",
+            "field": "x-auth-token",
             "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
           },
           {
@@ -511,7 +511,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Private_code/docs-private.js",
+    "filename": "ApiDocumentation/Private_code/docs-private.js",
     "groupTitle": "Playlist"
   },
   {
@@ -527,7 +527,7 @@
           {
             "group": "Header",
             "optional": false,
-            "field": "Authorization",
+            "field": "x-auth-token",
             "description": "<p>Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br>Reading the user’s email address requires the user-read-email scope; </br>reading country and product subscription level requires the user-read-private scope.</p>"
           }
         ]
@@ -555,7 +555,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/docs-private.js",
+    "filename": "ApiDocumentation/Private_code/docs-private.js",
     "groupTitle": "Users_Profile"
   },
   {
@@ -571,7 +571,7 @@
           {
             "group": "Header",
             "optional": false,
-            "field": "Authorization",
+            "field": "x-auth-token",
             "description": "<p>Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br>Reading the user’s email address requires the user-read-email scope; </br>reading country and product subscription level requires the user-read-private scope.</p>"
           }
         ]
@@ -629,7 +629,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/docs-private.js",
+    "filename": "ApiDocumentation/Private_code/docs-private.js",
     "groupTitle": "Users_Profile"
   }
 ]

@@ -1,23 +1,14 @@
 {
-  "name": "Spotify",
-  "version": "1.0.1",
+  "name": "",
+  "version": "0.0.0",
   "description": "",
-  "main": "doc.js",
-  "directories": {
-    "doc": "doc"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
   "sampleUrl": false,
   "defaultVersion": "0.0.0",
   "apidoc": "0.3.0",
   "generator": {
     "name": "apidoc",
-    "time": "2020-03-29T18:32:34.209Z",
+    "time": "2020-04-03T17:42:19.962Z",
     "url": "http://apidocjs.com",
-    "version": "0.20.1"
+    "version": "0.20.0"
   }
 }
