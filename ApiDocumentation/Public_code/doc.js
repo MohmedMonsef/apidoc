@@ -1425,7 +1425,7 @@
  * 
 * @apiSuccessExample {json} Success-Response:
 *{
-*    "fullTrack": {
+*   
 *        "track": {
 *            "availableMarkets": [
 *                "\"er,ty,eue,euu\""
@@ -1464,10 +1464,11 @@
 *                "name": "ahmedsamir",
 *               "_id": "5e833a51a51d971174923f17"
 *            }
-*        }
-*    },
+*        },
+*    
 *    "isPlaylist": true,
-*    "playlistId": "5e85f4ca1ba5cf17ccca66eb"
+*    "playlistId": "5e85f4ca1ba5cf17ccca66eb",
+*   "isPlayable":true
 *}
  * 
  * 
@@ -1533,7 +1534,8 @@
 *        }
 *    },
 *    "isPlaylist": true,
-*    "playlistId": "5e85f4ca1ba5cf17ccca66eb"
+*    "playlistId": "5e85f4ca1ba5cf17ccca66eb",
+*     "isPlayable": false
 *},
 *{   
 *    "fullTrack": {
@@ -1578,7 +1580,8 @@
 *        }
 *    },
 *    "isPlaylist": true,
-*    "playlistId": "5e85f4ca1ba5cf17ccca66eb"
+*    "playlistId": "5e85f4ca1ba5cf17ccca66eb",
+*     "isPlayable": false
 *},   
 *    "fullTrack": {
 *        "track": {
@@ -1622,7 +1625,8 @@
 *        }
 *    },
 *    "isPlaylist": true,
-*    "playlistId": "5e85f4ca1ba5cf17ccca66eb"
+*    "playlistId": "5e85f4ca1ba5cf17ccca66eb",
+*     "isPlayable": false
 *}
 *]
 *}
@@ -1735,7 +1739,7 @@
  * 
  * @apiSuccessExample {json} Success-Response:
 *{
-*    "fullTrack": {
+*    
 *        "track": {
 *            "availableMarkets": [
 *                "\"er,ty,eue,euu\""
@@ -1774,10 +1778,11 @@
 *                "name": "ahmedsamir",
 *               "_id": "5e833a51a51d971174923f17"
 *            }
-*        }
-*    },
+*        },
+*   
 *    "isPlaylist": true,
-*    "playlistId": "5e85f4ca1ba5cf17ccca66eb"
+*    "playlistId": "5e85f4ca1ba5cf17ccca66eb",
+*     "isPlayable": false
 *}
  * 
 * 
@@ -1808,7 +1813,7 @@
  * 
  * @apiSuccessExample {json} Success-Response:
 *{
-*    "fullTrack": {
+*    
 *        "track": {
 *            "availableMarkets": [
 *                "\"er,ty,eue,euu\""
@@ -1851,6 +1856,7 @@
 *    },
 *    "isPlaylist": true,
 *    "playlistId": "5e85f4ca1ba5cf17ccca66eb"
+*     "isPlayable": false
 *}
  * 
 * 

@@ -1,49 +1,48 @@
 correct:
 statu-->200 & example:
 {
-    "fullTrack": {
-        "track": {
-            "availableMarkets": [
-                "\"er,ty,eue,euu\""
-            ],
-            "_id": "5e85f4241ba5cf17ccca66d7",
-            "url": "5e85f4241ba5cf17ccca66d5",
-            "images": [],
-            "duration": 436,
-            "trackNumber": 236,
-            "name": "\"track6\"",
-            "artistId": "5e833a51a51d971174923f17",
-            "albumId": "5e833b412b9d7718a491c850",
-            "discNumber": 1,
-            "explicit": false,
-            "type": "Track",
-            "acousticness": 10,
-            "danceability": 23,
-            "energy": 100,
-            "instrumentalness": 4,
-            "key": 90,
-            "liveness": 25,
-            "loudness": 70,
-            "mode": 56,
-            "speechiness": 67,
-            "tempo": 76,
-            "timeSignature": "2020-04-02T14:18:12.619Z",
-            "valence": 70,
-            "like": 0,
-            "__v": 0
-        },
-        "isLiked": false,
-        "album": {
-            "name": "album1",
-            "_id": "5e833b412b9d7718a491c850",
-            "artist": {
-                "name": "ahmedsamir",
-                "_id": "5e833a51a51d971174923f17"
-            }
+    "track": {
+        "availableMarkets": [
+            "\"er,ty,eue,euu\""
+        ],
+        "_id": "5e85f4281ba5cf17ccca66dc",
+        "url": "5e85f4281ba5cf17ccca66da",
+        "images": [],
+        "duration": 436,
+        "trackNumber": 236,
+        "name": "\"track7\"",
+        "artistId": "5e833a51a51d971174923f17",
+        "albumId": "5e833b412b9d7718a491c850",
+        "discNumber": 1,
+        "explicit": false,
+        "type": "Track",
+        "acousticness": 10,
+        "danceability": 23,
+        "energy": 100,
+        "instrumentalness": 4,
+        "key": 90,
+        "liveness": 25,
+        "loudness": 70,
+        "mode": 56,
+        "speechiness": 67,
+        "tempo": 76,
+        "timeSignature": "2020-04-02T14:18:16.464Z",
+        "valence": 70,
+        "like": 0,
+        "__v": 0
+    },
+    "isLiked": false,
+    "album": {
+        "name": "album1",
+        "_id": "5e833b412b9d7718a491c850",
+        "artist": {
+            "name": "ahmedsamir",
+            "_id": "5e833a51a51d971174923f17"
         }
     },
     "isPlaylist": true,
-    "playlistId": "5e85f4ca1ba5cf17ccca66eb"
+    "playlistId": "5e85f4ca1ba5cf17ccca66eb",
+    "isPlayable": false
 }
 error
 status--->400 & mes:error:'track not found' 
