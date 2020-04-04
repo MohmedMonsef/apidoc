@@ -2838,6 +2838,49 @@
     "groupTitle": "Playlist"
   },
   {
+    "type": "GET",
+    "url": "/playlists/{playlist_id}/tracks",
+    "title": "Get Tracks from a Playlist",
+    "name": "Get_Tracks_from_a_Playlist",
+    "group": "Playlist",
+    "description": "<p style=\"color:red;\">Get Tracks from a playlist..</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "parameter": {
+      "fields": {
+        "Path Parameters": [
+          {
+            "group": "Path Parameters",
+            "optional": false,
+            "field": "playlist_id",
+            "description": "<p>The Spotify ID for the playlist</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 . The response body contains the playlist main info and array of its tracks in JSON format. on error 404 error will be sent with error object, if there are no tracks 401 response will be sent with bad request error</p>"
+          }
+        ]
+      }
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "x-auth-token",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "ApiDocumentation/Public_code/doc.js",
+    "groupTitle": "Playlist"
+  },
+  {
     "type": "get",
     "url": "/me/playlists",
     "title": "Get a List of Current User's Playlists",

@@ -2355,6 +2355,27 @@
  *       ]
  *   ,"__v":1}
  */
+
+/**
+ * @api {GET} /playlists/{playlist_id}/tracks Get Tracks from a Playlist
+ * @apiName Get Tracks from a Playlist
+ * @apiGroup Playlist
+ * @apiDescription
+ * <p style="color:red;">Get Tracks from a playlist..</p>
+ *
+ * 
+ * <h1> Request parameters</h1> 
+ * </br></br><h1> Endpoint</h1>
+ * 
+ * @apiParam (Path Parameters)  playlist_id	The Spotify ID for the playlist
+ * 
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
+ *
+ *
+ * @apiParam (Response) Format On success, the HTTP status code in the response header is 200 . The response body contains the playlist main info and array of its tracks in JSON format. on error 404 error will be sent with error object, if there are no tracks 401 response will be sent with bad request error 
+ * 
+ */
+
 /**
  * @api {POST} /users/playlists Create a Playlist
  * @apiName Create a Playlist
