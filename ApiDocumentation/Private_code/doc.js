@@ -105,7 +105,35 @@
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response header contains a JWT </br> On error, redirects to GET login
  * 
  * @apiSuccessExample {json} Success-Response:
- * {"success":true,"token":"JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTdmNzE3YjU3MjQ5ZjIyODhkYzEyZjQiLCJpYXQiOjE1ODU1MDU5MDksImV4cCI6MTU4NTU5MjMwOX0.HniUR47rVmHBvuALPeD4rPZ-YERu4zHCogjxWPymHRw"}
+ * {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTg3YzJlZGQ3OGZkMzQ1MThmOWViYTIiLCJpYXQiOjE1ODYwMzA0NTEsImV4cCI6MTE1NTY5ODM3NTc2NTF9.tteoEG6Udupn3qwQYTq5PpdpldP40IbP8yaxHGL8B5k"}
+ * 
+ * 
+ *
+ *
+ */
+
+ /**
+ * @api {POST} /auth/facebookAndroid Login to Spotify with Facebook for android native app
+ * @apiName Login to Spotify with Facebook android
+ * @apiGroup Account
+ * @apiDescription login with facebook using android custom route
+ * 
+* 
+ * 
+ * <h1>Endpoint</h1> 
+ * 
+ * 
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response header contains a JWT </br> On error,send 404 if email not found
+ * 
+ * @apiParam (Body) email   Required user email
+ *  @apiParam (Body) name   Required user display name
+ * @apiParam (Body) gender   optional user gender Male/Female
+ *  @apiParam (Body) photos   optional user photos
+ *  @apiParam (Body) birthday   optional user birthday
+ * 
+ * 
+ * @apiSuccessExample {json} Success-Response:
+ * {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTg3YzJlZGQ3OGZkMzQ1MThmOWViYTIiLCJpYXQiOjE1ODYwMzA0NTEsImV4cCI6MTE1NTY5ODM3NTc2NTF9.tteoEG6Udupn3qwQYTq5PpdpldP40IbP8yaxHGL8B5k"}
  * 
  * 
  *

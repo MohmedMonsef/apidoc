@@ -60,7 +60,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Private_code/docs-private.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -148,7 +148,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Private_code/docs-private.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -179,7 +179,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Private_code/docs-private.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -225,7 +225,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Private_code/docs-private.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -251,13 +251,77 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\"success\":true,\"token\":\"JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTdmNzE3YjU3MjQ5ZjIyODhkYzEyZjQiLCJpYXQiOjE1ODU1MDU5MDksImV4cCI6MTU4NTU5MjMwOX0.HniUR47rVmHBvuALPeD4rPZ-YERu4zHCogjxWPymHRw\"}",
+          "content": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTg3YzJlZGQ3OGZkMzQ1MThmOWViYTIiLCJpYXQiOjE1ODYwMzA0NTEsImV4cCI6MTE1NTY5ODM3NTc2NTF9.tteoEG6Udupn3qwQYTq5PpdpldP40IbP8yaxHGL8B5k\"}",
           "type": "json"
         }
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Private_code/docs-private.js",
+    "filename": "Private_code/doc.js",
+    "groupTitle": "Account"
+  },
+  {
+    "type": "POST",
+    "url": "/auth/facebookAndroid",
+    "title": "Login to Spotify with Facebook for android native app",
+    "name": "Login_to_Spotify_with_Facebook_android",
+    "group": "Account",
+    "description": "<p>login with facebook using android custom route</p> <h1>Endpoint</h1>",
+    "parameter": {
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response header contains a JWT </br> On error,send 404 if email not found</p>"
+          }
+        ],
+        "Body": [
+          {
+            "group": "Body",
+            "optional": false,
+            "field": "email",
+            "description": "<p>Required user email</p>"
+          },
+          {
+            "group": "Body",
+            "optional": false,
+            "field": "name",
+            "description": "<p>Required user display name</p>"
+          },
+          {
+            "group": "Body",
+            "optional": false,
+            "field": "gender",
+            "description": "<p>optional user gender Male/Female</p>"
+          },
+          {
+            "group": "Body",
+            "optional": false,
+            "field": "photos",
+            "description": "<p>optional user photos</p>"
+          },
+          {
+            "group": "Body",
+            "optional": false,
+            "field": "birthday",
+            "description": "<p>optional user birthday</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTg3YzJlZGQ3OGZkMzQ1MThmOWViYTIiLCJpYXQiOjE1ODYwMzA0NTEsImV4cCI6MTE1NTY5ODM3NTc2NTF9.tteoEG6Udupn3qwQYTq5PpdpldP40IbP8yaxHGL8B5k\"}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -300,7 +364,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Private_code/docs-private.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -343,7 +407,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Private_code/docs-private.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -415,7 +479,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Private_code/docs-private.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -472,7 +536,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Private_code/docs-private.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -530,7 +594,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Private_code/docs-private.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -574,7 +638,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Private_code/docs-private.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Users_Profile"
   },
   {
@@ -648,7 +712,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Private_code/docs-private.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Users_Profile"
   }
 ] });
