@@ -1,1 +1,21 @@
-[{"availableMarkets":[],"_id":"5e7c9618cb9f6a5270ea413a","name":"track2","albumId":"5e7c9617cb9f6a5270ea4134","artistId":"5e7c9618cb9f6a5270ea4137","__v":0},{"availableMarkets":[],"_id":"5e7c9618cb9f6a5270ea4139","name":"track1","albumId":"5e7c9617cb9f6a5270ea4133","artistId":"5e7c9618cb9f6a5270ea4137","__v":0},{"availableMarkets":[],"_id":"5e7c95e2cb9f6a5270ea412d","name":"track4","albumId":"5e7c95e1cb9f6a5270ea4127","artistId":"5e7c95e1cb9f6a5270ea4129","__v":0}]
+[
+    {
+        "id": "5e80d65f53e67b1e284a0f83",
+        "type": "playlist",
+        "name": "Spacetoon",
+        "ownerId": "5e80c6af14c8566d6cd9b400",
+        "collaborative": false,
+        "isPublic": true,
+        "images": [],
+        "tracks": [
+            {
+                "trackid": "5e80ceb853e67b1e284a0f15",
+                "name": "HAVANA",
+                "artistId": "5e80c9b614c8566d6cd9b40e",
+                "artistName": "nada",
+                "albumId": "5e80cc2b14c8566d6cd9b40f",
+                "albumName": "HELLO KIDS"
+            }
+        ]
+    }
+]

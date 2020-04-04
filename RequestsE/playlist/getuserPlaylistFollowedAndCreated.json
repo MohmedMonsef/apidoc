@@ -1,1 +1,101 @@
-[{"_id":"5e7cee3c35bf5449a0aa0a24","type":"playlist","Description":"anything","collaborative":false,"name":"changedPlaylist1","isPublic":true,"ownerId":"5e7ced3535bf5449a0aa0a23","images":[],"snapshot":[{"hasTracks":["5e7c9618cb9f6a5270ea413a","5e7c9618cb9f6a5270ea4139"],"_id":"5e7cf0e4f37b461aac6afdd0","action":"Add Tracks"},{"hasTracks":["5e7c9618cb9f6a5270ea413a","5e7c9618cb9f6a5270ea4139"],"_id":"5e7cf10728082026100db373","action":"Add Tracks"},{"hasTracks":["5e7c9618cb9f6a5270ea413a","5e7c9618cb9f6a5270ea4139","5e7c95e2cb9f6a5270ea412d"],"_id":"5e7cf11d28082026100db374","action":"Add Tracks"},{"hasTracks":["5e7c9618cb9f6a5270ea413a","5e7c9618cb9f6a5270ea4139","5e7c95e2cb9f6a5270ea412d"],"_id":"5e7cf12f28082026100db375","action":"Add Tracks"}],"__v":4}]
+[
+    {
+        "id": "5e80d65f53e67b1e284a0f83",
+        "name": "Spacetoon",
+        "ownerId": "5e80c6af14c8566d6cd9b400",
+        "owner": "nada",
+        "collaborative": false,
+        "isPublic": true,
+        "images": []
+    },
+    {
+        "id": "5e80d6ddd3f6f33ba459f734",
+        "name": "Qu",
+        "ownerId": "5e80c6af14c8566d6cd9b400",
+        "owner": "nada",
+        "collaborative": false,
+        "isPublic": true,
+        "images": []
+    },
+    {
+        "id": "5e80d6e5d3f6f33ba459f738",
+        "name": "We found Love",
+        "ownerId": "5e80c6af14c8566d6cd9b400",
+        "owner": "nada",
+        "collaborative": false,
+        "isPublic": true,
+        "images": []
+    },
+    {
+        "id": "5e80d6f8d3f6f33ba459f73c",
+        "name": "Aye aye",
+        "ownerId": "5e80c6af14c8566d6cd9b400",
+        "owner": "nada",
+        "collaborative": false,
+        "isPublic": true,
+        "images": []
+    },
+    {
+        "id": "5e8645aaedc91683248f9e44",
+        "name": "HIGH HOPES",
+        "ownerId": "5e80c6af14c8566d6cd9b400",
+        "owner": "nada",
+        "collaborative": false,
+        "isPublic": true,
+        "images": []
+    },
+    {
+        "id": "5e864c513352cc7ac4b60ec7",
+        "name": "HOLA",
+        "ownerId": "5e80c6af14c8566d6cd9b400",
+        "owner": "nada",
+        "collaborative": false,
+        "isPublic": true,
+        "images": []
+    },
+    {
+        "id": "5e80d65f53e67b1e284a0f83",
+        "name": "Spacetoon",
+        "ownerId": "5e80c6af14c8566d6cd9b400",
+        "owner": "nada",
+        "collaborative": false,
+        "isPublic": true,
+        "images": []
+    },
+    {
+        "id": "5e80d6ddd3f6f33ba459f734",
+        "name": "Qu",
+        "ownerId": "5e80c6af14c8566d6cd9b400",
+        "owner": "nada",
+        "collaborative": false,
+        "isPublic": true,
+        "images": []
+    },
+    {
+        "id": "5e80d6e5d3f6f33ba459f738",
+        "name": "We found Love",
+        "ownerId": "5e80c6af14c8566d6cd9b400",
+        "owner": "nada",
+        "collaborative": false,
+        "isPublic": true,
+        "images": []
+    },
+    {
+        "id": "5e80d6f8d3f6f33ba459f73c",
+        "name": "Aye aye",
+        "ownerId": "5e80c6af14c8566d6cd9b400",
+        "owner": "nada",
+        "collaborative": false,
+        "isPublic": true,
+        "images": []
+    },
+    {
+        "id": "5e8645aaedc91683248f9e44",
+        "name": "HIGH HOPES",
+        "ownerId": "5e80c6af14c8566d6cd9b400",
+        "owner": "nada",
+        "collaborative": false,
+        "isPublic": true,
+        "images": []
+    }
+]
