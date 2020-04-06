@@ -598,7 +598,7 @@
     "groupTitle": "Playlist"
   },
   {
-    "type": "POST",
+    "type": "GET",
     "url": "/tracks/android/{track_id}",
     "title": "get track for android",
     "name": "get_track_file_for_android",
