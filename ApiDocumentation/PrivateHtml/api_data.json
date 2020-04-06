@@ -60,7 +60,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -148,7 +148,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -179,7 +179,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -225,7 +225,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -257,7 +257,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -321,7 +321,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -364,7 +364,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -407,7 +407,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -479,7 +479,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -536,7 +536,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -594,8 +594,163 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Playlist"
+  },
+  {
+    "type": "POST",
+    "url": "/tracks/android/{track_id}",
+    "title": "get track for android",
+    "name": "get_track_file_for_android",
+    "group": "Track",
+    "description": "<p style=\"color:red;\">get track media file for android</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "parameter": {
+      "fields": {
+        "Path Parameters": [
+          {
+            "group": "Path Parameters",
+            "optional": false,
+            "field": "track_id",
+            "description": "<p>the trackID</p>"
+          }
+        ],
+        "Query Parameters": [
+          {
+            "group": "Query Parameters",
+            "type": "string",
+            "optional": false,
+            "field": "type",
+            "description": "<p>Optional. can be &quot;high&quot; or &quot;medium&quot; or &quot;low&quot; or review it has a default of &quot;medium&quot;,if free user and choose high quality it will automatically set to medium</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>media file stream on success, and if incorrect track then 404, if error in streaming will be 500 insternal server error</p>"
+          }
+        ]
+      }
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "x-auth-token",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "private_code/doc.js",
+    "groupTitle": "Track"
+  },
+  {
+    "type": "POST",
+    "url": "/artists/me/albums/{album_id}/tracks",
+    "title": "upload tracks",
+    "name": "upload_tracks_to_album",
+    "group": "Track",
+    "description": "<p style=\"color:red;\">upload tracks by artist to specific album, only artist with valid album can upload track to this album</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "parameter": {
+      "fields": {
+        "Path Parameters": [
+          {
+            "group": "Path Parameters",
+            "optional": false,
+            "field": "album_id",
+            "description": "<p>the album id to which track will be added</p>"
+          }
+        ],
+        "form-data": [
+          {
+            "group": "form-data",
+            "type": "file",
+            "optional": false,
+            "field": "high",
+            "description": "<p>Required the hight qaulity version of the track</p>"
+          },
+          {
+            "group": "form-data",
+            "type": "file",
+            "optional": false,
+            "field": "medium",
+            "description": "<p>Required the medium qaulity version of the track</p>"
+          },
+          {
+            "group": "form-data",
+            "type": "file",
+            "optional": false,
+            "field": "low",
+            "description": "<p>Required the low qaulity version of the track</p>"
+          },
+          {
+            "group": "form-data",
+            "type": "file",
+            "optional": false,
+            "field": "review",
+            "description": "<p>Required the review track to be shown for android</p>"
+          }
+        ],
+        "Query Parameters": [
+          {
+            "group": "Query Parameters",
+            "type": "string",
+            "optional": false,
+            "field": "name",
+            "description": "<p>Required.name of the track</p>"
+          },
+          {
+            "group": "Query Parameters",
+            "type": "Number",
+            "optional": false,
+            "field": "trackNumber",
+            "description": "<p>Required.number of the track</p>"
+          },
+          {
+            "group": "Query Parameters",
+            "type": "string",
+            "optional": false,
+            "field": "availableMarkets",
+            "description": "<p>Optional. comma seperated dtring with available markets for track</p>"
+          },
+          {
+            "group": "Query Parameters",
+            "type": "Number",
+            "optional": false,
+            "field": "duration",
+            "description": "<p>Required. track duration in milliseconds</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>200 if success,403 forbidden if not an artist or doesn't own the album or failed to upload the track</p>"
+          }
+        ]
+      }
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "x-auth-token",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "private_code/doc.js",
+    "groupTitle": "Track"
   },
   {
     "type": "DELETE",
@@ -638,7 +793,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Users_Profile"
   },
   {
@@ -712,7 +867,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Users_Profile"
   }
 ]

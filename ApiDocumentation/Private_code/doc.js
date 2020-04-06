@@ -308,3 +308,58 @@
  * @apiParam (Body Parameters) {string} info		           Optional.all information about this artist
  * @apiparam (Response) Format On success the HTTP status code in the response header is 200 OK. On error, the header status code is an error code and the response body contains an error object. Trying to change an artist when you do not have the user’s authorization returns error 403 Forbidden.
  */
+
+ /**
+ * @api {POST} /tracks/android/{track_id} get track for android
+ * @apiName get track file for android
+ * @apiGroup Track
+ * @apiDescription
+ * 
+ * <p style="color:red;">get track media file for android</p>
+ *
+ * 
+ * <h1> Request parameters</h1> 
+ * </br></br><h1> Endpoint</h1>
+ * 
+ * 
+ * @apiParam (Path Parameters)  track_id	the trackID
+ * 
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
+ *
+ *
+ * @apiParam (Query Parameters) {string}  type	         	   Optional. can be "high" or "medium" or "low" or review it has a default of "medium",if free user and choose high quality it will automatically set to medium
+ * 
+ * @apiparam (Response) Format media file stream on success, and if incorrect track then 404, if error in streaming will be 500 insternal server error
+ */
+
+
+  /**
+ * @api {POST} /artists/me/albums/{album_id}/tracks upload tracks
+ * @apiName upload tracks to album
+ * @apiGroup Track
+ * @apiDescription
+ * 
+ * <p style="color:red;">upload tracks by artist to specific album, only artist with valid album can upload track to this album</p>
+ *
+ * 
+ * <h1> Request parameters</h1> 
+ * </br></br><h1> Endpoint</h1>
+ * 
+ * 
+ * @apiParam (Path Parameters)  album_id	the album id to which track will be added
+ * 
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
+ *
+ * @apiParam (form-data) {file} high  Required the hight qaulity version of the track
+ *  @apiParam (form-data) {file} medium  Required the medium qaulity version of the track
+ * @apiParam (form-data) {file} low  Required the low qaulity version of the track
+ * @apiParam (form-data) {file} review  Required the review track to be shown for android
+ *
+ * @apiParam (Query Parameters) {string}  name	         	   Required.name of the track
+ * @apiParam (Query Parameters) {Number}  trackNumber	         	   Required.number of the track
+ * @apiParam (Query Parameters) {string}  availableMarkets	         	   Optional. comma seperated dtring with available markets for track
+ * @apiParam (Query Parameters) {Number}  duration	         	   Required. track duration in milliseconds
+ * 
+ * @apiparam (Response) Format 200 if success,403 forbidden if not an artist or doesn't own the album or failed to upload the track
+ */
+
