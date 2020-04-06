@@ -14,7 +14,26 @@
                 "artistId": "5e80c9b614c8566d6cd9b40e",
                 "artistName": "nada",
                 "albumId": "5e80cc2b14c8566d6cd9b40f",
-                "albumName": "HELLO KIDS"
+                "albumName": "HELLO KIDS",
+                "isLiked": true
+            },
+            {
+                "trackid": "5e80cef153e67b1e284a0f1b",
+                "name": "NANA",
+                "artistId": "5e80c9b614c8566d6cd9b40e",
+                "artistName": "nada",
+                "albumId": "5e80cc2b14c8566d6cd9b40f",
+                "albumName": "HELLO KIDS",
+                "isLiked": true
+            },
+            {
+                "trackid": "5e80cf1c53e67b1e284a0f33",
+                "name": "Fire On Fire",
+                "artistId": "5e80c9b614c8566d6cd9b40e",
+                "artistName": "nada",
+                "albumId": "5e80cc2b14c8566d6cd9b40f",
+                "albumName": "HELLO KIDS",
+                "isLiked": false
             }
         ]
     }
