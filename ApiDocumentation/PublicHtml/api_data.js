@@ -33,13 +33,13 @@ define({ "api": [
             "group": "Response",
             "optional": false,
             "field": "Format",
-            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body contains an array of album objects in JSON format.</br></br></br> Objects are returned in the order requested. If an object is not found, it's ignored</br> Duplicate ids in the query will result in duplicate objects in the response.</br> On error, the header status code is an error code and the response body contains an error object.</p>"
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body contains an array of album objects in JSON format.</br></br></br> Objects are returned in the order requested. If an object is not found, it's ignored</br> Duplicate ids in the query will result in duplicate objects in the response.</br> On error, the header status code is an error code and the response body contains an error object</p>"
           }
         ]
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -82,7 +82,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -125,7 +125,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -177,13 +177,13 @@ define({ "api": [
           {
             "group": "BodyParameters",
             "optional": false,
-            "field": "release-Date",
+            "field": "releaseDate",
             "description": "<p>Required.Release Date of the new Album</p>"
           },
           {
             "group": "BodyParameters",
             "optional": false,
-            "field": "available-Markets",
+            "field": "availablemarkets",
             "description": "<p>Required.The markets in which the album is available: ISO 3166-1 alpha-2 country codes.</p>"
           },
           {
@@ -213,13 +213,13 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
     "type": "put",
     "url": "Artists/me/Albums/{album_id}/tracks",
-    "title": "Create Track",
+    "title": "Create Track   (in progress)",
     "name": "Create_Track",
     "group": "Artist",
     "description": "<p style=\"color:red;\">Create Track for an Album for the Current Artist .</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
@@ -303,13 +303,13 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
     "type": "delete",
     "url": "Artists/me/Albums/{id}/tracks",
-    "title": "Delete Artist's Track",
+    "title": "Delete Artist's Track   (Not implemented yet)",
     "name": "Delete_Artist's_Track",
     "group": "Artist",
     "description": "<p style=\"color:red;\">Delete Tracks for an Album for the Current Artist .</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
@@ -360,7 +360,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -412,7 +412,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -464,7 +464,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -542,7 +542,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -594,64 +594,12 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
     "type": "get",
-    "url": "/Artists/{artist_id}/tracks",
-    "title": "Get an Artist's Tracks",
-    "name": "Get_an_Artist's_Top_Tracks",
-    "group": "Artist",
-    "description": "<p style=\"color:red;\">Get Spotify catalog information about an artist’s top tracks by country.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
-    "parameter": {
-      "fields": {
-        "PathParameters": [
-          {
-            "group": "PathParameters",
-            "optional": false,
-            "field": "artist_id",
-            "description": "<p>Spotify ID for Albums</p>"
-          }
-        ],
-        "Response": [
-          {
-            "group": "Response",
-            "optional": false,
-            "field": "Format",
-            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body contains</br>an object whose key is &quot;tracks&quot; and whose value is an array of up to 10 track objects in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</p>"
-          }
-        ]
-      }
-    },
-    "header": {
-      "fields": {
-        "Header": [
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "x-auth-token",
-            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "examples": [
-        {
-          "title": "Success-Response:",
-          "content": "{\n    [\n  {\n      \"availableMarkets\": [\n          \"usa,tt,wdwq,dwdw,wdw,dss\"\n      ],\n      \"_id\": \"5e834091a0d4a20f746732f7\",\n      \"duration\": 462,\n      \"name\": \"track1\",\n      \"artistId\": \"5e833a51a51d971174923f17\",\n      \"albumId\": \"5e833b412b9d7718a491c850\",\n      \"discNumber\": 1,\n      \"explicit\": false,\n      \"type\": \"Track\",\n      \"acousticness\": 10,\n       \"danceability\": 23,\n       \"energy\": 100,\n       \"instrumentalness\": 4,\n       \"key\": 90,\n       \"liveness\": 25,\n       \"loudness\": 70,\n       \"mode\": 56,\n       \"speechiness\": 67,\n       \"tempo\": 76,\n       \"timeSignature\": \"2020-03-31T13:07:29.395Z\",\n       \"valence\": 70,\n       \"like\": 0,\n       \"__v\": 0\n   },\n   {\n       \"availableMarkets\": [\n           \"usa,tt,wdwq,dwdw,wdw,dss\"\n       ],\n       \"_id\": \"5e834255a0d4a20f74673300\",\n       \"duration\": 462,\n       \"name\": \"track1\",\n       \"artistId\": \"5e833a51a51d971174923f17\",\n       \"albumId\": \"5e833b412b9d7718a491c850\",\n       \"discNumber\": 1,\n       \"explicit\": false,\n       \"type\": \"Track\",\n       \"acousticness\": 10,\n       \"danceability\": 23,\n       \"energy\": 100,\n       \"instrumentalness\": 4,\n       \"key\": 90,\n       \"liveness\": 25,\n       \"loudness\": 70,\n       \"mode\": 56,\n       \"speechiness\": 67,\n       \"tempo\": 76,\n       \"timeSignature\": \"2020-03-31T13:15:01.821Z\",\n       \"valence\": 70,\n       \"like\": 0,\n       \"__v\": 0\n   },\n   {\n       \"availableMarkets\": [\n           \"usa,tt,wdwq,dwdw,wdw,dss\"\n       ],\n       \"_id\": \"5e834258a0d4a20f74673305\",\n       \"duration\": 462,\n       \"name\": \"track1\",\n       \"artistId\": \"5e833a51a51d971174923f17\",\n       \"albumId\": \"5e833b412b9d7718a491c850\",\n       \"discNumber\": 1,\n       \"explicit\": false,\n       \"type\": \"Track\",\n       \"acousticness\": 10,\n       \"danceability\": 23,\n       \"energy\": 100,\n       \"instrumentalness\": 4,\n       \"key\": 90,\n       \"liveness\": 25,\n       \"loudness\": 70,\n       \"mode\": 56,\n       \"speechiness\": 67,\n       \"tempo\": 76,\n       \"timeSignature\": \"2020-03-31T13:15:04.155Z\",\n       \"valence\": 70,\n       \"like\": 0,\n       \"__v\": 0\n   }\n]\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
-    "groupTitle": "Artist"
-  },
-  {
-    "type": "get",
-    "url": "/Artists/{artist_id}/top-tracks",
+    "url": "/Artists/:artist_id/top-tracks",
     "title": "Get an Artist's Top Tracks",
     "name": "Get_an_Artist's_Top_Tracks",
     "group": "Artist",
@@ -706,13 +654,65 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
+    "groupTitle": "Artist"
+  },
+  {
+    "type": "get",
+    "url": "/Artists/{artist_id}/tracks",
+    "title": "Get an Artist's Tracks",
+    "name": "Get_an_Artist's_Top_Tracks",
+    "group": "Artist",
+    "description": "<p style=\"color:red;\">Get Spotify catalog information about an artist’s top tracks by country.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "x-auth-token",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "PathParameters": [
+          {
+            "group": "PathParameters",
+            "optional": false,
+            "field": "artist_id",
+            "description": "<p>Spotify ID for Albums</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body contains</br>an object whose key is &quot;tracks&quot; and whose value is an array of up to 10 track objects in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    [\n  {\n      \"availableMarkets\": [\n          \"usa,tt,wdwq,dwdw,wdw,dss\"\n      ],\n      \"_id\": \"5e834091a0d4a20f746732f7\",\n      \"duration\": 462,\n      \"name\": \"track1\",\n      \"artistId\": \"5e833a51a51d971174923f17\",\n      \"albumId\": \"5e833b412b9d7718a491c850\",\n      \"discNumber\": 1,\n      \"explicit\": false,\n      \"type\": \"Track\",\n      \"acousticness\": 10,\n       \"danceability\": 23,\n       \"energy\": 100,\n       \"instrumentalness\": 4,\n       \"key\": 90,\n       \"liveness\": 25,\n       \"loudness\": 70,\n       \"mode\": 56,\n       \"speechiness\": 67,\n       \"tempo\": 76,\n       \"timeSignature\": \"2020-03-31T13:07:29.395Z\",\n       \"valence\": 70,\n       \"like\": 0,\n       \"__v\": 0\n   },\n   {\n       \"availableMarkets\": [\n           \"usa,tt,wdwq,dwdw,wdw,dss\"\n       ],\n       \"_id\": \"5e834255a0d4a20f74673300\",\n       \"duration\": 462,\n       \"name\": \"track1\",\n       \"artistId\": \"5e833a51a51d971174923f17\",\n       \"albumId\": \"5e833b412b9d7718a491c850\",\n       \"discNumber\": 1,\n       \"explicit\": false,\n       \"type\": \"Track\",\n       \"acousticness\": 10,\n       \"danceability\": 23,\n       \"energy\": 100,\n       \"instrumentalness\": 4,\n       \"key\": 90,\n       \"liveness\": 25,\n       \"loudness\": 70,\n       \"mode\": 56,\n       \"speechiness\": 67,\n       \"tempo\": 76,\n       \"timeSignature\": \"2020-03-31T13:15:01.821Z\",\n       \"valence\": 70,\n       \"like\": 0,\n       \"__v\": 0\n   },\n   {\n       \"availableMarkets\": [\n           \"usa,tt,wdwq,dwdw,wdw,dss\"\n       ],\n       \"_id\": \"5e834258a0d4a20f74673305\",\n       \"duration\": 462,\n       \"name\": \"track1\",\n       \"artistId\": \"5e833a51a51d971174923f17\",\n       \"albumId\": \"5e833b412b9d7718a491c850\",\n       \"discNumber\": 1,\n       \"explicit\": false,\n       \"type\": \"Track\",\n       \"acousticness\": 10,\n       \"danceability\": 23,\n       \"energy\": 100,\n       \"instrumentalness\": 4,\n       \"key\": 90,\n       \"liveness\": 25,\n       \"loudness\": 70,\n       \"mode\": 56,\n       \"speechiness\": 67,\n       \"tempo\": 76,\n       \"timeSignature\": \"2020-03-31T13:15:04.155Z\",\n       \"valence\": 70,\n       \"like\": 0,\n       \"__v\": 0\n   }\n]\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
     "type": "get",
     "url": "/Artists/{id}/tracks_ratio",
-    "title": "Get an Artist's radio ratio",
+    "title": "Get an Artist's radio  (not implemented)",
     "name": "Get_an_Artist's_radio_ratio",
     "group": "Artist",
     "description": "<p style=\"color:red;\">Get alot of tracks belongs to this artist or tracks in the same artist's genre .</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
@@ -749,13 +749,13 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
     "type": "get",
     "url": "/recommendations",
-    "title": "Get Recommendations Based on Seeds",
+    "title": "Get Recommendations Based on Seeds  (not implemented yet)",
     "name": "Get_Recommendations_Based_on_Seeds",
     "group": "Browse",
     "description": "<p style=\"color:red;\">Create a playlist-style listening experience based on seed artists, tracks and genres.</p> </br> <p>Recommendations are generated based on the available information for a given seed entity and matched against similar artists and tracks.</br></br> If there is sufficient information about the provided seeds, a list of tracks will be returned together with pool size details.</br></br> For artists and tracks that are very new or obscure there might not be enough data to generate a list of tracks. </p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
@@ -834,7 +834,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -886,13 +886,13 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
     "type": "get",
     "url": "/browse/categories/{category_id}/playlists",
-    "title": "Get a Category's Playlists",
+    "title": "Get a Category's Playlists  (not implemented yet)",
     "name": "Get_a_Category's_Playlists",
     "group": "Browse",
     "description": "<p style=\"color:red;\">Get a list of Spotify playlists tagged with a particular category.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
@@ -949,7 +949,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -993,13 +993,13 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
     "type": "get",
     "url": "/browse/featured-playlists",
-    "title": "Get a List of Featured Playlists",
+    "title": "Get a List of Featured Playlists       (not implemented yet)",
     "name": "Get_a_List_of_Featured_Playlists",
     "group": "Browse",
     "description": "<p style=\"color:red;\">Get a list of categories used to tag items in Spotify (on, for example, the Spotify player’s “Browse” tab).</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
@@ -1054,7 +1054,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1064,18 +1064,6 @@ define({ "api": [
     "name": "Get_a_List_of_New_Releases",
     "group": "Browse",
     "description": "<p style=\"color:red;\">Get a list of new album releases featured in Spotify (shown, for example, on a Spotify player’s “Browse” tab).</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
-    "header": {
-      "fields": {
-        "Header": [
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "x-auth-token",
-            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
-          }
-        ]
-      }
-    },
     "success": {
       "examples": [
         {
@@ -1098,7 +1086,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1130,7 +1118,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1162,7 +1150,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1194,7 +1182,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1238,13 +1226,13 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
     "type": "get",
     "url": "/me/following/contains",
-    "title": "Check if Current User Follows Artists or Users",
+    "title": "Check if Current User Follows Artists or Users  (not implement yet)",
     "name": "Check_if_Current_User_Follows_Artists_or_Users",
     "group": "Follow",
     "description": "<p style=\"color:red;\">Check to see if the current user is following one or more artists or other Spotify users.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
@@ -1287,7 +1275,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1338,13 +1326,13 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
     "type": "put",
     "url": "/me/following",
-    "title": "Follow Artists or Users",
+    "title": "Follow Artists or Users         (not implemented yet)",
     "name": "Follow_Artists_or_Users",
     "group": "Follow",
     "description": "<p style=\"color:red;\">Add the current user as a follower of one or more artists or other Spotify users.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
@@ -1401,7 +1389,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1458,12 +1446,12 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
     "type": "get",
-    "url": "/me/following?type=artist",
+    "url": "/me/followingArtist",
     "title": "Get User's Followed Artists",
     "name": "Get_User's_Followed_Artists",
     "group": "Follow",
@@ -1486,20 +1474,8 @@ define({ "api": [
           {
             "group": "QueryParameters",
             "optional": false,
-            "field": "type",
-            "description": "<p>Required. The ID type: currently only artist is supported.</p>"
-          },
-          {
-            "group": "QueryParameters",
-            "optional": false,
             "field": "limit",
             "description": "<p>Optional. The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.</p>"
-          },
-          {
-            "group": "QueryParameters",
-            "optional": false,
-            "field": "after",
-            "description": "<p>Optional. The last artist ID retrieved from the previous request.</p>"
           }
         ],
         "Response": [
@@ -1513,13 +1489,13 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
     "type": "delete",
     "url": "/me/following",
-    "title": "Unfollow Artists or Users",
+    "title": "Unfollow Artists or Users  (not implemented yet)",
     "name": "Unfollow_Artists_or_Users",
     "group": "Follow",
     "description": "<p style=\"color:red;\">Remove the current user as a follower of one or more artists or other Spotify users.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
@@ -1576,7 +1552,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1619,7 +1595,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1647,7 +1623,7 @@ define({ "api": [
           {
             "group": "QueryParameters",
             "optional": false,
-            "field": "ids",
+            "field": "albums_ids.split",
             "description": "<p>Required. A comma-separated list of the Spotify IDs for the albums. Maximum: 50 IDs.</p>"
           }
         ],
@@ -1662,7 +1638,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -1690,7 +1666,7 @@ define({ "api": [
           {
             "group": "QueryParameters",
             "optional": false,
-            "field": "ids",
+            "field": "tracks_ids",
             "description": "<p>Required. A comma-separated list of the Spotify IDs for the tracks. Maximum: 50 IDs.</p>"
           }
         ],
@@ -1705,7 +1681,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -1741,12 +1717,6 @@ define({ "api": [
             "optional": false,
             "field": "offset",
             "description": "<p>Optional. The index of the first object to return.</br> Default: 0 (i.e., the first object). Use with limit to get the next set of objects.</p>"
-          },
-          {
-            "group": "QueryParameters",
-            "optional": false,
-            "field": "market",
-            "description": "<p>Optional. An ISO 3166-1 alpha-2 country code</br> or the string from_token. Provide this parameter if you want to apply Track Relinking.</p>"
           }
         ],
         "Response": [
@@ -1760,7 +1730,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -1796,12 +1766,6 @@ define({ "api": [
             "optional": false,
             "field": "offset",
             "description": "<p>Optional. The index of the first object to return.</br> Default: 0 (i.e., the first object). Use with limit to get the next set of objects.</p>"
-          },
-          {
-            "group": "QueryParameters",
-            "optional": false,
-            "field": "market",
-            "description": "<p>Optional. An ISO 3166-1 alpha-2 country code or the string from_token.</br> Provide this parameter if you want to apply Track Relinking.</p>"
           }
         ],
         "Response": [
@@ -1815,13 +1779,13 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
     "type": "delete",
     "url": "/me/albums",
-    "title": "Remove Albums for Current User",
+    "title": "Remove Albums for Current User   (not implemented yet)",
     "name": "Remove_Albums_for_Current_User",
     "group": "Library",
     "description": "<p style=\"color:red;\">Remove one or more albums from the current user’s ‘Your Music’ library.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
@@ -1864,13 +1828,13 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
     "type": "delete",
     "url": "/me/tracks",
-    "title": "Remove User's Saved Tracks",
+    "title": "Remove User's Saved Tracks      (not implemented yet)",
     "name": "Remove_User's_Saved_Tracks",
     "group": "Library",
     "description": "<p style=\"color:red;\">Remove one or more tracks from the current user’s ‘Your Music’ library.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
@@ -1921,7 +1885,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -1964,13 +1928,13 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
     "type": "put",
     "url": "/me/tracks",
-    "title": "Save Tracks for User",
+    "title": "Save Tracks for User       (not implemented yet)",
     "name": "Save_Tracks_for_User",
     "group": "Library",
     "description": "<p style=\"color:red;\"> Save one or more tracks to the current user’s ‘Your Music’ library.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
@@ -2021,13 +1985,13 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
     "type": "get",
     "url": "/me/top/{type}",
-    "title": "Get a User's Top Artists and Tracks",
+    "title": "Get a User's Top Artists and Tracks        (not implemented yet)",
     "name": "Get_a_User's_Top_Artists_and_Tracks",
     "group": "Personalization",
     "description": "<p style=\"color:red;\">Get the current user’s top artists or tracks based on calculated affinity.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
@@ -2084,7 +2048,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Personalization"
   },
   {
@@ -2141,12 +2105,12 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
     "type": "get",
-    "url": "/player/recently-played",
+    "url": "/me/player/recently-played",
     "title": "Get Current User's Recently Played Tracks",
     "name": "Get_Current_User's_Recently_Played_Tracks.",
     "group": "Player",
@@ -2196,13 +2160,13 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
     "type": "get",
     "url": "/player",
-    "title": "Get Information About The User's Current Playback",
+    "title": "Get Information About The User's Current Playback  (not implemented yet)",
     "name": "Get_Information_About_The_User's_Current_Playback",
     "group": "Player",
     "description": "<p style=\"color:red;\">Get information about the user’s current playback state, including track, track progress, and active device.</br> Optional parameters can be specified in the query string to filter and sort the response.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
@@ -2239,12 +2203,12 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
     "type": "get",
-    "url": "/player/currently-playing",
+    "url": "/me/player/currently-playing",
     "title": "Get the User's Currently Playing Track",
     "name": "Get_the_User's_Currently_Playing_Track",
     "group": "Player",
@@ -2283,7 +2247,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2327,12 +2291,12 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
     "type": "PUT",
-    "url": "/player/pause",
+    "url": "/me/player/pause",
     "title": "Pause a User's Playback",
     "name": "Pause_a_User's_Playback",
     "group": "Player",
@@ -2362,13 +2326,13 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
     "type": "PUT",
     "url": "/player",
-    "title": "Seek To Position In Currently Playing Track",
+    "title": "Seek To Position In Currently Playing Track       (not implemented yet)",
     "name": "Seek_To_Position_In_Currently_Playing_Track",
     "group": "Player",
     "description": "<p style=\"color:red;\">Seeks to the given position in the user’s currently playing track.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
@@ -2405,7 +2369,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2448,12 +2412,12 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
     "type": "POST",
-    "url": "/player/next",
+    "url": "/me/player/next-playing",
     "title": "Skip User’s Playback To Next Track",
     "name": "Skip_User’s_Playback_To_Next_Track",
     "group": "Player",
@@ -2492,12 +2456,12 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
     "type": "POST",
-    "url": "/player/previous",
+    "url": "/me/player/prev-playing",
     "title": "Skip User’s Playback To Previous Track",
     "name": "Skip_User’s_Playback_To_Previous_Track",
     "group": "Player",
@@ -2536,12 +2500,12 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
     "type": "PUT",
-    "url": "/player/play",
+    "url": "/me/player/play",
     "title": "Start/Resume a User's Playback",
     "name": "Start/Resume_a_User's_Playback",
     "group": "Player",
@@ -2571,7 +2535,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2614,7 +2578,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2680,7 +2644,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -2768,7 +2732,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -2834,7 +2798,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -2877,7 +2841,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -2921,7 +2885,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -2987,7 +2951,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3047,7 +3011,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3090,7 +3054,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3153,7 +3117,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3241,7 +3205,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3308,7 +3272,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3373,7 +3337,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3425,7 +3389,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3474,7 +3438,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3523,7 +3487,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3572,7 +3536,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Search"
   },
   {
@@ -3615,7 +3579,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -3667,7 +3631,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -3719,7 +3683,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -3771,7 +3735,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -3823,7 +3787,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -3875,7 +3839,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -3919,7 +3883,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Users_Profile"
   },
   {
@@ -3979,7 +3943,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Users_Profile"
   },
   {
@@ -4007,7 +3971,7 @@ define({ "api": [
           {
             "group": "path Parameters",
             "optional": false,
-            "field": "id",
+            "field": "track_id",
             "description": "<p>require.require.  track Spotify ID .</p>"
           }
         ],
@@ -4022,7 +3986,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "like"
   },
   {
@@ -4050,7 +4014,7 @@ define({ "api": [
           {
             "group": "path Parameters",
             "optional": false,
-            "field": "id",
+            "field": "track_id",
             "description": "<p>require.  track Spotify ID .</p>"
           }
         ],
@@ -4065,7 +4029,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "like"
   }
 ] });
