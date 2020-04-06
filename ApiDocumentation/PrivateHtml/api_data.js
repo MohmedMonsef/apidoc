@@ -229,7 +229,7 @@ define({ "api": [
     "groupTitle": "Account"
   },
   {
-    "type": "POST",
+    "type": "GET",
     "url": "/auth/facebook",
     "title": "Login to Spotify with Facebook",
     "name": "Login_to_Spotify_with_Facebook",

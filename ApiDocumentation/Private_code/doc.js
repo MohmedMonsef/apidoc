@@ -92,7 +92,7 @@
  */
 
 /**
- * @api {POST} /auth/facebook Login to Spotify with Facebook
+ * @api {GET} /auth/facebook Login to Spotify with Facebook
  * @apiName Login to Spotify with Facebook
  * @apiGroup Account
  * @apiDescription
