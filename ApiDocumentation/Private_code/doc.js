@@ -310,7 +310,7 @@
  */
 
  /**
- * @api {POST} /tracks/android/{track_id} get track for android
+ * @api {GET} /tracks/android/{track_id} get track for android
  * @apiName get track file for android
  * @apiGroup Track
  * @apiDescription
