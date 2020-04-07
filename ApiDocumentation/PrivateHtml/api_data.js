@@ -1,7 +1,7 @@
 define({ "api": [
   {
     "type": "post",
-    "url": "/me/ToArtist",
+    "url": "api/me/ToArtist",
     "title": "Change User Type to Artist",
     "name": "Change_User_Type_to_Artist",
     "group": "Account",
@@ -65,7 +65,7 @@ define({ "api": [
   },
   {
     "type": "POST",
-    "url": "/sign_up",
+    "url": "api/sign_up",
     "title": "Create a new account",
     "name": "Create_a_new_account",
     "group": "Account",
@@ -153,7 +153,7 @@ define({ "api": [
   },
   {
     "type": "POST",
-    "url": "/login/forgetpassword",
+    "url": "api/login/forgetpassword",
     "title": "Forget Password",
     "name": "Forget_Password",
     "group": "Account",
@@ -184,7 +184,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/login",
+    "url": "api/login",
     "title": "Login to Spotify",
     "name": "Login_to_Spotify",
     "group": "Account",
@@ -230,7 +230,7 @@ define({ "api": [
   },
   {
     "type": "GET",
-    "url": "/auth/facebook",
+    "url": "api/auth/facebook",
     "title": "Login to Spotify with Facebook",
     "name": "Login_to_Spotify_with_Facebook",
     "group": "Account",
@@ -262,7 +262,7 @@ define({ "api": [
   },
   {
     "type": "POST",
-    "url": "/auth/facebookAndroid",
+    "url": "api/auth/facebookAndroid",
     "title": "Login to Spotify with Facebook for android native app",
     "name": "Login_to_Spotify_with_Facebook_android",
     "group": "Account",
@@ -326,7 +326,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "me/logout",
+    "url": "api/me/logout",
     "title": "logout",
     "name": "logout",
     "group": "Account",
@@ -369,7 +369,7 @@ define({ "api": [
   },
   {
     "type": "PUT",
-    "url": "/promote",
+    "url": "api/promote",
     "title": "make user premium",
     "name": "make_user_premium",
     "group": "Account",
@@ -412,7 +412,7 @@ define({ "api": [
   },
   {
     "type": "PUT",
-    "url": "/Artist/update",
+    "url": "api/Artist/update",
     "title": "Change a Artist's Details",
     "name": "Change_a_Artist's_Details",
     "group": "Artist",
@@ -484,7 +484,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/createQueue/:playlist_id/:trackId",
+    "url": "api/createQueue/:playlist_id/:trackId",
     "title": "",
     "name": "Create_queue",
     "group": "Player",
@@ -541,7 +541,7 @@ define({ "api": [
   },
   {
     "type": "PUT",
-    "url": "/playlists/{playlist_id}",
+    "url": "api/playlists/{playlist_id}",
     "title": "add collaborator",
     "name": "Change_a_add_collaborator",
     "group": "Playlist",
@@ -599,7 +599,7 @@ define({ "api": [
   },
   {
     "type": "GET",
-    "url": "/tracks/android/{track_id}",
+    "url": "api/tracks/android/{track_id}",
     "title": "get track for android",
     "name": "get_track_file_for_android",
     "group": "Track",
@@ -651,7 +651,7 @@ define({ "api": [
   },
   {
     "type": "POST",
-    "url": "/artists/me/albums/{album_id}/tracks",
+    "url": "api/artists/me/albums/{album_id}/tracks",
     "title": "upload tracks",
     "name": "upload_tracks_to_album",
     "group": "Track",
@@ -754,7 +754,7 @@ define({ "api": [
   },
   {
     "type": "DELETE",
-    "url": "/remove",
+    "url": "api/remove",
     "title": "delete Current User's Profile",
     "name": "delete_Current_User's_Profile",
     "group": "Users_Profile",
@@ -798,7 +798,7 @@ define({ "api": [
   },
   {
     "type": "PUT",
-    "url": "/me/update",
+    "url": "api/me/update",
     "title": "update Current User's Profile",
     "name": "update_Current_User's_Profile",
     "group": "Users_Profile",

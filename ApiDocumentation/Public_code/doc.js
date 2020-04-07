@@ -1,7 +1,7 @@
 //Album
 
 /**
- * @api {get} /albums/:album_id  Get an Album
+ * @api {get} api/albums/:album_id  Get an Album
  * @apiName Get an Album
  * @apiGroup Album
  * @apiDescription
@@ -25,7 +25,7 @@
  *
  */
 /**
- * @api {get} /albums/:id/tracks Get an Album's Tracks
+ * @api {get} api/albums/:id/tracks Get an Album's Tracks
  * @apiName Get an Album's Tracks
  * @apiGroup Album
  * @apiDescription
@@ -50,7 +50,7 @@
  */
 
 /**
- * @api {get} /albums Get Several Albums
+ * @api {get} api/albums Get Several Albums
  * @apiName Get Several Albums
  * @apiGroup Album
  * @apiDescription
@@ -78,7 +78,7 @@
 
 //new
 /**
- * @api {put} Artists/me/Albums Create Album
+ * @api {put} api/Artists/me/Albums Create Album
  * @apiName Create Album
  * @apiGroup Artist
  * @apiDescription
@@ -121,7 +121,7 @@
  *
  */
 /**
- * @api {get} /Artists/{id}/tracks_ratio Get an Artist's radio  (not implemented)
+ * @api {get} api/Artists/{id}/tracks_ratio Get an Artist's radio  (not implemented)
  * @apiName Get an Artist's radio ratio
  * @apiGroup Artist
  * @apiDescription
@@ -143,7 +143,7 @@
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains</br>an object whose key is "tracks" and whose value is an array of up to 10 track objects in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
  */
 /**
- * @api {put} Artists/me/Albums/{album_id}/tracks Create Track   (in progress)
+ * @api {put} api/Artists/me/Albums/{album_id}/tracks Create Track   (in progress)
  * @apiName Create Track
  * @apiGroup Artist
  * @apiDescription
@@ -199,7 +199,7 @@
  */
 
 /**
- * @api {delete} Artists/me/Albums/{id}/tracks Delete Artist's Track   (Not implemented yet)
+ * @api {delete} api/Artists/me/Albums/{id}/tracks Delete Artist's Track   (Not implemented yet)
  * @apiName Delete Artist's Track
  * @apiGroup Artist
  * @apiDescription
@@ -223,7 +223,7 @@
 //end new
 
 /**
- * @api {get} /Artists/:artist_id Get an Artist
+ * @api {get} api/Artists/:artist_id Get an Artist
  * @apiName Get an Artist
  * @apiGroup Artist
  * @apiDescription
@@ -266,7 +266,7 @@
  *
  */
 /**
- * @api {get} /Artists/:artist_id/Albums Get an Artist's Albums
+ * @api {get} api/Artists/:artist_id/Albums Get an Artist's Albums
  * @apiName Get an Artist's Albums
  * @apiGroup Artist
  * @apiDescription
@@ -332,7 +332,7 @@
  */
 
 /**
- * @api {get} /Artists/:artist_id/top-tracks Get an Artist's Top Tracks
+ * @api {get} api/Artists/:artist_id/top-tracks Get an Artist's Top Tracks
  * @apiName Get an Artist's Top Tracks
  * @apiGroup Artist
  * @apiDescription
@@ -443,7 +443,7 @@
  */
 
 /**
- * @api {get} /Artists/{artist_id}/tracks Get an Artist's Tracks
+ * @api {get} api/Artists/{artist_id}/tracks Get an Artist's Tracks
  * @apiName Get an Artist's Top Tracks
  * @apiGroup Artist
  * @apiDescription
@@ -550,7 +550,7 @@
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains</br>an object whose key is "tracks" and whose value is an array of up to 10 track objects in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
  */
 /**
- * @api {get} /Artists/:artist_id/related-artists Get an Artist's Related Artists
+ * @api {get} api/Artists/:artist_id/related-artists Get an Artist's Related Artists
  * @apiName Get an Artist's Related Artists
  * @apiGroup Artist
  * @apiDescription
@@ -715,7 +715,7 @@
  */
 
 /**
- * @api {get} /Artists Get Several Artists
+ * @api {get} api/Artists Get Several Artists
  * @apiName Get Several Artists
  * @apiGroup Artist
  * @apiDescription
@@ -816,7 +816,7 @@
 //Browse
 
 /**
- * @api {get} /browse/categories/{category_id} Get a Category
+ * @api {get} api/browse/categories/{category_id} Get a Category
  * @apiName Get a Category
  * @apiGroup Browse
  * @apiDescription
@@ -846,7 +846,7 @@
  */
 
 /**
- * @api {get} /browse/categories/{category_id}/playlists Get a Category's Playlists  (not implemented yet)
+ * @api {get} api/browse/categories/{category_id}/playlists Get a Category's Playlists  (not implemented yet)
  * @apiName Get a Category's Playlists
  * @apiGroup Browse
  * @apiDescription
@@ -869,7 +869,7 @@
  */
 
 /**
- * @api {get} /browse/categories Get a List of Categories  
+ * @api {get} api/browse/categories Get a List of Categories  
  * @apiName Get a List of Categories
  * @apiGroup Browse
  * @apiDescription
@@ -924,7 +924,7 @@
  */
 
 /**
- * @api {get} /browse/featured-playlists Get a List of Featured Playlists       (not implemented yet)
+ * @api {get} api/browse/featured-playlists Get a List of Featured Playlists       (not implemented yet)
  * @apiName Get a List of Featured Playlists
  * @apiGroup Browse
  * @apiDescription
@@ -945,7 +945,7 @@
  * @apiParam (Response)  Format  On success, </br>the HTTP status code in the response header is 200 OK</br> and the response body contains a message and a playlists object.</br> The playlists object contains an array of simplified playlist objects</br> (wrapped in a paging object) in JSON format. On error,</br> the header status code is an error code and the response body contains an error object.</br></br></br></br> Once you have retrieved the list of playlist objects,</br> you can use Get a Playlist and Get a Playlist’s Tracks to drill down further.
  */
 /**
- * @api {get} /browse/recently-playing Get a List of recently playing Playlists,artists,albums
+ * @api {get} api/browse/recently-playing Get a List of recently playing Playlists,artists,albums
  * @apiName Get a List of recently-playing
  * @apiGroup Browse
  * @apiDescription
@@ -1009,7 +1009,7 @@
  */
 
 /**
- * @api {get} /browse/new-releases Get a List of New Releases
+ * @api {get} api/browse/new-releases Get a List of New Releases
  * @apiName Get a List of New Releases
  * @apiGroup Browse
  * @apiDescription
@@ -1116,7 +1116,7 @@
  */
 
 /**
- * @api {get} /browse/popular-albums Get a List of popular albums
+ * @api {get} api/browse/popular-albums Get a List of popular albums
  * @apiName Get a List of popular albums
  * @apiGroup Browse
  * @apiDescription
@@ -1222,7 +1222,7 @@
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains a message and analbums object.</br> The albums object contains an array of simplified album objects (wrapped in a paging object) in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</br></br></br> Once you have retrieved the list, you can use Get an Album’s Tracks to drill down further.</br></br> The results are returned in an order reflected within the Spotify clients, and therefore may not be ordered by date.
  */
 /**
- * @api {get} /browse/popular-artists Get a List of popular artists 
+ * @api {get} api/browse/popular-artists Get a List of popular artists 
  * @apiName Get a List of popular artists 
  * @apiGroup Browse
  * @apiDescription
@@ -1279,7 +1279,7 @@
  */
 
 /**
- * @api {get} /browse/popular-playlists Get a List of popular playlists
+ * @api {get} api/browse/popular-playlists Get a List of popular playlists
  * @apiName Get a List of popular playlists 
  * @apiGroup Browse
  * @apiDescription
@@ -1355,7 +1355,7 @@
  */
 
 /**
- * @api {get} /recommendations Get Recommendations Based on Seeds  (not implemented yet)
+ * @api {get} api/recommendations Get Recommendations Based on Seeds  (not implemented yet)
  * @apiName Get Recommendations Based on Seeds
  * @apiGroup Browse
  * @apiDescription
@@ -1390,7 +1390,7 @@
 //Follow
 
 /**
- * @api {get} /me/following/contains Check if Current User Follows Artists or Users  (not implement yet)
+ * @api {get} api/me/following/contains Check if Current User Follows Artists or Users  (not implement yet)
  * @apiName Check if Current User Follows Artists or Users
  * @apiGroup Follow
  * @apiDescription
@@ -1412,7 +1412,7 @@
  */
 
 /**
- * @api {get} /playlists/{playlist_id}/followers/contains  Check if Users Follow a Playlist (Not implemented yet)
+ * @api {get} api/playlists/{playlist_id}/followers/contains  Check if Users Follow a Playlist (Not implemented yet)
  * @apiName Check if Users Follow a Playlist
  * @apiGroup Follow
  * @apiDescription
@@ -1435,7 +1435,7 @@
  */
 
 /**
- * @api {put} /me/following Follow Artists or Users         (not implemented yet)
+ * @api {put} api/me/following Follow Artists or Users         (not implemented yet)
  * @apiName Follow Artists or Users
  * @apiGroup Follow
  * @apiDescription
@@ -1457,7 +1457,7 @@
  */
 
 /**
- * @api {PUT} /playlists/{playlist_id}/followers Follow a Playlist      
+ * @api {PUT} api/playlists/{playlist_id}/followers Follow a Playlist      
  * @apiName Follow a Playlist
  * @apiGroup Follow
  * @apiDescription
@@ -1481,7 +1481,7 @@
 
 
 /**
- * @api {get} /me/followingArtist Get User's Followed Artists
+ * @api {get} api/me/followingArtist Get User's Followed Artists
  * @apiName Get User's Followed Artists
  * @apiGroup Follow
  * @apiDescription
@@ -1501,7 +1501,7 @@
  */
 
 /**
- * @api {delete} /me/following Unfollow Artists or Users  (not implemented yet)
+ * @api {delete} api/me/following Unfollow Artists or Users  (not implemented yet)
  * @apiName Unfollow Artists or Users
  * @apiGroup Follow
  * @apiDescription
@@ -1524,7 +1524,7 @@
  */
 //like Tracks
 /**
- * @api {put} /me/like/:track_id like track   
+ * @api {put} api/me/like/:track_id like track   
  * @apiName like track
  * @apiGroup like
  * @apiDescription
@@ -1540,7 +1540,7 @@
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 No Content and the response body is empty.</br> On error, the header status code is an error code and the response body contains an error object.
  */
 /**
- * @api {delete} /me/unlike/:track_id unlike track
+ * @api {delete} api/me/unlike/:track_id unlike track
  * @apiName unlike track
  * @apiGroup like
  * @apiDescription
@@ -1559,7 +1559,7 @@
 //public
 
 /**
- * @api {DELETE} /playlists/{playlist_id}/followers Unfollow a Playlist
+ * @api {DELETE} api/playlists/{playlist_id}/followers Unfollow a Playlist
  * @apiName Unfollow a Playlist
  * @apiGroup Follow
  * @apiDescription
@@ -1580,7 +1580,7 @@
 //Library
 
 /**
- * @api {get} /me/albums/contains Check User's Saved Albums   
+ * @api {get} api/me/albums/contains Check User's Saved Albums   
  * @apiName Check User's Saved Albums
  * @apiGroup Library
  * @apiDescription
@@ -1601,7 +1601,7 @@
  */
 
 /**
- * @api {get} /me/tracks/contains  Check User's Saved Tracks       
+ * @api {get} api/me/tracks/contains  Check User's Saved Tracks       
  * @apiName Check User's Saved Tracks
  * @apiGroup Library
  * @apiDescription
@@ -1621,7 +1621,7 @@
  */
 
 /**
- * @api {get} /me/albums Get Current User's Saved Albums
+ * @api {get} api/me/albums Get Current User's Saved Albums
  * @apiName Get Current User's Saved Albums
  * @apiGroup Library
  * @apiDescription
@@ -1640,7 +1640,7 @@
  */
 
 /**
- * @api {get} /me/tracks Get a User's Saved Tracks
+ * @api {get} api/me/tracks Get a User's Saved Tracks
  * @apiName Get a User's Saved Tracks
  * @apiGroup Library
  * @apiDescription
@@ -1662,7 +1662,7 @@
 
 
 /**
- * @api {delete} /me/albums Remove Albums for Current User   (not implemented yet)
+ * @api {delete} api/me/albums Remove Albums for Current User   (not implemented yet)
  * @apiName Remove Albums for Current User
  * @apiGroup Library
  * @apiDescription
@@ -1682,7 +1682,7 @@
  */
 
 /**
- * @api {delete} /me/tracks Remove User's Saved Tracks      (not implemented yet)
+ * @api {delete} api/me/tracks Remove User's Saved Tracks      (not implemented yet)
  * @apiName Remove User's Saved Tracks
  * @apiGroup Library
  * @apiDescription
@@ -1703,7 +1703,7 @@
  */
 
 /**
- * @api {put} /me/Albums Save Albums for Current User
+ * @api {put} api/me/Albums Save Albums for Current User
  * @apiName Save Albums for Current User
  * @apiGroup Library
  * @apiDescription
@@ -1723,7 +1723,7 @@
  */
 
 /**
- * @api {put} /me/tracks Save Tracks for User       (not implemented yet)
+ * @api {put} api/me/tracks Save Tracks for User       (not implemented yet)
  * @apiName Save Tracks for User
  * @apiGroup Library
  * @apiDescription
@@ -1747,7 +1747,7 @@
 //Personalization
 
 /**
- * @api {get} /me/top/{type} Get a User's Top Artists and Tracks        (not implemented yet)
+ * @api {get} api/me/top/{type} Get a User's Top Artists and Tracks        (not implemented yet)
  * @apiName Get a User's Top Artists and Tracks
  * @apiGroup Personalization
  * @apiDescription
@@ -1771,7 +1771,7 @@
 
 
 /**
- * @api {get} /player Get Information About The User's Current Playback  (not implemented yet)
+ * @api {get} api/player Get Information About The User's Current Playback  (not implemented yet)
  * @apiName Get Information About The User's Current Playback
  * @apiGroup Player
  * @apiDescription
@@ -1790,7 +1790,7 @@
  * @apiParam (Response) Format A successful request will return a 200 OK response code with a json payload that contains information about the current playback. The information returned is for the last known state, which means an inactive device could be returned if it was the last one to execute playback. When no available devices are found, the request will return a 200 OK response but with no data populated.
  */
 /**
- * @api {get} /me/player/currently-playing Get the User's Currently Playing Track
+ * @api {get} api/me/player/currently-playing Get the User's Currently Playing Track
  * @apiName Get the User's Currently Playing Track
  * @apiGroup Player
  * @apiDescription
@@ -1856,7 +1856,7 @@
  * @apiParam (Response) Format A successful request will return a 200 OK response code with a json payload that contains information about the currently playing track and context (see below). The information returned is for the last known state, which means an inactive device could be returned if it was the last one to execute playback. When no available devices are found, the request will return a 200 OK response but with no data populated. When no track is currently playing, the request will return a 204 NO CONTENT response with no payload. If private session is enabled the response will be a 204 NO CONTENT with an empty payload.
  */
 /**
- * @api {get}/me/queue Get currently queue for this user
+ * @api {get} api/me/queue Get currently queue for this user
  * @apiName Get the User's Currently playback queue
  * @apiGroup Player
  * @apiDescription
@@ -2019,7 +2019,7 @@
  */
 
 /**
- * @api {get} /me/player/recently-played Get Current User's Recently Played Tracks
+ * @api {get} api/me/player/recently-played Get Current User's Recently Played Tracks
  * @apiName Get Current User's Recently Played Tracks.
  * @apiGroup Player
  * @apiDescription
@@ -2046,7 +2046,7 @@
  */
 
 /**
- * @api {PUT} /me/player/pause Pause a User's Playback
+ * @api {PUT} api/me/player/pause Pause a User's Playback
  * @apiName Pause a User's Playback
  * @apiGroup Player
  * @apiDescription
@@ -2066,7 +2066,7 @@
  */
 
 /**
- * @api {PUT} /player Seek To Position In Currently Playing Track       (not implemented yet)
+ * @api {PUT} api/player Seek To Position In Currently Playing Track       (not implemented yet)
  * @apiName Seek To Position In Currently Playing Track
  * @apiGroup Player
  * @apiDescription
@@ -2085,7 +2085,7 @@
  * @apiParam (Response) Format A completed request will return a 204 NO CONTENT response code, and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 404 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason.
  */
 /**
- * @api {PUT} /player/repeat Set Repeat Mode On User’s Playback
+ * @api {PUT} api/player/repeat Set Repeat Mode On User’s Playback
  * @apiName Set Repeat Mode On User’s Playback
  * @apiGroup Player
  * @apiDescription
@@ -2105,7 +2105,7 @@
  * @apiParam (Response) Format A completed request will return a 200 NO CONTENT response code, and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 400 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND 
  */
 /**
- * @api {POST} /me/player/next-playing Skip User’s Playback To Next Track
+ * @api {POST} api/me/player/next-playing Skip User’s Playback To Next Track
  * @apiName Skip User’s Playback To Next Track
  * @apiGroup Player
  * @apiDescription
@@ -2174,7 +2174,7 @@
  * @apiParam (Response) Format A completed request will return a 200 NO CONTENT response code,current playing track, and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 400 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason.
  */
 /**
- * @api {POST} /me/player/prev-playing Skip User’s Playback To Previous Track
+ * @api {POST} api/me/player/prev-playing Skip User’s Playback To Previous Track
  * @apiName Skip User’s Playback To Previous Track
  * @apiGroup Player
  * @apiDescription
@@ -2245,7 +2245,7 @@
  * @apiParam (Response) Format A completed request will return a 200 NO CONTENT response code,and current playing  track , and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 400 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason.
  */
 /**
- * @api {PUT} /me/player/play Start/Resume a User's Playback 
+ * @api {PUT} api/me/player/play Start/Resume a User's Playback 
  * @apiName Start/Resume a User's Playback 
  * @apiGroup Player
  * @apiDescription
@@ -2285,7 +2285,7 @@
  */
 
 /**
- * @api {POST} /player/add-to-queue/:playlistId/:trackId Add an Item to the User's Playback Queue
+ * @api {POST} api/player/add-to-queue/:playlistId/:trackId Add an Item to the User's Playback Queue
  * @apiName Add an Item to the User's Playback Queue
  * @apiGroup Player
  * @apiDescription
@@ -2310,7 +2310,7 @@
 //Playlist
 
 /**
- * @api {POST} /playlists/{playlist_id}/tracks Add Tracks to a Playlist
+ * @api {POST} api/playlists/{playlist_id}/tracks Add Tracks to a Playlist
  * @apiName Add Tracks to a Playlist
  * @apiGroup Playlist
  * @apiDescription
@@ -2350,7 +2350,7 @@
  */
 
 /**
- * @api {GET} /playlists/{playlist_id}/tracks Get Tracks from a Playlist
+ * @api {GET} api/playlists/{playlist_id}/tracks Get Tracks from a Playlist
  * @apiName Get Tracks from a Playlist
  * @apiGroup Playlist
  * @apiDescription
@@ -2370,7 +2370,7 @@
  */
 
 /**
- * @api {POST} /users/playlists Create a Playlist
+ * @api {POST} api/users/playlists Create a Playlist
  * @apiName Create a Playlist
  * @apiGroup Playlist
  * @apiDescription
@@ -2401,7 +2401,7 @@
  * 
  */
 /**
- * @api {PUT} /playlists/{playlist_id} Change a Playlist's Details
+ * @api {PUT} api/playlists/{playlist_id} Change a Playlist's Details
  * @apiName Change a Playlist's Details
  * @apiGroup Playlist
  * @apiDescription
@@ -2448,7 +2448,7 @@
  */
 
 /**
- * @api {get} /me/playlists Get a List of Current User's Playlists
+ * @api {get} api/me/playlists Get a List of Current User's Playlists
  * @apiName Get a List of Current User's Playlists.
  * @apiGroup Playlist
  * @apiDescription
@@ -2483,7 +2483,7 @@
  */
 
 /**
- * @api {GET}/users/{user_id}/playlists  Get a List of a User's Playlists created and followed
+ * @api {GET} api/users/{user_id}/playlists  Get a List of a User's Playlists created and followed
  * @apiName Get a List of a User's Playlists
  * @apiGroup Playlist
  * @apiDescription
@@ -2517,7 +2517,7 @@
  */
 
 /**
- * @api {GET}/playlists/{playlist_id} Get a Playlist
+ * @api {GET} api/playlists/{playlist_id} Get a Playlist
  * @apiName Get a Playlist.
  * @apiGroup Playlist
  * @apiDescription
@@ -2545,7 +2545,7 @@
  * "__v":0}
  */
 /**
- * @api {Delete} /me/delete/playlists/{playlist_id} delete a Playlist
+ * @api {Delete} api/me/delete/playlists/{playlist_id} delete a Playlist
  * @apiName delete a Playlist.
  * @apiGroup Playlist
  * @apiDescription
@@ -2565,7 +2565,7 @@
  * {"success":"Delete successfully"}
  */
 /**
- * @api {GET} /Playlist/next Get a Playlist Cover Image(not implemented yet)
+ * @api {GET} api/Playlist/next Get a Playlist Cover Image(not implemented yet)
  * @apiName Get a Playlist Cover Image
  * @apiGroup Playlist
  * @apiDescription
@@ -2579,7 +2579,7 @@
  * @apiParam (Response) Format On success, the response body contains a list of image objects in JSON format and the HTTP status code in the response header is 200 OK On error, the header status code is an error code and the response body contains an error object.
  */
 /**
- * @api {DELETE} /playlists/{playlist_id}/tracks Remove Tracks from a Playlist
+ * @api {DELETE} api/playlists/{playlist_id}/tracks Remove Tracks from a Playlist
  * @apiName Remove Tracks from a Playlist
  * @apiGroup Playlist
  * @apiDescription
@@ -2604,7 +2604,7 @@
  * @apiParam (Response) Format On success, the response body contains a snapshot_id in JSON format and the HTTP status code in the response header is 200 OK.  On error, the header status code is an error code 404 and the response body contains an error object. Trying to remove a track when you do not have the user’s authorization returns error 403 Forbidden. Attempting to use several different ways to remove tracks returns 400 Bad Request
  */
 /**
- * @api {PUT} /playlists/{playlist_id}/tracks Reorder a Playlist's Tracks
+ * @api {PUT} api/playlists/{playlist_id}/tracks Reorder a Playlist's Tracks
  * @apiName Reorder a Playlist's Tracks
  * @apiGroup Playlist
  * @apiDescription
@@ -2643,7 +2643,7 @@
  *"__v":38}
  */
 /**
- * @api {PUT}/playlists/{playlist_id}/tracks Replace a Playlist's Tracks (Not implemented yet)
+ * @api {PUT} api/playlists/{playlist_id}/tracks Replace a Playlist's Tracks (Not implemented yet)
  * @apiName Replace a Playlist's Tracks.
  * @apiGroup Playlist
  * @apiDescription
@@ -2670,7 +2670,7 @@
  * @apiParam (Response) Format on success, the HTTP status code in the response header is 201 Created. On error, the header status code is an error code, the response body contains an error object, and the existing playlist is unmodified. Trying to set a track when you do not have the user’s authorization returns error 403 Forbidden.
  */
 /**
- * @api {PUT} /playlists/{playlist_id}/images Upload a Custom Playlist  Cover Image (Not implemented yet)
+ * @api {PUT} api/playlists/{playlist_id}/images Upload a Custom Playlist  Cover Image (Not implemented yet)
  * @apiName Upload a Custom Playlist Cover Image.
  * @apiGroup Playlist
  * @apiDescription
@@ -2692,7 +2692,7 @@
  * @apiParam (Response) Format A successful request will return a 202 ACCEPTED response code. When the image has been provided, we forward it on to our transcoder service in order to generate the three sizes provided in the playlist’s images object. This operation may take a short time, so performing a GET request to the playlist may not immediately return URLs to the updated images.On error, the header status code is an error code and the response body contains an error object.
  */
 /**
- * @api {PUT} /playlists/{playlist_id}/collaborative toggle playlist collaborative attribute
+ * @api {PUT} api/playlists/{playlist_id}/collaborative toggle playlist collaborative attribute
  * @apiName toggle collaborative.
  * @apiGroup Playlist
  * @apiDescription
@@ -2711,7 +2711,7 @@
  * @apiParam (Response) Format on success, the HTTP status code in the response header is 200. On error, the header status code is an error code 404, the response body contains an error object, and the existing playlist is unmodified. Trying to set a track when you do not have the user’s authorization returns error 403 Forbidden.
  */
 /**
- * @api {PUT} /playlists/{playlist_id}/public toggle playlist public attribute
+ * @api {PUT} api/playlists/{playlist_id}/public toggle playlist public attribute
  * @apiName toggle public.
  * @apiGroup Playlist
  * @apiDescription
@@ -2732,7 +2732,7 @@
 
 //search
 /**
- * @api {get} /search Search for an Item
+ * @api {get} api/search Search for an Item
  * @apiName Search for an Item
  * @apiGroup Search
  * @apiDescription
@@ -2760,7 +2760,7 @@
 //Tracks
 
 /**
- * @api {get} /audio-analysis/{id} Get Audio Analysis for a Track (not implemented)
+ * @api {get} api/audio-analysis/{id} Get Audio Analysis for a Track (not implemented)
  * @apiName Get Audio Analysis for a Track
  * @apiGroup Tracks
  * @apiDescription
@@ -2784,7 +2784,7 @@
 
 
 /**
- * @api {get} track/audio-features/{id}  Get Audio Features for a Track 
+ * @api {get} api/track/audio-features/{id}  Get Audio Features for a Track 
  * @apiName Get Audio Features for a Track
  * @apiGroup Tracks
  * @apiDescription
@@ -2821,7 +2821,7 @@
  */
 
 /**
- * @api {get} tracks/audio-features Get Audio Features for Several Tracks
+ * @api {get} api/tracks/audio-features Get Audio Features for Several Tracks
  * @apiName Get Audio Features for Several Tracks
  * @apiGroup Tracks
  * @apiDescription
@@ -2872,7 +2872,7 @@
  */
 
 /**
- * @api {get} /tracks Get Several Tracks
+ * @api {get} api/tracks Get Several Tracks
  * @apiName Get Several Tracks
  * @apiGroup Tracks
  * @apiDescription
@@ -2973,7 +2973,7 @@
 
 
 /**
- * @api {get} /track/{id} Get a Track 
+ * @api {get} api/track/{id} Get a Track 
  * @apiName Get a Track with artist name & isLike
  * @apiGroup Tracks
  * @apiDescription
@@ -3030,7 +3030,7 @@
 }
  */
 /**
- * @api {get} me/track/{id} Get a Track
+ * @api {get} api/me/track/{id} Get a Track
  * @apiName Get a Track
  * @apiGroup Tracks
  * @apiDescription
@@ -3078,7 +3078,7 @@
 //Users Profile
 
 /**
- * @api {get} /me Get Current User's Profile
+ * @api {get} api/me Get Current User's Profile
  * @apiName Get Current User's Profile
  * @apiGroup Users Profile
  * @apiDescription
@@ -3106,7 +3106,7 @@
  */
 
 /**
- * @api {get} /users/{user_id} Get a User's Profile
+ * @api {get} api/users/{user_id} Get a User's Profile
  * @apiName Get a User's Profile
  * @apiGroup Users Profile
  * @apiDescription

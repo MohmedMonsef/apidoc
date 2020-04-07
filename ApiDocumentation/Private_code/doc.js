@@ -1,5 +1,5 @@
 /**
- * @api {POST} /sign_up Create a new account
+ * @api {POST} api/sign_up Create a new account
  * @apiName Create a new account
  * @apiGroup Account
  * @apiDescription
@@ -25,8 +25,8 @@
  * @apiparam (Response) Format On success, the response body contains the created user object in JSON format and the HTTP status code in the response header is 200 OK or 201 Created. There is also a Location response header giving the Web API endpoint for the new user. On error, the header status code is an error code and the response body contains an error object. Trying to create a user when you do not have the user’s authorization returns error 403 Forbidden.
  */
 
- /**
-  * @api {post} /createQueue/:playlist_id/:trackId
+ api/**
+  * @api {post} api/createQueue/:playlist_id/:trackId
  * @apiName Create queue
  * @apiGroup Player
  * @apiDescription
@@ -47,7 +47,7 @@
  *
  */
 /**
- * @api {post} /login Login to Spotify
+ * @api {post} api/login Login to Spotify
  * @apiName Login to Spotify
  * @apiGroup Account
  * @apiDescription
@@ -72,7 +72,7 @@
  *
  */
 /**
- * @api {POST} /login/forgetpassword Forget Password
+ * @api {POST} api/login/forgetpassword Forget Password
  * @apiName Forget Password
  * @apiGroup Account
  * @apiDescription
@@ -92,7 +92,7 @@
  */
 
 /**
- * @api {GET} /auth/facebook Login to Spotify with Facebook
+ * @api {GET} api/auth/facebook Login to Spotify with Facebook
  * @apiName Login to Spotify with Facebook
  * @apiGroup Account
  * @apiDescription
@@ -112,8 +112,8 @@
  *
  */
 
- /**
- * @api {POST} /auth/facebookAndroid Login to Spotify with Facebook for android native app
+ api/**
+ * @api {POST} api/auth/facebookAndroid Login to Spotify with Facebook for android native app
  * @apiName Login to Spotify with Facebook android
  * @apiGroup Account
  * @apiDescription login with facebook using android custom route
@@ -142,7 +142,7 @@
 
 
 /**
- * @api {post} me/logout logout 
+ * @api {post} api/me/logout logout 
  * @apiName logout 
  * @apiGroup Account
  * @apiDescription
@@ -162,7 +162,7 @@
  */
 
 /**
- * @api {PUT} /promote make user premium
+ * @api {PUT} api/promote make user premium
  * @apiName make user premium
  * @apiGroup Account
  * @apiDescription
@@ -181,7 +181,7 @@
  * 
  */
 /**
- * @api {PUT} /me/update update Current User's Profile
+ * @api {PUT} api/me/update update Current User's Profile
  * @apiName update Current User's Profile
  * @apiGroup Users Profile
  * @apiDescription
@@ -211,8 +211,8 @@
  *   }
  */
 
- /**
- * @api {DELETE} /remove delete Current User's Profile
+ api/**
+ * @api {DELETE} api/remove delete Current User's Profile
  * @apiName delete Current User's Profile
  * @apiGroup Users Profile
  * @apiDescription
@@ -235,7 +235,7 @@
  *   }
  */
 /**
- * @api {post} /me/ToArtist Change User Type to Artist
+ * @api {post} api/me/ToArtist Change User Type to Artist
  * @apiName Change User Type to Artist
  * @apiGroup Account
  * @apiDescription
@@ -262,7 +262,7 @@
  */
 
 /**
- * @api {PUT} /playlists/{playlist_id} add collaborator
+ * @api {PUT} api/playlists/{playlist_id} add collaborator
  * @apiName Change a add collaborator
  * @apiGroup Playlist
  * @apiDescription
@@ -285,7 +285,7 @@
  * @apiparam (Response) Format On success the HTTP status code in the response header is 200 OK. On error, the header status code is an error code and the response body contains an error object. Trying to change a playlist when you do not have the user’s authorization returns error 403 Forbidden.
  */
 /**
- * @api {PUT} /Artist/update Change a Artist's Details
+ * @api {PUT} api/Artist/update Change a Artist's Details
  * @apiName Change a Artist's  Details
  * @apiGroup Artist
  * @apiDescription
@@ -309,8 +309,8 @@
  * @apiparam (Response) Format On success the HTTP status code in the response header is 200 OK. On error, the header status code is an error code and the response body contains an error object. Trying to change an artist when you do not have the user’s authorization returns error 403 Forbidden.
  */
 
- /**
- * @api {GET} /tracks/android/{track_id} get track for android
+ api/**
+ * @api {GET} api/tracks/android/{track_id} get track for android
  * @apiName get track file for android
  * @apiGroup Track
  * @apiDescription
@@ -333,8 +333,8 @@
  */
 
 
-  /**
- * @api {POST} /artists/me/albums/{album_id}/tracks upload tracks
+  api/**
+ * @api {POST} api/artists/me/albums/{album_id}/tracks upload tracks
  * @apiName upload tracks to album
  * @apiGroup Track
  * @apiDescription
