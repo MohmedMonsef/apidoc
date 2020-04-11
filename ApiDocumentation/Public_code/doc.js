@@ -20,9 +20,11 @@
  * 
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains an album object in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
  * 
- * 
- *
- *
+ * @apiExample {curl} Example usage:
+ *curl --location --request GET 'http://localhost:3000/api/albums/5e918ef9d2d4a641c4f471aa' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: connect.sid=s%3AhFXycLH7qsGv3VWPRXvS72LtYpxXYZpd.5i9rF%2BMZcRfJP4WV9yJwfkQlsrcUDt%2BKRouITz58X%2BQ' \
  */
 /**
  * @api {get} api/albums/:id/tracks Get an Album's Tracks
@@ -71,6 +73,9 @@
  * @apiParam (BodyParameters)  ids 	Required. A comma-separated list of the Spotify IDs for the albums.
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains an array of album objects in JSON format.</br></br></br> Objects are returned in the order requested. If an object is not found, it's ignored</br> Duplicate ids in the query will result in duplicate objects in the response.</br> On error, the header status code is an error code and the response body contains an error object
  *
+ *  @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/albums' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
  *
  */
 
@@ -97,6 +102,21 @@
  * @apiParam (BodyParameters)   releaseDate Required.Release Date of the new Album
  * @apiParam (BodyParameters)   availablemarkets Required.The markets in which the album is available: ISO 3166-1 alpha-2 country codes.
  * @apiParam (BodyParameters)   genre Required.A list of the genres used to classify the album.
+ * 
+ *  @apiExample {curl} Example usage:
+ * curl --location --request PUT 'http://localhost:3000/api/Artists/me/Albums' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+--header 'Content-Type: application/json' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: connect.sid=s%3AhFXycLH7qsGv3VWPRXvS72LtYpxXYZpd.5i9rF%2BMZcRfJP4WV9yJwfkQlsrcUDt%2BKRouITz58X%2BQ' \
+--data-raw '{
+	"name":"album1",
+	"label":"label",
+	"albumtype":"normal",
+	"releaseDate":"1/1/2002",
+	"availablemarkets":"eg,fr",
+	"genre":"normal"
+}'
  * @apiSuccessExample {json} Success-Response:
  * {
  *     "availableMarkets": [
@@ -162,6 +182,8 @@
  * @apiParam (BodyParameters)   trackNum Required.the number of the track on the album
  * @apiParam (BodyParameters)   availableMarkets Required.The markets in which the track is available: ISO 3166-1 alpha-2 country codes.
  * @apiParam (BodyParameters)   duration Required.The length of track
+ *
+ * 
  *
  * 
  *@apiSuccessExample {json} Success-Response:
@@ -238,6 +260,10 @@
  * 
  * @apiParam (PathParameters) artist_id Spotify ID for the Artist
  * 
+ *  @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/Artists/5e8cb7037f37604d583f8d22' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+
  *  @apiSuccessExample {json} Success-Response:
  * {
  *     
@@ -296,6 +322,13 @@
  * @apiParam (QueryParameters)  limit 	Optional. The number of album objects to return.</br> Default: 20. Minimum: 1. Maximum: 50.</br> For example: limit=2
 * @apiParam (QueryParameters)  offset 		Optional. The index of the first album to return.</br> Default: 0 (i.e., the first album).</br> Use with limit to get the next set of albums.
  *
+ * 
+ * 
+ * @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/Artists/5e8cb7037f37604d583f8d22/Albums' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+*
+*
   * @apiSuccessExample {json} Success-Response:
  * {
  *     
@@ -352,6 +385,11 @@
  * 
  *  @apiParam (QueryParameters)  country Required. An ISO 3166-1 alpha-2 country code or the string from_token.
  *
+ *  @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/Artists/5e8cb7037f37604d583f8d22/top-tracks?country=eg' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+ * 
+ * 
  * @apiSuccessExample {json} Success-Response:
  * {
  *     [
@@ -550,7 +588,7 @@
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains</br>an object whose key is "tracks" and whose value is an array of up to 10 track objects in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
  */
 /**
- * @api {get} api/Artists/:artist_id/related-artists Get an Artist's Related Artists
+ * @api {get} api/Artists/:artist_id/related_artists Get an Artist's Related Artists
  * @apiName Get an Artist's Related Artists
  * @apiGroup Artist
  * @apiDescription
@@ -565,6 +603,11 @@
  * @apiParam (PathParameters)  artist_id Spotify ID for Artist
  * 
  * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
+ * 
+ * @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/Artists/5e8cb7037f37604d583f8d22/related_artists' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+ * 
  * 
  * @apiSuccessExample {json} Success-Response:
  * {
@@ -729,6 +772,13 @@
  * 
  * 
  * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
+ * 
+ * 
+ * 
+ *  @apiExample {curl} Example usage:
+ * 
+ * curl --location --request GET 'http://localhost:3000/api/Artists?artists_ids=5e8cb7037f37604d583f8d22,5e8cb7307f37604d583f8d23' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
  * 
  *@apiSuccessExample {json} Success-Response: 
  *  {
@@ -958,7 +1008,10 @@
  * 
  * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
- *
+ *  @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/browse/recently-playing' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+ * 
  *  @apiSuccessExample {json} Success-Response:
  *{"recentlyPlaying": [
  *
@@ -1020,7 +1073,9 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * 
+ *  @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/browse/new-releases/' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
  * 
  *  @apiSuccessExample {json} Success-Response:
  *{
@@ -1128,6 +1183,10 @@
  * <h1> Endpoint</h1> 
  * 
  * 
+ * @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/browse/popular-albums' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+ * 
  * 
  *  @apiSuccessExample {json} Success-Response:
  *{
@@ -1233,7 +1292,9 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * 
+ * @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/browse/popular-artists' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
  * 
  *  @apiSuccessExample {json} Success-Response:
  *{
@@ -1290,8 +1351,11 @@
  * 
  * <h1> Endpoint</h1> 
  * 
- * 
- * 
+ *  @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/browse/popular-playlists' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+
+
  *  @apiSuccessExample {json} Success-Response:
  * {
  *    "playlists": [
@@ -1409,6 +1473,9 @@
  * 
  *
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body</br> contains a JSON array of true or false values, in the same order in which the ids were specified.</br> On error, the header status code is an error code and the response body contains an error object.
+ * 
+ * 
+ * 
  */
 
 /**
@@ -1432,6 +1499,7 @@
  * 
  *  @apiParam (QueryParameters)  ids  				Required. A comma-separated list of Spotify User IDs ;</br> the ids of the users that you want to check to see if they follow the playlist. Maximum: 5 ids.
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response </br>body contains a JSON array oftrue or false values, in the same order in which the ids were specified.</br> On error, the header status code is an error code and the response body contains an error object.
+ * 
  */
 
 /**
@@ -1454,6 +1522,9 @@
  * @apiParam (BodyParameters)  ids   Optional. A JSON array of the artist or user Spotify IDs.</br> For example: {ids:["74ASZWbe4lXaubB36ztrGX", "08td7MxkoHQkXnWAYD8d6Q"]}.</br> A maximum of 50 IDs can be sent in one request.</br> Note: if the ids parameter is present in the query string, any IDs listed here in the body will be ignored.
  *
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 204 No Content and the response body is empty.</br> On error, the header status code is an error code and the response body contains an error object.
+ * 
+ *
+ * 
  */
 
 /**
@@ -1476,6 +1547,11 @@
  * @apiParam (BodyParameters)   isPrivate   	Optional. (Boolean) Defaults to false. If false the playlist will be included in user’s public playlists,</br> if true it will remain private. To be able to follow playlists privately,</br> the user must have granted the playlist-modify-private scope.
  *
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body is {success:" followed this playlist successfully"}.</br> On error, the header status code is an error code 400 and the response body contains an error object.
+ * 
+ *  @apiExample {curl} Example usage:
+ * curl --location --request PUT 'http://localhost:3000/api/playlists/5e8cbe527f37604d583f8d5c/followers' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+--header 'Content-Type: application/json' \
  */
 
 
@@ -1498,6 +1574,11 @@
  * @apiParam (QueryParameters)  limit  	Optional. The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50. 
  *
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains an artists object. The artists object in turn contains a cursor-based paging object of Artists.</br> On error, the header status code is an error code and the response body contains an error object.
+ * 
+ * @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/me/followingArtist' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+--header 'Content-Type: application/json' \
  */
 
 /**
@@ -1538,6 +1619,12 @@
  * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br> Modifying the list of artists or users the current user follows requires authorization of the user-follow-modify scope
  * @apiParam (path Parameters)  track_id 		require.require.  track Spotify ID .
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 No Content and the response body is empty.</br> On error, the header status code is an error code and the response body contains an error object.
+ * 
+ * @apiExample {curl} Example usage:
+ * curl --location --request PUT 'http://localhost:3000/api/me/like/5e8cba1b7f37604d583f8d37' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+--header 'Cookie: connect.sid=s%3A8d0Ft5LcIdvPSm-P3BwmuUoP8qb2uvCS.w6LNiZoLrkDGzyRizhJwQiFo06%2FI%2FK3X8o1c8hySqWI'
+
  */
 /**
  * @api {delete} api/me/unlike/:track_id unlike track
@@ -1554,6 +1641,11 @@
  * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br> Modifying the list of artists or users the current user follows requires authorization of the user-follow-modify scope
  * @apiParam (path Parameters)  track_id  		require.  track Spotify ID .
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 204 No Content and the response body is empty.</br> On error, the header status code is an error code and the response body contains an error object.
+ * 
+ *  @apiExample {curl} Example usage:
+ * curl --location --request DELETE 'http://localhost:3000/api/me/unlike/5e8cba1b7f37604d583f8d37' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+--header 'Cookie: connect.sid=s%3A8d0Ft5LcIdvPSm-P3BwmuUoP8qb2uvCS.w6LNiZoLrkDGzyRizhJwQiFo06%2FI%2FK3X8o1c8hySqWI'
  */
 
 //public
@@ -1575,6 +1667,11 @@
  *  @apiParam (PathParameter)  playlist_id  		The Spotify ID of the playlist that is to be no longer followed.
  * 
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body is {success:"unfollowed this playlist successfully"}.</br> On error, the header status code is an error code and the response body contains an error object.
+ *  @apiExample {curl} Example usage:
+ * curl --location --request DELETE 'http://localhost:3000/api/playlists/5e8cbe527f37604d583f8d5c/followers' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+
+ * 
  */
 
 //Library
@@ -1598,6 +1695,12 @@
  * 
  *
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains</br> a JSON array of true or false values, in the same order in which the ids were specified. </br>On error, the header status code is an error code and the response body contains an error object.
+ * 
+ * @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/me/albums/contains?albums_ids=5e8cba1b7f37604d583f8d37,5e8cba2d7f37604d583f8d38' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+--header 'Cookie: connect.sid=s%3A8d0Ft5LcIdvPSm-P3BwmuUoP8qb2uvCS.w6LNiZoLrkDGzyRizhJwQiFo06%2FI%2FK3X8o1c8hySqWI'
+ * 
  */
 
 /**
@@ -1618,6 +1721,11 @@
  * 
  *  @apiParam (QueryParameters)  tracks_ids 					Required. A comma-separated list of the Spotify IDs for the tracks. Maximum: 50 IDs.
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains</br> a JSON array of true or false values, in the same order in which the ids were specified. </br>On error, the header status code is an error code and the response body contains an error object.
+ * 
+ * @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/me/track/contains?track_ids=5e8cba1b7f37604d583f8d37,5e8cba2d7f37604d583f8d38' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+--header 'Cookie: connect.sid=s%3A8d0Ft5LcIdvPSm-P3BwmuUoP8qb2uvCS.w6LNiZoLrkDGzyRizhJwQiFo06%2FI%2FK3X8o1c8hySqWI'
  */
 
 /**
@@ -1657,6 +1765,12 @@
  *  @apiParam (QueryParameters)  limit  			Optional. The maximum number of objects to return. Default: 20. Minimum: 1. Maximum: 50.
  * @apiParam (QueryParameters)   offset   		Optional. The index of the first object to return.</br> Default: 0 (i.e., the first object). Use with limit to get the next set of objects.
  *  @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body</br> contains an array of saved track objects (wrapped in a paging object) in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
+ * 
+ *  @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/me/tracks' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+--header 'Cookie: connect.sid=s%3A8d0Ft5LcIdvPSm-P3BwmuUoP8qb2uvCS.w6LNiZoLrkDGzyRizhJwQiFo06%2FI%2FK3X8o1c8hySqWI'
+ * 
  */
 
 
@@ -1720,6 +1834,11 @@
  *
  * 
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 Created.</br> On error, the header status code is an error code and the response body contains an error object. 
+ * 
+ *  @apiExample {curl} Example usage:
+ * curl --location --request PUT 'http://localhost:3000/api/me/Albums?ids=5e8cb9327f37604d583f8d25' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+--header 'Cookie: connect.sid=s%3A8d0Ft5LcIdvPSm-P3BwmuUoP8qb2uvCS.w6LNiZoLrkDGzyRizhJwQiFo06%2FI%2FK3X8o1c8hySqWI'
  */
 
 /**
@@ -1804,6 +1923,13 @@
  * 
  * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
+ * 
+ *   @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/me/player/currently-playing' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+--header 'Cookie: connect.sid=s%3A8d0Ft5LcIdvPSm-P3BwmuUoP8qb2uvCS.w6LNiZoLrkDGzyRizhJwQiFo06%2FI%2FK3X8o1c8hySqWI'
+
+ * 
  * @apiSuccessExample {json} Success-Response:
  *{
  *   
@@ -1869,6 +1995,10 @@
  * 
  * 
  * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
+ * 
+ *  @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/me/queue' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
  * 
  *  @apiSuccessExample {json} Success-Response:
  *{
@@ -2043,6 +2173,10 @@
  *
  * @apiParam (Response) Format On success, the HTTP status code in the response header is 200 OK and the response body contains an array of play history objects (wrapped in a cursor-based paging object) in JSON format. The play history items each contain the context the track was played from (e.g. playlist, album), the date and time the track was played, and a track object (simplified). On error, the header status code is an error code and the response body contains an error object. If private session is enabled the response will be a 204 NO CONTENT with an empty payload.
  * 
+ * @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/me/player/recently-played' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+ * 
  */
 
 /**
@@ -2062,6 +2196,10 @@
  * 
  *
  * @apiParam (Response) Format A completed request will return a 204 NO CONTENT response code, and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 404 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason.
+ * 
+ * @apiExample {curl} Example usage:
+ * curl --location --request PUT 'http://localhost:3000/api/me/player/pause' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
  * 
  */
 
@@ -2103,6 +2241,10 @@
  * 
  * @apiParam (Query Paramaters) state	     Required.track, boolean true if repeat false if not repeat to repeat playlist  
  * @apiParam (Response) Format A completed request will return a 200 NO CONTENT response code, and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 400 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND 
+ * 
+ * @apiExample {curl} Example usage:
+ * curl --location --request PUT 'http://localhost:3000/api/player/repeat?state=true' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
  */
 /**
  * @api {POST} api/me/player/next-playing Skip User’s Playback To Next Track
@@ -2118,6 +2260,10 @@
  * <h1> Request parameters</h1> 
  * </br></br><h1> Endpoint</h1>
  * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
+ * 
+ * @apiExample {curl} Example usage:
+ * curl --location --request POST 'http://localhost:3000/api/me/player/next-playing' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
  * 
  * @apiSuccessExample {json} Success-Response:
  *{
@@ -2192,6 +2338,10 @@
  * 
  * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
+ * @apiExample {curl} Example usage:
+ * curl --location --request POST 'http://localhost:3000/api/me/player/prev-playing' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+ * 
  * 
  * @apiSuccessExample {json} Success-Response:
  *{
@@ -2262,9 +2412,14 @@
  * 
  * 
  * @apiParam (Response) Format A completed request will return a 204 NO CONTENT response code, and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 404 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason.
+ * 
+ * @apiExample {curl} Example usage:
+ * curl --location --request PUT 'http://localhost:3000/api/me/player/play' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+
  */
 /**
- * @api {PUT}/player/shuffle Toggle Shuffle For User’s Playback
+ * @api {PUT} api/me/player/shuffle Toggle Shuffle For User’s Playback
  * @apiName Toggle Shuffle For User’s Playback
  * @apiGroup Player
  * @apiDescription
@@ -2282,6 +2437,10 @@
  * 
  * @apiParam (Query Paramaters)  state	Required   true : Shuffle user’s playback & false : Do not shuffle user’s playback.
  * @apiParam (Response) Format A completed request will return a 200 NO CONTENT response code, and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 400 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason.
+ * 
+ * @apiExample {curl} Example usage:
+ * curl --location --request PUT 'http://localhost:3000/api/me/player/shuffle?state=true' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
  */
 
 /**
@@ -2306,6 +2465,11 @@
  * 
  *   
  * @apiParam (Response) format A completed request will return a 200  response code, and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 404 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason.
+ * 
+ * @apiExample {curl} Example usage:
+ * curl --location --request POST 'http://localhost:3000/api/player/add-to-queue/5e8cbe527f37604d583f8d5c/5e8cbefc7f37604d583f8d68/?isPlaylist=true' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+ * 
  */
 //Playlist
 
@@ -2329,9 +2493,18 @@
  *
  *
  *
- * @apiParam (Body Parameters)  comma seperated string of track_ids that will be added to playlist
+ * @apiParam (Body Parameters) tracks { string }  comma seperated string of track_ids that will be added to playlist
  * 
  * @apiParam (Response) Format On success, the HTTP status code in the response header is 201 Created. The response body contains the playlist in JSON format. on error 404 error will be sent with error object, if there are no tracks 401 response will be sent with bad request error 
+ * 
+ * @apiExample {curl} Example usage:
+ * curl --location --request POST 'http://localhost:3000/api/playlists/5e8cbe527f37604d583f8d5c/tracks' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+--header 'Content-Type: application/json' \
+ \
+--data-raw '{
+	"tracks":"5e8cba1b7f37604d583f8d37"
+}'
  * 
  * @apiSuccessExample {json} Success-Response:
  * {"_id":"5e7cee3c35bf5449a0aa0a24",
@@ -2367,6 +2540,12 @@
  *
  * @apiParam (Response) Format On success, the HTTP status code in the response header is 200 . The response body contains the playlist main info and array of its tracks in JSON format. on error 404 error will be sent with error object, if there are no tracks 401 response will be sent with bad request error 
  * 
+ * @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/playlists/5e8cbe527f37604d583f8d5c/tracks' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+--header 'Content-Type: application/json' \
+ * 
+ * 
  */
 
 /**
@@ -2386,6 +2565,18 @@
  * @apiParam (Body Parameters) {string}  name				Required. The new name for the playlist
  * @apiParam (Body Parameters) {string}  Describtion		optional. The description for the playlist
  * @apiParam (Response) Format On success, the response body contains the created playlist object in JSON format and the HTTP status code in the response header is 200 Ok Created. On error, the header status code is an error code and the response body contains an error object. Trying to create a playlist when you do not have the user’s authorization returns error 400 Forbidden.
+ * 
+ *  @apiExample {curl} Example usage:
+ * curl --location --request POST 'http://localhost:3000/api/users/playlists' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+--header 'Content-Type: application/json' \
+--header 'Content-Type: application/json' \
+ \
+--data-raw '{
+	"name":"new playlist name",
+	"describtion":"ant desc"
+	
+}'
  * 
  * @apiSuccessExample {json} Success-Response:
  * {"_id":"5e7cee3c35bf5449a0aa0a24",
@@ -2426,6 +2617,17 @@
  * 
  *
  * @apiParam (Response) Format On success the HTTP status code in the response header is 200 OK. On error, the header status code is 400 status and the response body contains an error object. Trying to change a playlist when you do not have the user’s authorization returns error 403 Forbidden.
+ * 
+ *   @apiExample {curl} Example usage:
+ * curl --location --request PUT 'http://localhost:3000/api/playlists/5e8cbe527f37604d583f8d5c' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+--header 'Content-Type: application/json' \
+--header 'Content-Type: application/json' \
+ \
+--data-raw '{
+	"name":"new name"
+	
+}'
  * 
  * 
  * @apiSuccessExample {json} Success-Response:
@@ -2468,6 +2670,11 @@
  *
  * @apiParam (Response) Format On success, the HTTP status code in the response header is 200 OK and the response body contains an array of  playlist objects in JSON format. On error, the header status code is an error code 404 and the response body contains an error object. Please note that the access token has to be tied to a user.
  * 
+ *  @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/me/playlists' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+
+ * 
  *@apiSuccessExample {json} Success-Response:
  * [
  * {"_id":"5e7cee3c35bf5449a0aa0a24",
@@ -2503,6 +2710,10 @@
  *
  * @apiParam (Response) Format On success, the HTTP status code in the response header is 200 OK and the response body contains an array of  playlist objects  in JSON format. On error, the header status code is an error code 404 and the response body contains an error object.
  * 
+ *  @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/users/5e8cb14d084a9d2e6c8f21db/playlists' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+ * 
  *@apiSuccessExample {json} Success-Response:
  * [{"_id":"5e7cee3c35bf5449a0aa0a24",
  * "type":"playlist",
@@ -2534,6 +2745,10 @@
  * @apiParam (Query Paramaters)  snapshot-id	Optional. Snapshot is the id of the version of playlist if not give me it will be the last by defult
  * @apiParam (Response) Format On success, the response body contains a playlist object in JSON format and the HTTP status code in the response header is 200 OK. On error, the header status code is an error code 400  and the response body contains an error object. Requesting playlists that you do not have the user’s authorization to access returns error 400 Forbidden. For the description in the Playlist object, it should be expected that HTML will be escaped.
  * 
+ *  @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/playlists/5e8cbe527f37604d583f8d5c' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+ * 
  * @apiSuccessExample {json} Success-Response:
  * {"_id":"5e7b6413357189256c64f202",
  * "type":"playlist",
@@ -2561,6 +2776,10 @@
  
  * @apiParam (Response) Format On success, the HTTP status code in the response header is 200 OK. On error, the header status code is an error code and the response body contains an error object. Requesting playlists that you do not have the user’s authorization to access returns error 400 Forbidden. For the description in the Playlist object, it should be expected that HTML will be escaped.
  *
+ *  @apiExample {curl} Example usage:
+ * curl --location --request DELETE 'http://localhost:3000/api/me/delete/playlists/5e8cbfa97f37604d583f8d6a' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+ * 
  * @apiSuccessExample {json} Success-Response:
  * {"success":"Delete successfully"}
  */
@@ -2577,6 +2796,8 @@
  * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
  * @apiParam (Response) Format On success, the response body contains a list of image objects in JSON format and the HTTP status code in the response header is 200 OK On error, the header status code is an error code and the response body contains an error object.
+ * 
+ * 
  */
 /**
  * @api {DELETE} api/playlists/{playlist_id}/tracks Remove Tracks from a Playlist
@@ -2602,6 +2823,17 @@
  *@apiParam (Body parameter) snapshot_id optional. id of the snapshot to remove tracks from
  *
  * @apiParam (Response) Format On success, the response body contains a snapshot_id in JSON format and the HTTP status code in the response header is 200 OK.  On error, the header status code is an error code 404 and the response body contains an error object. Trying to remove a track when you do not have the user’s authorization returns error 403 Forbidden. Attempting to use several different ways to remove tracks returns 400 Bad Request
+ * 
+ * @apiExample {curl} Example usage:
+ * curl --location --request DELETE 'http://localhost:3000/api/playlists/5e8cbe527f37604d583f8d5c/tracks' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+--header 'Content-Type: application/json' \
+ \
+--data-raw '{
+	"track_ids":"5e8cba1b7f37604d583f8d37,5e8cba6c7f37604d583f8d3e"
+	
+}'
+
  */
 /**
  * @api {PUT} api/playlists/{playlist_id}/tracks Reorder a Playlist's Tracks
@@ -2631,6 +2863,18 @@
  *
  * 
  * @apiParam (Response) Format On success, the response body contains a snapshot_id in JSON format and the HTTP status code in the response header is 200 OK. The snapshot_id can be used to identify your playlist version in future requests. On error, the header status code is an error code, the response body contains an error object, and the existing playlist is unmodified.
+ * 
+ *  @apiExample {curl} Example usage:
+ * curl --location --request PUT 'http://localhost:3000/api/playlists/5e8cbe527f37604d583f8d5c/tracks' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+--header 'Content-Type: application/json' \
+ \
+--data-raw '{
+	"range_start":2
+	
+}'
+
+ * 
  *@apiSuccessExample {json} Success-Response:
  *{"_id":"5e7cee3c35bf5449a0aa0a24","type":"playlist",*"Description":"anything",
  *"collaborative":false,
@@ -2709,6 +2953,11 @@
  * @apiHeader (Header)  Content-Type	Required if URIs are passed in the request body, otherwise ignored. The content type of the request body: application/json
  *  
  * @apiParam (Response) Format on success, the HTTP status code in the response header is 200. On error, the header status code is an error code 404, the response body contains an error object, and the existing playlist is unmodified. Trying to set a track when you do not have the user’s authorization returns error 403 Forbidden.
+ * 
+ *  @apiExample {curl} Example usage:
+ * curl --location --request PUT 'http://localhost:3000/api/playlists/5e8cbfa97f37604d583f8d6a/collaborative' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+--header 'Content-Type: application/json' \
  */
 /**
  * @api {PUT} api/playlists/{playlist_id}/public toggle playlist public attribute
@@ -2728,6 +2977,11 @@
  * @apiHeader (Header)  Content-Type	Required if URIs are passed in the request body, otherwise ignored. The content type of the request body: application/json
  *  
  * @apiParam (Response) Format on success, the HTTP status code in the response header is 200. On error, the header status code is an error code 404, the response body contains an error object, and the existing playlist is unmodified. Trying to set a track when you do not have the user’s authorization returns error 403 Forbidden.
+ * 
+ *  @apiExample {curl} Example usage:
+ * curl --location --request PUT 'http://localhost:3000/api/playlists/5e8cbfa97f37604d583f8d6a/public' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+--header 'Content-Type: application/json' \
  */
 
 //search
@@ -2753,6 +3007,10 @@
  * </br> </br>On error: 
  * </br></br>The header status code is 404.
  * </br></br>The response body contains "No results found".
+ * 
+ *  @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/search?name=nada&type=artist,playlist' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
  */
 
 
@@ -2802,6 +3060,9 @@
  *  @apiParam (PathParameters)  id 					Required. The Spotify ID for the track.
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains an audio features object in JSON format. </br>On error, the header status code is an error code and the response body contains an error object.
  * 
+ * @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/track/audio-features/5e8cba1b7f37604d583f8d37' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
  * @apiSuccessExample {json} Success-Response:
  * {
  *   "explicit": false,
@@ -2837,6 +3098,17 @@
  *  @apiParam (Body parameters)  ids  		Required. A comma-separated list of the Spotify IDs for the tracks. Maximum: 100 IDs.
  *
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains</br> an object whose key is "audio_features" and whose value is an array of audio features objects in JSON format.</br></br> Objects are returned in the order requested. If an object is not found, a null value is returned in the appropriate position.</br> Duplicate ids in the query will result in duplicate objects in the response. </br>On error, the header status code is an error code and the response body contains an error object.
+ * 
+ * 
+ * @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/tracks/audio-features' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+--header 'Content-Type: application/json' \
+ \
+--data-raw '{
+ "ids":"5e8cba1b7f37604d583f8d37,5e8cba367f37604d583f8d39"
+	
+}'
  * 
  * @apiSuccessExample {json} Success-Response:
  * {
@@ -2890,6 +3162,16 @@
  *
  *  @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains an object whose key is tracks and whose value is an array of track objects in JSON format.</br> Objects are returned in the order requested. If an object is not found, a null value is returned in the appropriate position.</br> Duplicate ids in the query will result in duplicate objects in the response. </br>On error, the header status code is an error code and the response body contains an error object. in 404
  * 
+ *  @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/me/tracks' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+--header 'Content-Type: application/json' \
+ \
+--data-raw '{
+"ids":"5e8cba1b7f37604d583f8d37,5e8cba367f37604d583f8d39"
+	
+}'
+
  * 
  * @apiSuccessExample {json} Success-Response:
  * [
@@ -2990,6 +3272,13 @@
  *
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains a track object in JSON format. </br>On error, the header status code is an error code and the response body contains an error object.
  * 
+ *  @apiExample {curl} Example usage:
+ *curl --location --request GET 'http://localhost:3000/api/track/5e8cba1b7f37604d583f8d37' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+--header 'Content-Type: application/json' \
+ \
+
+ * 
  *  @apiSuccessExample {json} Success-Response:
  * {
     "track": {
@@ -3047,6 +3336,11 @@
  *
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains a track object in JSON format. </br>On error, the header status code is an error code and the response body contains an error object.
  * 
+ * @apiExample {curl} Example usage
+ * curl --location --request GET 'http://localhost:3000/api/me/track/5e8cba1b7f37604d583f8d37' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+
+ * 
  *  @apiSuccessExample {json} Success-Response:
  * {
     "availableMarkets": [
@@ -3094,6 +3388,12 @@
  *
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains a user object in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</br> When requesting fields that you don’t have the user’s authorization to access, it will return error 403 Forbidden.</br></br></br> <b>Important!</b> If the user-read-email scope is authorized, </br>the returned JSON will include the email address that was entered when the user created their Spotify account.</br> This email address is unverified; do not assume that the email address belongs to the user.
  * 
+ *  @apiExample {curl} Example usage
+ * curl --location --request GET 'http://localhost:3000/api/me' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+
+
+ * 
  * @apiSuccessExample {json} Success-Response:
  * 
  * [{"_id":"5e80a8c6dd73fc4fa469b0ba",
@@ -3124,6 +3424,12 @@
  * @apiParam (Removing Specific Occurance of a Track in a Specific Playlist Snapshot)  REQUEST_DATA 
  * 
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains a user object in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</br> If a user with that user_id doesn’t exist, the status code is 404 NOT FOUND.
+ * 
+ * @apiExample {curl} Example usage
+ * curl --location --request GET 'http://localhost:3000/api/users/5e8cb12e084a9d2e6c8f21d9' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+
+
  * 
  * @apiSuccessExample {json} Success-Response:
  * {

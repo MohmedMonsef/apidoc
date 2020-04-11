@@ -50,6 +50,13 @@ define({ "api": [
         ]
       }
     },
+    "examples": [
+      {
+        "title": "Example usage",
+        "content": "curl --location --request POST 'http://localhost:3000/api/me/ToArtist' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\\n--header 'Content-Type: application/json' \\\n \\\n--data-raw '{\n\"name\":\"new artist\",\n\"genre\":\"action,scifi\",\n\"info\":\"info\"\n\t\n}'",
+        "type": "curl"
+      }
+    ],
     "success": {
       "examples": [
         {
@@ -138,6 +145,13 @@ define({ "api": [
         ]
       }
     },
+    "examples": [
+      {
+        "title": "Example usage",
+        "content": "curl --location --request POST 'http://localhost:3000/api/sign_up' \\\n--header 'Content-Type: application/json' \\\n \\\n--data-raw '{\n\"username\":\"name\",\n\"password\":\"123\",\n\"country\":\"eg\",\n\"email\":\"b@b.com\",\n\"gender\":\"male\",\n\"birthday\":\"1/1/1999\"\n\t\n}'",
+        "type": "curl"
+      }
+    ],
     "success": {
       "examples": [
         {
@@ -160,12 +174,12 @@ define({ "api": [
     "description": "<h1>Request Parameters</h1></br></br> <h1>Endpoint</h1>",
     "parameter": {
       "fields": {
-        "QueryParameters": [
+        "Body parameter": [
           {
-            "group": "QueryParameters",
+            "group": "Body parameter",
             "optional": false,
             "field": "email",
-            "description": "<p>Required. the User e-mail in Spotify Accounts</p>"
+            "description": "<p>{string} Required. the User e-mail in Spotify Accounts</p>"
           }
         ],
         "Response": [
@@ -178,6 +192,13 @@ define({ "api": [
         ]
       }
     },
+    "examples": [
+      {
+        "title": "Example usage",
+        "content": "curl --location --request POST 'http://localhost:3000/api/login/forgetpassword' \\\n--header 'Content-Type: application/json' \\\n \\\n--data-raw '{\n\n\"email\":\"b@b.com\"\n\n\t\n}'",
+        "type": "curl"
+      }
+    ],
     "version": "0.0.0",
     "filename": "private_code/doc.js",
     "groupTitle": "Account"
@@ -215,6 +236,13 @@ define({ "api": [
         ]
       }
     },
+    "examples": [
+      {
+        "title": "Example usage",
+        "content": "curl --location --request POST 'http://localhost:3000/api/login' \\\n--data-raw '{\n\t\"email\":\"nada5aled52@gmail.com\",\n\t\"password\":\"nada1234\"\n'",
+        "type": "curl"
+      }
+    ],
     "success": {
       "examples": [
         {
@@ -370,7 +398,7 @@ define({ "api": [
   {
     "type": "PUT",
     "url": "api/promote",
-    "title": "make user premium",
+    "title": "make user premium (not implemented)",
     "name": "make_user_premium",
     "group": "Account",
     "description": "<p style=\"color:red;\">promote user to premium.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
@@ -413,10 +441,10 @@ define({ "api": [
   {
     "type": "PUT",
     "url": "api/Artist/update",
-    "title": "Change a Artist's Details",
+    "title": "Change a Artist's Details (not implemented yet)",
     "name": "Change_a_Artist's_Details",
     "group": "Artist",
-    "description": "<p style=\"color:red;\">Change a Artist's Details Change a Artist’s name and genre and info .</p> Note that the request data is a JSON string, not separate fields <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "description": "<p>update artist info</p> <p style=\"color:red;\">Change a Artist's Details Change a Artist’s name and genre and info .</p> Note that the request data is a JSON string, not separate fields <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
         "Path Parameters": [
@@ -485,10 +513,10 @@ define({ "api": [
   {
     "type": "post",
     "url": "api/createQueue/:playlist_id/:trackId",
-    "title": "",
+    "title": "create queue",
     "name": "Create_queue",
     "group": "Player",
-    "description": "<p style=\"color:red;\">create the user playback queue </p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "description": "<p>create queue for user</p> <p style=\"color:red;\">create the user playback queue </p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
         "Header": [
@@ -535,6 +563,13 @@ define({ "api": [
         ]
       }
     },
+    "examples": [
+      {
+        "title": "Example usage",
+        "content": "curl --location --request POST 'http://localhost:3000/api/createQueue/5e8cbe527f37604d583f8d5c/5e8cba447f37604d583f8d3b?isPlaylist=true' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\",
+        "type": "curl"
+      }
+    ],
     "version": "0.0.0",
     "filename": "private_code/doc.js",
     "groupTitle": "Player"
@@ -593,6 +628,13 @@ define({ "api": [
         ]
       }
     },
+    "examples": [
+      {
+        "title": "Example usage",
+        "content": "curl --location --request PUT 'http://localhost:3000/api/playlists/5e8cbe527f37604d583f8d5c' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\\n--header 'Content-Type: application/json' \\\n--header 'Content-Type: application/json' \\\n \\\n--data-raw '{\n\n\"username\":\"new name,name,nada\"\n\n\t\n}'",
+        "type": "curl"
+      }
+    ],
     "version": "0.0.0",
     "filename": "private_code/doc.js",
     "groupTitle": "Playlist"
@@ -857,6 +899,13 @@ define({ "api": [
         ]
       }
     },
+    "examples": [
+      {
+        "title": "Example usage",
+        "content": "curl --location --request PUT 'http://localhost:3000/api/me/update' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\\n--header 'Content-Type: application/json' \\\n \\\n--data-raw '{\n\n\"Email\":\"b@bb.com\",\n\"Password\":\"111\",\n\"Country\":\"fr\",\n\"Display_Name\":\"bb\"\n\n\t\n}'",
+        "type": "curl"
+      }
+    ],
     "success": {
       "examples": [
         {

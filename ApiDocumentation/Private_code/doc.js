@@ -18,6 +18,21 @@
  * @apiParam (Body Parameters) {string}  email  		Required. The email of the user (which is unique).
  * @apiParam (Body Parameters) {string}  gender 		Required. The type of new user ( m:male or f:female).
  * @apiParam (Body Parameters) {string}  birthday		Required. The birthday of a new user
+ * 
+ * @apiExample {curl} Example usage
+ * curl --location --request POST 'http://localhost:3000/api/sign_up' \
+--header 'Content-Type: application/json' \
+ \
+--data-raw '{
+"username":"name",
+"password":"123",
+"country":"eg",
+"email":"b@b.com",
+"gender":"male",
+"birthday":"1/1/1999"
+	
+}'
+ * 
  *  @apiSuccessExample {json} Success-Response:
   *{
 *    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTc1YzY4Mzg3YmNlYjEwYWMzZDMzOTQiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg1NjYzMzQ2LCJleHAiOjE1ODU3NDk3NDZ9.hLom36hxkDhABZEquFdKtFGEdmdxUziQx9eWVVry_3s"
@@ -25,11 +40,11 @@
  * @apiparam (Response) Format On success, the response body contains the created user object in JSON format and the HTTP status code in the response header is 200 OK or 201 Created. There is also a Location response header giving the Web API endpoint for the new user. On error, the header status code is an error code and the response body contains an error object. Trying to create a user when you do not have the user’s authorization returns error 403 Forbidden.
  */
 
- api/**
-  * @api {post} api/createQueue/:playlist_id/:trackId
+ /**
+  * @api {post} api/createQueue/:playlist_id/:trackId create queue 
  * @apiName Create queue
  * @apiGroup Player
- * @apiDescription
+ * @apiDescription create queue for user
  * 
  * <p style="color:red;">create the user playback queue </p>
  * <h1> Request parameters</h1> 
@@ -44,7 +59,11 @@
  *
  *@apiParam (response) success 200 & error 400  
  *
- *
+ *@apiExample {curl} Example usage
+ *curl --location --request POST 'http://localhost:3000/api/createQueue/5e8cbe527f37604d583f8d5c/5e8cba447f37604d583f8d3b?isPlaylist=true' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+
+
  */
 /**
  * @api {post} api/login Login to Spotify
@@ -62,7 +81,12 @@
  * @apiParam (QueryParameters)  password Required. the User Password in Spotify Accounts
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response header contains a JWT </br> On error, the header status code is an error code and the response body contains an error object.
  * 
- *
+ *@apiExample {curl} Example usage
+ * curl --location --request POST 'http://localhost:3000/api/login' \
+--data-raw '{
+	"email":"nada5aled52@gmail.com",
+	"password":"nada1234"
+'
  * 
  * @apiSuccessExample {json} Success-Response:
  *{
@@ -83,10 +107,19 @@
  * <h1>Endpoint</h1> 
  * 
  * 
- * @apiParam (QueryParameters)  email Required. the User e-mail in Spotify Accounts
+ * @apiParam (Body parameter)  email {string} Required. the User e-mail in Spotify Accounts
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body is empty </br> On error, the header status code is an error code and the response body contains an error object.
  * 
- * 
+ *@apiExample {curl} Example usage
+ *curl --location --request POST 'http://localhost:3000/api/login/forgetpassword' \
+--header 'Content-Type: application/json' \
+ \
+--data-raw '{
+
+"email":"b@b.com"
+
+	
+}'
  *
  *
  */
@@ -112,7 +145,7 @@
  *
  */
 
- api/**
+ /**
  * @api {POST} api/auth/facebookAndroid Login to Spotify with Facebook for android native app
  * @apiName Login to Spotify with Facebook android
  * @apiGroup Account
@@ -162,7 +195,7 @@
  */
 
 /**
- * @api {PUT} api/promote make user premium
+ * @api {PUT} api/promote make user premium (not implemented)
  * @apiName make user premium
  * @apiGroup Account
  * @apiDescription
@@ -203,7 +236,20 @@
  *  @apiParam (Body Parameters)      {string}   Display_Name      optional. name to be updated to.
  * 
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains a success object in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</br> When requesting fields that you don’t have the user’s authorization to access, it will return error 403 Forbidden.
- * 
+ * @apiExample {curl} Example usage
+ * curl --location --request PUT 'http://localhost:3000/api/me/update' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+--header 'Content-Type: application/json' \
+ \
+--data-raw '{
+
+"Email":"b@bb.com",
+"Password":"111",
+"Country":"fr",
+"Display_Name":"bb"
+
+	
+}'
  * @apiSuccessExample {json} Success-Response:
  * 
  * {
@@ -211,7 +257,7 @@
  *   }
  */
 
- api/**
+ /**
  * @api {DELETE} api/remove delete Current User's Profile
  * @apiName delete Current User's Profile
  * @apiGroup Users Profile
@@ -250,6 +296,17 @@
  * @apiParam (BodyParameters) name Optional. The Artist name shown to public if it's not given the user name will be shown.
  * @apiParam (BodyParameters) genre Required. The Artist Genre (Pop/Jazz/Rock/...)
  * @apiParam (BodyParameters) info Required. The Artist's Overview shown to public 
+ *  @apiExample {curl} Example usage
+ * curl --location --request POST 'http://localhost:3000/api/me/ToArtist' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+--header 'Content-Type: application/json' \
+ \
+--data-raw '{
+"name":"new artist",
+"genre":"action,scifi",
+"info":"info"
+	
+}'
  *@apiSuccessExample {json} Success-Response:
  * {
  *      Artist Succeded
@@ -283,12 +340,24 @@
  * @apiParam (Body Parameters) {array_string}  username   Required . users'name of the user who will be collaborator
  *
  * @apiparam (Response) Format On success the HTTP status code in the response header is 200 OK. On error, the header status code is an error code and the response body contains an error object. Trying to change a playlist when you do not have the user’s authorization returns error 403 Forbidden.
+ * @apiExample {curl} Example usage
+ * curl --location --request PUT 'http://localhost:3000/api/playlists/5e8cbe527f37604d583f8d5c' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+--header 'Content-Type: application/json' \
+--header 'Content-Type: application/json' \
+ \
+--data-raw '{
+
+"username":"new name,name,nada"
+
+	
+}'
  */
 /**
- * @api {PUT} api/Artist/update Change a Artist's Details
- * @apiName Change a Artist's  Details
+ * @api {PUT} api/Artist/update Change a Artist's Details (not implemented yet)
+ * @apiName Change a Artist's  Details 
  * @apiGroup Artist
- * @apiDescription
+ * @apiDescription update artist info 
  * 
  * <p style="color:red;">Change a Artist's Details Change a Artist’s name and genre and info .</p>
  *Note that the request data is a JSON string, not separate fields
@@ -309,7 +378,7 @@
  * @apiparam (Response) Format On success the HTTP status code in the response header is 200 OK. On error, the header status code is an error code and the response body contains an error object. Trying to change an artist when you do not have the user’s authorization returns error 403 Forbidden.
  */
 
- api/**
+ /**
  * @api {GET} api/tracks/android/{track_id} get track for android
  * @apiName get track file for android
  * @apiGroup Track
