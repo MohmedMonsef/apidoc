@@ -881,15 +881,21 @@
  * 
  * @apiParam (PathParameters)  category_id 	The Spotify category ID for the category.
  * 
+ * @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/browse/categories/5e8ce900e192f95244e5ca05' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+--header 'Cookie: connect.sid=s%3AyGyJEdXcELCfJYLrpm1yzSY2pigUJfv_.WNQNiX7AUloPBRNR2nKdCDwVmu%2Bt8CoXRLA9zAKNY94'
+ * 
  * @apiSuccessExample {json} Success-Response:
  * {
- *   
- *  "playlist": [],
- *  "_id": "5e7c108d78089d06e4d403db",
- *  "name": "category1",
- *  "images": [],
- *  "__v": 0
- *}
+    "category": {
+        "playlist": [],
+        "_id": "5e8ce900e192f95244e5ca05",
+        "name": "classic",
+        "images": [],
+        "__v": 0
+    }
+}
  * 
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains a category object in JSON format. </br>On error, the header status code is an error code and the response body contains an error object.
  *
@@ -932,6 +938,10 @@
  * 
  * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * 
+ * @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/browse/categories' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+--header 'Cookie: connect.sid=s%3AyGyJEdXcELCfJYLrpm1yzSY2pigUJfv_.WNQNiX7AUloPBRNR2nKdCDwVmu%2Bt8CoXRLA9zAKNY94'
  * @apiSuccessExample {json} Success-Response:
  * {
 *  [
