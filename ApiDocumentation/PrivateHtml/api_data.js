@@ -67,7 +67,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -162,7 +162,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -200,7 +200,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -239,7 +239,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage",
-        "content": "curl --location --request POST 'http://localhost:3000/api/login' \\\n--data-raw '{\n\t\"email\":\"nada5aled52@gmail.com\",\n\t\"password\":\"nada1234\"\n'",
+        "content": "curl --location --request POST 'http://localhost:3000/api/login' \\\n--data-raw '{\n\t\"email\":\"nada5aled52@gmail.com\",\n\t\"password\":\"nada1234\"\n'}'/",
         "type": "curl"
       }
     ],
@@ -253,7 +253,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -285,7 +285,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -349,7 +349,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -392,13 +392,13 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
     "type": "PUT",
-    "url": "api/promote",
-    "title": "make user premium (not implemented)",
+    "url": "api/me/promote",
+    "title": "make user premium",
     "name": "make_user_premium",
     "group": "Account",
     "description": "<p style=\"color:red;\">promote user to premium.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
@@ -416,12 +416,12 @@ define({ "api": [
     },
     "parameter": {
       "fields": {
-        "Query Parameters": [
+        "Query parameters": [
           {
-            "group": "Query Parameters",
+            "group": "Query parameters",
             "optional": false,
-            "field": "id",
-            "description": "<p>Required. A user id who want to promote apiparam (Query parameters) credit card  Required. A user credit card</p>"
+            "field": "credit",
+            "description": "<p>card  Required. A user credit card</p>"
           }
         ],
         "Response": [
@@ -434,27 +434,53 @@ define({ "api": [
         ]
       }
     },
+    "examples": [
+      {
+        "title": "Example usage",
+        "content": "curl --location --request POST 'http://localhost:3000/api/me/promote' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \n\\",
+        "type": "curl"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "\n{\n \"success\":\"promote to premium \"\n  }",
+          "type": "json"
+        }
+      ]
+    },
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
     "type": "PUT",
     "url": "api/Artist/update",
-    "title": "Change a Artist's Details (not implemented yet)",
+    "title": "Change a Artist's Details",
     "name": "Change_a_Artist's_Details",
     "group": "Artist",
     "description": "<p>update artist info</p> <p style=\"color:red;\">Change a Artist's Details Change a Artist’s name and genre and info .</p> Note that the request data is a JSON string, not separate fields <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "x-auth-token",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
+          },
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "Content-Type",
+            "description": "<p>Required if URIs are passed in the request body, otherwise ignored. The content type of the request body: application/json</p>"
+          }
+        ]
+      }
+    },
     "parameter": {
       "fields": {
-        "Path Parameters": [
-          {
-            "group": "Path Parameters",
-            "optional": false,
-            "field": "Artist_id",
-            "description": "<p>The Spotify ID for the Artist</p>"
-          }
-        ],
         "Body Parameters": [
           {
             "group": "Body Parameters",
@@ -468,7 +494,7 @@ define({ "api": [
             "type": "string",
             "optional": false,
             "field": "genre",
-            "description": "<p>Optional.type of most artist's track</p>"
+            "description": "<p>Optional.types of most artist's track example &quot; genre1,genre2,genre3&quot;</p>"
           },
           {
             "group": "Body Parameters",
@@ -488,26 +514,24 @@ define({ "api": [
         ]
       }
     },
-    "header": {
-      "fields": {
-        "Header": [
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "x-auth-token",
-            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
-          },
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "Content-Type",
-            "description": "<p>Required if URIs are passed in the request body, otherwise ignored. The content type of the request body: application/json</p>"
-          }
-        ]
+    "examples": [
+      {
+        "title": "Example usage",
+        "content": "curl --location --request POST 'http://localhost:3000/api/Artist/update' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\\n--header 'Content-Type: application/json' \\\n \\\n--data-raw '{\n\"name\":\"new artist\",\n\"genre\":\"action,scifi\",\n\"info\":\"info\"\n\t\n}",
+        "type": "curl"
       }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{   \n       \"genre\": [\n           \"rytyt\",\n           \"genre2\",\n           \"genre1\"\n       ],\n       \"_id\": \"5e7f67e438150c15e8589ece\",\n       \"info\": \"jdshgdjdhfjkd\",\n       \"popularity\": 0,\n       \"type\": \"Artist\",\n       \"Name\": \"yytguguy\",\n       \"userId\": \"5e7f670838150c15e8589ecc\",\n       \"images\": [],\n       \"addAlbums\": [],\n       \"addTracks\": [],\n      \"__v\": 0\n   }",
+          "type": "json"
+        }
+      ]
     },
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -571,7 +595,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -636,7 +660,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -747,7 +771,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Track"
   },
   {
@@ -948,7 +972,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Track"
   },
   {
@@ -992,7 +1016,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Users_Profile"
   },
   {
@@ -1073,7 +1097,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Users_Profile"
   }
 ] });

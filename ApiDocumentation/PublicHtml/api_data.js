@@ -46,7 +46,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -96,7 +96,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -139,7 +139,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -234,7 +234,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -324,7 +324,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -381,7 +381,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -440,7 +440,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -499,7 +499,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -584,7 +584,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -643,7 +643,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -710,7 +710,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -762,7 +762,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -805,7 +805,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -890,7 +890,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -949,7 +949,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1012,7 +1012,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1063,7 +1063,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1124,7 +1124,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1163,7 +1163,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1202,7 +1202,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1241,7 +1241,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1280,7 +1280,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1313,7 +1313,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\"recentlyPlaying\": [\n\n       {\n           \"genre\": [\n               \"genre1\",\n               \"genre2\",\n               \"genre3\",\n               \"genre4\"\n           ],\n           \"type\": \"artist\",\n           \"name\": \"ahmedsamir\",\n           \"images\": [],\n           \"id\": \"5e833a51a51d971174923f17\"\n       },\n       {\n           \"owner\": {\n               \"id\": \"5e85f48b1ba5cf17ccca66e9\",\n               \"type\": \"user\",\n               \"name\": \"ahmedsamir\"\n           },\n           \"collaborative\": false,\n           \"type\": \"playlist\",\n           \"name\": \"playlist1\",\n           \"images\": [],\n           \"id\": \"5e85f4ca1ba5cf17ccca66eb\",\n           \"Description\": \"\",\n           \"isPublic\": true\n       },\n       {\n           \"id\": \"5e833b412b9d7718a491c850\",\n           \"name\": \"album1\",\n           \"type\": \"album\",\n           \"album_type\": \"type1\",\n           \"images\": [],\n           \"availableMarkets\": [\n               \"us,er,rttr,fretgre,jhj\"\n          ],\n           \"artist\": {\n               \"type\": \"artist\",\n               \"id\": \"5e833a51a51d971174923f17\",\n               \"name\": \"ahmedsamir\"\n           }\n       }\n   ]\n}",
+          "content": "{\n  \"recentlyArtist\": [\n        {\n            \"genre\": [\n                \"pop\",\n                \"jazz\"\n            ],\n            \"type\": \"artist\",\n            \"name\": \"nada\",\n            \"images\": [],\n            \"id\": \"5e8cb7037f37604d583f8d22\",\n            \"info\": \"ohayo nada\",\n            \"index\": 1\n        }\n    ],\n    \"recentlyPlaylist\": [\n        {\n            \"owner\": {\n                \"id\": \"5e8cb118084a9d2e6c8f21d7\",\n                \"type\": \"user\",\n                \"name\": \"nada\"\n            },\n            \"collaborative\": false,\n            \"type\": \"playlist\",\n            \"name\": \"SPACETOON\",\n            \"images\": [],\n            \"id\": \"5e8cbe527f37604d583f8d5c\",\n            \"Description\": \"\",\n            \"isPublic\": true,\n            \"index\": 2\n        },\n        {\n            \"owner\": {\n                \"id\": \"5e8cb202084a9d2e6c8f21e9\",\n                \"type\": \"user\",\n                \"name\": \"menna\"\n            },\n            \"collaborative\": false,\n            \"type\": \"playlist\",\n            \"name\": \"KILL ME\",\n            \"images\": [],\n            \"id\": \"5e8cbfa97f37604d583f8d6a\",\n            \"Description\": \"\",\n            \"isPublic\": true,\n            \"index\": 3\n        }\n    ],\n    \"recentlyAlbum\": [\n        {\n            \"id\": \"5e8cb9327f37604d583f8d25\",\n            \"name\": \"HELLO KIDS\",\n            \"type\": \"album\",\n            \"album_type\": \"Album\",\n            \"images\": [],\n            \"availableMarkets\": [\n                \"EG,US\"\n            ],\n            \"artist\": {\n                \"type\": \"artist\",\n                \"id\": \"5e8cb7037f37604d583f8d22\",\n                \"name\": \"nada\"\n            },\n            \"index\": 0\n        }\n    ]\n}",
           "type": "json"
         }
       ]
@@ -1331,7 +1331,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1380,7 +1380,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1431,7 +1431,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1494,7 +1494,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1558,7 +1558,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1608,7 +1608,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1671,7 +1671,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1721,7 +1721,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1771,7 +1771,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -1821,7 +1821,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -1870,7 +1870,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -1926,7 +1926,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -1975,7 +1975,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2032,7 +2032,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2082,7 +2082,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2139,7 +2139,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2202,7 +2202,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Personalization"
   },
   {
@@ -2266,7 +2266,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2328,7 +2328,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2371,7 +2371,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2422,7 +2422,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2473,7 +2473,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2515,7 +2515,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2558,7 +2558,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2608,7 +2608,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2659,7 +2659,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2710,7 +2710,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2752,7 +2752,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2802,7 +2802,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2875,7 +2875,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -2970,7 +2970,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3043,7 +3043,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3093,7 +3093,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3144,7 +3144,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3217,7 +3217,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3284,7 +3284,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3327,7 +3327,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3397,7 +3397,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3492,7 +3492,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3559,7 +3559,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3624,7 +3624,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3683,7 +3683,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3739,7 +3739,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3795,7 +3795,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3851,7 +3851,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Search"
   },
   {
@@ -3894,7 +3894,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -3953,7 +3953,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4012,7 +4012,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4071,7 +4071,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4130,7 +4130,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4189,7 +4189,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4240,7 +4240,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Users_Profile"
   },
   {
@@ -4307,7 +4307,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Users_Profile"
   },
   {
@@ -4357,7 +4357,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "like"
   },
   {
@@ -4407,7 +4407,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "like"
   }
 ] });

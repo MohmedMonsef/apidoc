@@ -40,7 +40,7 @@
  * @apiparam (Response) Format On success, the response body contains the created user object in JSON format and the HTTP status code in the response header is 200 OK or 201 Created. There is also a Location response header giving the Web API endpoint for the new user. On error, the header status code is an error code and the response body contains an error object. Trying to create a user when you do not have the user’s authorization returns error 403 Forbidden.
  */
 
- /**
+/**
   * @api {post} api/createQueue/:playlist_id/:trackId create queue 
  * @apiName Create queue
  * @apiGroup Player
@@ -86,7 +86,7 @@
 --data-raw '{
 	"email":"nada5aled52@gmail.com",
 	"password":"nada1234"
-'
+'}'/
  * 
  * @apiSuccessExample {json} Success-Response:
  *{
@@ -145,13 +145,13 @@
  *
  */
 
- /**
+/**
  * @api {POST} api/auth/facebookAndroid Login to Spotify with Facebook for android native app
  * @apiName Login to Spotify with Facebook android
  * @apiGroup Account
  * @apiDescription login with facebook using android custom route
  * 
-* 
+ * 
  * 
  * <h1>Endpoint</h1> 
  * 
@@ -195,7 +195,7 @@
  */
 
 /**
- * @api {PUT} api/promote make user premium (not implemented)
+ * @api {PUT} api/me/promote make user premium 
  * @apiName make user premium
  * @apiGroup Account
  * @apiDescription
@@ -208,11 +208,19 @@
  * 
  * 
  * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
- * @apiParam (Query Parameters)  id    Required. A user id who want to promote
- * apiparam (Query parameters) credit card  Required. A user credit card 
+ * @apiparam (Query parameters) credit card  Required. A user credit card 
  * @apiparam (Response) Format On success, the response body contains the user_id and credit card and the HTTP status code in the response header is 200 OK or 201 Created. There is also a Location response header giving the Web API endpoint for promote . On error, the header status code is an error code and the response body contains an error object. Trying to promote when you do not have the user’s authorization returns error 403 Forbidden.
+ *@apiExample {curl} Example usage
+ *curl --location --request POST 'http://localhost:3000/api/me/promote' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' 
+\
+ *  @apiSuccessExample {json} Success-Response:
  * 
+ * {
+ *  "success":"promote to premium "
+ *   }
  */
+
 /**
  * @api {PUT} api/me/update update Current User's Profile
  * @apiName update Current User's Profile
@@ -257,7 +265,7 @@
  *   }
  */
 
- /**
+/**
  * @api {DELETE} api/remove delete Current User's Profile
  * @apiName delete Current User's Profile
  * @apiGroup Users Profile
@@ -354,7 +362,7 @@
 }'
  */
 /**
- * @api {PUT} api/Artist/update Change a Artist's Details (not implemented yet)
+ * @api {PUT} api/Artist/update Change a Artist's Details 
  * @apiName Change a Artist's  Details 
  * @apiGroup Artist
  * @apiDescription update artist info 
@@ -365,20 +373,50 @@
  * <h1> Request parameters</h1> 
  * </br></br><h1> Endpoint</h1>
  * 
- * 
- * @apiParam (Path Parameters)  Artist_id	The Spotify ID for the Artist
+ *
  * 
  * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * @apiHeader (Header)  Content-Type	Required if URIs are passed in the request body, otherwise ignored. The content type of the request body: application/json
  *
  *
  * @apiParam (Body Parameters) {string}  name	         	   Optional. The new name for the Artist
- * @apiParam (Body Parameters) {string}  genre		           Optional.type of most artist's track 
+ * @apiParam (Body Parameters) {string}  genre		           Optional.types of most artist's track example " genre1,genre2,genre3"
  * @apiParam (Body Parameters) {string} info		           Optional.all information about this artist
  * @apiparam (Response) Format On success the HTTP status code in the response header is 200 OK. On error, the header status code is an error code and the response body contains an error object. Trying to change an artist when you do not have the user’s authorization returns error 403 Forbidden.
+ **  @apiExample {curl} Example usage
+ * curl --location --request POST 'http://localhost:3000/api/Artist/update' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+--header 'Content-Type: application/json' \
+ \
+--data-raw '{
+"name":"new artist",
+"genre":"action,scifi",
+"info":"info"
+	
+}
+*
+ *  @apiSuccessExample {json} Success-Response:
+ * {   
+ *        "genre": [
+ *            "rytyt",
+ *            "genre2",
+ *            "genre1"
+ *        ],
+ *        "_id": "5e7f67e438150c15e8589ece",
+ *        "info": "jdshgdjdhfjkd",
+ *        "popularity": 0,
+ *        "type": "Artist",
+ *        "Name": "yytguguy",
+ *        "userId": "5e7f670838150c15e8589ecc",
+ *        "images": [],
+ *        "addAlbums": [],
+ *        "addTracks": [],
+ *       "__v": 0
+ *    }
+ * 
  */
 
- /**
+/**
  * @api {GET} api/tracks/android/{track_id} get track for android
  * @apiName get track file for android
  * @apiGroup Track
