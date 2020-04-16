@@ -24,7 +24,7 @@
  *curl --location --request GET 'http://localhost:3000/api/albums/5e918ef9d2d4a641c4f471aa' \
 --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
 --header 'Content-Type: application/json' \
---header 'Cookie: connect.sid=s%3AhFXycLH7qsGv3VWPRXvS72LtYpxXYZpd.5i9rF%2BMZcRfJP4WV9yJwfkQlsrcUDt%2BKRouITz58X%2BQ' \
+
  */
 /**
  * @api {get} api/albums/:id/tracks Get an Album's Tracks
@@ -108,7 +108,7 @@
 --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
 --header 'Content-Type: application/json' \
 --header 'Content-Type: application/json' \
---header 'Cookie: connect.sid=s%3AhFXycLH7qsGv3VWPRXvS72LtYpxXYZpd.5i9rF%2BMZcRfJP4WV9yJwfkQlsrcUDt%2BKRouITz58X%2BQ' \
+
 --data-raw '{
 	"name":"album1",
 	"label":"label",
@@ -884,7 +884,6 @@
  * @apiExample {curl} Example usage:
  * curl --location --request GET 'http://localhost:3000/api/browse/categories/5e8ce900e192f95244e5ca05' \
 --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
---header 'Cookie: connect.sid=s%3AyGyJEdXcELCfJYLrpm1yzSY2pigUJfv_.WNQNiX7AUloPBRNR2nKdCDwVmu%2Bt8CoXRLA9zAKNY94'
  * 
  * @apiSuccessExample {json} Success-Response:
  * {
@@ -941,7 +940,7 @@
  * @apiExample {curl} Example usage:
  * curl --location --request GET 'http://localhost:3000/api/browse/categories' \
 --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
---header 'Cookie: connect.sid=s%3AyGyJEdXcELCfJYLrpm1yzSY2pigUJfv_.WNQNiX7AUloPBRNR2nKdCDwVmu%2Bt8CoXRLA9zAKNY94'
+
  * @apiSuccessExample {json} Success-Response:
  * {
 *  [
@@ -1633,7 +1632,7 @@
  * @apiExample {curl} Example usage:
  * curl --location --request PUT 'http://localhost:3000/api/me/like/5e8cba1b7f37604d583f8d37' \
 --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
---header 'Cookie: connect.sid=s%3A8d0Ft5LcIdvPSm-P3BwmuUoP8qb2uvCS.w6LNiZoLrkDGzyRizhJwQiFo06%2FI%2FK3X8o1c8hySqWI'
+
 
  */
 /**
@@ -1655,7 +1654,7 @@
  *  @apiExample {curl} Example usage:
  * curl --location --request DELETE 'http://localhost:3000/api/me/unlike/5e8cba1b7f37604d583f8d37' \
 --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
---header 'Cookie: connect.sid=s%3A8d0Ft5LcIdvPSm-P3BwmuUoP8qb2uvCS.w6LNiZoLrkDGzyRizhJwQiFo06%2FI%2FK3X8o1c8hySqWI'
+
  */
 
 //public
@@ -1709,7 +1708,7 @@
  * @apiExample {curl} Example usage:
  * curl --location --request GET 'http://localhost:3000/api/me/albums/contains?albums_ids=5e8cba1b7f37604d583f8d37,5e8cba2d7f37604d583f8d38' \
 --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
---header 'Cookie: connect.sid=s%3A8d0Ft5LcIdvPSm-P3BwmuUoP8qb2uvCS.w6LNiZoLrkDGzyRizhJwQiFo06%2FI%2FK3X8o1c8hySqWI'
+
  * 
  */
 
@@ -1735,7 +1734,6 @@
  * @apiExample {curl} Example usage:
  * curl --location --request GET 'http://localhost:3000/api/me/track/contains?track_ids=5e8cba1b7f37604d583f8d37,5e8cba2d7f37604d583f8d38' \
 --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
---header 'Cookie: connect.sid=s%3A8d0Ft5LcIdvPSm-P3BwmuUoP8qb2uvCS.w6LNiZoLrkDGzyRizhJwQiFo06%2FI%2FK3X8o1c8hySqWI'
  */
 
 /**
@@ -1779,7 +1777,6 @@
  *  @apiExample {curl} Example usage:
  * curl --location --request GET 'http://localhost:3000/api/me/tracks' \
 --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
---header 'Cookie: connect.sid=s%3A8d0Ft5LcIdvPSm-P3BwmuUoP8qb2uvCS.w6LNiZoLrkDGzyRizhJwQiFo06%2FI%2FK3X8o1c8hySqWI'
  * 
  */
 
@@ -1848,7 +1845,7 @@
  *  @apiExample {curl} Example usage:
  * curl --location --request PUT 'http://localhost:3000/api/me/Albums?ids=5e8cb9327f37604d583f8d25' \
 --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
---header 'Cookie: connect.sid=s%3A8d0Ft5LcIdvPSm-P3BwmuUoP8qb2uvCS.w6LNiZoLrkDGzyRizhJwQiFo06%2FI%2FK3X8o1c8hySqWI'
+
  */
 
 /**
@@ -1937,7 +1934,7 @@
  *   @apiExample {curl} Example usage:
  * curl --location --request GET 'http://localhost:3000/api/me/player/currently-playing' \
 --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
---header 'Cookie: connect.sid=s%3A8d0Ft5LcIdvPSm-P3BwmuUoP8qb2uvCS.w6LNiZoLrkDGzyRizhJwQiFo06%2FI%2FK3X8o1c8hySqWI'
+
 
  * 
  * @apiSuccessExample {json} Success-Response:

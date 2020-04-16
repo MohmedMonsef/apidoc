@@ -396,14 +396,67 @@
  * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  *
  *
- * @apiParam (Query Parameters) {string}  type	         	   Optional. can be "high" or "medium" or "low" or review it has a default of "medium",if free user and choose high quality it will automatically set to medium
+ * @apiParam (Query Parameters) {string}  type	         	   Optional. can be "high" or "medium" or "low" or "review" it has a default of "medium",if free user and choose high quality it will automatically set to medium
  * 
  * @apiparam (Response) Format media file stream on success, and if incorrect track then 404, if error in streaming will be 500 insternal server error
  */
 
+ 
+ /**
+ * @api {GET} /api/tracks/encryption/{track_id}/keys get decryption key for track for web player
+ * @apiName get track encryption key for web player
+ * @apiGroup Track
+ * @apiDescription
+ * 
+ * <p style="color:red;">get track media file encryption key and keyId for web player</p>
+ *
+ * 
+ * <h1> Request parameters</h1> 
+ * </br></br><h1> Endpoint</h1>
+ * 
+ * 
+ * @apiParam (Path Parameters)  track_id	the trackID
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
+ *
+ *
+ * @apiparam (Response) Key object wiith 200 status  on success, and if incorrect track then 404
+ * @apiExample {curl} Example usage
+ * curl --location --request GET 'http://localhost:3000/api/tracks/web-player/5e973b973ca79e980c34ec04?type=medium' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2OTY2MTgyLCJleHAiOjQ3MzM0NTI1ODJ9.IOtODsiHiTM7VXlxq1Dan072FtNdo0l_UXfOqdnMRFw' \
+ * 
+ * @apiSuccessExample {json} Success-Response:
+ * {
+    "key": "pGMaFTpEPfnu0FkwQ9t1GQ",
+    "keyId": "88XgNh5mVLKPgEnHeLI5Rg"
+  }
+ */
 
-  api/**
- * @api {POST} api/artists/me/albums/{album_id}/tracks upload tracks
+ /**
+ * @api {GET} /api/tracks/web-player/{track_id} get track for web player
+ * @apiName get track file for web player
+ * @apiGroup Track
+ * @apiDescription
+ * 
+ * <p style="color:red;">get track media file for web player</p>
+ *
+ * 
+ * <h1> Request parameters</h1> 
+ * </br></br><h1> Endpoint</h1>
+ * 
+ * 
+ * @apiParam (Path Parameters)  track_id	the trackID
+ * 
+ *
+ *
+ * @apiParam (Query Parameters) {string}  type	         	   Optional. can be "high" or "medium" or "low" , it has a default of "medium",if free user and choose high quality it will automatically set to medium
+ * 
+ *@apiParam (Query Parameters) {string}  token	         	   Required.the jwt token for the user
+ * 
+ * @apiparam (Response) Format media file stream on success, and if incorrect track then 404, if error in streaming will be 500 insternal server error
+ */
+
+  /**
+ * @api {POST} /api/artists/me/albums/{album_id}/tracks upload tracks
  * @apiName upload tracks to album
  * @apiGroup Track
  * @apiDescription
@@ -422,13 +475,35 @@
  * @apiParam (form-data) {file} high  Required the hight qaulity version of the track
  *  @apiParam (form-data) {file} medium  Required the medium qaulity version of the track
  * @apiParam (form-data) {file} low  Required the low qaulity version of the track
+ * @apiParam (form-data) {file} high_enc  Required the hight qaulity encrypted version of the track
+ * @apiParam (form-data) {file} medium_enc  Required the medium qaulity encrypted version of the track
+ * @apiParam (form-data) {file} low_enc  Required the low qaulity encrypted version of the track
  * @apiParam (form-data) {file} review  Required the review track to be shown for android
  *
  * @apiParam (Query Parameters) {string}  name	         	   Required.name of the track
  * @apiParam (Query Parameters) {Number}  trackNumber	         	   Required.number of the track
  * @apiParam (Query Parameters) {string}  availableMarkets	         	   Optional. comma seperated dtring with available markets for track
  * @apiParam (Query Parameters) {Number}  duration	         	   Required. track duration in milliseconds
+ * @apiParam (Query Parameters) {String}  Key	         	   Required. encryption key used to encrypt the track
+ * @apiParam (Query Parameters) {String}  keyId	         	   Required. encryption key id used to encrypt the track
+ * @apiparam (Response) Format 200 if success,403 forbidden if not an artist or doesn't own the album or 404 if failed to upload the track
  * 
- * @apiparam (Response) Format 200 if success,403 forbidden if not an artist or doesn't own the album or failed to upload the track
+ *  @apiExample {curl} Example usage
+ * curl --location --request POST 'http://localhost:3000/api/artists/me/albums/5e8cb9327f37604d583f8d25/tracks?name=track1&availableMarkets=%22eg,fr%22&trackNumber=12&duration=1200&key=a4631a153a443df9eed0593043db7519&keyId=f3c5e0361e6654b28f8049c778b23946' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2OTY2MTgyLCJleHAiOjQ3MzM0NTI1ODJ9.IOtODsiHiTM7VXlxq1Dan072FtNdo0l_UXfOqdnMRFw' \
+
+--form 'high=@/F:/softwareEng/eme/sub/audio_320k.webm' \
+--form 'medium=@/F:/softwareEng/eme/sub/audio_256k.webm' \
+--form 'low=@/F:/softwareEng/eme/sub/audio_128k.webm' \
+--form 'review=@/F:/softwareEng/eme/sub/audio_review.webm' \
+--form 'high_enc=@/F:/softwareEng/eme/sub/audio_320k_e.webm' \
+--form 'medium_enc=@/F:/softwareEng/eme/sub/audio_256k_e.webm' \
+--form 'low_enc=@/F:/softwareEng/eme/sub/audio_128k_e.webm'
+*@apiSuccessExample {json} Success-Response:
+*{
+    "success": "uploaded succesfully"
+}
+*
+
  */
 

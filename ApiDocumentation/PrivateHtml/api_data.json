@@ -641,6 +641,65 @@
   },
   {
     "type": "GET",
+    "url": "/api/tracks/encryption/{track_id}/keys",
+    "title": "get decryption key for track for web player",
+    "name": "get_track_encryption_key_for_web_player",
+    "group": "Track",
+    "description": "<p style=\"color:red;\">get track media file encryption key and keyId for web player</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "parameter": {
+      "fields": {
+        "Path Parameters": [
+          {
+            "group": "Path Parameters",
+            "optional": false,
+            "field": "track_id",
+            "description": "<p>the trackID</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Key",
+            "description": "<p>object wiith 200 status  on success, and if incorrect track then 404</p>"
+          }
+        ]
+      }
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "x-auth-token",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage",
+        "content": "curl --location --request GET 'http://localhost:3000/api/tracks/web-player/5e973b973ca79e980c34ec04?type=medium' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2OTY2MTgyLCJleHAiOjQ3MzM0NTI1ODJ9.IOtODsiHiTM7VXlxq1Dan072FtNdo0l_UXfOqdnMRFw' \\\n--header 'Cookie: connect.sid=s%3AZ0gx1KF_2hrT8JgLj1gHGyCxLP-iR8CD.%2FEfmF7MHW2JalIm02ApCSVECJCwSrPznQhs0x7ch2jU'",
+        "type": "curl"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"key\": \"pGMaFTpEPfnu0FkwQ9t1GQ\",\n    \"keyId\": \"88XgNh5mVLKPgEnHeLI5Rg\"\n  }",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "private_code/doc.js",
+    "groupTitle": "Track"
+  },
+  {
+    "type": "GET",
     "url": "api/tracks/android/{track_id}",
     "title": "get track for android",
     "name": "get_track_file_for_android",
@@ -662,7 +721,7 @@
             "type": "string",
             "optional": false,
             "field": "type",
-            "description": "<p>Optional. can be &quot;high&quot; or &quot;medium&quot; or &quot;low&quot; or review it has a default of &quot;medium&quot;,if free user and choose high quality it will automatically set to medium</p>"
+            "description": "<p>Optional. can be &quot;high&quot; or &quot;medium&quot; or &quot;low&quot; or &quot;review&quot; it has a default of &quot;medium&quot;,if free user and choose high quality it will automatically set to medium</p>"
           }
         ],
         "Response": [
@@ -692,8 +751,55 @@
     "groupTitle": "Track"
   },
   {
+    "type": "GET",
+    "url": "/api/tracks/web-player/{track_id}",
+    "title": "get track for web player",
+    "name": "get_track_file_for_web_player",
+    "group": "Track",
+    "description": "<p style=\"color:red;\">get track media file for web player</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "parameter": {
+      "fields": {
+        "Path Parameters": [
+          {
+            "group": "Path Parameters",
+            "optional": false,
+            "field": "track_id",
+            "description": "<p>the trackID</p>"
+          }
+        ],
+        "Query Parameters": [
+          {
+            "group": "Query Parameters",
+            "type": "string",
+            "optional": false,
+            "field": "type",
+            "description": "<p>Optional. can be &quot;high&quot; or &quot;medium&quot; or &quot;low&quot; , it has a default of &quot;medium&quot;,if free user and choose high quality it will automatically set to medium</p>"
+          },
+          {
+            "group": "Query Parameters",
+            "type": "string",
+            "optional": false,
+            "field": "token",
+            "description": "<p>Required.the jwt token for the user</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>media file stream on success, and if incorrect track then 404, if error in streaming will be 500 insternal server error</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "private_code/doc.js",
+    "groupTitle": "Track"
+  },
+  {
     "type": "POST",
-    "url": "api/artists/me/albums/{album_id}/tracks",
+    "url": "/api/artists/me/albums/{album_id}/tracks",
     "title": "upload tracks",
     "name": "upload_tracks_to_album",
     "group": "Track",
@@ -734,6 +840,27 @@
             "group": "form-data",
             "type": "file",
             "optional": false,
+            "field": "high_enc",
+            "description": "<p>Required the hight qaulity encrypted version of the track</p>"
+          },
+          {
+            "group": "form-data",
+            "type": "file",
+            "optional": false,
+            "field": "medium_enc",
+            "description": "<p>Required the medium qaulity encrypted version of the track</p>"
+          },
+          {
+            "group": "form-data",
+            "type": "file",
+            "optional": false,
+            "field": "low_enc",
+            "description": "<p>Required the low qaulity encrypted version of the track</p>"
+          },
+          {
+            "group": "form-data",
+            "type": "file",
+            "optional": false,
             "field": "review",
             "description": "<p>Required the review track to be shown for android</p>"
           }
@@ -766,6 +893,20 @@
             "optional": false,
             "field": "duration",
             "description": "<p>Required. track duration in milliseconds</p>"
+          },
+          {
+            "group": "Query Parameters",
+            "type": "String",
+            "optional": false,
+            "field": "Key",
+            "description": "<p>Required. encryption key used to encrypt the track</p>"
+          },
+          {
+            "group": "Query Parameters",
+            "type": "String",
+            "optional": false,
+            "field": "keyId",
+            "description": "<p>Required. encryption key id used to encrypt the track</p>"
           }
         ],
         "Response": [
@@ -773,7 +914,7 @@
             "group": "Response",
             "optional": false,
             "field": "Format",
-            "description": "<p>200 if success,403 forbidden if not an artist or doesn't own the album or failed to upload the track</p>"
+            "description": "<p>200 if success,403 forbidden if not an artist or doesn't own the album or 404 if failed to upload the track</p>"
           }
         ]
       }
@@ -789,6 +930,22 @@
           }
         ]
       }
+    },
+    "examples": [
+      {
+        "title": "Example usage",
+        "content": "curl --location --request POST 'http://localhost:3000/api/artists/me/albums/5e8cb9327f37604d583f8d25/tracks?name=track1&availableMarkets=%22eg,fr%22&trackNumber=12&duration=1200&key=a4631a153a443df9eed0593043db7519&keyId=f3c5e0361e6654b28f8049c778b23946' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2OTY2MTgyLCJleHAiOjQ3MzM0NTI1ODJ9.IOtODsiHiTM7VXlxq1Dan072FtNdo0l_UXfOqdnMRFw' \\\n--header 'Cookie: connect.sid=s%3AAH320-fpJbKi01_PPcKtEFd6sfsdbpJi.XvFqHgRjSBTOt0QbDzMtriabsrAWQg9lkIdJiwWxr1w' \\\n--form 'high=@/F:/softwareEng/eme/sub/audio_320k.webm' \\\n--form 'medium=@/F:/softwareEng/eme/sub/audio_256k.webm' \\\n--form 'low=@/F:/softwareEng/eme/sub/audio_128k.webm' \\\n--form 'review=@/F:/softwareEng/eme/sub/audio_review.webm' \\\n--form 'high_enc=@/F:/softwareEng/eme/sub/audio_320k_e.webm' \\\n--form 'medium_enc=@/F:/softwareEng/eme/sub/audio_256k_e.webm' \\\n--form 'low_enc=@/F:/softwareEng/eme/sub/audio_128k_e.webm'",
+        "type": "curl"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"success\": \"uploaded succesfully\"\n}",
+          "type": "json"
+        }
+      ]
     },
     "version": "0.0.0",
     "filename": "private_code/doc.js",
