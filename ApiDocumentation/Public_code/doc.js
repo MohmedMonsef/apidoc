@@ -1023,51 +1023,72 @@
 --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
  * 
  *  @apiSuccessExample {json} Success-Response:
- *{"recentlyPlaying": [
- *
- *        {
- *            "genre": [
- *                "genre1",
- *                "genre2",
- *                "genre3",
- *                "genre4"
- *            ],
- *            "type": "artist",
- *            "name": "ahmedsamir",
- *            "images": [],
- *            "id": "5e833a51a51d971174923f17"
- *        },
- *        {
- *            "owner": {
- *                "id": "5e85f48b1ba5cf17ccca66e9",
- *                "type": "user",
- *                "name": "ahmedsamir"
- *            },
- *            "collaborative": false,
- *            "type": "playlist",
- *            "name": "playlist1",
- *            "images": [],
- *            "id": "5e85f4ca1ba5cf17ccca66eb",
- *            "Description": "",
- *            "isPublic": true
- *        },
- *        {
- *            "id": "5e833b412b9d7718a491c850",
- *            "name": "album1",
- *            "type": "album",
- *            "album_type": "type1",
- *            "images": [],
- *            "availableMarkets": [
- *                "us,er,rttr,fretgre,jhj"
- *           ],
- *            "artist": {
- *                "type": "artist",
- *                "id": "5e833a51a51d971174923f17",
- *                "name": "ahmedsamir"
- *            }
- *        }
- *    ]
- *}
+ *{
+ *   "recentlyArtist": [
+        {
+            "genre": [
+                "pop",
+                "jazz"
+            ],
+            "type": "artist",
+            "name": "nada",
+            "images": [],
+            "id": "5e8cb7037f37604d583f8d22",
+            "info": "ohayo nada",
+            "index": 1
+        }
+    ],
+    "recentlyPlaylist": [
+        {
+            "owner": {
+                "id": "5e8cb118084a9d2e6c8f21d7",
+                "type": "user",
+                "name": "nada"
+            },
+            "collaborative": false,
+            "type": "playlist",
+            "name": "SPACETOON",
+            "images": [],
+            "id": "5e8cbe527f37604d583f8d5c",
+            "Description": "",
+            "isPublic": true,
+            "index": 2
+        },
+        {
+            "owner": {
+                "id": "5e8cb202084a9d2e6c8f21e9",
+                "type": "user",
+                "name": "menna"
+            },
+            "collaborative": false,
+            "type": "playlist",
+            "name": "KILL ME",
+            "images": [],
+            "id": "5e8cbfa97f37604d583f8d6a",
+            "Description": "",
+            "isPublic": true,
+            "index": 3
+        }
+    ],
+    "recentlyAlbum": [
+        {
+            "id": "5e8cb9327f37604d583f8d25",
+            "name": "HELLO KIDS",
+            "type": "album",
+            "album_type": "Album",
+            "images": [],
+            "availableMarkets": [
+                "EG,US"
+            ],
+            "artist": {
+                "type": "artist",
+                "id": "5e8cb7037f37604d583f8d22",
+                "name": "nada"
+            },
+            "index": 0
+        }
+    ]
+*}
  * @apiParam (Response)  Format  On success, </br>the HTTP status code in the response header is 200 OK</br> and the response body contains a message and a playlists and albums and artists object.</br> The playlists object contains an array of simplified playlist objects</br> (wrapped in a paging object) in JSON format. On error,</br> the header status code is an error code and the response body contains an error object.</br></br></br></br> Once you have retrieved the list of playlist objects,</br> you can use Get a Playlist and Get a Playlist’s Tracks to drill down further.
  */
 
