@@ -46,7 +46,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -96,7 +96,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -139,7 +139,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -234,7 +234,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -324,7 +324,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -381,7 +381,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -440,7 +440,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -499,7 +499,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -584,7 +584,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -643,7 +643,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -710,7 +710,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -762,7 +762,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -805,7 +805,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -890,7 +890,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -949,7 +949,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1012,7 +1012,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1063,7 +1063,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1124,7 +1124,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1163,7 +1163,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1202,7 +1202,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1241,7 +1241,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1280,7 +1280,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1331,7 +1331,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1380,7 +1380,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1431,7 +1431,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1494,7 +1494,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1558,7 +1558,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1608,7 +1608,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1671,7 +1671,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1721,8 +1721,279 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Follow"
+  },
+  {
+    "type": "DELETE",
+    "url": "/api/images/delete/{image_id}",
+    "title": "delete image",
+    "name": "delete_image",
+    "group": "Image",
+    "description": "<p style=\"color:red;\">delete image file</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "parameter": {
+      "fields": {
+        "PathParameters": [
+          {
+            "group": "PathParameters",
+            "optional": false,
+            "field": "image_id",
+            "description": "<p>{String}\t\t\tthe id of the image</p>"
+          }
+        ],
+        "QueryParameters": [
+          {
+            "group": "QueryParameters",
+            "optional": false,
+            "field": "source_id",
+            "description": "<p>{String}\t\t\tthe id of the entity that  have the image</p>"
+          },
+          {
+            "group": "QueryParameters",
+            "optional": false,
+            "field": "belongs_to",
+            "description": "<p>{String}\t\tRequired.string that specify the entity type that the image will be uploaded to can take values (user,playlist,track,album,artist).</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success 200 status, else error code will be sent</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage",
+        "content": "curl --location --request DELETE 'http://localhost:3000/api/images/delete/5e9a241d809e981ef0b64a69?source_id=5e8cb118084a9d2e6c8f21d7&belongs_to=artist' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2OTY2MTgyLCJleHAiOjQ3MzM0NTI1ODJ9.IOtODsiHiTM7VXlxq1Dan072FtNdo0l_UXfOqdnMRFw'",
+        "type": "curl"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"success\": \"image deleted\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "public_code/doc.js",
+    "groupTitle": "Image"
+  },
+  {
+    "type": "GET",
+    "url": "/api/images/{image_id}",
+    "title": "get image",
+    "name": "get_image",
+    "group": "Image",
+    "description": "<p style=\"color:red;\">get image file</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "parameter": {
+      "fields": {
+        "PathParameters": [
+          {
+            "group": "PathParameters",
+            "optional": false,
+            "field": "image_id",
+            "description": "<p>the id of the image</p>"
+          }
+        ],
+        "QueryParameters": [
+          {
+            "group": "QueryParameters",
+            "optional": false,
+            "field": "source_id",
+            "description": "<p>the id of the entity that will have the image</p>"
+          },
+          {
+            "group": "QueryParameters",
+            "optional": false,
+            "field": "belongs_to",
+            "description": "<p>{String}\t\tRequired.string that specify the entity type that the image will be uploaded to can take values (user,playlist,track,album,artist).</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success an media stream will be piped to response, and partial content will be recieved</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage",
+        "content": "curl --location --request GET 'http://localhost:3000/api/images/5e9a241d809e981ef0b64a69?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTg5MGY3NGJlYmU5NjEwZWM2YWVhMTIiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2MTc5NTE5LCJleHAiOjExNTU2OTgzOTA2NzE5fQ.E19Or8-PmoMQdBgSm1gJLotEOFx08f9wToQcXoIKs1s' \\",
+        "type": "curl"
+      }
+    ],
+    "version": "0.0.0",
+    "filename": "public_code/doc.js",
+    "groupTitle": "Image"
+  },
+  {
+    "type": "POST",
+    "url": "/api/images/update/{source_id}",
+    "title": "update image",
+    "name": "update_image",
+    "group": "Image",
+    "description": "<p style=\"color:red;\">update image to specific entity in database, with removing the existing images for this entity</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "x-auth-token",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service.</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "PathParameters": [
+          {
+            "group": "PathParameters",
+            "optional": false,
+            "field": "source_id",
+            "description": "<p>the id of the entity that will have the image</p>"
+          }
+        ],
+        "QueryParameters": [
+          {
+            "group": "QueryParameters",
+            "optional": false,
+            "field": "belongs_to",
+            "description": "<p>{String}\t\tRequired.string that specify the entity type that the image will be uploaded to can take values (user,playlist,track,album,artist).</p>"
+          },
+          {
+            "group": "QueryParameters",
+            "optional": false,
+            "field": "height",
+            "description": "<p>{Number} Required. the height of the image in pixels</p>"
+          },
+          {
+            "group": "QueryParameters",
+            "optional": false,
+            "field": "width",
+            "description": "<p>{Number} Required. the width of the image in pixels</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK .on error 403 status code will occur</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage",
+        "content": "curl --location --request POST 'http://localhost:3000/api/images/update/5e8cb7037f37604d583f8d22?belongs_to=artist&height=100&width=100' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2OTY2MTgyLCJleHAiOjQ3MzM0NTI1ODJ9.IOtODsiHiTM7VXlxq1Dan072FtNdo0l_UXfOqdnMRFw' \\\n--form 'image=@/C:/Users/bahaaEldeen/Pictures/Annotation 2020-03-29 005428.png'",
+        "type": "curl"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"success\": \"updated succesfully\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "public_code/doc.js",
+    "groupTitle": "Image"
+  },
+  {
+    "type": "POST",
+    "url": "/api/images/upload/{source_id}",
+    "title": "upload image",
+    "name": "upload_image",
+    "group": "Image",
+    "description": "<p style=\"color:red;\">upload image to specific entity in database, without removing the existing images for this entity</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "x-auth-token",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service.</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "PathParameters": [
+          {
+            "group": "PathParameters",
+            "optional": false,
+            "field": "source_id",
+            "description": "<p>the id of the entity that will have the image</p>"
+          }
+        ],
+        "QueryParameters": [
+          {
+            "group": "QueryParameters",
+            "optional": false,
+            "field": "belongs_to",
+            "description": "<p>{String}\t\tRequired.string that specify the entity type that the image will be uploaded to can take values (user,playlist,track,album,artist).</p>"
+          },
+          {
+            "group": "QueryParameters",
+            "optional": false,
+            "field": "height",
+            "description": "<p>{Number} Required. the height of the image in pixels</p>"
+          },
+          {
+            "group": "QueryParameters",
+            "optional": false,
+            "field": "width",
+            "description": "<p>{Number} Required. the width of the image in pixels</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK .on error 403 status code will occur</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage",
+        "content": "curl --location --request POST 'http://localhost:3000/api/images/upload/5e99e98d9f8daeb6b42076ff?belongs_to=track&height=100&width=100' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2OTY2MTgyLCJleHAiOjQ3MzM0NTI1ODJ9.IOtODsiHiTM7VXlxq1Dan072FtNdo0l_UXfOqdnMRFw' \\\n--form 'image=@/C:/Users/bahaaEldeen/Pictures/Annotation 2020-03-29 005428.png'",
+        "type": "curl"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\"success\":\"uploaded succesfully\"}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "public_code/doc.js",
+    "groupTitle": "Image"
   },
   {
     "type": "get",
@@ -1771,7 +2042,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -1821,7 +2092,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -1870,7 +2141,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -1926,7 +2197,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -1975,7 +2246,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2032,7 +2303,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2082,7 +2353,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2139,7 +2410,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2202,7 +2473,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Personalization"
   },
   {
@@ -2266,7 +2537,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2328,7 +2599,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2371,7 +2642,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2422,7 +2693,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2473,7 +2744,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2515,7 +2786,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2558,7 +2829,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2608,7 +2879,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2659,7 +2930,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2710,7 +2981,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2752,7 +3023,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2802,7 +3073,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2875,7 +3146,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -2970,7 +3241,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3043,7 +3314,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3093,7 +3364,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3144,7 +3415,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3217,7 +3488,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3284,7 +3555,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3327,7 +3598,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3397,7 +3668,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3492,7 +3763,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3559,7 +3830,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3624,7 +3895,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3683,7 +3954,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3739,7 +4010,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3795,7 +4066,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3851,7 +4122,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Search"
   },
   {
@@ -3894,7 +4165,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -3953,7 +4224,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4012,7 +4283,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4071,7 +4342,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4130,7 +4401,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4189,7 +4460,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4240,7 +4511,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Users_Profile"
   },
   {
@@ -4307,7 +4578,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Users_Profile"
   },
   {
@@ -4357,7 +4628,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "like"
   },
   {
@@ -4407,7 +4678,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "like"
   }
 ]

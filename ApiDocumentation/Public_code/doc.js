@@ -3468,3 +3468,131 @@
     "followedBy": []
 }
  */
+// Image
+ /**
+ * @api {POST} /api/images/upload/{source_id} upload image 
+ * @apiName upload image
+ * @apiGroup Image
+ * @apiDescription
+ * <p style="color:red;">upload image to specific entity in database, without removing the existing images for this entity</p>
+ * 
+ * 
+ * <h1>Request Parameters</h1></br></br>
+ * 
+ * <h1> Endpoint</h1> 
+ * 
+ * @apiHeader (Header)  x-auth-token 		Required. A valid access token from the Spotify Accounts service.
+ * 
+ * @apiParam (PathParameters)  source_id 				the id of the entity that will have the image
+ * 
+ * @apiParam (QueryParameters)  belongs_to  {String}		Required.string that specify the entity type that the image will be uploaded to can take values (user,playlist,track,album,artist).
+ *  @apiParam (QueryParameters)  height  {Number} Required. the height of the image in pixels 
+* 
+ *@apiParam (QueryParameters)  width  {Number} Required. the width of the image in pixels
+ * 
+ *  @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK .on error 403 status code will occur
+ * 
+ * @apiExample {curl} Example usage
+ *curl --location --request POST 'http://localhost:3000/api/images/upload/5e99e98d9f8daeb6b42076ff?belongs_to=track&height=100&width=100' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2OTY2MTgyLCJleHAiOjQ3MzM0NTI1ODJ9.IOtODsiHiTM7VXlxq1Dan072FtNdo0l_UXfOqdnMRFw' \
+--form 'image=@/C:/Users/bahaaEldeen/Pictures/Annotation 2020-03-29 005428.png'
+
+ * 
+ * @apiSuccessExample {json} Success-Response:
+ * {"success":"uploaded succesfully"}
+ */
+
+  /**
+ * @api {POST} /api/images/update/{source_id} update image 
+ * @apiName update image
+ * @apiGroup Image
+ * @apiDescription
+ * <p style="color:red;">update image to specific entity in database, with removing the existing images for this entity</p>
+ * 
+ * 
+ * <h1>Request Parameters</h1></br></br>
+ * 
+ * <h1> Endpoint</h1> 
+ * 
+ * @apiHeader (Header)  x-auth-token 		Required. A valid access token from the Spotify Accounts service.
+ * 
+ * @apiParam (PathParameters)  source_id 				the id of the entity that will have the image
+ * 
+ * @apiParam (QueryParameters)  belongs_to  {String}		Required.string that specify the entity type that the image will be uploaded to can take values (user,playlist,track,album,artist).
+ *  @apiParam (QueryParameters)  height  {Number} Required. the height of the image in pixels 
+* 
+ *@apiParam (QueryParameters)  width  {Number} Required. the width of the image in pixels
+ * 
+ *  @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK .on error 403 status code will occur
+ * 
+ * @apiExample {curl} Example usage
+ *curl --location --request POST 'http://localhost:3000/api/images/update/5e8cb7037f37604d583f8d22?belongs_to=artist&height=100&width=100' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2OTY2MTgyLCJleHAiOjQ3MzM0NTI1ODJ9.IOtODsiHiTM7VXlxq1Dan072FtNdo0l_UXfOqdnMRFw' \
+--form 'image=@/C:/Users/bahaaEldeen/Pictures/Annotation 2020-03-29 005428.png'
+
+ * 
+ * @apiSuccessExample {json} Success-Response:
+ * {
+    "success": "updated succesfully"
+}
+ */
+
+   /**
+ * @api {GET} /api/images/{image_id} get image 
+ * @apiName get image
+ * @apiGroup Image
+ * @apiDescription
+ * <p style="color:red;">get image file</p>
+ * 
+ * 
+ * <h1>Request Parameters</h1></br></br>
+ * 
+ * <h1> Endpoint</h1> 
+ * 
+ * 
+ * 
+ * @apiParam (PathParameters)  image_id 				the id of the image
+ * 
+ * @apiParam (QueryParameters)  source_id 				the id of the entity that will have the image
+ * 
+ * @apiParam (QueryParameters)  belongs_to  {String}		Required.string that specify the entity type that the image will be uploaded to can take values (user,playlist,track,album,artist).
+ * 
+ *  @apiParam (Response)  Format  On success an media stream will be piped to response, and partial content will be recieved
+ * 
+ * @apiExample {curl} Example usage
+ *curl --location --request GET 'http://localhost:3000/api/images/5e9a241d809e981ef0b64a69?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTg5MGY3NGJlYmU5NjEwZWM2YWVhMTIiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2MTc5NTE5LCJleHAiOjExNTU2OTgzOTA2NzE5fQ.E19Or8-PmoMQdBgSm1gJLotEOFx08f9wToQcXoIKs1s' \
+
+ * 
+ *
+ */
+
+   /**
+ * @api {DELETE} /api/images/delete/{image_id} delete image 
+ * @apiName delete image
+ * @apiGroup Image
+ * @apiDescription
+ * <p style="color:red;">delete image file</p>
+ * 
+ * 
+ * <h1>Request Parameters</h1></br></br>
+ * 
+ * <h1> Endpoint</h1> 
+ * 
+ * 
+ * 
+ * @apiParam (PathParameters)  image_id 	{String}			the id of the image
+ * 
+ * @apiParam (QueryParameters)  source_id 	{String}			the id of the entity that  have the image
+ * 
+ * @apiParam (QueryParameters)  belongs_to  {String}		Required.string that specify the entity type that the image will be uploaded to can take values (user,playlist,track,album,artist).
+ * 
+ *  @apiParam (Response)  Format  On success 200 status, else error code will be sent
+ * @apiExample {curl} Example usage
+ * curl --location --request DELETE 'http://localhost:3000/api/images/delete/5e9a241d809e981ef0b64a69?source_id=5e8cb118084a9d2e6c8f21d7&belongs_to=artist' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2OTY2MTgyLCJleHAiOjQ3MzM0NTI1ODJ9.IOtODsiHiTM7VXlxq1Dan072FtNdo0l_UXfOqdnMRFw'
+ *@apiSuccessExample {json} Success-Response:
+ * {
+    "success": "image deleted"
+}
+ *
+ */

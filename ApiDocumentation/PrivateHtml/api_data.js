@@ -67,7 +67,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -162,7 +162,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -200,7 +200,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -253,7 +253,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -285,7 +285,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -349,7 +349,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -392,7 +392,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -451,7 +451,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -531,7 +531,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -595,7 +595,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -660,8 +660,55 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Playlist"
+  },
+  {
+    "type": "DELETE",
+    "url": "/api/tracks/delete/{track_id}",
+    "title": "delete track",
+    "name": "delete_track",
+    "group": "Track",
+    "description": "<p style=\"color:red;\">delete track from database and from all instances that it occurs in</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "parameter": {
+      "fields": {
+        "Path Parameters": [
+          {
+            "group": "Path Parameters",
+            "optional": false,
+            "field": "track_id",
+            "description": "<p>the trackID</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "200",
+            "description": "<p>status if deleted successfully elss error code will be sent</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage",
+        "content": "curl --location --request DELETE 'http://localhost:3000/api/tracks/delete/5e9a288b65140b24a8cba950' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2OTY2MTgyLCJleHAiOjQ3MzM0NTI1ODJ9.IOtODsiHiTM7VXlxq1Dan072FtNdo0l_UXfOqdnMRFw'",
+        "type": "curl"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "\n{\n    \"success\": \"deleted track\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "private_code/doc.js",
+    "groupTitle": "Track"
   },
   {
     "type": "GET",
@@ -705,7 +752,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage",
-        "content": "curl --location --request GET 'http://localhost:3000/api/tracks/web-player/5e973b973ca79e980c34ec04?type=medium' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2OTY2MTgyLCJleHAiOjQ3MzM0NTI1ODJ9.IOtODsiHiTM7VXlxq1Dan072FtNdo0l_UXfOqdnMRFw' \\\n--header 'Cookie: connect.sid=s%3AZ0gx1KF_2hrT8JgLj1gHGyCxLP-iR8CD.%2FEfmF7MHW2JalIm02ApCSVECJCwSrPznQhs0x7ch2jU'",
+        "content": "curl --location --request GET 'http://localhost:3000/api/tracks/web-player/5e973b973ca79e980c34ec04?type=medium' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2OTY2MTgyLCJleHAiOjQ3MzM0NTI1ODJ9.IOtODsiHiTM7VXlxq1Dan072FtNdo0l_UXfOqdnMRFw' \\",
         "type": "curl"
       }
     ],
@@ -771,7 +818,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Track"
   },
   {
@@ -958,7 +1005,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage",
-        "content": "curl --location --request POST 'http://localhost:3000/api/artists/me/albums/5e8cb9327f37604d583f8d25/tracks?name=track1&availableMarkets=%22eg,fr%22&trackNumber=12&duration=1200&key=a4631a153a443df9eed0593043db7519&keyId=f3c5e0361e6654b28f8049c778b23946' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2OTY2MTgyLCJleHAiOjQ3MzM0NTI1ODJ9.IOtODsiHiTM7VXlxq1Dan072FtNdo0l_UXfOqdnMRFw' \\\n--header 'Cookie: connect.sid=s%3AAH320-fpJbKi01_PPcKtEFd6sfsdbpJi.XvFqHgRjSBTOt0QbDzMtriabsrAWQg9lkIdJiwWxr1w' \\\n--form 'high=@/F:/softwareEng/eme/sub/audio_320k.webm' \\\n--form 'medium=@/F:/softwareEng/eme/sub/audio_256k.webm' \\\n--form 'low=@/F:/softwareEng/eme/sub/audio_128k.webm' \\\n--form 'review=@/F:/softwareEng/eme/sub/audio_review.webm' \\\n--form 'high_enc=@/F:/softwareEng/eme/sub/audio_320k_e.webm' \\\n--form 'medium_enc=@/F:/softwareEng/eme/sub/audio_256k_e.webm' \\\n--form 'low_enc=@/F:/softwareEng/eme/sub/audio_128k_e.webm'",
+        "content": "curl --location --request POST 'http://localhost:3000/api/artists/me/albums/5e8cb9327f37604d583f8d25/tracks?name=track1&availableMarkets=%22eg,fr%22&trackNumber=12&duration=1200&key=a4631a153a443df9eed0593043db7519&keyId=f3c5e0361e6654b28f8049c778b23946' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2OTY2MTgyLCJleHAiOjQ3MzM0NTI1ODJ9.IOtODsiHiTM7VXlxq1Dan072FtNdo0l_UXfOqdnMRFw' \\\n\n--form 'high=@/F:/softwareEng/eme/sub/audio_320k.webm' \\\n--form 'medium=@/F:/softwareEng/eme/sub/audio_256k.webm' \\\n--form 'low=@/F:/softwareEng/eme/sub/audio_128k.webm' \\\n--form 'review=@/F:/softwareEng/eme/sub/audio_review.webm' \\\n--form 'high_enc=@/F:/softwareEng/eme/sub/audio_320k_e.webm' \\\n--form 'medium_enc=@/F:/softwareEng/eme/sub/audio_256k_e.webm' \\\n--form 'low_enc=@/F:/softwareEng/eme/sub/audio_128k_e.webm'",
         "type": "curl"
       }
     ],
@@ -972,7 +1019,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Track"
   },
   {
@@ -1016,7 +1063,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Users_Profile"
   },
   {
@@ -1097,7 +1144,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Users_Profile"
   }
 ] });

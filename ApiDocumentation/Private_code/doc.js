@@ -545,3 +545,33 @@
 
  */
 
+ /**
+ * @api {DELETE} /api/tracks/delete/{track_id} delete track
+ * @apiName delete track
+ * @apiGroup Track
+ * @apiDescription
+ * 
+ * <p style="color:red;">delete track from database and from all instances that it occurs in</p>
+ *
+ * 
+ * <h1> Request parameters</h1> 
+ * </br></br><h1> Endpoint</h1>
+ * 
+ * 
+ * @apiParam (Path Parameters)  track_id	the trackID
+ * 
+ *
+ *
+ *
+ * 
+ * @apiparam (Response) 200 status if deleted successfully elss error code will be sent
+ *  @apiExample {curl} Example usage
+ * curl --location --request DELETE 'http://localhost:3000/api/tracks/delete/5e9a288b65140b24a8cba950' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2OTY2MTgyLCJleHAiOjQ3MzM0NTI1ODJ9.IOtODsiHiTM7VXlxq1Dan072FtNdo0l_UXfOqdnMRFw'
+ * @apiSuccessExample {json} Success-Response:
+ * 
+ * {
+    "success": "deleted track"
+}
+ */
+
