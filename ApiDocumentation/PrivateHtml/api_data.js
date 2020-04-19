@@ -956,7 +956,14 @@ define({ "api": [
             "type": "string",
             "optional": false,
             "field": "availableMarkets",
-            "description": "<p>Optional. comma seperated dtring with available markets for track</p>"
+            "description": "<p>Required. comma seperated string with available markets for track</p>"
+          },
+          {
+            "group": "Query Parameters",
+            "type": "string",
+            "optional": false,
+            "field": "genres",
+            "description": "<p>Required. comma seperated string with genre of track</p>"
           },
           {
             "group": "Query Parameters",

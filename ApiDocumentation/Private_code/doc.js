@@ -520,7 +520,8 @@
  *
  * @apiParam (Query Parameters) {string}  name	         	   Required.name of the track
  * @apiParam (Query Parameters) {Number}  trackNumber	         	   Required.number of the track
- * @apiParam (Query Parameters) {string}  availableMarkets	         	   Optional. comma seperated dtring with available markets for track
+ * @apiParam (Query Parameters) {string}  availableMarkets	         	   Required. comma seperated string with available markets for track
+ * @apiParam (Query Parameters) {string}  genres	         	   Required. comma seperated string with genre of track
  * @apiParam (Query Parameters) {Number}  duration	         	   Required. track duration in milliseconds
  * @apiParam (Query Parameters) {String}  Key	         	   Required. encryption key used to encrypt the track
  * @apiParam (Query Parameters) {String}  keyId	         	   Required. encryption key id used to encrypt the track
