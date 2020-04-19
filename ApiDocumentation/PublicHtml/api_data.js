@@ -1833,21 +1833,15 @@ define({ "api": [
             "group": "PathParameters",
             "optional": false,
             "field": "image_id",
-            "description": "<p>the id of the image</p>"
+            "description": "<p>{String}\t\t\tthe id of the image</p>"
           }
         ],
         "QueryParameters": [
           {
             "group": "QueryParameters",
             "optional": false,
-            "field": "source_id",
-            "description": "<p>the id of the entity that will have the image</p>"
-          },
-          {
-            "group": "QueryParameters",
-            "optional": false,
             "field": "belongs_to",
-            "description": "<p>{String}\t\tRequired.string that specify the entity type that the image will be uploaded to can take values (user,playlist,track,album,artist).</p>"
+            "description": "<p>{String}\t\tRequired.string that specify the entity type that the image is  uploaded to can take values (user,playlist,track,album,artist).</p>"
           }
         ],
         "Response": [
@@ -1863,7 +1857,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage",
-        "content": "curl --location --request GET 'http://localhost:3000/api/images/5e9a241d809e981ef0b64a69?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTg5MGY3NGJlYmU5NjEwZWM2YWVhMTIiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2MTc5NTE5LCJleHAiOjExNTU2OTgzOTA2NzE5fQ.E19Or8-PmoMQdBgSm1gJLotEOFx08f9wToQcXoIKs1s' \\",
+        "content": "curl --location --request GET 'http://localhost:3000/api/images/5e9c9790fc69ad92e0a7eda5?belongs_to=artist' \\",
         "type": "curl"
       }
     ],
@@ -4489,6 +4483,65 @@ define({ "api": [
         {
           "title": "Success-Response:",
           "content": "{\n    \"track\": {\n        \"availableMarkets\": [\n            \"ttyt,rewwf,fff\"\n        ],\n        \"_id\": \"5e7f58bb4fe2420d34a881db\",\n        \"trackNumber\": 55,\n        \"name\": \"frist\",\n        \"artistId\": \"5e7ef28326e2fa0da04f81ae\",\n        \"albumId\": \"5e7f44905cce7d09a82e5a75\",\n        \"discNumber\": 1,\n        \"explicit\": false,\n        \"type\": \"Track\",\n        \"acousticness\": 10,\n        \"danceability\": 23,\n        \"energy\": 100,\n        \"instrumentalness\": 4,\n        \"key\": 90,\n        \"liveness\": 25,\n        \"loudness\": 70,\n        \"mode\": 56,\n        \"speechiness\": 67,\n        \"tempo\": 76,\n        \"timeSignature\": \"2000-01-31T22:00:00.000Z\",\n        \"valence\": 70,\n        \"__v\": 0\n    },\n    \"isLiked\": true,\n    \"album\": {\n        \"name\": \"album1\",\n        \"_id\": \"5e7f44905cce7d09a82e5a75\",\n        \"artist\": {\n            \"name\": \"artist1\",\n            \"_id\": \"5e7ef28326e2fa0da04f81ae\"\n        }\n    }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "public_code/doc.js",
+    "groupTitle": "Tracks"
+  },
+  {
+    "type": "get",
+    "url": "/api/tracks/related/{track_id}",
+    "title": "get related tracks for specific track",
+    "name": "get_related_tracks",
+    "group": "Tracks",
+    "description": "<p style=\"color:red;\">get related tracks for specific track based on its genre.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "x-auth-token",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service.</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "PathParameters": [
+          {
+            "group": "PathParameters",
+            "optional": false,
+            "field": "track_id",
+            "description": "<p>Required. The Spotify ID for the track.</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success 200 and get array of related tracks, on error or if no tracks then 404 not found</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "curl --location --request GET 'http://localhost:3000/api/tracks/related/5e9b64e4e9c8d87fdc2ecbd8' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg3MjM4MzE3LCJleHAiOjQ3MzM3MjQ3MTd9.QeijMcfcRjP3SzXFfT58cCnrTBVYEL7boMp9XYDKc2U' \\",
+        "type": "curl"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "\n[\n    {\n        \"availableMarkets\": [\n            \"\\\"eg\\\"\"\n        ],\n        \"genre\": [\n            \"quran\",\n            \"\"\n        ],\n        \"_id\": \"5e9b62c3e9c8d87fdc2ecb58\",\n        \"url\": \"undefined\",\n        \"images\": [],\n        \"duration\": 3000,\n        \"trackNumber\": 1,\n        \"name\": \"el-kyama\",\n        \"artistId\": \"5e9b5b656dff8d6ee4c13bbc\",\n        \"albumId\": \"5e9b5de4e9c8d87fdc2eca7f\",\n        \"discNumber\": 1,\n        \"explicit\": false,\n        \"type\": \"Track\",\n        \"acousticness\": 25,\n        \"danceability\": 78,\n        \"energy\": 30,\n        \"instrumentalness\": 85,\n        \"key\": \"pGMaFTpEPfnu0FkwQ9t1GQ\",\n        \"liveness\": 69,\n        \"loudness\": 76,\n        \"mode\": 6,\n        \"speechiness\": 44,\n        \"tempo\": 8,\n        \"timeSignature\": \"2020-04-18T20:27:47.497Z\",\n        \"valence\": 36,\n        \"like\": 0,\n        \"keyId\": \"88XgNh5mVLKPgEnHeLI5Rg\",\n        \"__v\": 0\n    }\n]",
           "type": "json"
         }
       ]

@@ -3351,6 +3351,69 @@
  * 
  */
 
+ /**
+ * @api {get} /api/tracks/related/{track_id} get related tracks for specific track
+ * @apiName get related tracks 
+ * @apiGroup Tracks
+ * @apiDescription
+ * <p style="color:red;">get related tracks for specific track based on its genre.</p>
+ *
+ * 
+ * <h1>Request Parameters</h1></br></br>
+ * 
+ * <h1> Endpoint</h1> 
+ * 
+ * @apiHeader (Header)  x-auth-token 			Required. A valid access token from the Spotify Accounts service.
+ * 
+ * 
+ * @apiParam (PathParameters)  track_id				Required. The Spotify ID for the track.
+ * 
+ *
+ * @apiParam (Response)  Format  On success 200 and get array of related tracks, on error or if no tracks then 404 not found
+ *  @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/tracks/related/5e9b64e4e9c8d87fdc2ecbd8' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg3MjM4MzE3LCJleHAiOjQ3MzM3MjQ3MTd9.QeijMcfcRjP3SzXFfT58cCnrTBVYEL7boMp9XYDKc2U' \
+* @apiSuccessExample {json} Success-Response:
+* 
+ *[
+    {
+        "availableMarkets": [
+            "\"eg\""
+        ],
+        "genre": [
+            "quran",
+            ""
+        ],
+        "_id": "5e9b62c3e9c8d87fdc2ecb58",
+        "url": "undefined",
+        "images": [],
+        "duration": 3000,
+        "trackNumber": 1,
+        "name": "el-kyama",
+        "artistId": "5e9b5b656dff8d6ee4c13bbc",
+        "albumId": "5e9b5de4e9c8d87fdc2eca7f",
+        "discNumber": 1,
+        "explicit": false,
+        "type": "Track",
+        "acousticness": 25,
+        "danceability": 78,
+        "energy": 30,
+        "instrumentalness": 85,
+        "key": "pGMaFTpEPfnu0FkwQ9t1GQ",
+        "liveness": 69,
+        "loudness": 76,
+        "mode": 6,
+        "speechiness": 44,
+        "tempo": 8,
+        "timeSignature": "2020-04-18T20:27:47.497Z",
+        "valence": 36,
+        "like": 0,
+        "keyId": "88XgNh5mVLKPgEnHeLI5Rg",
+        "__v": 0
+    }
+]
+ */
+
 
 /**
  * @api {get} api/track/audio-features/{id}  Get Audio Features for a Track 
@@ -3834,16 +3897,14 @@
  * 
  * 
  * 
- * @apiParam (PathParameters)  image_id 				the id of the image
+ * @apiParam (PathParameters)  image_id 	{String}			the id of the image
  * 
- * @apiParam (QueryParameters)  source_id 				the id of the entity that will have the image
- * 
- * @apiParam (QueryParameters)  belongs_to  {String}		Required.string that specify the entity type that the image will be uploaded to can take values (user,playlist,track,album,artist).
+ * @apiParam (QueryParameters)  belongs_to  {String}		Required.string that specify the entity type that the image is  uploaded to can take values (user,playlist,track,album,artist).
  * 
  *  @apiParam (Response)  Format  On success an media stream will be piped to response, and partial content will be recieved
  * 
  * @apiExample {curl} Example usage
- *curl --location --request GET 'http://localhost:3000/api/images/5e9a241d809e981ef0b64a69?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTg5MGY3NGJlYmU5NjEwZWM2YWVhMTIiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2MTc5NTE5LCJleHAiOjExNTU2OTgzOTA2NzE5fQ.E19Or8-PmoMQdBgSm1gJLotEOFx08f9wToQcXoIKs1s' \
+ *curl --location --request GET 'http://localhost:3000/api/images/5e9c9790fc69ad92e0a7eda5?belongs_to=artist' \
 
  * 
  *
