@@ -2012,7 +2012,14 @@
  * @apiExample {curl} Example usage:
  * curl --location --request GET 'http://localhost:3000/api/me/albums/contains?albums_ids=5e8cba1b7f37604d583f8d37,5e8cba2d7f37604d583f8d38' \
 --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
-
+*  @apiSuccessExample {json} Success-Response:
+ *{
+*[
+ *   true,
+ *   true,
+ *   true
+*]
+ *}
  * 
  */
 
@@ -2038,7 +2045,15 @@
  * @apiExample {curl} Example usage:
  * curl --location --request GET 'http://localhost:3000/api/me/track/contains?track_ids=5e8cba1b7f37604d583f8d37,5e8cba2d7f37604d583f8d38' \
 --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
- */
+*  @apiSuccessExample {json} Success-Response:
+ *{
+*[
+ *   true,
+ *   true,
+ *   true
+*]
+ *}
+*/
 
 /**
  * @api {get} api/me/albums Get Current User's Saved Albums
@@ -2057,6 +2072,125 @@
  *  @apiParam (QueryParameters)  limit  			Optional. The maximum number of objects to return. Default: 20. Minimum: 1. Maximum: 50.
  * @apiParam (QueryParameters)  offset 			Optional. The index of the first object to return.</br> Default: 0 (i.e., the first object). Use with limit to get the next set of objects.
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains an array of </br>album objects (wrapped in a paging object) in JSON format. Each album object is accompanied</br> by a timestamp (added_at) to show when it was added. There is also an etag in the header that can be used in future conditional requests.</br> On error, the header status code is an error code and the response body contains an error object.
+ *  @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/me/albums' \
+*--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+ *
+ *  @apiSuccessExample {json} Success-Response:
+*{  
+ [
+    {
+        "isSaved": true,
+        "_id": "5e8cb9327f37604d583f8d25",
+        "name": "HELLO KIDS",
+        "images": [],
+        "artistId": "5e8cb7037f37604d583f8d22",
+        "artistName": "nada",
+        "track": [
+            {
+                "_id": "5e8ce2a17d3d703094eb82f4",
+                "name": "GOGO",
+                "images": []
+            },
+            {
+                "_id": "5e8ce2ca7d3d703094eb82f7",
+                "name": "OHAY",
+                "images": []
+            },
+            {
+                "_id": "5e8ce2ce7d3d703094eb82fa",
+                "name": "POP",
+                "images": []
+            },
+            {
+                "_id": "5e8ce2d37d3d703094eb82fd",
+                "name": "SASA",
+                "images": []
+            },
+            {
+                "_id": "5e8ce2d77d3d703094eb8300",
+                "name": "DOMAIN",
+                "images": []
+            },
+            {
+                "_id": "5e8ce2dc7d3d703094eb8303",
+                "name": "NOMAIN",
+                "images": []
+            }
+        ]
+    },
+    {
+        "isSaved": true,
+        "_id": "5e8cb9457f37604d583f8d27",
+        "name": "HELLO SLEEP WALKERS",
+        "images": [],
+        "artistId": "5e8cb7037f37604d583f8d22",
+        "artistName": "nada",
+        "track": [
+            {
+                "_id": "5e8ce86082c8d9579467fb73",
+                "name": "WHO I AM",
+                "images": []
+            },
+            {
+                "_id": "5e8ce86882c8d9579467fb76",
+                "name": "SOKA",
+                "images": []
+            },
+            {
+                "_id": "5e8ce86c82c8d9579467fb79",
+                "name": "ARASU",
+                "images": []
+            },
+            {
+                "_id": "5e8ce87182c8d9579467fb7c",
+                "name": "WIWI",
+                "images": []
+            },
+            {
+                "_id": "5e8ce87682c8d9579467fb7f",
+                "name": "WWIII",
+                "images": []
+            }
+        ]
+    },
+    {
+        "isSaved": true,
+        "_id": "5e8cb94b7f37604d583f8d29",
+        "name": "OHAYO SLEEP WALKERS",
+        "images": [],
+        "artistId": "5e8cb7037f37604d583f8d22",
+        "artistName": "nada",
+        "track": [
+            {
+                "_id": "5e8ce8b282c8d9579467fb82",
+                "name": "KJKJQ",
+                "images": []
+            },
+            {
+                "_id": "5e8ce8bb82c8d9579467fb85",
+                "name": "HEHE",
+                "images": []
+            },
+            {
+                "_id": "5e8ce8bf82c8d9579467fb88",
+                "name": "MOON",
+                "images": []
+            },
+            {
+                "_id": "5e8ce8c382c8d9579467fb8b",
+                "name": "SUN",
+                "images": []
+            },
+            {
+                "_id": "5e8ce8c982c8d9579467fb8e",
+                "name": "FREEZE",
+                "images": []
+            }
+        ]
+    }
+]
+*}
  */
 
 /**
@@ -2081,10 +2215,43 @@
  *  @apiExample {curl} Example usage:
  * curl --location --request GET 'http://localhost:3000/api/me/tracks' \
 --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
- * 
+ *
+ *  @apiSuccessExample {json} Success-Response:
+*{
+    "tracks": [
+        {
+            "artistId": "5e8cb7037f37604d583f8d22",
+            "artistName": "nada",
+            "artistimages": [],
+            "artistType": "Artist",
+            "albumId": "5e8cb9327f37604d583f8d25",
+            "albumName": "HELLO KIDS",
+            "albumImages": [],
+            "albumType": "Album",
+            "_id": "5e8cba367f37604d583f8d39",
+            "name": "SWALLA",
+            "type": "Track",
+            "images": []
+        },
+        {
+            "artistId": "5e8cb7037f37604d583f8d22",
+            "artistName": "nada",
+            "artistimages": [],
+            "artistType": "Artist",
+            "albumId": "5e8cb9457f37604d583f8d27",
+            "albumName": "HELLO SLEEP WALKERS",
+            "albumImages": [],
+            "albumType": "Album",
+            "_id": "5e8cba7f7f37604d583f8d3f",
+            "name": "LOVE",
+            "type": "Track",
+            "images": []
+        }
+    ],
+    "ownerName": " Samir",
+    "playlistId": "5e9c637cfac98e0e1041a769"
+*} 
  */
-
-
 
 /**
  * @api {delete} api/me/albums Remove Albums for Current User   (not implemented yet)
@@ -3351,7 +3518,7 @@
  * 
  */
 
- /**
+/**
  * @api {get} /api/tracks/related/{track_id} get related tracks for specific track
  * @apiName get related tracks 
  * @apiGroup Tracks
@@ -3815,7 +3982,7 @@
 }
  */
 // Image
- /**
+/**
  * @api {POST} /api/images/upload/{source_id} upload image 
  * @apiName upload image
  * @apiGroup Image
@@ -3848,7 +4015,7 @@
  * {"success":"uploaded succesfully"}
  */
 
-  /**
+/**
  * @api {POST} /api/images/update/{source_id} update image 
  * @apiName update image
  * @apiGroup Image
@@ -3883,7 +4050,7 @@
 }
  */
 
-   /**
+/**
  * @api {GET} /api/images/{image_id} get image 
  * @apiName get image
  * @apiGroup Image
@@ -3910,7 +4077,7 @@
  *
  */
 
-   /**
+/**
  * @api {DELETE} /api/images/delete/{image_id} delete image 
  * @apiName delete image
  * @apiGroup Image
