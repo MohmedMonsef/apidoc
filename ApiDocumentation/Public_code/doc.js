@@ -3539,6 +3539,171 @@
 ]
  */
 
+ /**
+ * @api {get}/api/tracks/related/full-track/{track_id} get related full tracks for specific track
+ * @apiName get related full tracks 
+ * @apiGroup Tracks
+ * @apiDescription
+ * <p style="color:red;">get related full tracks for specific track based on its genre. and first element is always the current track full info</p>
+ *
+ * 
+ * <h1>Request Parameters</h1></br></br>
+ * 
+ * <h1> Endpoint</h1> 
+ * 
+ * @apiHeader (Header)  x-auth-token 			Required. A valid access token from the Spotify Accounts service.
+ * 
+ * 
+ * @apiParam (PathParameters)  track_id				Required. The Spotify ID for the track.
+ * 
+ *
+ * @apiParam (Response)  Format  On success 200 and get array of related tracks, on error or if no tracks then 404 not found
+ *  @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/tracks/related/full-track/5e9b5e2de9c8d87fdc2eca81' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+* @apiSuccessExample {json} Success-Response:
+* 
+ *[
+    {
+        "track": {
+            "availableMarkets": [
+                "\"eg\""
+            ],
+            "genre": [
+                "quran",
+                ""
+            ],
+            "_id": "5e9b5e2de9c8d87fdc2eca81",
+            "url": "undefined",
+            "images": [],
+            "duration": 3000,
+            "trackNumber": 1,
+            "name": "el-doha",
+            "artistId": "5e9b5b656dff8d6ee4c13bbc",
+            "albumId": "5e9b5de4e9c8d87fdc2eca7f",
+            "discNumber": 1,
+            "explicit": false,
+            "type": "Track",
+            "acousticness": 36,
+            "danceability": 84,
+            "energy": 97,
+            "instrumentalness": 35,
+            "key": "pGMaFTpEPfnu0FkwQ9t1GQ",
+            "liveness": 84,
+            "loudness": 71,
+            "mode": 82,
+            "speechiness": 70,
+            "tempo": 66,
+            "timeSignature": "2020-04-18T20:08:13.905Z",
+            "valence": 0,
+            "like": 0,
+            "keyId": "88XgNh5mVLKPgEnHeLI5Rg",
+            "__v": 1
+        },
+        "isLiked": false,
+        "album": {
+            "name": "quranAlbum",
+            "_id": "5e9b5de4e9c8d87fdc2eca7f",
+            "artist": {
+                "name": "holy quran",
+                "_id": "5e9b5b656dff8d6ee4c13bbc"
+            }
+        }
+    },
+    {
+        "track": {
+            "availableMarkets": [
+                "\"eg\""
+            ],
+            "genre": [
+                "quran",
+                "5403"
+            ],
+            "_id": "5e9b64e4e9c8d87fdc2ecbd8",
+            "url": "undefined",
+            "images": [],
+            "duration": 3000,
+            "trackNumber": 1,
+            "name": "el-sharh",
+            "artistId": "5e9b5b656dff8d6ee4c13bbc",
+            "albumId": "5e9b5de4e9c8d87fdc2eca7f",
+            "discNumber": 1,
+            "explicit": false,
+            "type": "Track",
+            "acousticness": 39,
+            "danceability": 67,
+            "energy": 56,
+            "instrumentalness": 85,
+            "key": "pGMaFTpEPfnu0FkwQ9t1GQ",
+            "liveness": 99,
+            "loudness": 37,
+            "mode": 26,
+            "speechiness": 4,
+            "tempo": 41,
+            "timeSignature": "2020-04-18T20:36:52.877Z",
+            "valence": 20,
+            "like": 0,
+            "keyId": "88XgNh5mVLKPgEnHeLI5Rg",
+            "__v": 0
+        },
+        "isLiked": false,
+        "album": {
+            "name": "quranAlbum",
+            "_id": "5e9b5de4e9c8d87fdc2eca7f",
+            "artist": {
+                "name": "holy quran",
+                "_id": "5e9b5b656dff8d6ee4c13bbc"
+            }
+        }
+    },
+    {
+        "track": {
+            "availableMarkets": [
+                "\"eg\""
+            ],
+            "genre": [
+                "quran",
+                ""
+            ],
+            "_id": "5e9b62c3e9c8d87fdc2ecb58",
+            "url": "undefined",
+            "images": [],
+            "duration": 3000,
+            "trackNumber": 1,
+            "name": "el-kyama",
+            "artistId": "5e9b5b656dff8d6ee4c13bbc",
+            "albumId": "5e9b5de4e9c8d87fdc2eca7f",
+            "discNumber": 1,
+            "explicit": false,
+            "type": "Track",
+            "acousticness": 25,
+            "danceability": 78,
+            "energy": 30,
+            "instrumentalness": 85,
+            "key": "pGMaFTpEPfnu0FkwQ9t1GQ",
+            "liveness": 69,
+            "loudness": 76,
+            "mode": 6,
+            "speechiness": 44,
+            "tempo": 8,
+            "timeSignature": "2020-04-18T20:27:47.497Z",
+            "valence": 36,
+            "like": 0,
+            "keyId": "88XgNh5mVLKPgEnHeLI5Rg",
+            "__v": 0
+        },
+        "isLiked": false,
+        "album": {
+            "name": "quranAlbum",
+            "_id": "5e9b5de4e9c8d87fdc2eca7f",
+            "artist": {
+                "name": "holy quran",
+                "_id": "5e9b5b656dff8d6ee4c13bbc"
+            }
+        }
+    }
+]
+ */
 
 /**
  * @api {get} api/track/audio-features/{id}  Get Audio Features for a Track 
