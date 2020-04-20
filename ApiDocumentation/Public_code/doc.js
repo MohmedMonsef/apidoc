@@ -2004,7 +2004,7 @@
  * @apiHeader (Header)  x-auth-token 		Required. A valid access token from the Spotify Accounts service: see the Web API Authorization Guide for details. </br>The user-library-read scope must have been authorized by the user.
  * 
  * 
- * @apiParam (QueryParameters)  albums_ids.split 			Required. A comma-separated list of the Spotify IDs for the albums. Maximum: 50 IDs.
+ * @apiParam (QueryParameters)  albums_ids 			Required. A comma-separated list of the Spotify IDs for the albums. Maximum: 50 IDs.
  * 
  *
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains</br> a JSON array of true or false values, in the same order in which the ids were specified. </br>On error, the header status code is an error code and the response body contains an error object.
@@ -2952,6 +2952,84 @@
 //Playlist
 
 /**
+ * @api {PUT} api/me/restoreplaylists Restore user deleted Playlists.
+ * @apiName Restore user deleted Playlists.
+ * @apiGroup Playlist
+ * @apiDescription
+ * 
+ * <p style="color:red;">Restore user deleted Playlists.</p>
+ *
+ * 
+ * <h1> Request parameters</h1> 
+ * </br></br><h1> Endpoint</h1>
+ * @apiParam (Query Parameters)  playlistsIds	The Spotify IDs for the playlists
+ * 
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
+ * 
+ * @apiParam (Response) Format On success, the response body contains a array of 1's and 0's values with the same order of the given array of playlists ids to detect whether restored or not and the HTTP status code in the response header is 200 OK. On error, the header status code is an error code 404  and the response body contains an error object, If the ids not given error 403 will be sent .
+ * 
+ *  @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/me/restoreplaylists?playlistsIds=5e8cbe6b7f37604d583f8d64' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+ * 
+ * @apiSuccessExample {json} Success-Response:
+*  [
+*    1
+*  ]
+ */
+
+
+/**
+ * @api {GET} api/me/deletedplaylists Get user deleted Playlists
+ * @apiName Get user deleted Playlists.
+ * @apiGroup Playlist
+ * @apiDescription
+ * 
+ * <p style="color:red;">Get user deleted Playlists</p>
+ *
+ * 
+ * <h1> Request parameters</h1> 
+ * </br></br><h1> Endpoint</h1>
+ * 
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
+ * 
+ * @apiParam (Response) Format On success, the response body contains a array of deleted playlists object in JSON format and the HTTP status code in the response header is 200 OK. On error, the header status code is an error code 404  and the response body contains an error object.
+ * 
+ *  @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/me/deletedplaylists' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+ * 
+ * @apiSuccessExample {json} Success-Response:
+*  [
+*    {
+*        "id": "5e9d8b96cee2040d0c675837",
+*        "name": "New Playlist",
+*        "songsNumber": 0,
+*        "deletedAt": "2020-04-20T13:55:14.438Z"
+*    },
+*    {
+*        "id": "5e9dbc06f01d440db972ee71",
+*        "name": "mmm",
+*        "songsNumber": 0,
+*        "deletedAt": "2020-04-20T15:13:16.070Z"
+*    },
+*    {
+*        "id": "5e8cbe6b7f37604d583f8d64",
+*        "name": "SpaceToon",
+*        "songsNumber": 2,
+*        "deletedAt": "2020-04-20T16:00:21.601Z"
+*    },
+*    {
+*        "id": "5e9dca05f01d440db972eed8",
+*        "name": "New Playlist",
+*        "songsNumber": 0,
+*        "deletedAt": "2020-04-20T18:17:19.521Z"
+*    }
+*]
+ */
+
+
+/**
  * @api {POST} api/playlists/{playlist_id}/tracks Add Tracks to a Playlist
  * @apiName Add Tracks to a Playlist
  * @apiGroup Playlist
@@ -3022,8 +3100,49 @@
  * curl --location --request GET 'http://localhost:3000/api/playlists/5e8cbe527f37604d583f8d5c/tracks' \
 --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
 --header 'Content-Type: application/json' \
- * 
- * 
+ * @apiSuccessExample {json} Success-Response:
+ * [
+*    {
+*        "id": "5e8cbe647f37604d583f8d60",
+*        "type": "playlist",
+*        "name": "SunShine",
+*        "ownerId": "5e8cb118084a9d2e6c8f21d7",
+*        "collaborative": false,
+*        "isPublic": true,
+*        "images": [],
+*        "tracks": [
+*            {
+*                "trackid": "5e8cbb037f37604d583f8d47",
+*                "name": "OH WOW",
+*                "artistId": "5e8cb7037f37604d583f8d22",
+*                "artistName": "nada",
+*                "albumId": "5e8cb95d7f37604d583f8d2d",
+*                "albumName": "KONNICHIWA KIDS",
+*                "isLiked": false
+*            },
+*            {
+*                "trackid": "5e8cbb147f37604d583f8d48",
+*                "name": "WOW",
+*                "artistId": "5e8cb7037f37604d583f8d22",
+*                "artistName": "nada",
+*                "albumId": "5e8cb96a7f37604d583f8d2f",
+*                "albumName": "SAY YOU WON'T LET GO",
+*                "isLiked": false
+*            },
+*            {
+*                "trackid": "5e8cba6c7f37604d583f8d3e",
+*                "name": "KILL ME",
+*                "artistId": "5e8cb7037f37604d583f8d22",
+*                "artistName": "nada",
+*                "albumId": "5e8cb9457f37604d583f8d27",
+*                "albumName": "HELLO SLEEP WALKERS",
+*                "isLiked": false
+*            }
+*        ],
+*        "isfollowed": false,
+*        "checkType": "none"
+*    }
+*]
  */
 
 /**
@@ -3153,18 +3272,49 @@
 --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
 
  * 
- *@apiSuccessExample {json} Success-Response:
- * [
- * {"_id":"5e7cee3c35bf5449a0aa0a24",
- * "type":"playlist",
- * "Description":"anything",
- * "collaborative":false,
- * "name":"changedPlaylist1",
- * "isPublic":true,
- * "ownerId":"5e7ced3535bf5449a0aa0a23",
- * "images":[],
- * "snapshot":[{"hasTracks":["5e7c9618cb9f6a5270ea413a","5e7c9618cb9f6a5270ea4139"],"_id":"5e7cf0e4f37b461aac6afdd0","action":"Add Tracks"}],
- * "__v":4}]
+*@apiSuccessExample {json} Success-Response:
+*[
+*    {
+*        "id": "5e9d4a5917bf6c123f3f093d",
+*        "name": "mm",
+*        "ownerId": "5e8cb118084a9d2e6c8f21d7",
+*        "owner": "nada",
+*        "collaborative": false,
+*        "isPublic": true,
+*        "images": [],
+*        "type": "created"
+*    },
+*    {
+*        "id": "5e9dc7d4f01d440db972eec8",
+*        "name": "spacetoon",
+*        "ownerId": "5e8cb118084a9d2e6c8f21d7",
+*        "owner": "nada",
+*        "collaborative": false,
+*        "isPublic": true,
+*        "images": [],
+*        "type": "created"
+*    },
+*    {
+*        "id": "5e9dc832f01d440db972eed1",
+*        "name": "MENNA",
+*        "ownerId": "5e8cb118084a9d2e6c8f21d7",
+*        "owner": "nada",
+*        "collaborative": false,
+*        "isPublic": true,
+*        "images": [],
+*        "type": "created"
+*    },
+*    {
+*        "id": "5e9dca05f01d440db972eed8",
+*        "name": "New Playlist",
+*        "ownerId": "5e8cb118084a9d2e6c8f21d7",
+*        "owner": "nada",
+*        "collaborative": false,
+*        "isPublic": true,
+*        "images": [],
+*        "type": "created"
+*    }
+*]
  */
 
 /**

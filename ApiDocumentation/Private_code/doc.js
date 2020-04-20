@@ -95,6 +95,36 @@
  *
  *
  */
+
+/**
+ * @api {POST} api/login/reset_password Reset Password
+ * @apiName Reset Password
+ * @apiGroup Account
+ * @apiDescription
+ * 
+ * 
+ * <h1>Request Parameters</h1></br></br>
+ * 
+ * <h1>Endpoint</h1> 
+ * 
+ * 
+ * @apiParam (Body parameter)  password {string} Required. the User new password .
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body is empty </br> On error, the header status code is an error code and the response body contains an error object.
+ * 
+ *@apiExample {curl} Example usage
+ *curl --location --request POST 'http://localhost:3000/api/login/reset_password' \
+--header 'Content-Type: application/json' \
+ \
+--data-raw '{
+
+"password":"ring"
+
+	
+}'
+ *
+ *
+ */
+
 /**
  * @api {POST} api/login/forgetpassword Forget Password
  * @apiName Forget Password
