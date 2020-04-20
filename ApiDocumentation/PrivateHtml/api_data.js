@@ -817,6 +817,13 @@ define({ "api": [
         ]
       }
     },
+    "examples": [
+      {
+        "title": "Example usage",
+        "content": "curl --location --request GET 'http://localhost:3000/api/tracks/android/5e9b64e4e9c8d87fdc2ecbd8?type=review' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg3MjM4MzE3LCJleHAiOjQ3MzM3MjQ3MTd9.QeijMcfcRjP3SzXFfT58cCnrTBVYEL7boMp9XYDKc2U'",
+        "type": "curl"
+      }
+    ],
     "version": "0.0.0",
     "filename": "private_code/doc.js",
     "groupTitle": "Track"
