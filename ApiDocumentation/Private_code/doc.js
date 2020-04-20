@@ -516,6 +516,9 @@
  * @apiParam (Query Parameters) {string}  type	         	   Optional. can be "high" or "medium" or "low" or "review" it has a default of "medium",if free user and choose high quality it will automatically set to medium
  * 
  * @apiparam (Response) Format media file stream on success, and if incorrect track then 404, if error in streaming will be 500 insternal server error
+ *  @apiExample {curl} Example usage
+ * curl --location --request GET 'http://localhost:3000/api/tracks/android/5e9b64e4e9c8d87fdc2ecbd8?type=review' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg3MjM4MzE3LCJleHAiOjQ3MzM3MjQ3MTd9.QeijMcfcRjP3SzXFfT58cCnrTBVYEL7boMp9XYDKc2U' 
  */
 
  
