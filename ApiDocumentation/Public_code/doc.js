@@ -1920,7 +1920,7 @@
 /**
  * @api {put} api/me/like/:track_id like track   
  * @apiName like track
- * @apiGroup like
+ * @apiGroup Library
  * @apiDescription
  * <p style="color:red;">Add the current user  like this track.</p>
  *
@@ -1942,7 +1942,7 @@
 /**
  * @api {delete} api/me/unlike/:track_id unlike track
  * @apiName unlike track
- * @apiGroup like
+ * @apiGroup Library
  * @apiDescription
  * <p style="color:red;">Add the current user  unlike this track.</p>
  *
@@ -2254,7 +2254,7 @@
  */
 
 /**
- * @api {delete} api/me/albums Remove Albums for Current User   (not implemented yet)
+ * @api {delete} api/me/albums Remove Albums for Current User   
  * @apiName Remove Albums for Current User
  * @apiGroup Library
  * @apiDescription
@@ -2271,27 +2271,6 @@
  *  @apiParam (BodyParameters)  ids  					Optional. A comma-separated list of the Spotify IDs.</br> For example: {"ids":"4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M"}
  *
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 Success.</br> On error, the header status code is an error code and the response body contains an error object.
- */
-
-/**
- * @api {delete} api/me/tracks Remove User's Saved Tracks      (not implemented yet)
- * @apiName Remove User's Saved Tracks
- * @apiGroup Library
- * @apiDescription
- * <p style="color:red;">Remove one or more tracks from the current user’s ‘Your Music’ library.</p>
- *
- * 
- * <h1>Request Parameters</h1></br></br>
- * 
- * <h1> Endpoint</h1> 
- * 
- * @apiHeader (Header)  x-auth-token 		Required. A valid access token from the Spotify Accounts service.</br>Modification of the current user’s “Your Music” collection requires authorization of the user-library-modify scope.
- * @apiHeader (Header)  content-type 	Required if the IDs are passed in the request body, otherwise ignored.</br> The content type of the request body: application/json
- * 
- *  @apiParam (QueryParameters)  ids  					Optional. A comma-separated list of the Spotify IDs.</br> For example: ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M. Maximum: 50 IDs.
- * @apiParam (BodyParameters)  ids 			Optional. A JSON array of the Spotify IDs.</br> For example: ["4iV5W9uYEdYUVa79Axb7Rh", "1301WleyT98MSxVHPZCA6M"]</br>A maximum of 50 items can be specified in one request. </br>Note: if the ids parameter is present in the query string, any IDs listed here in the body will be ignored. 
- *
- * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 Success. On error,</br> the header status code is an error code and the response body contains an error object. </br>Trying to remove a track when you do not have the user’s authorization returns error 403 Forbidden.
  */
 
 /**
@@ -2317,27 +2296,6 @@
  * curl --location --request PUT 'http://localhost:3000/api/me/Albums?ids=5e8cb9327f37604d583f8d25' \
 --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
 
- */
-
-/**
- * @api {put} api/me/tracks Save Tracks for User       (not implemented yet)
- * @apiName Save Tracks for User
- * @apiGroup Library
- * @apiDescription
- * <p style="color:red;"> Save one or more tracks to the current user’s ‘Your Music’ library.</p>
- * 
- * 
- * <h1>Request Parameters</h1></br></br>
- * 
- * <h1> Endpoint</h1> 
- * 
- * @apiHeader (Header)  x-auth-token 		Required. A valid access token from the Spotify Accounts service.</br>Modification of the current user’s “Your Music” collection requires authorization of the user-library-modify scope.
- * @apiHeader (Header)  Content-Type 	Required if the IDs are passed in the request body, otherwise ignored.</br> The content type of the request body: application/json
- * 
- * @apiParam (QueryParameters)  ids  				Optional. A comma-separated list of the Spotify IDs. </br>For example: ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M. Maximum: 50 IDs.
- * @apiParam (BodyParameters)  ids 	Optional. A JSON array of the Spotify IDs. </br>For example: {ids:["4iV5W9uYEdYUVa79Axb7Rh", "1301WleyT98MSxVHPZCA6M"]}</br>A maximum of 50 items can be specified in one request. Note: if the ids parameter is present in the query string, any IDs listed here in the body will be ignored. 
- * 
- * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK. </br>On error, the header status code is an error code and the response body contains an error object. </br>Trying to add a track when you do not have the user’s authorization, or when you have over 10.000 tracks in Your Music, returns error 403 Forbidden.
  */
 
 

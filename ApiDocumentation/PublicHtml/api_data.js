@@ -2274,7 +2274,7 @@ define({ "api": [
   {
     "type": "delete",
     "url": "api/me/albums",
-    "title": "Remove Albums for Current User   (not implemented yet)",
+    "title": "Remove Albums for Current User",
     "name": "Remove_Albums_for_Current_User",
     "group": "Library",
     "description": "<p style=\"color:red;\">Remove one or more albums from the current user’s ‘Your Music’ library.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
@@ -2312,63 +2312,6 @@ define({ "api": [
             "optional": false,
             "field": "Format",
             "description": "<p>On success, the HTTP status code in the response header is 200 Success.</br> On error, the header status code is an error code and the response body contains an error object.</p>"
-          }
-        ]
-      }
-    },
-    "version": "0.0.0",
-    "filename": "Public_code/doc.js",
-    "groupTitle": "Library"
-  },
-  {
-    "type": "delete",
-    "url": "api/me/tracks",
-    "title": "Remove User's Saved Tracks      (not implemented yet)",
-    "name": "Remove_User's_Saved_Tracks",
-    "group": "Library",
-    "description": "<p style=\"color:red;\">Remove one or more tracks from the current user’s ‘Your Music’ library.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
-    "header": {
-      "fields": {
-        "Header": [
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "x-auth-token",
-            "description": "<p>Required. A valid access token from the Spotify Accounts service.</br>Modification of the current user’s “Your Music” collection requires authorization of the user-library-modify scope.</p>"
-          },
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "content-type",
-            "description": "<p>Required if the IDs are passed in the request body, otherwise ignored.</br> The content type of the request body: application/json</p>"
-          }
-        ]
-      }
-    },
-    "parameter": {
-      "fields": {
-        "QueryParameters": [
-          {
-            "group": "QueryParameters",
-            "optional": false,
-            "field": "ids",
-            "description": "<p>Optional. A comma-separated list of the Spotify IDs.</br> For example: ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M. Maximum: 50 IDs.</p>"
-          }
-        ],
-        "BodyParameters": [
-          {
-            "group": "BodyParameters",
-            "optional": false,
-            "field": "ids",
-            "description": "<p>Optional. A JSON array of the Spotify IDs.</br> For example: [&quot;4iV5W9uYEdYUVa79Axb7Rh&quot;, &quot;1301WleyT98MSxVHPZCA6M&quot;]</br>A maximum of 50 items can be specified in one request. </br>Note: if the ids parameter is present in the query string, any IDs listed here in the body will be ignored.</p>"
-          }
-        ],
-        "Response": [
-          {
-            "group": "Response",
-            "optional": false,
-            "field": "Format",
-            "description": "<p>On success, the HTTP status code in the response header is 200 Success. On error,</br> the header status code is an error code and the response body contains an error object. </br>Trying to remove a track when you do not have the user’s authorization returns error 403 Forbidden.</p>"
           }
         ]
       }
@@ -2429,11 +2372,11 @@ define({ "api": [
   },
   {
     "type": "put",
-    "url": "api/me/tracks",
-    "title": "Save Tracks for User       (not implemented yet)",
-    "name": "Save_Tracks_for_User",
+    "url": "api/me/like/:track_id",
+    "title": "like track",
+    "name": "like_track",
     "group": "Library",
-    "description": "<p style=\"color:red;\"> Save one or more tracks to the current user’s ‘Your Music’ library.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">Add the current user  like this track.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
         "Header": [
@@ -2441,33 +2384,19 @@ define({ "api": [
             "group": "Header",
             "optional": false,
             "field": "x-auth-token",
-            "description": "<p>Required. A valid access token from the Spotify Accounts service.</br>Modification of the current user’s “Your Music” collection requires authorization of the user-library-modify scope.</p>"
-          },
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "Content-Type",
-            "description": "<p>Required if the IDs are passed in the request body, otherwise ignored.</br> The content type of the request body: application/json</p>"
+            "description": "<p>Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br> Modifying the list of artists or users the current user follows requires authorization of the user-follow-modify scope</p>"
           }
         ]
       }
     },
     "parameter": {
       "fields": {
-        "QueryParameters": [
+        "path Parameters": [
           {
-            "group": "QueryParameters",
+            "group": "path Parameters",
             "optional": false,
-            "field": "ids",
-            "description": "<p>Optional. A comma-separated list of the Spotify IDs. </br>For example: ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M. Maximum: 50 IDs.</p>"
-          }
-        ],
-        "BodyParameters": [
-          {
-            "group": "BodyParameters",
-            "optional": false,
-            "field": "ids",
-            "description": "<p>Optional. A JSON array of the Spotify IDs. </br>For example: {ids:[&quot;4iV5W9uYEdYUVa79Axb7Rh&quot;, &quot;1301WleyT98MSxVHPZCA6M&quot;]}</br>A maximum of 50 items can be specified in one request. Note: if the ids parameter is present in the query string, any IDs listed here in the body will be ignored.</p>"
+            "field": "track_id",
+            "description": "<p>require.require.  track Spotify ID .</p>"
           }
         ],
         "Response": [
@@ -2475,11 +2404,68 @@ define({ "api": [
             "group": "Response",
             "optional": false,
             "field": "Format",
-            "description": "<p>On success, the HTTP status code in the response header is 200 OK. </br>On error, the header status code is an error code and the response body contains an error object. </br>Trying to add a track when you do not have the user’s authorization, or when you have over 10.000 tracks in Your Music, returns error 403 Forbidden.</p>"
+            "description": "<p>On success, the HTTP status code in the response header is 200 No Content and the response body is empty.</br> On error, the header status code is an error code and the response body contains an error object.</p>"
           }
         ]
       }
     },
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "curl --location --request PUT 'http://localhost:3000/api/me/like/5e8cba1b7f37604d583f8d37' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\",
+        "type": "curl"
+      }
+    ],
+    "version": "0.0.0",
+    "filename": "Public_code/doc.js",
+    "groupTitle": "Library"
+  },
+  {
+    "type": "delete",
+    "url": "api/me/unlike/:track_id",
+    "title": "unlike track",
+    "name": "unlike_track",
+    "group": "Library",
+    "description": "<p style=\"color:red;\">Add the current user  unlike this track.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "x-auth-token",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br> Modifying the list of artists or users the current user follows requires authorization of the user-follow-modify scope</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "path Parameters": [
+          {
+            "group": "path Parameters",
+            "optional": false,
+            "field": "track_id",
+            "description": "<p>require.  track Spotify ID .</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 204 No Content and the response body is empty.</br> On error, the header status code is an error code and the response body contains an error object.</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "curl --location --request DELETE 'http://localhost:3000/api/me/unlike/5e8cba1b7f37604d583f8d37' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\",
+        "type": "curl"
+      }
+    ],
     "version": "0.0.0",
     "filename": "Public_code/doc.js",
     "groupTitle": "Library"
@@ -4710,105 +4696,5 @@ define({ "api": [
     "version": "0.0.0",
     "filename": "Public_code/doc.js",
     "groupTitle": "Users_Profile"
-  },
-  {
-    "type": "put",
-    "url": "api/me/like/:track_id",
-    "title": "like track",
-    "name": "like_track",
-    "group": "like",
-    "description": "<p style=\"color:red;\">Add the current user  like this track.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
-    "header": {
-      "fields": {
-        "Header": [
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "x-auth-token",
-            "description": "<p>Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br> Modifying the list of artists or users the current user follows requires authorization of the user-follow-modify scope</p>"
-          }
-        ]
-      }
-    },
-    "parameter": {
-      "fields": {
-        "path Parameters": [
-          {
-            "group": "path Parameters",
-            "optional": false,
-            "field": "track_id",
-            "description": "<p>require.require.  track Spotify ID .</p>"
-          }
-        ],
-        "Response": [
-          {
-            "group": "Response",
-            "optional": false,
-            "field": "Format",
-            "description": "<p>On success, the HTTP status code in the response header is 200 No Content and the response body is empty.</br> On error, the header status code is an error code and the response body contains an error object.</p>"
-          }
-        ]
-      }
-    },
-    "examples": [
-      {
-        "title": "Example usage:",
-        "content": "curl --location --request PUT 'http://localhost:3000/api/me/like/5e8cba1b7f37604d583f8d37' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\",
-        "type": "curl"
-      }
-    ],
-    "version": "0.0.0",
-    "filename": "Public_code/doc.js",
-    "groupTitle": "like"
-  },
-  {
-    "type": "delete",
-    "url": "api/me/unlike/:track_id",
-    "title": "unlike track",
-    "name": "unlike_track",
-    "group": "like",
-    "description": "<p style=\"color:red;\">Add the current user  unlike this track.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
-    "header": {
-      "fields": {
-        "Header": [
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "x-auth-token",
-            "description": "<p>Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br> Modifying the list of artists or users the current user follows requires authorization of the user-follow-modify scope</p>"
-          }
-        ]
-      }
-    },
-    "parameter": {
-      "fields": {
-        "path Parameters": [
-          {
-            "group": "path Parameters",
-            "optional": false,
-            "field": "track_id",
-            "description": "<p>require.  track Spotify ID .</p>"
-          }
-        ],
-        "Response": [
-          {
-            "group": "Response",
-            "optional": false,
-            "field": "Format",
-            "description": "<p>On success, the HTTP status code in the response header is 204 No Content and the response body is empty.</br> On error, the header status code is an error code and the response body contains an error object.</p>"
-          }
-        ]
-      }
-    },
-    "examples": [
-      {
-        "title": "Example usage:",
-        "content": "curl --location --request DELETE 'http://localhost:3000/api/me/unlike/5e8cba1b7f37604d583f8d37' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\",
-        "type": "curl"
-      }
-    ],
-    "version": "0.0.0",
-    "filename": "Public_code/doc.js",
-    "groupTitle": "like"
   }
 ] });
