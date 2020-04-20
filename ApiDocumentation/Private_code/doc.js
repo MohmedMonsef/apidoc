@@ -124,7 +124,56 @@
  *
  *
  */
+/**
+ * @api {DELETE} api/user/logout Logout user 
+ * @apiName Logout user
+ * @apiGroup Account
+ * @apiDescription
+ * 
+ * 
+ * <h1>Request Parameters</h1></br></br>
+ * 
+ * <h1>Endpoint</h1> 
+ * 
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body is empty </br> On error, the header status code is an error code and the response body contains an error object.
+ * 
+ *@apiExample {curl} Example usage
+ *curl --location --request DELETE 'http://localhost:3000/api/user/logout' \
+ --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+ *
+ *
+ */
 
+/**
+ * @api {POST} api/notification/token Set FCM Token
+ * @apiName Set FCM Token
+ * @apiGroup Account
+ * @apiDescription
+ * 
+ * 
+ * <h1>Request Parameters</h1></br></br>
+ * 
+ * <h1>Endpoint</h1> 
+ * 
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
+
+ * @apiParam (Body parameter)  fcmToken {string} Required. the User FCM token  .
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body is empty </br> On error, the header status code is an error code and the response body contains an error object.
+ * 
+ *@apiExample {curl} Example usage
+ *curl --location --request POST 'http://localhost:3000/api/notification/token' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+ \
+--data-raw '{
+
+"fcmToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg3NDA1NzM2LCJleHAiOjQ3MzM4OTIxMzZ9.8I49BShfQiu6D7Jkh8hiQM7Ap02BmyShsOHgFQDlNaw"
+
+	
+}'
+ *
+ *
+ */
 /**
  * @api {POST} api/login/forgetpassword Forget Password
  * @apiName Forget Password

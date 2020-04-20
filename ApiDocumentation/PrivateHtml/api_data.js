@@ -353,6 +353,48 @@ define({ "api": [
     "groupTitle": "Account"
   },
   {
+    "type": "DELETE",
+    "url": "api/user/logout",
+    "title": "Logout user",
+    "name": "Logout_user",
+    "group": "Account",
+    "description": "<h1>Request Parameters</h1></br></br> <h1>Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "x-auth-token",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body is empty </br> On error, the header status code is an error code and the response body contains an error object.</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage",
+        "content": "curl --location --request DELETE 'http://localhost:3000/api/user/logout' \\\n --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\",
+        "type": "curl"
+      }
+    ],
+    "version": "0.0.0",
+    "filename": "ApiDocumentation/Private_code/doc.js",
+    "groupTitle": "Account"
+  },
+  {
     "type": "POST",
     "url": "api/login/reset_password",
     "title": "Reset Password",
@@ -383,6 +425,56 @@ define({ "api": [
       {
         "title": "Example usage",
         "content": "curl --location --request POST 'http://localhost:3000/api/login/reset_password' \\\n--header 'Content-Type: application/json' \\\n \\\n--data-raw '{\n\n\"password\":\"ring\"\n\n\t\n}'",
+        "type": "curl"
+      }
+    ],
+    "version": "0.0.0",
+    "filename": "ApiDocumentation/Private_code/doc.js",
+    "groupTitle": "Account"
+  },
+  {
+    "type": "POST",
+    "url": "api/notification/token",
+    "title": "Set FCM Token",
+    "name": "Set_FCM_Token",
+    "group": "Account",
+    "description": "<h1>Request Parameters</h1></br></br> <h1>Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "x-auth-token",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Body parameter": [
+          {
+            "group": "Body parameter",
+            "optional": false,
+            "field": "fcmToken",
+            "description": "<p>{string} Required. the User FCM token  .</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body is empty </br> On error, the header status code is an error code and the response body contains an error object.</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage",
+        "content": "curl --location --request POST 'http://localhost:3000/api/notification/token' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\\n \\\n--data-raw '{\n\n\"fcmToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg3NDA1NzM2LCJleHAiOjQ3MzM4OTIxMzZ9.8I49BShfQiu6D7Jkh8hiQM7Ap02BmyShsOHgFQDlNaw\"\n\n\t\n}'",
         "type": "curl"
       }
     ],
