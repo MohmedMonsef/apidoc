@@ -41,7 +41,7 @@
  */
 
 /**
-  * @api {post} api/createQueue/:playlist_id/:trackId create queue 
+  * @api {post} api/createQueue/:sourceId/:trackId create queue 
  * @apiName Create queue
  * @apiGroup Player
  * @apiDescription create queue for user
@@ -52,7 +52,7 @@
  * 
  * 
  * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
- * @apiparam (path parameters) playlist_id  the id of the source if playlist or album
+ * @apiparam (path parameters) sourceId  the id of the source if playlist or album
 * @apiparam (path parameters) track_id the first track will be playing
  *
  * @apiParam (query Parameters)  isPlaylist Required. is boolean determine if the source of queue is playlist or album &true is playlist &false album  	
@@ -92,6 +92,85 @@
  *{
 *    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTc1YzY4Mzg3YmNlYjEwYWMzZDMzOTQiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg1NjYzMzQ2LCJleHAiOjE1ODU3NDk3NDZ9.hLom36hxkDhABZEquFdKtFGEdmdxUziQx9eWVVry_3s"
 *}
+ *
+ *
+ */
+
+/**
+ * @api {POST} api/login/reset_password Reset Password
+ * @apiName Reset Password
+ * @apiGroup Account
+ * @apiDescription
+ * 
+ * 
+ * <h1>Request Parameters</h1></br></br>
+ * 
+ * <h1>Endpoint</h1> 
+ * 
+ * 
+ * @apiParam (Body parameter)  password {string} Required. the User new password .
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body is empty </br> On error, the header status code is an error code and the response body contains an error object.
+ * 
+ *@apiExample {curl} Example usage
+ *curl --location --request POST 'http://localhost:3000/api/login/reset_password' \
+--header 'Content-Type: application/json' \
+ \
+--data-raw '{
+
+"password":"ring"
+
+	
+}'
+ *
+ *
+ */
+/**
+ * @api {DELETE} api/user/logout Logout user 
+ * @apiName Logout user
+ * @apiGroup Account
+ * @apiDescription
+ * 
+ * 
+ * <h1>Request Parameters</h1></br></br>
+ * 
+ * <h1>Endpoint</h1> 
+ * 
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body is empty </br> On error, the header status code is an error code and the response body contains an error object.
+ * 
+ *@apiExample {curl} Example usage
+ *curl --location --request DELETE 'http://localhost:3000/api/user/logout' \
+ --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+ *
+ *
+ */
+
+/**
+ * @api {POST} api/notification/token Set FCM Token
+ * @apiName Set FCM Token
+ * @apiGroup Account
+ * @apiDescription
+ * 
+ * 
+ * <h1>Request Parameters</h1></br></br>
+ * 
+ * <h1>Endpoint</h1> 
+ * 
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
+
+ * @apiParam (Body parameter)  fcmToken {string} Required. the User FCM token  .
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body is empty </br> On error, the header status code is an error code and the response body contains an error object.
+ * 
+ *@apiExample {curl} Example usage
+ *curl --location --request POST 'http://localhost:3000/api/notification/token' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+ \
+--data-raw '{
+
+"fcmToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg3NDA1NzM2LCJleHAiOjQ3MzM4OTIxMzZ9.8I49BShfQiu6D7Jkh8hiQM7Ap02BmyShsOHgFQDlNaw"
+
+	
+}'
  *
  *
  */
@@ -442,8 +521,8 @@
 --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg3MjM4MzE3LCJleHAiOjQ3MzM3MjQ3MTd9.QeijMcfcRjP3SzXFfT58cCnrTBVYEL7boMp9XYDKc2U' 
  */
 
- 
- /**
+
+/**
  * @api {GET} /api/tracks/encryption/{track_id}/keys get decryption key for track for web player
  * @apiName get track encryption key for web player
  * @apiGroup Track
@@ -472,7 +551,7 @@
   }
  */
 
- /**
+/**
  * @api {GET} /api/tracks/web-player/{track_id} get track for web player
  * @apiName get track file for web player
  * @apiGroup Track
@@ -496,7 +575,7 @@
  * @apiparam (Response) Format media file stream on success, and if incorrect track then 404, if error in streaming will be 500 insternal server error
  */
 
-  /**
+/**
  * @api {POST} /api/artists/me/albums/{album_id}/tracks upload tracks
  * @apiName upload tracks to album
  * @apiGroup Track
@@ -549,7 +628,7 @@
 
  */
 
- /**
+/**
  * @api {DELETE} /api/tracks/delete/{track_id} delete track
  * @apiName delete track
  * @apiGroup Track
@@ -578,4 +657,3 @@
     "success": "deleted track"
 }
  */
-
