@@ -4235,7 +4235,7 @@
  */
 
 /**
- * @api {get} api/users/{user_id} Get a User's Profile
+ * @api {get} api/users/{id} Get a User's Profile
  * @apiName Get a User's Profile
  * @apiGroup Users Profile
  * @apiDescription
