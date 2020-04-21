@@ -2048,7 +2048,7 @@ define({ "api": [
           {
             "group": "QueryParameters",
             "optional": false,
-            "field": "albums_ids.split",
+            "field": "albums_ids",
             "description": "<p>Required. A comma-separated list of the Spotify IDs for the albums. Maximum: 50 IDs.</p>"
           }
         ],
@@ -3420,6 +3420,15 @@ define({ "api": [
         "type": "curl"
       }
     ],
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "[\n   {\n       \"id\": \"5e8cbe647f37604d583f8d60\",\n       \"type\": \"playlist\",\n       \"name\": \"SunShine\",\n       \"ownerId\": \"5e8cb118084a9d2e6c8f21d7\",\n       \"collaborative\": false,\n       \"isPublic\": true,\n       \"images\": [],\n       \"tracks\": [\n           {\n               \"trackid\": \"5e8cbb037f37604d583f8d47\",\n               \"name\": \"OH WOW\",\n               \"artistId\": \"5e8cb7037f37604d583f8d22\",\n               \"artistName\": \"nada\",\n               \"albumId\": \"5e8cb95d7f37604d583f8d2d\",\n               \"albumName\": \"KONNICHIWA KIDS\",\n               \"isLiked\": false\n           },\n           {\n               \"trackid\": \"5e8cbb147f37604d583f8d48\",\n               \"name\": \"WOW\",\n               \"artistId\": \"5e8cb7037f37604d583f8d22\",\n               \"artistName\": \"nada\",\n               \"albumId\": \"5e8cb96a7f37604d583f8d2f\",\n               \"albumName\": \"SAY YOU WON'T LET GO\",\n               \"isLiked\": false\n           },\n           {\n               \"trackid\": \"5e8cba6c7f37604d583f8d3e\",\n               \"name\": \"KILL ME\",\n               \"artistId\": \"5e8cb7037f37604d583f8d22\",\n               \"artistName\": \"nada\",\n               \"albumId\": \"5e8cb9457f37604d583f8d27\",\n               \"albumName\": \"HELLO SLEEP WALKERS\",\n               \"isLiked\": false\n           }\n       ],\n       \"isfollowed\": false,\n       \"checkType\": \"none\"\n   }\n]",
+          "type": "json"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
@@ -3466,7 +3475,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "[\n{\"_id\":\"5e7cee3c35bf5449a0aa0a24\",\n\"type\":\"playlist\",\n\"Description\":\"anything\",\n\"collaborative\":false,\n\"name\":\"changedPlaylist1\",\n\"isPublic\":true,\n\"ownerId\":\"5e7ced3535bf5449a0aa0a23\",\n\"images\":[],\n\"snapshot\":[{\"hasTracks\":[\"5e7c9618cb9f6a5270ea413a\",\"5e7c9618cb9f6a5270ea4139\"],\"_id\":\"5e7cf0e4f37b461aac6afdd0\",\"action\":\"Add Tracks\"}],\n\"__v\":4}]",
+          "content": "[\n   {\n       \"id\": \"5e9d4a5917bf6c123f3f093d\",\n       \"name\": \"mm\",\n       \"ownerId\": \"5e8cb118084a9d2e6c8f21d7\",\n       \"owner\": \"nada\",\n       \"collaborative\": false,\n       \"isPublic\": true,\n       \"images\": [],\n       \"type\": \"created\"\n   },\n   {\n       \"id\": \"5e9dc7d4f01d440db972eec8\",\n       \"name\": \"spacetoon\",\n       \"ownerId\": \"5e8cb118084a9d2e6c8f21d7\",\n       \"owner\": \"nada\",\n       \"collaborative\": false,\n       \"isPublic\": true,\n       \"images\": [],\n       \"type\": \"created\"\n   },\n   {\n       \"id\": \"5e9dc832f01d440db972eed1\",\n       \"name\": \"MENNA\",\n       \"ownerId\": \"5e8cb118084a9d2e6c8f21d7\",\n       \"owner\": \"nada\",\n       \"collaborative\": false,\n       \"isPublic\": true,\n       \"images\": [],\n       \"type\": \"created\"\n   },\n   {\n       \"id\": \"5e9dca05f01d440db972eed8\",\n       \"name\": \"New Playlist\",\n       \"ownerId\": \"5e8cb118084a9d2e6c8f21d7\",\n       \"owner\": \"nada\",\n       \"collaborative\": false,\n       \"isPublic\": true,\n       \"images\": [],\n       \"type\": \"created\"\n   }\n]",
           "type": "json"
         }
       ]
@@ -3653,6 +3662,57 @@ define({ "api": [
           }
         ]
       }
+    },
+    "version": "0.0.0",
+    "filename": "Public_code/doc.js",
+    "groupTitle": "Playlist"
+  },
+  {
+    "type": "GET",
+    "url": "api/me/deletedplaylists",
+    "title": "Get user deleted Playlists",
+    "name": "Get_user_deleted_Playlists.",
+    "group": "Playlist",
+    "description": "<p style=\"color:red;\">Get user deleted Playlists</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "x-auth-token",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the response body contains a array of deleted playlists object in JSON format and the HTTP status code in the response header is 200 OK. On error, the header status code is an error code 404  and the response body contains an error object.</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "curl --location --request GET 'http://localhost:3000/api/me/deletedplaylists' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\",
+        "type": "curl"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " [\n   {\n       \"id\": \"5e9d8b96cee2040d0c675837\",\n       \"name\": \"New Playlist\",\n       \"songsNumber\": 0,\n       \"deletedAt\": \"2020-04-20T13:55:14.438Z\"\n   },\n   {\n       \"id\": \"5e9dbc06f01d440db972ee71\",\n       \"name\": \"mmm\",\n       \"songsNumber\": 0,\n       \"deletedAt\": \"2020-04-20T15:13:16.070Z\"\n   },\n   {\n       \"id\": \"5e8cbe6b7f37604d583f8d64\",\n       \"name\": \"SpaceToon\",\n       \"songsNumber\": 2,\n       \"deletedAt\": \"2020-04-20T16:00:21.601Z\"\n   },\n   {\n       \"id\": \"5e9dca05f01d440db972eed8\",\n       \"name\": \"New Playlist\",\n       \"songsNumber\": 0,\n       \"deletedAt\": \"2020-04-20T18:17:19.521Z\"\n   }\n]",
+          "type": "json"
+        }
+      ]
     },
     "version": "0.0.0",
     "filename": "Public_code/doc.js",
@@ -3885,6 +3945,65 @@ define({ "api": [
           }
         ]
       }
+    },
+    "version": "0.0.0",
+    "filename": "Public_code/doc.js",
+    "groupTitle": "Playlist"
+  },
+  {
+    "type": "PUT",
+    "url": "api/me/restoreplaylists",
+    "title": "Restore user deleted Playlists.",
+    "name": "Restore_user_deleted_Playlists.",
+    "group": "Playlist",
+    "description": "<p style=\"color:red;\">Restore user deleted Playlists.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "parameter": {
+      "fields": {
+        "Query Parameters": [
+          {
+            "group": "Query Parameters",
+            "optional": false,
+            "field": "playlistsIds",
+            "description": "<p>The Spotify IDs for the playlists</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the response body contains a array of 1's and 0's values with the same order of the given array of playlists ids to detect whether restored or not and the HTTP status code in the response header is 200 OK. On error, the header status code is an error code 404  and the response body contains an error object, If the ids not given error 403 will be sent .</p>"
+          }
+        ]
+      }
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "x-auth-token",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "curl --location --request GET 'http://localhost:3000/api/me/restoreplaylists?playlistsIds=5e8cbe6b7f37604d583f8d64' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\",
+        "type": "curl"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "[\n  1\n]",
+          "type": "json"
+        }
+      ]
     },
     "version": "0.0.0",
     "filename": "Public_code/doc.js",
@@ -4512,6 +4631,65 @@ define({ "api": [
         {
           "title": "Success-Response:",
           "content": "{\n    \"track\": {\n        \"availableMarkets\": [\n            \"ttyt,rewwf,fff\"\n        ],\n        \"_id\": \"5e7f58bb4fe2420d34a881db\",\n        \"trackNumber\": 55,\n        \"name\": \"frist\",\n        \"artistId\": \"5e7ef28326e2fa0da04f81ae\",\n        \"albumId\": \"5e7f44905cce7d09a82e5a75\",\n        \"discNumber\": 1,\n        \"explicit\": false,\n        \"type\": \"Track\",\n        \"acousticness\": 10,\n        \"danceability\": 23,\n        \"energy\": 100,\n        \"instrumentalness\": 4,\n        \"key\": 90,\n        \"liveness\": 25,\n        \"loudness\": 70,\n        \"mode\": 56,\n        \"speechiness\": 67,\n        \"tempo\": 76,\n        \"timeSignature\": \"2000-01-31T22:00:00.000Z\",\n        \"valence\": 70,\n        \"__v\": 0\n    },\n    \"isLiked\": true,\n    \"album\": {\n        \"name\": \"album1\",\n        \"_id\": \"5e7f44905cce7d09a82e5a75\",\n        \"artist\": {\n            \"name\": \"artist1\",\n            \"_id\": \"5e7ef28326e2fa0da04f81ae\"\n        }\n    }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "Public_code/doc.js",
+    "groupTitle": "Tracks"
+  },
+  {
+    "type": "get",
+    "url": "/api/tracks/related/full-track/{track_id}",
+    "title": "get related full tracks for specific track",
+    "name": "get_related_full_tracks",
+    "group": "Tracks",
+    "description": "<p style=\"color:red;\">get related full tracks for specific track based on its genre. and first element is always the current track full info</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "x-auth-token",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service.</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "PathParameters": [
+          {
+            "group": "PathParameters",
+            "optional": false,
+            "field": "track_id",
+            "description": "<p>Required. The Spotify ID for the track.</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success 200 and get array of related tracks, on error or if no tracks then 404 not found</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "curl --location --request GET 'http://localhost:3000/api/tracks/related/full-track/5e9b5e2de9c8d87fdc2eca81' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\",
+        "type": "curl"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "\n[\n    {\n        \"track\": {\n            \"availableMarkets\": [\n                \"\\\"eg\\\"\"\n            ],\n            \"genre\": [\n                \"quran\",\n                \"\"\n            ],\n            \"_id\": \"5e9b5e2de9c8d87fdc2eca81\",\n            \"url\": \"undefined\",\n            \"images\": [],\n            \"duration\": 3000,\n            \"trackNumber\": 1,\n            \"name\": \"el-doha\",\n            \"artistId\": \"5e9b5b656dff8d6ee4c13bbc\",\n            \"albumId\": \"5e9b5de4e9c8d87fdc2eca7f\",\n            \"discNumber\": 1,\n            \"explicit\": false,\n            \"type\": \"Track\",\n            \"acousticness\": 36,\n            \"danceability\": 84,\n            \"energy\": 97,\n            \"instrumentalness\": 35,\n            \"key\": \"pGMaFTpEPfnu0FkwQ9t1GQ\",\n            \"liveness\": 84,\n            \"loudness\": 71,\n            \"mode\": 82,\n            \"speechiness\": 70,\n            \"tempo\": 66,\n            \"timeSignature\": \"2020-04-18T20:08:13.905Z\",\n            \"valence\": 0,\n            \"like\": 0,\n            \"keyId\": \"88XgNh5mVLKPgEnHeLI5Rg\",\n            \"__v\": 1\n        },\n        \"isLiked\": false,\n        \"album\": {\n            \"name\": \"quranAlbum\",\n            \"_id\": \"5e9b5de4e9c8d87fdc2eca7f\",\n            \"artist\": {\n                \"name\": \"holy quran\",\n                \"_id\": \"5e9b5b656dff8d6ee4c13bbc\"\n            }\n        }\n    },\n    {\n        \"track\": {\n            \"availableMarkets\": [\n                \"\\\"eg\\\"\"\n            ],\n            \"genre\": [\n                \"quran\",\n                \"5403\"\n            ],\n            \"_id\": \"5e9b64e4e9c8d87fdc2ecbd8\",\n            \"url\": \"undefined\",\n            \"images\": [],\n            \"duration\": 3000,\n            \"trackNumber\": 1,\n            \"name\": \"el-sharh\",\n            \"artistId\": \"5e9b5b656dff8d6ee4c13bbc\",\n            \"albumId\": \"5e9b5de4e9c8d87fdc2eca7f\",\n            \"discNumber\": 1,\n            \"explicit\": false,\n            \"type\": \"Track\",\n            \"acousticness\": 39,\n            \"danceability\": 67,\n            \"energy\": 56,\n            \"instrumentalness\": 85,\n            \"key\": \"pGMaFTpEPfnu0FkwQ9t1GQ\",\n            \"liveness\": 99,\n            \"loudness\": 37,\n            \"mode\": 26,\n            \"speechiness\": 4,\n            \"tempo\": 41,\n            \"timeSignature\": \"2020-04-18T20:36:52.877Z\",\n            \"valence\": 20,\n            \"like\": 0,\n            \"keyId\": \"88XgNh5mVLKPgEnHeLI5Rg\",\n            \"__v\": 0\n        },\n        \"isLiked\": false,\n        \"album\": {\n            \"name\": \"quranAlbum\",\n            \"_id\": \"5e9b5de4e9c8d87fdc2eca7f\",\n            \"artist\": {\n                \"name\": \"holy quran\",\n                \"_id\": \"5e9b5b656dff8d6ee4c13bbc\"\n            }\n        }\n    },\n    {\n        \"track\": {\n            \"availableMarkets\": [\n                \"\\\"eg\\\"\"\n            ],\n            \"genre\": [\n                \"quran\",\n                \"\"\n            ],\n            \"_id\": \"5e9b62c3e9c8d87fdc2ecb58\",\n            \"url\": \"undefined\",\n            \"images\": [],\n            \"duration\": 3000,\n            \"trackNumber\": 1,\n            \"name\": \"el-kyama\",\n            \"artistId\": \"5e9b5b656dff8d6ee4c13bbc\",\n            \"albumId\": \"5e9b5de4e9c8d87fdc2eca7f\",\n            \"discNumber\": 1,\n            \"explicit\": false,\n            \"type\": \"Track\",\n            \"acousticness\": 25,\n            \"danceability\": 78,\n            \"energy\": 30,\n            \"instrumentalness\": 85,\n            \"key\": \"pGMaFTpEPfnu0FkwQ9t1GQ\",\n            \"liveness\": 69,\n            \"loudness\": 76,\n            \"mode\": 6,\n            \"speechiness\": 44,\n            \"tempo\": 8,\n            \"timeSignature\": \"2020-04-18T20:27:47.497Z\",\n            \"valence\": 36,\n            \"like\": 0,\n            \"keyId\": \"88XgNh5mVLKPgEnHeLI5Rg\",\n            \"__v\": 0\n        },\n        \"isLiked\": false,\n        \"album\": {\n            \"name\": \"quranAlbum\",\n            \"_id\": \"5e9b5de4e9c8d87fdc2eca7f\",\n            \"artist\": {\n                \"name\": \"holy quran\",\n                \"_id\": \"5e9b5b656dff8d6ee4c13bbc\"\n            }\n        }\n    }\n]",
           "type": "json"
         }
       ]
