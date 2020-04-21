@@ -4248,7 +4248,7 @@
  * 
  * @apiHeader (Header)  x-auth-token 		Required. A valid access token from the Spotify Accounts service.
  * 
- * @apiParam (PathParameters)  User_id 				The user’s Spotify user ID.
+ * @apiParam (PathParameters)  id 				The user’s Spotify user ID.
  * 
  * @apiParam (Removing Specific Occurance of a Track in a Specific Playlist Snapshot)  REQUEST_DATA 
  * 
