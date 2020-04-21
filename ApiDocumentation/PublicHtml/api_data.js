@@ -4810,7 +4810,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "api/users/{user_id}",
+    "url": "api/users/{id}",
     "title": "Get a User's Profile",
     "name": "Get_a_User's_Profile",
     "group": "Users_Profile",
