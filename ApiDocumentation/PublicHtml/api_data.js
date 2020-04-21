@@ -1914,6 +1914,15 @@ define({ "api": [
             "description": "<p>{Number} Required. the width of the image in pixels</p>"
           }
         ],
+        "form-data": [
+          {
+            "group": "form-data",
+            "type": "file",
+            "optional": false,
+            "field": "image",
+            "description": "<p>Required the image file</p>"
+          }
+        ],
         "Response": [
           {
             "group": "Response",
@@ -1991,6 +2000,15 @@ define({ "api": [
             "optional": false,
             "field": "width",
             "description": "<p>{Number} Required. the width of the image in pixels</p>"
+          }
+        ],
+        "form-data": [
+          {
+            "group": "form-data",
+            "type": "file",
+            "optional": false,
+            "field": "image",
+            "description": "<p>Required the image file</p>"
           }
         ],
         "Response": [

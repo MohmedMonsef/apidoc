@@ -4124,6 +4124,7 @@
  * @apiParam (QueryParameters)  belongs_to  {String}		Required.string that specify the entity type that the image will be uploaded to can take values (user,playlist,track,album,artist).
  *  @apiParam (QueryParameters)  height  {Number} Required. the height of the image in pixels 
 * 
+*@apiParam (form-data) {file} image  Required the image file
  *@apiParam (QueryParameters)  width  {Number} Required. the width of the image in pixels
  * 
  *  @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK .on error 403 status code will occur
@@ -4159,6 +4160,7 @@
 * 
  *@apiParam (QueryParameters)  width  {Number} Required. the width of the image in pixels
  * 
+ * @apiParam (form-data) {file} image  Required the image file
  *  @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK .on error 403 status code will occur
  * 
  * @apiExample {curl} Example usage
