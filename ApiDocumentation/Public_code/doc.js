@@ -27,29 +27,44 @@
 *@apiSuccessExample {json} Success-Response:
 *{
     "isSaved": false,
-    "_id": "5e9b5de4e9c8d87fdc2eca7f",
-    "name": "quranAlbum",
+    "_id": "5e8cb9457f37604d583f8d27",
+    "name": "HELLO SLEEP WALKERS",
     "images": [],
-    "artistId": "5e9b5b656dff8d6ee4c13bbc",
-    "artistName": "holy quran",
+    "artistId": "5e8cb7037f37604d583f8d22",
+    "artistName": "nada",
     "track": [
         {
-            "_id": "5e9b5e2de9c8d87fdc2eca81",
-            "name": "el-doha",
-            "images": []
+            "_id": "5e8ce86082c8d9579467fb73",
+            "name": "WHO I AM",
+            "images": [],
+            "isLiked": true
         },
         {
-            "_id": "5e9b62c3e9c8d87fdc2ecb58",
-            "name": "el-kyama",
-            "images": []
+            "_id": "5e8ce86882c8d9579467fb76",
+            "name": "SOKA",
+            "images": [],
+            "isLiked": true
         },
         {
-            "_id": "5e9b64e4e9c8d87fdc2ecbd8",
-            "name": "el-sharh",
-            "images": []
-        }
-    ]
-}
+            "_id": "5e8ce86c82c8d9579467fb79",
+            "name": "ARASU",
+            "images": [],
+            "isLiked": true
+        },
+*        {
+*            "_id": "5e8ce87182c8d9579467fb7c",
+*            "name": "WIWI",
+*            "images": [],
+*            "isLiked": false
+*        },
+*        {
+*            "_id": "5e8ce87682c8d9579467fb7f",
+*            "name": "WWIII",
+*            "images": [],
+*            "isLiked": false
+*        }
+*    ]
+*}
 *
 *
 */
