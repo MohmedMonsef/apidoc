@@ -546,12 +546,24 @@
     },
     "parameter": {
       "fields": {
-        "Query parameters": [
+        "Body parameters": [
           {
-            "group": "Query parameters",
+            "group": "Body parameters",
             "optional": false,
-            "field": "credit",
-            "description": "<p>card  Required. A user credit card</p>"
+            "field": "cardNumber",
+            "description": "<p>Required. A user credit card</p>"
+          },
+          {
+            "group": "Body parameters",
+            "optional": false,
+            "field": "expiresDate",
+            "description": "<p>Required. the card expire date</p>"
+          },
+          {
+            "group": "Body parameters",
+            "optional": false,
+            "field": "isMonth",
+            "description": "<p>Required.boolean if  for month or for  year  (if need -can be change to number from (1---&gt;12)  if for 3 month or 2 ,else)</p>"
           }
         ],
         "Response": [
@@ -567,7 +579,7 @@
     "examples": [
       {
         "title": "Example usage",
-        "content": "curl --location --request POST 'http://localhost:3000/api/me/promote' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \n\\",
+        "content": "curl --location --request PUT 'http://localhost:3000/api/me/promote' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTljZjQ1YWUxNzZhOTI5NzBmMzY4OGEiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoidXNlciIsImlhdCI6MTU4NzM0NDQ3NCwiZXhwIjozMjU1OTMwMDk5NzI3NH0.ltM83Tf00e2yM9cHIa4z0OktdFjU5QOtbdSnHhi8SNw' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n\t\n        \"expiresDate\":\"2020-12-03\",\n        \"cardNumber\": \"374245455400126\",\n       \"isMonth\": false\n}'",
         "type": "curl"
       }
     ],

@@ -273,6 +273,7 @@
  *
  */
 
+
 /**
  * @api {PUT} api/me/promote make user premium 
  * @apiName make user premium
@@ -287,19 +288,26 @@
  * 
  * 
  * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
- * @apiparam (Query parameters) credit card  Required. A user credit card 
+ * @apiparam (Body parameters) cardNumber   Required. A user credit card 
+ * @apiparam (Body parameters) expiresDate  Required. the card expire date 
+ * @apiparam (Body parameters) isMonth  Required.boolean if  for month or for  year  (if need -can be change to number from (1--->12)  if for 3 month or 2 ,else)
  * @apiparam (Response) Format On success, the response body contains the user_id and credit card and the HTTP status code in the response header is 200 OK or 201 Created. There is also a Location response header giving the Web API endpoint for promote . On error, the header status code is an error code and the response body contains an error object. Trying to promote when you do not have the user’s authorization returns error 403 Forbidden.
  *@apiExample {curl} Example usage
- *curl --location --request POST 'http://localhost:3000/api/me/promote' \
---header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' 
-\
+ *curl --location --request PUT 'http://localhost:3000/api/me/promote' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTljZjQ1YWUxNzZhOTI5NzBmMzY4OGEiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoidXNlciIsImlhdCI6MTU4NzM0NDQ3NCwiZXhwIjozMjU1OTMwMDk5NzI3NH0.ltM83Tf00e2yM9cHIa4z0OktdFjU5QOtbdSnHhi8SNw' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+	
+        "expiresDate":"2020-12-03",
+        "cardNumber": "374245455400126",
+*        "isMonth": false
+*}'
  *  @apiSuccessExample {json} Success-Response:
  * 
  * {
  *  "success":"promote to premium "
  *   }
  */
-
 /**
  * @api {PUT} api/me/update update Current User's Profile
  * @apiName update Current User's Profile
