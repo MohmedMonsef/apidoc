@@ -55,7 +55,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -64,7 +64,7 @@ define({ "api": [
     "title": "Get an Album",
     "name": "Get_an_Album",
     "group": "Album",
-    "description": "<h1>Request Parameters</h1></br></br> <h1>Endpoint</h1>  <p>GET https://api.spotify.com/v1/albums/:album_id</p>",
+    "description": "<h1>Request Parameters</h1></br></br> <h1>Endpoint</h1> <p>GET https://api.spotify.com/v1/albums/:album_id</p>",
     "header": {
       "fields": {
         "Header": [
@@ -114,7 +114,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -173,7 +173,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -262,13 +262,13 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \"availableMarkets\": [\n      \"us,er,rttr,fretgre,jhj\"\n  ],\n  \"_id\": \"5e833b412b9d7718a491c850\",\n  \"name\": \"album1\",\n  \"albumType\": \"type1\",\n  \"popularity\": 0,\n  \"genre\": \"genre1\",\n  \"releaseDate\": \"2020-02-20T00:00:00.000Z\",\n  \"label\": \"iuwdjhwdewjhfhdwe\",\n   \"images\": [],\n   \"artistId\": \"5e833a51a51d971174923f17\",\n  \"type\": \"Album\",\n  \"hasTracks\": [],\n \"__v\": 0 \n}",
+          "content": "{\n    \"availableMarkets\": [\n      \"us,er,rttr,fretgre,jhj\"\n  ],\n  \"_id\": \"5e833b412b9d7718a491c850\",\n  \"name\": \"album1\",\n  \"albumType\": \"type1\",\n  \"popularity\": 0,\n  \"genre\": \"genre1\",\n  \"releaseDate\": \"2020-02-20T00:00:00.000Z\",\n  \"label\": \"iuwdjhwdewjhfhdwe\",\n   \"images\": [],\n   \"artistId\": \"5e833a51a51d971174923f17\",\n  \"type\": \"Album\",\n  \"hasTracks\": [],\n \"__v\": 0\n}",
           "type": "json"
         }
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -358,7 +358,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -415,7 +415,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -447,7 +447,7 @@ define({ "api": [
     "success": {
       "examples": [
         {
-          "title": "Success-Response: ",
+          "title": "Success-Response:",
           "content": " {\n    [\n   {\n       \"genre\": [\n           \"rytyt\",\n           \"genre2\",\n           \"genre1\"\n       ],\n       \"_id\": \"5e7f67e438150c15e8589ece\",\n       \"info\": \"jdshgdjdhfjkd\",\n       \"popularity\": 0,\n       \"type\": \"Artist\",\n       \"Name\": \"yytguguy\",\n       \"userId\": \"5e7f670838150c15e8589ecc\",\n       \"images\": [],\n       \"addAlbums\": [],\n       \"addTracks\": [],\n      \"__v\": 0\n   },\n   {\n       \"genre\": [\n           \"genre1\",\n           \"genre2\",\n           \"genre3\",\n           \"genre4\"\n       ],\n       \"_id\": \"5e833a51a51d971174923f17\",\n       \"popularity\": 0,\n       \"type\": \"Artist\",\n       \"Name\": \"ahmedsamir\",\n       \"userId\": \"5e75c68387bceb10ac3d3394\",\n       \"images\": [],\n       \"addAlbums\": [\n           {\n               \"_id\": \"5e833b412b9d7718a491c851\",\n               \"albumId\": \"5e833b412b9d7718a491c850\"\n           }\n       ],\n       \"addTracks\": [\n           {\n               \"_id\": \"5e834091a0d4a20f746732f9\",\n               \"trackId\": \"5e834091a0d4a20f746732f7\"\n           },\n           {\n               \"_id\": \"5e834255a0d4a20f74673302\",\n               \"trackId\": \"5e834255a0d4a20f74673300\"\n           },\n           {\n               \"_id\": \"5e834258a0d4a20f74673307\",\n               \"trackId\": \"5e834258a0d4a20f74673305\"\n    },\n     {\n         \"_id\": \"5e834259a0d4a20f7467330c\",\n          \"trackId\": \"5e834259a0d4a20f7467330a\"\n       },\n        {\n             \"_id\": \"5e834260a0d4a20f74673311\",\n              \"trackId\": \"5e834260a0d4a20f7467330f\"\n          },\n           {\n               \"_id\": \"5e834265a0d4a20f74673316\",\n              \"trackId\": \"5e834265a0d4a20f74673314\"\n         },\n         {\n             \"_id\": \"5e834268a0d4a20f7467331b\",\n              \"trackId\": \"5e834268a0d4a20f74673319\"\n          }\n       ],\n       \"__v\": 17,\n       \"name\": \"artist1\"\n   }\n]\n}",
           "type": "json"
         }
@@ -474,7 +474,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -527,13 +527,13 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \n\n   \n       \"genre\": [\n           \"rytyt\",\n           \"genre2\",\n           \"genre1\"\n       ],\n       \"_id\": \"5e7f67e438150c15e8589ece\",\n       \"info\": \"jdshgdjdhfjkd\",\n       \"popularity\": 0,\n       \"type\": \"Artist\",\n       \"Name\": \"yytguguy\",\n       \"userId\": \"5e7f670838150c15e8589ecc\",\n       \"images\": [],\n       \"addAlbums\": [],\n       \"addTracks\": [],\n      \"__v\": 0\n   }",
+          "content": "{\n\n\n\n       \"genre\": [\n           \"rytyt\",\n           \"genre2\",\n           \"genre1\"\n       ],\n       \"_id\": \"5e7f67e438150c15e8589ece\",\n       \"info\": \"jdshgdjdhfjkd\",\n       \"popularity\": 0,\n       \"type\": \"Artist\",\n       \"Name\": \"yytguguy\",\n       \"userId\": \"5e7f670838150c15e8589ecc\",\n       \"images\": [],\n       \"addAlbums\": [],\n       \"addTracks\": [],\n      \"__v\": 0\n   }",
           "type": "json"
         }
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -612,13 +612,13 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \n  {\n      \"availableMarkets\": [\n          \"us,yu,ywgd\"\n      ],\n      \"_id\": \"5e7f44905cce7d09a82e5a75\",\n      \"name\": \"album1\",\n      \"albumType\": \"type1\",\n      \"popularity\": 0,\n      \"genre\": \"genre1\",\n      \"releaseDate\": \"2020-02-20T00:00:00.000Z\",\n      \"label\": \"yyuwhhxb\",\n      \"images\": [],\n      \"artistId\": \"5e7ef28326e2fa0da04f81ae\",\n      \"type\": \"Album\",\n      \"hasTracks\": [],\n     \"__v\": 0\n },\n {\n      \"availableMarkets\": [],\n      \"_id\": \"5e7f4d475cce7d09a82e5a7f\",\n      \"popularity\": 0,\n      \"images\": [],\n      \"artistId\": \"5e7ef28326e2fa0da04f81ae\",\n      \"type\": \"Album\",\n      \"hasTracks\": [],\n      \"__v\": 0\n  }\n   }",
+          "content": "{\n\n  {\n      \"availableMarkets\": [\n          \"us,yu,ywgd\"\n      ],\n      \"_id\": \"5e7f44905cce7d09a82e5a75\",\n      \"name\": \"album1\",\n      \"albumType\": \"type1\",\n      \"popularity\": 0,\n      \"genre\": \"genre1\",\n      \"releaseDate\": \"2020-02-20T00:00:00.000Z\",\n      \"label\": \"yyuwhhxb\",\n      \"images\": [],\n      \"artistId\": \"5e7ef28326e2fa0da04f81ae\",\n      \"type\": \"Album\",\n      \"hasTracks\": [],\n     \"__v\": 0\n },\n {\n      \"availableMarkets\": [],\n      \"_id\": \"5e7f4d475cce7d09a82e5a7f\",\n      \"popularity\": 0,\n      \"images\": [],\n      \"artistId\": \"5e7ef28326e2fa0da04f81ae\",\n      \"type\": \"Album\",\n      \"hasTracks\": [],\n      \"__v\": 0\n  }\n   }",
           "type": "json"
         }
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -677,59 +677,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
-    "groupTitle": "Artist"
-  },
-  {
-    "type": "get",
-    "url": "api/Artists/{artist_id}/tracks",
-    "title": "Get an Artist's Tracks",
-    "name": "Get_an_Artist's_Top_Tracks",
-    "group": "Artist",
-    "description": "<p style=\"color:red;\">Get Spotify catalog information about an artist’s top tracks by country.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
-    "header": {
-      "fields": {
-        "Header": [
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "x-auth-token",
-            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
-          }
-        ]
-      }
-    },
-    "parameter": {
-      "fields": {
-        "PathParameters": [
-          {
-            "group": "PathParameters",
-            "optional": false,
-            "field": "artist_id",
-            "description": "<p>Spotify ID for Albums</p>"
-          }
-        ],
-        "Response": [
-          {
-            "group": "Response",
-            "optional": false,
-            "field": "Format",
-            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body contains</br>an object whose key is &quot;tracks&quot; and whose value is an array of up to 10 track objects in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "examples": [
-        {
-          "title": "Success-Response:",
-          "content": "{\n    [\n  {\n      \"availableMarkets\": [\n          \"usa,tt,wdwq,dwdw,wdw,dss\"\n      ],\n      \"_id\": \"5e834091a0d4a20f746732f7\",\n      \"duration\": 462,\n      \"name\": \"track1\",\n      \"artistId\": \"5e833a51a51d971174923f17\",\n      \"albumId\": \"5e833b412b9d7718a491c850\",\n      \"discNumber\": 1,\n      \"explicit\": false,\n      \"type\": \"Track\",\n      \"acousticness\": 10,\n       \"danceability\": 23,\n       \"energy\": 100,\n       \"instrumentalness\": 4,\n       \"key\": 90,\n       \"liveness\": 25,\n       \"loudness\": 70,\n       \"mode\": 56,\n       \"speechiness\": 67,\n       \"tempo\": 76,\n       \"timeSignature\": \"2020-03-31T13:07:29.395Z\",\n       \"valence\": 70,\n       \"like\": 0,\n       \"__v\": 0\n   },\n   {\n       \"availableMarkets\": [\n           \"usa,tt,wdwq,dwdw,wdw,dss\"\n       ],\n       \"_id\": \"5e834255a0d4a20f74673300\",\n       \"duration\": 462,\n       \"name\": \"track1\",\n       \"artistId\": \"5e833a51a51d971174923f17\",\n       \"albumId\": \"5e833b412b9d7718a491c850\",\n       \"discNumber\": 1,\n       \"explicit\": false,\n       \"type\": \"Track\",\n       \"acousticness\": 10,\n       \"danceability\": 23,\n       \"energy\": 100,\n       \"instrumentalness\": 4,\n       \"key\": 90,\n       \"liveness\": 25,\n       \"loudness\": 70,\n       \"mode\": 56,\n       \"speechiness\": 67,\n       \"tempo\": 76,\n       \"timeSignature\": \"2020-03-31T13:15:01.821Z\",\n       \"valence\": 70,\n       \"like\": 0,\n       \"__v\": 0\n   },\n   {\n       \"availableMarkets\": [\n           \"usa,tt,wdwq,dwdw,wdw,dss\"\n       ],\n       \"_id\": \"5e834258a0d4a20f74673305\",\n       \"duration\": 462,\n       \"name\": \"track1\",\n       \"artistId\": \"5e833a51a51d971174923f17\",\n       \"albumId\": \"5e833b412b9d7718a491c850\",\n       \"discNumber\": 1,\n       \"explicit\": false,\n       \"type\": \"Track\",\n       \"acousticness\": 10,\n       \"danceability\": 23,\n       \"energy\": 100,\n       \"instrumentalness\": 4,\n       \"key\": 90,\n       \"liveness\": 25,\n       \"loudness\": 70,\n       \"mode\": 56,\n       \"speechiness\": 67,\n       \"tempo\": 76,\n       \"timeSignature\": \"2020-03-31T13:15:04.155Z\",\n       \"valence\": 70,\n       \"like\": 0,\n       \"__v\": 0\n   }\n]\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -796,7 +744,59 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
+    "groupTitle": "Artist"
+  },
+  {
+    "type": "get",
+    "url": "api/Artists/{artist_id}/tracks",
+    "title": "Get an Artist's Tracks",
+    "name": "Get_an_Artist's_Top_Tracks",
+    "group": "Artist",
+    "description": "<p style=\"color:red;\">Get Spotify catalog information about an artist’s top tracks by country.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "x-auth-token",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "PathParameters": [
+          {
+            "group": "PathParameters",
+            "optional": false,
+            "field": "artist_id",
+            "description": "<p>Spotify ID for Albums</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body contains</br>an object whose key is &quot;tracks&quot; and whose value is an array of up to 10 track objects in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    [\n  {\n      \"availableMarkets\": [\n          \"usa,tt,wdwq,dwdw,wdw,dss\"\n      ],\n      \"_id\": \"5e834091a0d4a20f746732f7\",\n      \"duration\": 462,\n      \"name\": \"track1\",\n      \"artistId\": \"5e833a51a51d971174923f17\",\n      \"albumId\": \"5e833b412b9d7718a491c850\",\n      \"discNumber\": 1,\n      \"explicit\": false,\n      \"type\": \"Track\",\n      \"acousticness\": 10,\n       \"danceability\": 23,\n       \"energy\": 100,\n       \"instrumentalness\": 4,\n       \"key\": 90,\n       \"liveness\": 25,\n       \"loudness\": 70,\n       \"mode\": 56,\n       \"speechiness\": 67,\n       \"tempo\": 76,\n       \"timeSignature\": \"2020-03-31T13:07:29.395Z\",\n       \"valence\": 70,\n       \"like\": 0,\n       \"__v\": 0\n   },\n   {\n       \"availableMarkets\": [\n           \"usa,tt,wdwq,dwdw,wdw,dss\"\n       ],\n       \"_id\": \"5e834255a0d4a20f74673300\",\n       \"duration\": 462,\n       \"name\": \"track1\",\n       \"artistId\": \"5e833a51a51d971174923f17\",\n       \"albumId\": \"5e833b412b9d7718a491c850\",\n       \"discNumber\": 1,\n       \"explicit\": false,\n       \"type\": \"Track\",\n       \"acousticness\": 10,\n       \"danceability\": 23,\n       \"energy\": 100,\n       \"instrumentalness\": 4,\n       \"key\": 90,\n       \"liveness\": 25,\n       \"loudness\": 70,\n       \"mode\": 56,\n       \"speechiness\": 67,\n       \"tempo\": 76,\n       \"timeSignature\": \"2020-03-31T13:15:01.821Z\",\n       \"valence\": 70,\n       \"like\": 0,\n       \"__v\": 0\n   },\n   {\n       \"availableMarkets\": [\n           \"usa,tt,wdwq,dwdw,wdw,dss\"\n       ],\n       \"_id\": \"5e834258a0d4a20f74673305\",\n       \"duration\": 462,\n       \"name\": \"track1\",\n       \"artistId\": \"5e833a51a51d971174923f17\",\n       \"albumId\": \"5e833b412b9d7718a491c850\",\n       \"discNumber\": 1,\n       \"explicit\": false,\n       \"type\": \"Track\",\n       \"acousticness\": 10,\n       \"danceability\": 23,\n       \"energy\": 100,\n       \"instrumentalness\": 4,\n       \"key\": 90,\n       \"liveness\": 25,\n       \"loudness\": 70,\n       \"mode\": 56,\n       \"speechiness\": 67,\n       \"tempo\": 76,\n       \"timeSignature\": \"2020-03-31T13:15:04.155Z\",\n       \"valence\": 70,\n       \"like\": 0,\n       \"__v\": 0\n   }\n]\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -839,7 +839,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -924,12 +924,12 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
     "type": "get",
-    "url": "api/browse/categories/{category_id}",
+    "url": "api/browse/categories/:category_id",
     "title": "Get a Category",
     "name": "Get_a_Category",
     "group": "Browse",
@@ -983,13 +983,13 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
     "type": "get",
-    "url": "api/browse/categories/{category_id}/playlists",
-    "title": "Get a Category's Playlists  (not implemented yet)",
+    "url": "api/browse/categories/:category_id/playlists",
+    "title": "Get a Category's Playlists",
     "name": "Get_a_Category's_Playlists",
     "group": "Browse",
     "description": "<p style=\"color:red;\">Get a list of Spotify playlists tagged with a particular category.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
@@ -1046,7 +1046,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1097,7 +1097,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1158,7 +1158,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1197,7 +1197,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1236,7 +1236,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1275,7 +1275,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1314,7 +1314,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1365,16 +1365,16 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
     "type": "get",
     "url": "api/me/following/contains",
-    "title": "Check if Current User Follows Artists or Users  (not implement yet)",
+    "title": "Check if Current User Follows Artist",
     "name": "Check_if_Current_User_Follows_Artists_or_Users",
     "group": "Follow",
-    "description": "<p style=\"color:red;\">Check to see if the current user is following one or more artists or other Spotify users.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">Check to see if the current user is following one artist .</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
         "Header": [
@@ -1389,18 +1389,12 @@ define({ "api": [
     },
     "parameter": {
       "fields": {
-        "QueryParameters": [
+        "BodyParameters": [
           {
-            "group": "QueryParameters",
+            "group": "BodyParameters",
             "optional": false,
-            "field": "type",
-            "description": "<p>Required. The ID type: either artist or user.</p>"
-          },
-          {
-            "group": "QueryParameters",
-            "optional": false,
-            "field": "ids",
-            "description": "<p>Required. A comma-separated list of the artist or the user Spotify IDs to check.</br> For example: ids=74ASZWbe4lXaubB36ztrGX,08td7MxkoHQkXnWAYD8d6Q. A maximum of 50 IDs can be sent in one request.</p>"
+            "field": "id",
+            "description": "<p>Required.the user Spotify ID to check.</br> For example: id=74ASZWbe4lXaubB36ztrGX A maximum of 1 can be sent in one request.</p>"
           }
         ],
         "Response": [
@@ -1408,13 +1402,13 @@ define({ "api": [
             "group": "Response",
             "optional": false,
             "field": "Format",
-            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body</br> contains a JSON array of true or false values, in the same order in which the ids were specified.</br> On error, the header status code is an error code and the response body contains an error object.</p>"
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body</br> contains a JSON array of true or false value.</br> On error, the header status code is an error code and the response body contains an error object.</p>"
           }
         ]
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1465,14 +1459,14 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
     "type": "put",
     "url": "api/me/following",
-    "title": "Follow Artists or Users         (not implemented yet)",
-    "name": "Follow_Artists_or_Users",
+    "title": "Follow Artist",
+    "name": "Follow_Artist",
     "group": "Follow",
     "description": "<p style=\"color:red;\">Add the current user as a follower of one or more artists or other Spotify users.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
@@ -1495,26 +1489,12 @@ define({ "api": [
     },
     "parameter": {
       "fields": {
-        "QueryParameters": [
-          {
-            "group": "QueryParameters",
-            "optional": false,
-            "field": "type",
-            "description": "<p>Required. The ID type: either artist or user.</p>"
-          },
-          {
-            "group": "QueryParameters",
-            "optional": false,
-            "field": "id",
-            "description": "<p>Optional. A comma-separated list of the artist or the user Spotify IDs.</br> For example: ids=74ASZWbe4lXaubB36ztrGX,08td7MxkoHQkXnWAYD8d6Q. A maximum of 50 IDs can be sent in one request.</p>"
-          }
-        ],
         "BodyParameters": [
           {
             "group": "BodyParameters",
             "optional": false,
-            "field": "ids",
-            "description": "<p>Optional. A JSON array of the artist or user Spotify IDs.</br> For example: {ids:[&quot;74ASZWbe4lXaubB36ztrGX&quot;, &quot;08td7MxkoHQkXnWAYD8d6Q&quot;]}.</br> A maximum of 50 IDs can be sent in one request.</br> Note: if the ids parameter is present in the query string, any IDs listed here in the body will be ignored.</p>"
+            "field": "id",
+            "description": "<p>Required.  the artist ID.</br> For example: id=74ASZWbe4lXaubB36ztrGX. A maximum of 1 ID can be sent in one request.</p>"
           }
         ],
         "Response": [
@@ -1528,7 +1508,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1592,7 +1572,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1642,14 +1622,14 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
     "type": "delete",
     "url": "api/me/following",
-    "title": "Unfollow Artists or Users  (not implemented yet)",
-    "name": "Unfollow_Artists_or_Users",
+    "title": "Unfollow Artist",
+    "name": "Unfollow_Artist",
     "group": "Follow",
     "description": "<p style=\"color:red;\">Remove the current user as a follower of one or more artists or other Spotify users.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
@@ -1672,26 +1652,12 @@ define({ "api": [
     },
     "parameter": {
       "fields": {
-        "QueryParameters": [
-          {
-            "group": "QueryParameters",
-            "optional": false,
-            "field": "type",
-            "description": "<p>Required. The ID type: either artist or user.</p>"
-          },
-          {
-            "group": "QueryParameters",
-            "optional": false,
-            "field": "ids",
-            "description": "<p>Optional. A comma-separated list of the artist or the user Spotify IDs.</br> For example: ids=74ASZWbe4lXaubB36ztrGX,08td7MxkoHQkXnWAYD8d6Q. A maximum of 50 IDs can be sent in one request.</p>"
-          }
-        ],
         "BodyParameters": [
           {
             "group": "BodyParameters",
             "optional": false,
-            "field": "ids",
-            "description": "<p>Optional. A JSON array of the artist or user Spotify IDs. For example: {ids:[&quot;74ASZWbe4lXaubB36ztrGX&quot;, &quot;08td7MxkoHQkXnWAYD8d6Q&quot;]}.</br> A maximum of 50 IDs can be sent in one request.</br> Note: if the ids parameter is present in the query string, any IDs listed here in the body will be ignored.</p>"
+            "field": "id",
+            "description": "<p>Optional. A JSON of the artist ID. For example: {id:&quot;74ASZWbe4lXaubB36ztrGX&quot;}.</br> A maximum of 1 ID can be sent in one request.</br> Note: if the ids parameter is present in the query string, any IDs listed here in the body will be ignored.</p>"
           }
         ],
         "Response": [
@@ -1699,13 +1665,13 @@ define({ "api": [
             "group": "Response",
             "optional": false,
             "field": "Format",
-            "description": "<p>On success, the HTTP status code in the response header is 204 No Content and the response body is empty.</br> On error, the header status code is an error code and the response body contains an error object.</p>"
+            "description": "<p>On success, the HTTP status code in the response header is 200 No Content and the response body is empty.</br> On error, the header status code is an error code and the response body contains an error object.</p>"
           }
         ]
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1755,7 +1721,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1816,7 +1782,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -1862,7 +1828,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -1950,7 +1916,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -2038,7 +2004,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -2097,7 +2063,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2156,7 +2122,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2215,13 +2181,13 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{  \n [\n    {\n        \"isSaved\": true,\n        \"_id\": \"5e8cb9327f37604d583f8d25\",\n        \"name\": \"HELLO KIDS\",\n        \"images\": [],\n        \"artistId\": \"5e8cb7037f37604d583f8d22\",\n        \"artistName\": \"nada\",\n        \"track\": [\n            {\n                \"_id\": \"5e8ce2a17d3d703094eb82f4\",\n                \"name\": \"GOGO\",\n                \"images\": []\n            },\n            {\n                \"_id\": \"5e8ce2ca7d3d703094eb82f7\",\n                \"name\": \"OHAY\",\n                \"images\": []\n            },\n            {\n                \"_id\": \"5e8ce2ce7d3d703094eb82fa\",\n                \"name\": \"POP\",\n                \"images\": []\n            },\n            {\n                \"_id\": \"5e8ce2d37d3d703094eb82fd\",\n                \"name\": \"SASA\",\n                \"images\": []\n            },\n            {\n                \"_id\": \"5e8ce2d77d3d703094eb8300\",\n                \"name\": \"DOMAIN\",\n                \"images\": []\n            },\n            {\n                \"_id\": \"5e8ce2dc7d3d703094eb8303\",\n                \"name\": \"NOMAIN\",\n                \"images\": []\n            }\n        ]\n    },\n    {\n        \"isSaved\": true,\n        \"_id\": \"5e8cb9457f37604d583f8d27\",\n        \"name\": \"HELLO SLEEP WALKERS\",\n        \"images\": [],\n        \"artistId\": \"5e8cb7037f37604d583f8d22\",\n        \"artistName\": \"nada\",\n        \"track\": [\n            {\n                \"_id\": \"5e8ce86082c8d9579467fb73\",\n                \"name\": \"WHO I AM\",\n                \"images\": []\n            },\n            {\n                \"_id\": \"5e8ce86882c8d9579467fb76\",\n                \"name\": \"SOKA\",\n                \"images\": []\n            },\n            {\n                \"_id\": \"5e8ce86c82c8d9579467fb79\",\n                \"name\": \"ARASU\",\n                \"images\": []\n            },\n            {\n                \"_id\": \"5e8ce87182c8d9579467fb7c\",\n                \"name\": \"WIWI\",\n                \"images\": []\n            },\n            {\n                \"_id\": \"5e8ce87682c8d9579467fb7f\",\n                \"name\": \"WWIII\",\n                \"images\": []\n            }\n        ]\n    },\n    {\n        \"isSaved\": true,\n        \"_id\": \"5e8cb94b7f37604d583f8d29\",\n        \"name\": \"OHAYO SLEEP WALKERS\",\n        \"images\": [],\n        \"artistId\": \"5e8cb7037f37604d583f8d22\",\n        \"artistName\": \"nada\",\n        \"track\": [\n            {\n                \"_id\": \"5e8ce8b282c8d9579467fb82\",\n                \"name\": \"KJKJQ\",\n                \"images\": []\n            },\n            {\n                \"_id\": \"5e8ce8bb82c8d9579467fb85\",\n                \"name\": \"HEHE\",\n                \"images\": []\n            },\n            {\n                \"_id\": \"5e8ce8bf82c8d9579467fb88\",\n                \"name\": \"MOON\",\n                \"images\": []\n            },\n            {\n                \"_id\": \"5e8ce8c382c8d9579467fb8b\",\n                \"name\": \"SUN\",\n                \"images\": []\n            },\n            {\n                \"_id\": \"5e8ce8c982c8d9579467fb8e\",\n                \"name\": \"FREEZE\",\n                \"images\": []\n            }\n        ]\n    }\n]\n}",
+          "content": "{\n [\n    {\n        \"isSaved\": true,\n        \"_id\": \"5e8cb9327f37604d583f8d25\",\n        \"name\": \"HELLO KIDS\",\n        \"images\": [],\n        \"artistId\": \"5e8cb7037f37604d583f8d22\",\n        \"artistName\": \"nada\",\n        \"track\": [\n            {\n                \"_id\": \"5e8ce2a17d3d703094eb82f4\",\n                \"name\": \"GOGO\",\n                \"images\": []\n            },\n            {\n                \"_id\": \"5e8ce2ca7d3d703094eb82f7\",\n                \"name\": \"OHAY\",\n                \"images\": []\n            },\n            {\n                \"_id\": \"5e8ce2ce7d3d703094eb82fa\",\n                \"name\": \"POP\",\n                \"images\": []\n            },\n            {\n                \"_id\": \"5e8ce2d37d3d703094eb82fd\",\n                \"name\": \"SASA\",\n                \"images\": []\n            },\n            {\n                \"_id\": \"5e8ce2d77d3d703094eb8300\",\n                \"name\": \"DOMAIN\",\n                \"images\": []\n            },\n            {\n                \"_id\": \"5e8ce2dc7d3d703094eb8303\",\n                \"name\": \"NOMAIN\",\n                \"images\": []\n            }\n        ]\n    },\n    {\n        \"isSaved\": true,\n        \"_id\": \"5e8cb9457f37604d583f8d27\",\n        \"name\": \"HELLO SLEEP WALKERS\",\n        \"images\": [],\n        \"artistId\": \"5e8cb7037f37604d583f8d22\",\n        \"artistName\": \"nada\",\n        \"track\": [\n            {\n                \"_id\": \"5e8ce86082c8d9579467fb73\",\n                \"name\": \"WHO I AM\",\n                \"images\": []\n            },\n            {\n                \"_id\": \"5e8ce86882c8d9579467fb76\",\n                \"name\": \"SOKA\",\n                \"images\": []\n            },\n            {\n                \"_id\": \"5e8ce86c82c8d9579467fb79\",\n                \"name\": \"ARASU\",\n                \"images\": []\n            },\n            {\n                \"_id\": \"5e8ce87182c8d9579467fb7c\",\n                \"name\": \"WIWI\",\n                \"images\": []\n            },\n            {\n                \"_id\": \"5e8ce87682c8d9579467fb7f\",\n                \"name\": \"WWIII\",\n                \"images\": []\n            }\n        ]\n    },\n    {\n        \"isSaved\": true,\n        \"_id\": \"5e8cb94b7f37604d583f8d29\",\n        \"name\": \"OHAYO SLEEP WALKERS\",\n        \"images\": [],\n        \"artistId\": \"5e8cb7037f37604d583f8d22\",\n        \"artistName\": \"nada\",\n        \"track\": [\n            {\n                \"_id\": \"5e8ce8b282c8d9579467fb82\",\n                \"name\": \"KJKJQ\",\n                \"images\": []\n            },\n            {\n                \"_id\": \"5e8ce8bb82c8d9579467fb85\",\n                \"name\": \"HEHE\",\n                \"images\": []\n            },\n            {\n                \"_id\": \"5e8ce8bf82c8d9579467fb88\",\n                \"name\": \"MOON\",\n                \"images\": []\n            },\n            {\n                \"_id\": \"5e8ce8c382c8d9579467fb8b\",\n                \"name\": \"SUN\",\n                \"images\": []\n            },\n            {\n                \"_id\": \"5e8ce8c982c8d9579467fb8e\",\n                \"name\": \"FREEZE\",\n                \"images\": []\n            }\n        ]\n    }\n]\n}",
           "type": "json"
         }
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2286,7 +2252,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2335,7 +2301,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2385,7 +2351,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2435,7 +2401,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2485,7 +2451,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2548,7 +2514,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Personalization"
   },
   {
@@ -2557,7 +2523,7 @@ define({ "api": [
     "title": "Add an Item to the User's Playback Queue",
     "name": "Add_an_Item_to_the_User's_Playback_Queue",
     "group": "Player",
-    "description": "<p style=\"color:red;\">Add an item to the end of the user’s current playback queue.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">Add an item to the end of the user’s current playback queue.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
         "Header": [
@@ -2612,7 +2578,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2621,7 +2587,7 @@ define({ "api": [
     "title": "Get Current User's Recently Played Tracks",
     "name": "Get_Current_User's_Recently_Played_Tracks.",
     "group": "Player",
-    "description": "<p style=\"color:red;\">Get tracks from the current user’s recently played tracks.</p> <p>Returns the most recent 50 tracks played by a user. Note that a track currently playing will not be visible in play history until it has completed. A track must be played for more than 30 seconds to be included in play history.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">Get tracks from the current user’s recently played tracks.</p> <p>Returns the most recent 50 tracks played by a user. Note that a track currently playing will not be visible in play history until it has completed. A track must be played for more than 30 seconds to be included in play history.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
         "Header": [
@@ -2674,7 +2640,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2683,7 +2649,7 @@ define({ "api": [
     "title": "Get Information About The User's Current Playback  (not implemented yet)",
     "name": "Get_Information_About_The_User's_Current_Playback",
     "group": "Player",
-    "description": "<p style=\"color:red;\">Get information about the user’s current playback state, including track, track progress, and active device.</br> Optional parameters can be specified in the query string to filter and sort the response.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">Get information about the user’s current playback state, including track, track progress, and active device.</br> Optional parameters can be specified in the query string to filter and sort the response.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
         "Header": [
@@ -2717,7 +2683,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2726,7 +2692,7 @@ define({ "api": [
     "title": "Get the User's Currently Playing Track",
     "name": "Get_the_User's_Currently_Playing_Track",
     "group": "Player",
-    "description": "<p style=\"color:red;\">Get the object currently being played on the user’s Spotify account.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">Get the object currently being played on the user’s Spotify account.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
         "Header": [
@@ -2750,7 +2716,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n  \n       \"track\": {\n           \"availableMarkets\": [\n               \"\\\"er,ty,eue,euu\\\"\"\n           ],\n           \"_id\": \"5e85f4241ba5cf17ccca66d7\",\n           \"url\": \"5e85f4241ba5cf17ccca66d5\",\n           \"images\": [],\n           \"duration\": 436,\n           \"trackNumber\": 236,\n           \"name\": \"\\\"track6\\\"\",\n           \"artistId\": \"5e833a51a51d971174923f17\",\n           \"albumId\": \"5e833b412b9d7718a491c850\",\n           \"discNumber\": 1,\n           \"explicit\": false,\n           \"type\": \"Track\",\n           \"acousticness\": 10,\n           \"danceability\": 23,\n           \"energy\": 100,\n           \"instrumentalness\": 4,\n           \"key\": 90,\n           \"liveness\": 25,\n           \"loudness\": 70,\n           \"mode\": 56,\n           \"speechiness\": 67,\n           \"tempo\": 76,\n           \"timeSignature\": \"2020-04-02T14:18:12.619Z\",\n           \"valence\": 70,\n           \"like\": 0,\n           \"__v\": 0\n       },\n       \"isLiked\": false,\n       \"album\": {\n           \"name\": \"album1\",\n           \"_id\": \"5e833b412b9d7718a491c850\",\n           \"artist\": {\n               \"name\": \"ahmedsamir\",\n              \"_id\": \"5e833a51a51d971174923f17\"\n           }\n       },\n   \n   \"isPlaylist\": true,\n   \"playlistId\": \"5e85f4ca1ba5cf17ccca66eb\",\n  \"isPlayable\":true\n}",
+          "content": "{\n\n       \"track\": {\n           \"availableMarkets\": [\n               \"\\\"er,ty,eue,euu\\\"\"\n           ],\n           \"_id\": \"5e85f4241ba5cf17ccca66d7\",\n           \"url\": \"5e85f4241ba5cf17ccca66d5\",\n           \"images\": [],\n           \"duration\": 436,\n           \"trackNumber\": 236,\n           \"name\": \"\\\"track6\\\"\",\n           \"artistId\": \"5e833a51a51d971174923f17\",\n           \"albumId\": \"5e833b412b9d7718a491c850\",\n           \"discNumber\": 1,\n           \"explicit\": false,\n           \"type\": \"Track\",\n           \"acousticness\": 10,\n           \"danceability\": 23,\n           \"energy\": 100,\n           \"instrumentalness\": 4,\n           \"key\": 90,\n           \"liveness\": 25,\n           \"loudness\": 70,\n           \"mode\": 56,\n           \"speechiness\": 67,\n           \"tempo\": 76,\n           \"timeSignature\": \"2020-04-02T14:18:12.619Z\",\n           \"valence\": 70,\n           \"like\": 0,\n           \"__v\": 0\n       },\n       \"isLiked\": false,\n       \"album\": {\n           \"name\": \"album1\",\n           \"_id\": \"5e833b412b9d7718a491c850\",\n           \"artist\": {\n               \"name\": \"ahmedsamir\",\n              \"_id\": \"5e833a51a51d971174923f17\"\n           }\n       },\n\n   \"isPlaylist\": true,\n   \"playlistId\": \"5e85f4ca1ba5cf17ccca66eb\",\n  \"isPlayable\":true\n}",
           "type": "json"
         }
       ]
@@ -2768,7 +2734,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2777,7 +2743,7 @@ define({ "api": [
     "title": "Get currently queue for this user",
     "name": "Get_the_User's_Currently_playback_queue",
     "group": "Player",
-    "description": "<p style=\"color:red;\">Get the User's Currently playback queue</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">Get the User's Currently playback queue</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
         "Header": [
@@ -2801,7 +2767,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n[\n{   \n   \"fullTrack\": {\n       \"track\": {\n           \"availableMarkets\": [\n               \"\\\"er,ty,eue,euu\\\"\"\n           ],\n           \"_id\": \"5e85f4241ba5cf17ccca66d7\",\n           \"url\": \"5e85f4241ba5cf17ccca66d5\",\n           \"images\": [],\n           \"duration\": 436,\n           \"trackNumber\": 236,\n           \"name\": \"\\\"track6\\\"\",\n           \"artistId\": \"5e833a51a51d971174923f17\",\n           \"albumId\": \"5e833b412b9d7718a491c850\",\n           \"discNumber\": 1,\n           \"explicit\": false,\n           \"type\": \"Track\",\n           \"acousticness\": 10,\n           \"danceability\": 23,\n           \"energy\": 100,\n           \"instrumentalness\": 4,\n           \"key\": 90,\n           \"liveness\": 25,\n           \"loudness\": 70,\n           \"mode\": 56,\n           \"speechiness\": 67,\n           \"tempo\": 76,\n           \"timeSignature\": \"2020-04-02T14:18:12.619Z\",\n           \"valence\": 70,\n           \"like\": 0,\n           \"__v\": 0\n       },\n       \"isLiked\": false,\n       \"album\": {\n           \"name\": \"album1\",\n           \"_id\": \"5e833b412b9d7718a491c850\",\n           \"artist\": {\n               \"name\": \"ahmedsamir\",\n              \"_id\": \"5e833a51a51d971174923f17\"\n           }\n       }\n   },\n   \"isPlaylist\": true,\n   \"playlistId\": \"5e85f4ca1ba5cf17ccca66eb\",\n    \"isPlayable\": false\n},\n{   \n   \"fullTrack\": {\n       \"track\": {\n           \"availableMarkets\": [\n               \"\\\"er,ty,eue,euu\\\"\"\n           ],\n           \"_id\": \"5e85f4241ba5cf17ccca66d7\",\n           \"url\": \"5e85f4241ba5cf17ccca66d5\",\n           \"images\": [],\n           \"duration\": 436,\n           \"trackNumber\": 236,\n           \"name\": \"\\\"track6\\\"\",\n           \"artistId\": \"5e833a51a51d971174923f17\",\n           \"albumId\": \"5e833b412b9d7718a491c850\",\n           \"discNumber\": 1,\n           \"explicit\": false,\n           \"type\": \"Track\",\n           \"acousticness\": 10,\n           \"danceability\": 23,\n           \"energy\": 100,\n           \"instrumentalness\": 4,\n           \"key\": 90,\n           \"liveness\": 25,\n           \"loudness\": 70,\n           \"mode\": 56,\n           \"speechiness\": 67,\n           \"tempo\": 76,\n           \"timeSignature\": \"2020-04-02T14:18:12.619Z\",\n           \"valence\": 70,\n           \"like\": 0,\n           \"__v\": 0\n       },\n       \"isLiked\": false,\n       \"album\": {\n           \"name\": \"album1\",\n           \"_id\": \"5e833b412b9d7718a491c850\",\n           \"artist\": {\n               \"name\": \"ahmedsamir\",\n              \"_id\": \"5e833a51a51d971174923f17\"\n           }\n       }\n   },\n   \"isPlaylist\": true,\n   \"playlistId\": \"5e85f4ca1ba5cf17ccca66eb\",\n    \"isPlayable\": false\n},   \n   \"fullTrack\": {\n       \"track\": {\n           \"availableMarkets\": [\n               \"\\\"er,ty,eue,euu\\\"\"\n           ],\n           \"_id\": \"5e85f4241ba5cf17ccca66d7\",\n           \"url\": \"5e85f4241ba5cf17ccca66d5\",\n           \"images\": [],\n           \"duration\": 436,\n           \"trackNumber\": 236,\n           \"name\": \"\\\"track6\\\"\",\n           \"artistId\": \"5e833a51a51d971174923f17\",\n           \"albumId\": \"5e833b412b9d7718a491c850\",\n           \"discNumber\": 1,\n           \"explicit\": false,\n           \"type\": \"Track\",\n           \"acousticness\": 10,\n           \"danceability\": 23,\n           \"energy\": 100,\n           \"instrumentalness\": 4,\n           \"key\": 90,\n           \"liveness\": 25,\n           \"loudness\": 70,\n           \"mode\": 56,\n           \"speechiness\": 67,\n           \"tempo\": 76,\n           \"timeSignature\": \"2020-04-02T14:18:12.619Z\",\n           \"valence\": 70,\n           \"like\": 0,\n           \"__v\": 0\n       },\n       \"isLiked\": false,\n       \"album\": {\n           \"name\": \"album1\",\n           \"_id\": \"5e833b412b9d7718a491c850\",\n           \"artist\": {\n               \"name\": \"ahmedsamir\",\n              \"_id\": \"5e833a51a51d971174923f17\"\n           }\n       }\n   },\n   \"isPlaylist\": true,\n   \"playlistId\": \"5e85f4ca1ba5cf17ccca66eb\",\n    \"isPlayable\": false\n}\n]\n}",
+          "content": "{\n[\n{\n   \"fullTrack\": {\n       \"track\": {\n           \"availableMarkets\": [\n               \"\\\"er,ty,eue,euu\\\"\"\n           ],\n           \"_id\": \"5e85f4241ba5cf17ccca66d7\",\n           \"url\": \"5e85f4241ba5cf17ccca66d5\",\n           \"images\": [],\n           \"duration\": 436,\n           \"trackNumber\": 236,\n           \"name\": \"\\\"track6\\\"\",\n           \"artistId\": \"5e833a51a51d971174923f17\",\n           \"albumId\": \"5e833b412b9d7718a491c850\",\n           \"discNumber\": 1,\n           \"explicit\": false,\n           \"type\": \"Track\",\n           \"acousticness\": 10,\n           \"danceability\": 23,\n           \"energy\": 100,\n           \"instrumentalness\": 4,\n           \"key\": 90,\n           \"liveness\": 25,\n           \"loudness\": 70,\n           \"mode\": 56,\n           \"speechiness\": 67,\n           \"tempo\": 76,\n           \"timeSignature\": \"2020-04-02T14:18:12.619Z\",\n           \"valence\": 70,\n           \"like\": 0,\n           \"__v\": 0\n       },\n       \"isLiked\": false,\n       \"album\": {\n           \"name\": \"album1\",\n           \"_id\": \"5e833b412b9d7718a491c850\",\n           \"artist\": {\n               \"name\": \"ahmedsamir\",\n              \"_id\": \"5e833a51a51d971174923f17\"\n           }\n       }\n   },\n   \"isPlaylist\": true,\n   \"playlistId\": \"5e85f4ca1ba5cf17ccca66eb\",\n    \"isPlayable\": false\n},\n{\n   \"fullTrack\": {\n       \"track\": {\n           \"availableMarkets\": [\n               \"\\\"er,ty,eue,euu\\\"\"\n           ],\n           \"_id\": \"5e85f4241ba5cf17ccca66d7\",\n           \"url\": \"5e85f4241ba5cf17ccca66d5\",\n           \"images\": [],\n           \"duration\": 436,\n           \"trackNumber\": 236,\n           \"name\": \"\\\"track6\\\"\",\n           \"artistId\": \"5e833a51a51d971174923f17\",\n           \"albumId\": \"5e833b412b9d7718a491c850\",\n           \"discNumber\": 1,\n           \"explicit\": false,\n           \"type\": \"Track\",\n           \"acousticness\": 10,\n           \"danceability\": 23,\n           \"energy\": 100,\n           \"instrumentalness\": 4,\n           \"key\": 90,\n           \"liveness\": 25,\n           \"loudness\": 70,\n           \"mode\": 56,\n           \"speechiness\": 67,\n           \"tempo\": 76,\n           \"timeSignature\": \"2020-04-02T14:18:12.619Z\",\n           \"valence\": 70,\n           \"like\": 0,\n           \"__v\": 0\n       },\n       \"isLiked\": false,\n       \"album\": {\n           \"name\": \"album1\",\n           \"_id\": \"5e833b412b9d7718a491c850\",\n           \"artist\": {\n               \"name\": \"ahmedsamir\",\n              \"_id\": \"5e833a51a51d971174923f17\"\n           }\n       }\n   },\n   \"isPlaylist\": true,\n   \"playlistId\": \"5e85f4ca1ba5cf17ccca66eb\",\n    \"isPlayable\": false\n},\n   \"fullTrack\": {\n       \"track\": {\n           \"availableMarkets\": [\n               \"\\\"er,ty,eue,euu\\\"\"\n           ],\n           \"_id\": \"5e85f4241ba5cf17ccca66d7\",\n           \"url\": \"5e85f4241ba5cf17ccca66d5\",\n           \"images\": [],\n           \"duration\": 436,\n           \"trackNumber\": 236,\n           \"name\": \"\\\"track6\\\"\",\n           \"artistId\": \"5e833a51a51d971174923f17\",\n           \"albumId\": \"5e833b412b9d7718a491c850\",\n           \"discNumber\": 1,\n           \"explicit\": false,\n           \"type\": \"Track\",\n           \"acousticness\": 10,\n           \"danceability\": 23,\n           \"energy\": 100,\n           \"instrumentalness\": 4,\n           \"key\": 90,\n           \"liveness\": 25,\n           \"loudness\": 70,\n           \"mode\": 56,\n           \"speechiness\": 67,\n           \"tempo\": 76,\n           \"timeSignature\": \"2020-04-02T14:18:12.619Z\",\n           \"valence\": 70,\n           \"like\": 0,\n           \"__v\": 0\n       },\n       \"isLiked\": false,\n       \"album\": {\n           \"name\": \"album1\",\n           \"_id\": \"5e833b412b9d7718a491c850\",\n           \"artist\": {\n               \"name\": \"ahmedsamir\",\n              \"_id\": \"5e833a51a51d971174923f17\"\n           }\n       }\n   },\n   \"isPlaylist\": true,\n   \"playlistId\": \"5e85f4ca1ba5cf17ccca66eb\",\n    \"isPlayable\": false\n}\n]\n}",
           "type": "json"
         }
       ]
@@ -2819,7 +2785,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2828,7 +2794,7 @@ define({ "api": [
     "title": "Pause a User's Playback",
     "name": "Pause_a_User's_Playback",
     "group": "Player",
-    "description": "<p style=\"color:red;\">Pause playback on the user’s account.</br>  <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">Pause playback on the user’s account.</br> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
         "Header": [
@@ -2861,7 +2827,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2870,7 +2836,7 @@ define({ "api": [
     "title": "Seek To Position In Currently Playing Track       (not implemented yet)",
     "name": "Seek_To_Position_In_Currently_Playing_Track",
     "group": "Player",
-    "description": "<p style=\"color:red;\">Seeks to the given position in the user’s currently playing track.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">Seeks to the given position in the user’s currently playing track.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
         "Header": [
@@ -2904,7 +2870,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2913,7 +2879,7 @@ define({ "api": [
     "title": "Set Repeat Mode On User’s Playback",
     "name": "Set_Repeat_Mode_On_User’s_Playback",
     "group": "Player",
-    "description": "<p style=\"color:red;\">Set the repeat mode for the user’s playback. Options are repeat-track, repeat-context, and off.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">Set the repeat mode for the user’s playback. Options are repeat-track, repeat-context, and off.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
         "Header": [
@@ -2954,7 +2920,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2963,7 +2929,7 @@ define({ "api": [
     "title": "Skip User’s Playback To Next Track",
     "name": "Skip_User’s_Playback_To_Next_Track",
     "group": "Player",
-    "description": "<p style=\"color:red;\">Skips to next track in the user’s queue.</p> <p>After a successful skip operation, playback will automatically start.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">Skips to next track in the user’s queue.</p> <p>After a successful skip operation, playback will automatically start.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
         "Header": [
@@ -2987,7 +2953,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n   \n       \"track\": {\n           \"availableMarkets\": [\n               \"\\\"er,ty,eue,euu\\\"\"\n           ],\n           \"_id\": \"5e85f4241ba5cf17ccca66d7\",\n           \"url\": \"5e85f4241ba5cf17ccca66d5\",\n           \"images\": [],\n           \"duration\": 436,\n           \"trackNumber\": 236,\n           \"name\": \"\\\"track6\\\"\",\n           \"artistId\": \"5e833a51a51d971174923f17\",\n           \"albumId\": \"5e833b412b9d7718a491c850\",\n           \"discNumber\": 1,\n           \"explicit\": false,\n           \"type\": \"Track\",\n           \"acousticness\": 10,\n           \"danceability\": 23,\n           \"energy\": 100,\n           \"instrumentalness\": 4,\n           \"key\": 90,\n           \"liveness\": 25,\n           \"loudness\": 70,\n           \"mode\": 56,\n           \"speechiness\": 67,\n           \"tempo\": 76,\n           \"timeSignature\": \"2020-04-02T14:18:12.619Z\",\n           \"valence\": 70,\n           \"like\": 0,\n           \"__v\": 0\n       },\n       \"isLiked\": false,\n       \"album\": {\n           \"name\": \"album1\",\n           \"_id\": \"5e833b412b9d7718a491c850\",\n           \"artist\": {\n               \"name\": \"ahmedsamir\",\n              \"_id\": \"5e833a51a51d971174923f17\"\n           }\n       },\n  \n   \"isPlaylist\": true,\n   \"playlistId\": \"5e85f4ca1ba5cf17ccca66eb\",\n    \"isPlayable\": false\n}",
+          "content": "{\n\n       \"track\": {\n           \"availableMarkets\": [\n               \"\\\"er,ty,eue,euu\\\"\"\n           ],\n           \"_id\": \"5e85f4241ba5cf17ccca66d7\",\n           \"url\": \"5e85f4241ba5cf17ccca66d5\",\n           \"images\": [],\n           \"duration\": 436,\n           \"trackNumber\": 236,\n           \"name\": \"\\\"track6\\\"\",\n           \"artistId\": \"5e833a51a51d971174923f17\",\n           \"albumId\": \"5e833b412b9d7718a491c850\",\n           \"discNumber\": 1,\n           \"explicit\": false,\n           \"type\": \"Track\",\n           \"acousticness\": 10,\n           \"danceability\": 23,\n           \"energy\": 100,\n           \"instrumentalness\": 4,\n           \"key\": 90,\n           \"liveness\": 25,\n           \"loudness\": 70,\n           \"mode\": 56,\n           \"speechiness\": 67,\n           \"tempo\": 76,\n           \"timeSignature\": \"2020-04-02T14:18:12.619Z\",\n           \"valence\": 70,\n           \"like\": 0,\n           \"__v\": 0\n       },\n       \"isLiked\": false,\n       \"album\": {\n           \"name\": \"album1\",\n           \"_id\": \"5e833b412b9d7718a491c850\",\n           \"artist\": {\n               \"name\": \"ahmedsamir\",\n              \"_id\": \"5e833a51a51d971174923f17\"\n           }\n       },\n\n   \"isPlaylist\": true,\n   \"playlistId\": \"5e85f4ca1ba5cf17ccca66eb\",\n    \"isPlayable\": false\n}",
           "type": "json"
         }
       ]
@@ -3005,7 +2971,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3014,7 +2980,7 @@ define({ "api": [
     "title": "Skip User’s Playback To Previous Track",
     "name": "Skip_User’s_Playback_To_Previous_Track",
     "group": "Player",
-    "description": "<p style=\"color:red;\">Skips to previous track in the user’s queue.</p> <p>Note that this will ALWAYS skip to the previous track, regardless of the current track’s progress. Returning to the start of the current track should be performed using the https://api.spotify.com/v1/me/player/seek endpoint.</p> <p>After a successful skip operation, playback will automatically start.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">Skips to previous track in the user’s queue.</p> <p>Note that this will ALWAYS skip to the previous track, regardless of the current track’s progress. Returning to the start of the current track should be performed using the https://api.spotify.com/v1/me/player/seek endpoint.</p> <p>After a successful skip operation, playback will automatically start.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
         "Header": [
@@ -3038,7 +3004,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n   \n       \"track\": {\n           \"availableMarkets\": [\n               \"\\\"er,ty,eue,euu\\\"\"\n           ],\n           \"_id\": \"5e85f4241ba5cf17ccca66d7\",\n           \"url\": \"5e85f4241ba5cf17ccca66d5\",\n           \"images\": [],\n           \"duration\": 436,\n           \"trackNumber\": 236,\n           \"name\": \"\\\"track6\\\"\",\n           \"artistId\": \"5e833a51a51d971174923f17\",\n           \"albumId\": \"5e833b412b9d7718a491c850\",\n           \"discNumber\": 1,\n           \"explicit\": false,\n           \"type\": \"Track\",\n           \"acousticness\": 10,\n           \"danceability\": 23,\n           \"energy\": 100,\n           \"instrumentalness\": 4,\n           \"key\": 90,\n           \"liveness\": 25,\n           \"loudness\": 70,\n           \"mode\": 56,\n           \"speechiness\": 67,\n           \"tempo\": 76,\n           \"timeSignature\": \"2020-04-02T14:18:12.619Z\",\n           \"valence\": 70,\n           \"like\": 0,\n           \"__v\": 0\n       },\n       \"isLiked\": false,\n       \"album\": {\n           \"name\": \"album1\",\n           \"_id\": \"5e833b412b9d7718a491c850\",\n           \"artist\": {\n               \"name\": \"ahmedsamir\",\n              \"_id\": \"5e833a51a51d971174923f17\"\n           }\n       }\n   },\n   \"isPlaylist\": true,\n   \"playlistId\": \"5e85f4ca1ba5cf17ccca66eb\"\n    \"isPlayable\": false\n}",
+          "content": "{\n\n       \"track\": {\n           \"availableMarkets\": [\n               \"\\\"er,ty,eue,euu\\\"\"\n           ],\n           \"_id\": \"5e85f4241ba5cf17ccca66d7\",\n           \"url\": \"5e85f4241ba5cf17ccca66d5\",\n           \"images\": [],\n           \"duration\": 436,\n           \"trackNumber\": 236,\n           \"name\": \"\\\"track6\\\"\",\n           \"artistId\": \"5e833a51a51d971174923f17\",\n           \"albumId\": \"5e833b412b9d7718a491c850\",\n           \"discNumber\": 1,\n           \"explicit\": false,\n           \"type\": \"Track\",\n           \"acousticness\": 10,\n           \"danceability\": 23,\n           \"energy\": 100,\n           \"instrumentalness\": 4,\n           \"key\": 90,\n           \"liveness\": 25,\n           \"loudness\": 70,\n           \"mode\": 56,\n           \"speechiness\": 67,\n           \"tempo\": 76,\n           \"timeSignature\": \"2020-04-02T14:18:12.619Z\",\n           \"valence\": 70,\n           \"like\": 0,\n           \"__v\": 0\n       },\n       \"isLiked\": false,\n       \"album\": {\n           \"name\": \"album1\",\n           \"_id\": \"5e833b412b9d7718a491c850\",\n           \"artist\": {\n               \"name\": \"ahmedsamir\",\n              \"_id\": \"5e833a51a51d971174923f17\"\n           }\n       }\n   },\n   \"isPlaylist\": true,\n   \"playlistId\": \"5e85f4ca1ba5cf17ccca66eb\"\n    \"isPlayable\": false\n}",
           "type": "json"
         }
       ]
@@ -3056,7 +3022,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3065,7 +3031,7 @@ define({ "api": [
     "title": "Start/Resume a User's Playback",
     "name": "Start/Resume_a_User's_Playback",
     "group": "Player",
-    "description": "<p style=\"color:red;\">Start a new context or resume current playback on the user’s active device.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">Start a new context or resume current playback on the user’s active device.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
         "Header": [
@@ -3098,7 +3064,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3107,7 +3073,7 @@ define({ "api": [
     "title": "Toggle Shuffle For User’s Playback",
     "name": "Toggle_Shuffle_For_User’s_Playback",
     "group": "Player",
-    "description": "<p style=\"color:red;\">Toggle shuffle on or off for user’s playback.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">Toggle shuffle on or off for user’s playback.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
         "Header": [
@@ -3148,7 +3114,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3157,7 +3123,7 @@ define({ "api": [
     "title": "Add Tracks to a Playlist",
     "name": "Add_Tracks_to_a_Playlist",
     "group": "Playlist",
-    "description": "<p style=\"color:red;\">Add one or more tracks to a user’s playlist..</p> <p>The Spotify URIs of the tracks to add can be passed either in the query string or as a JSON array in the request body</p> <p>. Passing them in the query string</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">Add one or more tracks to a user’s playlist..</p> <p>The Spotify URIs of the tracks to add can be passed either in the query string or as a JSON array in the request body</p> <p>. Passing them in the query string</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
         "Path Parameters": [
@@ -3221,7 +3187,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3230,7 +3196,7 @@ define({ "api": [
     "title": "Change a Playlist's Details",
     "name": "Change_a_Playlist's_Details",
     "group": "Playlist",
-    "description": "<p style=\"color:red;\">Change a Playlist's Details Change a playlist’s name and public/private state. (The user must, of course, own the playlist.)</p> Note that the request data is a JSON string, not separate fields <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">Change a Playlist's Details Change a playlist’s name and public/private state. (The user must, of course, own the playlist.)</p> Note that the request data is a JSON string, not separate fields <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
         "Path Parameters": [
@@ -3302,7 +3268,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl --location --request PUT 'http://localhost:3000/api/playlists/5e8cbe527f37604d583f8d5c' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\\n--header 'Content-Type: application/json' \\\n--header 'Content-Type: application/json' \\\n \\\n--data-raw '{\n\t\"name\":\"new name\"\n\t\n}'",
+        "content": "curl --location --request PUT 'http://localhost:3000/api/playlists/5e8cbe527f37604d583f8d5c' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\\n--header 'Content-Type: application/json' \\\n--header 'Content-Type: application/json' \\\n \\\n--data-raw '{\n\t\"name\":\"new name\"\n\n}'",
         "type": "curl"
       }
     ],
@@ -3316,7 +3282,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3325,7 +3291,7 @@ define({ "api": [
     "title": "Create a Playlist",
     "name": "Create_a_Playlist",
     "group": "Playlist",
-    "description": "<p style=\"color:red;\">Create a playlist for a Spotify user. (The playlist will be empty until you add tracks.)</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">Create a playlist for a Spotify user. (The playlist will be empty until you add tracks.)</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
         "Header": [
@@ -3375,7 +3341,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl --location --request POST 'http://localhost:3000/api/users/playlists' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\\n--header 'Content-Type: application/json' \\\n--header 'Content-Type: application/json' \\\n \\\n--data-raw '{\n\t\"name\":\"new playlist name\",\n\t\"describtion\":\"ant desc\"\n\t\n}'",
+        "content": "curl --location --request POST 'http://localhost:3000/api/users/playlists' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\\n--header 'Content-Type: application/json' \\\n--header 'Content-Type: application/json' \\\n \\\n--data-raw '{\n\t\"name\":\"new playlist name\",\n\t\"describtion\":\"ant desc\"\n\n}'",
         "type": "curl"
       }
     ],
@@ -3389,7 +3355,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3398,7 +3364,7 @@ define({ "api": [
     "title": "Get Tracks from a Playlist",
     "name": "Get_Tracks_from_a_Playlist",
     "group": "Playlist",
-    "description": "<p style=\"color:red;\">Get Tracks from a playlist..</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">Get Tracks from a playlist..</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
         "Path Parameters": [
@@ -3448,7 +3414,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3457,7 +3423,7 @@ define({ "api": [
     "title": "Get a List of Current User's Playlists",
     "name": "Get_a_List_of_Current_User's_Playlists.",
     "group": "Playlist",
-    "description": "<p style=\"color:red;\">Get a list of the playlists owned or followed by the current Spotify user.</p> <p>Returns list of user's playlists created and followed by user</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">Get a list of the playlists owned or followed by the current Spotify user.</p> <p>Returns list of user's playlists created and followed by user</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
         "Header": [
@@ -3499,7 +3465,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3508,7 +3474,7 @@ define({ "api": [
     "title": "Get a List of a User's Playlists created and followed",
     "name": "Get_a_List_of_a_User's_Playlists",
     "group": "Playlist",
-    "description": "<p style=\"color:red;\">Get a list of the playlists owned or followed by a Spotify user.</br>  <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">Get a list of the playlists owned or followed by a Spotify user.</br> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
         "path Parameters": [
@@ -3572,7 +3538,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3581,7 +3547,7 @@ define({ "api": [
     "title": "Get a Playlist",
     "name": "Get_a_Playlist.",
     "group": "Playlist",
-    "description": "<p style=\"color:red;\">Get a playlist owned by a Spotify user.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">Get a playlist owned by a Spotify user.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
         "Path Parameters": [
@@ -3639,7 +3605,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3682,7 +3648,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3691,7 +3657,7 @@ define({ "api": [
     "title": "Get user deleted Playlists",
     "name": "Get_user_deleted_Playlists.",
     "group": "Playlist",
-    "description": "<p style=\"color:red;\">Get user deleted Playlists</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">Get user deleted Playlists</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
         "Header": [
@@ -3733,7 +3699,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3742,7 +3708,7 @@ define({ "api": [
     "title": "Remove Tracks from a Playlist",
     "name": "Remove_Tracks_from_a_Playlist",
     "group": "Playlist",
-    "description": "<p style=\"color:red;\">Remove one or more tracks from a user’s playlist.</p> There are several ways to specify which tracks to remove, determined by the request parameters. <b>Removing all occurrences of specific tracks</b> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">Remove one or more tracks from a user’s playlist.</p> There are several ways to specify which tracks to remove, determined by the request parameters. <b>Removing all occurrences of specific tracks</b> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
         "Path Parameters": [
@@ -3798,12 +3764,12 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl --location --request DELETE 'http://localhost:3000/api/playlists/5e8cbe527f37604d583f8d5c/tracks' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\\n--header 'Content-Type: application/json' \\\n \\\n--data-raw '{\n\t\"track_ids\":\"5e8cba1b7f37604d583f8d37,5e8cba6c7f37604d583f8d3e\"\n\t\n}'",
+        "content": "curl --location --request DELETE 'http://localhost:3000/api/playlists/5e8cbe527f37604d583f8d5c/tracks' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\\n--header 'Content-Type: application/json' \\\n \\\n--data-raw '{\n\t\"track_ids\":\"5e8cba1b7f37604d583f8d37,5e8cba6c7f37604d583f8d3e\"\n\n}'",
         "type": "curl"
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3812,7 +3778,7 @@ define({ "api": [
     "title": "Reorder a Playlist's Tracks",
     "name": "Reorder_a_Playlist's_Tracks",
     "group": "Playlist",
-    "description": "<p style=\"color:red;\">Reorder a track or a group of tracks in a playlist.</p> <p>When reordering tracks, the timestamp indicating when they were added and the user who added them will be kept untouched. In addition, the users following the playlists won’t be notified about changes in the playlists when the tracks are reordered.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">Reorder a track or a group of tracks in a playlist.</p> <p>When reordering tracks, the timestamp indicating when they were added and the user who added them will be kept untouched. In addition, the users following the playlists won’t be notified about changes in the playlists when the tracks are reordered.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
         "Path Parameters": [
@@ -3884,7 +3850,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl --location --request PUT 'http://localhost:3000/api/playlists/5e8cbe527f37604d583f8d5c/tracks' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\\n--header 'Content-Type: application/json' \\\n \\\n--data-raw '{\n\t\"range_start\":2\n\t\n}'",
+        "content": "curl --location --request PUT 'http://localhost:3000/api/playlists/5e8cbe527f37604d583f8d5c/tracks' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\\n--header 'Content-Type: application/json' \\\n \\\n--data-raw '{\n\t\"range_start\":2\n\n}'",
         "type": "curl"
       }
     ],
@@ -3898,7 +3864,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3907,7 +3873,7 @@ define({ "api": [
     "title": "Replace a Playlist's Tracks (Not implemented yet)",
     "name": "Replace_a_Playlist's_Tracks.",
     "group": "Playlist",
-    "description": "<p style=\"color:red;\">Replace all the tracks in a playlist, overwriting its existing tracks. This powerful request can be useful for replacing tracks, re-ordering existing tracks, or clearing the playlist.</p> <p>The Spotify URIs of the tracks to set can be passed either as a JSON array in the request body or as a list in the query string. The request can only accept a maximum of 100 tracks; any additional tracks will need to be added using the “Add Tracks to a Playlist” endpoint.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">Replace all the tracks in a playlist, overwriting its existing tracks. This powerful request can be useful for replacing tracks, re-ordering existing tracks, or clearing the playlist.</p> <p>The Spotify URIs of the tracks to set can be passed either as a JSON array in the request body or as a list in the query string. The request can only accept a maximum of 100 tracks; any additional tracks will need to be added using the “Add Tracks to a Playlist” endpoint.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
         "Path Parameters": [
@@ -3965,7 +3931,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3974,7 +3940,7 @@ define({ "api": [
     "title": "Restore user deleted Playlists.",
     "name": "Restore_user_deleted_Playlists.",
     "group": "Playlist",
-    "description": "<p style=\"color:red;\">Restore user deleted Playlists.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">Restore user deleted Playlists.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
         "Query Parameters": [
@@ -4024,7 +3990,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4033,7 +3999,7 @@ define({ "api": [
     "title": "Upload a Custom Playlist  Cover Image (Not implemented yet)",
     "name": "Upload_a_Custom_Playlist_Cover_Image.",
     "group": "Playlist",
-    "description": "<p style=\"color:red;\">Replace the image used to represent a specific playlist.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">Replace the image used to represent a specific playlist.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
         "Path Parameters": [
@@ -4089,7 +4055,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4098,7 +4064,7 @@ define({ "api": [
     "title": "delete a Playlist",
     "name": "delete_a_Playlist.",
     "group": "Playlist",
-    "description": "<p style=\"color:red;\">delete a playlist owned by a Spotify user.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">delete a playlist owned by a Spotify user.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
         "Path Parameters": [
@@ -4148,7 +4114,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4157,7 +4123,7 @@ define({ "api": [
     "title": "toggle playlist collaborative attribute",
     "name": "toggle_collaborative.",
     "group": "Playlist",
-    "description": "<p style=\"color:red;\">toggle the collaborative attribute of the specified playlist in the request</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">toggle the collaborative attribute of the specified playlist in the request</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
         "Path Parameters": [
@@ -4204,7 +4170,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4213,7 +4179,7 @@ define({ "api": [
     "title": "toggle playlist public attribute",
     "name": "toggle_public.",
     "group": "Playlist",
-    "description": "<p style=\"color:red;\">toggle the public attribute of the specified playlist in the request.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">toggle the public attribute of the specified playlist in the request.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
         "Path Parameters": [
@@ -4260,7 +4226,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4269,7 +4235,7 @@ define({ "api": [
     "title": "Search for an Item",
     "name": "Search_for_an_Item",
     "group": "Search",
-    "description": "<p style=\"color:red;\">Get Spotify Catalog information about artists, albums, tracks or playlists that match a keyword string.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">Get Spotify Catalog information about artists, albums, tracks or playlists that match a keyword string.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
         "Header": [
@@ -4316,7 +4282,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Search"
   },
   {
@@ -4359,7 +4325,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4404,7 +4370,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl --location --request GET 'http://localhost:3000/api/tracks/audio-features' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\\n--header 'Content-Type: application/json' \\\n \\\n--data-raw '{\n \"ids\":\"5e8cba1b7f37604d583f8d37,5e8cba367f37604d583f8d39\"\n\t\n}'",
+        "content": "curl --location --request GET 'http://localhost:3000/api/tracks/audio-features' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\\n--header 'Content-Type: application/json' \\\n \\\n--data-raw '{\n \"ids\":\"5e8cba1b7f37604d583f8d37,5e8cba367f37604d583f8d39\"\n\n}'",
         "type": "curl"
       }
     ],
@@ -4418,7 +4384,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4477,7 +4443,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4522,7 +4488,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl --location --request GET 'http://localhost:3000/api/me/tracks' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\\n--header 'Content-Type: application/json' \\\n \\\n--data-raw '{\n\"ids\":\"5e8cba1b7f37604d583f8d37,5e8cba367f37604d583f8d39\"\n\t\n}'",
+        "content": "curl --location --request GET 'http://localhost:3000/api/me/tracks' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\\n--header 'Content-Type: application/json' \\\n \\\n--data-raw '{\n\"ids\":\"5e8cba1b7f37604d583f8d37,5e8cba367f37604d583f8d39\"\n\n}'",
         "type": "curl"
       }
     ],
@@ -4536,7 +4502,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4595,7 +4561,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4654,7 +4620,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4713,7 +4679,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4772,7 +4738,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4823,7 +4789,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Users_Profile"
   },
   {
@@ -4890,7 +4856,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Users_Profile"
   }
 ] });
