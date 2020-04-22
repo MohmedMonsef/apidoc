@@ -324,27 +324,30 @@
  * 
  * @apiParam (Body Parameters) {string} Email     optional. email to be updated to, should be new email and not already existing one.
  * 
- *@apiParam (Body Parameters)     {string}  Password  optional. password to be updated to.
+ * @apiParam (Body Parameters)     {string}  Password  optional. password to be updated to.
  * 
-* @apiParam (Body Parameters)     {string} Country    optional. country to be updated to.
- *
- *  @apiParam (Body Parameters)      {string}   Display_Name      optional. name to be updated to.
+*  @apiParam (Body Parameters)     {string} Country    optional. country to be updated to.
+ * @apiParam (Body Parameters)      {string}   Display_Name      optional. name to be updated to.
+ * @apiparam (Body Parameters) {string} cardNumber   optional. A user credit card 
+ * @apiparam (Body parameters)   {date} expiresDate   optional. the card expire date 
+ * @apiparam (Body parameters)  {boolean} isMonth  optional if  for month or for  year  (if need -can be change to number from (1--->12)  if for 3 month or 2 ,else)
  * 
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains a success object in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</br> When requesting fields that you don’t have the user’s authorization to access, it will return error 403 Forbidden.
  * @apiExample {curl} Example usage
- * curl --location --request PUT 'http://localhost:3000/api/me/update' \
---header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+ *url --location --request PUT 'http://localhost:3000/api/me/update' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg3NTg3ODcxLCJleHAiOjQ3MzQwNzQyNzF9.K3X2eOVhdvgpWqpTBTVEdqAr8ukiT7hZAne5OpLgztA' \
 --header 'Content-Type: application/json' \
- \
+
 --data-raw '{
-
-"Email":"b@bb.com",
-"Password":"111",
-"Country":"fr",
-"Display_Name":"bb"
-
-	
-}'
+	"Email": "ayaabohadima@gmail.com",
+        "Password": "123456",
+        "Country": "Eg",
+        "Display_Name": "Aya Samir",
+        //if premium can send 
+        "expiresDate":"2020-12-09",
+        "cardNumber": "374245455400126",
+        "isMonth": true
+*}'
  * @apiSuccessExample {json} Success-Response:
  * 
  * {

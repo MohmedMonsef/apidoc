@@ -1271,6 +1271,29 @@ define({ "api": [
             "optional": false,
             "field": "Display_Name",
             "description": "<p>optional. name to be updated to.</p>"
+          },
+          {
+            "group": "Body Parameters",
+            "type": "string",
+            "optional": false,
+            "field": "cardNumber",
+            "description": "<p>optional. A user credit card</p>"
+          }
+        ],
+        "Body parameters": [
+          {
+            "group": "Body parameters",
+            "type": "date",
+            "optional": false,
+            "field": "expiresDate",
+            "description": "<p>optional. the card expire date</p>"
+          },
+          {
+            "group": "Body parameters",
+            "type": "boolean",
+            "optional": false,
+            "field": "isMonth",
+            "description": "<p>optional if  for month or for  year  (if need -can be change to number from (1---&gt;12)  if for 3 month or 2 ,else)</p>"
           }
         ],
         "Response": [
@@ -1286,7 +1309,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage",
-        "content": "curl --location --request PUT 'http://localhost:3000/api/me/update' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\\n--header 'Content-Type: application/json' \\\n \\\n--data-raw '{\n\n\"Email\":\"b@bb.com\",\n\"Password\":\"111\",\n\"Country\":\"fr\",\n\"Display_Name\":\"bb\"\n\n\t\n}'",
+        "content": "url --location --request PUT 'http://localhost:3000/api/me/update' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg3NTg3ODcxLCJleHAiOjQ3MzQwNzQyNzF9.K3X2eOVhdvgpWqpTBTVEdqAr8ukiT7hZAne5OpLgztA' \\\n--header 'Content-Type: application/json' \\\n\n--data-raw '{\n\t\"Email\": \"ayaabohadima@gmail.com\",\n        \"Password\": \"123456\",\n        \"Country\": \"Eg\",\n        \"Display_Name\": \"Aya Samir\",\n        //if premium can send \n        \"expiresDate\":\"2020-12-09\",\n        \"cardNumber\": \"374245455400126\",\n        \"isMonth\": true\n}'",
         "type": "curl"
       }
     ],
