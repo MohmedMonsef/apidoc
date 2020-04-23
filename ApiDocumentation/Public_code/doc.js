@@ -4301,7 +4301,10 @@
 
  * 
  * @apiSuccessExample {json} Success-Response:
- * {"success":"uploaded succesfully"}
+ * {
+    "success": "uploaded succesfully",
+    "imageId": "5ea17ca7686dde47e84b9be1"
+}
  */
 
 /**
@@ -4336,7 +4339,8 @@
  * 
  * @apiSuccessExample {json} Success-Response:
  * {
-    "success": "updated succesfully"
+    "success": "updated succesfully",
+    "imageId": "5ea17c80686dde47e84b9bde"
 }
  */
 
