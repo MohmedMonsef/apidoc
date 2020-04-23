@@ -55,7 +55,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -114,7 +114,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -173,7 +173,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -268,7 +268,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -358,7 +358,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -415,7 +415,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -466,7 +466,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -525,7 +525,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -584,7 +584,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -669,7 +669,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -728,59 +728,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
-    "groupTitle": "Artist"
-  },
-  {
-    "type": "get",
-    "url": "api/Artists/{artist_id}/tracks",
-    "title": "Get an Artist's Tracks",
-    "name": "Get_an_Artist's_Top_Tracks",
-    "group": "Artist",
-    "description": "<p style=\"color:red;\">Get Spotify catalog information about an artist’s top tracks by country.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
-    "header": {
-      "fields": {
-        "Header": [
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "x-auth-token",
-            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
-          }
-        ]
-      }
-    },
-    "parameter": {
-      "fields": {
-        "PathParameters": [
-          {
-            "group": "PathParameters",
-            "optional": false,
-            "field": "artist_id",
-            "description": "<p>Spotify ID for Albums</p>"
-          }
-        ],
-        "Response": [
-          {
-            "group": "Response",
-            "optional": false,
-            "field": "Format",
-            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body contains</br>an object whose key is &quot;tracks&quot; and whose value is an array of up to 10 track objects in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "examples": [
-        {
-          "title": "Success-Response:",
-          "content": "{\n    [\n  {\n      \"availableMarkets\": [\n          \"usa,tt,wdwq,dwdw,wdw,dss\"\n      ],\n      \"_id\": \"5e834091a0d4a20f746732f7\",\n      \"duration\": 462,\n      \"name\": \"track1\",\n      \"artistId\": \"5e833a51a51d971174923f17\",\n      \"albumId\": \"5e833b412b9d7718a491c850\",\n      \"discNumber\": 1,\n      \"explicit\": false,\n      \"type\": \"Track\",\n      \"acousticness\": 10,\n       \"danceability\": 23,\n       \"energy\": 100,\n       \"instrumentalness\": 4,\n       \"key\": 90,\n       \"liveness\": 25,\n       \"loudness\": 70,\n       \"mode\": 56,\n       \"speechiness\": 67,\n       \"tempo\": 76,\n       \"timeSignature\": \"2020-03-31T13:07:29.395Z\",\n       \"valence\": 70,\n       \"like\": 0,\n       \"__v\": 0\n   },\n   {\n       \"availableMarkets\": [\n           \"usa,tt,wdwq,dwdw,wdw,dss\"\n       ],\n       \"_id\": \"5e834255a0d4a20f74673300\",\n       \"duration\": 462,\n       \"name\": \"track1\",\n       \"artistId\": \"5e833a51a51d971174923f17\",\n       \"albumId\": \"5e833b412b9d7718a491c850\",\n       \"discNumber\": 1,\n       \"explicit\": false,\n       \"type\": \"Track\",\n       \"acousticness\": 10,\n       \"danceability\": 23,\n       \"energy\": 100,\n       \"instrumentalness\": 4,\n       \"key\": 90,\n       \"liveness\": 25,\n       \"loudness\": 70,\n       \"mode\": 56,\n       \"speechiness\": 67,\n       \"tempo\": 76,\n       \"timeSignature\": \"2020-03-31T13:15:01.821Z\",\n       \"valence\": 70,\n       \"like\": 0,\n       \"__v\": 0\n   },\n   {\n       \"availableMarkets\": [\n           \"usa,tt,wdwq,dwdw,wdw,dss\"\n       ],\n       \"_id\": \"5e834258a0d4a20f74673305\",\n       \"duration\": 462,\n       \"name\": \"track1\",\n       \"artistId\": \"5e833a51a51d971174923f17\",\n       \"albumId\": \"5e833b412b9d7718a491c850\",\n       \"discNumber\": 1,\n       \"explicit\": false,\n       \"type\": \"Track\",\n       \"acousticness\": 10,\n       \"danceability\": 23,\n       \"energy\": 100,\n       \"instrumentalness\": 4,\n       \"key\": 90,\n       \"liveness\": 25,\n       \"loudness\": 70,\n       \"mode\": 56,\n       \"speechiness\": 67,\n       \"tempo\": 76,\n       \"timeSignature\": \"2020-03-31T13:15:04.155Z\",\n       \"valence\": 70,\n       \"like\": 0,\n       \"__v\": 0\n   }\n]\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -847,7 +795,59 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
+    "groupTitle": "Artist"
+  },
+  {
+    "type": "get",
+    "url": "api/Artists/{artist_id}/tracks",
+    "title": "Get an Artist's Tracks",
+    "name": "Get_an_Artist's_Top_Tracks",
+    "group": "Artist",
+    "description": "<p style=\"color:red;\">Get Spotify catalog information about an artist’s top tracks by country.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "x-auth-token",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "PathParameters": [
+          {
+            "group": "PathParameters",
+            "optional": false,
+            "field": "artist_id",
+            "description": "<p>Spotify ID for Albums</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body contains</br>an object whose key is &quot;tracks&quot; and whose value is an array of up to 10 track objects in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    [\n  {\n      \"availableMarkets\": [\n          \"usa,tt,wdwq,dwdw,wdw,dss\"\n      ],\n      \"_id\": \"5e834091a0d4a20f746732f7\",\n      \"duration\": 462,\n      \"name\": \"track1\",\n      \"artistId\": \"5e833a51a51d971174923f17\",\n      \"albumId\": \"5e833b412b9d7718a491c850\",\n      \"discNumber\": 1,\n      \"explicit\": false,\n      \"type\": \"Track\",\n      \"acousticness\": 10,\n       \"danceability\": 23,\n       \"energy\": 100,\n       \"instrumentalness\": 4,\n       \"key\": 90,\n       \"liveness\": 25,\n       \"loudness\": 70,\n       \"mode\": 56,\n       \"speechiness\": 67,\n       \"tempo\": 76,\n       \"timeSignature\": \"2020-03-31T13:07:29.395Z\",\n       \"valence\": 70,\n       \"like\": 0,\n       \"__v\": 0\n   },\n   {\n       \"availableMarkets\": [\n           \"usa,tt,wdwq,dwdw,wdw,dss\"\n       ],\n       \"_id\": \"5e834255a0d4a20f74673300\",\n       \"duration\": 462,\n       \"name\": \"track1\",\n       \"artistId\": \"5e833a51a51d971174923f17\",\n       \"albumId\": \"5e833b412b9d7718a491c850\",\n       \"discNumber\": 1,\n       \"explicit\": false,\n       \"type\": \"Track\",\n       \"acousticness\": 10,\n       \"danceability\": 23,\n       \"energy\": 100,\n       \"instrumentalness\": 4,\n       \"key\": 90,\n       \"liveness\": 25,\n       \"loudness\": 70,\n       \"mode\": 56,\n       \"speechiness\": 67,\n       \"tempo\": 76,\n       \"timeSignature\": \"2020-03-31T13:15:01.821Z\",\n       \"valence\": 70,\n       \"like\": 0,\n       \"__v\": 0\n   },\n   {\n       \"availableMarkets\": [\n           \"usa,tt,wdwq,dwdw,wdw,dss\"\n       ],\n       \"_id\": \"5e834258a0d4a20f74673305\",\n       \"duration\": 462,\n       \"name\": \"track1\",\n       \"artistId\": \"5e833a51a51d971174923f17\",\n       \"albumId\": \"5e833b412b9d7718a491c850\",\n       \"discNumber\": 1,\n       \"explicit\": false,\n       \"type\": \"Track\",\n       \"acousticness\": 10,\n       \"danceability\": 23,\n       \"energy\": 100,\n       \"instrumentalness\": 4,\n       \"key\": 90,\n       \"liveness\": 25,\n       \"loudness\": 70,\n       \"mode\": 56,\n       \"speechiness\": 67,\n       \"tempo\": 76,\n       \"timeSignature\": \"2020-03-31T13:15:04.155Z\",\n       \"valence\": 70,\n       \"like\": 0,\n       \"__v\": 0\n   }\n]\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -890,7 +890,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -975,7 +975,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1034,7 +1034,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1097,7 +1097,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1148,7 +1148,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1209,7 +1209,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1248,7 +1248,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1287,7 +1287,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1326,7 +1326,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1365,7 +1365,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1416,7 +1416,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1459,7 +1459,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1510,7 +1510,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1559,7 +1559,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1623,7 +1623,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1673,7 +1673,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1722,7 +1722,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1772,7 +1772,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1833,7 +1833,62 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
+    "groupTitle": "Image"
+  },
+  {
+    "type": "GET",
+    "url": "/api/images/get_id/{source_id}",
+    "title": "get id of latest image of specific document",
+    "name": "get_id_of_image",
+    "group": "Image",
+    "description": "<p style=\"color:red;\">get id of latest image in the source document</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "parameter": {
+      "fields": {
+        "PathParameters": [
+          {
+            "group": "PathParameters",
+            "optional": false,
+            "field": "source_id",
+            "description": "<p>{String}\t\t\tthe id of entity to get the image from</p>"
+          }
+        ],
+        "QueryParameters": [
+          {
+            "group": "QueryParameters",
+            "optional": false,
+            "field": "belongs_to",
+            "description": "<p>{String}\t\tRequired.string that specify the entity type that the image is  belongs to can take values (user,playlist,track,album,artist).</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success 200, if cant get image will return 404 with error message</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage",
+        "content": "curl --location --request GET 'http://localhost:3000/api/images/get_id/5e8cb7037f37604d583f8d22/?belongs_to=artist'",
+        "type": "curl"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"imageId\": \"5ea0d6ac199f605c7038af37\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "public_code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -1879,7 +1934,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -1967,7 +2022,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -2055,7 +2110,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -2114,7 +2169,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2173,7 +2228,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2238,7 +2293,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2303,7 +2358,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2352,7 +2407,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2402,7 +2457,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2452,7 +2507,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2502,7 +2557,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2565,7 +2620,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Personalization"
   },
   {
@@ -2629,7 +2684,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2691,7 +2746,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2734,7 +2789,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2785,7 +2840,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2836,7 +2891,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2878,7 +2933,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2921,7 +2976,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2971,7 +3026,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3022,7 +3077,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3073,7 +3128,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3115,7 +3170,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3165,7 +3220,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3238,7 +3293,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3333,7 +3388,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3406,7 +3461,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3465,7 +3520,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3516,7 +3571,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3589,7 +3644,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3656,7 +3711,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3699,7 +3754,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3750,7 +3805,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3820,7 +3875,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3915,7 +3970,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3982,7 +4037,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4041,7 +4096,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4106,7 +4161,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4165,7 +4220,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4221,7 +4276,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4277,7 +4332,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4333,7 +4388,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Search"
   },
   {
@@ -4376,7 +4431,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4435,7 +4490,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4494,7 +4549,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4553,7 +4608,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4612,7 +4667,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4671,7 +4726,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4730,7 +4785,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4789,7 +4844,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4840,7 +4895,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Users_Profile"
   },
   {
@@ -4891,7 +4946,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Users_Profile"
   },
   {
@@ -4958,7 +5013,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Users_Profile"
   }
 ]

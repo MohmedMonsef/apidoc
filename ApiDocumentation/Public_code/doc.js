@@ -4625,6 +4625,34 @@
  */
 
 /**
+ * @api {GET} /api/images/get_id/{source_id} get id of latest image of specific document
+ * @apiName get id of image
+ * @apiGroup Image
+ * @apiDescription
+ * <p style="color:red;">get id of latest image in the source document</p>
+ *
+ *
+ * <h1>Request Parameters</h1></br></br>
+ *
+ * <h1> Endpoint</h1>
+ *
+ *
+ *
+ * @apiParam (PathParameters)  source_id 	{String}			the id of entity to get the image from
+ *
+ * @apiParam (QueryParameters)  belongs_to  {String}		Required.string that specify the entity type that the image is  belongs to can take values (user,playlist,track,album,artist).
+ *
+ *  @apiParam (Response)  Format  On success 200, if cant get image will return 404 with error message
+ *
+ * @apiExample {curl} Example usage
+ *curl --location --request GET 'http://localhost:3000/api/images/get_id/5e8cb7037f37604d583f8d22/?belongs_to=artist' 
+ *@apiSuccessExample {json} Success-Response:
+ *{
+    "imageId": "5ea0d6ac199f605c7038af37"
+}
+ *
+ */
+/**
  * @api {DELETE} /api/images/delete/{image_id} delete image
  * @apiName delete image
  * @apiGroup Image
