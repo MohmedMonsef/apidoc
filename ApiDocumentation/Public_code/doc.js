@@ -378,7 +378,196 @@
  */
 
 //Artist
-
+//new
+/**
+ * @api {get} api/me/artist   Get Artist from user.
+ * @apiName Get Artist from user.
+ * @apiGroup Artist
+ * @apiDescription
+ * <p style="color:red;">Get Artist from user.</p>
+ *
+ *
+ * <h1>Request Parameters</h1></br></br>
+ *
+ * <h1> Endpoint</h1>
+ *
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
+ *  @apiExample {curl} Example usage:
+ * curl --location --request PUT 'http://localhost:3000/api/me/artist' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+ * @apiSuccessExample {json} Success-Response:
+{
+    "genre": [
+        "genre1",
+        "genre2",
+        "genre3"
+    ],
+    "_id": "5e8cb7037f37604d583f8d22",
+    "info": "the best",
+    "popularity": 501,
+    "type": "Artist",
+    "Name": "nada",
+    "userId": "5e8cb118084a9d2e6c8f21d7",
+    "images": [
+        {
+            "_id": "5ea0cc8a797460648cddaee4",
+            "height": 2204,
+            "width": 3920
+        },
+        {
+            "_id": "5ea0ccf9797460648cddaee5",
+            "height": 2204,
+            "width": 3920
+        },
+        {
+            "_id": "5ea0cd7f797460648cddaee6",
+            "height": 2204,
+            "width": 3920
+        },
+        {
+            "_id": "5ea0cedf797460648cddaee7",
+            "height": 2204,
+            "width": 3920
+        },
+        {
+            "_id": "5ea0cfa060db613e6456bad4",
+            "height": 2204,
+            "width": 3920
+        },
+        {
+            "_id": "5ea0d09e98ae49324cb48956",
+            "height": 2204,
+            "width": 3920
+        },
+        {
+            "_id": "5ea0d11e13f2868b68e56815",
+            "height": 2204,
+            "width": 3920
+        },
+        {
+            "_id": "5ea0d1431acc036114533537",
+            "height": 2204,
+            "width": 3920
+        },
+        {
+            "_id": "5ea0d2b21acc036114533544",
+            "height": 830,
+            "width": 1914
+        },
+        {
+            "_id": "5ea0d3191acc036114533545",
+            "height": 830,
+            "width": 1914
+        },
+        {
+            "_id": "5ea0d3541acc036114533546",
+            "height": 830,
+            "width": 1914
+        },
+        {
+            "_id": "5ea0d3f1199f605c7038af34",
+            "height": 830,
+            "width": 1914
+        },
+        {
+            "_id": "5ea0d4bd199f605c7038af35",
+            "height": 2204,
+            "width": 3920
+        },
+        {
+            "_id": "5ea0d5b5199f605c7038af36",
+            "height": 2204,
+            "width": 3920
+        },
+        {
+            "_id": "5ea0d6ac199f605c7038af37",
+            "height": 2204,
+            "width": 3920
+        }
+    ],
+    "addAlbums": [
+        {
+            "_id": "5e8cb9457f37604d583f8d28",
+            "albumId": "5e8cb9457f37604d583f8d27"
+        },
+        {
+            "_id": "5e8cb94b7f37604d583f8d2a",
+            "albumId": "5e8cb94b7f37604d583f8d29"
+        },
+        {
+            "_id": "5e8cb9557f37604d583f8d2c",
+            "albumId": "5e8cb9557f37604d583f8d2b"
+        },
+        {
+            "_id": "5e8cb95d7f37604d583f8d2e",
+            "albumId": "5e8cb95d7f37604d583f8d2d"
+        },
+        {
+            "_id": "5e8cb96a7f37604d583f8d30",
+            "albumId": "5e8cb96a7f37604d583f8d2f"
+        },
+        {
+            "_id": "5e8cb9747f37604d583f8d32",
+            "albumId": "5e8cb9747f37604d583f8d31"
+        },
+        {
+            "_id": "5e8cb97b7f37604d583f8d34",
+            "albumId": "5e8cb97b7f37604d583f8d33"
+        },
+        {
+            "_id": "5e8cb9827f37604d583f8d36",
+            "albumId": "5e8cb9827f37604d583f8d35"
+        }
+    ],
+    "addTracks": [
+        {
+            "_id": "5e8ce86082c8d9579467fb75",
+            "trackId": "5e8ce86082c8d9579467fb73"
+        },
+        {
+            "_id": "5e8ce86882c8d9579467fb78",
+            "trackId": "5e8ce86882c8d9579467fb76"
+        },
+        {
+            "_id": "5e8ce86c82c8d9579467fb7b",
+            "trackId": "5e8ce86c82c8d9579467fb79"
+        },
+        {
+            "_id": "5e8ce87182c8d9579467fb7e",
+            "trackId": "5e8ce87182c8d9579467fb7c"
+        },
+        {
+            "_id": "5e8ce87682c8d9579467fb81",
+            "trackId": "5e8ce87682c8d9579467fb7f"
+        },
+        {
+            "_id": "5e8ce8b282c8d9579467fb84",
+            "trackId": "5e8ce8b282c8d9579467fb82"
+        },
+        {
+            "_id": "5e8ce8bb82c8d9579467fb87",
+            "trackId": "5e8ce8bb82c8d9579467fb85"
+        },
+        {
+            "_id": "5e8ce8bf82c8d9579467fb8a",
+            "trackId": "5e8ce8bf82c8d9579467fb88"
+        },
+        {
+            "_id": "5e8ce8c482c8d9579467fb8d",
+            "trackId": "5e8ce8c382c8d9579467fb8b"
+        },
+        {
+            "_id": "5e8ce8c982c8d9579467fb90",
+            "trackId": "5e8ce8c982c8d9579467fb8e"
+        }
+    ],
+    "__v": 68
+}
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body Contains an Artist Object.</br> On error, the header status code is an error code and the response body contains an error object.
+ *
+ *
+ *
+ */
 //new
 /**
  * @api {put} api/Artists/me/Albums Create Album
