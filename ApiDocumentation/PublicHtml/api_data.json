@@ -4794,6 +4794,57 @@
   },
   {
     "type": "get",
+    "url": "api/me-player",
+    "title": "Get  Current User's Profile with player info",
+    "name": "Get_Current_User's_Profile_with_player_info_and_product",
+    "group": "Users_Profile",
+    "description": "<p style=\"color:red;\">Get detailed profile information about the current user (including the current user’s username).</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "x-auth-token",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br>Reading the user’s email address requires the user-read-email scope; </br>reading country and product subscription level requires the user-read-private scope.</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body contains a user object in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</br> When requesting fields that you don’t have the user’s authorization to access, it will return error 403 Forbidden.</br></br></br> <b>Important!</b> If the user-read-email scope is authorized, </br>the returned JSON will include the email address that was entered when the user created their Spotify account.</br> This email address is unverified; do not assume that the email address belongs to the user.</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage",
+        "content": "curl --location --request GET 'http://localhost:3000/api/me-player' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\",
+        "type": "curl"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "\n[\n    {\n        \"player\": {\n            \"current_track\": {\n                \"isPlaylist\": true,\n                \"trackId\": \"5e8cba517f37604d583f8d3d\",\n                \"playlistId\": \"5e8cbe527f37604d583f8d5c\"\n            },\n            \"next_track\": {\n                \"isPlaylist\": true,\n                \"playlistId\": \"5e8cbe527f37604d583f8d5c\",\n                \"trackId\": \"5e8cba6c7f37604d583f8d3e\"\n            },\n            \"prev_track\": {\n                \"isPlaylist\": true,\n                \"playlistId\": \"5e8cbe527f37604d583f8d5c\",\n                \"trackId\": \"5e8cba4b7f37604d583f8d3c\"\n            },\n            \"is_shuffled\": true,\n            \"volume\": 4,\n            \"is_repeat\": false,\n            \"current_source\": \"5e8cbe527f37604d583f8d5c\",\n            \"isPlaylist\": true,\n            \"last_playlist_track_index\": 2\n        },\n        \"_id\": \"5e8cb118084a9d2e6c8f21d7\",\n        \"email\": \"ayaabohadima@gmail.com\",\n        \"displayName\": \"Aya Samir\",\n        \"gender\": \"female\",\n        \"country\": \"Eg\",\n        \"birthDate\": \"2000-01-31T22:00:00.000Z\",\n        \"product\": \"free\",\n        \"userType\": \"Artist\",\n        \"images\": [\n            {\n                \"_id\": \"5ea0ce9c9729a54e703b873a\",\n                \"height\": 100,\n                \"width\": 100\n            }\n        ]\n    }\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "Public_code/doc.js",
+    "groupTitle": "Users_Profile"
+  },
+  {
+    "type": "get",
     "url": "api/users/{id}",
     "title": "Get a User's Profile",
     "name": "Get_a_User's_Profile",

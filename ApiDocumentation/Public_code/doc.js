@@ -3699,7 +3699,7 @@
 ]
  */
 
- /**
+/**
  * @api {get}/api/tracks/related/full-track/{track_id} get related full tracks for specific track
  * @apiName get related full tracks
  * @apiGroup Tracks
@@ -4228,6 +4228,75 @@
  * "product":"free",
  * "images":[]}]
  */
+/**
+ * @api {get} api/me-player Get  Current User's Profile with player info 
+ * @apiName Get Current User's Profile with player info and product
+ * @apiGroup Users Profile
+ * @apiDescription
+ * <p style="color:red;">Get detailed profile information about the current user (including the current user’s username).</p>
+ *
+ *
+ * <h1>Request Parameters</h1></br></br>
+ *
+ * <h1> Endpoint</h1>
+ *
+ * @apiHeader (Header)  x-auth-token			Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br>Reading the user’s email address requires the user-read-email scope; </br>reading country and product subscription level requires the user-read-private scope.
+ *
+ *
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains a user object in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</br> When requesting fields that you don’t have the user’s authorization to access, it will return error 403 Forbidden.</br></br></br> <b>Important!</b> If the user-read-email scope is authorized, </br>the returned JSON will include the email address that was entered when the user created their Spotify account.</br> This email address is unverified; do not assume that the email address belongs to the user.
+ *
+ *  @apiExample {curl} Example usage
+ * curl --location --request GET 'http://localhost:3000/api/me-player' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+
+
+ *
+ * @apiSuccessExample {json} Success-Response:
+ *
+ * [
+    {
+        "player": {
+            "current_track": {
+                "isPlaylist": true,
+                "trackId": "5e8cba517f37604d583f8d3d",
+                "playlistId": "5e8cbe527f37604d583f8d5c"
+            },
+            "next_track": {
+                "isPlaylist": true,
+                "playlistId": "5e8cbe527f37604d583f8d5c",
+                "trackId": "5e8cba6c7f37604d583f8d3e"
+            },
+            "prev_track": {
+                "isPlaylist": true,
+                "playlistId": "5e8cbe527f37604d583f8d5c",
+                "trackId": "5e8cba4b7f37604d583f8d3c"
+            },
+            "is_shuffled": true,
+            "volume": 4,
+            "is_repeat": false,
+            "current_source": "5e8cbe527f37604d583f8d5c",
+            "isPlaylist": true,
+            "last_playlist_track_index": 2
+        },
+        "_id": "5e8cb118084a9d2e6c8f21d7",
+        "email": "ayaabohadima@gmail.com",
+        "displayName": "Aya Samir",
+        "gender": "female",
+        "country": "Eg",
+        "birthDate": "2000-01-31T22:00:00.000Z",
+        "product": "free",
+        "userType": "Artist",
+        "images": [
+            {
+                "_id": "5ea0ce9c9729a54e703b873a",
+                "height": 100,
+                "width": 100
+            }
+        ]
+    }
+]
+ */
+
 
 /**
  * @api {get} api/users/{id} Get a User's Profile

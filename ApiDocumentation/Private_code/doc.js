@@ -309,6 +309,33 @@
  *   }
  */
 /**
+ * @api {PUT} api/me/free make user free
+ * @apiName make user free
+ * @apiGroup Account
+ * @apiDescription
+ * 
+ * <p style="color:red;">make user free.</p>
+ *
+ * 
+ * <h1> Request parameters</h1> 
+ * </br></br><h1> Endpoint</h1>
+ * 
+ * 
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
+* @apiparam (Response) Format On success, the response body contains the user_id and credit card and the HTTP status code in the response header is 200 OK or 201 Created. There is also a Location response header giving the Web API endpoint for promote . On error, the header status code is an error code and the response body contains an error object. Trying to promote when you do not have the user’s authorization returns error 403 Forbidden.
+ *@apiExample {curl} Example usage
+ *curl --location --request PUT 'http://localhost:3000/api/me/free' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg3NTg3ODcxLCJleHAiOjQ3MzQwNzQyNzF9.K3X2eOVhdvgpWqpTBTVEdqAr8ukiT7hZAne5OpLgztA' \
+--header 'Content-Type: application/json' \
+*
+*}'
+ *  @apiSuccessExample {json} Success-Response:
+ * 
+ * {
+ *  "success": "become free"  
+ *   }
+ */
+/**
  * @api {PUT} api/me/update update Current User's Profile
  * @apiName update Current User's Profile
  * @apiGroup Users Profile
