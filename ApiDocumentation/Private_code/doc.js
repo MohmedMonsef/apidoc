@@ -273,6 +273,7 @@
  *
  */
 
+
 /**
  * @api {PUT} api/me/promote make user premium 
  * @apiName make user premium
@@ -287,19 +288,53 @@
  * 
  * 
  * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
- * @apiparam (Query parameters) credit card  Required. A user credit card 
+ * @apiparam (Body parameters) cardNumber   Required. A user credit card 
+ * @apiparam (Body parameters) expiresDate  Required. the card expire date 
+ * @apiparam (Body parameters) isMonth  Required.boolean if  for month or for  year  (if need -can be change to number from (1--->12)  if for 3 month or 2 ,else)
  * @apiparam (Response) Format On success, the response body contains the user_id and credit card and the HTTP status code in the response header is 200 OK or 201 Created. There is also a Location response header giving the Web API endpoint for promote . On error, the header status code is an error code and the response body contains an error object. Trying to promote when you do not have the user’s authorization returns error 403 Forbidden.
  *@apiExample {curl} Example usage
- *curl --location --request POST 'http://localhost:3000/api/me/promote' \
---header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' 
-\
+ *curl --location --request PUT 'http://localhost:3000/api/me/promote' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTljZjQ1YWUxNzZhOTI5NzBmMzY4OGEiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoidXNlciIsImlhdCI6MTU4NzM0NDQ3NCwiZXhwIjozMjU1OTMwMDk5NzI3NH0.ltM83Tf00e2yM9cHIa4z0OktdFjU5QOtbdSnHhi8SNw' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+	
+        "expiresDate":"2020-12-03",
+        "cardNumber": "374245455400126",
+*        "isMonth": false
+*}'
  *  @apiSuccessExample {json} Success-Response:
  * 
  * {
  *  "success":"promote to premium "
  *   }
  */
-
+/**
+ * @api {PUT} api/me/free make user free
+ * @apiName make user free
+ * @apiGroup Account
+ * @apiDescription
+ * 
+ * <p style="color:red;">make user free.</p>
+ *
+ * 
+ * <h1> Request parameters</h1> 
+ * </br></br><h1> Endpoint</h1>
+ * 
+ * 
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
+* @apiparam (Response) Format On success, the response body contains the user_id and credit card and the HTTP status code in the response header is 200 OK or 201 Created. There is also a Location response header giving the Web API endpoint for promote . On error, the header status code is an error code and the response body contains an error object. Trying to promote when you do not have the user’s authorization returns error 403 Forbidden.
+ *@apiExample {curl} Example usage
+ *curl --location --request PUT 'http://localhost:3000/api/me/free' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg3NTg3ODcxLCJleHAiOjQ3MzQwNzQyNzF9.K3X2eOVhdvgpWqpTBTVEdqAr8ukiT7hZAne5OpLgztA' \
+--header 'Content-Type: application/json' \
+*
+*}'
+ *  @apiSuccessExample {json} Success-Response:
+ * 
+ * {
+ *  "success": "become free"  
+ *   }
+ */
 /**
  * @api {PUT} api/me/update update Current User's Profile
  * @apiName update Current User's Profile
@@ -316,27 +351,30 @@
  * 
  * @apiParam (Body Parameters) {string} Email     optional. email to be updated to, should be new email and not already existing one.
  * 
- *@apiParam (Body Parameters)     {string}  Password  optional. password to be updated to.
+ * @apiParam (Body Parameters)     {string}  Password  optional. password to be updated to.
  * 
-* @apiParam (Body Parameters)     {string} Country    optional. country to be updated to.
- *
- *  @apiParam (Body Parameters)      {string}   Display_Name      optional. name to be updated to.
+*  @apiParam (Body Parameters)     {string} Country    optional. country to be updated to.
+ * @apiParam (Body Parameters)      {string}   Display_Name      optional. name to be updated to.
+ * @apiparam (Body Parameters) {string} cardNumber   optional. A user credit card 
+ * @apiparam (Body parameters)   {date} expiresDate   optional. the card expire date 
+ * @apiparam (Body parameters)  {boolean} isMonth  optional if  for month or for  year  (if need -can be change to number from (1--->12)  if for 3 month or 2 ,else)
  * 
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains a success object in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</br> When requesting fields that you don’t have the user’s authorization to access, it will return error 403 Forbidden.
  * @apiExample {curl} Example usage
- * curl --location --request PUT 'http://localhost:3000/api/me/update' \
---header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+ *url --location --request PUT 'http://localhost:3000/api/me/update' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg3NTg3ODcxLCJleHAiOjQ3MzQwNzQyNzF9.K3X2eOVhdvgpWqpTBTVEdqAr8ukiT7hZAne5OpLgztA' \
 --header 'Content-Type: application/json' \
- \
+
 --data-raw '{
-
-"Email":"b@bb.com",
-"Password":"111",
-"Country":"fr",
-"Display_Name":"bb"
-
-	
-}'
+	"Email": "ayaabohadima@gmail.com",
+        "Password": "123456",
+        "Country": "Eg",
+        "Display_Name": "Aya Samir",
+        //if premium can send 
+        "expiresDate":"2020-12-09",
+        "cardNumber": "374245455400126",
+        "isMonth": true
+*}'
  * @apiSuccessExample {json} Success-Response:
  * 
  * {
@@ -575,6 +613,33 @@
  * @apiparam (Response) Format media file stream on success, and if incorrect track then 404, if error in streaming will be 500 insternal server error
  */
 
+/**
+ * @api {delete} /api/artist/:album_id
+ * @apiName upload tracks to album
+ * @apiGroup Album
+ * @apiDescription 
+ * 
+ * <p style="color:red;">delete album and all its tracks by its artist </p>
+ * <h1> Request parameters</h1> 
+ * </br></br><h1> Endpoint</h1>
+ * 
+ * 
+ * @apiParam (Path Parameters)  album_id	the album id  want to delete
+ * 
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
+ * 
+ * @apiparam (Response) Format 200 if success,403 forbidden if not an artist or doesn't own the album or 404 if failed to delete album 
+ *
+ *  @apiExample {curl} Example usage 
+ * curl --location --request DELETE 'http://localhost:3000/api/artist/5e8cb9327f37604d583f8d25' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg3NjAyNDE2LCJleHAiOjQ3MzQwODg4MTZ9.djYsfv1BbS72dnnJM42mTN0032lagwW9fxMAT0nZtJw' \
+ *
+ *@apiSuccessExample {json} Success-Response:
+*{
+    "success": "deleted succesfully"
+*}
+*
+ */
 /**
  * @api {POST} /api/artists/me/albums/{album_id}/tracks upload tracks
  * @apiName upload tracks to album
