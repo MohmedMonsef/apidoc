@@ -614,6 +614,33 @@
  */
 
 /**
+ * @api {delete} /api/artist/:album_id
+ * @apiName upload tracks to album
+ * @apiGroup Album
+ * @apiDescription 
+ * 
+ * <p style="color:red;">delete album and all its tracks by its artist </p>
+ * <h1> Request parameters</h1> 
+ * </br></br><h1> Endpoint</h1>
+ * 
+ * 
+ * @apiParam (Path Parameters)  album_id	the album id  want to delete
+ * 
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
+ * 
+ * @apiparam (Response) Format 200 if success,403 forbidden if not an artist or doesn't own the album or 404 if failed to delete album 
+ *
+ *  @apiExample {curl} Example usage 
+ * curl --location --request DELETE 'http://localhost:3000/api/artist/5e8cb9327f37604d583f8d25' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg3NjAyNDE2LCJleHAiOjQ3MzQwODg4MTZ9.djYsfv1BbS72dnnJM42mTN0032lagwW9fxMAT0nZtJw' \
+ *
+ *@apiSuccessExample {json} Success-Response:
+*{
+    "success": "deleted succesfully"
+*}
+*
+ */
+/**
  * @api {POST} /api/artists/me/albums/{album_id}/tracks upload tracks
  * @apiName upload tracks to album
  * @apiGroup Track
