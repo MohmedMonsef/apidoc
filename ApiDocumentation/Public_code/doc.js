@@ -1688,7 +1688,7 @@
  */
 
 /**
- * @api {get} api/browse/genre Get a List of New Releases
+ * @api {get} api/browse/genre Get genres playlists
  * @apiName Get genres playlists
  * @apiGroup Browse
  * @apiDescription
@@ -1699,6 +1699,7 @@
  *
  * <h1> Endpoint</h1>
  *
+  *  @apiExample {curl} Example usage:
  curl --location --request GET 'http://localhost:3000/api/browse/genre' \
 --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg3NjgyNTU2LCJleHAiOjQ3MzQxNjg5NTZ9.fKWnF2BQIh_LHYqsS9HU0jfUBdBsVcD74gnnqqQehN0' \
  *  @apiSuccessExample {json} Success-Response:

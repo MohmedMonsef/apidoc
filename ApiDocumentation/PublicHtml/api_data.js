@@ -1422,10 +1422,17 @@ define({ "api": [
   {
     "type": "get",
     "url": "api/browse/genre",
-    "title": "Get a List of New Releases",
+    "title": "Get genres playlists",
     "name": "Get_genres_playlists",
     "group": "Browse",
-    "description": "<p style=\"color:red;\">Get a list ofGet genres playlists (shown, for example, on a Spotify player’s “Browse” tab).</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1> <p>curl --location --request GET 'http://localhost:3000/api/browse/genre' <br> --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg3NjgyNTU2LCJleHAiOjQ3MzQxNjg5NTZ9.fKWnF2BQIh_LHYqsS9HU0jfUBdBsVcD74gnnqqQehN0' \\</p>",
+    "description": "<p style=\"color:red;\">Get a list ofGet genres playlists (shown, for example, on a Spotify player’s “Browse” tab).</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": " curl --location --request GET 'http://localhost:3000/api/browse/genre' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg3NjgyNTU2LCJleHAiOjQ3MzQxNjg5NTZ9.fKWnF2BQIh_LHYqsS9HU0jfUBdBsVcD74gnnqqQehN0' \\",
+        "type": "curl"
+      }
+    ],
     "success": {
       "examples": [
         {
