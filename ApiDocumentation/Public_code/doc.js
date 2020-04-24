@@ -1688,6 +1688,149 @@
  */
 
 /**
+ * @api {get} api/browse/genre Get a List of New Releases
+ * @apiName Get genres playlists
+ * @apiGroup Browse
+ * @apiDescription
+ * <p style="color:red;">Get a list ofGet genres playlists (shown, for example, on a Spotify player’s “Browse” tab).</p>
+ *
+ *
+ * <h1>Request Parameters</h1></br></br>
+ *
+ * <h1> Endpoint</h1>
+ *
+ curl --location --request GET 'http://localhost:3000/api/browse/genre' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg3NjgyNTU2LCJleHAiOjQ3MzQxNjg5NTZ9.fKWnF2BQIh_LHYqsS9HU0jfUBdBsVcD74gnnqqQehN0' \
+ *  @apiSuccessExample {json} Success-Response:
+ *{
+ *[
+    {
+        "genre": "quran",
+        "playlists": [
+            {
+                "playlist": {
+                    "_id": "5e9e4754f09b30378ce0f769",
+                    "type": "playlist",
+                    "Description": "",
+                    "collaborative": false,
+                    "name": "quran",
+                    "isPublic": true,
+                    "ownerId": "5e9dd1535a2ce73fe4a73b12",
+                    "images": [],
+                    "snapshot": [
+                        {
+                            "hasTracks": [
+                                "5e9b5e2de9c8d87fdc2eca81"
+                            ],
+                            "_id": "5e9e4756f09b30378ce0f76d",
+                            "action": "Add Tracks"
+                        },
+                        {
+                            "hasTracks": [
+                                "5e9b5e2de9c8d87fdc2eca81"
+                            ],
+                            "_id": "5e9e515bf09b30378ce0f76e",
+                            "action": "Add Tracks"
+                        }
+                    ],
+                    "__v": 2
+                },
+                "owner": {
+                    "id": "5e9dd1535a2ce73fe4a73b12"
+                }
+            },
+            {
+                "playlist": {
+                    "_id": "5e9e5295f09b30378ce0f76f",
+                    "type": "playlist",
+                    "Description": "",
+                    "collaborative": false,
+                    "name": "quran1",
+                    "isPublic": true,
+                    "ownerId": "5e9dd1535a2ce73fe4a73b12",
+                    "images": [],
+                    "snapshot": [
+                        {
+                            "hasTracks": [
+                                "5e9b5e2de9c8d87fdc2eca81"
+                            ],
+                            "_id": "5e9e5296f09b30378ce0f773",
+                            "action": "Add Tracks"
+                        }
+                    ],
+                    "__v": 1
+                },
+                "owner": {
+                    "id": "5e9dd1535a2ce73fe4a73b12"
+                }
+            },
+            {
+                "playlist": {
+                    "_id": "5ea0b53d0e077a374488cb3d",
+                    "type": "playlist",
+                    "Description": "",
+                    "collaborative": false,
+                    "name": "quran3",
+                    "isPublic": true,
+                    "ownerId": "5e9dd1535a2ce73fe4a73b12",
+                    "images": [],
+                    "snapshot": [
+                        {
+                            "hasTracks": [
+                                "5e9b62c3e9c8d87fdc2ecb58"
+                            ],
+                            "_id": "5ea0b53f0e077a374488cb41",
+                            "action": "Add Tracks"
+                        }
+                    ],
+                    "__v": 1
+                },
+                "owner": {
+                    "id": "5e9dd1535a2ce73fe4a73b12"
+                }
+            }
+        ]
+    },
+    "genre": "Hafs",
+        "playlists": [
+            {
+                "playlist": {
+                    "_id": "5e9e4754f09b30378ce0f769",
+                    "type": "playlist",
+                    "Description": "",
+                    "collaborative": false,
+                    "name": "quran",
+                    "isPublic": true,
+                    "ownerId": "5e9dd1535a2ce73fe4a73b12",
+                    "images": [],
+                    "snapshot": [
+                        {
+                            "hasTracks": [
+                                "5e9b5e2de9c8d87fdc2eca81"
+                            ],
+                            "_id": "5e9e4756f09b30378ce0f76d",
+                            "action": "Add Tracks"
+                        },
+                        {
+                            "hasTracks": [
+                                "5e9b5e2de9c8d87fdc2eca81"
+                            ],
+                            "_id": "5e9e515bf09b30378ce0f76e",
+                            "action": "Add Tracks"
+                        }
+                    ],
+                    "__v": 2
+                },
+                "owner": {
+                    "id": "5e9dd1535a2ce73fe4a73b12"
+                }
+            }
+]
+ *}
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains a message and analbums object.</br> The albums object contains an array of simplified album objects (wrapped in a paging object) in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</br></br></br> Once you have retrieved the list, you can use Get an Album’s Tracks to drill down further.</br></br> The results are returned in an order reflected within the Spotify clients, and therefore may not be ordered by date.
+ */
+
+/**
  * @api {get} api/browse/popular-albums Get a List of popular albums
  * @apiName Get a List of popular albums
  * @apiGroup Browse

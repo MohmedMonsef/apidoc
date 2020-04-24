@@ -55,7 +55,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -114,7 +114,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -173,7 +173,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -268,7 +268,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -358,7 +358,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -415,7 +415,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -466,7 +466,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -525,7 +525,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -584,7 +584,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -669,7 +669,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -728,7 +728,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -795,7 +795,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -847,7 +847,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -890,7 +890,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -975,7 +975,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1034,7 +1034,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1097,7 +1097,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1148,7 +1148,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1209,7 +1209,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1248,7 +1248,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1287,7 +1287,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1326,7 +1326,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1365,7 +1365,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1416,7 +1416,39 @@
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
+    "groupTitle": "Browse"
+  },
+  {
+    "type": "get",
+    "url": "api/browse/genre",
+    "title": "Get a List of New Releases",
+    "name": "Get_genres_playlists",
+    "group": "Browse",
+    "description": "<p style=\"color:red;\">Get a list ofGet genres playlists (shown, for example, on a Spotify player’s “Browse” tab).</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1> <p>curl --location --request GET 'http://localhost:3000/api/browse/genre' <br> --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg3NjgyNTU2LCJleHAiOjQ3MzQxNjg5NTZ9.fKWnF2BQIh_LHYqsS9HU0jfUBdBsVcD74gnnqqQehN0' \\</p>",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n[\n    {\n        \"genre\": \"quran\",\n        \"playlists\": [\n            {\n                \"playlist\": {\n                    \"_id\": \"5e9e4754f09b30378ce0f769\",\n                    \"type\": \"playlist\",\n                    \"Description\": \"\",\n                    \"collaborative\": false,\n                    \"name\": \"quran\",\n                    \"isPublic\": true,\n                    \"ownerId\": \"5e9dd1535a2ce73fe4a73b12\",\n                    \"images\": [],\n                    \"snapshot\": [\n                        {\n                            \"hasTracks\": [\n                                \"5e9b5e2de9c8d87fdc2eca81\"\n                            ],\n                            \"_id\": \"5e9e4756f09b30378ce0f76d\",\n                            \"action\": \"Add Tracks\"\n                        },\n                        {\n                            \"hasTracks\": [\n                                \"5e9b5e2de9c8d87fdc2eca81\"\n                            ],\n                            \"_id\": \"5e9e515bf09b30378ce0f76e\",\n                            \"action\": \"Add Tracks\"\n                        }\n                    ],\n                    \"__v\": 2\n                },\n                \"owner\": {\n                    \"id\": \"5e9dd1535a2ce73fe4a73b12\"\n                }\n            },\n            {\n                \"playlist\": {\n                    \"_id\": \"5e9e5295f09b30378ce0f76f\",\n                    \"type\": \"playlist\",\n                    \"Description\": \"\",\n                    \"collaborative\": false,\n                    \"name\": \"quran1\",\n                    \"isPublic\": true,\n                    \"ownerId\": \"5e9dd1535a2ce73fe4a73b12\",\n                    \"images\": [],\n                    \"snapshot\": [\n                        {\n                            \"hasTracks\": [\n                                \"5e9b5e2de9c8d87fdc2eca81\"\n                            ],\n                            \"_id\": \"5e9e5296f09b30378ce0f773\",\n                            \"action\": \"Add Tracks\"\n                        }\n                    ],\n                    \"__v\": 1\n                },\n                \"owner\": {\n                    \"id\": \"5e9dd1535a2ce73fe4a73b12\"\n                }\n            },\n            {\n                \"playlist\": {\n                    \"_id\": \"5ea0b53d0e077a374488cb3d\",\n                    \"type\": \"playlist\",\n                    \"Description\": \"\",\n                    \"collaborative\": false,\n                    \"name\": \"quran3\",\n                    \"isPublic\": true,\n                    \"ownerId\": \"5e9dd1535a2ce73fe4a73b12\",\n                    \"images\": [],\n                    \"snapshot\": [\n                        {\n                            \"hasTracks\": [\n                                \"5e9b62c3e9c8d87fdc2ecb58\"\n                            ],\n                            \"_id\": \"5ea0b53f0e077a374488cb41\",\n                            \"action\": \"Add Tracks\"\n                        }\n                    ],\n                    \"__v\": 1\n                },\n                \"owner\": {\n                    \"id\": \"5e9dd1535a2ce73fe4a73b12\"\n                }\n            }\n        ]\n    },\n    \"genre\": \"Hafs\",\n        \"playlists\": [\n            {\n                \"playlist\": {\n                    \"_id\": \"5e9e4754f09b30378ce0f769\",\n                    \"type\": \"playlist\",\n                    \"Description\": \"\",\n                    \"collaborative\": false,\n                    \"name\": \"quran\",\n                    \"isPublic\": true,\n                    \"ownerId\": \"5e9dd1535a2ce73fe4a73b12\",\n                    \"images\": [],\n                    \"snapshot\": [\n                        {\n                            \"hasTracks\": [\n                                \"5e9b5e2de9c8d87fdc2eca81\"\n                            ],\n                            \"_id\": \"5e9e4756f09b30378ce0f76d\",\n                            \"action\": \"Add Tracks\"\n                        },\n                        {\n                            \"hasTracks\": [\n                                \"5e9b5e2de9c8d87fdc2eca81\"\n                            ],\n                            \"_id\": \"5e9e515bf09b30378ce0f76e\",\n                            \"action\": \"Add Tracks\"\n                        }\n                    ],\n                    \"__v\": 2\n                },\n                \"owner\": {\n                    \"id\": \"5e9dd1535a2ce73fe4a73b12\"\n                }\n            }\n]\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "parameter": {
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body contains a message and analbums object.</br> The albums object contains an array of simplified album objects (wrapped in a paging object) in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</br></br></br> Once you have retrieved the list, you can use Get an Album’s Tracks to drill down further.</br></br> The results are returned in an order reflected within the Spotify clients, and therefore may not be ordered by date.</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1459,7 +1491,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1510,7 +1542,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1559,7 +1591,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1623,7 +1655,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1673,7 +1705,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1722,7 +1754,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1772,7 +1804,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1833,7 +1865,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -1888,7 +1920,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -1934,7 +1966,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -2022,7 +2054,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -2110,7 +2142,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -2169,7 +2201,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2228,7 +2260,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2293,7 +2325,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2358,7 +2390,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2407,7 +2439,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2457,7 +2489,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2507,7 +2539,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2557,7 +2589,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2620,7 +2652,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Personalization"
   },
   {
@@ -2684,7 +2716,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2746,7 +2778,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2789,7 +2821,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2840,7 +2872,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2891,7 +2923,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2933,7 +2965,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2976,7 +3008,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3026,7 +3058,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3077,7 +3109,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3128,7 +3160,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3170,7 +3202,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3220,7 +3252,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3293,7 +3325,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3388,7 +3420,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3461,7 +3493,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3520,7 +3552,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3571,7 +3603,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3644,7 +3676,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3711,7 +3743,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3754,7 +3786,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3805,7 +3837,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3875,7 +3907,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3970,7 +4002,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4037,7 +4069,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4096,7 +4128,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4161,7 +4193,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4220,7 +4252,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4276,7 +4308,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4332,7 +4364,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4388,7 +4420,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Search"
   },
   {
@@ -4431,7 +4463,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4490,7 +4522,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4549,7 +4581,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4608,7 +4640,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4667,7 +4699,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4726,7 +4758,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4785,7 +4817,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4844,7 +4876,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4895,7 +4927,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Users_Profile"
   },
   {
@@ -4946,7 +4978,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Users_Profile"
   },
   {
@@ -5013,7 +5045,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "public_code/doc.js",
+    "filename": "Public_code/doc.js",
     "groupTitle": "Users_Profile"
   }
 ]
