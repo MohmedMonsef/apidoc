@@ -614,6 +614,92 @@
  */
 
 /**
+ * @api {PUT} /api/tracks/update/{track_id} edit track
+ * @apiName edit track
+ * @apiGroup Track
+ * @apiDescription
+ * 
+ * <p style="color:red;">edit track parameters in database</p>
+ *
+ * 
+ * <h1> Request parameters</h1> 
+ * </br></br><h1> Endpoint</h1>
+ * 
+ * 
+ * @apiParam (Path Parameters)  track_id	the trackID
+ * 
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
+ *
+ * @apiparam (Body Parameter) availableMarkets array containing the available markets for a track
+ * 
+ *  @apiparam (Body Parameter) genre  array containing the genres for a track
+ * 
+ * @apiparam (Body Parameter) duration number of seconds of the track
+ * 
+ * @apiparam (Body Parameter) name name of the track
+ * 
+ * 
+ * @apiparam (Response)  Format the new updated track on success with 200 code, on failure 403 error message
+ * 
+ * @apiExample {curl} Example usage 
+ * 
+ *curl --location --request PUT 'http://localhost:3000/api/tracks/update/5eb0a499ec0c444e9c489820' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWIwOTAzYzMwYTlhMDFmMTQ0YjcyMzgiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg4OTU5NTg5LCJleHAiOjQ3MzU0NDU5ODl9.lI3hEl7ic6R4Qpv6JI2TcIFTumVhhWR2IzdfsSzYrV4' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+"name":"track_76",
+"genre":["normal","pop"],
+"availableMarkets":["fr","en"],
+"duration":1000
+}'
+
+
+ * @apiSuccessExample {json} Success-Response:
+ {
+    "availableMarkets": [
+        "fr",
+        "en"
+    ],
+    "genre": [
+        "normal",
+        "pop"
+    ],
+    "_id": "5eb0a499ec0c444e9c489820",
+    "url": "undefined",
+    "images": [
+        {
+            "_id": "5eb0b3d4de66c65e34c18b5b",
+            "height": 100,
+            "width": 100
+        }
+    ],
+    "duration": 1000,
+    "trackNumber": 12,
+    "name": "track_76",
+    "artistId": "5eb0a44b9b15d854c08f7362",
+    "albumId": "5eb0a498ec0c444e9c48981e",
+    "discNumber": 1,
+    "explicit": false,
+    "type": "Track",
+    "acousticness": 74,
+    "danceability": 44,
+    "energy": 34,
+    "instrumentalness": 33,
+    "key": "pGMaFTpEPfnu0FkwQ9t1GQ",
+    "liveness": 68,
+    "loudness": 63,
+    "mode": 32,
+    "speechiness": 79,
+    "tempo": 1,
+    "timeSignature": "2020-05-04T23:26:17.951Z",
+    "valence": 49,
+    "like": 0,
+    "keyId": "88XgNh5mVLKPgEnHeLI5Rg",
+    "__v": 11
+}
+ */
+
+/**
  * @api {delete} /api/artist/:album_id
  * @apiName upload tracks to album
  * @apiGroup Album

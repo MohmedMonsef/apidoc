@@ -67,7 +67,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -162,7 +162,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -200,7 +200,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -253,7 +253,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -285,7 +285,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -349,7 +349,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -391,7 +391,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -429,7 +429,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -479,7 +479,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -522,7 +522,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -573,7 +573,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -644,7 +644,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -703,7 +703,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -783,7 +783,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -847,7 +847,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -912,7 +912,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -959,7 +959,92 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
+    "groupTitle": "Track"
+  },
+  {
+    "type": "PUT",
+    "url": "/api/tracks/update/{track_id}",
+    "title": "edit track",
+    "name": "edit_track",
+    "group": "Track",
+    "description": "<p style=\"color:red;\">edit track parameters in database</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
+    "parameter": {
+      "fields": {
+        "Path Parameters": [
+          {
+            "group": "Path Parameters",
+            "optional": false,
+            "field": "track_id",
+            "description": "<p>the trackID</p>"
+          }
+        ],
+        "Body Parameter": [
+          {
+            "group": "Body Parameter",
+            "optional": false,
+            "field": "availableMarkets",
+            "description": "<p>array containing the available markets for a track</p>"
+          },
+          {
+            "group": "Body Parameter",
+            "optional": false,
+            "field": "genre",
+            "description": "<p>array containing the genres for a track</p>"
+          },
+          {
+            "group": "Body Parameter",
+            "optional": false,
+            "field": "duration",
+            "description": "<p>number of seconds of the track</p>"
+          },
+          {
+            "group": "Body Parameter",
+            "optional": false,
+            "field": "name",
+            "description": "<p>name of the track</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>the new updated track on success with 200 code, on failure 403 error message</p>"
+          }
+        ]
+      }
+    },
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "x-auth-token",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage ",
+        "content": "\ncurl --location --request PUT 'http://localhost:3000/api/tracks/update/5eb0a499ec0c444e9c489820' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWIwOTAzYzMwYTlhMDFmMTQ0YjcyMzgiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg4OTU5NTg5LCJleHAiOjQ3MzU0NDU5ODl9.lI3hEl7ic6R4Qpv6JI2TcIFTumVhhWR2IzdfsSzYrV4' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n\"name\":\"track_76\",\n\"genre\":[\"normal\",\"pop\"],\n\"availableMarkets\":[\"fr\",\"en\"],\n\"duration\":1000\n}'",
+        "type": "curl"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " {\n    \"availableMarkets\": [\n        \"fr\",\n        \"en\"\n    ],\n    \"genre\": [\n        \"normal\",\n        \"pop\"\n    ],\n    \"_id\": \"5eb0a499ec0c444e9c489820\",\n    \"url\": \"undefined\",\n    \"images\": [\n        {\n            \"_id\": \"5eb0b3d4de66c65e34c18b5b\",\n            \"height\": 100,\n            \"width\": 100\n        }\n    ],\n    \"duration\": 1000,\n    \"trackNumber\": 12,\n    \"name\": \"track_76\",\n    \"artistId\": \"5eb0a44b9b15d854c08f7362\",\n    \"albumId\": \"5eb0a498ec0c444e9c48981e\",\n    \"discNumber\": 1,\n    \"explicit\": false,\n    \"type\": \"Track\",\n    \"acousticness\": 74,\n    \"danceability\": 44,\n    \"energy\": 34,\n    \"instrumentalness\": 33,\n    \"key\": \"pGMaFTpEPfnu0FkwQ9t1GQ\",\n    \"liveness\": 68,\n    \"loudness\": 63,\n    \"mode\": 32,\n    \"speechiness\": 79,\n    \"tempo\": 1,\n    \"timeSignature\": \"2020-05-04T23:26:17.951Z\",\n    \"valence\": 49,\n    \"like\": 0,\n    \"keyId\": \"88XgNh5mVLKPgEnHeLI5Rg\",\n    \"__v\": 11\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "private_code/doc.js",
     "groupTitle": "Track"
   },
   {
@@ -1018,7 +1103,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Track"
   },
   {
@@ -1077,7 +1162,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Track"
   },
   {
@@ -1124,7 +1209,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Track"
   },
   {
@@ -1285,7 +1370,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Track"
   },
   {
@@ -1329,7 +1414,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Users_Profile"
   },
   {
@@ -1433,7 +1518,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "private_code/doc.js",
     "groupTitle": "Users_Profile"
   }
 ] });
