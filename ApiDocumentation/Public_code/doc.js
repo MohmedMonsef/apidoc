@@ -4507,42 +4507,44 @@
  *
  * @apiSuccessExample {json} Success-Response:
  *
- * [
+ *[
     {
         "player": {
             "current_track": {
                 "isPlaylist": true,
-                "trackId": "5e8cba517f37604d583f8d3d",
-                "playlistId": "5e8cbe527f37604d583f8d5c"
+                "playlistId": "5eb5246b680ef51b4c449291",
+                "trackId": "5eb0a51eec0c444e9c48982a"
             },
             "next_track": {
                 "isPlaylist": true,
-                "playlistId": "5e8cbe527f37604d583f8d5c",
-                "trackId": "5e8cba6c7f37604d583f8d3e"
+                "playlistId": "5eb5246b680ef51b4c449291",
+                "trackId": "5eb1a459a5ebd959e08d5737"
             },
             "prev_track": {
                 "isPlaylist": true,
-                "playlistId": "5e8cbe527f37604d583f8d5c",
-                "trackId": "5e8cba4b7f37604d583f8d3c"
+                "playlistId": "5eb5246b680ef51b4c449291",
+                "trackId": "5eb0a877ec0c444e9c48986b"
             },
             "is_shuffled": true,
-            "volume": 4,
+            "volume": 5,
             "is_repeat": false,
-            "current_source": "5e8cbe527f37604d583f8d5c",
+            "current_source": "5eb5246b680ef51b4c449291",
             "isPlaylist": true,
-            "last_playlist_track_index": 2
+            "last_playlist_track_index": 0,
+            "currentTimeStampe": 0.445,
+            "isRepeatTrack": true
         },
-        "_id": "5e8cb118084a9d2e6c8f21d7",
-        "email": "ayaabohadima@gmail.com",
-        "displayName": "Aya Samir",
+        "_id": "5eb08ff630a9a01f144b7231",
+        "email": "hager.aismail@gmail.com",
+        "displayName": "Hager",
         "gender": "female",
-        "country": "Eg",
-        "birthDate": "2000-01-31T22:00:00.000Z",
-        "product": "free",
+        "country": "eg",
+        "birthDate": "1999-09-04T00:00:00.000Z",
+        "product": "premium",
         "userType": "Artist",
         "images": [
             {
-                "_id": "5ea0ce9c9729a54e703b873a",
+                "_id": "5eb51175dd06db2ffca3029d",
                 "height": 100,
                 "width": 100
             }

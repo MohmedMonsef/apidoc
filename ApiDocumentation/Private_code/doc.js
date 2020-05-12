@@ -125,7 +125,7 @@
  *
  */
 /**
- * @api {DELETE} api/user/logout Logout user 
+ * @api {POST} api/user/logout Logout user 
  * @apiName Logout user
  * @apiGroup Account
  * @apiDescription
@@ -138,10 +138,22 @@
  * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body is empty </br> On error, the header status code is an error code and the response body contains an error object.
  * 
+ * @apiParam (body parameters)  currentTimeStampe optional  current second in track when user logout
+ * @apiParam (body parameters)  isRepeatTrack  optional   if user select repeat track mode 
+ * @apiParam (body parameters)  volume optional  current volume in web 
+ * 
  *@apiExample {curl} Example usage
- *curl --location --request DELETE 'http://localhost:3000/api/user/logout' \
- --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
- *
+ *ccurl --location --request POST 'http://localhost:3000/api/user/logout' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWIwOGZmNjMwYTlhMDFmMTQ0YjcyMzEiLCJwcm9kdWN0IjoicHJlbWl1bSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg5MDgyNjkzLCJleHAiOjQ3MzU1NjkwOTN9.i-6sBIXMCGwChT0Ou1OTFoVV75i7lSlAlLM7Mf9l0zw' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+	
+      "currentTimeStampe":0.445,
+      "isRepeatTrack":true,
+      "volume":5
+      
+        
+}
  *
  */
 

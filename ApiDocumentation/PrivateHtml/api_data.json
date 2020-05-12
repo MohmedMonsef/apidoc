@@ -67,7 +67,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -162,7 +162,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -200,7 +200,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -253,7 +253,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -285,7 +285,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -349,11 +349,11 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
-    "type": "DELETE",
+    "type": "POST",
     "url": "api/user/logout",
     "title": "Logout user",
     "name": "Logout_user",
@@ -380,18 +380,38 @@
             "field": "Format",
             "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body is empty </br> On error, the header status code is an error code and the response body contains an error object.</p>"
           }
+        ],
+        "body parameters": [
+          {
+            "group": "body parameters",
+            "optional": false,
+            "field": "currentTimeStampe",
+            "description": "<p>optional  current second in track when user logout</p>"
+          },
+          {
+            "group": "body parameters",
+            "optional": false,
+            "field": "isRepeatTrack",
+            "description": "<p>optional   if user select repeat track mode</p>"
+          },
+          {
+            "group": "body parameters",
+            "optional": false,
+            "field": "volume",
+            "description": "<p>optional  current volume in web</p>"
+          }
         ]
       }
     },
     "examples": [
       {
         "title": "Example usage",
-        "content": "curl --location --request DELETE 'http://localhost:3000/api/user/logout' \\\n --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\",
+        "content": "ccurl --location --request POST 'http://localhost:3000/api/user/logout' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWIwOGZmNjMwYTlhMDFmMTQ0YjcyMzEiLCJwcm9kdWN0IjoicHJlbWl1bSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg5MDgyNjkzLCJleHAiOjQ3MzU1NjkwOTN9.i-6sBIXMCGwChT0Ou1OTFoVV75i7lSlAlLM7Mf9l0zw' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n\t\n      \"currentTimeStampe\":0.445,\n      \"isRepeatTrack\":true,\n      \"volume\":5\n      \n        \n}",
         "type": "curl"
       }
     ],
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -429,7 +449,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -479,7 +499,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -522,7 +542,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -573,7 +593,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -644,7 +664,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -703,7 +723,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -783,7 +803,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -847,7 +867,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -912,7 +932,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -959,7 +979,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Track"
   },
   {
@@ -1044,7 +1064,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Track"
   },
   {
@@ -1103,7 +1123,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Track"
   },
   {
@@ -1162,7 +1182,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Track"
   },
   {
@@ -1209,7 +1229,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Track"
   },
   {
@@ -1370,7 +1390,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Track"
   },
   {
@@ -1414,7 +1434,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Users_Profile"
   },
   {
@@ -1518,7 +1538,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Users_Profile"
   }
 ]
