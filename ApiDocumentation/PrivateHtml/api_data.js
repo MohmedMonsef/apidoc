@@ -832,13 +832,13 @@ define({ "api": [
             "group": "path parameters",
             "optional": false,
             "field": "sourceId",
-            "description": "<p>the id of the source if playlist or album</p>"
+            "description": "<p>required.the id of the source if playlist or album but if you will send an array of track not playlist and not album but it by any value you need and put tracksIds with array of tracks</p>"
           },
           {
             "group": "path parameters",
             "optional": false,
             "field": "track_id",
-            "description": "<p>the first track will be playing</p>"
+            "description": "<p>required .the first track will be playing</p>"
           }
         ],
         "query Parameters": [
@@ -846,7 +846,21 @@ define({ "api": [
             "group": "query Parameters",
             "optional": false,
             "field": "isPlaylist",
-            "description": "<p>Required. is boolean determine if the source of queue is playlist or album &amp;true is playlist &amp;false album</p>"
+            "description": "<p>optional. is boolean determine if the source of queue is playlist or album &amp;true is playlist &amp;false album</p>"
+          }
+        ],
+        "Body Parameters": [
+          {
+            "group": "Body Parameters",
+            "optional": false,
+            "field": "sourceType",
+            "description": "<p>optional if you will send array write the the name which define this tracks</p>"
+          },
+          {
+            "group": "Body Parameters",
+            "optional": false,
+            "field": "tracksIds",
+            "description": "<p>optional if you will send array tracks</p>"
           }
         ],
         "response": [
@@ -862,7 +876,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage",
-        "content": "curl --location --request POST 'http://localhost:3000/api/createQueue/5e8cbe527f37604d583f8d5c/5e8cba447f37604d583f8d3b?isPlaylist=true' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\",
+        "content": "curl --location --request POST 'http://localhost:3000/api/createQueue/5e8cbe527f37604d583f8d5c/5e8cba447f37604d583f8d3b?isPlaylist=true' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\\nOR\ncurl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0371bc537ec792bbe' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWIwOTAwYTMwYTlhMDFmMTQ0YjcyMzMiLCJwcm9kdWN0IjoicHJlbWl1bSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg5MzgyNDc0LCJleHAiOjQ3MzU4Njg4NzR9.wGYAj-M2tedMOutlO2BCyoGw3XhZzHaMDSH3m8sAJq0' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n\t\n     \"sourceType\":\"ratio\",\n     \"tracksIds\":[\"5eb1a5b3a5ebd959e08d5746\",\"5eb1acf0371bc537ec792bbe\",\"5eb0a55eec0c444e9c48982f\",\"5eb0a5a1ec0c444e9c489834\",\"5eb0a5e3ec0c444e9c489839\"]\n          \n}\n'",
         "type": "curl"
       }
     ],

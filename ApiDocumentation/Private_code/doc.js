@@ -52,17 +52,29 @@
  * 
  * 
  * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
- * @apiparam (path parameters) sourceId  the id of the source if playlist or album
-* @apiparam (path parameters) track_id the first track will be playing
+ * @apiparam (path parameters) sourceId   required.the id of the source if playlist or album but if you will send an array of track not playlist and not album but it by any value you need and put tracksIds with array of tracks
+ * @apiparam (path parameters) track_id    required .the first track will be playing
  *
- * @apiParam (query Parameters)  isPlaylist Required. is boolean determine if the source of queue is playlist or album &true is playlist &false album  	
+ * @apiParam (query Parameters)  isPlaylist optional. is boolean determine if the source of queue is playlist or album &true is playlist &false album  	
  *
+ * @apiParam  (Body Parameters)  sourceType  optional if you will send array write the the name which define this tracks 
+ * @apiParam  (Body Parameters)  tracksIds   optional if you will send array tracks  
  *@apiParam (response) success 200 & error 400  
  *
  *@apiExample {curl} Example usage
  *curl --location --request POST 'http://localhost:3000/api/createQueue/5e8cbe527f37604d583f8d5c/5e8cba447f37604d583f8d3b?isPlaylist=true' \
 --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
-
+OR
+curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0371bc537ec792bbe' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWIwOTAwYTMwYTlhMDFmMTQ0YjcyMzMiLCJwcm9kdWN0IjoicHJlbWl1bSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg5MzgyNDc0LCJleHAiOjQ3MzU4Njg4NzR9.wGYAj-M2tedMOutlO2BCyoGw3XhZzHaMDSH3m8sAJq0' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+	
+     "sourceType":"ratio",
+     "tracksIds":["5eb1a5b3a5ebd959e08d5746","5eb1acf0371bc537ec792bbe","5eb0a55eec0c444e9c48982f","5eb0a5a1ec0c444e9c489834","5eb0a5e3ec0c444e9c489839"]
+          
+}
+'
 
  */
 /**
