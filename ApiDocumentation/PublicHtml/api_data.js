@@ -4284,6 +4284,169 @@ define({ "api": [
     "groupTitle": "Search"
   },
   {
+    "type": "PUT",
+    "url": "api/recently-search",
+    "title": "Add in search history",
+    "name": "add_to_search_history",
+    "group": "Search",
+    "description": "<p style=\"color:red;\">add an object  to search history  </p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "x-auth-token",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Query parameters": [
+          {
+            "group": "Query parameters",
+            "optional": false,
+            "field": "type",
+            "description": "<p>the type of object if playlist ,track ,artist ,artist or user</p>"
+          },
+          {
+            "group": "Query parameters",
+            "optional": false,
+            "field": "id",
+            "description": "<p>the object id</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK .</br> On error, the header status code is an error code</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "curl --location --request PUT 'http://localhost:3000/api/recently-search?type=track&id=5eb0a51eec0c444e9c48982a' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWIwOTAwYTMwYTlhMDFmMTQ0YjcyMzMiLCJwcm9kdWN0IjoicHJlbWl1bSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg5NDkwMTIyLCJleHAiOjQ3MzU5NzY1MjJ9.5oARDdThgR3OvNE7fPp5erVRi9DqiiMvPVe3qXsFsvU' \\\n--header 'Content-Type: application/json' \\",
+        "type": "curl"
+      }
+    ],
+    "version": "0.0.0",
+    "filename": "Public_code/doc.js",
+    "groupTitle": "Search"
+  },
+  {
+    "type": "GET",
+    "url": "api/recently-search",
+    "title": "get search history",
+    "name": "get_search_history",
+    "group": "Search",
+    "description": "<p style=\"color:red;\">Get search history  </p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "x-auth-token",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "curl --location --request GET 'http://localhost:3000/api/recently-search' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWIwOTAwYTMwYTlhMDFmMTQ0YjcyMzMiLCJwcm9kdWN0IjoicHJlbWl1bSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg5NDkwMTIyLCJleHAiOjQ3MzU5NzY1MjJ9.5oARDdThgR3OvNE7fPp5erVRi9DqiiMvPVe3qXsFsvU' \\\n--header 'Content-Type: application/json' \\",
+        "type": "curl"
+      }
+    ],
+    "parameter": {
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200  and body has object of five arrays of object .</br> On error, the header status code is an error code</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"playlists\": [\n        {\n            \"owner\": {\n                \"id\": \"5eb08fce30a9a01f144b722d\",\n                \"type\": \"user\",\n                \"name\": \"Dai\"\n            },\n            \"collaborative\": false,\n            \"type\": \"playlist\",\n            \"name\": \"My Playlist\",\n            \"images\": [\n                {\n                    \"_id\": \"5eb52470680ef51b4c449295\",\n                    \"height\": 100,\n                    \"width\": 100\n                }\n            ],\n            \"id\": \"5eb5246b680ef51b4c449291\",\n            \"Description\": \"\",\n            \"isPublic\": true\n        }\n    ],\n    \"tracks\": [\n        {\n            \"track\": {\n                \"_id\": \"5eb1a3d8a5ebd959e08d5731\",\n                \"url\": \"undefined\",\n                \"images\": [],\n                \"duration\": 125,\n                \"availableMarkets\": [\n                    \"eg\",\n                    \"sa\"\n                ],\n                \"trackNumber\": 12,\n                \"name\": \"Alsajda\",\n                \"artistId\": \"5eb0a4659b15d854c08f736a\",\n                \"albumId\": \"5eb0a6a7ec0c444e9c489846\",\n                \"discNumber\": 1,\n                \"explicit\": false,\n                \"type\": \"Track\",\n                \"acousticness\": 19,\n                \"danceability\": 45,\n                \"energy\": 32,\n                \"instrumentalness\": 86,\n                \"key\": \"pGMaFTpEPfnu0FkwQ9t1GQ\",\n                \"liveness\": 34,\n                \"loudness\": 15,\n                \"mode\": 75,\n                \"speechiness\": 84,\n                \"tempo\": 94,\n                \"timeSignature\": \"2020-05-05T17:35:20.220Z\",\n                \"valence\": 37,\n                \"like\": 0,\n                \"keyId\": \"88XgNh5mVLKPgEnHeLI5Rg\",\n                \"genre\": [],\n                \"playable\": true\n            },\n            \"isLiked\": false,\n            \"album\": {\n                \"name\": \"Take cover\",\n                \"_id\": \"5eb0a6a7ec0c444e9c489846\",\n                \"artist\": {\n                    \"name\": \"artist9\",\n                    \"_id\": \"5eb0a4659b15d854c08f736a\"\n                }\n            }\n        },\n        {\n            \"track\": {\n                \"_id\": \"5eb0a51eec0c444e9c48982a\",\n                \"url\": \"undefined\",\n                \"images\": [\n                    {\n                        \"_id\": \"5eb0b3e6de66c65e34c18b6e\",\n                        \"height\": 100,\n                        \"width\": 100\n                    }\n                ],\n                \"duration\": 60,\n                \"availableMarkets\": [\n                    \"eg\",\n                    \"sa\"\n                ],\n                \"trackNumber\": 12,\n                \"name\": \"track28\",\n                \"artistId\": \"5eb0a4519b15d854c08f7364\",\n                \"albumId\": \"5eb0a51bec0c444e9c489828\",\n                \"discNumber\": 1,\n                \"explicit\": false,\n                \"type\": \"Track\",\n                \"acousticness\": 23,\n                \"danceability\": 85,\n                \"energy\": 68,\n                \"instrumentalness\": 34,\n                \"key\": \"pGMaFTpEPfnu0FkwQ9t1GQ\",\n                \"liveness\": 3,\n                \"loudness\": 61,\n                \"mode\": 52,\n                \"speechiness\": 34,\n                \"tempo\": 67,\n                \"timeSignature\": \"2020-05-04T23:28:30.501Z\",\n                \"valence\": 79,\n                \"like\": 0,\n                \"keyId\": \"88XgNh5mVLKPgEnHeLI5Rg\",\n                \"genre\": [],\n                \"playable\": true\n            },\n            \"isLiked\": false,\n            \"album\": {\n                \"name\": \"Badge of honor\",\n                \"_id\": \"5eb0a51bec0c444e9c489828\",\n                \"artist\": {\n                    \"name\": \"artist3\",\n                    \"_id\": \"5eb0a4519b15d854c08f7364\"\n                }\n            }\n        }\n    ],\n    \"albums\": [\n        {\n            \"album_type\": \"Single\",\n            \"artist\": {\n                \"type\": \"artist\",\n                \"id\": \"5eb0a44b9b15d854c08f7362\",\n                \"name\": \"artist1\"\n            },\n            \"available_markets\": [\n                \"rg\",\n                \"fr\",\n                \"ge\"\n            ],\n            \"images\": [\n                {\n                    \"_id\": \"5eb0b3d3de66c65e34c18b59\",\n                    \"height\": 100,\n                    \"width\": 100\n                }\n            ],\n            \"id\": \"5eb0a498ec0c444e9c48981e\",\n            \"name\": \"Ire desire\",\n            \"type\": \"album\",\n            \"isFollow\": false\n        }\n    ],\n    \"users\": [\n        {\n            \"name\": \"Dai\",\n            \"id\": \"5eb08fce30a9a01f144b722d\",\n            \"type\": \"user\",\n            \"images\": [\n                {\n                    \"_id\": \"5eb51153dd06db2ffca30291\",\n                    \"height\": 100,\n                    \"width\": 100\n                }\n            ],\n            \"country\": \"eg\",\n            \"email\": \"dai.a.elrihany@gmail.com\"\n        }\n    ],\n    \"artists\": [\n        {\n            \"genre\": [\n                \"genre1\",\n                \"genre2\",\n                \"genre3\"\n            ],\n            \"type\": \"artist\",\n            \"name\": \"artist1\",\n            \"images\": [\n                {\n                    \"_id\": \"5eb0b3cede66c65e34c18b56\",\n                    \"height\": 100,\n                    \"width\": 100\n                }\n            ],\n            \"id\": \"5eb0a44b9b15d854c08f7362\",\n            \"info\": \"info about artist 1\",\n            \"popularity\": 42,\n            \"isFollow\": false\n        },\n        {\n            \"genre\": [\n                \"genre1\",\n                \"genre2\",\n                \"genre3\"\n            ],\n            \"type\": \"artist\",\n            \"name\": \"artist13\",\n            \"images\": [\n                {\n                    \"_id\": \"5eb0b43dde66c65e34c18bcb\",\n                    \"height\": 100,\n                    \"width\": 100\n                }\n            ],\n            \"id\": \"5eb0a4749b15d854c08f736e\",\n            \"info\": \"info about artist 13\",\n            \"popularity\": 32,\n            \"isFollow\": false\n        }\n    ]\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "Public_code/doc.js",
+    "groupTitle": "Search"
+  },
+  {
+    "type": "DELETE",
+    "url": "api/recently-search",
+    "title": "remove from search history",
+    "name": "remove_from_search_history",
+    "group": "Search",
+    "description": "<p style=\"color:red;\">remove  an object  from search history  </p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "x-auth-token",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Query parameters": [
+          {
+            "group": "Query parameters",
+            "optional": false,
+            "field": "type",
+            "description": "<p>the type of object if playlist ,track ,artist ,artist or user</p>"
+          },
+          {
+            "group": "Query parameters",
+            "optional": false,
+            "field": "id",
+            "description": "<p>the object id</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK .</br> On error, the header status code is an error code</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "curl --location --request DELETE 'http://localhost:3000/api/recently-search?type=track&id=5eb0a51eec0c444e9c48982a' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWIwOTAwYTMwYTlhMDFmMTQ0YjcyMzMiLCJwcm9kdWN0IjoicHJlbWl1bSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg5NDkwMTIyLCJleHAiOjQ3MzU5NzY1MjJ9.5oARDdThgR3OvNE7fPp5erVRi9DqiiMvPVe3qXsFsvU' \\\n--header 'Content-Type: application/json' \\",
+        "type": "curl"
+      }
+    ],
+    "version": "0.0.0",
+    "filename": "Public_code/doc.js",
+    "groupTitle": "Search"
+  },
+  {
     "type": "get",
     "url": "api/audio-analysis/{id}",
     "title": "Get Audio Analysis for a Track (not implemented)",
