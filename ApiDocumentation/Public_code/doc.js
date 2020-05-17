@@ -2342,119 +2342,55 @@
  *
  *  @apiSuccessExample {json} Success-Response:
 *{
- [
-    {
-        "isSaved": true,
-        "_id": "5e8cb9327f37604d583f8d25",
-        "name": "HELLO KIDS",
-        "images": [],
-        "artistId": "5e8cb7037f37604d583f8d22",
-        "artistName": "nada",
-        "track": [
-            {
-                "_id": "5e8ce2a17d3d703094eb82f4",
-                "name": "GOGO",
-                "images": []
-            },
-            {
-                "_id": "5e8ce2ca7d3d703094eb82f7",
-                "name": "OHAY",
-                "images": []
-            },
-            {
-                "_id": "5e8ce2ce7d3d703094eb82fa",
-                "name": "POP",
-                "images": []
-            },
-            {
-                "_id": "5e8ce2d37d3d703094eb82fd",
-                "name": "SASA",
-                "images": []
-            },
-            {
-                "_id": "5e8ce2d77d3d703094eb8300",
-                "name": "DOMAIN",
-                "images": []
-            },
-            {
-                "_id": "5e8ce2dc7d3d703094eb8303",
-                "name": "NOMAIN",
-                "images": []
-            }
-        ]
-    },
-    {
-        "isSaved": true,
-        "_id": "5e8cb9457f37604d583f8d27",
-        "name": "HELLO SLEEP WALKERS",
-        "images": [],
-        "artistId": "5e8cb7037f37604d583f8d22",
-        "artistName": "nada",
-        "track": [
-            {
-                "_id": "5e8ce86082c8d9579467fb73",
-                "name": "WHO I AM",
-                "images": []
-            },
-            {
-                "_id": "5e8ce86882c8d9579467fb76",
-                "name": "SOKA",
-                "images": []
-            },
-            {
-                "_id": "5e8ce86c82c8d9579467fb79",
-                "name": "ARASU",
-                "images": []
-            },
-            {
-                "_id": "5e8ce87182c8d9579467fb7c",
-                "name": "WIWI",
-                "images": []
-            },
-            {
-                "_id": "5e8ce87682c8d9579467fb7f",
-                "name": "WWIII",
-                "images": []
-            }
-        ]
-    },
-    {
-        "isSaved": true,
-        "_id": "5e8cb94b7f37604d583f8d29",
-        "name": "OHAYO SLEEP WALKERS",
-        "images": [],
-        "artistId": "5e8cb7037f37604d583f8d22",
-        "artistName": "nada",
-        "track": [
-            {
-                "_id": "5e8ce8b282c8d9579467fb82",
-                "name": "KJKJQ",
-                "images": []
-            },
-            {
-                "_id": "5e8ce8bb82c8d9579467fb85",
-                "name": "HEHE",
-                "images": []
-            },
-            {
-                "_id": "5e8ce8bf82c8d9579467fb88",
-                "name": "MOON",
-                "images": []
-            },
-            {
-                "_id": "5e8ce8c382c8d9579467fb8b",
-                "name": "SUN",
-                "images": []
-            },
-            {
-                "_id": "5e8ce8c982c8d9579467fb8e",
-                "name": "FREEZE",
-                "images": []
-            }
-        ]
-    }
-]
-*}
+    "savedAlbums": [
+        {
+            "isSaved": true,
+            "_id": "5eb0a872ec0c444e9c489869",
+            "name": "Just the beginning",
+            "images": [
+                {
+                    "_id": "5eb0b45bde66c65e34c18be9",
+                    "height": 100,
+                    "width": 100
+                }
+            ],
+            "artistId": "5eb0a47d9b15d854c08f7371",
+            "artistName": "artist16",
+            "track": [
+                {
+                    "_id": "5eb0a877ec0c444e9c48986b",
+                    "name": "track35",
+                    "images": [
+                        {
+                            "_id": "5eb0b45ede66c65e34c18bec",
+                            "height": 100,
+                            "width": 100
+                        }
+                    ],
+                    "isLiked": false,
+                    "playable": true,
+                    "duration": 60
+                },
+                {
+                    "_id": "5eb1a52fa5ebd959e08d5740",
+                    "name": "Alsajda",
+                    "images": [],
+                    "isLiked": false,
+                    "playable": true,
+                    "duration": 125
+                },
+                {
+                    "_id": "5eb1ac71371bc537ec792bb8",
+                    "name": "mariam",
+                    "images": [],
+                    "isLiked": false,
+                    "playable": true,
+                    "duration": 75
+                }
+            ]
+        }
+    ]
+}
  */
 
 /**
