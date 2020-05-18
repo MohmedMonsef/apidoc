@@ -67,7 +67,99 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "ApiDocumentation/Private_code/doc.js",
+    "groupTitle": "Account"
+  },
+  {
+    "type": "POST",
+    "url": "api/premium/confirm",
+    "title": "Confirm Premium",
+    "name": "Confirm_Premium",
+    "group": "Account",
+    "description": "<h1>Request Parameters</h1></br></br> <h1>Endpoint</h1>",
+    "parameter": {
+      "fields": {
+        "Query parameter": [
+          {
+            "group": "Query parameter",
+            "optional": false,
+            "field": "id",
+            "description": "<p>{string} Required. the User id .</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body is empty </br> On error, the header status code is an error code and the response body contains an error object.</p>"
+          }
+        ],
+        "Link Sent To User Email": [
+          {
+            "group": "Link Sent To User Email",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>http://52.205.254.29/premium/confirm?id=5eb08fce30a9a01f144b722d</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage",
+        "content": "curl --location --request POST 'http://localhost:3000/api/premium/confirm?id=5eb08fce30a9a01f144b722d'",
+        "type": "curl"
+      }
+    ],
+    "version": "0.0.0",
+    "filename": "ApiDocumentation/Private_code/doc.js",
+    "groupTitle": "Account"
+  },
+  {
+    "type": "POST",
+    "url": "api/login/confirm",
+    "title": "Confirm Signup",
+    "name": "Confirm_Signup",
+    "group": "Account",
+    "description": "<h1>Request Parameters</h1></br></br> <h1>Endpoint</h1>",
+    "parameter": {
+      "fields": {
+        "Query parameter": [
+          {
+            "group": "Query parameter",
+            "optional": false,
+            "field": "id",
+            "description": "<p>{string} Required. the User id .</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body is empty </br> On error, the header status code is an error code and the response body contains an error object.</p>"
+          }
+        ],
+        "Link Sent To User Email": [
+          {
+            "group": "Link Sent To User Email",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>http://52.205.254.29/login/confirm?id=5eb08fce30a9a01f144b722d</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage",
+        "content": "curl --location --request POST 'http://localhost:3000/api/login/confirm?id=5eb08fce30a9a01f144b722d'",
+        "type": "curl"
+      }
+    ],
+    "version": "0.0.0",
+    "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -162,7 +254,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -200,7 +292,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -253,7 +345,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -285,7 +377,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -349,7 +441,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -411,7 +503,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -449,7 +541,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -499,7 +591,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -542,7 +634,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -593,7 +685,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -664,7 +756,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -723,7 +815,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -803,7 +895,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -881,7 +973,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -946,7 +1038,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -993,7 +1085,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Track"
   },
   {
@@ -1078,7 +1170,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Track"
   },
   {
@@ -1137,7 +1229,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Track"
   },
   {
@@ -1196,7 +1288,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Track"
   },
   {
@@ -1243,7 +1335,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Track"
   },
   {
@@ -1404,7 +1496,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Track"
   },
   {
@@ -1448,7 +1540,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Users_Profile"
   },
   {
@@ -1552,7 +1644,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Private_code/doc.js",
+    "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Users_Profile"
   }
 ] });

@@ -107,7 +107,47 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  *
  *
  */
-
+/**
+ * @api {POST} api/login/confirm Confirm Signup
+ * @apiName Confirm Signup
+ * @apiGroup Account
+ * @apiDescription
+ * 
+ * 
+ * <h1>Request Parameters</h1></br></br>
+ * 
+ * <h1>Endpoint</h1> 
+ * 
+ * 
+ * @apiParam (Query parameter)  id {string} Required. the User id .
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body is empty </br> On error, the header status code is an error code and the response body contains an error object.
+ * @apiParam (Link Sent To User Email) Format http://52.205.254.29/login/confirm?id=5eb08fce30a9a01f144b722d
+ *@apiExample {curl} Example usage
+ *curl --location --request POST 'http://localhost:3000/api/login/confirm?id=5eb08fce30a9a01f144b722d' 
+ 
+ *
+ *
+ */
+/**
+ * @api {POST} api/premium/confirm Confirm Premium
+ * @apiName Confirm Premium
+ * @apiGroup Account
+ * @apiDescription
+ * 
+ * 
+ * <h1>Request Parameters</h1></br></br>
+ * 
+ * <h1>Endpoint</h1> 
+ * 
+ * 
+ * @apiParam (Query parameter)  id {string} Required. the User id .
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body is empty </br> On error, the header status code is an error code and the response body contains an error object.
+ * @apiParam (Link Sent To User Email) Format http://52.205.254.29/premium/confirm?id=5eb08fce30a9a01f144b722d
+ *@apiExample {curl} Example usage
+ *curl --location --request POST 'http://localhost:3000/api/premium/confirm?id=5eb08fce30a9a01f144b722d' 
+ *
+ *
+ */
 /**
  * @api {POST} api/login/reset_password Reset Password
  * @apiName Reset Password
