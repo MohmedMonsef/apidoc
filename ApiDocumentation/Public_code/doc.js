@@ -4723,46 +4723,31 @@
  *
  *[
     {
-        "player": {
-            "current_track": {
-                "isPlaylist": true,
-                "playlistId": "5eb5246b680ef51b4c449291",
-                "trackId": "5eb0a51eec0c444e9c48982a"
-            },
-            "next_track": {
-                "isPlaylist": true,
-                "playlistId": "5eb5246b680ef51b4c449291",
-                "trackId": "5eb1a459a5ebd959e08d5737"
-            },
-            "prev_track": {
-                "isPlaylist": true,
-                "playlistId": "5eb5246b680ef51b4c449291",
-                "trackId": "5eb0a877ec0c444e9c48986b"
-            },
-            "is_shuffled": true,
-            "volume": 5,
-            "is_repeat": false,
-            "current_source": "5eb5246b680ef51b4c449291",
-            "isPlaylist": true,
-            "last_playlist_track_index": 0,
-            "currentTimeStampe": 0.445,
-            "isRepeatTrack": true
-        },
-        "_id": "5eb08ff630a9a01f144b7231",
-        "email": "hager.aismail@gmail.com",
-        "displayName": "Hager",
-        "gender": "female",
+        "displayName": "Aya",
+        "email": "ayasabohadima@gmail.com",
+        "birthDate": "2000-02-20T00:00:00.000Z",
         "country": "eg",
-        "birthDate": "1999-09-04T00:00:00.000Z",
         "product": "premium",
-        "userType": "Artist",
+        "gender": "female",
         "images": [
             {
-                "_id": "5eb51175dd06db2ffca3029d",
+                "_id": "5eb51185dd06db2ffca302a3",
                 "height": 100,
                 "width": 100
             }
-        ]
+        ],
+        "userType": "Artist",
+        "player": {
+            "source_name": "playlist",
+            "is_shuffled": false,
+            "volume": 4,
+            "is_repeat": false,
+            "current_source": "5eb5246b680ef51b4c449291",
+            "isPlaylist": true,
+            "currentTimeStampe": 0,
+            "isRepeatTrack": false,
+            "haveQueue": true
+        }
     }
 ]
  */
