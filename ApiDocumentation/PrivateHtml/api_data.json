@@ -513,6 +513,18 @@
     "name": "Reset_Password",
     "group": "Account",
     "description": "<h1>Request Parameters</h1></br></br> <h1>Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "x-auth-token",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
+          }
+        ]
+      }
+    },
     "parameter": {
       "fields": {
         "Body parameter": [
@@ -536,7 +548,7 @@
     "examples": [
       {
         "title": "Example usage",
-        "content": "curl --location --request POST 'http://localhost:3000/api/login/reset_password' \\\n--header 'Content-Type: application/json' \\\n \\\n--data-raw '{\n\n\"password\":\"ring\"\n\n\t\n}'",
+        "content": "curl --location --request POST 'http://localhost:3000/api/login/reset_password' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\\n \\\n--data-raw '{\n\n\"password\":\"ring\"\n\n\t\n}'",
         "type": "curl"
       }
     ],
