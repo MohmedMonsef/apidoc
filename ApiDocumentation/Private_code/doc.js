@@ -159,13 +159,13 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  * 
  * <h1>Endpoint</h1> 
  * 
- * 
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  * @apiParam (Body parameter)  password {string} Required. the User new password .
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body is empty </br> On error, the header status code is an error code and the response body contains an error object.
  * 
  *@apiExample {curl} Example usage
  *curl --location --request POST 'http://localhost:3000/api/login/reset_password' \
---header 'Content-Type: application/json' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
  \
 --data-raw '{
 
