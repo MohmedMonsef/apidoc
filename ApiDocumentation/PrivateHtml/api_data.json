@@ -100,7 +100,7 @@
             "group": "Link Sent To User Email",
             "optional": false,
             "field": "Format",
-            "description": "<p>http://52.205.254.29/premium/confirm?id=5eb08fce30a9a01f144b722d</p>"
+            "description": "<p>http://52.87.106.56/premium/confirm?id=5eb08fce30a9a01f144b722d</p>"
           }
         ]
       }
@@ -146,7 +146,7 @@
             "group": "Link Sent To User Email",
             "optional": false,
             "field": "Format",
-            "description": "<p>http://52.205.254.29/login/confirm?id=5eb08fce30a9a01f144b722d</p>"
+            "description": "<p>http://52.87.106.56/confirm?id=5eb08fce30a9a01f144b722d</p>"
           }
         ]
       }
@@ -602,6 +602,57 @@
         "type": "curl"
       }
     ],
+    "version": "0.0.0",
+    "filename": "ApiDocumentation/Private_code/doc.js",
+    "groupTitle": "Account"
+  },
+  {
+    "type": "GET",
+    "url": "api/me/notifications",
+    "title": "User notifications",
+    "name": "User_notifications",
+    "group": "Account",
+    "description": "<h1>Request Parameters</h1></br></br> <h1>Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "x-auth-token",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body is array of json notifications objects  </br> On error, the header status code is an error code and the response body contains an error object.</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage",
+        "content": "curl --location --request POST 'http://localhost:3000/api//me/notifications'",
+        "type": "curl"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "[\n    {\n        \"data\": {\n            \"artistId\": \"5eb0a4749b15d854c08f736e\",\n            \"albumId\": \"5ececb4ceedca51f5079346b\",\n            \"title\": \"WOOOOOH NEW ALBUM\",\n            \"body\": \"Nada Uploaded a New Album -- CHECK IT OUT !\"\n        }\n    }\n]",
+          "type": "json"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Account"

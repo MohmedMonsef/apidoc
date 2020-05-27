@@ -121,13 +121,14 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  * 
  * @apiParam (Query parameter)  id {string} Required. the User id .
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body is empty </br> On error, the header status code is an error code and the response body contains an error object.
- * @apiParam (Link Sent To User Email) Format http://52.205.254.29/login/confirm?id=5eb08fce30a9a01f144b722d
+ * @apiParam (Link Sent To User Email) Format http://52.87.106.56/confirm?id=5eb08fce30a9a01f144b722d
  *@apiExample {curl} Example usage
  *curl --location --request POST 'http://localhost:3000/api/login/confirm?id=5eb08fce30a9a01f144b722d' 
  
  *
  *
  */
+
 /**
  * @api {POST} api/premium/confirm Confirm Premium
  * @apiName Confirm Premium
@@ -142,7 +143,7 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  * 
  * @apiParam (Query parameter)  id {string} Required. the User id .
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body is empty </br> On error, the header status code is an error code and the response body contains an error object.
- * @apiParam (Link Sent To User Email) Format http://52.205.254.29/premium/confirm?id=5eb08fce30a9a01f144b722d
+ * @apiParam (Link Sent To User Email) Format http://52.87.106.56/premium/confirm?id=5eb08fce30a9a01f144b722d
  *@apiExample {curl} Example usage
  *curl --location --request POST 'http://localhost:3000/api/premium/confirm?id=5eb08fce30a9a01f144b722d' 
  *
@@ -208,7 +209,34 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
 }
  *
  */
-
+/**
+ * @api {GET} api/me/notifications User notifications
+ * @apiName User notifications
+ * @apiGroup Account
+ * @apiDescription
+ * 
+ * 
+ * <h1>Request Parameters</h1></br></br>
+ * 
+ * <h1>Endpoint</h1> 
+ * 
+* @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body is array of json notifications objects  </br> On error, the header status code is an error code and the response body contains an error object.
+ *@apiExample {curl} Example usage
+ *curl --location --request POST 'http://localhost:3000/api//me/notifications' 
+ *@apiSuccessExample {json} Success-Response:
+ *[
+    {
+        "data": {
+            "artistId": "5eb0a4749b15d854c08f736e",
+            "albumId": "5ececb4ceedca51f5079346b",
+            "title": "WOOOOOH NEW ALBUM",
+            "body": "Nada Uploaded a New Album -- CHECK IT OUT !"
+        }
+    }
+]
+ *
+ */
 /**
  * @api {POST} api/notification/token Set FCM Token
  * @apiName Set FCM Token
