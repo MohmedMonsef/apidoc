@@ -1324,11 +1324,96 @@
  *
  * @apiParam (PathParameters)  category_id 	The Spotify category ID for the category.
  *
- *  @apiParam (QueryParameters)  country  			Optional. A country: an ISO 3166-1 alpha-2 country code.
+ *  @apiParam (QueryParameters)  country  Optional. A country: an ISO 3166-1 alpha-2 country code.
  * @apiParam (QueryParameters)  limit 	Optional. The maximum number of items to return.</br> Default: 20. Minimum: 1. Maximum: 50.
  * @apiParam (QueryParameters)  offset 	Optional. The index of the first item to return.</br> Default: 0 (the first object).</br> Use with limit to get the next set of items.
  *@apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains</br> an array of simplified playlist objects (wrapped in a paging object) in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
  *
+ * @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/browse/categories/5ec36eeaedbc6b20ecdbd823/playlists' \
+ * @apiSuccessExample {json} Success-Response:
+ {
+    "playlists": [
+        {
+            "_id": "5eb5258b680ef51b4c449321",
+            "name": "my favorite",
+            "images": [
+                {
+                    "_id": "5eb52590680ef51b4c449325",
+                    "height": 100,
+                    "width": 100
+                }
+            ],
+            "ownerId": "5eb0903230a9a01f144b7237",
+            "ownerName": "Omar"
+        },
+        {
+            "_id": "5eb5259d680ef51b4c449329",
+            "name": "Ayat el quran",
+            "images": [
+                {
+                    "_id": "5eb525a2680ef51b4c44932d",
+                    "height": 100,
+                    "width": 100
+                }
+            ],
+            "ownerId": "5eb0903c30a9a01f144b7238",
+            "ownerName": "Kareem"
+        },
+        {
+            "_id": "5eb525aa680ef51b4c449331",
+            "name": "Soura",
+            "images": [
+                {
+                    "_id": "5eb525af680ef51b4c449335",
+                    "height": 100,
+                    "width": 100
+                }
+            ],
+            "ownerId": "5eb0903c30a9a01f144b7238",
+            "ownerName": "Kareem"
+        },
+        {
+            "_id": "5eb525bc680ef51b4c449339",
+            "name": "Playlist4",
+            "images": [
+                {
+                    "_id": "5eb525c1680ef51b4c44933d",
+                    "height": 100,
+                    "width": 100
+                }
+            ],
+            "ownerId": "5eb0904630a9a01f144b7239",
+            "ownerName": "Mohmed"
+        },
+        {
+            "_id": "5eb525ce680ef51b4c449341",
+            "name": " playlist5",
+            "images": [
+                {
+                    "_id": "5eb525d3680ef51b4c449345",
+                    "height": 100,
+                    "width": 100
+                }
+            ],
+            "ownerId": "5eb0905030a9a01f144b723a",
+            "ownerName": "Tarek"
+        },
+        {
+            "_id": "5eb525e0680ef51b4c449349",
+            "name": "Which need",
+            "images": [
+                {
+                    "_id": "5eb525e5680ef51b4c44934d",
+                    "height": 100,
+                    "width": 100
+                }
+            ],
+            "ownerId": "5eb0905a30a9a01f144b723b",
+            "ownerName": "Abdel Rahman"
+        }
+    ]
+}
  */
 
 /**
@@ -4063,7 +4148,8 @@
  *
  * @apiParam (Query parameters) name	Required.Search query keywords.
  * @apiParam (Query parameters) type	Required.A comma-separated list of item types to search across.Valid types are: top, album , artist, playlist, and track.Search results include hits from all the specified item types.
-
+*  @apiParam (Body parameters)  limit  optional. the limit of response length .
+*  @apiParam (Body parameters)  offset  Optional. The index of the first object  to return..
  * @apiParam (Response) Format
  * On success:
  * </br></br>In the response header the HTTP status code is 200 OK.

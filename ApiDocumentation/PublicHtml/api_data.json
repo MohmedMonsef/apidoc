@@ -949,6 +949,22 @@
         ]
       }
     },
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "curl --location --request GET 'http://localhost:3000/api/browse/categories/5ec36eeaedbc6b20ecdbd823/playlists' \\",
+        "type": "curl"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " {\n    \"playlists\": [\n        {\n            \"_id\": \"5eb5258b680ef51b4c449321\",\n            \"name\": \"my favorite\",\n            \"images\": [\n                {\n                    \"_id\": \"5eb52590680ef51b4c449325\",\n                    \"height\": 100,\n                    \"width\": 100\n                }\n            ],\n            \"ownerId\": \"5eb0903230a9a01f144b7237\",\n            \"ownerName\": \"Omar\"\n        },\n        {\n            \"_id\": \"5eb5259d680ef51b4c449329\",\n            \"name\": \"Ayat el quran\",\n            \"images\": [\n                {\n                    \"_id\": \"5eb525a2680ef51b4c44932d\",\n                    \"height\": 100,\n                    \"width\": 100\n                }\n            ],\n            \"ownerId\": \"5eb0903c30a9a01f144b7238\",\n            \"ownerName\": \"Kareem\"\n        },\n        {\n            \"_id\": \"5eb525aa680ef51b4c449331\",\n            \"name\": \"Soura\",\n            \"images\": [\n                {\n                    \"_id\": \"5eb525af680ef51b4c449335\",\n                    \"height\": 100,\n                    \"width\": 100\n                }\n            ],\n            \"ownerId\": \"5eb0903c30a9a01f144b7238\",\n            \"ownerName\": \"Kareem\"\n        },\n        {\n            \"_id\": \"5eb525bc680ef51b4c449339\",\n            \"name\": \"Playlist4\",\n            \"images\": [\n                {\n                    \"_id\": \"5eb525c1680ef51b4c44933d\",\n                    \"height\": 100,\n                    \"width\": 100\n                }\n            ],\n            \"ownerId\": \"5eb0904630a9a01f144b7239\",\n            \"ownerName\": \"Mohmed\"\n        },\n        {\n            \"_id\": \"5eb525ce680ef51b4c449341\",\n            \"name\": \" playlist5\",\n            \"images\": [\n                {\n                    \"_id\": \"5eb525d3680ef51b4c449345\",\n                    \"height\": 100,\n                    \"width\": 100\n                }\n            ],\n            \"ownerId\": \"5eb0905030a9a01f144b723a\",\n            \"ownerName\": \"Tarek\"\n        },\n        {\n            \"_id\": \"5eb525e0680ef51b4c449349\",\n            \"name\": \"Which need\",\n            \"images\": [\n                {\n                    \"_id\": \"5eb525e5680ef51b4c44934d\",\n                    \"height\": 100,\n                    \"width\": 100\n                }\n            ],\n            \"ownerId\": \"5eb0905a30a9a01f144b723b\",\n            \"ownerName\": \"Abdel Rahman\"\n        }\n    ]\n}",
+          "type": "json"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "Public_code/doc.js",
     "groupTitle": "Browse"
@@ -4260,6 +4276,20 @@
             "optional": false,
             "field": "type",
             "description": "<p>Required.A comma-separated list of item types to search across.Valid types are: top, album , artist, playlist, and track.Search results include hits from all the specified item types.</p>"
+          }
+        ],
+        "Body parameters": [
+          {
+            "group": "Body parameters",
+            "optional": false,
+            "field": "limit",
+            "description": "<p>optional. the limit of response length .</p>"
+          },
+          {
+            "group": "Body parameters",
+            "optional": false,
+            "field": "offset",
+            "description": "<p>Optional. The index of the first object  to return..</p>"
           }
         ],
         "Response": [
