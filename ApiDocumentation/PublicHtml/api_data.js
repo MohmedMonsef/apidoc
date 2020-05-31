@@ -55,7 +55,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -114,7 +114,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -173,7 +173,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -268,7 +268,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -319,7 +319,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -378,7 +378,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -437,7 +437,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -522,7 +522,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -581,7 +581,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -648,7 +648,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -700,7 +700,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -743,7 +743,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -828,7 +828,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -887,7 +887,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -949,8 +949,24 @@ define({ "api": [
         ]
       }
     },
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "curl --location --request GET 'http://localhost:3000/api/browse/categories/5ec36eeaedbc6b20ecdbd823/playlists' \\",
+        "type": "curl"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " {\n    \"playlists\": [\n        {\n            \"_id\": \"5eb5258b680ef51b4c449321\",\n            \"name\": \"my favorite\",\n            \"images\": [\n                {\n                    \"_id\": \"5eb52590680ef51b4c449325\",\n                    \"height\": 100,\n                    \"width\": 100\n                }\n            ],\n            \"ownerId\": \"5eb0903230a9a01f144b7237\",\n            \"ownerName\": \"Omar\"\n        },\n        {\n            \"_id\": \"5eb5259d680ef51b4c449329\",\n            \"name\": \"Ayat el quran\",\n            \"images\": [\n                {\n                    \"_id\": \"5eb525a2680ef51b4c44932d\",\n                    \"height\": 100,\n                    \"width\": 100\n                }\n            ],\n            \"ownerId\": \"5eb0903c30a9a01f144b7238\",\n            \"ownerName\": \"Kareem\"\n        },\n        {\n            \"_id\": \"5eb525aa680ef51b4c449331\",\n            \"name\": \"Soura\",\n            \"images\": [\n                {\n                    \"_id\": \"5eb525af680ef51b4c449335\",\n                    \"height\": 100,\n                    \"width\": 100\n                }\n            ],\n            \"ownerId\": \"5eb0903c30a9a01f144b7238\",\n            \"ownerName\": \"Kareem\"\n        },\n        {\n            \"_id\": \"5eb525bc680ef51b4c449339\",\n            \"name\": \"Playlist4\",\n            \"images\": [\n                {\n                    \"_id\": \"5eb525c1680ef51b4c44933d\",\n                    \"height\": 100,\n                    \"width\": 100\n                }\n            ],\n            \"ownerId\": \"5eb0904630a9a01f144b7239\",\n            \"ownerName\": \"Mohmed\"\n        },\n        {\n            \"_id\": \"5eb525ce680ef51b4c449341\",\n            \"name\": \" playlist5\",\n            \"images\": [\n                {\n                    \"_id\": \"5eb525d3680ef51b4c449345\",\n                    \"height\": 100,\n                    \"width\": 100\n                }\n            ],\n            \"ownerId\": \"5eb0905030a9a01f144b723a\",\n            \"ownerName\": \"Tarek\"\n        },\n        {\n            \"_id\": \"5eb525e0680ef51b4c449349\",\n            \"name\": \"Which need\",\n            \"images\": [\n                {\n                    \"_id\": \"5eb525e5680ef51b4c44934d\",\n                    \"height\": 100,\n                    \"width\": 100\n                }\n            ],\n            \"ownerId\": \"5eb0905a30a9a01f144b723b\",\n            \"ownerName\": \"Abdel Rahman\"\n        }\n    ]\n}",
+          "type": "json"
+        }
+      ]
+    },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1001,7 +1017,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1062,7 +1078,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1101,7 +1117,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1140,7 +1156,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1179,7 +1195,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1218,7 +1234,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1269,7 +1285,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1308,7 +1324,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1351,7 +1367,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1402,7 +1418,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1451,7 +1467,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1515,7 +1531,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1565,7 +1581,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1614,16 +1630,16 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
-    "type": "DELETE",
-    "url": "api/playlists/{playlist_id}/followers",
-    "title": "Unfollow a Playlist",
-    "name": "Unfollow_a_Playlist",
+    "type": "POST",
+    "url": "/api/me/follow/user/{user_id}",
+    "title": "follow user with user_id",
+    "name": "follow_user",
     "group": "Follow",
-    "description": "<p style=\"color:red;\">Remove the current user as a follower of a playlist.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "description": "<p style=\"color:red;\">get all the  user's followers.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
         "Header": [
@@ -1631,19 +1647,19 @@ define({ "api": [
             "group": "Header",
             "optional": false,
             "field": "x-auth-token",
-            "description": "<p>Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the user.</br>Unfollowing a publicly followed playlist for a user requires authorization of the playlist-modify-public scope; unfollowing a privately followed playlist requires the playlist-modify-private scope.</p>"
+            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
           }
         ]
       }
     },
     "parameter": {
       "fields": {
-        "PathParameter": [
+        "QueryParam": [
           {
-            "group": "PathParameter",
+            "group": "QueryParam",
             "optional": false,
-            "field": "playlist_id",
-            "description": "<p>The Spotify ID of the playlist that is to be no longer followed.</p>"
+            "field": "user_id",
+            "description": "<p>Required. user id that the user will follow</p>"
           }
         ],
         "Response": [
@@ -1651,7 +1667,7 @@ define({ "api": [
             "group": "Response",
             "optional": false,
             "field": "Format",
-            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body is {success:&quot;unfollowed this playlist successfully&quot;}.</br> On error, the header status code is an error code and the response body contains an error object.</p>"
+            "description": "<p>On success, the HTTP status code in the response header is 201 OK and the response body</br> On error, the header status code is an error code and the response body contains an error object.</p>"
           }
         ]
       }
@@ -1659,12 +1675,182 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl --location --request DELETE 'http://localhost:3000/api/playlists/5e8cbe527f37604d583f8d5c/followers' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\",
+        "content": "curl --location --request POST 'http://localhost:3000/api/me/follow/user/5eb08fce30a9a01f144b722d' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWIwOTA2NDMwYTlhMDFmMTQ0YjcyM2MiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTkwNjg4MTkwLCJleHAiOjMxNDY0ODg4NzgwMjY4MDM3MDB9.jr-AzUxXBEF9veCGB0JZHUtEpnjSQOQ-_w5Vi5XGh0M' \\",
         "type": "curl"
       }
     ],
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "followed user successfully",
+          "type": "json"
+        }
+      ]
+    },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
+    "groupTitle": "Follow"
+  },
+  {
+    "type": "get",
+    "url": "/api/me/followers/user",
+    "title": "get user followers",
+    "name": "get_user_followers",
+    "group": "Follow",
+    "description": "<p style=\"color:red;\">follow other  user</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "x-auth-token",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body</br> contains an array of users in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "curl --location --request GET 'http://localhost:3000/api/me/followers/user' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWIwOGZjZTMwYTlhMDFmMTQ0YjcyMmQiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTkwNjg4NzkzLCJleHAiOjMxNDY0ODg4NzgwMjY4MDQwMDB9.gaUBESzDLwhm7uPg9pvv03aH4gsS4RlT3TyPAj7mtoA'",
+        "type": "curl"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "[\n    {\n        \"gender\": \"male\",\n        \"email\": \"bahaaeldeen1999@gmail.com\",\n        \"displayName\": \"Bahaa\",\n        \"birthDate\": \"1999-06-07T00:00:00.000Z\",\n        \"product\": \"free\",\n        \"images\": [\n            {\n                \"_id\": \"5ec336c7903e064e047da9a3\",\n                \"height\": 100,\n                \"width\": 100\n            }\n        ],\n        \"follow\": [],\n        \"createPlaylist\": [\n            {\n                \"collaboratorsId\": [],\n                \"_id\": \"5eb52a2663eea332d416b9b0\",\n                \"playListId\": \"5eb52a2563eea332d416b9ae\",\n                \"addedAt\": \"2020-05-08T09:45:10.004Z\",\n                \"isPrivate\": false\n            },\n            {\n                \"collaboratorsId\": [],\n                \"_id\": \"5eb52a3363eea332d416b9b8\",\n                \"playListId\": \"5eb52a3363eea332d416b9b6\",\n                \"addedAt\": \"2020-05-08T09:45:23.641Z\",\n                \"isPrivate\": false\n            }\n        ],\n        \"followPlaylist\": [\n            {\n                \"_id\": \"5eb52a2663eea332d416b9b1\",\n                \"playListId\": \"5eb52a2563eea332d416b9ae\",\n                \"isPrivate\": false\n            },\n            {\n                \"_id\": \"5eb52a3463eea332d416b9b9\",\n                \"playListId\": \"5eb52a3363eea332d416b9b6\",\n                \"isPrivate\": false\n            }\n        ],\n        \"saveAlbum\": [],\n        \"following\": [\n            \"5eb08fce30a9a01f144b722d\"\n        ],\n        \"followers\": []\n    }\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "public_code/doc.js",
+    "groupTitle": "Follow"
+  },
+  {
+    "type": "get",
+    "url": "/api/me/following/user",
+    "title": "get users that user follows",
+    "name": "get_users_that_user_follows",
+    "group": "Follow",
+    "description": "<p style=\"color:red;\">get all the  users that the logged in  user follows.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "x-auth-token",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body</br> contains an array of users in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "curl --location --request GET 'http://localhost:3000/api/me/following/user' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWIwOTA2NDMwYTlhMDFmMTQ0YjcyM2MiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTkwNjg4MTkwLCJleHAiOjMxNDY0ODg4NzgwMjY4MDM3MDB9.jr-AzUxXBEF9veCGB0JZHUtEpnjSQOQ-_w5Vi5XGh0M'",
+        "type": "curl"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "[\n    {\n        \"gender\": \"f\",\n        \"email\": \"dai.a.elrihany@gmail.com\",\n        \"displayName\": \"Dai\",\n        \"birthDate\": \"1998-01-01T00:00:00.000Z\",\n        \"product\": \"free\",\n        \"images\": [\n            {\n                \"_id\": \"5eb51153dd06db2ffca30291\",\n                \"height\": 100,\n                \"width\": 100\n            }\n        ],\n        \"follow\": [\n            {\n                \"_id\": \"5ec046a2058f3c35b859add0\",\n                \"id\": \"5eb0a4749b15d854c08f736e\"\n            }\n        ],\n        \"createPlaylist\": [\n            {\n                \"collaboratorsId\": [],\n                \"_id\": \"5ec46acc6fc95d6c54420970\",\n                \"playListId\": \"5eb52479680ef51b4c449299\",\n                \"addedAt\": \"2020-05-19T23:25:00.759Z\",\n                \"isPrivate\": false\n            },\n            {\n                \"collaboratorsId\": [],\n                \"_id\": \"5ec47f426b940c56933c1cb4\",\n                \"playListId\": \"5eb5246b680ef51b4c449291\",\n                \"addedAt\": \"2020-05-20T00:52:18.550Z\",\n                \"isPrivate\": false\n            },\n            {\n                \"collaboratorsId\": [],\n                \"_id\": \"5ec48db96b940c56933c1d6a\",\n                \"playListId\": \"5ec2af35afb12b366cf04775\",\n                \"addedAt\": \"2020-05-20T01:54:01.698Z\",\n                \"isPrivate\": false\n            }\n        ],\n        \"followPlaylist\": [\n            {\n                \"_id\": \"5eb51bb0e8fb881a3ce466ad\",\n                \"playListId\": \"5eb51bb0e8fb881a3ce466aa\",\n                \"isPrivate\": false\n            },\n            {\n                \"_id\": \"5eb51c3995f7fd0cecb19e95\",\n                \"playListId\": \"5eb51c3995f7fd0cecb19e92\",\n                \"isPrivate\": false\n            },\n            {\n                \"_id\": \"5eb51c4595f7fd0cecb19e99\",\n                \"playListId\": \"5eb51c4595f7fd0cecb19e96\",\n                \"isPrivate\": false\n            },\n            {\n                \"_id\": \"5eb51f1932fc2c23b034fad2\",\n                \"playListId\": \"5eb51f1932fc2c23b034facf\",\n                \"isPrivate\": false\n            },\n            {\n                \"_id\": \"5eb51f2532fc2c23b034fad6\",\n                \"playListId\": \"5eb51f2432fc2c23b034fad3\",\n                \"isPrivate\": false\n            },\n            {\n                \"_id\": \"5eb51fc3afa54d23a0297fb2\",\n                \"playListId\": \"5eb51fc2afa54d23a0297faf\",\n                \"isPrivate\": false\n            },\n            {\n                \"_id\": \"5eb51fcfafa54d23a0297fb6\",\n                \"playListId\": \"5eb51fcfafa54d23a0297fb3\",\n                \"isPrivate\": false\n            },\n            {\n                \"_id\": \"5eb520fdc71ff52ca44f6982\",\n                \"playListId\": \"5eb520fcc71ff52ca44f697f\",\n                \"isPrivate\": false\n            },\n            {\n                \"_id\": \"5eb5217b468bdf2e6c3baa60\",\n                \"playListId\": \"5eb5217b468bdf2e6c3baa5d\",\n                \"isPrivate\": false\n            },\n            {\n                \"_id\": \"5eb52188468bdf2e6c3baa64\",\n                \"playListId\": \"5eb52187468bdf2e6c3baa61\",\n                \"isPrivate\": false\n            },\n            {\n                \"_id\": \"5eb521a247ed2c1cc072f556\",\n                \"playListId\": \"5eb521a247ed2c1cc072f553\",\n                \"isPrivate\": false\n            },\n            {\n                \"_id\": \"5eb5222cd6ef000f6866ea5d\",\n                \"playListId\": \"5eb5222bd6ef000f6866ea5a\",\n                \"isPrivate\": false\n            },\n            {\n                \"_id\": \"5eb52239d6ef000f6866ea62\",\n                \"playListId\": \"5eb52239d6ef000f6866ea5f\",\n                \"isPrivate\": false\n            },\n            {\n                \"_id\": \"5eb5229bf5d33f2daca6357e\",\n                \"playListId\": \"5eb5229af5d33f2daca6357b\",\n                \"isPrivate\": false\n            },\n            {\n                \"_id\": \"5eb522a8f5d33f2daca63586\",\n                \"playListId\": \"5eb522a8f5d33f2daca63583\",\n                \"isPrivate\": false\n            },\n            {\n                \"_id\": \"5eb522b6f5d33f2daca6358e\",\n                \"playListId\": \"5eb522b5f5d33f2daca6358b\",\n                \"isPrivate\": false\n            },\n            {\n                \"_id\": \"5eb522c3f5d33f2daca63596\",\n                \"playListId\": \"5eb522c3f5d33f2daca63593\",\n                \"isPrivate\": false\n            },\n            {\n                \"_id\": \"5eb522d1f5d33f2daca6359e\",\n                \"playListId\": \"5eb522d0f5d33f2daca6359b\",\n                \"isPrivate\": false\n            },\n            {\n                \"_id\": \"5eb522def5d33f2daca635a6\",\n                \"playListId\": \"5eb522def5d33f2daca635a3\",\n                \"isPrivate\": false\n            },\n            {\n                \"_id\": \"5eb522ecf5d33f2daca635ae\",\n                \"playListId\": \"5eb522ebf5d33f2daca635ab\",\n                \"isPrivate\": false\n            },\n            {\n                \"_id\": \"5eb522faf5d33f2daca635b6\",\n                \"playListId\": \"5eb522f9f5d33f2daca635b3\",\n                \"isPrivate\": false\n            },\n            {\n                \"_id\": \"5eb52307f5d33f2daca635be\",\n                \"playListId\": \"5eb52307f5d33f2daca635bb\",\n                \"isPrivate\": false\n            },\n            {\n                \"_id\": \"5eb52315f5d33f2daca635c6\",\n                \"playListId\": \"5eb52314f5d33f2daca635c3\",\n                \"isPrivate\": false\n            },\n            {\n                \"_id\": \"5eb52322f5d33f2daca635ce\",\n                \"playListId\": \"5eb52322f5d33f2daca635cb\",\n                \"isPrivate\": false\n            },\n            {\n                \"_id\": \"5eb52330f5d33f2daca635d6\",\n                \"playListId\": \"5eb5232ff5d33f2daca635d3\",\n                \"isPrivate\": false\n            },\n            {\n                \"_id\": \"5eb5233df5d33f2daca635de\",\n                \"playListId\": \"5eb5233df5d33f2daca635db\",\n                \"isPrivate\": false\n            },\n            {\n                \"_id\": \"5eb5234bf5d33f2daca635e6\",\n                \"playListId\": \"5eb5234af5d33f2daca635e3\",\n                \"isPrivate\": false\n            },\n            {\n                \"_id\": \"5ec46acd6fc95d6c54420971\",\n                \"playListId\": \"5eb52479680ef51b4c449299\",\n                \"isPrivate\": false\n            },\n            {\n                \"_id\": \"5ec47f426b940c56933c1cb5\",\n                \"playListId\": \"5eb5246b680ef51b4c449291\",\n                \"isPrivate\": false\n            },\n            {\n                \"_id\": \"5ec48db96b940c56933c1d6b\",\n                \"playListId\": \"5ec2af35afb12b366cf04775\",\n                \"isPrivate\": false\n            }\n        ],\n        \"saveAlbum\": [],\n        \"following\": [],\n        \"followers\": [\n            \"5eb0906430a9a01f144b723c\"\n        ]\n    }\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "public_code/doc.js",
+    "groupTitle": "Follow"
+  },
+  {
+    "type": "DELETE",
+    "url": "/api/me/unfollow/user/{user_id}",
+    "title": "unfollow user with user_id",
+    "name": "unfollow_user",
+    "group": "Follow",
+    "description": "<p style=\"color:red;\">unfollow user</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "x-auth-token",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "QueryParam": [
+          {
+            "group": "QueryParam",
+            "optional": false,
+            "field": "user_id",
+            "description": "<p>Required. user id that the user will follow</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body</br> On error, the header status code is an error code and the response body contains an error object.</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "curl --location --request DELETE 'http://localhost:3000/api/me/unfollow/user/5eb08fce30a9a01f144b722d' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWIwOTA2NDMwYTlhMDFmMTQ0YjcyM2MiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTkwNjg4MTkwLCJleHAiOjMxNDY0ODg4NzgwMjY4MDM3MDB9.jr-AzUxXBEF9veCGB0JZHUtEpnjSQOQ-_w5Vi5XGh0M' \\",
+        "type": "curl"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "unfollowed user successfully",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "public_code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1725,7 +1911,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -1780,7 +1966,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -1826,7 +2012,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -1914,7 +2100,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -2002,7 +2188,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -2061,7 +2247,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2120,7 +2306,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2185,7 +2371,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2250,7 +2436,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2299,7 +2485,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2349,7 +2535,57 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
+    "groupTitle": "Library"
+  },
+  {
+    "type": "DELETE",
+    "url": "api/playlists/{playlist_id}/followers",
+    "title": "Unfollow a Playlist",
+    "name": "Unfollow_a_Playlist",
+    "group": "Library",
+    "description": "<p style=\"color:red;\">Remove the current user as a follower of a playlist.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "x-auth-token",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the user.</br>Unfollowing a publicly followed playlist for a user requires authorization of the playlist-modify-public scope; unfollowing a privately followed playlist requires the playlist-modify-private scope.</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "PathParameter": [
+          {
+            "group": "PathParameter",
+            "optional": false,
+            "field": "playlist_id",
+            "description": "<p>The Spotify ID of the playlist that is to be no longer followed.</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body is {success:&quot;unfollowed this playlist successfully&quot;}.</br> On error, the header status code is an error code and the response body contains an error object.</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "curl --location --request DELETE 'http://localhost:3000/api/playlists/5e8cbe527f37604d583f8d5c/followers' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \\",
+        "type": "curl"
+      }
+    ],
+    "version": "0.0.0",
+    "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2399,7 +2635,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2449,7 +2685,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2512,7 +2748,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Personalization"
   },
   {
@@ -2576,7 +2812,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2638,7 +2874,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2681,7 +2917,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2732,7 +2968,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2783,7 +3019,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2825,7 +3061,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2868,7 +3104,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2918,7 +3154,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2969,7 +3205,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3020,7 +3256,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3062,7 +3298,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3112,7 +3348,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3185,7 +3421,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3280,7 +3516,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3353,7 +3589,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3412,7 +3648,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3463,7 +3699,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3536,7 +3772,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3603,7 +3839,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3646,7 +3882,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3697,7 +3933,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3767,7 +4003,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3862,7 +4098,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3929,7 +4165,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3988,7 +4224,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4053,7 +4289,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4112,7 +4348,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4168,7 +4404,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4224,7 +4460,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4262,6 +4498,20 @@ define({ "api": [
             "description": "<p>Required.A comma-separated list of item types to search across.Valid types are: top, album , artist, playlist, and track.Search results include hits from all the specified item types.</p>"
           }
         ],
+        "Body parameters": [
+          {
+            "group": "Body parameters",
+            "optional": false,
+            "field": "limit",
+            "description": "<p>optional. the limit of response length .</p>"
+          },
+          {
+            "group": "Body parameters",
+            "optional": false,
+            "field": "offset",
+            "description": "<p>Optional. The index of the first object  to return..</p>"
+          }
+        ],
         "Response": [
           {
             "group": "Response",
@@ -4280,7 +4530,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Search"
   },
   {
@@ -4336,7 +4586,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Search"
   },
   {
@@ -4387,7 +4637,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Search"
   },
   {
@@ -4443,7 +4693,7 @@ define({ "api": [
       }
     ],
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Search"
   },
   {
@@ -4486,7 +4736,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4545,7 +4795,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4604,7 +4854,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4663,7 +4913,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4722,7 +4972,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4781,7 +5031,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4840,7 +5090,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4899,7 +5149,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4950,7 +5200,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Users_Profile"
   },
   {
@@ -5001,7 +5251,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Users_Profile"
   },
   {
@@ -5068,7 +5318,7 @@ define({ "api": [
       ]
     },
     "version": "0.0.0",
-    "filename": "Public_code/doc.js",
+    "filename": "public_code/doc.js",
     "groupTitle": "Users_Profile"
   }
 ] });

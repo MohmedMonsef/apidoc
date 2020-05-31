@@ -1324,11 +1324,96 @@
  *
  * @apiParam (PathParameters)  category_id 	The Spotify category ID for the category.
  *
- *  @apiParam (QueryParameters)  country  			Optional. A country: an ISO 3166-1 alpha-2 country code.
+ *  @apiParam (QueryParameters)  country  Optional. A country: an ISO 3166-1 alpha-2 country code.
  * @apiParam (QueryParameters)  limit 	Optional. The maximum number of items to return.</br> Default: 20. Minimum: 1. Maximum: 50.
  * @apiParam (QueryParameters)  offset 	Optional. The index of the first item to return.</br> Default: 0 (the first object).</br> Use with limit to get the next set of items.
  *@apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains</br> an array of simplified playlist objects (wrapped in a paging object) in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
  *
+ * @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/browse/categories/5ec36eeaedbc6b20ecdbd823/playlists' \
+ * @apiSuccessExample {json} Success-Response:
+ {
+    "playlists": [
+        {
+            "_id": "5eb5258b680ef51b4c449321",
+            "name": "my favorite",
+            "images": [
+                {
+                    "_id": "5eb52590680ef51b4c449325",
+                    "height": 100,
+                    "width": 100
+                }
+            ],
+            "ownerId": "5eb0903230a9a01f144b7237",
+            "ownerName": "Omar"
+        },
+        {
+            "_id": "5eb5259d680ef51b4c449329",
+            "name": "Ayat el quran",
+            "images": [
+                {
+                    "_id": "5eb525a2680ef51b4c44932d",
+                    "height": 100,
+                    "width": 100
+                }
+            ],
+            "ownerId": "5eb0903c30a9a01f144b7238",
+            "ownerName": "Kareem"
+        },
+        {
+            "_id": "5eb525aa680ef51b4c449331",
+            "name": "Soura",
+            "images": [
+                {
+                    "_id": "5eb525af680ef51b4c449335",
+                    "height": 100,
+                    "width": 100
+                }
+            ],
+            "ownerId": "5eb0903c30a9a01f144b7238",
+            "ownerName": "Kareem"
+        },
+        {
+            "_id": "5eb525bc680ef51b4c449339",
+            "name": "Playlist4",
+            "images": [
+                {
+                    "_id": "5eb525c1680ef51b4c44933d",
+                    "height": 100,
+                    "width": 100
+                }
+            ],
+            "ownerId": "5eb0904630a9a01f144b7239",
+            "ownerName": "Mohmed"
+        },
+        {
+            "_id": "5eb525ce680ef51b4c449341",
+            "name": " playlist5",
+            "images": [
+                {
+                    "_id": "5eb525d3680ef51b4c449345",
+                    "height": 100,
+                    "width": 100
+                }
+            ],
+            "ownerId": "5eb0905030a9a01f144b723a",
+            "ownerName": "Tarek"
+        },
+        {
+            "_id": "5eb525e0680ef51b4c449349",
+            "name": "Which need",
+            "images": [
+                {
+                    "_id": "5eb525e5680ef51b4c44934d",
+                    "height": 100,
+                    "width": 100
+                }
+            ],
+            "ownerId": "5eb0905a30a9a01f144b723b",
+            "ownerName": "Abdel Rahman"
+        }
+    ]
+}
  */
 
 /**
@@ -2230,7 +2315,7 @@
 /**
  * @api {DELETE} api/playlists/{playlist_id}/followers Unfollow a Playlist
  * @apiName Unfollow a Playlist
- * @apiGroup Follow
+ * @apiGroup Library
  * @apiDescription
  * <p style="color:red;">Remove the current user as a follower of a playlist.</p>
  *
@@ -2497,6 +2582,389 @@
 --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
 
  */
+
+/**
+ * @api {get} /api/me/following/user get users that user follows
+ * @apiName get users that user follows
+ * @apiGroup Follow
+ * @apiDescription
+ * <p style="color:red;">get all the  users that the logged in  user follows.</p>
+ *
+ *
+ * <h1>Request Parameters</h1></br></br>
+ *
+ * <h1> Endpoint</h1>
+ *
+ * @apiHeader (Header)  x-auth-token 		Required. A valid access token from the Spotify Accounts service
+ *
+ *  @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body</br> contains an array of users in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
+ *
+ *  @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/me/following/user' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWIwOTA2NDMwYTlhMDFmMTQ0YjcyM2MiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTkwNjg4MTkwLCJleHAiOjMxNDY0ODg4NzgwMjY4MDM3MDB9.jr-AzUxXBEF9veCGB0JZHUtEpnjSQOQ-_w5Vi5XGh0M' 
+ *
+ *  @apiSuccessExample {json} Success-Response:
+*[
+    {
+        "gender": "f",
+        "email": "dai.a.elrihany@gmail.com",
+        "displayName": "Dai",
+        "birthDate": "1998-01-01T00:00:00.000Z",
+        "product": "free",
+        "images": [
+            {
+                "_id": "5eb51153dd06db2ffca30291",
+                "height": 100,
+                "width": 100
+            }
+        ],
+        "follow": [
+            {
+                "_id": "5ec046a2058f3c35b859add0",
+                "id": "5eb0a4749b15d854c08f736e"
+            }
+        ],
+        "createPlaylist": [
+            {
+                "collaboratorsId": [],
+                "_id": "5ec46acc6fc95d6c54420970",
+                "playListId": "5eb52479680ef51b4c449299",
+                "addedAt": "2020-05-19T23:25:00.759Z",
+                "isPrivate": false
+            },
+            {
+                "collaboratorsId": [],
+                "_id": "5ec47f426b940c56933c1cb4",
+                "playListId": "5eb5246b680ef51b4c449291",
+                "addedAt": "2020-05-20T00:52:18.550Z",
+                "isPrivate": false
+            },
+            {
+                "collaboratorsId": [],
+                "_id": "5ec48db96b940c56933c1d6a",
+                "playListId": "5ec2af35afb12b366cf04775",
+                "addedAt": "2020-05-20T01:54:01.698Z",
+                "isPrivate": false
+            }
+        ],
+        "followPlaylist": [
+            {
+                "_id": "5eb51bb0e8fb881a3ce466ad",
+                "playListId": "5eb51bb0e8fb881a3ce466aa",
+                "isPrivate": false
+            },
+            {
+                "_id": "5eb51c3995f7fd0cecb19e95",
+                "playListId": "5eb51c3995f7fd0cecb19e92",
+                "isPrivate": false
+            },
+            {
+                "_id": "5eb51c4595f7fd0cecb19e99",
+                "playListId": "5eb51c4595f7fd0cecb19e96",
+                "isPrivate": false
+            },
+            {
+                "_id": "5eb51f1932fc2c23b034fad2",
+                "playListId": "5eb51f1932fc2c23b034facf",
+                "isPrivate": false
+            },
+            {
+                "_id": "5eb51f2532fc2c23b034fad6",
+                "playListId": "5eb51f2432fc2c23b034fad3",
+                "isPrivate": false
+            },
+            {
+                "_id": "5eb51fc3afa54d23a0297fb2",
+                "playListId": "5eb51fc2afa54d23a0297faf",
+                "isPrivate": false
+            },
+            {
+                "_id": "5eb51fcfafa54d23a0297fb6",
+                "playListId": "5eb51fcfafa54d23a0297fb3",
+                "isPrivate": false
+            },
+            {
+                "_id": "5eb520fdc71ff52ca44f6982",
+                "playListId": "5eb520fcc71ff52ca44f697f",
+                "isPrivate": false
+            },
+            {
+                "_id": "5eb5217b468bdf2e6c3baa60",
+                "playListId": "5eb5217b468bdf2e6c3baa5d",
+                "isPrivate": false
+            },
+            {
+                "_id": "5eb52188468bdf2e6c3baa64",
+                "playListId": "5eb52187468bdf2e6c3baa61",
+                "isPrivate": false
+            },
+            {
+                "_id": "5eb521a247ed2c1cc072f556",
+                "playListId": "5eb521a247ed2c1cc072f553",
+                "isPrivate": false
+            },
+            {
+                "_id": "5eb5222cd6ef000f6866ea5d",
+                "playListId": "5eb5222bd6ef000f6866ea5a",
+                "isPrivate": false
+            },
+            {
+                "_id": "5eb52239d6ef000f6866ea62",
+                "playListId": "5eb52239d6ef000f6866ea5f",
+                "isPrivate": false
+            },
+            {
+                "_id": "5eb5229bf5d33f2daca6357e",
+                "playListId": "5eb5229af5d33f2daca6357b",
+                "isPrivate": false
+            },
+            {
+                "_id": "5eb522a8f5d33f2daca63586",
+                "playListId": "5eb522a8f5d33f2daca63583",
+                "isPrivate": false
+            },
+            {
+                "_id": "5eb522b6f5d33f2daca6358e",
+                "playListId": "5eb522b5f5d33f2daca6358b",
+                "isPrivate": false
+            },
+            {
+                "_id": "5eb522c3f5d33f2daca63596",
+                "playListId": "5eb522c3f5d33f2daca63593",
+                "isPrivate": false
+            },
+            {
+                "_id": "5eb522d1f5d33f2daca6359e",
+                "playListId": "5eb522d0f5d33f2daca6359b",
+                "isPrivate": false
+            },
+            {
+                "_id": "5eb522def5d33f2daca635a6",
+                "playListId": "5eb522def5d33f2daca635a3",
+                "isPrivate": false
+            },
+            {
+                "_id": "5eb522ecf5d33f2daca635ae",
+                "playListId": "5eb522ebf5d33f2daca635ab",
+                "isPrivate": false
+            },
+            {
+                "_id": "5eb522faf5d33f2daca635b6",
+                "playListId": "5eb522f9f5d33f2daca635b3",
+                "isPrivate": false
+            },
+            {
+                "_id": "5eb52307f5d33f2daca635be",
+                "playListId": "5eb52307f5d33f2daca635bb",
+                "isPrivate": false
+            },
+            {
+                "_id": "5eb52315f5d33f2daca635c6",
+                "playListId": "5eb52314f5d33f2daca635c3",
+                "isPrivate": false
+            },
+            {
+                "_id": "5eb52322f5d33f2daca635ce",
+                "playListId": "5eb52322f5d33f2daca635cb",
+                "isPrivate": false
+            },
+            {
+                "_id": "5eb52330f5d33f2daca635d6",
+                "playListId": "5eb5232ff5d33f2daca635d3",
+                "isPrivate": false
+            },
+            {
+                "_id": "5eb5233df5d33f2daca635de",
+                "playListId": "5eb5233df5d33f2daca635db",
+                "isPrivate": false
+            },
+            {
+                "_id": "5eb5234bf5d33f2daca635e6",
+                "playListId": "5eb5234af5d33f2daca635e3",
+                "isPrivate": false
+            },
+            {
+                "_id": "5ec46acd6fc95d6c54420971",
+                "playListId": "5eb52479680ef51b4c449299",
+                "isPrivate": false
+            },
+            {
+                "_id": "5ec47f426b940c56933c1cb5",
+                "playListId": "5eb5246b680ef51b4c449291",
+                "isPrivate": false
+            },
+            {
+                "_id": "5ec48db96b940c56933c1d6b",
+                "playListId": "5ec2af35afb12b366cf04775",
+                "isPrivate": false
+            }
+        ],
+        "saveAlbum": [],
+        "following": [],
+        "followers": [
+            "5eb0906430a9a01f144b723c"
+        ]
+    }
+]
+ */
+
+
+/**
+ * @api {get} /api/me/followers/user get user followers
+ * @apiName  get user followers
+ * @apiGroup Follow
+ * @apiDescription
+ * <p style="color:red;">follow other  user</p>
+ *
+ *
+ * <h1>Request Parameters</h1></br></br>
+ *
+ * <h1> Endpoint</h1>
+ *
+ * @apiHeader (Header)  x-auth-token 		Required. A valid access token from the Spotify Accounts service
+ *
+ *  @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body</br> contains an array of users in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
+ *
+ *  @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/me/followers/user' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWIwOGZjZTMwYTlhMDFmMTQ0YjcyMmQiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTkwNjg4NzkzLCJleHAiOjMxNDY0ODg4NzgwMjY4MDQwMDB9.gaUBESzDLwhm7uPg9pvv03aH4gsS4RlT3TyPAj7mtoA' 
+ *
+ *  @apiSuccessExample {json} Success-Response:
+*[
+    {
+        "gender": "male",
+        "email": "bahaaeldeen1999@gmail.com",
+        "displayName": "Bahaa",
+        "birthDate": "1999-06-07T00:00:00.000Z",
+        "product": "free",
+        "images": [
+            {
+                "_id": "5ec336c7903e064e047da9a3",
+                "height": 100,
+                "width": 100
+            }
+        ],
+        "follow": [],
+        "createPlaylist": [
+            {
+                "collaboratorsId": [],
+                "_id": "5eb52a2663eea332d416b9b0",
+                "playListId": "5eb52a2563eea332d416b9ae",
+                "addedAt": "2020-05-08T09:45:10.004Z",
+                "isPrivate": false
+            },
+            {
+                "collaboratorsId": [],
+                "_id": "5eb52a3363eea332d416b9b8",
+                "playListId": "5eb52a3363eea332d416b9b6",
+                "addedAt": "2020-05-08T09:45:23.641Z",
+                "isPrivate": false
+            }
+        ],
+        "followPlaylist": [
+            {
+                "_id": "5eb52a2663eea332d416b9b1",
+                "playListId": "5eb52a2563eea332d416b9ae",
+                "isPrivate": false
+            },
+            {
+                "_id": "5eb52a3463eea332d416b9b9",
+                "playListId": "5eb52a3363eea332d416b9b6",
+                "isPrivate": false
+            }
+        ],
+        "saveAlbum": [],
+        "following": [
+            "5eb08fce30a9a01f144b722d"
+        ],
+        "followers": []
+    }
+]
+ */
+
+
+/**
+ * @api {DELETE} /api/me/unfollow/user/{user_id} unfollow user with user_id
+ * @apiName  unfollow user
+ * @apiGroup Follow
+ * @apiDescription
+ * <p style="color:red;">unfollow user</p>
+ *
+ *
+ * <h1>Request Parameters</h1></br></br>
+ *
+ * <h1> Endpoint</h1>
+ *
+ * @apiHeader (Header)  x-auth-token 		Required. A valid access token from the Spotify Accounts service
+ * @apiParam (QueryParam) user_id           Required. user id that the user will follow 
+ *  @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body</br> On error, the header status code is an error code and the response body contains an error object.
+ *
+ *  @apiExample {curl} Example usage:
+ *curl --location --request DELETE 'http://localhost:3000/api/me/unfollow/user/5eb08fce30a9a01f144b722d' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWIwOTA2NDMwYTlhMDFmMTQ0YjcyM2MiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTkwNjg4MTkwLCJleHAiOjMxNDY0ODg4NzgwMjY4MDM3MDB9.jr-AzUxXBEF9veCGB0JZHUtEpnjSQOQ-_w5Vi5XGh0M' \
+ *
+ *  @apiSuccessExample {json} Success-Response:
+*unfollowed user successfully
+ */
+
+
+
+
+/**
+ * @api {POST} /api/me/follow/user/{user_id} follow user with user_id
+ * @apiName  follow user
+ * @apiGroup Follow
+ * @apiDescription
+ * <p style="color:red;">get all the  user's followers.</p>
+ *
+ *
+ * <h1>Request Parameters</h1></br></br>
+ *
+ * <h1> Endpoint</h1>
+ *
+ * @apiHeader (Header)  x-auth-token 		Required. A valid access token from the Spotify Accounts service
+ * @apiParam (QueryParam) user_id        Required. user id that the user will follow 
+ *  @apiParam (Response)  Format  On success, the HTTP status code in the response header is 201 OK and the response body</br> On error, the header status code is an error code and the response body contains an error object.
+ *
+ *  @apiExample {curl} Example usage:
+ * curl --location --request POST 'http://localhost:3000/api/me/follow/user/5eb08fce30a9a01f144b722d' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWIwOTA2NDMwYTlhMDFmMTQ0YjcyM2MiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTkwNjg4MTkwLCJleHAiOjMxNDY0ODg4NzgwMjY4MDM3MDB9.jr-AzUxXBEF9veCGB0JZHUtEpnjSQOQ-_w5Vi5XGh0M' \
+ *
+ *  @apiSuccessExample {json} Success-Response:
+*followed user successfully
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //Personalization
@@ -4063,7 +4531,8 @@
  *
  * @apiParam (Query parameters) name	Required.Search query keywords.
  * @apiParam (Query parameters) type	Required.A comma-separated list of item types to search across.Valid types are: top, album , artist, playlist, and track.Search results include hits from all the specified item types.
-
+*  @apiParam (Body parameters)  limit  optional. the limit of response length .
+*  @apiParam (Body parameters)  offset  Optional. The index of the first object  to return..
  * @apiParam (Response) Format
  * On success:
  * </br></br>In the response header the HTTP status code is 200 OK.
