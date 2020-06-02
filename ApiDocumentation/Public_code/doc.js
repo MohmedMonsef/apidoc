@@ -2121,7 +2121,7 @@
 //Follow
 
 /**
- * @api {get} api/me/following/contains Check if Current User Follows Artist
+ * @api {get} api/me/following/contains/{id} Check if Current User Follows Artist
  * @apiName Check if Current User Follows Artists or Users
  * @apiGroup Follow
  * @apiDescription
@@ -2135,13 +2135,20 @@
  * @apiHeader (Header)  x-auth-token 	Required. A valid access token from the Spotify Accounts service</br>The access token must have been issued on behalf of the current user.</br> Getting details of the artists or users the current user follows requires authorization of the user-follow-read scope.
  *
  *
- * @apiParam (BodyParameters)  id		Required.the user Spotify ID to check.</br> For example: id=74ASZWbe4lXaubB36ztrGX A maximum of 1 can be sent in one request.
+ * @apiParam (Path Parameters)  id		Required.the user Spotify ID to check.</br> For example: id=74ASZWbe4lXaubB36ztrGX A maximum of 1 can be sent in one request.
  *
  *
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body</br> contains a JSON array of true or false value.</br> On error, the header status code is an error code and the response body contains an error object.
  *
- *
- *
+ *  @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/me/following/contains/5eb0a4749b15d854c08f736e' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+
+
+ *  @apiSuccessExample {json} Success-Response:
+ * {
+ *  "follow": false
+ *}
  */
 
 /**
@@ -2187,7 +2194,13 @@
  *
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 204 No Content and the response body is empty.</br> On error, the header status code is an error code and the response body contains an error object.
  *
- *
+ *  @apiExample {curl} Example usage:
+ * curl --location --request PUT 'http://localhost:3000/api/me/following' \
+ * --header 'Content-Type: application/json' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+*--data-raw '{
+	"id":"5eb0a4749b15d854c08f736e"
+}'
  *
  */
 
@@ -2235,14 +2248,30 @@
  * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user. </br>Getting details of the artists or users the current user follows requires authorization of the user-follow-read scope.
  *
  *
- * @apiParam (QueryParameters)  limit  	Optional. The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
- *
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains an artists object. The artists object in turn contains a cursor-based paging object of Artists.</br> On error, the header status code is an error code and the response body contains an error object.
  *
  * @apiExample {curl} Example usage:
  * curl --location --request GET 'http://localhost:3000/api/me/followingArtist' \
 --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
 --header 'Content-Type: application/json' \
+* @apiSuccessExample {json} Success-Response:
+ *{
+     
+    "Artists": [
+        {
+            "_id": "5eb0a44b9b15d854c08f7362",
+            "Name": "artist1",
+            "images": [
+                {
+                    "_id": "5eb0b3cede66c65e34c18b56",
+                    "height": 100,
+                    "width": 100
+                }
+            ],
+            "type": "Artist"
+        }
+    ]
+ }
  */
 
 /**
@@ -2263,7 +2292,14 @@
  * @apiParam (BodyParameters)  id 	Optional. A JSON of the artist ID. For example: {id:"74ASZWbe4lXaubB36ztrGX"}.</br> A maximum of 1 ID can be sent in one request.</br> Note: if the ids parameter is present in the query string, any IDs listed here in the body will be ignored.
  *
  *
- * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 No Content and the response body is empty.</br> On error, the header status code is an error code and the response body contains an error object.
+ * curl --location --request GET 'http://localhost:3000api/me/following ' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+	"id":"5eb0a4749b15d854c08f736e"
+}' 
+* @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 No Content and the response body is empty.</br> On error, the header status code is an error code and the response body contains an error object.
+
  */
 //like Tracks
 /**
@@ -2896,7 +2932,7 @@
  * <h1> Endpoint</h1>
  *
  * @apiHeader (Header)  x-auth-token 		Required. A valid access token from the Spotify Accounts service
- * @apiParam (QueryParam) user_id           Required. user id that the user will follow 
+ * @apiParam (Path Param) user_id           Required. user id that the user will follow 
  *  @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body</br> On error, the header status code is an error code and the response body contains an error object.
  *
  *  @apiExample {curl} Example usage:
@@ -2911,11 +2947,11 @@
 
 
 /**
- * @api {POST} /api/me/follow/user/{user_id} follow user with user_id
+ * @api {PUT} /api/me/follow/user/{user_id} follow user with user_id
  * @apiName  follow user
  * @apiGroup Follow
  * @apiDescription
- * <p style="color:red;">get all the  user's followers.</p>
+ * <p style="color:red;">make user follow another.</p>
  *
  *
  * <h1>Request Parameters</h1></br></br>
@@ -2923,47 +2959,16 @@
  * <h1> Endpoint</h1>
  *
  * @apiHeader (Header)  x-auth-token 		Required. A valid access token from the Spotify Accounts service
- * @apiParam (QueryParam) user_id        Required. user id that the user will follow 
- *  @apiParam (Response)  Format  On success, the HTTP status code in the response header is 201 OK and the response body</br> On error, the header status code is an error code and the response body contains an error object.
+ * @apiParam (path Param) user_id      Required. user id that the user will follow 
+ *  @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body</br> On error, the header status code is an error code and the response body contains an error object.
  *
  *  @apiExample {curl} Example usage:
- * curl --location --request POST 'http://localhost:3000/api/me/follow/user/5eb08fce30a9a01f144b722d' \
+ * curl --location --request PUT 'http://localhost:3000/api/me/follow/user/5eb08fce30a9a01f144b722d' \
 --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWIwOTA2NDMwYTlhMDFmMTQ0YjcyM2MiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTkwNjg4MTkwLCJleHAiOjMxNDY0ODg4NzgwMjY4MDM3MDB9.jr-AzUxXBEF9veCGB0JZHUtEpnjSQOQ-_w5Vi5XGh0M' \
  *
  *  @apiSuccessExample {json} Success-Response:
 *followed user successfully
  */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
