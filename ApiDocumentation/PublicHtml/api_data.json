@@ -5,6 +5,7 @@
     "title": "Get Several Albums",
     "name": "Get_Several_Albums",
     "group": "Album",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get Spotify catalog information for multiple albums identified by their Spotify IDs. </br> Optional parameters can be used to limit the number of tracks returned.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -54,7 +55,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Album"
   },
@@ -64,6 +64,7 @@
     "title": "Get an Album",
     "name": "Get_an_Album",
     "group": "Album",
+    "version": "1.1.0",
     "description": "<h1>Request Parameters</h1></br></br> <h1>Endpoint</h1> <p>GET https://api.spotify.com/v1/albums/:album_id</p>",
     "header": {
       "fields": {
@@ -113,7 +114,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Album"
   },
@@ -123,6 +123,7 @@
     "title": "Get an Album's Tracks",
     "name": "Get_an_Album's_Tracks",
     "group": "Album",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get Spotify catalog information about an album’s tracks. </br> Optional parameters can be used to limit the number of tracks returned.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -172,7 +173,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Album"
   },
@@ -182,6 +182,7 @@
     "title": "Create Album",
     "name": "Create_Album",
     "group": "Artist",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Create An Album for the Current Artist .</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -267,7 +268,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
@@ -277,6 +277,7 @@
     "title": "Get Artist from user.",
     "name": "Get_Artist_from_user.",
     "group": "Artist",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get Artist from user.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -318,7 +319,6 @@
         ]
       }
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
@@ -328,6 +328,7 @@
     "title": "Get Several Artists",
     "name": "Get_Several_Artists",
     "group": "Artist",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get Spotify catalog information for several artists based on their Spotify IDs.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -377,7 +378,6 @@
         ]
       }
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
@@ -387,6 +387,7 @@
     "title": "Get an Artist",
     "name": "Get_an_Artist",
     "group": "Artist",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get Spotify catalog information for a single artist identified by their unique Spotify ID.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -436,7 +437,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
@@ -446,6 +446,7 @@
     "title": "Get an Artist's Albums",
     "name": "Get_an_Artist's_Albums",
     "group": "Artist",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get Spotify catalog information about an artist’s albums.</br> Optional parameters can be specified in the query string to filter and sort the response.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -521,7 +522,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
@@ -531,6 +531,7 @@
     "title": "Get an Artist's Related Artists",
     "name": "Get_an_Artist's_Related_Artists",
     "group": "Artist",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get Spotify catalog information about artists similar to a given artist.</br> Similarity is based on analysis of the Spotify community’s listening history.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -580,7 +581,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
@@ -590,6 +590,7 @@
     "title": "Get an Artist's Top Tracks",
     "name": "Get_an_Artist's_Top_Tracks",
     "group": "Artist",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get Spotify catalog information about an artist’s top tracks by country.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -647,7 +648,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
@@ -657,6 +657,7 @@
     "title": "Get an Artist's Tracks",
     "name": "Get_an_Artist's_Top_Tracks",
     "group": "Artist",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get Spotify catalog information about an artist’s top tracks by country.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -699,7 +700,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
@@ -709,6 +709,7 @@
     "title": "Get an Artist's radio  (not implemented)",
     "name": "Get_an_Artist's_radio_ratio",
     "group": "Artist",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get alot of tracks belongs to this artist or tracks in the same artist's genre .</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -742,7 +743,6 @@
         ]
       }
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Artist"
   },
@@ -752,6 +752,7 @@
     "title": "Get Recommendations Based on Seeds  (not implemented yet)",
     "name": "Get_Recommendations_Based_on_Seeds",
     "group": "Browse",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Create a playlist-style listening experience based on seed artists, tracks and genres.</p> </br> <p>Recommendations are generated based on the available information for a given seed entity and matched against similar artists and tracks.</br></br> If there is sufficient information about the provided seeds, a list of tracks will be returned together with pool size details.</br></br> For artists and tracks that are very new or obscure there might not be enough data to generate a list of tracks. </p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -827,7 +828,6 @@
         ]
       }
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
@@ -837,6 +837,7 @@
     "title": "Get a Category",
     "name": "Get_a_Category",
     "group": "Browse",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get a single category used to tag items in Spotify (on, for example, the Spotify player’s “Browse” tab).</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -886,7 +887,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
@@ -896,6 +896,7 @@
     "title": "Get a Category's Playlists",
     "name": "Get_a_Category's_Playlists",
     "group": "Browse",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get a list of Spotify playlists tagged with a particular category.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -965,7 +966,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
@@ -975,6 +975,7 @@
     "title": "Get a List of Categories",
     "name": "Get_a_List_of_Categories",
     "group": "Browse",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get a list of categories used to tag items in Spotify (on, for example, the Spotify player’s “Browse” tab).</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -1016,7 +1017,6 @@
         ]
       }
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
@@ -1026,6 +1026,7 @@
     "title": "Get a List of Featured Playlists       (not implemented yet)",
     "name": "Get_a_List_of_Featured_Playlists",
     "group": "Browse",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get a list of categories used to tag items in Spotify (on, for example, the Spotify player’s “Browse” tab).</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -1077,7 +1078,6 @@
         ]
       }
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
@@ -1087,6 +1087,7 @@
     "title": "Get a List of New Releases",
     "name": "Get_a_List_of_New_Releases",
     "group": "Browse",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get a list of new album releases featured in Spotify (shown, for example, on a Spotify player’s “Browse” tab).</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "examples": [
       {
@@ -1116,7 +1117,6 @@
         ]
       }
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
@@ -1126,6 +1126,7 @@
     "title": "Get a List of popular albums",
     "name": "Get_a_List_of_popular_albums",
     "group": "Browse",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get a List of popular albums featured in Spotify (shown, for example, on a Spotify player’s “Browse” tab).</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "examples": [
       {
@@ -1155,7 +1156,6 @@
         ]
       }
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
@@ -1165,6 +1165,7 @@
     "title": "Get a List of popular artists",
     "name": "Get_a_List_of_popular_artists",
     "group": "Browse",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get a List of popular artists  featured in Spotify (shown, for example, on a Spotify player’s “Browse” tab).</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "examples": [
       {
@@ -1194,7 +1195,6 @@
         ]
       }
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
@@ -1204,6 +1204,7 @@
     "title": "Get a List of popular playlists",
     "name": "Get_a_List_of_popular_playlists",
     "group": "Browse",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get a List of popular playlists  featured in Spotify (shown, for example, on a Spotify player’s “Browse” tab).</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "examples": [
       {
@@ -1233,7 +1234,6 @@
         ]
       }
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
@@ -1243,6 +1243,7 @@
     "title": "Get a List of recently playing Playlists,artists,albums",
     "name": "Get_a_List_of_recently-playing",
     "group": "Browse",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get a List of recently playing Playlists,artists,albums in Spotify (on, for example, the Spotify player’s “Browse” tab).</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -1284,7 +1285,6 @@
         ]
       }
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
@@ -1294,6 +1294,7 @@
     "title": "Get genres playlists",
     "name": "Get_genres_playlists",
     "group": "Browse",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get a list ofGet genres playlists (shown, for example, on a Spotify player’s “Browse” tab).</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "examples": [
       {
@@ -1323,7 +1324,6 @@
         ]
       }
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Browse"
   },
@@ -1333,6 +1333,7 @@
     "title": "Check if Current User Follows Artist",
     "name": "Check_if_Current_User_Follows_Artists_or_Users",
     "group": "Follow",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Check to see if the current user is following one artist .</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -1382,7 +1383,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Follow"
   },
@@ -1392,6 +1392,7 @@
     "title": "Check if Users Follow a Playlist (Not implemented yet)",
     "name": "Check_if_Users_Follow_a_Playlist",
     "group": "Follow",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Check to see if one or more Spotify users are following a specified playlist.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -1433,7 +1434,6 @@
         ]
       }
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Follow"
   },
@@ -1443,6 +1443,7 @@
     "title": "Follow Artist",
     "name": "Follow_Artist",
     "group": "Follow",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Add the current user as a follower of one or more artists or other Spotify users.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -1489,7 +1490,6 @@
         "type": "curl"
       }
     ],
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Follow"
   },
@@ -1499,6 +1499,7 @@
     "title": "Follow a Playlist",
     "name": "Follow_a_Playlist",
     "group": "Follow",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Add the current user as a follower of a playlist.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -1553,7 +1554,6 @@
         "type": "curl"
       }
     ],
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Follow"
   },
@@ -1563,6 +1563,7 @@
     "title": "Get User's Followed Artists",
     "name": "Get_User's_Followed_Artists",
     "group": "Follow",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get the current user’s followed artists.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -1604,7 +1605,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Follow"
   },
@@ -1614,6 +1614,7 @@
     "title": "Unfollow Artist",
     "name": "Unfollow_Artist",
     "group": "Follow",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Remove the current user as a follower of one or more artists or other Spotify users.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -1653,7 +1654,6 @@
         ]
       }
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Follow"
   },
@@ -1663,6 +1663,7 @@
     "title": "follow user with user_id",
     "name": "follow_user",
     "group": "Follow",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">make user follow another.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -1712,7 +1713,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Follow"
   },
@@ -1722,6 +1722,7 @@
     "title": "get user followers",
     "name": "get_user_followers",
     "group": "Follow",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">follow other  user</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -1763,7 +1764,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Follow"
   },
@@ -1773,6 +1773,7 @@
     "title": "get users that user follows",
     "name": "get_users_that_user_follows",
     "group": "Follow",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">get all the  users that the logged in  user follows.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -1814,7 +1815,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Follow"
   },
@@ -1824,6 +1824,7 @@
     "title": "unfollow user with user_id",
     "name": "unfollow_user",
     "group": "Follow",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">unfollow user</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -1873,7 +1874,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Follow"
   },
@@ -1883,6 +1883,7 @@
     "title": "delete image",
     "name": "delete_image",
     "group": "Image",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">delete image file</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -1934,7 +1935,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Image"
   },
@@ -1944,6 +1944,7 @@
     "title": "get id of latest image of specific document",
     "name": "get_id_of_image",
     "group": "Image",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">get id of latest image in the source document</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -1989,7 +1990,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Image"
   },
@@ -1999,6 +1999,7 @@
     "title": "get image",
     "name": "get_image",
     "group": "Image",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">get image file</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -2035,7 +2036,6 @@
         "type": "curl"
       }
     ],
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Image"
   },
@@ -2045,6 +2045,7 @@
     "title": "update image",
     "name": "update_image",
     "group": "Image",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">update image to specific entity in database, with removing the existing images for this entity</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -2123,7 +2124,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Image"
   },
@@ -2133,6 +2133,7 @@
     "title": "upload image",
     "name": "upload_image",
     "group": "Image",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">upload image to specific entity in database, without removing the existing images for this entity</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -2211,7 +2212,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Image"
   },
@@ -2221,6 +2221,7 @@
     "title": "Check User's Saved Albums",
     "name": "Check_User's_Saved_Albums",
     "group": "Library",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Check if one or more albums is already saved in the current Spotify user’s ‘Your Music’ library.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -2270,7 +2271,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
@@ -2280,6 +2280,7 @@
     "title": "Check User's Saved Tracks",
     "name": "Check_User's_Saved_Tracks",
     "group": "Library",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Check if one or more tracks is already saved in the current Spotify user’s ‘Your Music’ library.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -2329,7 +2330,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
@@ -2339,6 +2339,7 @@
     "title": "Get Current User's Saved Albums",
     "name": "Get_Current_User's_Saved_Albums",
     "group": "Library",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get a list of the albums saved in the current Spotify user’s ‘Your Music’ library.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -2394,7 +2395,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
@@ -2404,6 +2404,7 @@
     "title": "Get a User's Saved Tracks",
     "name": "Get_a_User's_Saved_Tracks",
     "group": "Library",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get a list of the songs saved in the current Spotify user’s ‘Your Music’ library.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -2459,7 +2460,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
@@ -2469,6 +2469,7 @@
     "title": "Remove Albums for Current User",
     "name": "Remove_Albums_for_Current_User",
     "group": "Library",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Remove one or more albums from the current user’s ‘Your Music’ library.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -2508,7 +2509,6 @@
         ]
       }
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
@@ -2518,6 +2518,7 @@
     "title": "Save Albums for Current User",
     "name": "Save_Albums_for_Current_User",
     "group": "Library",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Save one or more albums to the current user’s ‘Your Music’ library.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -2558,7 +2559,6 @@
         "type": "curl"
       }
     ],
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
@@ -2568,6 +2568,7 @@
     "title": "Unfollow a Playlist",
     "name": "Unfollow_a_Playlist",
     "group": "Library",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Remove the current user as a follower of a playlist.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -2608,7 +2609,6 @@
         "type": "curl"
       }
     ],
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
@@ -2618,6 +2618,7 @@
     "title": "like track",
     "name": "like_track",
     "group": "Library",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Add the current user  like this track.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -2658,7 +2659,6 @@
         "type": "curl"
       }
     ],
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
@@ -2668,6 +2668,7 @@
     "title": "unlike track",
     "name": "unlike_track",
     "group": "Library",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Add the current user  unlike this track.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -2708,7 +2709,6 @@
         "type": "curl"
       }
     ],
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Library"
   },
@@ -2718,6 +2718,7 @@
     "title": "Get a User's Top Artists and Tracks        (not implemented yet)",
     "name": "Get_a_User's_Top_Artists_and_Tracks",
     "group": "Personalization",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get the current user’s top artists or tracks based on calculated affinity.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -2771,7 +2772,6 @@
         ]
       }
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Personalization"
   },
@@ -2781,6 +2781,7 @@
     "title": "Add an Item to the User's Playback Queue",
     "name": "Add_an_Item_to_the_User's_Playback_Queue",
     "group": "Player",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Add an item to the end of the user’s current playback queue.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -2835,7 +2836,6 @@
         "type": "curl"
       }
     ],
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
@@ -2845,6 +2845,7 @@
     "title": "Get Current User's Recently Played Tracks",
     "name": "Get_Current_User's_Recently_Played_Tracks.",
     "group": "Player",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get tracks from the current user’s recently played tracks.</p> <p>Returns the most recent 50 tracks played by a user. Note that a track currently playing will not be visible in play history until it has completed. A track must be played for more than 30 seconds to be included in play history.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -2897,7 +2898,6 @@
         "type": "curl"
       }
     ],
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
@@ -2907,6 +2907,7 @@
     "title": "Get Information About The User's Current Playback  (not implemented yet)",
     "name": "Get_Information_About_The_User's_Current_Playback",
     "group": "Player",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get information about the user’s current playback state, including track, track progress, and active device.</br> Optional parameters can be specified in the query string to filter and sort the response.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -2940,7 +2941,6 @@
         ]
       }
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
@@ -2950,6 +2950,7 @@
     "title": "Get the User's Currently Playing Track",
     "name": "Get_the_User's_Currently_Playing_Track",
     "group": "Player",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get the object currently being played on the user’s Spotify account.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -2991,7 +2992,6 @@
         ]
       }
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
@@ -3001,6 +3001,7 @@
     "title": "Get currently queue for this user",
     "name": "Get_the_User's_Currently_playback_queue",
     "group": "Player",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get the User's Currently playback queue</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -3042,7 +3043,6 @@
         ]
       }
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
@@ -3052,6 +3052,7 @@
     "title": "Pause a User's Playback",
     "name": "Pause_a_User's_Playback",
     "group": "Player",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Pause playback on the user’s account.</br> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -3084,7 +3085,6 @@
         "type": "curl"
       }
     ],
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
@@ -3094,6 +3094,7 @@
     "title": "Seek To Position In Currently Playing Track       (not implemented yet)",
     "name": "Seek_To_Position_In_Currently_Playing_Track",
     "group": "Player",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Seeks to the given position in the user’s currently playing track.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -3127,7 +3128,6 @@
         ]
       }
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
@@ -3137,6 +3137,7 @@
     "title": "Set Repeat Mode On User’s Playback",
     "name": "Set_Repeat_Mode_On_User’s_Playback",
     "group": "Player",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Set the repeat mode for the user’s playback. Options are repeat-track, repeat-context, and off.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -3177,7 +3178,6 @@
         "type": "curl"
       }
     ],
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
@@ -3187,6 +3187,7 @@
     "title": "Skip User’s Playback To Next Track",
     "name": "Skip_User’s_Playback_To_Next_Track",
     "group": "Player",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Skips to next track in the user’s queue.</p> <p>After a successful skip operation, playback will automatically start.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -3228,7 +3229,6 @@
         ]
       }
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
@@ -3238,6 +3238,7 @@
     "title": "Skip User’s Playback To Previous Track",
     "name": "Skip_User’s_Playback_To_Previous_Track",
     "group": "Player",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Skips to previous track in the user’s queue.</p> <p>Note that this will ALWAYS skip to the previous track, regardless of the current track’s progress. Returning to the start of the current track should be performed using the https://api.spotify.com/v1/me/player/seek endpoint.</p> <p>After a successful skip operation, playback will automatically start.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -3279,7 +3280,6 @@
         ]
       }
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
@@ -3289,6 +3289,7 @@
     "title": "Start/Resume a User's Playback",
     "name": "Start/Resume_a_User's_Playback",
     "group": "Player",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Start a new context or resume current playback on the user’s active device.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -3321,7 +3322,6 @@
         "type": "curl"
       }
     ],
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
@@ -3331,6 +3331,7 @@
     "title": "Toggle Shuffle For User’s Playback",
     "name": "Toggle_Shuffle_For_User’s_Playback",
     "group": "Player",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Toggle shuffle on or off for user’s playback.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -3371,7 +3372,6 @@
         "type": "curl"
       }
     ],
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Player"
   },
@@ -3381,6 +3381,7 @@
     "title": "Add Tracks to a Playlist",
     "name": "Add_Tracks_to_a_Playlist",
     "group": "Playlist",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Add one or more tracks to a user’s playlist..</p> <p>The Spotify URIs of the tracks to add can be passed either in the query string or as a JSON array in the request body</p> <p>. Passing them in the query string</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -3444,7 +3445,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
@@ -3454,6 +3454,7 @@
     "title": "Change a Playlist's Details",
     "name": "Change_a_Playlist's_Details",
     "group": "Playlist",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Change a Playlist's Details Change a playlist’s name and public/private state. (The user must, of course, own the playlist.)</p> Note that the request data is a JSON string, not separate fields <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -3539,7 +3540,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
@@ -3549,6 +3549,7 @@
     "title": "Create a Playlist",
     "name": "Create_a_Playlist",
     "group": "Playlist",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Create a playlist for a Spotify user. (The playlist will be empty until you add tracks.)</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -3612,7 +3613,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
@@ -3622,6 +3622,7 @@
     "title": "Get Tracks from a Playlist",
     "name": "Get_Tracks_from_a_Playlist",
     "group": "Playlist",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get Tracks from a playlist..</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -3671,7 +3672,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
@@ -3681,6 +3681,7 @@
     "title": "Get a List of Current User's Playlists",
     "name": "Get_a_List_of_Current_User's_Playlists.",
     "group": "Playlist",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get a list of the playlists owned or followed by the current Spotify user.</p> <p>Returns list of user's playlists created and followed by user</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -3722,7 +3723,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
@@ -3732,6 +3732,7 @@
     "title": "Get a List of a User's Playlists created and followed",
     "name": "Get_a_List_of_a_User's_Playlists",
     "group": "Playlist",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get a list of the playlists owned or followed by a Spotify user.</br> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -3795,7 +3796,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
@@ -3805,6 +3805,7 @@
     "title": "Get a Playlist",
     "name": "Get_a_Playlist.",
     "group": "Playlist",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get a playlist owned by a Spotify user.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -3862,7 +3863,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
@@ -3872,6 +3872,7 @@
     "title": "Get a Playlist Cover Image(not implemented yet)",
     "name": "Get_a_Playlist_Cover_Image",
     "group": "Playlist",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get the current image associated with a specific playlist.</p>",
     "parameter": {
       "fields": {
@@ -3905,7 +3906,6 @@
         ]
       }
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
@@ -3915,6 +3915,7 @@
     "title": "Get user deleted Playlists",
     "name": "Get_user_deleted_Playlists.",
     "group": "Playlist",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get user deleted Playlists</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -3956,7 +3957,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
@@ -3966,6 +3966,7 @@
     "title": "Remove Tracks from a Playlist",
     "name": "Remove_Tracks_from_a_Playlist",
     "group": "Playlist",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Remove one or more tracks from a user’s playlist.</p> There are several ways to specify which tracks to remove, determined by the request parameters. <b>Removing all occurrences of specific tracks</b> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -4026,7 +4027,6 @@
         "type": "curl"
       }
     ],
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
@@ -4036,6 +4036,7 @@
     "title": "Reorder a Playlist's Tracks",
     "name": "Reorder_a_Playlist's_Tracks",
     "group": "Playlist",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Reorder a track or a group of tracks in a playlist.</p> <p>When reordering tracks, the timestamp indicating when they were added and the user who added them will be kept untouched. In addition, the users following the playlists won’t be notified about changes in the playlists when the tracks are reordered.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -4121,7 +4122,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
@@ -4131,6 +4131,7 @@
     "title": "Replace a Playlist's Tracks (Not implemented yet)",
     "name": "Replace_a_Playlist's_Tracks.",
     "group": "Playlist",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Replace all the tracks in a playlist, overwriting its existing tracks. This powerful request can be useful for replacing tracks, re-ordering existing tracks, or clearing the playlist.</p> <p>The Spotify URIs of the tracks to set can be passed either as a JSON array in the request body or as a list in the query string. The request can only accept a maximum of 100 tracks; any additional tracks will need to be added using the “Add Tracks to a Playlist” endpoint.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -4188,7 +4189,6 @@
         ]
       }
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
@@ -4198,6 +4198,7 @@
     "title": "Restore user deleted Playlists.",
     "name": "Restore_user_deleted_Playlists.",
     "group": "Playlist",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Restore user deleted Playlists.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -4247,7 +4248,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
@@ -4257,6 +4257,7 @@
     "title": "Upload a Custom Playlist  Cover Image (Not implemented yet)",
     "name": "Upload_a_Custom_Playlist_Cover_Image.",
     "group": "Playlist",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Replace the image used to represent a specific playlist.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -4312,7 +4313,6 @@
         ]
       }
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
@@ -4322,6 +4322,7 @@
     "title": "delete a Playlist",
     "name": "delete_a_Playlist.",
     "group": "Playlist",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">delete a playlist owned by a Spotify user.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -4371,7 +4372,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
@@ -4381,6 +4381,7 @@
     "title": "toggle playlist collaborative attribute",
     "name": "toggle_collaborative.",
     "group": "Playlist",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">toggle the collaborative attribute of the specified playlist in the request</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -4427,7 +4428,6 @@
         "type": "curl"
       }
     ],
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
@@ -4437,6 +4437,7 @@
     "title": "toggle playlist public attribute",
     "name": "toggle_public.",
     "group": "Playlist",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">toggle the public attribute of the specified playlist in the request.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -4483,7 +4484,6 @@
         "type": "curl"
       }
     ],
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Playlist"
   },
@@ -4493,6 +4493,7 @@
     "title": "Search for an Item",
     "name": "Search_for_an_Item",
     "group": "Search",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get Spotify Catalog information about artists, albums, tracks or playlists that match a keyword string.</p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -4553,7 +4554,6 @@
         "type": "curl"
       }
     ],
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Search"
   },
@@ -4563,6 +4563,7 @@
     "title": "Add in search history",
     "name": "add_to_search_history",
     "group": "Search",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">add an object  to search history  </p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -4609,7 +4610,6 @@
         "type": "curl"
       }
     ],
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Search"
   },
@@ -4619,6 +4619,7 @@
     "title": "get search history",
     "name": "get_search_history",
     "group": "Search",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get search history  </p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -4660,7 +4661,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Search"
   },
@@ -4670,6 +4670,7 @@
     "title": "remove from search history",
     "name": "remove_from_search_history",
     "group": "Search",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">remove  an object  from search history  </p> <h1> Request parameters</h1> </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -4716,7 +4717,6 @@
         "type": "curl"
       }
     ],
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Search"
   },
@@ -4726,6 +4726,7 @@
     "title": "Get Audio Features for Several Tracks",
     "name": "Get_Audio_Features_for_Several_Tracks",
     "group": "Tracks",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get audio features for multiple tracks based on their Spotify IDs.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -4775,7 +4776,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Tracks"
   },
@@ -4785,6 +4785,7 @@
     "title": "Get Audio Features for a Track",
     "name": "Get_Audio_Features_for_a_Track",
     "group": "Tracks",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get audio feature information for a single track identified by its unique Spotify ID.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -4834,7 +4835,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Tracks"
   },
@@ -4844,6 +4844,7 @@
     "title": "Get Several Tracks",
     "name": "Get_Several_Tracks",
     "group": "Tracks",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get Spotify catalog information for multiple tracks based on their Spotify IDs.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -4893,7 +4894,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Tracks"
   },
@@ -4903,6 +4903,7 @@
     "title": "Get a Track",
     "name": "Get_a_Track",
     "group": "Tracks",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get Spotify catalog information for a single track identified by its unique Spotify ID.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -4952,7 +4953,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Tracks"
   },
@@ -4962,6 +4962,7 @@
     "title": "Get a Track with full info",
     "name": "Get_a_Track_with_artist_name_&_isLike",
     "group": "Tracks",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get Spotify catalog information for a single track identified by its unique Spotify ID.and get track artist name ,album name and if user like this track or no </p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -5011,7 +5012,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Tracks"
   },
@@ -5021,6 +5021,7 @@
     "title": "get related full tracks for specific track",
     "name": "get_related_full_tracks",
     "group": "Tracks",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">get related full tracks for specific track based on its genre. and first element is always the current track full info</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -5070,7 +5071,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Tracks"
   },
@@ -5080,6 +5080,7 @@
     "title": "get related tracks for specific track",
     "name": "get_related_tracks",
     "group": "Tracks",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">get related tracks for specific track based on its genre.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -5129,7 +5130,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Tracks"
   },
@@ -5139,6 +5139,7 @@
     "title": "Get Current User's Profile",
     "name": "Get_Current_User's_Profile",
     "group": "Users_Profile",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get detailed profile information about the current user (including the current user’s username).</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -5180,7 +5181,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Users_Profile"
   },
@@ -5190,6 +5190,7 @@
     "title": "Get  Current User's Profile with player info",
     "name": "Get_Current_User's_Profile_with_player_info_and_product",
     "group": "Users_Profile",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get detailed profile information about the current user (including the current user’s username).</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -5231,7 +5232,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Users_Profile"
   },
@@ -5241,6 +5241,7 @@
     "title": "Get a User's Profile",
     "name": "Get_a_User's_Profile",
     "group": "Users_Profile",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">Get public profile information about a Spotify user.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -5298,7 +5299,6 @@
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "public_code/doc.js",
     "groupTitle": "Users_Profile"
   }

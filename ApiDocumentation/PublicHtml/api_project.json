@@ -1,6 +1,6 @@
 {
   "name": "Spotify",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "",
   "main": "doc.js",
   "directories": {
@@ -16,7 +16,7 @@
   "apidoc": "0.3.0",
   "generator": {
     "name": "apidoc",
-    "time": "2020-06-03T07:34:25.767Z",
+    "time": "2020-06-03T07:50:04.972Z",
     "url": "http://apidocjs.com",
     "version": "0.20.1"
   }

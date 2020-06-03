@@ -4,7 +4,8 @@
  * @api {get} api/albums/:album_id  Get an Album
  * @apiName Get an Album
  * @apiGroup Album
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  *
  * <h1>Request Parameters</h1></br></br>
@@ -72,7 +73,8 @@
  * @api {get} api/albums/:id/tracks Get an Album's Tracks
  * @apiName Get an Album's Tracks
  * @apiGroup Album
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">Get Spotify catalog information about an album’s tracks. </br>
  * Optional parameters can be used to limit the number of tracks returned.</p>
@@ -122,7 +124,8 @@
  * @api {get} api/albums Get Several Albums
  * @apiName Get Several Albums
  * @apiGroup Album
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">Get Spotify catalog information for multiple albums identified by their Spotify IDs. </br>
  * Optional parameters can be used to limit the number of tracks returned.</p>
@@ -383,7 +386,8 @@
  * @api {get} api/me/artist   Get Artist from user.
  * @apiName Get Artist from user.
  * @apiGroup Artist
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Get Artist from user.</p>
  *
  *
@@ -573,7 +577,8 @@
  * @api {put} api/Artists/me/Albums Create Album
  * @apiName Create Album
  * @apiGroup Artist
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Create An Album for the Current Artist .</p>
  *
  *
@@ -631,7 +636,8 @@
  * @api {get} api/Artists/{id}/tracks_ratio Get an Artist's radio  (not implemented)
  * @apiName Get an Artist's radio ratio
  * @apiGroup Artist
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">Get alot of tracks belongs to this artist or tracks in the same artist's genre .</p>
  *
@@ -656,7 +662,8 @@
  * @api {get} api/Artists/:artist_id Get an Artist
  * @apiName Get an Artist
  * @apiGroup Artist
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Get Spotify catalog information for a single artist identified by their unique Spotify ID.</p>
  *
  *
@@ -703,7 +710,8 @@
  * @api {get} api/Artists/:artist_id/Albums Get an Artist's Albums
  * @apiName Get an Artist's Albums
  * @apiGroup Artist
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">Get Spotify catalog information about an artist’s albums.</br> Optional parameters can be specified in the query string to filter and sort the response.</p>
  *
@@ -776,7 +784,8 @@
  * @api {get} api/Artists/:artist_id/top-tracks Get an Artist's Top Tracks
  * @apiName Get an Artist's Top Tracks
  * @apiGroup Artist
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">Get Spotify catalog information about an artist’s top tracks by country.</p>
  *
@@ -892,7 +901,8 @@
  * @api {get} api/Artists/{artist_id}/tracks Get an Artist's Tracks
  * @apiName Get an Artist's Top Tracks
  * @apiGroup Artist
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">Get Spotify catalog information about an artist’s top tracks by country.</p>
  *
@@ -999,7 +1009,8 @@
  * @api {get} api/Artists/:artist_id/related_artists Get an Artist's Related Artists
  * @apiName Get an Artist's Related Artists
  * @apiGroup Artist
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">Get Spotify catalog information about artists similar to a given artist.</br> Similarity is based on analysis of the Spotify community’s listening history.</p>
  *
@@ -1169,7 +1180,8 @@
  * @api {get} api/Artists Get Several Artists
  * @apiName Get Several Artists
  * @apiGroup Artist
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">Get Spotify catalog information for several artists based on their Spotify IDs.</p>
  *
@@ -1277,7 +1289,8 @@
  * @api {get} api/browse/categories/:category_id Get a Category
  * @apiName Get a Category
  * @apiGroup Browse
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Get a single category used to tag items in Spotify (on, for example, the Spotify player’s “Browse” tab).</p>
  *
  *
@@ -1312,7 +1325,8 @@
  * @api {get} api/browse/categories/:category_id/playlists Get a Category's Playlists
  * @apiName Get a Category's Playlists
  * @apiGroup Browse
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Get a list of Spotify playlists tagged with a particular category.</p>
  *
  *
@@ -1420,7 +1434,8 @@
  * @api {get} api/browse/categories Get a List of Categories
  * @apiName Get a List of Categories
  * @apiGroup Browse
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Get a list of categories used to tag items in Spotify (on, for example, the Spotify player’s “Browse” tab).</p>
  *
  *
@@ -1479,7 +1494,8 @@
  * @api {get} api/browse/featured-playlists Get a List of Featured Playlists       (not implemented yet)
  * @apiName Get a List of Featured Playlists
  * @apiGroup Browse
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Get a list of categories used to tag items in Spotify (on, for example, the Spotify player’s “Browse” tab).</p>
  *
  *
@@ -1500,7 +1516,8 @@
  * @api {get} api/browse/recently-playing Get a List of recently playing Playlists,artists,albums
  * @apiName Get a List of recently-playing
  * @apiGroup Browse
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Get a List of recently playing Playlists,artists,albums in Spotify (on, for example, the Spotify player’s “Browse” tab).</p>
  *
  *
@@ -1588,7 +1605,8 @@
  * @api {get} api/browse/new-releases Get a List of New Releases
  * @apiName Get a List of New Releases
  * @apiGroup Browse
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Get a list of new album releases featured in Spotify (shown, for example, on a Spotify player’s “Browse” tab).</p>
  *
  *
@@ -1697,7 +1715,8 @@
  * @api {get} api/browse/genre Get genres playlists
  * @apiName Get genres playlists
  * @apiGroup Browse
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Get a list ofGet genres playlists (shown, for example, on a Spotify player’s “Browse” tab).</p>
  *
  *
@@ -1841,7 +1860,8 @@
  * @api {get} api/browse/popular-albums Get a List of popular albums
  * @apiName Get a List of popular albums
  * @apiGroup Browse
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Get a List of popular albums featured in Spotify (shown, for example, on a Spotify player’s “Browse” tab).</p>
  *
  *
@@ -1951,7 +1971,8 @@
  * @api {get} api/browse/popular-artists Get a List of popular artists
  * @apiName Get a List of popular artists
  * @apiGroup Browse
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Get a List of popular artists  featured in Spotify (shown, for example, on a Spotify player’s “Browse” tab).</p>
  *
  *
@@ -2010,7 +2031,8 @@
  * @api {get} api/browse/popular-playlists Get a List of popular playlists
  * @apiName Get a List of popular playlists
  * @apiGroup Browse
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Get a List of popular playlists  featured in Spotify (shown, for example, on a Spotify player’s “Browse” tab).</p>
  *
  *
@@ -2089,7 +2111,8 @@
  * @api {get} api/recommendations Get Recommendations Based on Seeds  (not implemented yet)
  * @apiName Get Recommendations Based on Seeds
  * @apiGroup Browse
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Create a playlist-style listening experience based on seed artists, tracks and genres.</p>
  *</br>
  *<p>Recommendations are generated based on the available information for a given seed entity and matched against similar artists and tracks.</br></br> If there is sufficient information about the provided seeds, a list of tracks will be returned together with pool size details.</br></br> For artists and tracks that are very new or obscure there might not be enough data to generate a list of tracks. </p>
@@ -2124,7 +2147,8 @@
  * @api {get} api/me/following/contains/{id} Check if Current User Follows Artist
  * @apiName Check if Current User Follows Artists or Users
  * @apiGroup Follow
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Check to see if the current user is following one artist .</p>
  *
  *
@@ -2155,7 +2179,8 @@
  * @api {get} api/playlists/{playlist_id}/followers/contains  Check if Users Follow a Playlist (Not implemented yet)
  * @apiName Check if Users Follow a Playlist
  * @apiGroup Follow
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Check to see if one or more Spotify users are following a specified playlist.</p>
  *
  *
@@ -2179,7 +2204,8 @@
  * @api {put} api/me/following Follow Artist
  * @apiName Follow Artist
  * @apiGroup Follow
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Add the current user as a follower of one or more artists or other Spotify users.</p>
  *
  *
@@ -2208,7 +2234,8 @@
  * @api {PUT} api/playlists/{playlist_id}/followers Follow a Playlist
  * @apiName Follow a Playlist
  * @apiGroup Follow
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Add the current user as a follower of a playlist.</p>
  *
  *
@@ -2237,7 +2264,8 @@
  * @api {get} api/me/followingArtist Get User's Followed Artists
  * @apiName Get User's Followed Artists
  * @apiGroup Follow
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Get the current user’s followed artists.</p>
  *
  *
@@ -2278,7 +2306,8 @@
  * @api {delete} api/me/following Unfollow Artist
  * @apiName Unfollow Artist
  * @apiGroup Follow
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Remove the current user as a follower of one or more artists or other Spotify users.</p>
  *
  *
@@ -2306,7 +2335,8 @@
  * @api {put} api/me/like/:track_id like track
  * @apiName like track
  * @apiGroup Library
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Add the current user  like this track.</p>
  *
  *
@@ -2328,7 +2358,8 @@
  * @api {delete} api/me/unlike/:track_id unlike track
  * @apiName unlike track
  * @apiGroup Library
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Add the current user  unlike this track.</p>
  *
  *
@@ -2352,7 +2383,8 @@
  * @api {DELETE} api/playlists/{playlist_id}/followers Unfollow a Playlist
  * @apiName Unfollow a Playlist
  * @apiGroup Library
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Remove the current user as a follower of a playlist.</p>
  *
  *
@@ -2378,7 +2410,8 @@
  * @api {get} api/me/albums/contains Check User's Saved Albums
  * @apiName Check User's Saved Albums
  * @apiGroup Library
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Check if one or more albums is already saved in the current Spotify user’s ‘Your Music’ library.</p>
  *
  *
@@ -2412,7 +2445,8 @@
  * @api {get} api/me/tracks/contains  Check User's Saved Tracks
  * @apiName Check User's Saved Tracks
  * @apiGroup Library
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Check if one or more tracks is already saved in the current Spotify user’s ‘Your Music’ library.</p>
  *
  *
@@ -2444,7 +2478,8 @@
  * @api {get} api/me/albums Get Current User's Saved Albums
  * @apiName Get Current User's Saved Albums
  * @apiGroup Library
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Get a list of the albums saved in the current Spotify user’s ‘Your Music’ library.</p>
  *
  *
@@ -2518,7 +2553,8 @@
  * @api {get} api/me/tracks Get a User's Saved Tracks
  * @apiName Get a User's Saved Tracks
  * @apiGroup Library
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Get a list of the songs saved in the current Spotify user’s ‘Your Music’ library.</p>
  *
  *
@@ -2578,7 +2614,8 @@
  * @api {delete} api/me/albums Remove Albums for Current User
  * @apiName Remove Albums for Current User
  * @apiGroup Library
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Remove one or more albums from the current user’s ‘Your Music’ library.</p>
  *
  *
@@ -2598,7 +2635,8 @@
  * @api {put} api/me/Albums Save Albums for Current User
  * @apiName Save Albums for Current User
  * @apiGroup Library
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Save one or more albums to the current user’s ‘Your Music’ library.</p>
  *
  *
@@ -2623,7 +2661,8 @@
  * @api {get} /api/me/following/user get users that user follows
  * @apiName get users that user follows
  * @apiGroup Follow
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">get all the  users that the logged in  user follows.</p>
  *
  *
@@ -2849,7 +2888,8 @@
  * @api {get} /api/me/followers/user get user followers
  * @apiName  get user followers
  * @apiGroup Follow
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">follow other  user</p>
  *
  *
@@ -2923,7 +2963,8 @@
  * @api {DELETE} /api/me/unfollow/user/{user_id} unfollow user with user_id
  * @apiName  unfollow user
  * @apiGroup Follow
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">unfollow user</p>
  *
  *
@@ -2950,7 +2991,8 @@
  * @api {PUT} /api/me/follow/user/{user_id} follow user with user_id
  * @apiName  follow user
  * @apiGroup Follow
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">make user follow another.</p>
  *
  *
@@ -2978,7 +3020,8 @@
  * @api {get} api/me/top/{type} Get a User's Top Artists and Tracks        (not implemented yet)
  * @apiName Get a User's Top Artists and Tracks
  * @apiGroup Personalization
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Get the current user’s top artists or tracks based on calculated affinity.</p>
  *
  *
@@ -3002,7 +3045,8 @@
  * @api {get} api/player Get Information About The User's Current Playback  (not implemented yet)
  * @apiName Get Information About The User's Current Playback
  * @apiGroup Player
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">Get information about the user’s current playback state, including track, track progress, and active device.</br> Optional parameters can be specified in the query string to filter and sort the response.</p>
  *
@@ -3021,7 +3065,8 @@
  * @api {get} api/me/player/currently-playing Get the User's Currently Playing Track
  * @apiName Get the User's Currently Playing Track
  * @apiGroup Player
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">Get the object currently being played on the user’s Spotify account.</p>
  *
@@ -3094,7 +3139,8 @@
  * @api {get} api/me/queue Get currently queue for this user
  * @apiName Get the User's Currently playback queue
  * @apiGroup Player
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">Get the User's Currently playback queue</p>
  *
@@ -3261,7 +3307,8 @@
  * @api {get} api/me/player/recently-played Get Current User's Recently Played Tracks
  * @apiName Get Current User's Recently Played Tracks.
  * @apiGroup Player
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">Get tracks from the current user’s recently played tracks.</p>
  *
@@ -3292,7 +3339,8 @@
  * @api {PUT} api/me/player/pause Pause a User's Playback
  * @apiName Pause a User's Playback
  * @apiGroup Player
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">Pause playback on the user’s account.</br>
  *
@@ -3316,7 +3364,8 @@
  * @api {PUT} api/player Seek To Position In Currently Playing Track       (not implemented yet)
  * @apiName Seek To Position In Currently Playing Track
  * @apiGroup Player
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">Seeks to the given position in the user’s currently playing track.</p>
  *
@@ -3335,7 +3384,8 @@
  * @api {PUT} api/player/repeat Set Repeat Mode On User’s Playback
  * @apiName Set Repeat Mode On User’s Playback
  * @apiGroup Player
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">Set the repeat mode for the user’s playback. Options are repeat-track, repeat-context, and off.</p>
  *
@@ -3359,7 +3409,8 @@
  * @api {POST} api/me/player/next-playing Skip User’s Playback To Next Track
  * @apiName Skip User’s Playback To Next Track
  * @apiGroup Player
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">Skips to next track in the user’s queue.</p>
  *
@@ -3432,7 +3483,8 @@
  * @api {POST} api/me/player/prev-playing Skip User’s Playback To Previous Track
  * @apiName Skip User’s Playback To Previous Track
  * @apiGroup Player
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">Skips to previous track in the user’s queue.</p>
  *
@@ -3507,7 +3559,8 @@
  * @api {PUT} api/me/player/play Start/Resume a User's Playback
  * @apiName Start/Resume a User's Playback
  * @apiGroup Player
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">Start a new context or resume current playback on the user’s active device.</p>
  *
@@ -3531,7 +3584,8 @@
  * @api {PUT} api/me/player/shuffle Toggle Shuffle For User’s Playback
  * @apiName Toggle Shuffle For User’s Playback
  * @apiGroup Player
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">Toggle shuffle on or off for user’s playback.</p>
  *
@@ -3556,7 +3610,8 @@
  * @api {POST} api/player/add-to-queue/:playlistId/:trackId Add an Item to the User's Playback Queue
  * @apiName Add an Item to the User's Playback Queue
  * @apiGroup Player
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">Add an item to the end of the user’s current playback queue.</p>
  *
@@ -3586,7 +3641,8 @@
  * @api {PUT} api/me/restoreplaylists Restore user deleted Playlists.
  * @apiName Restore user deleted Playlists.
  * @apiGroup Playlist
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">Restore user deleted Playlists.</p>
  *
@@ -3614,7 +3670,8 @@
  * @api {GET} api/me/deletedplaylists Get user deleted Playlists
  * @apiName Get user deleted Playlists.
  * @apiGroup Playlist
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">Get user deleted Playlists</p>
  *
@@ -3664,7 +3721,8 @@
  * @api {POST} api/playlists/{playlist_id}/tracks Add Tracks to a Playlist
  * @apiName Add Tracks to a Playlist
  * @apiGroup Playlist
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Add one or more tracks to a user’s playlist..</p>
  *
  * The Spotify URIs of the tracks to add can be passed either in the query string or as a JSON array in the request body
@@ -3713,7 +3771,8 @@
  * @api {GET} api/playlists/{playlist_id}/tracks Get Tracks from a Playlist
  * @apiName Get Tracks from a Playlist
  * @apiGroup Playlist
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Get Tracks from a playlist..</p>
  *
  *
@@ -3780,7 +3839,8 @@
  * @api {POST} api/users/playlists Create a Playlist
  * @apiName Create a Playlist
  * @apiGroup Playlist
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">Create a playlist for a Spotify user. (The playlist will be empty until you add tracks.)</p>
  *
@@ -3823,7 +3883,8 @@
  * @api {PUT} api/playlists/{playlist_id} Change a Playlist's Details
  * @apiName Change a Playlist's Details
  * @apiGroup Playlist
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">Change a Playlist's Details Change a playlist’s name and public/private state. (The user must, of course, own the playlist.)</p>
  *Note that the request data is a JSON string, not separate fields
@@ -3881,7 +3942,8 @@
  * @api {get} api/me/playlists Get a List of Current User's Playlists
  * @apiName Get a List of Current User's Playlists.
  * @apiGroup Playlist
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">Get a list of the playlists owned or followed by the current Spotify user.</p>
  *
@@ -3952,7 +4014,8 @@
  * @api {GET} api/users/{user_id}/playlists  Get a List of a User's Playlists created and followed
  * @apiName Get a List of a User's Playlists
  * @apiGroup Playlist
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">Get a list of the playlists owned or followed by a Spotify user.</br>
  *
@@ -3990,7 +4053,8 @@
  * @api {GET} api/playlists/{playlist_id} Get a Playlist
  * @apiName Get a Playlist.
  * @apiGroup Playlist
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">Get a playlist owned by a Spotify user.</p>
  *
@@ -4022,7 +4086,8 @@
  * @api {Delete} api/me/delete/playlists/{playlist_id} delete a Playlist
  * @apiName delete a Playlist.
  * @apiGroup Playlist
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">delete a playlist owned by a Spotify user.</p>
  *
@@ -4046,7 +4111,8 @@
  * @api {GET} api/Playlist/next Get a Playlist Cover Image(not implemented yet)
  * @apiName Get a Playlist Cover Image
  * @apiGroup Playlist
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">Get the current image associated with a specific playlist.</p>
  *
@@ -4062,7 +4128,8 @@
  * @api {DELETE} api/playlists/{playlist_id}/tracks Remove Tracks from a Playlist
  * @apiName Remove Tracks from a Playlist
  * @apiGroup Playlist
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">Remove one or more tracks from a user’s playlist.</p>
  *There are several ways to specify which tracks to remove, determined by the request parameters.
@@ -4098,7 +4165,8 @@
  * @api {PUT} api/playlists/{playlist_id}/tracks Reorder a Playlist's Tracks
  * @apiName Reorder a Playlist's Tracks
  * @apiGroup Playlist
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">Reorder a track or a group of tracks in a playlist.</p>
  *
@@ -4149,7 +4217,8 @@
  * @api {PUT} api/playlists/{playlist_id}/tracks Replace a Playlist's Tracks (Not implemented yet)
  * @apiName Replace a Playlist's Tracks.
  * @apiGroup Playlist
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">Replace all the tracks in a playlist, overwriting its existing tracks. This powerful request can be useful for replacing tracks, re-ordering existing tracks, or clearing the playlist.</p>
  *
@@ -4176,7 +4245,8 @@
  * @api {PUT} api/playlists/{playlist_id}/images Upload a Custom Playlist  Cover Image (Not implemented yet)
  * @apiName Upload a Custom Playlist Cover Image.
  * @apiGroup Playlist
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">Replace the image used to represent a specific playlist.</p>
  *
@@ -4198,7 +4268,8 @@
  * @api {PUT} api/playlists/{playlist_id}/collaborative toggle playlist collaborative attribute
  * @apiName toggle collaborative.
  * @apiGroup Playlist
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">toggle the collaborative attribute of the specified playlist in the request</p>
  *
@@ -4222,7 +4293,8 @@
  * @api {PUT} api/playlists/{playlist_id}/public toggle playlist public attribute
  * @apiName toggle public.
  * @apiGroup Playlist
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  *
  * <p style="color:red;">toggle the public attribute of the specified playlist in the request.</p>
  *
@@ -4248,7 +4320,8 @@
  * @api {PUT} api/recently-search Add in search history
  * @apiName add to search history
  * @apiGroup Search
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">add an object  to search history  </p>
  *
  * <h1> Request parameters</h1>
@@ -4273,7 +4346,8 @@
  * @api {DELETE} api/recently-search remove from search history
  * @apiName remove from search history
  * @apiGroup Search
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">remove  an object  from search history  </p>
  *
  * <h1> Request parameters</h1>
@@ -4298,7 +4372,8 @@
  * @api {GET} api/recently-search get search history
  * @apiName get search history
  * @apiGroup Search
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Get search history  </p>
  *
  * <h1> Request parameters</h1>
@@ -4526,7 +4601,8 @@
  * @api {get} api/search Search for an Item
  * @apiName Search for an Item
  * @apiGroup Search
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Get Spotify Catalog information about artists, albums, tracks or playlists that match a keyword string.</p>
  *
  * <h1> Request parameters</h1>
@@ -4560,7 +4636,8 @@
  * @api {get} /api/tracks/related/{track_id} get related tracks for specific track
  * @apiName get related tracks
  * @apiGroup Tracks
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">get related tracks for specific track based on its genre.</p>
  *
  *
@@ -4623,7 +4700,8 @@
  * @api {get}/api/tracks/related/full-track/{track_id} get related full tracks for specific track
  * @apiName get related full tracks
  * @apiGroup Tracks
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">get related full tracks for specific track based on its genre. and first element is always the current track full info</p>
  *
  *
@@ -4789,7 +4867,8 @@
  * @api {get} api/track/audio-features/{id}  Get Audio Features for a Track
  * @apiName Get Audio Features for a Track
  * @apiGroup Tracks
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Get audio feature information for a single track identified by its unique Spotify ID.</p>
  *
  *
@@ -4829,7 +4908,8 @@
  * @api {get} api/tracks/audio-features Get Audio Features for Several Tracks
  * @apiName Get Audio Features for Several Tracks
  * @apiGroup Tracks
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Get audio features for multiple tracks based on their Spotify IDs.</p>
  *
  *
@@ -4891,7 +4971,8 @@
  * @api {get} api/tracks Get Several Tracks
  * @apiName Get Several Tracks
  * @apiGroup Tracks
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Get Spotify catalog information for multiple tracks based on their Spotify IDs.</p>
  *
  *
@@ -5002,7 +5083,8 @@
  * @api {get} api/track/{id} Get a Track with full info
  * @apiName Get a Track with artist name & isLike
  * @apiGroup Tracks
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Get Spotify catalog information for a single track identified by its unique Spotify ID.and get track artist name ,album name and if user like this track or no </p>
  *
  *
@@ -5066,7 +5148,8 @@
  * @api {get} api/me/track/{id} Get a Track
  * @apiName Get a Track
  * @apiGroup Tracks
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Get Spotify catalog information for a single track identified by its unique Spotify ID.</p>
  *
  *
@@ -5119,7 +5202,8 @@
  * @api {get} api/me Get Current User's Profile
  * @apiName Get Current User's Profile
  * @apiGroup Users Profile
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Get detailed profile information about the current user (including the current user’s username).</p>
  *
  *
@@ -5152,7 +5236,8 @@
  * @api {get} api/me-player Get  Current User's Profile with player info 
  * @apiName Get Current User's Profile with player info and product
  * @apiGroup Users Profile
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Get detailed profile information about the current user (including the current user’s username).</p>
  *
  *
@@ -5209,7 +5294,8 @@
  * @api {get} api/users/{id} Get a User's Profile
  * @apiName Get a User's Profile
  * @apiGroup Users Profile
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">Get public profile information about a Spotify user.</p>
  *
  *
@@ -5245,7 +5331,8 @@
  * @api {POST} /api/images/upload/{source_id} upload image
  * @apiName upload image
  * @apiGroup Image
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">upload image to specific entity in database, without removing the existing images for this entity</p>
  *
  *
@@ -5282,7 +5369,8 @@
  * @api {POST} /api/images/update/{source_id} update image
  * @apiName update image
  * @apiGroup Image
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">update image to specific entity in database, with removing the existing images for this entity</p>
  *
  *
@@ -5319,7 +5407,8 @@
  * @api {GET} /api/images/{image_id} get image
  * @apiName get image
  * @apiGroup Image
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">get image file</p>
  *
  *
@@ -5346,7 +5435,8 @@
  * @api {GET} /api/images/get_id/{source_id} get id of latest image of specific document
  * @apiName get id of image
  * @apiGroup Image
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">get id of latest image in the source document</p>
  *
  *
@@ -5374,7 +5464,8 @@
  * @api {DELETE} /api/images/delete/{image_id} delete image
  * @apiName delete image
  * @apiGroup Image
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">delete image file</p>
  *
  *

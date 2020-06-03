@@ -2,7 +2,8 @@
  * @api {POST} api/sign_up Create a new account
  * @apiName Create a new account
  * @apiGroup Account
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * 
  * <p style="color:red;">add new user.</p>
  *
@@ -44,7 +45,8 @@
   * @api {post} api/createQueue/:sourceId/:trackId create queue 
  * @apiName Create queue
  * @apiGroup Player
- * @apiDescription create queue for user
+ * @apiVersion  1.1.0
+@apiDescription create queue for user
  * 
  * <p style="color:red;">create the user playback queue </p>
  * <h1> Request parameters</h1> 
@@ -81,7 +83,8 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  * @api {post} api/login Login to Spotify
  * @apiName Login to Spotify
  * @apiGroup Account
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * 
  * 
  * <h1>Request Parameters</h1></br></br>
@@ -111,7 +114,8 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  * @api {POST} api/sendmail Send confirmation mail
  * @apiName Send confirmation mail
  * @apiGroup Account
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * 
  * 
  * <h1>Request Parameters</h1></br></br>
@@ -132,7 +136,8 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  * @api {POST} api/login/confirm Confirm Signup
  * @apiName Confirm Signup
  * @apiGroup Account
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * 
  * 
  * <h1>Request Parameters</h1></br></br>
@@ -154,7 +159,8 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  * @api {POST} api/premium/confirm Confirm Premium
  * @apiName Confirm Premium
  * @apiGroup Account
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * 
  * 
  * <h1>Request Parameters</h1></br></br>
@@ -174,7 +180,8 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  * @api {POST} api/login/reset_password Reset Password
  * @apiName Reset Password
  * @apiGroup Account
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * 
  * 
  * <h1>Request Parameters</h1></br></br>
@@ -202,7 +209,8 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  * @api {POST} api/user/logout Logout user 
  * @apiName Logout user
  * @apiGroup Account
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * 
  * 
  * <h1>Request Parameters</h1></br></br>
@@ -234,7 +242,8 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  * @api {GET} api/me/notifications User notifications
  * @apiName User notifications
  * @apiGroup Account
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * 
  * 
  * <h1>Request Parameters</h1></br></br>
@@ -262,7 +271,8 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  * @api {POST} api/notification/token Set FCM Token
  * @apiName Set FCM Token
  * @apiGroup Account
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * 
  * 
  * <h1>Request Parameters</h1></br></br>
@@ -291,7 +301,8 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  * @api {POST} api/login/forgetpassword Forget Password
  * @apiName Forget Password
  * @apiGroup Account
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * 
  * 
  * <h1>Request Parameters</h1></br></br>
@@ -320,7 +331,8 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  * @api {GET} api/auth/facebook Login to Spotify with Facebook
  * @apiName Login to Spotify with Facebook
  * @apiGroup Account
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * 
 
  * 
@@ -341,7 +353,8 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  * @api {POST} api/auth/facebookAndroid Login to Spotify with Facebook for android native app
  * @apiName Login to Spotify with Facebook android
  * @apiGroup Account
- * @apiDescription login with facebook using android custom route
+ * @apiVersion  1.1.0
+@apiDescription login with facebook using android custom route
  * 
  * 
  * 
@@ -370,7 +383,8 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  * @api {post} api/me/logout logout 
  * @apiName logout 
  * @apiGroup Account
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * 
  * 
  * <h1>Request Parameters</h1></br></br>
@@ -391,7 +405,8 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  * @api {PUT} api/me/promote make user premium 
  * @apiName make user premium
  * @apiGroup Account
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * 
  * <p style="color:red;">promote user to premium.</p>
  *
@@ -425,7 +440,8 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  * @api {PUT} api/me/free make user free
  * @apiName make user free
  * @apiGroup Account
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * 
  * <p style="color:red;">make user free.</p>
  *
@@ -452,7 +468,8 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  * @api {PUT} api/me/update update Current User's Profile
  * @apiName update Current User's Profile
  * @apiGroup Users Profile
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">update current user profile.</p>
  *
  * 
@@ -499,7 +516,8 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  * @api {DELETE} api/remove delete Current User's Profile
  * @apiName delete Current User's Profile
  * @apiGroup Users Profile
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * <p style="color:red;">delete current user profile.</p>
  *
  * 
@@ -522,7 +540,8 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  * @api {post} api/me/ToArtist Change User Type to Artist
  * @apiName Change User Type to Artist
  * @apiGroup Account
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * 
  * 
  * <h1>Request Parameters</h1></br></br>
@@ -560,7 +579,8 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  * @api {PUT} api/playlists/{playlist_id} add collaborator
  * @apiName Change a add collaborator
  * @apiGroup Playlist
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * 
  * <p style="color:red;">add a Playlist's collaborator. (The user must, of course, own the playlist.)</p>
  *Note that the request data is a JSON string, not separate fields
@@ -595,7 +615,8 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  * @api {PUT} api/Artist/update Change a Artist's Details 
  * @apiName Change a Artist's  Details 
  * @apiGroup Artist
- * @apiDescription update artist info 
+ * @apiVersion  1.1.0
+@apiDescription update artist info 
  * 
  * <p style="color:red;">Change a Artist's Details Change a Artist’s name and genre and info .</p>
  *Note that the request data is a JSON string, not separate fields
@@ -650,7 +671,8 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  * @api {GET} api/tracks/android/{track_id} get track for android
  * @apiName get track file for android
  * @apiGroup Track
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * 
  * <p style="color:red;">get track media file for android</p>
  *
@@ -677,7 +699,8 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  * @api {GET} /api/tracks/encryption/{track_id}/keys get decryption key for track for web player
  * @apiName get track encryption key for web player
  * @apiGroup Track
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * 
  * <p style="color:red;">get track media file encryption key and keyId for web player</p>
  *
@@ -706,7 +729,8 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  * @api {GET} /api/tracks/web-player/{track_id} get track for web player
  * @apiName get track file for web player
  * @apiGroup Track
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * 
  * <p style="color:red;">get track media file for web player</p>
  *
@@ -730,7 +754,8 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  * @api {PUT} /api/tracks/update/{track_id} edit track
  * @apiName edit track
  * @apiGroup Track
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * 
  * <p style="color:red;">edit track parameters in database</p>
  *
@@ -816,7 +841,8 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  * @api {delete} /api/artist/:album_id
  * @apiName upload tracks to album
  * @apiGroup Album
- * @apiDescription 
+ * @apiVersion  1.1.0
+@apiDescription 
  * 
  * <p style="color:red;">delete album and all its tracks by its artist </p>
  * <h1> Request parameters</h1> 
@@ -843,7 +869,8 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  * @api {POST} /api/artists/me/albums/{album_id}/tracks upload tracks
  * @apiName upload tracks to album
  * @apiGroup Track
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * 
  * <p style="color:red;">upload tracks by artist to specific album, only artist with valid album can upload track to this album</p>
  *
@@ -896,7 +923,8 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  * @api {DELETE} /api/tracks/delete/{track_id} delete track
  * @apiName delete track
  * @apiGroup Track
- * @apiDescription
+ * @apiVersion  1.1.0
+@apiDescription
  * 
  * <p style="color:red;">delete track from database and from all instances that it occurs in</p>
  *
