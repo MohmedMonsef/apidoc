@@ -379,195 +379,7 @@
 
 //Artist
 //new
-/**
- * @api {get} api/me/artist   Get Artist from user.
- * @apiName Get Artist from user.
- * @apiGroup Artist
- * @apiDescription
- * <p style="color:red;">Get Artist from user.</p>
- *
- *
- * <h1>Request Parameters</h1></br></br>
- *
- * <h1> Endpoint</h1>
- *
- * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
- *  @apiExample {curl} Example usage:
- * curl --location --request PUT 'http://localhost:3000/api/me/artist' \
---header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
- * @apiSuccessExample {json} Success-Response:
-{
-    "genre": [
-        "genre1",
-        "genre2",
-        "genre3"
-    ],
-    "_id": "5e8cb7037f37604d583f8d22",
-    "info": "the best",
-    "popularity": 501,
-    "type": "Artist",
-    "Name": "nada",
-    "userId": "5e8cb118084a9d2e6c8f21d7",
-    "images": [
-        {
-            "_id": "5ea0cc8a797460648cddaee4",
-            "height": 2204,
-            "width": 3920
-        },
-        {
-            "_id": "5ea0ccf9797460648cddaee5",
-            "height": 2204,
-            "width": 3920
-        },
-        {
-            "_id": "5ea0cd7f797460648cddaee6",
-            "height": 2204,
-            "width": 3920
-        },
-        {
-            "_id": "5ea0cedf797460648cddaee7",
-            "height": 2204,
-            "width": 3920
-        },
-        {
-            "_id": "5ea0cfa060db613e6456bad4",
-            "height": 2204,
-            "width": 3920
-        },
-        {
-            "_id": "5ea0d09e98ae49324cb48956",
-            "height": 2204,
-            "width": 3920
-        },
-        {
-            "_id": "5ea0d11e13f2868b68e56815",
-            "height": 2204,
-            "width": 3920
-        },
-        {
-            "_id": "5ea0d1431acc036114533537",
-            "height": 2204,
-            "width": 3920
-        },
-        {
-            "_id": "5ea0d2b21acc036114533544",
-            "height": 830,
-            "width": 1914
-        },
-        {
-            "_id": "5ea0d3191acc036114533545",
-            "height": 830,
-            "width": 1914
-        },
-        {
-            "_id": "5ea0d3541acc036114533546",
-            "height": 830,
-            "width": 1914
-        },
-        {
-            "_id": "5ea0d3f1199f605c7038af34",
-            "height": 830,
-            "width": 1914
-        },
-        {
-            "_id": "5ea0d4bd199f605c7038af35",
-            "height": 2204,
-            "width": 3920
-        },
-        {
-            "_id": "5ea0d5b5199f605c7038af36",
-            "height": 2204,
-            "width": 3920
-        },
-        {
-            "_id": "5ea0d6ac199f605c7038af37",
-            "height": 2204,
-            "width": 3920
-        }
-    ],
-    "addAlbums": [
-        {
-            "_id": "5e8cb9457f37604d583f8d28",
-            "albumId": "5e8cb9457f37604d583f8d27"
-        },
-        {
-            "_id": "5e8cb94b7f37604d583f8d2a",
-            "albumId": "5e8cb94b7f37604d583f8d29"
-        },
-        {
-            "_id": "5e8cb9557f37604d583f8d2c",
-            "albumId": "5e8cb9557f37604d583f8d2b"
-        },
-        {
-            "_id": "5e8cb95d7f37604d583f8d2e",
-            "albumId": "5e8cb95d7f37604d583f8d2d"
-        },
-        {
-            "_id": "5e8cb96a7f37604d583f8d30",
-            "albumId": "5e8cb96a7f37604d583f8d2f"
-        },
-        {
-            "_id": "5e8cb9747f37604d583f8d32",
-            "albumId": "5e8cb9747f37604d583f8d31"
-        },
-        {
-            "_id": "5e8cb97b7f37604d583f8d34",
-            "albumId": "5e8cb97b7f37604d583f8d33"
-        },
-        {
-            "_id": "5e8cb9827f37604d583f8d36",
-            "albumId": "5e8cb9827f37604d583f8d35"
-        }
-    ],
-    "addTracks": [
-        {
-            "_id": "5e8ce86082c8d9579467fb75",
-            "trackId": "5e8ce86082c8d9579467fb73"
-        },
-        {
-            "_id": "5e8ce86882c8d9579467fb78",
-            "trackId": "5e8ce86882c8d9579467fb76"
-        },
-        {
-            "_id": "5e8ce86c82c8d9579467fb7b",
-            "trackId": "5e8ce86c82c8d9579467fb79"
-        },
-        {
-            "_id": "5e8ce87182c8d9579467fb7e",
-            "trackId": "5e8ce87182c8d9579467fb7c"
-        },
-        {
-            "_id": "5e8ce87682c8d9579467fb81",
-            "trackId": "5e8ce87682c8d9579467fb7f"
-        },
-        {
-            "_id": "5e8ce8b282c8d9579467fb84",
-            "trackId": "5e8ce8b282c8d9579467fb82"
-        },
-        {
-            "_id": "5e8ce8bb82c8d9579467fb87",
-            "trackId": "5e8ce8bb82c8d9579467fb85"
-        },
-        {
-            "_id": "5e8ce8bf82c8d9579467fb8a",
-            "trackId": "5e8ce8bf82c8d9579467fb88"
-        },
-        {
-            "_id": "5e8ce8c482c8d9579467fb8d",
-            "trackId": "5e8ce8c382c8d9579467fb8b"
-        },
-        {
-            "_id": "5e8ce8c982c8d9579467fb90",
-            "trackId": "5e8ce8c982c8d9579467fb8e"
-        }
-    ],
-    "__v": 68
-}
- * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body Contains an Artist Object.</br> On error, the header status code is an error code and the response body contains an error object.
- *
- *
- *
- */
+
 //new
 /**
  * @api {put} api/Artists/me/Albums Create Album
@@ -599,56 +411,37 @@
 --data-raw '{
 	"name":"album1",
 	"label":"label",
-	"albumtype":"normal",
+	"albumtype":"Album",
 	"releaseDate":"1/1/2002",
 	"availablemarkets":"eg,fr",
 	"genre":"normal"
 }'
  * @apiSuccessExample {json} Success-Response:
  * {
- *     "availableMarkets": [
- *       "us,er,rttr,fretgre,jhj"
- *   ],
- *   "_id": "5e833b412b9d7718a491c850",
- *   "name": "album1",
- *   "albumType": "type1",
- *   "popularity": 0,
- *   "genre": "genre1",
- *   "releaseDate": "2020-02-20T00:00:00.000Z",
- *   "label": "iuwdjhwdewjhfhdwe",
- *    "images": [],
- *    "artistId": "5e833a51a51d971174923f17",
- *   "type": "Album",
- *   "hasTracks": [],
- *  "__v": 0
- * }
+    "availableMarkets": [
+        "eg",
+        "fr"
+    ],
+    "_id": "5ed740443e295d759c1b78ea",
+    "name": "album1",
+    "albumType": "normal",
+    "popularity": 0,
+    "genre": "normal",
+    "releaseDate": "2001-12-31T22:00:00.000Z",
+    "label": "label",
+    "images": [],
+    "artistId": "5eb0a4749b15d854c08f736e",
+    "type": "Album",
+    "hasTracks": [],
+    "releaseDatePercision": "DD-MM-YY",
+    "__v": 0
+}
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body Contains an Album Object.</br> On error, the header status code is an error code and the response body contains an error object.
  *
  *
  *
  */
-/**
- * @api {get} api/Artists/{id}/tracks_ratio Get an Artist's radio  (not implemented)
- * @apiName Get an Artist's radio ratio
- * @apiGroup Artist
- * @apiDescription
- *
- * <p style="color:red;">Get alot of tracks belongs to this artist or tracks in the same artist's genre .</p>
- *
- *
- * <h1>Request Parameters</h1></br></br>
- *
- * <h1> Endpoint</h1>
- *
- * @apiParam (PathParameters)  id Spotify ID for Artist
- *
- * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
- *
- *
- *
- *
- * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains</br>an object whose key is "tracks" and whose value is an array of up to 10 track objects in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
- */
+
 
 //end new
 
@@ -673,26 +466,59 @@
 --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
 
  *  @apiSuccessExample {json} Success-Response:
- * {
- *
- *
- *
- *        "genre": [
- *            "rytyt",
- *            "genre2",
- *            "genre1"
- *        ],
- *        "_id": "5e7f67e438150c15e8589ece",
- *        "info": "jdshgdjdhfjkd",
- *        "popularity": 0,
- *        "type": "Artist",
- *        "Name": "yytguguy",
- *        "userId": "5e7f670838150c15e8589ecc",
- *        "images": [],
- *        "addAlbums": [],
- *        "addTracks": [],
- *       "__v": 0
- *    }
+{
+    "genre": [
+        "genre1",
+        "genre2",
+        "genre3"
+    ],
+    "_id": "5eb0a44b9b15d854c08f7362",
+    "info": "info about artist 1",
+    "popularity": 806,
+    "type": "Artist",
+    "Name": "artist1",
+    "userId": "5eb0903c30a9a01f144b7238",
+    "images": [
+        {
+            "_id": "5eb0b3cede66c65e34c18b56",
+            "height": 100,
+            "width": 100
+        }
+    ],
+    "addAlbums": [
+        {
+            "_id": "5eb0a498ec0c444e9c48981f",
+            "albumId": "5eb0a498ec0c444e9c48981e"
+        }
+    ],
+    "addTracks": [
+        {
+            "_id": "5eb0a49aec0c444e9c489821",
+            "trackId": "5eb0a499ec0c444e9c489820"
+        },
+        {
+            "_id": "5eb1a5b4a5ebd959e08d5747",
+            "trackId": "5eb1a5b3a5ebd959e08d5746"
+        },
+        {
+            "_id": "5eb1acf1371bc537ec792bbf",
+            "trackId": "5eb1acf0371bc537ec792bbe"
+        }
+    ],
+    "__v": 36,
+    "followed": [
+        {
+            "_id": "5ec45ab5a29ba424a86d2f4e",
+            "id": "5ebff844ec00612568e2a7a6",
+            "date": "2020-05-19T22:16:21.353Z"
+        },
+        {
+            "_id": "5ec48ad46b940c56933c1d39",
+            "id": "5eb0900a30a9a01f144b7233",
+            "date": "2020-05-20T01:41:40.818Z"
+        }
+    ]
+}
  *
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains an artist object in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
  *
@@ -719,11 +545,9 @@
  *
  *
  * @apiParam (QueryParameters)  groups 	Optional. A comma-separated list of keywords that will be used to filter the response.</br> If not supplied, all album types will be returned. Valid values are:</br>
-* - album </br>
-* - single </br>
-* - appears_on </br>
-* - compilation </br>
-* For example:<br> include_groups=album,single.
+* - Album </br>
+* - Single </br>
+* For example:<br> include_groups=Album,Single.
  * @apiParam (QueryParameters)  country  	Optional. An ISO 3166-1 alpha-2 </br> country code or the string from_token. </br>
 * Supply this parameter to limit the response to one particular geographical market.</br> For example, for albums available in Sweden: country=SE.
 * </br>If not given, results will be returned for all countries and you are likely to get duplicate results per album,</br> one for each country in which the album is available!
@@ -738,37 +562,48 @@
 *
 *
   * @apiSuccessExample {json} Success-Response:
- * {
- *
-  *   {
- *       "availableMarkets": [
- *           "us,yu,ywgd"
- *       ],
- *       "_id": "5e7f44905cce7d09a82e5a75",
- *       "name": "album1",
- *       "albumType": "type1",
- *       "popularity": 0,
- *       "genre": "genre1",
- *       "releaseDate": "2020-02-20T00:00:00.000Z",
- *       "label": "yyuwhhxb",
- *       "images": [],
- *       "artistId": "5e7ef28326e2fa0da04f81ae",
- *       "type": "Album",
- *       "hasTracks": [],
-  *      "__v": 0
-  *  },
-  *  {
- *       "availableMarkets": [],
- *       "_id": "5e7f4d475cce7d09a82e5a7f",
- *       "popularity": 0,
- *       "images": [],
- *       "artistId": "5e7ef28326e2fa0da04f81ae",
- *       "type": "Album",
- *       "hasTracks": [],
- *       "__v": 0
- *   }
-*    }
- * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body </br>contains an array of simplified album objects (wrapped in a paging object) in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
+ *[
+    {
+        "availableMarkets": [
+            "rg",
+            "fr",
+            "ge"
+        ],
+        "_id": "5eb0a498ec0c444e9c48981e",
+        "name": "Ire desire",
+        "albumType": "Single",
+        "popularity": 808,
+        "genre": "action",
+        "releaseDate": "2020-02-04T22:00:00.000Z",
+        "label": "Unhappy accident",
+        "images": [
+            {
+                "_id": "5eb0b3d3de66c65e34c18b59",
+                "height": 100,
+                "width": 100
+            }
+        ],
+        "artistId": "5eb0a44b9b15d854c08f7362",
+        "type": "Album",
+        "hasTracks": [
+            {
+                "_id": "5eb0a49bec0c444e9c489822",
+                "trackId": "5eb0a499ec0c444e9c489820"
+            },
+            {
+                "_id": "5eb1a5b4a5ebd959e08d5748",
+                "trackId": "5eb1a5b3a5ebd959e08d5746"
+            },
+            {
+                "_id": "5eb1acf1371bc537ec792bc0",
+                "trackId": "5eb1acf0371bc537ec792bbe"
+            }
+        ],
+        "releaseDatePercision": "DD-MM-YY",
+        "__v": 18
+    }
+]
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body </br>contains an array of album objects (wrapped in a paging object) in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
 
  */
 
@@ -799,98 +634,85 @@
  *
  *
  * @apiSuccessExample {json} Success-Response:
- * {
- *     [
- *   {
- *       "availableMarkets": [
- *           "usa"
- *       ],
- *       "_id": "5e834091a0d4a20f746732f7",
- *       "duration": 462,
- *       "name": "track1",
- *       "artistId": "5e833a51a51d971174923f17",
- *       "albumId": "5e833b412b9d7718a491c850",
- *       "discNumber": 1,
- *       "explicit": false,
- *       "type": "Track",
- *s       "acousticness": 10,
- *        "danceability": 23,
- *        "energy": 100,
- *        "instrumentalness": 4,
- *        "key": 90,
- *        "liveness": 25,
- *        "loudness": 70,
- *        "mode": 56,
- *        "speechiness": 67,
- *        "tempo": 76,
- *        "timeSignature": "2020-03-31T13:07:29.395Z",
- *        "valence": 70,
- *        "like": 0,
- *        "__v": 0
- *    },
- *    {
- *        "availableMarkets": [
- *            "usa"
- *        ],
- *        "_id": "5e834255a0d4a20f74673300",
- *        "duration": 462,
- *        "name": "track1",
- *        "artistId": "5e833a51a51d971174923f17",
- *        "albumId": "5e833b412b9d7718a491c850",
- *        "discNumber": 1,
- *        "explicit": false,
- *        "type": "Track",
- *        "acousticness": 10,
- *        "danceability": 23,
- *        "energy": 100,
- *        "instrumentalness": 4,
- *        "key": 90,
- *        "liveness": 25,
- *        "loudness": 70,
- *        "mode": 56,
- *        "speechiness": 67,
- *        "tempo": 76,
- *        "timeSignature": "2020-03-31T13:15:01.821Z",
- *        "valence": 70,
- *        "like": 0,
- *        "__v": 0
- *    },
- *    {
- *        "availableMarkets": [
- *            "usa"
- *        ],
- *        "_id": "5e834258a0d4a20f74673305",
- *        "duration": 462,
- *        "name": "track1",
- *        "artistId": "5e833a51a51d971174923f17",
- *        "albumId": "5e833b412b9d7718a491c850",
- *        "discNumber": 1,
- *        "explicit": false,
- *        "type": "Track",
- *        "acousticness": 10,
- *        "danceability": 23,
- *        "energy": 100,
- *        "instrumentalness": 4,
- *        "key": 90,
- *        "liveness": 25,
- *        "loudness": 70,
- *        "mode": 56,
- *        "speechiness": 67,
- *        "tempo": 76,
- *        "timeSignature": "2020-03-31T13:15:04.155Z",
- *        "valence": 70,
- *        "like": 0,
- *        "__v": 0
- *    }
- *]
- * }
+ * [
+    {
+        "_id": "5eb1acf0371bc537ec792bbe",
+        "url": "undefined",
+        "images": [],
+        "duration": 75,
+        "availableMarkets": [
+            "eg",
+            "sa"
+        ],
+        "trackNumber": 12,
+        "name": "mariam",
+        "artistId": "5eb0a44b9b15d854c08f7362",
+        "albumId": "5eb0a498ec0c444e9c48981e",
+        "discNumber": 1,
+        "explicit": false,
+        "type": "Track",
+        "acousticness": 44,
+        "danceability": 6,
+        "energy": 21,
+        "instrumentalness": 94,
+        "key": "pGMaFTpEPfnu0FkwQ9t1GQ",
+        "liveness": 22,
+        "loudness": 12,
+        "mode": 20,
+        "speechiness": 49,
+        "tempo": 78,
+        "timeSignature": "2020-05-05T18:14:08.690Z",
+        "valence": 58,
+        "like": 1,
+        "keyId": "88XgNh5mVLKPgEnHeLI5Rg",
+        "genre": [
+            "genre1"
+        ],
+        "playable": true
+    },
+    {
+        "_id": "5eb1a5b3a5ebd959e08d5746",
+        "url": "undefined",
+        "images": [],
+        "duration": 125,
+        "availableMarkets": [
+            "eg",
+            "sa"
+        ],
+        "trackNumber": 12,
+        "name": "Alsajda",
+        "artistId": "5eb0a44b9b15d854c08f7362",
+        "albumId": "5eb0a498ec0c444e9c48981e",
+        "discNumber": 1,
+        "explicit": false,
+        "type": "Track",
+        "acousticness": 25,
+        "danceability": 21,
+        "energy": 96,
+        "instrumentalness": 88,
+        "key": "pGMaFTpEPfnu0FkwQ9t1GQ",
+        "liveness": 95,
+        "loudness": 29,
+        "mode": 42,
+        "speechiness": 99,
+        "tempo": 95,
+        "timeSignature": "2020-05-05T17:43:15.684Z",
+        "valence": 26,
+        "like": 1,
+        "keyId": "88XgNh5mVLKPgEnHeLI5Rg",
+        "genre": [
+            "genre3"
+        ],
+        "playable": true
+    }
+]
  *
- * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains</br>an object whose key is "tracks" and whose value is an array of up to 10 track objects in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains</br> an array of up to 10 track objects in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
  */
 
 /**
  * @api {get} api/Artists/{artist_id}/tracks Get an Artist's Tracks
- * @apiName Get an Artist's Top Tracks
+ * @apiName Get an Artist's Tracks
  * @apiGroup Artist
  * @apiDescription
  *
@@ -904,96 +726,128 @@
  * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  *
  * @apiParam (PathParameters) artist_id  Spotify ID for Albums
+  @apiExample {curl} Example usage:
+ *
+ * curl --location --request GET 'http://localhost:3000/api/Artists/5e8cb7037f37604d583f8d22/tracks' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
  *
  *
  * @apiSuccessExample {json} Success-Response:
- * {
- *     [
- *   {
- *       "availableMarkets": [
- *           "usa,tt,wdwq,dwdw,wdw,dss"
- *       ],
- *       "_id": "5e834091a0d4a20f746732f7",
- *       "duration": 462,
- *       "name": "track1",
- *       "artistId": "5e833a51a51d971174923f17",
- *       "albumId": "5e833b412b9d7718a491c850",
- *       "discNumber": 1,
- *       "explicit": false,
- *       "type": "Track",
- *       "acousticness": 10,
- *        "danceability": 23,
- *        "energy": 100,
- *        "instrumentalness": 4,
- *        "key": 90,
- *        "liveness": 25,
- *        "loudness": 70,
- *        "mode": 56,
- *        "speechiness": 67,
- *        "tempo": 76,
- *        "timeSignature": "2020-03-31T13:07:29.395Z",
- *        "valence": 70,
- *        "like": 0,
- *        "__v": 0
- *    },
- *    {
- *        "availableMarkets": [
- *            "usa,tt,wdwq,dwdw,wdw,dss"
- *        ],
- *        "_id": "5e834255a0d4a20f74673300",
- *        "duration": 462,
- *        "name": "track1",
- *        "artistId": "5e833a51a51d971174923f17",
- *        "albumId": "5e833b412b9d7718a491c850",
- *        "discNumber": 1,
- *        "explicit": false,
- *        "type": "Track",
- *        "acousticness": 10,
- *        "danceability": 23,
- *        "energy": 100,
- *        "instrumentalness": 4,
- *        "key": 90,
- *        "liveness": 25,
- *        "loudness": 70,
- *        "mode": 56,
- *        "speechiness": 67,
- *        "tempo": 76,
- *        "timeSignature": "2020-03-31T13:15:01.821Z",
- *        "valence": 70,
- *        "like": 0,
- *        "__v": 0
- *    },
- *    {
- *        "availableMarkets": [
- *            "usa,tt,wdwq,dwdw,wdw,dss"
- *        ],
- *        "_id": "5e834258a0d4a20f74673305",
- *        "duration": 462,
- *        "name": "track1",
- *        "artistId": "5e833a51a51d971174923f17",
- *        "albumId": "5e833b412b9d7718a491c850",
- *        "discNumber": 1,
- *        "explicit": false,
- *        "type": "Track",
- *        "acousticness": 10,
- *        "danceability": 23,
- *        "energy": 100,
- *        "instrumentalness": 4,
- *        "key": 90,
- *        "liveness": 25,
- *        "loudness": 70,
- *        "mode": 56,
- *        "speechiness": 67,
- *        "tempo": 76,
- *        "timeSignature": "2020-03-31T13:15:04.155Z",
- *        "valence": 70,
- *        "like": 0,
- *        "__v": 0
- *    }
- *]
- * }
+ *[
+    {
+        "_id": "5eb0a7b1ec0c444e9c48985c",
+        "url": "undefined",
+        "images": [
+            {
+                "_id": "5eb0b443de66c65e34c18bd1",
+                "height": 100,
+                "width": 100
+            }
+        ],
+        "duration": 60,
+        "availableMarkets": [
+            "eg",
+            "sa"
+        ],
+        "trackNumber": 12,
+        "name": "track26",
+        "artistId": "5eb0a4749b15d854c08f736e",
+        "albumId": "5eb0a7adec0c444e9c48985a",
+        "discNumber": 1,
+        "explicit": false,
+        "type": "Track",
+        "acousticness": 60,
+        "danceability": 30,
+        "energy": 56,
+        "instrumentalness": 53,
+        "key": "pGMaFTpEPfnu0FkwQ9t1GQ",
+        "liveness": 28,
+        "loudness": 45,
+        "mode": 31,
+        "speechiness": 45,
+        "tempo": 40,
+        "timeSignature": "2020-05-04T23:39:29.246Z",
+        "valence": 57,
+        "like": 0,
+        "keyId": "88XgNh5mVLKPgEnHeLI5Rg",
+        "genre": [
+            "genre1"
+        ],
+        "playable": true
+    },
+    {
+        "_id": "5eb1a459a5ebd959e08d5737",
+        "url": "undefined",
+        "images": [],
+        "duration": 125,
+        "availableMarkets": [
+            "eg",
+            "sa"
+        ],
+        "trackNumber": 12,
+        "name": "Alsajda",
+        "artistId": "5eb0a4749b15d854c08f736e",
+        "albumId": "5eb0a7adec0c444e9c48985a",
+        "discNumber": 1,
+        "explicit": false,
+        "type": "Track",
+        "acousticness": 21,
+        "danceability": 42,
+        "energy": 80,
+        "instrumentalness": 45,
+        "key": "pGMaFTpEPfnu0FkwQ9t1GQ",
+        "liveness": 60,
+        "loudness": 80,
+        "mode": 76,
+        "speechiness": 67,
+        "tempo": 81,
+        "timeSignature": "2020-05-05T17:37:29.445Z",
+        "valence": 5,
+        "like": 3,
+        "keyId": "88XgNh5mVLKPgEnHeLI5Rg",
+        "genre": [
+            "genre2"
+        ],
+        "playable": true
+    },
+    {
+        "_id": "5eb1abb1371bc537ec792baf",
+        "url": "undefined",
+        "images": [],
+        "duration": 75,
+        "availableMarkets": [
+            "eg",
+            "sa"
+        ],
+        "trackNumber": 12,
+        "name": "mariam",
+        "artistId": "5eb0a4749b15d854c08f736e",
+        "albumId": "5eb0a7adec0c444e9c48985a",
+        "discNumber": 1,
+        "explicit": false,
+        "type": "Track",
+        "acousticness": 8,
+        "danceability": 13,
+        "energy": 47,
+        "instrumentalness": 13,
+        "key": "pGMaFTpEPfnu0FkwQ9t1GQ",
+        "liveness": 63,
+        "loudness": 39,
+        "mode": 23,
+        "speechiness": 18,
+        "tempo": 23,
+        "timeSignature": "2020-05-05T18:08:49.130Z",
+        "valence": 61,
+        "like": 1,
+        "keyId": "88XgNh5mVLKPgEnHeLI5Rg",
+        "genre": [
+            "genre3"
+        ],
+        "playable": true
+    }
+]
  *
- * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains</br>an object whose key is "tracks" and whose value is an array of up to 10 track objects in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains</br> an array of track objects in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
  */
 /**
  * @api {get} api/Artists/:artist_id/related_artists Get an Artist's Related Artists
@@ -1018,149 +872,694 @@
  *
  *
  * @apiSuccessExample {json} Success-Response:
- * {
- *     [
- *  {
- *    {
- *        "genre": [
- *            "rytyt",
- *            "genre2",
- *            "genre1"
- *        ],
- *        "_id": "5e7f67e438150c15e8589ece",
- *        "info": "jdshgdjdhfjkd",
- *        "popularity": 0,
- *        "type": "Artist",
- *        "Name": "yytguguy",
- *        "userId": "5e7f670838150c15e8589ecc",
- *        "images": [],
- *        "addAlbums": [],
- *        "addTracks": [],
- *       "__v": 0
- *    },
- *    {
- *        "genre": [
- *            "genre1",
- *            "genre2",
- *            "genre3",
- *            "genre4"
- *        ],
- *        "_id": "5e833a51a51d971174923f17",
- *        "popularity": 0,
- *        "type": "Artist",
- *        "Name": "ahmedsamir",
- *        "userId": "5e75c68387bceb10ac3d3394",
- *        "images": [],
- *        "addAlbums": [
- *            {
- *                "_id": "5e833b412b9d7718a491c851",
- *                "albumId": "5e833b412b9d7718a491c850"
- *            }
- *        ],
- *        "addTracks": [
- *            {
- *                "_id": "5e834091a0d4a20f746732f9",
- *                "trackId": "5e834091a0d4a20f746732f7"
- *            },
- *            {
- *                "_id": "5e834255a0d4a20f74673302",
- *                "trackId": "5e834255a0d4a20f74673300"
- *            },
- *            {
- *                "_id": "5e834258a0d4a20f74673307",
- *                "trackId": "5e834258a0d4a20f74673305"
- *     },
- *      {
- *          "_id": "5e834259a0d4a20f7467330c",
- *           "trackId": "5e834259a0d4a20f7467330a"
- *        },
- *         {
- *              "_id": "5e834260a0d4a20f74673311",
- *               "trackId": "5e834260a0d4a20f7467330f"
- *           },
- *            {
- *                "_id": "5e834265a0d4a20f74673316",
- *               "trackId": "5e834265a0d4a20f74673314"
- *          },
- *          {
- *              "_id": "5e834268a0d4a20f7467331b",
- *               "trackId": "5e834268a0d4a20f74673319"
- *           }
- *        ],
- *        "__v": 17,
- *        "name": "artist1"
- *    },
- *    {
- *        "genre": [
- *            "rytyt",
- *            "genre2",
- *            "genre1"
- *        ],
- *        "_id": "5e7f67e438150c15e8589ece",
- *        "info": "jdshgdjdhfjkd",
- *        "popularity": 0,
- *        "type": "Artist",
- *        "Name": "yytguguy",
- *        "userId": "5e7f670838150c15e8589ecc",
- *        "images": [],
- *        "addAlbums": [],
- *        "addTracks": [],
- *       "__v": 0
- *    },
- *    {
- *        "genre": [
- *            "genre1",
- *            "genre2",
- *            "genre3",
- *            "genre4"
- *        ],
- *        "_id": "5e833a51a51d971174923f17",
- *        "popularity": 0,
- *        "type": "Artist",
- *        "Name": "ahmedsamir",
- *        "userId": "5e75c68387bceb10ac3d3394",
- *        "images": [],
- *        "addAlbums": [
- *            {
- *                "_id": "5e833b412b9d7718a491c851",
- *                "albumId": "5e833b412b9d7718a491c850"
- *            }
- *        ],
- *        "addTracks": [
- *            {
- *                "_id": "5e834091a0d4a20f746732f9",
- *                "trackId": "5e834091a0d4a20f746732f7"
- *            },
- *            {
- *                "_id": "5e834255a0d4a20f74673302",
- *                "trackId": "5e834255a0d4a20f74673300"
- *            },
- *            {
- *                "_id": "5e834258a0d4a20f74673307",
- *                "trackId": "5e834258a0d4a20f74673305"
- *     },
- *      {
- *          "_id": "5e834259a0d4a20f7467330c",
- *           "trackId": "5e834259a0d4a20f7467330a"
- *        },
- *         {
- *              "_id": "5e834260a0d4a20f74673311",
- *               "trackId": "5e834260a0d4a20f7467330f"
- *           },
- *            {
- *                "_id": "5e834265a0d4a20f74673316",
- *               "trackId": "5e834265a0d4a20f74673314"
- *          },
- *          {
- *               "_id": "5e834268a0d4a20f7467331b",
- *               "trackId": "5e834268a0d4a20f74673319"
- *           }
- *       ],
- *        "__v": 8
- *    }
- *]
- * }
- * @apiParam (Response)  ormat  On success, the HTTP status code in the response header is 200 OK and the response body contains</br> an object whose key is "artists" and whose value is an array of up to 20 artist objects in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
+ * [
+    {
+        "genre": [
+            "genre1",
+            "genre2",
+            "genre3"
+        ],
+        "_id": "5eb0a44e9b15d854c08f7363",
+        "info": "info about artist 2",
+        "popularity": 101,
+        "type": "Artist",
+        "Name": "artist2",
+        "userId": "5eb0904630a9a01f144b7239",
+        "images": [
+            {
+                "_id": "5eb0b3d6de66c65e34c18b5f",
+                "height": 100,
+                "width": 100
+            }
+        ],
+        "addAlbums": [
+            {
+                "_id": "5eb0a4d9ec0c444e9c489824",
+                "albumId": "5eb0a4d9ec0c444e9c489823"
+            }
+        ],
+        "addTracks": [
+            {
+                "_id": "5eb0a4ddec0c444e9c489826",
+                "trackId": "5eb0a4dcec0c444e9c489825"
+            },
+            {
+                "_id": "5eb1a5f3a5ebd959e08d574a",
+                "trackId": "5eb1a5f3a5ebd959e08d5749"
+            },
+            {
+                "_id": "5eb1ad32371bc537ec792bc2",
+                "trackId": "5eb1ad31371bc537ec792bc1"
+            }
+        ],
+        "__v": 17,
+        "followed": [
+            {
+                "_id": "5ec47824a29ba424a86d3067",
+                "id": "5eb0901430a9a01f144b7234",
+                "date": "2020-05-20T00:21:56.432Z"
+            }
+        ]
+    },
+    {
+        "genre": [
+            "genre1",
+            "genre2",
+            "genre3"
+        ],
+        "_id": "5eb0a4519b15d854c08f7364",
+        "info": "info about artist 3",
+        "popularity": 549,
+        "type": "Artist",
+        "Name": "artist3",
+        "userId": "5eb0905030a9a01f144b723a",
+        "images": [
+            {
+                "_id": "5eb0b3dfde66c65e34c18b68",
+                "height": 100,
+                "width": 100
+            }
+        ],
+        "addAlbums": [
+            {
+                "_id": "5eb0a51bec0c444e9c489829",
+                "albumId": "5eb0a51bec0c444e9c489828"
+            }
+        ],
+        "addTracks": [
+            {
+                "_id": "5eb0a51fec0c444e9c48982b",
+                "trackId": "5eb0a51eec0c444e9c48982a"
+            },
+            {
+                "_id": "5eb1a632a5ebd959e08d574d",
+                "trackId": "5eb1a632a5ebd959e08d574c"
+            },
+            {
+                "_id": "5eb1ad72371bc537ec792bc5",
+                "trackId": "5eb1ad72371bc537ec792bc4"
+            }
+        ],
+        "__v": 16,
+        "followed": [
+            {
+                "_id": "5ec4576ca29ba424a86d2f01",
+                "id": "5ebff844ec00612568e2a7a6",
+                "date": "2020-05-19T22:02:20.330Z"
+            },
+            {
+                "_id": "5ec45785a29ba424a86d2f03",
+                "id": "5eb08fec30a9a01f144b7230",
+                "date": "2020-05-19T22:02:45.521Z"
+            }
+        ]
+    },
+    {
+        "genre": [
+            "genre1",
+            "genre2",
+            "genre3"
+        ],
+        "_id": "5eb0a4559b15d854c08f7365",
+        "info": "info about artist 4",
+        "popularity": 255,
+        "type": "Artist",
+        "Name": "artist4",
+        "userId": "5eb0905a30a9a01f144b723b",
+        "images": [
+            {
+                "_id": "5eb0b3eade66c65e34c18b74",
+                "height": 100,
+                "width": 100
+            }
+        ],
+        "addAlbums": [
+            {
+                "_id": "5eb0a55cec0c444e9c48982e",
+                "albumId": "5eb0a55cec0c444e9c48982d"
+            }
+        ],
+        "addTracks": [
+            {
+                "_id": "5eb0a55fec0c444e9c489830",
+                "trackId": "5eb0a55eec0c444e9c48982f"
+            },
+            {
+                "_id": "5eb1a672a5ebd959e08d5750",
+                "trackId": "5eb1a672a5ebd959e08d574f"
+            },
+            {
+                "_id": "5eb1adb2371bc537ec792bc8",
+                "trackId": "5eb1adb2371bc537ec792bc7"
+            }
+        ],
+        "__v": 14,
+        "followed": []
+    },
+    {
+        "genre": [
+            "genre1",
+            "genre2",
+            "genre3"
+        ],
+        "_id": "5eb0a4589b15d854c08f7366",
+        "info": "info about artist 5",
+        "popularity": 26,
+        "type": "Artist",
+        "Name": "artist5",
+        "userId": "5eb0901e30a9a01f144b7235",
+        "images": [
+            {
+                "_id": "5eb0b3f4de66c65e34c18b7d",
+                "height": 100,
+                "width": 100
+            }
+        ],
+        "addAlbums": [
+            {
+                "_id": "5eb0a59eec0c444e9c489833",
+                "albumId": "5eb0a59eec0c444e9c489832"
+            }
+        ],
+        "addTracks": [
+            {
+                "_id": "5eb0a5a2ec0c444e9c489835",
+                "trackId": "5eb0a5a1ec0c444e9c489834"
+            },
+            {
+                "_id": "5eb1a6b1a5ebd959e08d5753",
+                "trackId": "5eb1a6b1a5ebd959e08d5752"
+            },
+            {
+                "_id": "5eb1adf3371bc537ec792bcb",
+                "trackId": "5eb1adf2371bc537ec792bca"
+            }
+        ],
+        "__v": 14,
+        "followed": []
+    },
+    {
+        "genre": [
+            "genre1",
+            "genre2",
+            "genre3"
+        ],
+        "_id": "5eb0a45b9b15d854c08f7367",
+        "info": "info about artist 6",
+        "popularity": 2,
+        "type": "Artist",
+        "Name": "artist6",
+        "userId": "5eb0906430a9a01f144b723c",
+        "images": [
+            {
+                "_id": "5eb0b3fcde66c65e34c18b86",
+                "height": 100,
+                "width": 100
+            }
+        ],
+        "addAlbums": [
+            {
+                "_id": "5eb0a5e2ec0c444e9c489838",
+                "albumId": "5eb0a5e2ec0c444e9c489837"
+            }
+        ],
+        "addTracks": [
+            {
+                "_id": "5eb0a5e4ec0c444e9c48983a",
+                "trackId": "5eb0a5e3ec0c444e9c489839"
+            },
+            {
+                "_id": "5eb1a6f1a5ebd959e08d5756",
+                "trackId": "5eb1a6f1a5ebd959e08d5755"
+            }
+        ],
+        "__v": 12,
+        "followed": []
+    },
+    {
+        "genre": [
+            "genre1",
+            "genre2",
+            "genre3"
+        ],
+        "_id": "5eb0a45f9b15d854c08f7368",
+        "info": "info about artist 7",
+        "popularity": 449,
+        "type": "Artist",
+        "Name": "artist7",
+        "userId": "5eb0902830a9a01f144b7236",
+        "images": [
+            {
+                "_id": "5eb0b405de66c65e34c18b8f",
+                "height": 100,
+                "width": 100
+            }
+        ],
+        "addAlbums": [
+            {
+                "_id": "5eb0a624ec0c444e9c48983d",
+                "albumId": "5eb0a623ec0c444e9c48983c"
+            }
+        ],
+        "addTracks": [
+            {
+                "_id": "5eb0a627ec0c444e9c48983f",
+                "trackId": "5eb0a626ec0c444e9c48983e"
+            },
+            {
+                "_id": "5eb1a730a5ebd959e08d5759",
+                "trackId": "5eb1a730a5ebd959e08d5758"
+            },
+            {
+                "_id": "5eb1ae73371bc537ec792bd1",
+                "trackId": "5eb1ae73371bc537ec792bd0"
+            }
+        ],
+        "__v": 12,
+        "followed": []
+    },
+    {
+        "genre": [
+            "genre1",
+            "genre2",
+            "genre3"
+        ],
+        "_id": "5eb0a4629b15d854c08f7369",
+        "info": "info about artist 8",
+        "popularity": 536,
+        "type": "Artist",
+        "Name": "artist8",
+        "userId": "5eb0915930a9a01f144b723e",
+        "images": [
+            {
+                "_id": "5eb0b410de66c65e34c18b9b",
+                "height": 100,
+                "width": 100
+            }
+        ],
+        "addAlbums": [
+            {
+                "_id": "5eb0a665ec0c444e9c489842",
+                "albumId": "5eb0a665ec0c444e9c489841"
+            }
+        ],
+        "addTracks": [
+            {
+                "_id": "5eb0a669ec0c444e9c489844",
+                "trackId": "5eb0a668ec0c444e9c489843"
+            },
+            {
+                "_id": "5eb1a770a5ebd959e08d575c",
+                "trackId": "5eb1a770a5ebd959e08d575b"
+            },
+            {
+                "_id": "5eb1aeb3371bc537ec792bd4",
+                "trackId": "5eb1aeb3371bc537ec792bd3"
+            }
+        ],
+        "__v": 19,
+        "followed": [
+            {
+                "_id": "5ec26502afb12b366cf04766",
+                "id": "5eb08fec30a9a01f144b7230",
+                "date": "2020-05-18T10:35:46.774Z"
+            },
+            {
+                "_id": "5ec47815a29ba424a86d3065",
+                "id": "5eb0901430a9a01f144b7234",
+                "date": "2020-05-20T00:21:41.837Z"
+            },
+            {
+                "_id": "5ed60c9535e1a5252a9c0561",
+                "id": "5ebff844ec00612568e2a7a6",
+                "date": "2020-06-02T08:23:49.490Z"
+            }
+        ]
+    },
+    {
+        "genre": [
+            "genre1",
+            "genre2",
+            "genre3"
+        ],
+        "_id": "5eb0a4659b15d854c08f736a",
+        "info": "info about artist 9",
+        "popularity": 181,
+        "type": "Artist",
+        "Name": "artist9",
+        "userId": "5eb08fce30a9a01f144b722d",
+        "images": [
+            {
+                "_id": "5eb0b418de66c65e34c18ba4",
+                "height": 100,
+                "width": 100
+            }
+        ],
+        "addAlbums": [
+            {
+                "_id": "5eb0a6a8ec0c444e9c489847",
+                "albumId": "5eb0a6a7ec0c444e9c489846"
+            }
+        ],
+        "addTracks": [
+            {
+                "_id": "5eb0a6acec0c444e9c489849",
+                "trackId": "5eb0a6aaec0c444e9c489848"
+            },
+            {
+                "_id": "5eb1a3d8a5ebd959e08d5732",
+                "trackId": "5eb1a3d8a5ebd959e08d5731"
+            },
+            {
+                "_id": "5eb1ab30371bc537ec792baa",
+                "trackId": "5eb1ab2f371bc537ec792ba9"
+            },
+            {
+                "_id": "5ec496275f713479a8312e4b",
+                "trackId": "5ec496265f713479a8312e4a"
+            }
+        ],
+        "__v": 21,
+        "followed": []
+    },
+    {
+        "genre": [
+            "genre1",
+            "genre2",
+            "genre3"
+        ],
+        "_id": "5eb0a4699b15d854c08f736b",
+        "info": "info about artist 10",
+        "popularity": 42,
+        "type": "Artist",
+        "Name": "artist10",
+        "userId": "5eb08fd830a9a01f144b722e",
+        "images": [
+            {
+                "_id": "5eb0b421de66c65e34c18bad",
+                "height": 100,
+                "width": 100
+            }
+        ],
+        "addAlbums": [
+            {
+                "_id": "5eb0a6e9ec0c444e9c48984c",
+                "albumId": "5eb0a6e8ec0c444e9c48984b"
+            }
+        ],
+        "addTracks": [
+            {
+                "_id": "5eb0a6edec0c444e9c48984e",
+                "trackId": "5eb0a6ebec0c444e9c48984d"
+            },
+            {
+                "_id": "5eb1a41aa5ebd959e08d5735",
+                "trackId": "5eb1a419a5ebd959e08d5734"
+            },
+            {
+                "_id": "5eb1ab6f371bc537ec792bad",
+                "trackId": "5eb1ab6f371bc537ec792bac"
+            }
+        ],
+        "__v": 16,
+        "followed": []
+    },
+    {
+        "genre": [
+            "genre1",
+            "genre2",
+            "genre3"
+        ],
+        "_id": "5eb0a46c9b15d854c08f736c",
+        "info": "info about artist 11",
+        "popularity": 202,
+        "type": "Artist",
+        "Name": "artist11",
+        "userId": "5eb08ff630a9a01f144b7231",
+        "images": [
+            {
+                "_id": "5eb0b42ade66c65e34c18bb6",
+                "height": 100,
+                "width": 100
+            }
+        ],
+        "addAlbums": [
+            {
+                "_id": "5eb0a72aec0c444e9c489851",
+                "albumId": "5eb0a729ec0c444e9c489850"
+            }
+        ],
+        "addTracks": [
+            {
+                "_id": "5eb0a72dec0c444e9c489853",
+                "trackId": "5eb0a72dec0c444e9c489852"
+            },
+            {
+                "_id": "5eb1a4d9a5ebd959e08d573e",
+                "trackId": "5eb1a4d8a5ebd959e08d573d"
+            },
+            {
+                "_id": "5eb1ac31371bc537ec792bb6",
+                "trackId": "5eb1ac30371bc537ec792bb5"
+            }
+        ],
+        "__v": 16,
+        "followed": []
+    },
+    {
+        "genre": [
+            "genre1",
+            "genre2",
+            "genre3"
+        ],
+        "_id": "5eb0a46f9b15d854c08f736d",
+        "info": "info about artist 12",
+        "popularity": 96,
+        "type": "Artist",
+        "Name": "artist12",
+        "userId": "5eb0900030a9a01f144b7232",
+        "images": [
+            {
+                "_id": "5eb0b435de66c65e34c18bc2",
+                "height": 100,
+                "width": 100
+            }
+        ],
+        "addAlbums": [
+            {
+                "_id": "5eb0a76dec0c444e9c489856",
+                "albumId": "5eb0a76cec0c444e9c489855"
+            }
+        ],
+        "addTracks": [
+            {
+                "_id": "5eb0a770ec0c444e9c489858",
+                "trackId": "5eb0a76fec0c444e9c489857"
+            },
+            {
+                "_id": "5eb1a575a5ebd959e08d5744",
+                "trackId": "5eb1a574a5ebd959e08d5743"
+            },
+            {
+                "_id": "5eb1acb0371bc537ec792bbc",
+                "trackId": "5eb1acb0371bc537ec792bbb"
+            }
+        ],
+        "__v": 16,
+        "followed": []
+    },
+    {
+        "genre": [
+            "genre1",
+            "genre2",
+            "genre3"
+        ],
+        "_id": "5eb0a4779b15d854c08f736f",
+        "info": "Amr Diab is a pop singer and songwriter from Egypt. He has won a record seven World Music Awards to date, and is considered the all-time best-selling musical artist from the Middle East. He is the creator of his own genre; he calls his meld of Arabic harmony and Western rhythms \"Mediterranean Music,\" and it has influenced many subsequent artists.  He was born on the October 11, 1961 in Portsaid, Egypt. He began singing at age three and at six, he performed the Egyptian national anthem at the July 23rd Festival in Portsaid. He was awarded a guitar by the governor for his performance and his career course was set.  He continued performing anywhere he could. He recorded his debut album, Ya Tareeq, in 1983, and moved to Cairo in 1984. He studied Arabic music at the Cairo Academy of Arts, where he received a Bachelor's degree. He signed to Delta Sound for 1984's Ghani Men Albak and remained there through 1994's Ya Omrina. He also experimented with film. Diab played himself in the 1989 movie El Afareet. In 1992, he began pioneering big-production, high-tech videos that have proved influential not only in the Middle East but in Europe. He also starred in 1993's Ays Krim fi Glym and played alongside Omar Shariff in the film Deahk We La'ab.  For Diab, film, while interesting, didn't hold his attention. His musical career netted him a series of albums that furthered his vision. As a predecessor and in Egypt, Diab was a bona fide star. He signed to Alam el Phan for 1995's multi-platinum-selling Nour el Ain, his international breakthrough. It charted not only in Egypt, but also in India, Pakistan, Iran, Afghanistan, Brazil, Argentina, Chile, South Africa, and as far west as France. Each of his succeeding recordings for the label charted. 1999's Ama Rain featured his duets with Cheb Khaled and Angela Dimitriou. Diab issued three more albums with Alam el Phan, 2000's Tamally Maak, the following year's Aktar Wahed, and 2003's Allem Alby, before he left for the Rotana label. 2004's Lealy Nahary proved one of his biggest hits and netted three Top Five singles. He followed it the next year with Kammel Kalamak, scoring another chart hit, as did 2007's El Lilady -- the latter earned him a World Music Award. Wayah, his 2009 set, was another best-seller and precipitated a concert at Golf Porto Marina to a crowd of over 80,000. In 2011, during the Egyptian revolution that caused President Hosni Mubarak to resign and go into exile, Diab released the song \"Masr A'let\" (Egypt Said),\" a tribute to those martyred during the Arab Spring. Banadeek Ta'ala followed, and El Leila was issued the following year; Diab topped the charts again. In 2014, Shoft el Ayam was released and entered at number one in several Middle Eastern countries. 2016's Ahla Wa Ahla was a subsequent number one. ~ Thom Jurek, Rovi",
+        "popularity": 261,
+        "type": "Artist",
+        "Name": "Nerdeen",
+        "userId": "5eb0901430a9a01f144b7234",
+        "images": [
+            {
+                "_id": "5ed727c135e1a5252a9c085a",
+                "height": 284,
+                "width": 498
+            }
+        ],
+        "addAlbums": [
+            {
+                "_id": "5eb0a7efec0c444e9c489860",
+                "albumId": "5eb0a7efec0c444e9c48985f"
+            }
+        ],
+        "addTracks": [
+            {
+                "_id": "5eb0a7f3ec0c444e9c489862",
+                "trackId": "5eb0a7f1ec0c444e9c489861"
+            },
+            {
+                "_id": "5eb1a7b0a5ebd959e08d575f",
+                "trackId": "5eb1a7afa5ebd959e08d575e"
+            },
+            {
+                "_id": "5eb1aef7371bc537ec792bd7",
+                "trackId": "5eb1aef6371bc537ec792bd6"
+            },
+            {
+                "_id": "5ec2ce2cafb12b366cf04782",
+                "trackId": "5ec2ce2cafb12b366cf04781"
+            }
+        ],
+        "__v": 26,
+        "followed": []
+    },
+    {
+        "genre": [
+            "genre1",
+            "genre2",
+            "genre3"
+        ],
+        "_id": "5eb0a47a9b15d854c08f7370",
+        "info": "info about artist 15",
+        "popularity": 0,
+        "type": "Artist",
+        "Name": "artist15",
+        "userId": "5eb08fec30a9a01f144b7230",
+        "images": [
+            {
+                "_id": "5eb0b44fde66c65e34c18bdd",
+                "height": 100,
+                "width": 100
+            }
+        ],
+        "addAlbums": [
+            {
+                "_id": "5eb0a832ec0c444e9c489865",
+                "albumId": "5eb0a831ec0c444e9c489864"
+            }
+        ],
+        "addTracks": [
+            {
+                "_id": "5eb0a834ec0c444e9c489867",
+                "trackId": "5eb0a834ec0c444e9c489866"
+            },
+            {
+                "_id": "5eb1a49aa5ebd959e08d573b",
+                "trackId": "5eb1a499a5ebd959e08d573a"
+            },
+            {
+                "_id": "5eb1abf2371bc537ec792bb3",
+                "trackId": "5eb1abf2371bc537ec792bb2"
+            }
+        ],
+        "__v": 15,
+        "followed": []
+    },
+    {
+        "genre": [
+            "genre1",
+            "genre2",
+            "genre3"
+        ],
+        "_id": "5eb0a47d9b15d854c08f7371",
+        "info": "info about artist 16",
+        "popularity": 1162,
+        "type": "Artist",
+        "Name": "artist16",
+        "userId": "5eb0903230a9a01f144b7237",
+        "images": [
+            {
+                "_id": "5eb0b458de66c65e34c18be6",
+                "height": 100,
+                "width": 100
+            }
+        ],
+        "addAlbums": [
+            {
+                "_id": "5eb0a874ec0c444e9c48986a",
+                "albumId": "5eb0a872ec0c444e9c489869"
+            }
+        ],
+        "addTracks": [
+            {
+                "_id": "5eb0a878ec0c444e9c48986c",
+                "trackId": "5eb0a877ec0c444e9c48986b"
+            },
+            {
+                "_id": "5eb1a530a5ebd959e08d5741",
+                "trackId": "5eb1a52fa5ebd959e08d5740"
+            },
+            {
+                "_id": "5eb1ac72371bc537ec792bb9",
+                "trackId": "5eb1ac71371bc537ec792bb8"
+            }
+        ],
+        "__v": 47,
+        "followed": [
+            {
+                "_id": "5ec1af13afb12b366cf04697",
+                "id": "5ec1a1f0d69f9b31b0a4973b",
+                "date": "2020-05-17T21:39:31.827Z"
+            },
+            {
+                "_id": "5ec6bf456b940c56933c2318",
+                "id": "5ec6bde16b940c56933c22e4",
+                "date": "2020-05-21T17:49:57.376Z"
+            },
+            {
+                "_id": "5ecb9a90f4f6c8000698828b",
+                "id": "5ec7fc217fea250006d9ee08",
+                "date": "2020-05-25T10:14:40.422Z"
+            }
+        ]
+    },
+    {
+        "genre": [
+            "genre1",
+            "genre2",
+            "genre3"
+        ],
+        "_id": "5eb0a4809b15d854c08f7372",
+        "info": "info about artist 17",
+        "popularity": 0,
+        "type": "Artist",
+        "Name": "artist17",
+        "userId": "5eb0900a30a9a01f144b7233",
+        "images": [
+            {
+                "_id": "5eb0b460de66c65e34c18bef",
+                "height": 100,
+                "width": 100
+            }
+        ],
+        "addAlbums": [
+            {
+                "_id": "5eb0a8b6ec0c444e9c48986f",
+                "albumId": "5eb0a8b4ec0c444e9c48986e"
+            }
+        ],
+        "addTracks": [
+            {
+                "_id": "5eb1a7efa5ebd959e08d5762",
+                "trackId": "5eb1a7efa5ebd959e08d5761"
+            },
+            {
+                "_id": "5eb1af37371bc537ec792bda",
+                "trackId": "5eb1af36371bc537ec792bd9"
+            }
+        ],
+        "__v": 13,
+        "followed": [
+            {
+                "_id": "5ecb030c6b940c56933c23a1",
+                "id": "5ebff844ec00612568e2a7a6",
+                "date": "2020-05-24T23:28:12.002Z"
+            }
+        ]
+    }
+]
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains</br> an array of up to 20 artist objects in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
  *
  *
  */
@@ -1189,84 +1588,167 @@
 --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
  *
  *@apiSuccessExample {json} Success-Response:
- *  {
- *     [
- *    {
- *        "genre": [
- *            "rytyt",
- *            "genre2",
- *            "genre1"
- *        ],
- *        "_id": "5e7f67e438150c15e8589ece",
- *        "info": "jdshgdjdhfjkd",
- *        "popularity": 0,
- *        "type": "Artist",
- *        "Name": "yytguguy",
- *        "userId": "5e7f670838150c15e8589ecc",
- *        "images": [],
- *        "addAlbums": [],
- *        "addTracks": [],
- *       "__v": 0
- *    },
- *    {
- *        "genre": [
- *            "genre1",
- *            "genre2",
- *            "genre3",
- *            "genre4"
- *        ],
- *        "_id": "5e833a51a51d971174923f17",
- *        "popularity": 0,
- *        "type": "Artist",
- *        "Name": "ahmedsamir",
- *        "userId": "5e75c68387bceb10ac3d3394",
- *        "images": [],
- *        "addAlbums": [
- *            {
- *                "_id": "5e833b412b9d7718a491c851",
- *                "albumId": "5e833b412b9d7718a491c850"
- *            }
- *        ],
- *        "addTracks": [
- *            {
- *                "_id": "5e834091a0d4a20f746732f9",
- *                "trackId": "5e834091a0d4a20f746732f7"
- *            },
- *            {
- *                "_id": "5e834255a0d4a20f74673302",
- *                "trackId": "5e834255a0d4a20f74673300"
- *            },
- *            {
- *                "_id": "5e834258a0d4a20f74673307",
- *                "trackId": "5e834258a0d4a20f74673305"
- *     },
- *      {
- *          "_id": "5e834259a0d4a20f7467330c",
- *           "trackId": "5e834259a0d4a20f7467330a"
- *        },
- *         {
- *              "_id": "5e834260a0d4a20f74673311",
- *               "trackId": "5e834260a0d4a20f7467330f"
- *           },
- *            {
- *                "_id": "5e834265a0d4a20f74673316",
- *               "trackId": "5e834265a0d4a20f74673314"
- *          },
- *          {
- *              "_id": "5e834268a0d4a20f7467331b",
- *               "trackId": "5e834268a0d4a20f74673319"
- *           }
- *        ],
- *        "__v": 17,
- *        "name": "artist1"
- *    }
- *]
- * }
+ *  [
+    {
+        "genre": [
+            "genre1",
+            "genre2",
+            "genre3"
+        ],
+        "_id": "5eb0a44b9b15d854c08f7362",
+        "info": "info about artist 1",
+        "popularity": 806,
+        "type": "Artist",
+        "Name": "artist1",
+        "userId": "5eb0903c30a9a01f144b7238",
+        "images": [
+            {
+                "_id": "5eb0b3cede66c65e34c18b56",
+                "height": 100,
+                "width": 100
+            }
+        ],
+        "addAlbums": [
+            {
+                "_id": "5eb0a498ec0c444e9c48981f",
+                "albumId": "5eb0a498ec0c444e9c48981e"
+            }
+        ],
+        "addTracks": [
+            {
+                "_id": "5eb0a49aec0c444e9c489821",
+                "trackId": "5eb0a499ec0c444e9c489820"
+            },
+            {
+                "_id": "5eb1a5b4a5ebd959e08d5747",
+                "trackId": "5eb1a5b3a5ebd959e08d5746"
+            },
+            {
+                "_id": "5eb1acf1371bc537ec792bbf",
+                "trackId": "5eb1acf0371bc537ec792bbe"
+            }
+        ],
+        "__v": 36,
+        "followed": [
+            {
+                "_id": "5ec45ab5a29ba424a86d2f4e",
+                "id": "5ebff844ec00612568e2a7a6",
+                "date": "2020-05-19T22:16:21.353Z"
+            },
+            {
+                "_id": "5ec48ad46b940c56933c1d39",
+                "id": "5eb0900a30a9a01f144b7233",
+                "date": "2020-05-20T01:41:40.818Z"
+            }
+        ]
+    },
+    {
+        "genre": [
+            "genre1",
+            "genre2",
+            "genre3"
+        ],
+        "_id": "5eb0a44e9b15d854c08f7363",
+        "info": "info about artist 2",
+        "popularity": 101,
+        "type": "Artist",
+        "Name": "artist2",
+        "userId": "5eb0904630a9a01f144b7239",
+        "images": [
+            {
+                "_id": "5eb0b3d6de66c65e34c18b5f",
+                "height": 100,
+                "width": 100
+            }
+        ],
+        "addAlbums": [
+            {
+                "_id": "5eb0a4d9ec0c444e9c489824",
+                "albumId": "5eb0a4d9ec0c444e9c489823"
+            }
+        ],
+        "addTracks": [
+            {
+                "_id": "5eb0a4ddec0c444e9c489826",
+                "trackId": "5eb0a4dcec0c444e9c489825"
+            },
+            {
+                "_id": "5eb1a5f3a5ebd959e08d574a",
+                "trackId": "5eb1a5f3a5ebd959e08d5749"
+            },
+            {
+                "_id": "5eb1ad32371bc537ec792bc2",
+                "trackId": "5eb1ad31371bc537ec792bc1"
+            }
+        ],
+        "__v": 17,
+        "followed": [
+            {
+                "_id": "5ec47824a29ba424a86d3067",
+                "id": "5eb0901430a9a01f144b7234",
+                "date": "2020-05-20T00:21:56.432Z"
+            }
+        ]
+    },
+    {
+        "genre": [
+            "genre1",
+            "genre2",
+            "genre3"
+        ],
+        "_id": "5eb0a4519b15d854c08f7364",
+        "info": "info about artist 3",
+        "popularity": 549,
+        "type": "Artist",
+        "Name": "artist3",
+        "userId": "5eb0905030a9a01f144b723a",
+        "images": [
+            {
+                "_id": "5eb0b3dfde66c65e34c18b68",
+                "height": 100,
+                "width": 100
+            }
+        ],
+        "addAlbums": [
+            {
+                "_id": "5eb0a51bec0c444e9c489829",
+                "albumId": "5eb0a51bec0c444e9c489828"
+            }
+        ],
+        "addTracks": [
+            {
+                "_id": "5eb0a51fec0c444e9c48982b",
+                "trackId": "5eb0a51eec0c444e9c48982a"
+            },
+            {
+                "_id": "5eb1a632a5ebd959e08d574d",
+                "trackId": "5eb1a632a5ebd959e08d574c"
+            },
+            {
+                "_id": "5eb1ad72371bc537ec792bc5",
+                "trackId": "5eb1ad72371bc537ec792bc4"
+            }
+        ],
+        "__v": 16,
+        "followed": [
+            {
+                "_id": "5ec4576ca29ba424a86d2f01",
+                "id": "5ebff844ec00612568e2a7a6",
+                "date": "2020-05-19T22:02:20.330Z"
+            },
+            {
+                "_id": "5ec45785a29ba424a86d2f03",
+                "id": "5eb08fec30a9a01f144b7230",
+                "date": "2020-05-19T22:02:45.521Z"
+            }
+        ]
+    }
+]
  * @apiParam (QueryParameters)  artists_ids 		Required. A comma-separated list of the Spotify IDs for the artists. Maximum: 50 IDs.
  *
  *
  *
- * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains an object</br> whose key is "artists" and whose value is an array of artist objects in JSON format.</br></br></br> Objects are returned in the order requested. If an object is not found, a null value is returned in the appropriate position.</br> Duplicate ids in the query will result in duplicate objects in the response.</br> On error, the header status code is an error code and the response body contains an error object.
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains an array</br>  of artist objects in JSON format.</br></br></br> Objects are returned in the order requested. If an object is not found, a null value is returned in the appropriate position.</br> Duplicate ids in the query will result in duplicate objects in the response.</br> On error, the header status code is an error code and the response body contains an error object.
  */
 
 
@@ -3600,7 +4082,7 @@
  * @apiParam (Response) Format On success, the response body contains a array of 1's and 0's values with the same order of the given array of playlists ids to detect whether restored or not and the HTTP status code in the response header is 200 OK. On error, the header status code is an error code 404  and the response body contains an error object, If the ids not given error 403 will be sent .
  *
  *  @apiExample {curl} Example usage:
- * curl --location --request GET 'http://localhost:3000/api/me/restoreplaylists?playlistsIds=5e8cbe6b7f37604d583f8d64' \
+ * curl --location --request PUT 'http://localhost:3000/api/me/restoreplaylists?playlistsIds=5e8cbe6b7f37604d583f8d64' \
 --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
  *
  * @apiSuccessExample {json} Success-Response:
@@ -3839,8 +4321,6 @@
  *
  *
  * @apiParam (Body Parameters) {string}  name		Optional. The new name for the playlist
- * @apiParam (Body Parameters) {Boolean} public		Optional. If true the playlist will be public, if false it will be private.
- * @apiParam (Body Parameters) {Boolean} collaborative		Optional. If true , the playlist will become collaborative and other users will be able to modify the playlist in their Spotify client. Note: You can only set collaborative to true on non-public playlists.
  * @apiParam (Body Parameters) {string}  description	Optional. Value for playlist description as displayed in Spotify Clients and in the Web API.
  *
  *
@@ -4043,22 +4523,6 @@
  * {"success":"Delete successfully"}
  */
 /**
- * @api {GET} api/Playlist/next Get a Playlist Cover Image(not implemented yet)
- * @apiName Get a Playlist Cover Image
- * @apiGroup Playlist
- * @apiDescription
- *
- * <p style="color:red;">Get the current image associated with a specific playlist.</p>
- *
- * @apiParam (Path Parameters)  playlist_id	The Spotify ID for the playlist
- *
- * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
- *
- * @apiParam (Response) Format On success, the response body contains a list of image objects in JSON format and the HTTP status code in the response header is 200 OK On error, the header status code is an error code and the response body contains an error object.
- *
- *
- */
-/**
  * @api {DELETE} api/playlists/{playlist_id}/tracks Remove Tracks from a Playlist
  * @apiName Remove Tracks from a Playlist
  * @apiGroup Playlist
@@ -4145,55 +4609,7 @@
  *{"hasTracks":["5e7c95e1cb9f6a5270ea412a","5e7c9618cb9f6a5270ea413a",*"5e7c95e2cb9f6a5270ea412c","5e7c95e2cb9f6a5270ea412b",*"5e7c95e2cb9f6a5270ea412d"],"_id":"5e7e63dc0348392ef49bf95e",*"action":"reorder Tracks"},{"hasTracks":["5e7c9618cb9f6a5270ea413a",*"5e7c95e2cb9f6a5270ea412c","5e7c95e2cb9f6a5270ea412b",*"5e7c95e2cb9f6a5270ea412d","5e7c95e1cb9f6a5270ea412a"],*"_id":"5e7e63f00348392ef49bf95f","action":"reorder Tracks"}],
  *"__v":38}
  */
-/**
- * @api {PUT} api/playlists/{playlist_id}/tracks Replace a Playlist's Tracks (Not implemented yet)
- * @apiName Replace a Playlist's Tracks.
- * @apiGroup Playlist
- * @apiDescription
- *
- * <p style="color:red;">Replace all the tracks in a playlist, overwriting its existing tracks. This powerful request can be useful for replacing tracks, re-ordering existing tracks, or clearing the playlist.</p>
- *
- * The Spotify URIs of the tracks to set can be passed either as a JSON array in the request body or as a list in the query string. The request can only accept a maximum of 100 tracks; any additional tracks will need to be added using the “Add Tracks to a Playlist” endpoint.
- *
- * <h1> Request parameters</h1>
- * </br></br><h1> Endpoint</h1>
- *
- *
- * @apiParam (Path Parameters)  playlist_id	The Spotify ID for the playlist
- *
- * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
- * @apiHeader (Header)  Content-Type	Required if URIs are passed in the request body, otherwise ignored. The content type of the request body: application/json
- *
- *
- * @apiParam (Query Paramaters) {list_of_Spotify_URIs} uris		Optional. A comma-separated list of Spotify track URIs to set.
- *
- *
- * @apiParam (body Paramaters)  {list_of_Spotify_URIs_strings} uris	Optional. A JSON array of the Spotify track URIs to set. For example: {"uris": ["spotify:track:4iV5W9uYEdYUVa79Axb7Rh", "spotify:track:1301WleyT98MSxVHPZCA6M"]}Currently, a maximum of 100 tracks can be set. Note: if the uris parameter is present in the query string, any URIs listed here in the body will be ignored.
- *
- * @apiParam (Response) Format on success, the HTTP status code in the response header is 201 Created. On error, the header status code is an error code, the response body contains an error object, and the existing playlist is unmodified. Trying to set a track when you do not have the user’s authorization returns error 403 Forbidden.
- */
-/**
- * @api {PUT} api/playlists/{playlist_id}/images Upload a Custom Playlist  Cover Image (Not implemented yet)
- * @apiName Upload a Custom Playlist Cover Image.
- * @apiGroup Playlist
- * @apiDescription
- *
- * <p style="color:red;">Replace the image used to represent a specific playlist.</p>
- *
- * <h1> Request parameters</h1>
- * </br></br><h1> Endpoint</h1>
- *
- *
- * @apiParam (Path Parameters)  playlist_id	The Spotify ID for the playlist
- *
- * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
- * @apiHeader (Header)  Content-Type	Required if URIs are passed in the request body, otherwise ignored. The content type of the request body: application/json
- *
- *
- * @apiParam (body Paramaters)  image Base64 encoded JPEG image data, maximum payload size is 256 KB
- * @apiParam (Rate limiting) Ratelimiting If you get status code 429, it means that you have sent too many requests. If this happens, have a look in the Retry-After header, where you will see a number displayed. This is the amount of seconds that you need to wait, before you can retry sending your requests.
- * @apiParam (Response) Format A successful request will return a 202 ACCEPTED response code. When the image has been provided, we forward it on to our transcoder service in order to generate the three sizes provided in the playlist’s images object. This operation may take a short time, so performing a GET request to the playlist may not immediately return URLs to the updated images.On error, the header status code is an error code and the response body contains an error object.
- */
+
 /**
  * @api {PUT} api/playlists/{playlist_id}/collaborative toggle playlist collaborative attribute
  * @apiName toggle collaborative.

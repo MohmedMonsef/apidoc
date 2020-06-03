@@ -1,22 +1,13 @@
 define({
-  "name": "Spotify",
-  "version": "1.0.1",
+  "name": "",
+  "version": "0.0.0",
   "description": "",
-  "main": "doc.js",
-  "directories": {
-    "doc": "doc"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
   "sampleUrl": false,
   "defaultVersion": "0.0.0",
   "apidoc": "0.3.0",
   "generator": {
     "name": "apidoc",
-    "time": "2020-06-02T11:01:47.910Z",
+    "time": "2020-06-03T07:53:23.754Z",
     "url": "http://apidocjs.com",
     "version": "0.20.0"
   }
