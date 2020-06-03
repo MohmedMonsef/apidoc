@@ -5,6 +5,7 @@ define({ "api": [
     "title": "Change User Type to Artist",
     "name": "Change_User_Type_to_Artist",
     "group": "Account",
+    "version": "1.1.0",
     "description": "<h1>Request Parameters</h1></br></br> <h1>Endpoint</h1>",
     "header": {
       "fields": {
@@ -66,7 +67,6 @@ define({ "api": [
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Account"
   },
@@ -76,6 +76,7 @@ define({ "api": [
     "title": "Confirm Premium",
     "name": "Confirm_Premium",
     "group": "Account",
+    "version": "1.1.0",
     "description": "<h1>Request Parameters</h1></br></br> <h1>Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -112,7 +113,6 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "version": "0.0.0",
     "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Account"
   },
@@ -122,6 +122,7 @@ define({ "api": [
     "title": "Confirm Signup",
     "name": "Confirm_Signup",
     "group": "Account",
+    "version": "1.1.0",
     "description": "<h1>Request Parameters</h1></br></br> <h1>Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -158,7 +159,6 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "version": "0.0.0",
     "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Account"
   },
@@ -168,6 +168,7 @@ define({ "api": [
     "title": "Create a new account",
     "name": "Create_a_new_account",
     "group": "Account",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">add new user.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -253,7 +254,6 @@ define({ "api": [
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Account"
   },
@@ -263,6 +263,7 @@ define({ "api": [
     "title": "Forget Password",
     "name": "Forget_Password",
     "group": "Account",
+    "version": "1.1.0",
     "description": "<h1>Request Parameters</h1></br></br> <h1>Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -291,7 +292,6 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "version": "0.0.0",
     "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Account"
   },
@@ -301,6 +301,7 @@ define({ "api": [
     "title": "Login to Spotify",
     "name": "Login_to_Spotify",
     "group": "Account",
+    "version": "1.1.0",
     "description": "<h1>Request Parameters</h1></br></br> <h1>Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -344,7 +345,6 @@ define({ "api": [
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Account"
   },
@@ -354,6 +354,7 @@ define({ "api": [
     "title": "Login to Spotify with Facebook",
     "name": "Login_to_Spotify_with_Facebook",
     "group": "Account",
+    "version": "1.1.0",
     "description": "<h1>Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -376,7 +377,6 @@ define({ "api": [
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Account"
   },
@@ -386,6 +386,7 @@ define({ "api": [
     "title": "Login to Spotify with Facebook for android native app",
     "name": "Login_to_Spotify_with_Facebook_android",
     "group": "Account",
+    "version": "1.1.0",
     "description": "<p>login with facebook using android custom route</p> <h1>Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -440,7 +441,6 @@ define({ "api": [
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Account"
   },
@@ -450,6 +450,7 @@ define({ "api": [
     "title": "Logout user",
     "name": "Logout_user",
     "group": "Account",
+    "version": "1.1.0",
     "description": "<h1>Request Parameters</h1></br></br> <h1>Endpoint</h1>",
     "header": {
       "fields": {
@@ -502,7 +503,6 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "version": "0.0.0",
     "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Account"
   },
@@ -512,6 +512,7 @@ define({ "api": [
     "title": "Reset Password",
     "name": "Reset_Password",
     "group": "Account",
+    "version": "1.1.0",
     "description": "<h1>Request Parameters</h1></br></br> <h1>Endpoint</h1>",
     "header": {
       "fields": {
@@ -552,7 +553,6 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "version": "0.0.0",
     "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Account"
   },
@@ -562,6 +562,7 @@ define({ "api": [
     "title": "Send confirmation mail",
     "name": "Send_confirmation_mail",
     "group": "Account",
+    "version": "1.1.0",
     "description": "<h1>Request Parameters</h1></br></br> <h1>Endpoint</h1>",
     "header": {
       "fields": {
@@ -602,7 +603,6 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "version": "0.0.0",
     "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Account"
   },
@@ -612,6 +612,7 @@ define({ "api": [
     "title": "Set FCM Token",
     "name": "Set_FCM_Token",
     "group": "Account",
+    "version": "1.1.0",
     "description": "<h1>Request Parameters</h1></br></br> <h1>Endpoint</h1>",
     "header": {
       "fields": {
@@ -652,7 +653,6 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "version": "0.0.0",
     "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Account"
   },
@@ -662,6 +662,7 @@ define({ "api": [
     "title": "User notifications",
     "name": "User_notifications",
     "group": "Account",
+    "version": "1.1.0",
     "description": "<h1>Request Parameters</h1></br></br> <h1>Endpoint</h1>",
     "header": {
       "fields": {
@@ -703,7 +704,6 @@ define({ "api": [
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Account"
   },
@@ -713,6 +713,7 @@ define({ "api": [
     "title": "logout",
     "name": "logout",
     "group": "Account",
+    "version": "1.1.0",
     "description": "<h1>Request Parameters</h1></br></br> <h1>Endpoint</h1>",
     "header": {
       "fields": {
@@ -746,7 +747,6 @@ define({ "api": [
         ]
       }
     },
-    "version": "0.0.0",
     "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Account"
   },
@@ -756,6 +756,7 @@ define({ "api": [
     "title": "make user free",
     "name": "make_user_free",
     "group": "Account",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">make user free.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -797,7 +798,6 @@ define({ "api": [
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Account"
   },
@@ -807,6 +807,7 @@ define({ "api": [
     "title": "make user premium",
     "name": "make_user_premium",
     "group": "Account",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">promote user to premium.</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -868,7 +869,6 @@ define({ "api": [
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Account"
   },
@@ -878,6 +878,7 @@ define({ "api": [
     "title": "",
     "name": "upload_tracks_to_album",
     "group": "Album",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">delete album and all its tracks by its artist </p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -927,7 +928,6 @@ define({ "api": [
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Album"
   },
@@ -937,6 +937,7 @@ define({ "api": [
     "title": "Change a Artist's Details",
     "name": "Change_a_Artist's_Details",
     "group": "Artist",
+    "version": "1.1.0",
     "description": "<p>update artist info</p> <p style=\"color:red;\">Change a Artist's Details Change a Artist’s name and genre and info .</p> Note that the request data is a JSON string, not separate fields <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -1007,7 +1008,6 @@ define({ "api": [
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Artist"
   },
@@ -1119,6 +1119,7 @@ define({ "api": [
     "title": "create queue",
     "name": "Create_queue",
     "group": "Player",
+    "version": "1.1.0",
     "description": "<p>create queue for user</p> <p style=\"color:red;\">create the user playback queue </p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -1187,7 +1188,6 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "version": "0.0.0",
     "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Player"
   },
@@ -1197,6 +1197,7 @@ define({ "api": [
     "title": "add collaborator",
     "name": "Change_a_add_collaborator",
     "group": "Playlist",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">add a Playlist's collaborator. (The user must, of course, own the playlist.)</p> Note that the request data is a JSON string, not separate fields <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -1252,7 +1253,6 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "version": "0.0.0",
     "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Playlist"
   },
@@ -1262,6 +1262,7 @@ define({ "api": [
     "title": "delete track",
     "name": "delete_track",
     "group": "Track",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">delete track from database and from all instances that it occurs in</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -1299,7 +1300,6 @@ define({ "api": [
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Track"
   },
@@ -1309,6 +1309,7 @@ define({ "api": [
     "title": "edit track",
     "name": "edit_track",
     "group": "Track",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">edit track parameters in database</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -1384,7 +1385,6 @@ define({ "api": [
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Track"
   },
@@ -1394,6 +1394,7 @@ define({ "api": [
     "title": "get decryption key for track for web player",
     "name": "get_track_encryption_key_for_web_player",
     "group": "Track",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">get track media file encryption key and keyId for web player</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -1443,7 +1444,6 @@ define({ "api": [
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Track"
   },
@@ -1453,6 +1453,7 @@ define({ "api": [
     "title": "get track for android",
     "name": "get_track_file_for_android",
     "group": "Track",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">get track media file for android</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -1502,7 +1503,6 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "version": "0.0.0",
     "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Track"
   },
@@ -1512,6 +1512,7 @@ define({ "api": [
     "title": "get track for web player",
     "name": "get_track_file_for_web_player",
     "group": "Track",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">get track media file for web player</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -1549,7 +1550,6 @@ define({ "api": [
         ]
       }
     },
-    "version": "0.0.0",
     "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Track"
   },
@@ -1559,6 +1559,7 @@ define({ "api": [
     "title": "upload tracks",
     "name": "upload_tracks_to_album",
     "group": "Track",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">upload tracks by artist to specific album, only artist with valid album can upload track to this album</p> <h1> Request parameters</h1>  </br></br><h1> Endpoint</h1>",
     "parameter": {
       "fields": {
@@ -1710,7 +1711,6 @@ define({ "api": [
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Track"
   },
@@ -1720,6 +1720,7 @@ define({ "api": [
     "title": "delete Current User's Profile",
     "name": "delete_Current_User's_Profile",
     "group": "Users_Profile",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">delete current user profile.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -1754,7 +1755,6 @@ define({ "api": [
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Users_Profile"
   },
@@ -1764,6 +1764,7 @@ define({ "api": [
     "title": "update Current User's Profile",
     "name": "update_Current_User's_Profile",
     "group": "Users_Profile",
+    "version": "1.1.0",
     "description": "<p style=\"color:red;\">update current user profile.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
     "header": {
       "fields": {
@@ -1858,7 +1859,6 @@ define({ "api": [
         }
       ]
     },
-    "version": "0.0.0",
     "filename": "ApiDocumentation/Private_code/doc.js",
     "groupTitle": "Users_Profile"
   }
