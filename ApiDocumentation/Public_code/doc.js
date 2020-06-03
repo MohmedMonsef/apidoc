@@ -4555,28 +4555,6 @@
 
 //Tracks
 
-/**
- * @api {get} api/audio-analysis/{id} Get Audio Analysis for a Track (not implemented)
- * @apiName Get Audio Analysis for a Track
- * @apiGroup Tracks
- * @apiDescription
- * <p style="color:red;">Get a detailed audio analysis for a single track identified by its unique Spotify ID.</p>
- *
- *
- * <h1>Request Parameters</h1></br></br>
- *
- * <h1> Endpoint</h1>
- *
- * @apiHeader (Header)  x-auth-token 			Required. A valid access token from the Spotify Accounts service.
- *
- *
- * @apiParam (PathParameters)  id				Required. The Spotify ID for the track.
- *
- *
- * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains an audio analysis object in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
- *
- *
- */
 
 /**
  * @api {get} /api/tracks/related/{track_id} get related tracks for specific track
@@ -5021,7 +4999,7 @@
 
 
 /**
- * @api {get} api/track/{id} Get a Track
+ * @api {get} api/track/{id} Get a Track with full info
  * @apiName Get a Track with artist name & isLike
  * @apiGroup Tracks
  * @apiDescription
