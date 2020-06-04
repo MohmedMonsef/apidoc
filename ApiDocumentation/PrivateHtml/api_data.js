@@ -67,7 +67,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -113,7 +113,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -159,7 +159,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -254,7 +254,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -292,7 +292,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -345,7 +345,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -377,7 +377,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -441,7 +441,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -503,7 +503,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -553,7 +553,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -603,7 +603,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -653,7 +653,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -704,7 +704,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -747,7 +747,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "ApiDocumentation/Private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -798,7 +798,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -869,7 +869,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Account"
   },
   {
@@ -928,7 +928,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -1008,7 +1008,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -1059,7 +1059,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -1110,12 +1110,12 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Artist"
   },
   {
     "type": "post",
-    "url": "api/createQueue/:sourceId/:trackId",
+    "url": "api/createQueue/:source_id/:track_id",
     "title": "create queue",
     "name": "Create_queue",
     "group": "Player",
@@ -1139,7 +1139,7 @@ define({ "api": [
           {
             "group": "path parameters",
             "optional": false,
-            "field": "sourceId",
+            "field": "source_id",
             "description": "<p>required.the id of the source if playlist or album but if you will send an array of track not playlist and not album but it by any value you need and put tracksIds with array of tracks</p>"
           },
           {
@@ -1188,7 +1188,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -1253,7 +1253,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -1300,7 +1300,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Track"
   },
   {
@@ -1385,7 +1385,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Track"
   },
   {
@@ -1444,7 +1444,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Track"
   },
   {
@@ -1503,7 +1503,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Track"
   },
   {
@@ -1550,7 +1550,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "ApiDocumentation/Private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Track"
   },
   {
@@ -1711,7 +1711,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Track"
   },
   {
@@ -1755,7 +1755,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Users_Profile"
   },
   {
@@ -1859,7 +1859,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Private_code/doc.js",
+    "filename": "Private_code/doc.js",
     "groupTitle": "Users_Profile"
   }
 ] });

@@ -1816,7 +1816,6 @@
  *
  * @apiParam (PathParameters)  category_id 	The Spotify category ID for the category.
  *
- *  @apiParam (QueryParameters)  country  Optional. A country: an ISO 3166-1 alpha-2 country code.
  * @apiParam (QueryParameters)  limit 	Optional. The maximum number of items to return.</br> Default: 20. Minimum: 1. Maximum: 50.
  * @apiParam (QueryParameters)  offset 	Optional. The index of the first item to return.</br> Default: 0 (the first object).</br> Use with limit to get the next set of items.
  *@apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains</br> an array of simplified playlist objects (wrapped in a paging object) in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.
@@ -1969,33 +1968,11 @@
  */
 
 /**
- * @api {get} api/browse/featured-playlists Get a List of Featured Playlists       (not implemented yet)
- * @apiName Get a List of Featured Playlists
- * @apiGroup Browse
- * @apiVersion  1.1.0
-@apiDescription
- * <p style="color:red;">Get a list of categories used to tag items in Spotify (on, for example, the Spotify player’s “Browse” tab).</p>
- *
- *
- * <h1>Request Parameters</h1></br></br>
- *
- * <h1> Endpoint</h1>
- *
- * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
- *
- *
- *  @apiParam (QueryParameters)  country  			Optional. A country: an ISO 3166-1 alpha-2 country code. Provide this parameter </br> if you want to narrow the list of returned categories to those relevant to a particular country.</br> If omitted, the returned items will be globally relevant.
- * @apiParam (QueryParameters)  locale 		Optional. The desired language, consisting of an ISO 639-1 language code and an ISO 3166-1 alpha-2 country code</br> , joined by an underscore. For example: es_MX, meaning “Spanish (Mexico)”. </br> Provide this parameter if you want the category metadata returned in a particular language.</br>  Note that, if locale is not supplied, or if the specified language is not available,</br>  all strings will be returned in the Spotify default language (American English). The locale parameter,</br>  combined with the country parameter, may give odd results if not carefully matched.</br> For example country=SE&locale=de_DE will return a list of categories relevant to Sweden but as German language strings.
- * @apiParam (QueryParameters)  limit  Optional. The maximum number of categories to return.</br> Default: 20. Minimum: 1. Maximum: 50.
- * @apiParam (QueryParameters)  offset 	Optional. The index of the first item to return.</br> Default: 0 (the first object). Use with limit to get the next set of categories.
- * @apiParam (Response)  Format  On success, </br>the HTTP status code in the response header is 200 OK</br> and the response body contains a message and a playlists object.</br> The playlists object contains an array of simplified playlist objects</br> (wrapped in a paging object) in JSON format. On error,</br> the header status code is an error code and the response body contains an error object.</br></br></br></br> Once you have retrieved the list of playlist objects,</br> you can use Get a Playlist and Get a Playlist’s Tracks to drill down further.
- */
-/**
  * @api {get} api/browse/recently-playing Get a List of recently playing Playlists,artists,albums
  * @apiName Get a List of recently-playing
  * @apiGroup Browse
  * @apiVersion  1.1.0
-@apiDescription
+*@apiDescription
  * <p style="color:red;">Get a List of recently playing Playlists,artists,albums in Spotify (on, for example, the Spotify player’s “Browse” tab).</p>
  *
  *
@@ -2084,7 +2061,7 @@
  * @apiName Get a List of New Releases
  * @apiGroup Browse
  * @apiVersion  1.1.0
-@apiDescription
+*@apiDescription
  * <p style="color:red;">Get a list of new album releases featured in Spotify (shown, for example, on a Spotify player’s “Browse” tab).</p>
  *
  *
@@ -2585,39 +2562,6 @@
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains a message and artists object. On error, the header status code is an error code and the response body contains an error object.</br></br></br> Once you have retrieved the list, you can use Get an Album’s Tracks to drill down further.</br></br> The results are returned in an order reflected within the Spotify clients, and therefore may not be ordered by date.
  */
 
-/**
- * @api {get} api/recommendations Get Recommendations Based on Seeds  (not implemented yet)
- * @apiName Get Recommendations Based on Seeds
- * @apiGroup Browse
- * @apiVersion  1.1.0
-@apiDescription
- * <p style="color:red;">Create a playlist-style listening experience based on seed artists, tracks and genres.</p>
- *</br>
- *<p>Recommendations are generated based on the available information for a given seed entity and matched against similar artists and tracks.</br></br> If there is sufficient information about the provided seeds, a list of tracks will be returned together with pool size details.</br></br> For artists and tracks that are very new or obscure there might not be enough data to generate a list of tracks. </p>
- *
- *
- * <h1>Request Parameters</h1></br></br>
- *
- * <h1> Endpoint</h1>
- *
- * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
- *
- *
- *  @apiParam (QueryParameters)  limit  				Optional. The target size of the list of recommended tracks.</br> For seeds with unusually small pools or when highly restrictive filtering is applied,</br> it may be impossible to generate the requested number </br>of recommended tracks. Debugging information for </br>such cases is available in the response.</br> Default: 20. Minimum: 1. Maximum: 100.
- * @apiParam (QueryParameters)  market  		Optional. An ISO 3166-1 alpha-2 country code or the string from_token.</br> Provide this parameter if you want to apply Track Relinking.</br> Because min, max and target are applied to pools before relinking,</br> the generated results may not precisely match the filters applied. Original,</br> non-relinked tracks are available via the linked_from attribute of the relinked track response.
- * @apiParam (QueryParameters)  max 			Optional. Multiple values. For each tunable track attribute,</br> a hard ceiling on the selected track attribute’s value can be provided.</br> See tunable track attributes below for the list of available options.</br> For example, max_instrumentalness=0.35 would filter out most tracks that are likely</br> to be instrumental.
- * @apiParam (QueryParameters)  min 			Optional. Multiple values. For each tunable track attribute,</br> a hard floor on the selected track attribute’s value can be provided.</br> See tunable track attributes below for the list of available options.</br> For example, min_tempo=140 would restrict results</br> to only those tracks with a tempo of greater than 140 beats per minute.
- * @apiParam (QueryParameters)  seed_artists  		A comma separated list of Spotify IDs for seed artists.</br> Up to 5 seed values may be provided in any combination of seed_artists, </br>seed_tracks and seed_genres.
- *  @apiParam (QueryParameters)  seed_genres  			A comma separated list of any genres in the set of available genre seeds.</br> Up to 5 seed values may be</br> provided in any combination of seed_artists, seed_tracks and seed_genres.
- * @apiParam (QueryParameters)  seed_tracks  			A comma separated list of Spotify IDs for a seed track.</br> Up to 5 seed values may be provided in</br> any combination of seed_artists, seed_tracks and seed_genres.
- * @apiParam (QueryParameters)  target  		Optional. Multiple values. For each of the tunable track attributes (below)</br> a target value may be provided.</br> Tracks with the attribute values nearest to the target values will be preferred. For example, you might request target_energy=0.6 and target_danceability=0.8. All target values will be weighed equally in ranking results.
- *
- *
- *
- * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains a recommendations response object in JSON format.
- */
-
-
 
 //Follow
 
@@ -2653,30 +2597,6 @@
  *}
  */
 
-/**
- * @api {get} api/playlists/{playlist_id}/followers/contains  Check if Users Follow a Playlist (Not implemented yet)
- * @apiName Check if Users Follow a Playlist
- * @apiGroup Follow
- * @apiVersion  1.1.0
-@apiDescription
- * <p style="color:red;">Check to see if one or more Spotify users are following a specified playlist.</p>
- *
- *
- * <h1>Request Parameters</h1></br></br>
- *
- * <h1> Endpoint</h1>
- *
- *
- * @apiHeader (Header)  x-auth-token Required. Required. A valid access token from the Spotify Accounts service.
- * Following a playlist can be done publicly or privately.</br> Checking if a user publicly follows a playlist doesn’t require any scopes;</br> if the user is publicly following the playlist, this endpoint returns true.
- * Checking if the user is privately following a playlist is only possible for the current user</br> when that user has granted access to the playlist-read-private scope.
- *
- * @apiParam (PathParameters)  playlist_id 		The Spotify ID of the playlist.
- *
- *  @apiParam (QueryParameters)  ids  				Required. A comma-separated list of Spotify User IDs ;</br> the ids of the users that you want to check to see if they follow the playlist. Maximum: 5 ids.
- * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response </br>body contains a JSON array oftrue or false values, in the same order in which the ids were specified.</br> On error, the header status code is an error code and the response body contains an error object.
- *
- */
 
 /**
  * @api {put} api/me/following Follow Artist
@@ -3490,55 +3410,8 @@
 *followed user successfully
  */
 
-
-
-//Personalization
-
-/**
- * @api {get} api/me/top/{type} Get a User's Top Artists and Tracks        (not implemented yet)
- * @apiName Get a User's Top Artists and Tracks
- * @apiGroup Personalization
- * @apiVersion  1.1.0
-@apiDescription
- * <p style="color:red;">Get the current user’s top artists or tracks based on calculated affinity.</p>
- *
- *
- * <h1>Request Parameters</h1></br></br>
- *
- * <h1> Endpoint</h1>
- *
- * @apiHeader (Header)  x-auth-token 			Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br>Getting details of a user’s top artists and tracks requires authorization of the user-top-read scope.
- * @apiParam (PathParameters)  type 		The type of entity to return. Valid values: artists or tracks.
- *
- * @apiParam (QueryParameters)  limit  				Optional. The number of entities to return. Default: 20. Minimum: 1. Maximum: 50. For example: limit=2
- * @apiParam (QueryParameters)  offset  					Optional. The index of the first entity to return.</br> Default: 0 (i.e., the first track). Use with limit to get the next set of entities.
- * @apiParam (QueryParameters)  time-range  					Optional. Over what time frame the affinities are computed.</br> Valid values: long_term (calculated from several years of data and including all new data as it becomes available),</br> medium_term (approximately last 6 months), short_term (approximately last 4 weeks). Default: medium_term.
- * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains a paging object of Artists or Tracks. </br>On error, the header status code is an error code and the response body contains an error object.
- */
-
 //Player
 
-
-/**
- * @api {get} api/player Get Information About The User's Current Playback  (not implemented yet)
- * @apiName Get Information About The User's Current Playback
- * @apiGroup Player
- * @apiVersion  1.1.0
-@apiDescription
- *
- * <p style="color:red;">Get information about the user’s current playback state, including track, track progress, and active device.</br> Optional parameters can be specified in the query string to filter and sort the response.</p>
- *
- *
- * <h1> Request parameters</h1>
- * </br></br><h1> Endpoint</h1>
- *
- *
- * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
- *
- * @apiParam (Query Parameters)  market 	Optional. An ISO 3166-1 alpha-2 country code or the string from_token.
- *
- * @apiParam (Response) Format A successful request will return a 200 OK response code with a json payload that contains information about the current playback. The information returned is for the last known state, which means an inactive device could be returned if it was the last one to execute playback. When no available devices are found, the request will return a 200 OK response but with no data populated.
- */
 /**
  * @api {get} api/me/player/currently-playing Get the User's Currently Playing Track
  * @apiName Get the User's Currently Playing Track
@@ -3613,6 +3486,7 @@
  *
  * @apiParam (Response) Format A successful request will return a 200 OK response code with a json payload that contains information about the currently playing track and context (see below). The information returned is for the last known state, which means an inactive device could be returned if it was the last one to execute playback. When no available devices are found, the request will return a 200 OK response but with no data populated. When no track is currently playing, the request will return a 204 NO CONTENT response with no payload. If private session is enabled the response will be a 204 NO CONTENT with an empty payload.
  */
+
 /**
  * @api {get} api/me/queue Get currently queue for this user
  * @apiName Get the User's Currently playback queue
@@ -3811,6 +3685,59 @@
  * curl --location --request GET 'http://localhost:3000/api/me/player/recently-played' \
 --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
  *
+ *  @apiSuccessExample {json} Success-Response:
+{
+  [
+    {
+        "_id": "5ed761915f4bc91e6c4b8fcb",
+        "trackId": "5eb0a877ec0c444e9c48986b",
+        "sourceId": "5eb5246b680ef51b4c449291",
+        "sourceType": "playlist"
+    },
+    {
+        "_id": "5ed75d997131c224e824bf67",
+        "trackId": "5eb0a877ec0c444e9c48986b",
+        "sourceId": "5eb5246b680ef51b4c449291",
+        "sourceType": "playlist"
+    },
+    {
+        "_id": "5ed1d8b2041f5217f0b5bb42",
+        "trackId": "5eb0a877ec0c444e9c48986b",
+        "sourceId": "5eb5246b680ef51b4c449291",
+        "sourceType": "playlist"
+    },
+    {
+        "_id": "5ed1d6c6c8c3850eacfd0d9b",
+        "trackId": "5eb0a877ec0c444e9c48986b",
+        "sourceId": "5eb5246b680ef51b4c449291",
+        "sourceType": "playlist"
+    },
+    {
+        "_id": "5ed06547e569f126b8ec8fdf",
+        "trackId": "5eb0a877ec0c444e9c48986b",
+        "sourceId": "5eb5246b680ef51b4c449291",
+        "sourceType": "playlist"
+    },
+    {
+        "_id": "5ecdb22ea0352401f8d53c5a",
+        "trackId": "5eb0a877ec0c444e9c48986b",
+        "sourceId": "5eb5246b680ef51b4c449291",
+        "sourceType": "playlist"
+    },
+    {
+        "_id": "5ec23629b14e0830282538fb",
+        "trackId": "5eb0a877ec0c444e9c48986b",
+        "sourceId": "5eb5246b680ef51b4c449291",
+        "sourceType": "playlist"
+    },
+    {
+        "_id": "5ec23626b14e0830282538fa",
+        "trackId": "5eb0a877ec0c444e9c48986b",
+        "sourceId": "5eb5246b680ef51b4c449291",
+        "sourceType": "playlist"
+    }
+]  
+}
  */
 
 /**
@@ -3838,26 +3765,6 @@
  *
  */
 
-/**
- * @api {PUT} api/player Seek To Position In Currently Playing Track       (not implemented yet)
- * @apiName Seek To Position In Currently Playing Track
- * @apiGroup Player
- * @apiVersion  1.1.0
-@apiDescription
- *
- * <p style="color:red;">Seeks to the given position in the user’s currently playing track.</p>
- *
- *
- * <h1> Request parameters</h1>
- * </br></br><h1> Endpoint</h1>
- *
- *
- * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
- * @apiParam (Query Paramaters)  position_ms	 Required. The position in milliseconds to seek to. Must be a positive number. Passing in a position that is greater than the length of the track will cause the player to start playing the next song.
- *
- *
- * @apiParam (Response) Format A completed request will return a 204 NO CONTENT response code, and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 404 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason.
- */
 /**
  * @api {PUT} api/player/repeat Set Repeat Mode On User’s Playback
  * @apiName Set Repeat Mode On User’s Playback
@@ -3951,12 +3858,85 @@
  *     "isPlayable": false
  *}
  *
+ *
+ *
+ *
+ * @apiParam (Response) Format A completed request will return a 200 NO CONTENT response code,current playing track, and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 400 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason.
+ */
+/**
+ * @api {GET} api/me/player/next-playing get User’s Playback To Next Track
+ * @apiName get User’s Playback To Next Track
+ * @apiGroup Player
+ * @apiVersion  1.1.0
+@apiDescription
+ *
+ * <p style="color:red;">gets to next track in the user’s queue.</p>
+ *
+ * After a successful get operation.
+ *
+ *
+ * <h1> Request parameters</h1>
+ * </br></br><h1> Endpoint</h1>
+ *
+ * @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/me/player/next-playing' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+ *
+ * @apiSuccessExample {json} Success-Response:
+ *{
+ *
+ *        "track": {
+ *            "availableMarkets": [
+ *                "\"er,ty,eue,euu\""
+ *            ],
+ *            "_id": "5e85f4241ba5cf17ccca66d7",
+ *            "url": "5e85f4241ba5cf17ccca66d5",
+ *            "images": [],
+ *            "duration": 436,
+ *            "trackNumber": 236,
+ *            "name": "\"track6\"",
+ *            "artistId": "5e833a51a51d971174923f17",
+ *            "albumId": "5e833b412b9d7718a491c850",
+ *            "discNumber": 1,
+ *            "explicit": false,
+ *            "type": "Track",
+ *            "acousticness": 10,
+ *            "danceability": 23,
+ *            "energy": 100,
+ *            "instrumentalness": 4,
+ *            "key": 90,
+ *            "liveness": 25,
+ *            "loudness": 70,
+ *            "mode": 56,
+ *            "speechiness": 67,
+ *            "tempo": 76,
+ *            "timeSignature": "2020-04-02T14:18:12.619Z",
+ *            "valence": 70,
+ *            "like": 0,
+ *            "__v": 0
+ *        },
+ *        "isLiked": false,
+ *        "album": {
+ *            "name": "album1",
+ *            "_id": "5e833b412b9d7718a491c850",
+ *            "artist": {
+ *                "name": "ahmedsamir",
+ *               "_id": "5e833a51a51d971174923f17"
+ *            }
+ *        },
+ *
+ *    "isPlaylist": false,
+ *    "playlistId": "5e85f4ca1ba5cf17ccca66eb",
+ *     "isPlayable": false
+ *}
+ *
  * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  *
  *
  *
  * @apiParam (Response) Format A completed request will return a 200 NO CONTENT response code,current playing track, and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 400 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason.
  */
+
 /**
  * @api {POST} api/me/player/prev-playing Skip User’s Playback To Previous Track
  * @apiName Skip User’s Playback To Previous Track
@@ -4027,6 +4007,77 @@
  *    },
  *    "isPlaylist": true,
  *    "playlistId": "5e85f4ca1ba5cf17ccca66eb"
+ *}
+ *
+ *
+ * @apiParam (Response) Format A completed request will return a 200 NO CONTENT response code,and current playing  track , and then issue the command to the player. Due to the asynchronous nature of the issuance of the command, you should use the Get Information About The User’s Current Playback endpoint to check that your issued command was handled correctly by the player. When performing an action that is restricted, 400 NOT FOUND or 403 FORBIDDEN will be returned together with a player error message. For example, if there are no active devices found, the request will return 404 NOT FOUND response code and the reason NO_ACTIVE_DEVICE, or, if the user making the request is non-premium, a 403 FORBIDDEN response code will be returned together with the PREMIUM_REQUIRED reason.
+ */
+
+/**
+ * @api {GET} api/me/player/prev-playing get User’s Playback To Previous Track
+ * @apiName get User’s Playback To Previous Track
+ * @apiGroup Player
+ * @apiVersion  1.1.0
+@apiDescription
+ *
+ * <p style="color:red;">gets to previous track in the user’s queue.</p>
+ *
+ *
+ * <h1> Request parameters</h1>
+ * </br></br><h1> Endpoint</h1>
+ *
+ *
+ * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
+ *
+ * @apiExample {curl} Example usage:
+ * curl --location --request GET 'http://localhost:3000/api/me/player/prev-playing' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg2NTk3MDk4LCJleHAiOjQ3MzMwODM0OTh9.uP8Qm7K7537QBib4HGVEG1BF_Neb-o8EGeSRwwDwbRM' \
+ *
+ *
+ * @apiSuccessExample {json} Success-Response:
+ *{
+ *
+ *        "track": {
+ *            "availableMarkets": [
+ *                "\"er,ty,eue,euu\""
+ *            ],
+ *            "_id": "5e85f4241ba5cf17ccca66d7",
+ *            "url": "5e85f4241ba5cf17ccca66d5",
+ *            "images": [],
+ *            "duration": 436,
+ *            "trackNumber": 236,
+ *            "name": "\"track6\"",
+ *            "artistId": "5e833a51a51d971174923f17",
+ *            "albumId": "5e833b412b9d7718a491c850",
+ *            "discNumber": 1,
+ *            "explicit": false,
+ *            "type": "Track",
+ *            "acousticness": 10,
+ *            "danceability": 23,
+ *            "energy": 100,
+ *            "instrumentalness": 4,
+ *            "key": 90,
+ *            "liveness": 25,
+ *            "loudness": 70,
+ *            "mode": 56,
+ *            "speechiness": 67,
+ *            "tempo": 76,
+ *            "timeSignature": "2020-04-02T14:18:12.619Z",
+ *            "valence": 70,
+ *            "like": 0,
+ *            "__v": 0
+ *        },
+ *        "isLiked": false,
+ *        "album": {
+ *            "name": "album1",
+ *            "_id": "5e833b412b9d7718a491c850",
+ *            "artist": {
+ *                "name": "ahmedsamir",
+ *               "_id": "5e833a51a51d971174923f17"
+ *            }
+ *        }
+ *    },
+ *    "playlistId": "5e85f4ca1ba5cf17ccca66eb"
  *     "isPlayable": false
  *}
  *
@@ -4085,7 +4136,7 @@
  */
 
 /**
- * @api {POST} api/player/add-to-queue/:playlistId/:trackId Add an Item to the User's Playback Queue
+ * @api {POST} api/player/add-to-queue/:playlist_id/:track_id Add an Item to the User's Playback Queue
  * @apiName Add an Item to the User's Playback Queue
  * @apiGroup Player
  * @apiVersion  1.1.0
@@ -4101,8 +4152,8 @@
  * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  *
  *
- * @apiParam (Path Paramaters) requried.trackId the id of the track went to add
- * @apiParam (Path Paramaters) requried.playlistId the id of the playlist or album this track from
+ * @apiParam (Path Paramaters) requried.track_id the id of the track went to add
+ * @apiParam (Path Paramaters) requried.playlist_id the id of the playlist or album this track from
  * @apiParam (Query Paramaters) requried.isPlaylist boolean if true this track from playlist else this from album
  *
  *

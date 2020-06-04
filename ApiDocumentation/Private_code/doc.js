@@ -3,7 +3,7 @@
  * @apiName Create a new account
  * @apiGroup Account
  * @apiVersion  1.1.0
-@apiDescription
+*@apiDescription
  * 
  * <p style="color:red;">add new user.</p>
  *
@@ -42,7 +42,7 @@
  */
 
 /**
-  * @api {post} api/createQueue/:sourceId/:trackId create queue 
+  * @api {post} api/createQueue/:source_id/:track_id create queue 
  * @apiName Create queue
  * @apiGroup Player
  * @apiVersion  1.1.0
@@ -54,7 +54,7 @@
  * 
  * 
  * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
- * @apiparam (path parameters) sourceId   required.the id of the source if playlist or album but if you will send an array of track not playlist and not album but it by any value you need and put tracksIds with array of tracks
+ * @apiparam (path parameters) source_id   required.the id of the source if playlist or album but if you will send an array of track not playlist and not album but it by any value you need and put tracksIds with array of tracks
  * @apiparam (path parameters) track_id    required .the first track will be playing
  *
  * @apiParam (query Parameters)  isPlaylist optional. is boolean determine if the source of queue is playlist or album &true is playlist &false album  	
