@@ -5181,18 +5181,6 @@ define({ "api": [
     "group": "Tracks",
     "version": "1.1.0",
     "description": "<p style=\"color:red;\">get number of track likes in specific day</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
-    "header": {
-      "fields": {
-        "Header": [
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "x-auth-token",
-            "description": "<p>Required. A valid access token from the Spotify Accounts service.</p>"
-          }
-        ]
-      }
-    },
     "parameter": {
       "fields": {
         "PathParameters": [
@@ -5236,7 +5224,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl --location --request GET 'http://localhost:3000/api/tracks/likes-per-day/5eb0a499ec0c444e9c489820?day=8&year=2020&month=6' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWIwOTA2NDMwYTlhMDFmMTQ0YjcyM2MiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTkwMDEyNDI3LCJleHAiOjMxNDY0ODg4NzgwMjYxMjgwMDB9.fTocCHc0k5BzE0ijGOm27s0QxOVFjdOyuxqjyEGuspE'",
+        "content": "curl --location --request GET 'http://localhost:3000/api/tracks/likes-per-day/5eb0a499ec0c444e9c489820?day=8&year=2020&month=6' \\",
         "type": "curl"
       }
     ],
@@ -5260,18 +5248,6 @@ define({ "api": [
     "group": "Tracks",
     "version": "1.1.0",
     "description": "<p style=\"color:red;\">get number of track likes in specific month</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
-    "header": {
-      "fields": {
-        "Header": [
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "x-auth-token",
-            "description": "<p>Required. A valid access token from the Spotify Accounts service.</p>"
-          }
-        ]
-      }
-    },
     "parameter": {
       "fields": {
         "PathParameters": [
@@ -5309,7 +5285,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl --location --request GET 'http://localhost:3000/api/tracks/likes-per-month/5eb0a499ec0c444e9c489820?year=2020&month=6' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWIwOTA2NDMwYTlhMDFmMTQ0YjcyM2MiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTkwMDEyNDI3LCJleHAiOjMxNDY0ODg4NzgwMjYxMjgwMDB9.fTocCHc0k5BzE0ijGOm27s0QxOVFjdOyuxqjyEGuspE'",
+        "content": "curl --location --request GET 'http://localhost:3000/api/tracks/likes-per-month/5eb0a499ec0c444e9c489820?year=2020&month=6' \\",
         "type": "curl"
       }
     ],
@@ -5333,18 +5309,6 @@ define({ "api": [
     "group": "Tracks",
     "version": "1.1.0",
     "description": "<p style=\"color:red;\">get number of track likes in specific year</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
-    "header": {
-      "fields": {
-        "Header": [
-          {
-            "group": "Header",
-            "optional": false,
-            "field": "x-auth-token",
-            "description": "<p>Required. A valid access token from the Spotify Accounts service.</p>"
-          }
-        ]
-      }
-    },
     "parameter": {
       "fields": {
         "PathParameters": [
@@ -5376,7 +5340,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl --location --request GET 'http://localhost:3000/api/tracks/likes-per-year/5eb0a499ec0c444e9c489820?year=2020' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWIwOTA2NDMwYTlhMDFmMTQ0YjcyM2MiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTkwMDEyNDI3LCJleHAiOjMxNDY0ODg4NzgwMjYxMjgwMDB9.fTocCHc0k5BzE0ijGOm27s0QxOVFjdOyuxqjyEGuspE'",
+        "content": "curl --location --request GET 'http://localhost:3000/api/tracks/likes-per-year/5eb0a499ec0c444e9c489820?year=2020' \\",
         "type": "curl"
       }
     ],
