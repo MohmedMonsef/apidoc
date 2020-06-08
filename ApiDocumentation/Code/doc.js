@@ -6216,6 +6216,121 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
     "__v": 0
 }
  */
+
+
+
+
+/**
+ * @api {get} api/tracks/likes-per-day/{track_id}  get number of track likes in specific day
+ * @apiName get  track likes in  day
+ * @apiGroup Tracks
+ * @apiVersion  1.1.0
+@apiDescription
+ * <p style="color:red;">get number of track likes in specific day</p>
+ *
+ *
+ * <h1>Request Parameters</h1></br></br>
+ *
+ * <h1> Endpoint</h1>
+ *
+ *
+ * @apiHeader (Header)  x-auth-token 	Required. A valid access token from the Spotify Accounts service.
+
+ *
+ *  @apiParam (PathParameters)  track_id 					Required. The Spotify ID for the track.
+ * 
+ * @apiParam (QueryParameter) day {Number} the number of the day from [1-30]
+ * 
+ *   @apiParam (QueryParameter) month 
+ * {Number} the number of the month from [1-12]
+ * 
+ *  @apiParam (QueryParameter) year {Number} the number of the year  
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and 400 on error
+ * @apiExample {curl} Example usage:
+ *curl --location --request GET 'http://localhost:3000/api/tracks/likes-per-day/5eb0a499ec0c444e9c489820?day=8&year=2020&month=6' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWIwOTA2NDMwYTlhMDFmMTQ0YjcyM2MiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTkwMDEyNDI3LCJleHAiOjMxNDY0ODg4NzgwMjYxMjgwMDB9.fTocCHc0k5BzE0ijGOm27s0QxOVFjdOyuxqjyEGuspE' 
+ * @apiSuccessExample {json} Success-Response:
+ * {
+    "number of likes": 1
+}
+ *
+ */
+
+ /**
+ * @api {get} api/tracks/likes-per-month/{track_id}  get number of track likes in specific month
+ * @apiName get  track likes in  month
+ * @apiGroup Tracks
+ * @apiVersion  1.1.0
+@apiDescription
+ * <p style="color:red;">get number of track likes in specific month</p>
+ *
+ *
+ * <h1>Request Parameters</h1></br></br>
+ *
+ * <h1> Endpoint</h1>
+ *
+ *
+ * @apiHeader (Header)  x-auth-token 	Required. A valid access token from the Spotify Accounts service.
+
+ *
+ *  @apiParam (PathParameters)  track_id 					Required. The Spotify ID for the track.
+ * 
+ * 
+ *   @apiParam (QueryParameter) month 
+ * {Number} the number of the month from [1-12]
+ * 
+ *  @apiParam (QueryParameter) year {Number} the number of the year  
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and 400 on error
+ * @apiExample {curl} Example usage:
+ *curl --location --request GET 'http://localhost:3000/api/tracks/likes-per-month/5eb0a499ec0c444e9c489820?year=2020&month=6' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWIwOTA2NDMwYTlhMDFmMTQ0YjcyM2MiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTkwMDEyNDI3LCJleHAiOjMxNDY0ODg4NzgwMjYxMjgwMDB9.fTocCHc0k5BzE0ijGOm27s0QxOVFjdOyuxqjyEGuspE' 
+ * @apiSuccessExample {json} Success-Response:
+ * {
+    "number of likes": 1
+}
+ *
+ */
+ /**
+ * @api {get} api/tracks/likes-per-year/{track_id}  get number of track likes in specific year
+ * @apiName get  track likes in  year
+ * @apiGroup Tracks
+ * @apiVersion  1.1.0
+@apiDescription
+ * <p style="color:red;">get number of track likes in specific year</p>
+ *
+ *
+ * <h1>Request Parameters</h1></br></br>
+ *
+ * <h1> Endpoint</h1>
+ *
+ *
+ * @apiHeader (Header)  x-auth-token 	Required. A valid access token from the Spotify Accounts service.
+
+ *
+ *  @apiParam (PathParameters)  track_id 					Required. The Spotify ID for the track.
+ * 
+ * 
+ *  @apiParam (QueryParameter) year {Number} the number of the year  
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and 400 on error
+ *
+ * @apiExample {curl} Example usage:
+ *curl --location --request GET 'http://localhost:3000/api/tracks/likes-per-year/5eb0a499ec0c444e9c489820?year=2020' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWIwOTA2NDMwYTlhMDFmMTQ0YjcyM2MiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTkwMDEyNDI3LCJleHAiOjMxNDY0ODg4NzgwMjYxMjgwMDB9.fTocCHc0k5BzE0ijGOm27s0QxOVFjdOyuxqjyEGuspE' 
+ * @apiSuccessExample {json} Success-Response:
+ * {
+    "number of likes": 1
+}
+ *
+ */
+
+
+
+
+
+
+
+
+
 //User
 /**
  * @api {post} api/login Login to Spotify
