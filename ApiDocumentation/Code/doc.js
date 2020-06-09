@@ -6508,7 +6508,28 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  *
  *
  */
-
+/**
+ * @api {POST} api/me/confirmUpdate Confirm Update
+ * @apiName Confirm Update
+ * @apiGroup User
+ * @apiVersion  1.1.0
+@apiDescription
+ * 
+ * 
+ * <h1>Request Parameters</h1></br></br>
+ * 
+ * <h1>Endpoint</h1> 
+ * 
+ * 
+ * @apiParam (Query parameter)  id {string} Required. the User id .
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body is empty </br> On error, the header status code is an error code and the response body contains an error object.
+ * @apiParam (Link Sent To User Email) Format http://100.25.194.8/confirmUpdate?id=5eb08fce30a9a01f144b722d
+ *@apiExample {curl} Example usage
+ *curl --location --request POST 'http://localhost:3000/api/me/confirmUpdate?id=5ed4b0c235e1a5252a9c0247' 
+ 
+ *
+ *
+ */
 /**
  * @api {POST} api/premium/confirm Confirm Premium
  * @apiName Confirm Premium
