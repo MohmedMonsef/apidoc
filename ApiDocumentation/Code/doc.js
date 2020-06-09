@@ -2867,6 +2867,82 @@
  */
 
 
+
+/**
+ * @api {get} /api/Artists/numberOfFollowers/id Get number of followers for an artist.
+ * @apiName Get number of followers for an artist per day, month and year
+ * @apiGroup Follow
+ * @apiVersion  1.1.0
+@apiDescription
+ * <p style="color:red;">Get number of followers for an artist per day, month and year.</p>
+ *
+ *
+ * <h1>Request Parameters</h1></br></br>
+ *
+ * <h1> Endpoint</h1>
+ *
+ * @apiHeader (Header)  x-auth-token 	Required. A valid access token from the Spotify Accounts service</br>The access token must have been issued on behalf of the current user.</br> Getting details of the artists or users the current user follows requires authorization of the user-follow-read scope.
+ *
+ *
+ * @apiParam (Path Parameters)  id		Required. the artist's Spotify ID to check.</br> For example: id=74ASZWbe4lXaubB36ztrGX A maximum of 1 can be sent in one request.
+ *
+ *
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body</br> contains a JSON array of numbers of followes for an artist per day/month/year.</br> On error, the header status code is an error code and the response body contains an error object.
+ *
+ *  @apiExample {curl} Example usage:
+ * curl --location --request GET '127.0.0.1:3000/api/Artists/numberOfFollowers/5eb0a44b9b15d854c08f7362' \
+--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWI1YTcxNzc3Y2Q0ODFmYTgwYmQ0MWMiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoidXNlciIsImlhdCI6MTU4OTkxMjQ0NywiZXhwIjozMTQ2NDg4ODc4MDI2MDI4MDAwfQ.bvWXaS3yQ9qXVxrMbVv4Y37IwV9ThIjaLmKI8FeRA80' \
+
+ *  @apiSuccessExample {json} Success-Response:
+ *{
+ *   "numOfFollowers": [
+ *      0,
+ *      0,
+ *     2
+ *   ]
+ *}
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**
  * @api {put} api/me/following Follow Artist
  * @apiName Follow Artist
@@ -5376,7 +5452,7 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  * @apiHeader (Header)  x-auth-token Required. A valid access token from the Spotify Accounts service
  *
  * @apiParam (Query parameters) name	Required.Search query keywords.
- * @apiParam (Query parameters) type	Required.A comma-separated list of item types to search across.Valid types are: top, album , artist, playlist, and track.Search results include hits from all the specified item types.
+ * @apiParam (Query parameters) type	Required.A comma-separated list of item types to search across.Valid types are: top, album , artist, playlist, profile and track.Search results include hits from all the specified item types.
 *  @apiParam (Body parameters)  limit  optional. the limit of response length .
 *  @apiParam (Body parameters)  offset  Optional. The index of the first object  to return..
  * @apiParam (Response) Format
@@ -6721,16 +6797,19 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
  * <h1> Endpoint</h1> 
  * 
  * @apiHeader (Header)  x-auth-token 			Required. A valid access token from the Spotify Accounts service.</br> The access token must have been issued on behalf of the current user.</br>Reading the user’s email address requires the user-read-email scope; </br>reading country and product subscription level requires the user-read-private scope.
+ * @apiParam (Body Parameters)     {object} user 
  * 
- * @apiParam (Body Parameters) {string} Email     optional. email to be updated to, should be new email and not already existing one.
- * 
- * @apiParam (Body Parameters)     {string}  Password  optional. password to be updated to.
- * 
-*  @apiParam (Body Parameters)     {string} Country    optional. country to be updated to.
- * @apiParam (Body Parameters)      {string}   Display_Name      optional. name to be updated to.
- * @apiparam (Body Parameters) {string} cardNumber   optional. A user credit card 
- * @apiparam (Body parameters)   {date} expiresDate   optional. the card expire date 
- * @apiparam (Body parameters)  {boolean} isMonth  optional if  for month or for  year  (if need -can be change to number from (1--->12)  if for 3 month or 2 ,else)
+ * @apiParam (Object Parameters)     {string} email     optional. email, should be new email and not already existing one.
+ * @apiParam (Object Parameters)     {string}  password  required. old password
+ * @apiParam (Object Parameters)     {string}  newpassword  optional. new password
+ * @apiParam (Object Parameters)     {string}  repeatedPassword  optional. required for changing password, repeated new password
+ * @apiparam (Object parameters)     {date}    birthday   optional.  birthday date
+ * @apiParam (Object Parameters)     {string}  gender  optional. gender
+ * @apiParam (Object Parameters)     {string}  country    optional. country.
+ * @apiParam (Object Parameters)     {string}  displayName      optional. name
+ * @apiparam (Object Parameters)     {string}  cardNumber   optional. A user credit card 
+ * @apiparam (Object parameters)     {date}    expiresDate   optional. the card expire date 
+ * @apiparam (Object parameters)     {boolean} isMonth  optional if  for month or for  year  (if need -can be change to number from (1--->12)  if for 3 month or 2 ,else)
  * 
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body contains a success object in JSON format.</br> On error, the header status code is an error code and the response body contains an error object.</br> When requesting fields that you don’t have the user’s authorization to access, it will return error 403 Forbidden.
  * @apiExample {curl} Example usage
@@ -6739,14 +6818,20 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
 --header 'Content-Type: application/json' \
 
 --data-raw '{
-	"Email": "ayaabohadima@gmail.com",
-        "Password": "123456",
-        "Country": "Eg",
-        "Display_Name": "Aya Samir",
+    "user":{
+	    "email": "ayaabohadima@gmail.com",
+        "password": "123456",
+        "newpassword": "123",
+        "repeatedPassword": "123",
+        "country": "Eg",
+        "displayName": "Aya Samir",
+        "gender": "M",
+        "birthday": "1999-07-03",
         //if premium can send 
         "expiresDate":"2020-12-09",
         "cardNumber": "374245455400126",
         "isMonth": true
+    }
 *}'
  * @apiSuccessExample {json} Success-Response:
  * 

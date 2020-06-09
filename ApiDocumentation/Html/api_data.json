@@ -55,7 +55,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -114,7 +114,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -173,7 +173,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -253,7 +253,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -348,7 +348,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -399,7 +399,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -450,7 +450,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -509,7 +509,7 @@
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -568,7 +568,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -653,7 +653,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -712,7 +712,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -779,7 +779,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -838,7 +838,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -897,7 +897,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -970,7 +970,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1021,7 +1021,7 @@
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1060,7 +1060,7 @@
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1099,7 +1099,7 @@
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1138,7 +1138,7 @@
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1177,7 +1177,7 @@
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1228,7 +1228,7 @@
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1267,7 +1267,7 @@
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1326,7 +1326,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1382,7 +1382,7 @@
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1446,7 +1446,7 @@
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1497,7 +1497,66 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
+    "groupTitle": "Follow"
+  },
+  {
+    "type": "get",
+    "url": "/api/Artists/numberOfFollowers/id",
+    "title": "Get number of followers for an artist.",
+    "name": "Get_number_of_followers_for_an_artist_per_day,_month_and_year",
+    "group": "Follow",
+    "version": "1.1.0",
+    "description": "<p style=\"color:red;\">Get number of followers for an artist per day, month and year.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "x-auth-token",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service</br>The access token must have been issued on behalf of the current user.</br> Getting details of the artists or users the current user follows requires authorization of the user-follow-read scope.</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Path Parameters": [
+          {
+            "group": "Path Parameters",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Required. the artist's Spotify ID to check.</br> For example: id=74ASZWbe4lXaubB36ztrGX A maximum of 1 can be sent in one request.</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body</br> contains a JSON array of numbers of followes for an artist per day/month/year.</br> On error, the header status code is an error code and the response body contains an error object.</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "curl --location --request GET '127.0.0.1:3000/api/Artists/numberOfFollowers/5eb0a44b9b15d854c08f7362' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWI1YTcxNzc3Y2Q0ODFmYTgwYmQ0MWMiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoidXNlciIsImlhdCI6MTU4OTkxMjQ0NywiZXhwIjozMTQ2NDg4ODc4MDI2MDI4MDAwfQ.bvWXaS3yQ9qXVxrMbVv4Y37IwV9ThIjaLmKI8FeRA80' \\",
+        "type": "curl"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n  \"numOfFollowers\": [\n     0,\n     0,\n    2\n  ]\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "Code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1546,7 +1605,7 @@
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1605,7 +1664,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1656,7 +1715,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1707,7 +1766,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1766,7 +1825,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1827,7 +1886,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -1882,7 +1941,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -1928,7 +1987,7 @@
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -2016,7 +2075,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -2104,7 +2163,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -2163,7 +2222,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2222,7 +2281,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2287,7 +2346,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2352,7 +2411,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2401,7 +2460,7 @@
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2451,7 +2510,7 @@
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2501,7 +2560,7 @@
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2551,7 +2610,7 @@
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2601,7 +2660,7 @@
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2665,7 +2724,7 @@
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2743,7 +2802,7 @@
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2814,7 +2873,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2865,7 +2924,7 @@
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2916,7 +2975,7 @@
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2958,7 +3017,7 @@
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3008,7 +3067,7 @@
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3059,7 +3118,7 @@
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3110,7 +3169,7 @@
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3152,7 +3211,7 @@
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3202,7 +3261,7 @@
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3253,7 +3312,7 @@
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3304,7 +3363,7 @@
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3377,7 +3436,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3458,7 +3517,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3531,7 +3590,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3590,7 +3649,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3641,7 +3700,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3714,7 +3773,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3781,7 +3840,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3832,7 +3891,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3902,7 +3961,7 @@
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3997,7 +4056,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4056,7 +4115,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4115,7 +4174,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4171,7 +4230,7 @@
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4227,7 +4286,7 @@
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4263,7 +4322,7 @@
             "group": "Query parameters",
             "optional": false,
             "field": "type",
-            "description": "<p>Required.A comma-separated list of item types to search across.Valid types are: top, album , artist, playlist, and track.Search results include hits from all the specified item types.</p>"
+            "description": "<p>Required.A comma-separated list of item types to search across.Valid types are: top, album , artist, playlist, profile and track.Search results include hits from all the specified item types.</p>"
           }
         ],
         "Body parameters": [
@@ -4297,7 +4356,7 @@
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Search"
   },
   {
@@ -4353,7 +4412,7 @@
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Search"
   },
   {
@@ -4404,7 +4463,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Search"
   },
   {
@@ -4460,7 +4519,7 @@
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Search"
   },
   {
@@ -4519,7 +4578,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4578,7 +4637,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4637,7 +4696,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4696,7 +4755,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4755,7 +4814,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4802,7 +4861,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4887,7 +4946,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4946,7 +5005,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -5005,7 +5064,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -5064,7 +5123,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -5123,7 +5182,7 @@
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -5170,7 +5229,7 @@
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -5237,7 +5296,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -5298,7 +5357,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -5353,7 +5412,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -5514,7 +5573,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -5585,7 +5644,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -5631,7 +5690,7 @@
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -5677,7 +5736,7 @@
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -5772,7 +5831,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -5810,7 +5869,7 @@
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -5861,7 +5920,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -5912,7 +5971,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -5979,7 +6038,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6032,7 +6091,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6064,7 +6123,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6128,7 +6187,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6190,7 +6249,7 @@
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6240,7 +6299,7 @@
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6290,7 +6349,7 @@
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6340,7 +6399,7 @@
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6391,7 +6450,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6435,7 +6494,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6478,7 +6537,7 @@
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6529,7 +6588,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6600,7 +6659,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6628,50 +6687,87 @@
         "Body Parameters": [
           {
             "group": "Body Parameters",
+            "type": "object",
+            "optional": false,
+            "field": "user",
+            "description": ""
+          }
+        ],
+        "Object Parameters": [
+          {
+            "group": "Object Parameters",
             "type": "string",
             "optional": false,
-            "field": "Email",
-            "description": "<p>optional. email to be updated to, should be new email and not already existing one.</p>"
+            "field": "email",
+            "description": "<p>optional. email, should be new email and not already existing one.</p>"
           },
           {
-            "group": "Body Parameters",
+            "group": "Object Parameters",
             "type": "string",
             "optional": false,
-            "field": "Password",
-            "description": "<p>optional. password to be updated to.</p>"
+            "field": "password",
+            "description": "<p>required. old password</p>"
           },
           {
-            "group": "Body Parameters",
+            "group": "Object Parameters",
             "type": "string",
             "optional": false,
-            "field": "Country",
-            "description": "<p>optional. country to be updated to.</p>"
+            "field": "newpassword",
+            "description": "<p>optional. new password</p>"
           },
           {
-            "group": "Body Parameters",
+            "group": "Object Parameters",
             "type": "string",
             "optional": false,
-            "field": "Display_Name",
-            "description": "<p>optional. name to be updated to.</p>"
+            "field": "repeatedPassword",
+            "description": "<p>optional. required for changing password, repeated new password</p>"
           },
           {
-            "group": "Body Parameters",
+            "group": "Object Parameters",
+            "type": "string",
+            "optional": false,
+            "field": "gender",
+            "description": "<p>optional. gender</p>"
+          },
+          {
+            "group": "Object Parameters",
+            "type": "string",
+            "optional": false,
+            "field": "country",
+            "description": "<p>optional. country.</p>"
+          },
+          {
+            "group": "Object Parameters",
+            "type": "string",
+            "optional": false,
+            "field": "displayName",
+            "description": "<p>optional. name</p>"
+          },
+          {
+            "group": "Object Parameters",
             "type": "string",
             "optional": false,
             "field": "cardNumber",
             "description": "<p>optional. A user credit card</p>"
           }
         ],
-        "Body parameters": [
+        "Object parameters": [
           {
-            "group": "Body parameters",
+            "group": "Object parameters",
+            "type": "date",
+            "optional": false,
+            "field": "birthday",
+            "description": "<p>optional.  birthday date</p>"
+          },
+          {
+            "group": "Object parameters",
             "type": "date",
             "optional": false,
             "field": "expiresDate",
             "description": "<p>optional. the card expire date</p>"
           },
           {
-            "group": "Body parameters",
+            "group": "Object parameters",
             "type": "boolean",
             "optional": false,
             "field": "isMonth",
@@ -6691,7 +6787,7 @@
     "examples": [
       {
         "title": "Example usage",
-        "content": "url --location --request PUT 'http://localhost:3000/api/me/update' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg3NTg3ODcxLCJleHAiOjQ3MzQwNzQyNzF9.K3X2eOVhdvgpWqpTBTVEdqAr8ukiT7hZAne5OpLgztA' \\\n--header 'Content-Type: application/json' \\\n\n--data-raw '{\n\t\"Email\": \"ayaabohadima@gmail.com\",\n        \"Password\": \"123456\",\n        \"Country\": \"Eg\",\n        \"Display_Name\": \"Aya Samir\",\n        //if premium can send \n        \"expiresDate\":\"2020-12-09\",\n        \"cardNumber\": \"374245455400126\",\n        \"isMonth\": true\n}'",
+        "content": "url --location --request PUT 'http://localhost:3000/api/me/update' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZThjYjExODA4NGE5ZDJlNmM4ZjIxZDciLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoiQXJ0aXN0IiwiaWF0IjoxNTg3NTg3ODcxLCJleHAiOjQ3MzQwNzQyNzF9.K3X2eOVhdvgpWqpTBTVEdqAr8ukiT7hZAne5OpLgztA' \\\n--header 'Content-Type: application/json' \\\n\n--data-raw '{\n    \"user\":{\n\t    \"email\": \"ayaabohadima@gmail.com\",\n        \"password\": \"123456\",\n        \"newpassword\": \"123\",\n        \"repeatedPassword\": \"123\",\n        \"country\": \"Eg\",\n        \"displayName\": \"Aya Samir\",\n        \"gender\": \"M\",\n        \"birthday\": \"1999-07-03\",\n        //if premium can send \n        \"expiresDate\":\"2020-12-09\",\n        \"cardNumber\": \"374245455400126\",\n        \"isMonth\": true\n    }\n}'",
         "type": "curl"
       }
     ],
@@ -6704,7 +6800,7 @@
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "Code/doc.js",
     "groupTitle": "User"
   }
 ]
