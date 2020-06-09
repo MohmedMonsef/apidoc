@@ -1535,7 +1535,7 @@
             "group": "Response",
             "optional": false,
             "field": "Format",
-            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body</br> contains a JSON array of numbers of followes for an artist per day/month/year.</br> On error, the header status code is an error code and the response body contains an error object.</p>"
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body</br> contains a JSON array of numbers of followers for an artist per day/month/year.</br> On error, the header status code is an error code and the response body contains an error object.</p>"
           }
         ]
       }
@@ -2412,6 +2412,65 @@
       ]
     },
     "filename": "code/doc.js",
+    "groupTitle": "Library"
+  },
+  {
+    "type": "get",
+    "url": "api/Albums/numberOfLikes/id",
+    "title": "Get number of likes for an album.",
+    "name": "Get_number_of_likes_for_an_album_per_day,_month_and_year",
+    "group": "Library",
+    "version": "1.1.0",
+    "description": "<p style=\"color:red;\">Get number of likes for an album per day, month and year.</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "optional": false,
+            "field": "x-auth-token",
+            "description": "<p>Required. A valid access token from the Spotify Accounts service</br>The access token must have been issued on behalf of the current user.</br> Getting details of the artists or users the current user follows requires authorization of the user-follow-read scope.</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Path Parameters": [
+          {
+            "group": "Path Parameters",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Required. the album's Spotify ID to check.</br> For example: id=74ASZWbe4lXaubB36ztrGX A maximum of 1 can be sent in one request.</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body</br> contains a JSON array of numbers of likes for an album per day/month/year.</br> On error, the header status code is an error code and the response body contains an error object.</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "curl --location --request GET '127.0.0.1:3000/api/Albums/numberOfLikes/5eb0a498ec0c444e9c48981e' \\\n--header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWI1YTcxNzc3Y2Q0ODFmYTgwYmQ0MWMiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoidXNlciIsImlhdCI6MTU4OTc2Njg0OCwiZXhwIjo0NzM2MjUzMjQ4fQ.TAkHzm3mDhd_YhieRnXJ3GiPa42GOScu8sFSrdyTfgs' \\\n--data-raw '{  \"ids\":\"5eb0a498ec0c444e9c48981e\"}",
+        "type": "curl"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n  \"numOfLikes\": [\n     0,\n     0,\n    2\n  ]\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "Code/doc.js",
     "groupTitle": "Library"
   },
   {
