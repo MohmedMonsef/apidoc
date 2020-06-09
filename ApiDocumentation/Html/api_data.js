@@ -55,7 +55,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -114,7 +114,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -173,7 +173,190 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
+    "groupTitle": "Album"
+  },
+  {
+    "type": "get",
+    "url": "api/tracks/listeners-per-day/{album_id}",
+    "title": "get number of album listeners in specific day",
+    "name": "get_album_listeners_in_day",
+    "group": "Album",
+    "version": "1.1.0",
+    "description": "<p style=\"color:red;\">get number of album listeners in specific day</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "parameter": {
+      "fields": {
+        "PathParameters": [
+          {
+            "group": "PathParameters",
+            "optional": false,
+            "field": "album_id",
+            "description": "<p>Required. The Spotify ID for the track.</p>"
+          }
+        ],
+        "QueryParameter": [
+          {
+            "group": "QueryParameter",
+            "optional": false,
+            "field": "day",
+            "description": "<p>{Number} the number of the day from [1-30]</p>"
+          },
+          {
+            "group": "QueryParameter",
+            "optional": false,
+            "field": "month",
+            "description": "<p>{Number} the number of the month from [1-12]</p>"
+          },
+          {
+            "group": "QueryParameter",
+            "optional": false,
+            "field": "year",
+            "description": "<p>{Number} the number of the year</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and 400 on error</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "curl --location --request GET 'http://localhost:3000/api/tracks/listeners-per-day/5eb0a499ec0c444e9c489820?day=8&year=2020&month=6' \\",
+        "type": "curl"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"numberOfListners\": 1\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "apidocumentation/Code/doc.js",
+    "groupTitle": "Album"
+  },
+  {
+    "type": "get",
+    "url": "api/tracks/listeners-per-month/{album_id}",
+    "title": "get number of album listeners in specific month",
+    "name": "get_album_listeners_in_month",
+    "group": "Album",
+    "version": "1.1.0",
+    "description": "<p style=\"color:red;\">get number of album listeners in specific month</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "parameter": {
+      "fields": {
+        "PathParameters": [
+          {
+            "group": "PathParameters",
+            "optional": false,
+            "field": "album_id",
+            "description": "<p>Required. The Spotify ID for the track.</p>"
+          }
+        ],
+        "QueryParameter": [
+          {
+            "group": "QueryParameter",
+            "optional": false,
+            "field": "month",
+            "description": "<p>{Number} the number of the month from [1-12]</p>"
+          },
+          {
+            "group": "QueryParameter",
+            "optional": false,
+            "field": "year",
+            "description": "<p>{Number} the number of the year</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and 400 on error</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "curl --location --request GET 'http://localhost:3000/api/tracks/listeners-per-month/5eb0a499ec0c444e9c489820?year=2020&month=6' \\",
+        "type": "curl"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"numberOfListners\": 1\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "apidocumentation/Code/doc.js",
+    "groupTitle": "Album"
+  },
+  {
+    "type": "get",
+    "url": "api/tracks/listeners-per-year/{album_id}",
+    "title": "get number of album listeners in specific year",
+    "name": "get_album_listeners_in_year",
+    "group": "Album",
+    "version": "1.1.0",
+    "description": "<p style=\"color:red;\">get number of album  listeners in specific year</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "parameter": {
+      "fields": {
+        "PathParameters": [
+          {
+            "group": "PathParameters",
+            "optional": false,
+            "field": "album_id",
+            "description": "<p>Required. The Spotify ID for the track.</p>"
+          }
+        ],
+        "QueryParameter": [
+          {
+            "group": "QueryParameter",
+            "optional": false,
+            "field": "year",
+            "description": "<p>{Number} the number of the year</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and 400 on error</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "curl --location --request GET 'http://localhost:3000/api/tracks/listeners-per-year/5eb0a499ec0c444e9c489820?year=2020' \\",
+        "type": "curl"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"numberOfListners\": 1\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -253,7 +436,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -348,7 +531,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -399,7 +582,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -450,7 +633,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -509,7 +692,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -568,7 +751,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -653,7 +836,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -712,7 +895,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -779,7 +962,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -838,7 +1021,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -897,7 +1080,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -970,7 +1153,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1021,7 +1204,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1060,7 +1243,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1099,7 +1282,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1138,7 +1321,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1177,7 +1360,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1228,7 +1411,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1267,7 +1450,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1326,7 +1509,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1382,7 +1565,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1446,7 +1629,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1497,7 +1680,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1556,7 +1739,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1605,7 +1788,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1664,7 +1847,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1715,7 +1898,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1766,7 +1949,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1825,7 +2008,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1886,7 +2069,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -1941,7 +2124,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -1987,7 +2170,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -2075,7 +2258,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -2163,7 +2346,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -2222,7 +2405,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2281,7 +2464,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2346,7 +2529,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2411,7 +2594,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2470,7 +2653,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2519,7 +2702,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2569,7 +2752,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2619,7 +2802,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2669,7 +2852,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2719,7 +2902,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2783,7 +2966,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2861,7 +3044,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2932,7 +3115,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2983,7 +3166,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3034,7 +3217,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3076,7 +3259,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3126,7 +3309,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3177,7 +3360,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3228,7 +3411,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3270,7 +3453,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3320,7 +3503,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3371,7 +3554,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3422,7 +3605,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3495,7 +3678,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3576,7 +3759,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3649,7 +3832,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3708,7 +3891,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3759,7 +3942,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3832,7 +4015,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3899,7 +4082,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3950,7 +4133,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4020,7 +4203,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4115,7 +4298,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4174,7 +4357,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4233,7 +4416,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4289,7 +4472,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4345,7 +4528,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4415,7 +4598,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Search"
   },
   {
@@ -4471,7 +4654,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Search"
   },
   {
@@ -4522,7 +4705,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Search"
   },
   {
@@ -4578,7 +4761,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Search"
   },
   {
@@ -4637,7 +4820,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4696,7 +4879,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4755,7 +4938,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4814,7 +4997,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4873,7 +5056,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4920,7 +5103,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -5005,7 +5188,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -5064,7 +5247,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -5123,7 +5306,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -5182,7 +5365,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -5241,7 +5424,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -5288,7 +5471,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -5350,12 +5533,12 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \"number of likes\": 1\n}",
+          "content": "{\n    \"numberOfLikes\": 1\n}",
           "type": "json"
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -5411,12 +5594,12 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \"number of likes\": 1\n}",
+          "content": "{\n    \"numberOfLikes\": 1\n}",
           "type": "json"
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -5466,12 +5649,195 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\n    \"number of likes\": 1\n}",
+          "content": "{\n    \"numberOfLikes\": 1\n}",
           "type": "json"
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
+    "groupTitle": "Tracks"
+  },
+  {
+    "type": "get",
+    "url": "api/tracks/listeners-per-day/{track_id}",
+    "title": "get number of track listeners in specific day",
+    "name": "get_track_listeners_in_day",
+    "group": "Tracks",
+    "version": "1.1.0",
+    "description": "<p style=\"color:red;\">get number of track listeners in specific day</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "parameter": {
+      "fields": {
+        "PathParameters": [
+          {
+            "group": "PathParameters",
+            "optional": false,
+            "field": "track_id",
+            "description": "<p>Required. The Spotify ID for the track.</p>"
+          }
+        ],
+        "QueryParameter": [
+          {
+            "group": "QueryParameter",
+            "optional": false,
+            "field": "day",
+            "description": "<p>{Number} the number of the day from [1-30]</p>"
+          },
+          {
+            "group": "QueryParameter",
+            "optional": false,
+            "field": "month",
+            "description": "<p>{Number} the number of the month from [1-12]</p>"
+          },
+          {
+            "group": "QueryParameter",
+            "optional": false,
+            "field": "year",
+            "description": "<p>{Number} the number of the year</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and 400 on error</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "curl --location --request GET 'http://localhost:3000/api/tracks/listeners-per-day/5eb0a499ec0c444e9c489820?day=8&year=2020&month=6' \\",
+        "type": "curl"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"numberOfListners\": 1\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "apidocumentation/Code/doc.js",
+    "groupTitle": "Tracks"
+  },
+  {
+    "type": "get",
+    "url": "api/tracks/listeners-per-month/{track_id}",
+    "title": "get number of track listeners in specific month",
+    "name": "get_track_listeners_in_month",
+    "group": "Tracks",
+    "version": "1.1.0",
+    "description": "<p style=\"color:red;\">get number of track listeners in specific month</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "parameter": {
+      "fields": {
+        "PathParameters": [
+          {
+            "group": "PathParameters",
+            "optional": false,
+            "field": "track_id",
+            "description": "<p>Required. The Spotify ID for the track.</p>"
+          }
+        ],
+        "QueryParameter": [
+          {
+            "group": "QueryParameter",
+            "optional": false,
+            "field": "month",
+            "description": "<p>{Number} the number of the month from [1-12]</p>"
+          },
+          {
+            "group": "QueryParameter",
+            "optional": false,
+            "field": "year",
+            "description": "<p>{Number} the number of the year</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and 400 on error</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "curl --location --request GET 'http://localhost:3000/api/tracks/listeners-per-month/5eb0a499ec0c444e9c489820?year=2020&month=6' \\",
+        "type": "curl"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"numberOfListners\": 1\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "apidocumentation/Code/doc.js",
+    "groupTitle": "Tracks"
+  },
+  {
+    "type": "get",
+    "url": "api/tracks/listeners-per-year/{track_id}",
+    "title": "get number of track listeners in specific year",
+    "name": "get_track_listeners_in_year",
+    "group": "Tracks",
+    "version": "1.1.0",
+    "description": "<p style=\"color:red;\">get number of track listeners in specific year</p> <h1>Request Parameters</h1></br></br> <h1> Endpoint</h1>",
+    "parameter": {
+      "fields": {
+        "PathParameters": [
+          {
+            "group": "PathParameters",
+            "optional": false,
+            "field": "track_id",
+            "description": "<p>Required. The Spotify ID for the track.</p>"
+          }
+        ],
+        "QueryParameter": [
+          {
+            "group": "QueryParameter",
+            "optional": false,
+            "field": "year",
+            "description": "<p>{Number} the number of the year</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and 400 on error</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "curl --location --request GET 'http://localhost:3000/api/tracks/listeners-per-year/5eb0a499ec0c444e9c489820?year=2020' \\",
+        "type": "curl"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "{\n    \"numberOfListners\": 1\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -5632,7 +5998,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -5703,7 +6069,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -5749,7 +6115,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -5795,7 +6161,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -5841,7 +6207,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -5936,7 +6302,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -5974,7 +6340,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6025,7 +6391,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6076,7 +6442,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6143,7 +6509,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6196,7 +6562,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6228,7 +6594,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6292,7 +6658,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6354,7 +6720,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6404,7 +6770,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6454,7 +6820,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6504,7 +6870,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6555,7 +6921,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6599,7 +6965,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6642,7 +7008,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6693,7 +7059,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6764,7 +7130,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6905,7 +7271,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "ApiDocumentation/Code/doc.js",
+    "filename": "apidocumentation/Code/doc.js",
     "groupTitle": "User"
   }
 ] });

@@ -1,3 +1,3 @@
 # apidoc
 API Documentation
-npx apidoc -i .\Public_code -e node_modules -o .\PublicHtml  //to run 
+npx apidoc -i .\apidocumentation\Code -e node_modules -o .\apidocumentation\Html  //to run 
