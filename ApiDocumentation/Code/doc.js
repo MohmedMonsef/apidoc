@@ -6827,7 +6827,6 @@ curl --location --request POST 'http://localhost:3000/api/createQueue/0/5eb1acf0
         "displayName": "Aya Samir",
         "gender": "M",
         "birthday": "1999-07-03",
-        //if premium can send 
         "expiresDate":"2020-12-09",
         "cardNumber": "374245455400126",
         "isMonth": true
