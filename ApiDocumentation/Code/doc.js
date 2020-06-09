@@ -2887,7 +2887,7 @@
  * @apiParam (Path Parameters)  id		Required. the artist's Spotify ID to check.</br> For example: id=74ASZWbe4lXaubB36ztrGX A maximum of 1 can be sent in one request.
  *
  *
- * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body</br> contains a JSON array of numbers of followes for an artist per day/month/year.</br> On error, the header status code is an error code and the response body contains an error object.
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body</br> contains a JSON array of numbers of followers for an artist per day/month/year.</br> On error, the header status code is an error code and the response body contains an error object.
  *
  *  @apiExample {curl} Example usage:
  * curl --location --request GET '127.0.0.1:3000/api/Artists/numberOfFollowers/5eb0a44b9b15d854c08f7362' \
@@ -3148,6 +3148,41 @@
  */
 
 //Library
+/**
+ * @api {get} api/Albums/numberOfLikes/id Get number of likes for an album.
+ * @apiName Get number of likes for an album per day, month and year
+ * @apiGroup Library
+ * @apiVersion  1.1.0
+@apiDescription
+ * <p style="color:red;">Get number of likes for an album per day, month and year.</p>
+ *
+ *
+ * <h1>Request Parameters</h1></br></br>
+ *
+ * <h1> Endpoint</h1>
+ *
+ * @apiHeader (Header)  x-auth-token 	Required. A valid access token from the Spotify Accounts service</br>The access token must have been issued on behalf of the current user.</br> Getting details of the artists or users the current user follows requires authorization of the user-follow-read scope.
+ *
+ *
+ * @apiParam (Path Parameters)  id		Required. the album's Spotify ID to check.</br> For example: id=74ASZWbe4lXaubB36ztrGX A maximum of 1 can be sent in one request.
+ *
+ *
+ * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and the response body</br> contains a JSON array of numbers of likes for an album per day/month/year.</br> On error, the header status code is an error code and the response body contains an error object.
+ *
+ *  @apiExample {curl} Example usage:
+ * curl --location --request GET '127.0.0.1:3000/api/Albums/numberOfLikes/5eb0a498ec0c444e9c48981e' \
+ * --header 'x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWI1YTcxNzc3Y2Q0ODFmYTgwYmQ0MWMiLCJwcm9kdWN0IjoiZnJlZSIsInVzZXJUeXBlIjoidXNlciIsImlhdCI6MTU4OTc2Njg0OCwiZXhwIjo0NzM2MjUzMjQ4fQ.TAkHzm3mDhd_YhieRnXJ3GiPa42GOScu8sFSrdyTfgs' \
+ * --data-raw '{  "ids":"5eb0a498ec0c444e9c48981e"} 
+ * 
+ *  @apiSuccessExample {json} Success-Response:
+ *{
+ *   "numOfLikes": [
+ *      0,
+ *      0,
+ *     2
+ *   ]
+ *}
+ */
 
 /**
  * @api {get} api/me/albums/contains Check User's Saved Albums
