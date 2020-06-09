@@ -55,7 +55,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -114,7 +114,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -173,7 +173,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Album"
   },
   {
@@ -253,7 +253,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -348,7 +348,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -399,7 +399,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -450,7 +450,7 @@ define({ "api": [
       }
     },
     "version": "0.0.0",
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -509,7 +509,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -568,7 +568,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -653,7 +653,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -712,7 +712,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -779,7 +779,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -838,7 +838,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Artist"
   },
   {
@@ -897,7 +897,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -970,7 +970,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1021,7 +1021,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1060,7 +1060,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1099,7 +1099,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1138,7 +1138,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1177,7 +1177,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1228,7 +1228,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1267,7 +1267,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Browse"
   },
   {
@@ -1326,7 +1326,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1382,7 +1382,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1446,7 +1446,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1497,7 +1497,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1556,7 +1556,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1605,7 +1605,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1664,7 +1664,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1715,7 +1715,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1766,7 +1766,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1825,7 +1825,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Follow"
   },
   {
@@ -1886,7 +1886,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -1941,7 +1941,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -1987,7 +1987,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -2075,7 +2075,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -2163,7 +2163,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Image"
   },
   {
@@ -2222,7 +2222,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2281,7 +2281,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2346,7 +2346,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2411,7 +2411,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2470,7 +2470,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "Code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2519,7 +2519,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2569,7 +2569,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2619,7 +2619,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2669,7 +2669,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2719,7 +2719,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Library"
   },
   {
@@ -2783,7 +2783,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2861,7 +2861,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2932,7 +2932,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -2983,7 +2983,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3034,7 +3034,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3076,7 +3076,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3126,7 +3126,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3177,7 +3177,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3228,7 +3228,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3270,7 +3270,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3320,7 +3320,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3371,7 +3371,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3422,7 +3422,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Player"
   },
   {
@@ -3495,7 +3495,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3576,7 +3576,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3649,7 +3649,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3708,7 +3708,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3759,7 +3759,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3832,7 +3832,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3899,7 +3899,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -3950,7 +3950,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4020,7 +4020,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4115,7 +4115,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4174,7 +4174,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4233,7 +4233,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4289,7 +4289,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4345,7 +4345,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Playlist"
   },
   {
@@ -4415,7 +4415,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Search"
   },
   {
@@ -4471,7 +4471,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Search"
   },
   {
@@ -4522,7 +4522,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Search"
   },
   {
@@ -4578,7 +4578,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Search"
   },
   {
@@ -4637,7 +4637,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4696,7 +4696,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4755,7 +4755,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4814,7 +4814,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4873,7 +4873,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -4920,7 +4920,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -5005,7 +5005,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -5064,7 +5064,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -5123,7 +5123,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -5182,7 +5182,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -5241,7 +5241,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -5288,7 +5288,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -5355,7 +5355,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -5416,7 +5416,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -5471,7 +5471,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -5632,7 +5632,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "Tracks"
   },
   {
@@ -5703,7 +5703,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -5749,7 +5749,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -5795,7 +5795,53 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
+    "groupTitle": "User"
+  },
+  {
+    "type": "POST",
+    "url": "api/me/confirmUpdate",
+    "title": "Confirm Update",
+    "name": "Confirm_Update",
+    "group": "User",
+    "version": "1.1.0",
+    "description": "<h1>Request Parameters</h1></br></br> <h1>Endpoint</h1>",
+    "parameter": {
+      "fields": {
+        "Query parameter": [
+          {
+            "group": "Query parameter",
+            "optional": false,
+            "field": "id",
+            "description": "<p>{string} Required. the User id .</p>"
+          }
+        ],
+        "Response": [
+          {
+            "group": "Response",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>On success, the HTTP status code in the response header is 200 OK and the response body is empty </br> On error, the header status code is an error code and the response body contains an error object.</p>"
+          }
+        ],
+        "Link Sent To User Email": [
+          {
+            "group": "Link Sent To User Email",
+            "optional": false,
+            "field": "Format",
+            "description": "<p>http://100.25.194.8/confirmUpdate?id=5eb08fce30a9a01f144b722d</p>"
+          }
+        ]
+      }
+    },
+    "examples": [
+      {
+        "title": "Example usage",
+        "content": "curl --location --request POST 'http://localhost:3000/api/me/confirmUpdate?id=5ed4b0c235e1a5252a9c0247'",
+        "type": "curl"
+      }
+    ],
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -5890,7 +5936,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -5928,7 +5974,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -5979,7 +6025,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6030,7 +6076,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6097,7 +6143,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6150,7 +6196,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6182,7 +6228,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6246,7 +6292,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6308,7 +6354,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6358,7 +6404,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6408,7 +6454,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6458,7 +6504,7 @@ define({ "api": [
         "type": "curl"
       }
     ],
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6509,7 +6555,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6553,7 +6599,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6596,7 +6642,7 @@ define({ "api": [
         ]
       }
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6647,7 +6693,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6718,7 +6764,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "User"
   },
   {
@@ -6859,7 +6905,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "code/doc.js",
+    "filename": "ApiDocumentation/Code/doc.js",
     "groupTitle": "User"
   }
 ] });
