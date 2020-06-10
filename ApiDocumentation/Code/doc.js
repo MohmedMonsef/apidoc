@@ -385,7 +385,7 @@
 
 
 /**
- * @api {get} api/tracks/listeners-per-day/{album_id}  get number of album listeners in specific day
+ * @api {get} api/albums/listeners-per-day/{album_id}  get number of album listeners in specific day
  * @apiName get  album listeners in  day
  * @apiGroup Album
  * @apiVersion  1.1.0
@@ -408,7 +408,7 @@
  *  @apiParam (QueryParameter) year {Number} the number of the year  
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and 400 on error
  * @apiExample {curl} Example usage:
- *curl --location --request GET 'http://localhost:3000/api/tracks/listeners-per-day/5eb0a499ec0c444e9c489820?day=8&year=2020&month=6' \
+ *curl --location --request GET 'http://localhost:3000/api/albums/listeners-per-day/5eb0a499ec0c444e9c489820?day=8&year=2020&month=6' \
 
  * @apiSuccessExample {json} Success-Response:
  * {
@@ -418,7 +418,7 @@
  */
 
 /**
- * @api {get} api/tracks/listeners-per-month/{album_id}  get number of album listeners in specific month
+ * @api {get} api/albums/listeners-per-month/{album_id}  get number of album listeners in specific month
  * @apiName get  album listeners in  month
  * @apiGroup Album
  * @apiVersion  1.1.0
@@ -441,7 +441,7 @@
  *  @apiParam (QueryParameter) year {Number} the number of the year  
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and 400 on error
  * @apiExample {curl} Example usage:
- *curl --location --request GET 'http://localhost:3000/api/tracks/listeners-per-month/5eb0a499ec0c444e9c489820?year=2020&month=6' \
+ *curl --location --request GET 'http://localhost:3000/api/albums/listeners-per-month/5eb0a499ec0c444e9c489820?year=2020&month=6' \
  * @apiSuccessExample {json} Success-Response:
  * {
     "numberOfListners": 1
@@ -449,7 +449,7 @@
  *
  */
 /**
- * @api {get} api/tracks/listeners-per-year/{album_id}  get number of album listeners in specific year
+ * @api {get} api/albums/listeners-per-year/{album_id}  get number of album listeners in specific year
  * @apiName get  album listeners in  year
  * @apiGroup Album
  * @apiVersion  1.1.0
@@ -469,7 +469,7 @@
  * @apiParam (Response)  Format  On success, the HTTP status code in the response header is 200 OK and 400 on error
  *
  * @apiExample {curl} Example usage:
- *curl --location --request GET 'http://localhost:3000/api/tracks/listeners-per-year/5eb0a499ec0c444e9c489820?year=2020' \
+ *curl --location --request GET 'http://localhost:3000/api/albums/listeners-per-year/5eb0a499ec0c444e9c489820?year=2020' \
  * @apiSuccessExample {json} Success-Response:
  * {
     "numberOfListners": 1

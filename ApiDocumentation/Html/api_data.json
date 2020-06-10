@@ -178,7 +178,7 @@
   },
   {
     "type": "get",
-    "url": "api/tracks/listeners-per-day/{album_id}",
+    "url": "api/albums/listeners-per-day/{album_id}",
     "title": "get number of album listeners in specific day",
     "name": "get_album_listeners_in_day",
     "group": "Album",
@@ -227,7 +227,7 @@
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl --location --request GET 'http://localhost:3000/api/tracks/listeners-per-day/5eb0a499ec0c444e9c489820?day=8&year=2020&month=6' \\",
+        "content": "curl --location --request GET 'http://localhost:3000/api/albums/listeners-per-day/5eb0a499ec0c444e9c489820?day=8&year=2020&month=6' \\",
         "type": "curl"
       }
     ],
@@ -245,7 +245,7 @@
   },
   {
     "type": "get",
-    "url": "api/tracks/listeners-per-month/{album_id}",
+    "url": "api/albums/listeners-per-month/{album_id}",
     "title": "get number of album listeners in specific month",
     "name": "get_album_listeners_in_month",
     "group": "Album",
@@ -288,7 +288,7 @@
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl --location --request GET 'http://localhost:3000/api/tracks/listeners-per-month/5eb0a499ec0c444e9c489820?year=2020&month=6' \\",
+        "content": "curl --location --request GET 'http://localhost:3000/api/albums/listeners-per-month/5eb0a499ec0c444e9c489820?year=2020&month=6' \\",
         "type": "curl"
       }
     ],
@@ -306,7 +306,7 @@
   },
   {
     "type": "get",
-    "url": "api/tracks/listeners-per-year/{album_id}",
+    "url": "api/albums/listeners-per-year/{album_id}",
     "title": "get number of album listeners in specific year",
     "name": "get_album_listeners_in_year",
     "group": "Album",
@@ -343,7 +343,7 @@
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl --location --request GET 'http://localhost:3000/api/tracks/listeners-per-year/5eb0a499ec0c444e9c489820?year=2020' \\",
+        "content": "curl --location --request GET 'http://localhost:3000/api/albums/listeners-per-year/5eb0a499ec0c444e9c489820?year=2020' \\",
         "type": "curl"
       }
     ],
